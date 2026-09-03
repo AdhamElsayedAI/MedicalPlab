@@ -1,0 +1,158 @@
+[
+  {
+    "document_id": "DOC-WHO-CARD-0001",
+    "source_id": "SRC-WHO-001",
+    "title": "Guideline for the pharmacological treatment of hypertension in adults",
+    "medical_specialty": "Cardiology",
+    "topics": [
+      "Hypertension",
+      "Blood Pressure Management",
+      "Antihypertensive Therapy"
+    ],
+    "document_type": "clinical_guideline",
+    "evidence_level": "high",
+    "publication_date": "2021-08-24",
+    "version": "1",
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY-NC-SA 3.0 IGO",
+    "license_status": "conditional",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "Tier-A WHO clinical guideline. Non-commercial hackathon use with attribution and licence conditions."
+  },
+
+  {
+    "document_id": "DOC-PMC-CARD-0002",
+    "source_id": "SRC-PMC-001",
+    "title": "Outpatient management of essential hypertension: a review based on the latest clinical guidelines",
+    "medical_specialty": "Cardiology",
+    "topics": [
+      "Hypertension",
+      "Diagnosis",
+      "Outpatient Management"
+    ],
+    "document_type": "review_article",
+    "evidence_level": "moderate",
+    "publication_date": "2024",
+    "version": null,
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY 4.0",
+    "license_status": "approved",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "Recent open-access clinical review used as supporting evidence beneath Tier-A guidance."
+  },
+
+  {
+    "document_id": "DOC-PMC-CARD-0003",
+    "source_id": "SRC-PMC-001",
+    "title": "Pharmacological Treatment of Heart Failure: Recent Advances",
+    "medical_specialty": "Cardiology",
+    "topics": [
+      "Heart Failure",
+      "Pharmacological Management",
+      "Guideline-Directed Therapy"
+    ],
+    "document_type": "review_article",
+    "evidence_level": "moderate",
+    "publication_date": "2024",
+    "version": null,
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY 4.0",
+    "license_status": "approved",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "Recent CC BY review for heart-failure pharmacotherapy."
+  },
+
+  {
+    "document_id": "DOC-WHO-ENDO-0001",
+    "source_id": "SRC-WHO-001",
+    "title": "HEARTS D: diagnosis and management of type 2 diabetes",
+    "medical_specialty": "Endocrinology",
+    "topics": [
+      "Type 2 Diabetes",
+      "Diagnosis",
+      "Diabetes Management"
+    ],
+    "document_type": "clinical_guideline",
+    "evidence_level": "high",
+    "publication_date": "2020-04-22",
+    "version": "WHO/UCN/NCD/20.1",
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY-NC-SA 3.0 IGO",
+    "license_status": "conditional",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "WHO module covering diagnosis, classification and management of type 2 diabetes."
+  },
+
+  {
+    "document_id": "DOC-PMC-ENDO-0002",
+    "source_id": "SRC-PMC-001",
+    "title": "A critical review on diabetes mellitus type 1 and type 2 management approaches: from lifestyle modification to current and novel targets and therapeutic agents",
+    "medical_specialty": "Endocrinology",
+    "topics": [
+      "Diabetes Mellitus",
+      "Type 1 Diabetes",
+      "Type 2 Diabetes",
+      "Diabetes Treatment"
+    ],
+    "document_type": "review_article",
+    "evidence_level": "moderate",
+    "publication_date": "2024",
+    "version": null,
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY 4.0",
+    "license_status": "approved",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "Broad recent open-access review covering major diabetes management strategies."
+  },
+
+  {
+    "document_id": "DOC-PMC-ENDO-0003",
+    "source_id": "SRC-PMC-001",
+    "title": "LT4/LT3 Combination Therapy vs. Monotherapy with LT4 for Persistent Symptoms of Hypothyroidism: A Systematic Review",
+    "medical_specialty": "Endocrinology",
+    "topics": [
+      "Hypothyroidism",
+      "Levothyroxine",
+      "Thyroid Hormone Replacement"
+    ],
+    "document_type": "systematic_review",
+    "evidence_level": "high",
+    "publication_date": "2024-09",
+    "version": null,
+    "url": null,
+    "doi": null,
+    "license_name": "CC BY 4.0",
+    "license_status": "approved",
+    "rag_allowed": true,
+    "question_generation_allowed": true,
+    "retrieved_at": null,
+    "sha256": null,
+    "ingestion_status": "candidate",
+    "notes": "Systematic review used for focused hypothyroidism evidence."
+  }
+]
