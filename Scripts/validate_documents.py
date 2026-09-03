@@ -17,9 +17,8 @@ SOURCE_REGISTRY_PATH = (
 )
 
 DOCUMENT_MANIFEST_PATH = (
-    PROJECT_ROOT / "examples" / "document_manifest.example.json"
+    PROJECT_ROOT / "Data" / "metadata" / "document_manifest.json"
 )
-
 
 def load_json(path: Path) -> Any:
     """Load JSON data from a file."""
