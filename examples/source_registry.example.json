@@ -1,0 +1,172 @@
+[
+  {
+    "source_id": "SRC-WHO-001",
+    "title": "WHO Publications and Guidelines",
+    "provider": "World Health Organization",
+    "source_type": "guideline",
+    "medical_domains": [
+      "Internal Medicine",
+      "Public Health",
+      "Infectious Diseases"
+    ],
+    "use_cases": [
+      "rag",
+      "question_generation"
+    ],
+    "trust_tier": "A",
+    "publication_year": null,
+    "url": null,
+    "license_name": "CC BY-NC-SA 3.0 IGO",
+    "license_status": "conditional",
+    "ai_use_status": "allowed_with_conditions",
+    "commercial_use": false,
+    "freshness_policy": "latest_available",
+    "ingestion_status": "approved",
+    "notes": "Use publications with explicit compatible licence and preserve attribution."
+  },
+
+  {
+    "source_id": "SRC-CDC-001",
+    "title": "CDC Medical and Public Health Content",
+    "provider": "Centers for Disease Control and Prevention",
+    "source_type": "government_health",
+    "medical_domains": [
+      "Infectious Diseases",
+      "Preventive Medicine",
+      "Public Health"
+    ],
+    "use_cases": [
+      "rag",
+      "question_generation"
+    ],
+    "trust_tier": "A",
+    "publication_year": null,
+    "url": null,
+    "license_name": "Public Domain / source-specific exceptions",
+    "license_status": "conditional",
+    "ai_use_status": "allowed_with_conditions",
+    "commercial_use": null,
+    "freshness_policy": "latest_available",
+    "ingestion_status": "approved",
+    "notes": "Check each page for third-party copyrighted material before ingestion."
+  },
+
+  {
+    "source_id": "SRC-PMC-001",
+    "title": "PMC Open Access Subset - CC BY and CC0",
+    "provider": "NIH National Library of Medicine",
+    "source_type": "journal_article",
+    "medical_domains": [
+      "Internal Medicine"
+    ],
+    "use_cases": [
+      "rag",
+      "question_generation"
+    ],
+    "trust_tier": "A",
+    "publication_year": null,
+    "url": null,
+    "license_name": "CC BY / CC0 only",
+    "license_status": "approved",
+    "ai_use_status": "allowed",
+    "commercial_use": true,
+    "freshness_policy": "last_5_years",
+    "ingestion_status": "approved",
+    "notes": "Prefer systematic reviews and high-quality reviews; exclude retractions and unsuitable article types."
+  },
+
+  {
+    "source_id": "SRC-MMLU-001",
+    "title": "MMLU Medical Subsets",
+    "provider": "Center for AI Safety",
+    "source_type": "dataset",
+    "medical_domains": [
+      "Clinical Knowledge",
+      "College Medicine",
+      "Anatomy"
+    ],
+    "use_cases": [
+      "evaluation"
+    ],
+    "trust_tier": "B",
+    "publication_year": null,
+    "url": null,
+    "license_name": "MIT",
+    "license_status": "approved",
+    "ai_use_status": "allowed",
+    "commercial_use": true,
+    "freshness_policy": "static_benchmark",
+    "ingestion_status": "pending",
+    "notes": "Evaluation only. Do not add to the RAG corpus."
+  },
+
+  {
+    "source_id": "SRC-PUBMEDQA-001",
+    "title": "PubMedQA",
+    "provider": "PubMedQA",
+    "source_type": "dataset",
+    "medical_domains": [
+      "Biomedical Research"
+    ],
+    "use_cases": [
+      "evaluation"
+    ],
+    "trust_tier": "B",
+    "publication_year": 2019,
+    "url": null,
+    "license_name": "MIT",
+    "license_status": "approved",
+    "ai_use_status": "allowed",
+    "commercial_use": true,
+    "freshness_policy": "static_benchmark",
+    "ingestion_status": "pending",
+    "notes": "Evaluation only; keep isolated from the knowledge corpus."
+  },
+
+  {
+    "source_id": "SRC-NICE-001",
+    "title": "NICE Guidance",
+    "provider": "National Institute for Health and Care Excellence",
+    "source_type": "guideline",
+    "medical_domains": [
+      "Internal Medicine"
+    ],
+    "use_cases": [
+      "rag"
+    ],
+    "trust_tier": "A",
+    "publication_year": null,
+    "url": null,
+    "license_name": null,
+    "license_status": "blocked",
+    "ai_use_status": "permission_required",
+    "commercial_use": null,
+    "freshness_policy": "latest_available",
+    "ingestion_status": "blocked",
+    "notes": "Do not ingest until explicit AI/international reuse permission is obtained."
+  },
+
+  {
+    "source_id": "SRC-OPENSTAX-001",
+    "title": "OpenStax Anatomy and Physiology 2e",
+    "provider": "OpenStax",
+    "source_type": "textbook",
+    "medical_domains": [
+      "Anatomy",
+      "Physiology"
+    ],
+    "use_cases": [
+      "rag"
+    ],
+    "trust_tier": "B",
+    "publication_year": 2022,
+    "url": null,
+    "license_name": "CC BY-NC-SA 4.0 with additional AI-use restriction",
+    "license_status": "blocked",
+    "ai_use_status": "permission_required",
+    "commercial_use": false,
+    "freshness_policy": "manual_review",
+    "ingestion_status": "blocked",
+    "notes": "Current OpenStax page states that GenAI/LLM ingestion requires permission."
+  }
+]

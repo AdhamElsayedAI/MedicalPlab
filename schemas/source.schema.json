@@ -1,15 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://medicalplab.ai/schemas/source.schema.json",
   "title": "MedicalPlab Medical Source",
-  "description": "Metadata schema for trusted educational and medical sources.",
+  "description": "Governed source metadata used by the MedicalPlab AI data pipeline.",
   "type": "object",
 
   "required": [
     "source_id",
     "title",
+    "provider",
     "source_type",
+    "medical_domains",
+    "use_cases",
+    "trust_tier",
     "license_status",
+    "ai_use_status",
     "ingestion_status"
   ],
 
@@ -24,51 +28,132 @@
       "minLength": 1
     },
 
+    "provider": {
+      "type": "string",
+      "minLength": 1
+    },
+
     "source_type": {
       "type": "string",
       "enum": [
         "guideline",
+        "government_health",
+        "journal_article",
+        "systematic_review",
+        "dataset",
         "textbook",
-        "lecture",
         "question_bank",
-        "article",
         "other"
       ]
     },
 
-    "organization": {
-      "type": ["string", "null"]
+    "medical_domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
     },
 
-    "year": {
-      "type": ["integer", "null"],
-      "minimum": 1900
+    "use_cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "rag",
+          "question_generation",
+          "evaluation"
+        ]
+      },
+      "uniqueItems": true
+    },
+
+    "trust_tier": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+
+    "publication_year": {
+      "type": [
+        "integer",
+        "null"
+      ]
     },
 
     "url": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+
+    "license_name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
 
     "license_status": {
       "type": "string",
       "enum": [
         "approved",
+        "conditional",
         "pending_review",
-        "restricted"
+        "blocked"
       ]
     },
 
-    "medical_domain": {
-      "type": ["string", "null"]
+    "ai_use_status": {
+      "type": "string",
+      "enum": [
+        "allowed",
+        "allowed_with_conditions",
+        "permission_required",
+        "blocked",
+        "unclear"
+      ]
+    },
+
+    "commercial_use": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+
+    "freshness_policy": {
+      "type": "string",
+      "enum": [
+        "latest_available",
+        "last_5_years",
+        "static_benchmark",
+        "manual_review"
+      ]
     },
 
     "ingestion_status": {
       "type": "string",
       "enum": [
         "pending",
+        "approved",
         "processing",
         "processed",
+        "blocked",
         "failed"
+      ]
+    },
+
+    "notes": {
+      "type": [
+        "string",
+        "null"
       ]
     }
   },
