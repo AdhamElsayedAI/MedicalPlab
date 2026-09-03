@@ -1,0 +1,57 @@
+{
+  "question_id": "MED-ENDO-000001",
+  "question_type": "single_best_answer",
+
+  "discipline": "Medicine",
+  "subject": "Internal Medicine",
+  "specialty": "Endocrinology",
+  "topic": "Thyroid Disorders",
+  "subtopic": "Hyperthyroidism",
+
+  "difficulty": "medium",
+
+  "stem": "A sample medical question will be placed here.",
+
+  "choices": [
+    {
+      "id": "A",
+      "text": "Option A"
+    },
+    {
+      "id": "B",
+      "text": "Option B"
+    },
+    {
+      "id": "C",
+      "text": "Option C"
+    },
+    {
+      "id": "D",
+      "text": "Option D"
+    }
+  ],
+
+  "correct_answer": "B",
+
+  "explanation": "Educational explanation for the correct answer.",
+
+  "learning_objective": "Identify and understand the medical concept assessed by this question.",
+
+  "source": {
+    "source_id": "SRC-001",
+    "title": null,
+    "section": null,
+    "reference": null
+  },
+
+  "generation": {
+    "generated_by_ai": false,
+    "model": null,
+    "generation_version": null
+  },
+
+  "validation": {
+    "status": "pending",
+    "quality_score": null
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medicalplab.ai/schemas/question.schema.json",
+  "title": "MedicalPlab Question",
+  "description": "Canonical schema for medical educational questions used by MedicalPlab AI.",
+  "type": "object",
+
+  "required": [
+    "question_id",
+    "question_type",
+    "subject",
+    "topic",
+    "difficulty",
+    "stem",
+    "choices",
+    "correct_answer",
+    "explanation",
+    "learning_objective",
+    "source",
+    "validation"
+  ],
+
+  "properties": {
+    "question_id": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "single_best_answer",
+        "clinical_case",
+        "conceptual_mcq"
+      ]
+    },
+
+    "discipline": {
+      "type": ["string", "null"]
+    },
+
+    "subject": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "specialty": {
+      "type": ["string", "null"]
+    },
+
+    "topic": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "subtopic": {
+      "type": ["string", "null"]
+    },
+
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ]
+    },
+
+    "stem": {
+      "type": "string",
+      "minLength": 10
+    },
+
+    "choices": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+
+    "correct_answer": {
+      "type": "string"
+    },
+
+    "explanation": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "learning_objective": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "source": {
+      "type": "object",
+      "required": [
+        "source_id"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "title": {
+          "type": ["string", "null"]
+        },
+        "section": {
+          "type": ["string", "null"]
+        },
+        "reference": {
+          "type": ["string", "null"]
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "generation": {
+      "type": "object",
+      "properties": {
+        "generated_by_ai": {
+          "type": "boolean"
+        },
+        "model": {
+          "type": ["string", "null"]
+        },
+        "generation_version": {
+          "type": ["string", "null"]
+        }
+      },
+      "additionalProperties": false
+    },
+
+    "validation": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "approved",
+            "rejected",
+            "needs_review"
+          ]
+        },
+        "quality_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+
+  "additionalProperties": false
+}

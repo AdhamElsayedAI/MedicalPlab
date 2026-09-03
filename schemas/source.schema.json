@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medicalplab.ai/schemas/source.schema.json",
+  "title": "MedicalPlab Medical Source",
+  "description": "Metadata schema for trusted educational and medical sources.",
+  "type": "object",
+
+  "required": [
+    "source_id",
+    "title",
+    "source_type",
+    "license_status",
+    "ingestion_status"
+  ],
+
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "guideline",
+        "textbook",
+        "lecture",
+        "question_bank",
+        "article",
+        "other"
+      ]
+    },
+
+    "organization": {
+      "type": ["string", "null"]
+    },
+
+    "year": {
+      "type": ["integer", "null"],
+      "minimum": 1900
+    },
+
+    "url": {
+      "type": ["string", "null"]
+    },
+
+    "license_status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "pending_review",
+        "restricted"
+      ]
+    },
+
+    "medical_domain": {
+      "type": ["string", "null"]
+    },
+
+    "ingestion_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processing",
+        "processed",
+        "failed"
+      ]
+    }
+  },
+
+  "additionalProperties": false
+}
