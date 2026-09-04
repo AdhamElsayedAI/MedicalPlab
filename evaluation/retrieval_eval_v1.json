@@ -1,0 +1,308 @@
+{
+  "eval_set_id": "medicalplab-retrieval-v1",
+  "version": "1.0",
+  "source_document_id": "DOC-WHO-CARD-0001",
+  "description": "Seed retrieval benchmark for the WHO hypertension guideline corpus.",
+  "cases": [
+    {
+      "query_id": "RET-001",
+      "query": "At what blood pressure threshold should pharmacological treatment for hypertension be started?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "Hypertension pharmacological treatment initiation threshold",
+      "expected_parent_section_number": "3.1",
+      "relevant_blocks": [
+        {
+          "block_index": 12,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation defining when pharmacological treatment should be initiated."
+        },
+        {
+          "block_index": 13,
+          "relevance": 2,
+          "rationale": "Implementation remarks clarify timing and urgent initiation."
+        },
+        {
+          "block_index": 14,
+          "relevance": 1,
+          "rationale": "Provides supporting evidence and rationale."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-002",
+      "query": "امتى نبدأ علاج الضغط بالأدوية؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Arabic query for hypertension treatment initiation",
+      "expected_parent_section_number": "3.1",
+      "relevant_blocks": [
+        {
+          "block_index": 12,
+          "relevance": 3,
+          "rationale": "Primary recommendation."
+        },
+        {
+          "block_index": 13,
+          "relevance": 2,
+          "rationale": "Implementation details."
+        }
+      ],
+      "notes": "Tests Arabic-to-English retrieval."
+    },
+    {
+      "query_id": "RET-003",
+      "query": "Which laboratory tests are suggested when starting antihypertensive therapy?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "Laboratory testing before or during treatment initiation",
+      "expected_parent_section_number": "3.2",
+      "relevant_blocks": [
+        {
+          "block_index": 18,
+          "relevance": 3,
+          "rationale": "Implementation remarks contain the suggested tests."
+        },
+        {
+          "block_index": 17,
+          "relevance": 2,
+          "rationale": "Primary WHO recommendation regarding testing."
+        },
+        {
+          "block_index": 19,
+          "relevance": 1,
+          "rationale": "Supporting rationale."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-004",
+      "query": "Should cardiovascular risk assessment delay starting treatment for hypertension?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "CVD risk assessment timing relative to treatment",
+      "expected_parent_section_number": "3.3",
+      "relevant_blocks": [
+        {
+          "block_index": 22,
+          "relevance": 3,
+          "rationale": "Primary recommendation addresses timing of CVD risk assessment."
+        },
+        {
+          "block_index": 23,
+          "relevance": 2,
+          "rationale": "Implementation remarks clarify when assessment is required."
+        },
+        {
+          "block_index": 24,
+          "relevance": 1,
+          "rationale": "Supporting evidence."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-005",
+      "query": "What drug classes does WHO recommend as first-line antihypertensive agents?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "First-line antihypertensive drug classes",
+      "expected_parent_section_number": "3.4",
+      "relevant_blocks": [
+        {
+          "block_index": 27,
+          "relevance": 3,
+          "rationale": "Primary recommendation lists first-line agents."
+        },
+        {
+          "block_index": 28,
+          "relevance": 2,
+          "rationale": "Implementation remarks provide selection considerations."
+        },
+        {
+          "block_index": 29,
+          "relevance": 2,
+          "rationale": "Evidence rationale supports drug class selection."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-006",
+      "query": "Is initial combination therapy recommended for adults with hypertension?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Combination therapy for hypertension",
+      "expected_parent_section_number": "3.5",
+      "relevant_blocks": [
+        {
+          "block_index": 32,
+          "relevance": 3,
+          "rationale": "Primary combination therapy recommendation."
+        },
+        {
+          "block_index": 33,
+          "relevance": 2,
+          "rationale": "Implementation remarks."
+        },
+        {
+          "block_index": 34,
+          "relevance": 2,
+          "rationale": "Evidence rationale."
+        },
+        {
+          "block_index": 35,
+          "relevance": 1,
+          "rationale": "Evidence-to-decision considerations."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-007",
+      "query": "What blood pressure target is recommended after treatment begins?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Target blood pressure",
+      "expected_parent_section_number": "3.6",
+      "relevant_blocks": [
+        {
+          "block_index": 37,
+          "relevance": 3,
+          "rationale": "Primary target blood pressure recommendation."
+        },
+        {
+          "block_index": 38,
+          "relevance": 2,
+          "rationale": "Evidence and rationale."
+        },
+        {
+          "block_index": 39,
+          "relevance": 1,
+          "rationale": "Evidence-to-decision considerations."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-008",
+      "query": "بعد بدء علاج الضغط، المتابعة وإعادة قياس الضغط تكون كل قد إيه؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Frequency of reassessment after antihypertensive treatment",
+      "expected_parent_section_number": "3.7",
+      "relevant_blocks": [
+        {
+          "block_index": 41,
+          "relevance": 3,
+          "rationale": "Primary reassessment frequency recommendation."
+        },
+        {
+          "block_index": 42,
+          "relevance": 2,
+          "rationale": "Evidence-to-decision considerations."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-009",
+      "query": "Can nonphysician health professionals manage or initiate antihypertensive treatment?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Treatment by nonphysician professionals",
+      "expected_parent_section_number": "3.8",
+      "relevant_blocks": [
+        {
+          "block_index": 44,
+          "relevance": 3,
+          "rationale": "Primary recommendation."
+        },
+        {
+          "block_index": 45,
+          "relevance": 2,
+          "rationale": "Implementation remarks."
+        },
+        {
+          "block_index": 46,
+          "relevance": 2,
+          "rationale": "Evidence rationale."
+        },
+        {
+          "block_index": 47,
+          "relevance": 1,
+          "rationale": "Evidence-to-decision considerations."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-010",
+      "query": "How should hypertension be approached in humanitarian or disaster settings?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Hypertension in humanitarian and emergency settings",
+      "expected_parent_section_number": "4.1",
+      "relevant_blocks": [
+        {
+          "block_index": 49,
+          "relevance": 3,
+          "rationale": "Dedicated section on humanitarian and disaster settings."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-011",
+      "query": "Which antihypertensive medications are preferred or contraindicated during pregnancy?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Hypertension treatment in pregnancy",
+      "expected_parent_section_number": "4.3",
+      "relevant_blocks": [
+        {
+          "block_index": 51,
+          "relevance": 3,
+          "rationale": "Dedicated pregnancy and hypertension section."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "RET-012",
+      "query": "What is the recommended first-line treatment for hypertension in children under 12?",
+      "language": "en",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Pediatric hypertension treatment",
+      "expected_parent_section_number": null,
+      "relevant_blocks": [],
+      "notes": "The indexed WHO guideline targets adults and should not be treated as evidence for pediatric treatment."
+    }
+  ]
+}
