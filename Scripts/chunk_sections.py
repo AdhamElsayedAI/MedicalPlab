@@ -528,6 +528,27 @@ def build_chunks(
                 ),
             }
 
+            # Preserve source-agnostic provenance when available.
+            # Existing PDF/WHO sections that do not contain these
+            # fields keep their previous chunk output unchanged.
+            for provenance_field in (
+                "provenance_type",
+                "source_locator",
+                "source_format",
+            ):
+                if provenance_field in section:
+                    chunk[provenance_field] = section[
+                        provenance_field
+                    ]
+
+            # Keep the source-faithful section_path
+            # unchanged while passing through the
+            # optional semantic retrieval hierarchy.
+            if "retrieval_section_path" in section:
+                chunk["retrieval_section_path"] = section[
+                    "retrieval_section_path"
+                ]
+
             chunks.append(
                 chunk
             )

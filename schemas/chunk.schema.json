@@ -52,7 +52,10 @@
       "minimum": 1
     },
     "source_block_sha256": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "pattern": "^[a-fA-F0-9]{64}$"
     },
     "block_type": {
@@ -62,21 +65,36 @@
         "recommendation",
         "implementation_remarks",
         "evidence_rationale",
-        "evidence_to_decision"
+        "evidence_to_decision",
+        "abstract",
+        "paragraph",
+        "table_caption",
+        "table_row",
+        "table_note",
+        "figure_caption"
       ]
     },
     "section_number": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "section_level": {
       "type": "integer",
       "minimum": 0
     },
     "parent_section_number": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "parent_section_heading": {
-      "type": ["string", "null"]
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "section_path": {
       "type": "array",
@@ -89,11 +107,17 @@
       "type": "string"
     },
     "start_page": {
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1
     },
     "end_page": {
-      "type": "integer",
+      "type": [
+        "integer",
+        "null"
+      ],
       "minimum": 1
     },
     "chunk_index": {
@@ -118,6 +142,46 @@
     "content_sha256": {
       "type": "string",
       "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "provenance_type": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "page",
+        "xml_element",
+        null
+      ],
+      "description": "How the chunk is located in the canonical source artifact."
+    },
+    "source_locator": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Source-specific locator. Examples: page range or stable normalized JATS block identifier."
+    },
+    "source_format": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "pdf",
+        "pmc_jats_xml",
+        null
+      ],
+      "description": "Canonical ingestion source format."
+    },
+    "retrieval_section_path": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Optional semantic hierarchy used for retrieval. Source-faithful section_path remains unchanged."
     }
   },
   "additionalProperties": false
