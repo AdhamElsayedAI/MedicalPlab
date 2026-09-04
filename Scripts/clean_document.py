@@ -15,27 +15,82 @@ PROCESSED_DIR = (
 )
 
 
-# High-confidence extraction artifacts only.
+# Maximum percentage of source text that the cleaning
+# stage is allowed to remove automatically.
+MAX_REMOVAL_RATIO = 0.05
+
+
+# ---------------------------------------------------------------------
+# Confirmed PDF layout artifacts
 #
 # IMPORTANT:
-# Do not add normal medical headings here simply because
-# they repeat across several pages.
+# These values were confirmed manually from the current WHO
+# hypertension guideline.
+#
+# They are NOT removed globally from medical text.
+# They are removed only when they occur at a page edge.
+#
+# This is especially important for values such as "DNA",
+# which could be legitimate medical content elsewhere.
+# ---------------------------------------------------------------------
+
 CONFIRMED_EDGE_ARTIFACTS = {
+    # Repeated document footer
     "guideline for the pharmacological treatment of hypertension in adults",
+
+    # Reversed vertical page labels
     "snoitadnemmocer",
     "sexenna",
     "secnerefer",
+
+    # Front matter
+    "stnemegdelwonkca",
+    "snoitaiverbba",
+    "dna",
+    "smynorca",
+    "yrammus",
+    "evitucexe",
+
+    # Introduction
+    "noitcudortni",
+
+    # Method / guideline vertical labels
+    "enilediug",
+    "eht",
+    "gnipoleved",
+    "rof",
+    "dohtem",
+
+    # Special settings
+    "sgnittes",
+    "laiceps",
+
+    # Publication / implementation / research gaps
+    "spag",
+    "hcraeser",
+    "noitaulave",
+    ",noitatnemelpmi",
+    ",noitacilbup",
+
+    # Implementation tools
+    "sloot",
+    "noitatnemelpmi",
 }
 
 
 def load_json(path: Path) -> dict[str, Any]:
-    """Load JSON data from a file."""
-    with path.open("r", encoding="utf-8") as file:
+    """
+    Load a JSON object from disk.
+    """
+    with path.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
         data = json.load(file)
 
     if not isinstance(data, dict):
         raise ValueError(
-            f"Expected JSON object in: {path}"
+            f"Expected JSON object: {path}"
         )
 
     return data
@@ -45,7 +100,9 @@ def save_json(
     path: Path,
     data: dict[str, Any],
 ) -> None:
-    """Save JSON data using UTF-8."""
+    """
+    Save JSON using UTF-8.
+    """
     path.parent.mkdir(
         parents=True,
         exist_ok=True,
@@ -63,8 +120,12 @@ def save_json(
         )
 
 
-def normalize_folder_name(value: str) -> str:
-    """Normalize specialty name for filesystem use."""
+def normalize_folder_name(
+    value: str,
+) -> str:
+    """
+    Convert a specialty name into a safe folder name.
+    """
     return (
         value.strip()
         .lower()
@@ -73,229 +134,362 @@ def normalize_folder_name(value: str) -> str:
     )
 
 
-def normalize_edge_line(line: str) -> str:
+def normalize_edge_line(
+    line: str,
+) -> str:
     """
-    Normalize edge text for safe artifact comparison.
+    Normalize a possible page-edge artifact.
 
-    Example:
-    '48 GUIDELINE FOR THE PHARMACOLOGICAL...'
-    becomes:
-    'guideline for the pharmacological...'
+    Examples:
+
+        "2 GUIDELINE FOR ..."
+            ->
+        "guideline for ..."
+
+        "iv GUIDELINE FOR ..."
+            ->
+        "guideline for ..."
+
+        "GUIDELINE FOR ... 2"
+            ->
+        "guideline for ..."
+
+    This function is used only for artifact comparison.
+    It does not rewrite source medical content.
     """
-    line = line.strip()
+    value = line.strip()
 
-    # Remove a leading page number.
-    line = re.sub(
-        r"^\s*\d+\s+",
+    if not value:
+        return ""
+
+    # Remove a leading printed page number or Roman numeral.
+    value = re.sub(
+        r"^(?:\d{1,3}|[ivxlcdm]{1,8})\s+",
         "",
-        line,
+        value,
+        flags=re.IGNORECASE,
     )
 
-    # Remove a trailing page number.
-    line = re.sub(
-        r"\s+\d+\s*$",
+    # Remove a trailing printed page number or Roman numeral.
+    value = re.sub(
+        r"\s+(?:\d{1,3}|[ivxlcdm]{1,8})$",
         "",
-        line,
+        value,
+        flags=re.IGNORECASE,
     )
 
-    # Normalize whitespace.
-    line = re.sub(
+    value = re.sub(
         r"\s+",
         " ",
-        line,
+        value.strip(),
     )
 
-    return line.casefold().strip()
+    return value.casefold()
 
 
-def clean_general_text(text: str) -> str:
+def is_terminal_page_number(
+    line: str,
+) -> bool:
     """
-    Apply conservative formatting cleanup.
+    Detect a standalone printed page marker.
 
-    This function does not rewrite or summarize
-    medical content.
+    Examples:
+        1
+        25
+        iv
+        vii
+
+    IMPORTANT:
+    This function alone never causes removal.
+
+    A page number is removed only when it is directly
+    attached to a confirmed artifact cluster at a page edge.
     """
-    text = text.replace(
-        "\u00a0",
-        " ",
+    value = line.strip().casefold()
+
+    if not value:
+        return False
+
+    return bool(
+        re.fullmatch(
+            r"(?:\d{1,3}|[ivxlcdm]{1,8})",
+            value,
+        )
     )
 
-    # Remove trailing spaces on lines.
-    lines = [
-        line.rstrip()
-        for line in text.splitlines()
+
+def get_non_empty_indexes(
+    lines: list[str],
+    removed_indexes: set[int],
+) -> list[int]:
+    """
+    Return indexes of currently active non-empty lines.
+    """
+    return [
+        index
+        for index, line in enumerate(lines)
+        if (
+            index not in removed_indexes
+            and line.strip()
+        )
     ]
-
-    text = "\n".join(lines)
-
-    # Collapse excessive spaces, but preserve line structure.
-    text = re.sub(
-        r"[ \t]{2,}",
-        " ",
-        text,
-    )
-
-    # Avoid excessive blank lines.
-    text = re.sub(
-        r"\n{3,}",
-        "\n\n",
-        text,
-    )
-
-    return text.strip()
 
 
 def clean_page(
     text: str,
-) -> tuple[str, list[str]]:
+) -> tuple[
+    str,
+    list[str],
+]:
     """
-    Remove only confirmed artifacts occurring at page edges.
+    Safely clean one extracted PDF page.
+
+    Strategy:
+        1. Preserve all original medical text.
+        2. Peel only confirmed artifacts from page edges.
+        3. Remove a standalone printed page number only
+           when it is attached directly to an artifact cluster.
+        4. Never rewrite medical wording.
+        5. Never perform LLM-based cleaning.
 
     Returns:
         cleaned_text
         removed_lines
     """
+    if not isinstance(text, str):
+        return "", []
+
     if not text:
         return "", []
 
     lines = text.splitlines()
 
-    if not lines:
-        return "", []
+    removed_indexes: set[int] = set()
 
-    removed_lines: list[str] = []
+    # -------------------------------------------------------------
+    # BOTTOM EDGE PEELING
+    #
+    # Example:
+    #
+    # ENILEDIUG
+    # EHT
+    # GNIPOLEVED
+    # ROF
+    # DOHTEM
+    # 3
+    #
+    # We first remove "3" only because the line directly above
+    # is a confirmed artifact.
+    #
+    # Then the confirmed artifacts are peeled one at a time.
+    # -------------------------------------------------------------
 
-    non_empty_indexes = [
-        index
-        for index, line in enumerate(lines)
-        if line.strip()
-    ]
+    while True:
+        indexes = get_non_empty_indexes(
+            lines,
+            removed_indexes,
+        )
 
-    if not non_empty_indexes:
-        return "", []
+        if not indexes:
+            break
 
-    # Only inspect first/last 5 non-empty lines.
-    edge_indexes = set(
-        non_empty_indexes[:5]
-        + non_empty_indexes[-5:]
-    )
+        last_index = indexes[-1]
 
-    cleaned_lines: list[str] = []
+        last_line = (
+            lines[last_index]
+            .strip()
+        )
 
-    for index, original_line in enumerate(lines):
-        stripped = original_line.strip()
+        normalized_last = normalize_edge_line(
+            last_line
+        )
+
+        # Confirmed artifact itself.
+        if (
+            normalized_last
+            in CONFIRMED_EDGE_ARTIFACTS
+        ):
+            removed_indexes.add(
+                last_index
+            )
+            continue
+
+        # Standalone page number below an artifact cluster.
+        if is_terminal_page_number(
+            last_line
+        ):
+            if len(indexes) >= 2:
+                previous_index = (
+                    indexes[-2]
+                )
+
+                previous_line = (
+                    lines[
+                        previous_index
+                    ]
+                    .strip()
+                )
+
+                normalized_previous = (
+                    normalize_edge_line(
+                        previous_line
+                    )
+                )
+
+                if (
+                    normalized_previous
+                    in CONFIRMED_EDGE_ARTIFACTS
+                ):
+                    removed_indexes.add(
+                        last_index
+                    )
+                    continue
+
+            # Standalone number without confirmed artifact
+            # directly above it: preserve it.
+            break
+
+        break
+
+    # -------------------------------------------------------------
+    # TOP EDGE PEELING
+    #
+    # Same conservative logic for artifacts appearing at
+    # the start of a PDF page.
+    # -------------------------------------------------------------
+
+    while True:
+        indexes = get_non_empty_indexes(
+            lines,
+            removed_indexes,
+        )
+
+        if not indexes:
+            break
+
+        first_index = indexes[0]
+
+        first_line = (
+            lines[first_index]
+            .strip()
+        )
+
+        normalized_first = normalize_edge_line(
+            first_line
+        )
 
         if (
-            stripped
-            and index in edge_indexes
+            normalized_first
+            in CONFIRMED_EDGE_ARTIFACTS
         ):
-            normalized = normalize_edge_line(
-                stripped
+            removed_indexes.add(
+                first_index
             )
+            continue
 
-            if normalized in CONFIRMED_EDGE_ARTIFACTS:
-                removed_lines.append(
-                    stripped
+        # Standalone page number above an artifact cluster.
+        if is_terminal_page_number(
+            first_line
+        ):
+            if len(indexes) >= 2:
+                next_index = (
+                    indexes[1]
                 )
-                continue
 
-        cleaned_lines.append(
-            original_line
-        )
+                next_line = (
+                    lines[
+                        next_index
+                    ]
+                    .strip()
+                )
+
+                normalized_next = (
+                    normalize_edge_line(
+                        next_line
+                    )
+                )
+
+                if (
+                    normalized_next
+                    in CONFIRMED_EDGE_ARTIFACTS
+                ):
+                    removed_indexes.add(
+                        first_index
+                    )
+                    continue
+
+            break
+
+        break
+
+    # Preserve the exact order of all remaining lines.
+    cleaned_lines = [
+        line
+        for index, line in enumerate(lines)
+        if index not in removed_indexes
+    ]
 
     cleaned_text = "\n".join(
         cleaned_lines
+    ).strip()
+
+    removed_lines = [
+        lines[index].strip()
+        for index in sorted(
+            removed_indexes
+        )
+        if lines[index].strip()
+    ]
+
+    return (
+        cleaned_text,
+        removed_lines,
     )
 
-    cleaned_text = clean_general_text(
-        cleaned_text
-    )
 
-    return cleaned_text, removed_lines
+def calculate_document_characters(
+    pages: list[dict[str, Any]],
+) -> int:
+    """
+    Calculate total characters in document page text.
+    """
+    total = 0
 
+    for page in pages:
+        text = page.get(
+            "text",
+            "",
+        )
 
-def build_cleaning_report(
-    document_id: str,
-    original_pages: list[dict[str, Any]],
-    cleaned_pages: list[dict[str, Any]],
-    removed_artifacts: list[dict[str, Any]],
-) -> dict[str, Any]:
-    """Build measurable cleaning statistics."""
-    original_characters = sum(
-        len(page.get("text", ""))
-        for page in original_pages
-    )
+        if isinstance(text, str):
+            total += len(text)
 
-    cleaned_characters = sum(
-        len(page.get("text", ""))
-        for page in cleaned_pages
-    )
-
-    characters_removed = (
-        original_characters
-        - cleaned_characters
-    )
-
-    removal_ratio = (
-        characters_removed
-        / original_characters
-        if original_characters
-        else 0.0
-    )
-
-    pages_modified = len(
-        {
-            item["page_number"]
-            for item in removed_artifacts
-        }
-    )
-
-    # Conservative safety check:
-    # cleaning should remove only a small proportion
-    # of source text.
-    safe_removal = (
-        removal_ratio <= 0.05
-    )
-
-    return {
-        "document_id": document_id,
-        "cleaning_status": (
-            "pass"
-            if safe_removal
-            else "needs_review"
-        ),
-        "original_characters": original_characters,
-        "cleaned_characters": cleaned_characters,
-        "characters_removed": characters_removed,
-        "removal_ratio": round(
-            removal_ratio,
-            6,
-        ),
-        "pages_modified": pages_modified,
-        "artifacts_removed": len(
-            removed_artifacts
-        ),
-        "removed_artifacts": removed_artifacts,
-    }
+    return total
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Safely clean extracted MedicalPlab "
-            "document text."
+            "Safely remove confirmed PDF layout "
+            "artifacts from an extracted MedicalPlab document."
         )
     )
 
     parser.add_argument(
         "document_id",
-        help="Document ID to clean.",
+        help=(
+            "Document ID, for example "
+            "DOC-WHO-CARD-0001"
+        ),
     )
 
     parser.add_argument(
         "--specialty",
         default="Cardiology",
-        help="Medical specialty. Default: Cardiology",
+        help=(
+            "Medical specialty folder. "
+            "Default: Cardiology"
+        ),
     )
 
     args = parser.parse_args()
@@ -310,108 +504,7 @@ def main() -> None:
         / f"{args.document_id}.json"
     )
 
-    if not input_path.exists():
-        raise FileNotFoundError(
-            f"Extracted document not found: "
-            f"{input_path}"
-        )
-
-    document = load_json(
-        input_path
-    )
-
-    original_pages = document.get(
-        "pages",
-        [],
-    )
-
-    if not isinstance(
-        original_pages,
-        list,
-    ):
-        raise ValueError(
-            "Document pages must be a list."
-        )
-
-    cleaned_pages: list[dict[str, Any]] = []
-
-    removed_artifacts: list[dict[str, Any]] = []
-
-    print("\nMedicalPlab Safe Cleaning")
-    print("=" * 32)
-    print(
-        f"Document : {args.document_id}"
-    )
-    print(
-        f"Pages    : {len(original_pages)}"
-    )
-    print(
-        "Cleaning : confirmed artifacts only..."
-    )
-
-    for page in original_pages:
-        page_number = page.get(
-            "page_number"
-        )
-
-        original_text = page.get(
-            "text",
-            "",
-        )
-
-        cleaned_text, removed_lines = clean_page(
-            original_text
-        )
-
-        for removed_line in removed_lines:
-            removed_artifacts.append(
-                {
-                    "page_number": page_number,
-                    "text": removed_line,
-                }
-            )
-
-        cleaned_pages.append(
-            {
-                "page_number": page_number,
-                "text": cleaned_text,
-                "character_count": len(
-                    cleaned_text
-                ),
-                "has_text": bool(
-                    cleaned_text
-                ),
-            }
-        )
-
-    report = build_cleaning_report(
-        args.document_id,
-        original_pages,
-        cleaned_pages,
-        removed_artifacts,
-    )
-
-    cleaned_at = datetime.now(
-        timezone.utc
-    ).isoformat()
-
-    cleaned_document = {
-        **{
-            key: value
-            for key, value in document.items()
-            if key != "pages"
-        },
-        "cleaning": {
-            "pipeline_version": "v1",
-            "strategy": (
-                "conservative_edge_artifact_removal"
-            ),
-            "cleaned_at": cleaned_at,
-        },
-        "pages": cleaned_pages,
-    }
-
-    cleaned_path = (
+    output_path = (
         PROCESSED_DIR
         / specialty
         / f"{args.document_id}.cleaned.json"
@@ -423,49 +516,322 @@ def main() -> None:
         / f"{args.document_id}.cleaning.json"
     )
 
+    if not input_path.exists():
+        raise FileNotFoundError(
+            f"Extracted document not found: "
+            f"{input_path}"
+        )
+
+    document = load_json(
+        input_path
+    )
+
+    pages = document.get(
+        "pages",
+        [],
+    )
+
+    if not isinstance(
+        pages,
+        list,
+    ):
+        raise ValueError(
+            "Document 'pages' field must be a list."
+        )
+
+    if not pages:
+        raise ValueError(
+            "Document contains no extracted pages."
+        )
+
+    original_characters = (
+        calculate_document_characters(
+            pages
+        )
+    )
+
+    if original_characters <= 0:
+        raise ValueError(
+            "Document contains no extractable text."
+        )
+
+    cleaned_pages: list[
+        dict[str, Any]
+    ] = []
+
+    removed_artifacts: list[
+        dict[str, Any]
+    ] = []
+
+    pages_modified = 0
+
+    print(
+        "\nMedicalPlab Safe Cleaning"
+    )
+    print("=" * 32)
+
+    print(
+        f"Document : "
+        f"{args.document_id}"
+    )
+
+    print(
+        f"Pages    : "
+        f"{len(pages)}"
+    )
+
+    print(
+        "Cleaning : confirmed artifacts only..."
+    )
+
+    for page_position, page in enumerate(
+        pages,
+        start=1,
+    ):
+        if not isinstance(
+            page,
+            dict,
+        ):
+            raise ValueError(
+                f"Page #{page_position} "
+                "must be a JSON object."
+            )
+
+        original_text = page.get(
+            "text",
+            "",
+        )
+
+        if not isinstance(
+            original_text,
+            str,
+        ):
+            original_text = ""
+
+        (
+            cleaned_text,
+            removed_lines,
+        ) = clean_page(
+            original_text
+        )
+
+        if (
+            cleaned_text
+            != original_text.strip()
+        ):
+            pages_modified += 1
+
+        page_number = page.get(
+            "page_number",
+            page_position,
+        )
+
+        for removed_line in removed_lines:
+            removed_artifacts.append(
+                {
+                    "page_number": (
+                        page_number
+                    ),
+                    "text": (
+                        removed_line
+                    ),
+                }
+            )
+
+        cleaned_page = dict(
+            page
+        )
+
+        cleaned_page[
+            "text"
+        ] = cleaned_text
+
+        cleaned_page[
+            "character_count"
+        ] = len(
+            cleaned_text
+        )
+
+        cleaned_page[
+            "has_text"
+        ] = bool(
+            cleaned_text.strip()
+        )
+
+        cleaned_pages.append(
+            cleaned_page
+        )
+
+    cleaned_characters = (
+        calculate_document_characters(
+            cleaned_pages
+        )
+    )
+
+    removed_characters = (
+        original_characters
+        - cleaned_characters
+    )
+
+    removal_ratio = (
+        removed_characters
+        / original_characters
+    )
+
+    quality_errors: list[str] = []
+
+    if cleaned_characters <= 0:
+        quality_errors.append(
+            "Cleaning removed all document text."
+        )
+
+    if removal_ratio < 0:
+        quality_errors.append(
+            "Cleaned document is larger than source "
+            "in an unexpected way."
+        )
+
+    if removal_ratio > MAX_REMOVAL_RATIO:
+        quality_errors.append(
+            "Automatic cleaning removed more than "
+            f"{MAX_REMOVAL_RATIO:.0%} of source text."
+        )
+
+    if len(cleaned_pages) != len(pages):
+        quality_errors.append(
+            "Page count changed during cleaning."
+        )
+
+    quality_status = (
+        "pass"
+        if not quality_errors
+        else "needs_review"
+    )
+
+    cleaned_document = {
+        key: value
+        for key, value
+        in document.items()
+        if key != "pages"
+    }
+
+    cleaned_document[
+        "cleaning"
+    ] = {
+        "pipeline_version": "v2",
+        "strategy": (
+            "confirmed_edge_artifact_peeling"
+        ),
+        "cleaned_at": datetime.now(
+            timezone.utc
+        ).isoformat(),
+        "maximum_removal_ratio": (
+            MAX_REMOVAL_RATIO
+        ),
+        "artifact_policy": (
+            "document_confirmed_page_edge_only"
+        ),
+    }
+
+    cleaned_document[
+        "pages"
+    ] = cleaned_pages
+
+    cleaning_report = {
+        "document_id": (
+            args.document_id
+        ),
+        "status": (
+            quality_status
+        ),
+        "page_count": (
+            len(pages)
+        ),
+        "original_characters": (
+            original_characters
+        ),
+        "cleaned_characters": (
+            cleaned_characters
+        ),
+        "removed_characters": (
+            removed_characters
+        ),
+        "removal_ratio": round(
+            removal_ratio,
+            6,
+        ),
+        "pages_modified": (
+            pages_modified
+        ),
+        "removed_artifact_count": (
+            len(
+                removed_artifacts
+            )
+        ),
+        "removed_artifacts": (
+            removed_artifacts
+        ),
+        "quality_errors": (
+            quality_errors
+        ),
+    }
+
     save_json(
-        cleaned_path,
+        output_path,
         cleaned_document,
     )
 
     save_json(
         report_path,
-        report,
+        cleaning_report,
     )
 
-    print("\nCLEANING COMPLETE ✅")
+    print(
+        "\nCLEANING COMPLETE ✅"
+        if quality_status == "pass"
+        else "\nCLEANING NEEDS REVIEW ❌"
+    )
+
     print(
         f"Original chars : "
-        f"{report['original_characters']:,}"
+        f"{original_characters:,}"
     )
+
     print(
         f"Cleaned chars  : "
-        f"{report['cleaned_characters']:,}"
+        f"{cleaned_characters:,}"
     )
+
     print(
         f"Chars removed  : "
-        f"{report['characters_removed']:,}"
+        f"{removed_characters:,}"
     )
+
     print(
         f"Removal ratio  : "
-        f"{report['removal_ratio']:.2%}"
+        f"{removal_ratio:.2%}"
     )
+
     print(
         f"Pages modified : "
-        f"{report['pages_modified']}"
+        f"{pages_modified}"
     )
+
     print(
         f"Artifacts      : "
-        f"{report['artifacts_removed']}"
+        f"{len(removed_artifacts)}"
     )
+
     print(
         f"Quality        : "
-        f"{report['cleaning_status'].upper()}"
+        f"{'PASS' if quality_status == 'pass' else 'NEEDS REVIEW'}"
     )
+
     print(
         f"Cleaned output : "
-        f"{cleaned_path}"
+        f"{output_path}"
     )
+
     print(
         f"Audit report   : "
         f"{report_path}"
@@ -476,11 +842,26 @@ def main() -> None:
             "\nRemoved artifact samples:"
         )
 
-        for item in removed_artifacts[:15]:
+        for item in removed_artifacts[
+            :15
+        ]:
             print(
-                f"Page {item['page_number']}: "
+                f"Page "
+                f"{item['page_number']}: "
                 f"{item['text']}"
             )
+
+    if quality_errors:
+        print(
+            "\nQuality errors:"
+        )
+
+        for error in quality_errors:
+            print(
+                f"- {error}"
+            )
+
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
