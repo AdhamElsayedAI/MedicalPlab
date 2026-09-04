@@ -1,12 +1,11 @@
 [project]
-
-name = "gp"
-version = "0.1.0"
-description = "Backend API for Plabable exam question extraction and retrieval."
+name = "medicalplab"
+version = "0.2.0"
+description = "Evidence-grounded medical learning and retrieval platform."
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [
-    "fastapi",
-    "uvicorn[standard]",
-    "pdfplumber"
+    "jsonschema==4.26.0",
+    "pdfplumber==0.11.10",
+    "requests==2.34.2"
 ]
