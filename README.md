@@ -74,13 +74,11 @@ MedicalPlab/
 +-- examples/
 +-- evaluation/
 +-- docs/
-+-- main.py
-+-- streamlit_app.py
 +-- pyproject.toml
 +-- requirements.txt
++-- requirements-retrieval.txt
++-- uv.lock
 ```
-
-`main.py`, `streamlit_app.py`, and the older Plabable/University retrieval scripts belong to the original prototype layer. They are retained for continuity while the active engineering work moves toward the governed retrieval and RAG architecture.
 
 ## Environment
 
@@ -90,7 +88,7 @@ Recommended:
 - Windows, Linux, or macOS for the data pipeline
 - NVIDIA CUDA-capable GPU for the current Qwen3 dense benchmark script
 
-Windows setup:
+Windows core setup:
 
 ```bat
 py -3.11 -m venv .venv
@@ -99,11 +97,19 @@ python -m pip install --upgrade pip
 pip install -e .
 ```
 
+For retrieval benchmarks, install a PyTorch build appropriate for the target machine first, then install the validated retrieval stack:
+
+```bat
+pip install -r requirements-retrieval.txt
+```
+
 Verify CUDA before running the dense benchmark:
 
 ```bat
 python -c "import torch; print(torch.__version__); print('CUDA:', torch.cuda.is_available())"
 ```
+
+See `DEPENDENCY_SETUP.md` for the validated local versions and environment notes.
 
 ## Data setup
 

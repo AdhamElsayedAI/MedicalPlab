@@ -1,9 +1,0 @@
-# Original FastAPI / Streamlit prototype.
-# Keep this in a SEPARATE virtual environment from the active data pipeline.
-# streamlit==1.47.0 requires Pillow <12, while pdfplumber==0.11.10
-# requires Pillow >=12.2.0, so the legacy UI and current pipeline should
-# not share one locked environment.
-
-fastapi==0.116.1
-streamlit==1.47.0
-uvicorn[standard]==0.35.0

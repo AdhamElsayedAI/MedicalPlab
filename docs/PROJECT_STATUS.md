@@ -110,7 +110,3 @@ The fix kept the source-faithful JATS path intact while adding `retrieval_sectio
 ## Active next task
 
 Create a real multi-source retrieval evaluation with WHO-only, PMC-only, shared-evidence, unsupported, English, Arabic, mixed-language, paraphrase, clinical-style, acronym-heavy, source-selection, and hard-negative cases.
-
-## Legacy prototype
-
-`main.py`, `streamlit_app.py`, and the older Plabable/University scripts belong to the original question-bank prototype and are retained for continuity.

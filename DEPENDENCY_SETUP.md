@@ -1,40 +1,6 @@
 # Dependency setup
 
-MedicalPlab currently contains two generations of the project:
-
-1. the active governed data/retrieval pipeline;
-2. the original FastAPI/Streamlit prototype.
-
-They are intentionally not locked into the same environment.
-
-## Why they are separated
-
-The current pipeline uses:
-
-```text
-pdfplumber 0.11.10
-```
-
-which requires:
-
-```text
-Pillow >=12.2.0
-```
-
-The original prototype used:
-
-```text
-streamlit 1.47.0
-```
-
-which requires:
-
-```text
-Pillow <12
-```
-
-Those constraints are incompatible. Keeping the legacy UI in the main
-`pyproject.toml` would make the project lock unsatisfiable.
+MedicalPlab keeps the core data pipeline and the retrieval stack separated so the repository stays reproducible without forcing a platform-specific GPU package set into the core lockfile.
 
 ## Core data pipeline
 
@@ -55,6 +21,8 @@ pdfplumber 0.11.10
 requests 2.34.2
 ```
 
+`uv.lock` represents this core project.
+
 ## Retrieval environment
 
 The current validated retrieval environment additionally uses:
@@ -67,8 +35,7 @@ accelerate 1.14.0
 PyTorch 2.11.0+cu128
 ```
 
-PyTorch is intentionally not pinned in `pyproject.toml` because the correct
-build depends on the target hardware and CUDA platform.
+PyTorch is intentionally not pinned in `pyproject.toml` because the correct build depends on the target hardware and CUDA platform.
 
 Install a PyTorch build appropriate for the machine first, then:
 
@@ -82,24 +49,10 @@ Before running GPU benchmarks:
 python -c "import torch; print(torch.__version__); print('CUDA:', torch.cuda.is_available())"
 ```
 
-## Legacy prototype
+## Reproducibility notes
 
-If the old FastAPI/Streamlit prototype is needed, create a separate
-environment:
-
-```bat
-py -3.11 -m venv .venv-legacy
-.venv-legacy\Scripts\activate
-pip install -r requirements-legacy.txt
-```
-
-Do not install `requirements-legacy.txt` into the active retrieval/data
-environment.
-
-## uv.lock
-
-`uv.lock` represents the core project declared in `pyproject.toml`.
-
-GPU-specific retrieval packages and the legacy UI are documented and pinned
-separately because they have platform-specific or mutually incompatible
-constraints.
+- `pyproject.toml` is the source of truth for the core project.
+- `uv.lock` locks the core environment.
+- `requirements-retrieval.txt` pins the validated retrieval stack.
+- GPU-specific PyTorch installation remains platform dependent.
+- Raw and processed medical data under `Data/` are intentionally excluded from Git.
