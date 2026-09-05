@@ -1,0 +1,771 @@
+{
+  "eval_set_id": "medicalplab-retrieval-multisource-dev-v2",
+  "version": "2.0.0",
+  "corpus_document_ids": [
+    "DOC-WHO-CARD-0001",
+    "DOC-PMC-CARD-0002"
+  ],
+  "description": "Real multi-source DEV evaluation for the current WHO + PMC hypertension corpus. Includes single-source, genuinely multi-source, authority-sensitive, multilingual, hard-negative, and unsupported cases. This is a development set, not a held-out final benchmark.",
+  "cases": [
+    {
+      "query_id": "MSV2-001",
+      "query": "After a confirmed hypertension diagnosis, how soon should antihypertensive drug treatment begin, and when should it be started without delay?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO timing of pharmacological treatment initiation after diagnosis",
+      "expected_parent_section_number": "3.1",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 13,
+          "relevance": 3,
+          "rationale": "WHO implementation remarks specify treatment within four weeks and immediate initiation for very high BP or end-organ damage."
+        }
+      ],
+      "notes": "WHO-only case focused on timing rather than the diagnostic threshold."
+    },
+    {
+      "query_id": "MSV2-002",
+      "query": "هل لازم نستنى التحاليل قبل ما نبدأ علاج الضغط، وإيه الفحوصات المقترحة؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO laboratory testing without delaying hypertension treatment",
+      "expected_parent_section_number": "3.2",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 17,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation says testing should be obtained only when it does not delay or impede treatment."
+        },
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 18,
+          "relevance": 2,
+          "rationale": "Implementation remarks list suggested tests and state treatment should not be delayed when testing is unavailable."
+        }
+      ],
+      "notes": "Arabic-to-English retrieval; distinguishes the WHO no-delay principle from generic testing lists."
+    },
+    {
+      "query_id": "MSV2-003",
+      "query": "Should cardiovascular risk assessment be completed before starting antihypertensive medication, or can it be done after treatment begins?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO timing of cardiovascular risk assessment relative to treatment",
+      "expected_parent_section_number": "3.3",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 22,
+          "relevance": 3,
+          "rationale": "WHO recommends CVD risk assessment at or after treatment initiation when feasible and without delaying treatment."
+        },
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 23,
+          "relevance": 2,
+          "rationale": "Implementation remarks clarify that most patients at or above 140/90 do not need risk assessment before treatment."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-004",
+      "query": "For a patient whose baseline BP is ≥20/10 mmHg فوق الـtarget، إمتى تكون combination therapy especially valuable?",
+      "language": "mixed",
+      "query_type": "acronym_heavy",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO implementation criterion for initial combination therapy",
+      "expected_parent_section_number": "3.5",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 33,
+          "relevance": 3,
+          "rationale": "WHO implementation remarks state combination therapy may be especially valuable when baseline BP is at least 20/10 mmHg above target."
+        }
+      ],
+      "notes": "Mixed-language query with numeric clinical criterion."
+    },
+    {
+      "query_id": "MSV2-005",
+      "query": "Under what conditions does WHO say pharmacists or nurses can provide pharmacological treatment for hypertension?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO conditions for hypertension treatment by nonphysician professionals",
+      "expected_parent_section_number": "3.8",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 44,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation lists training, prescribing authority, protocols, and physician oversight."
+        },
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 45,
+          "relevance": 2,
+          "rationale": "Implementation remarks describe supporting roles and collaborative-care conditions."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-006",
+      "query": "مريض ضغط وعنده مرض قلبي وعائي معروف أو خطورة قلبية وعائية مرتفعة، ما هدف ضغط الدم الانقباضي المقترح من منظمة الصحة العالمية؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO systolic blood pressure target for cardiovascular disease or high-risk hypertension",
+      "expected_parent_section_number": "3.6",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 37,
+          "relevance": 3,
+          "rationale": "WHO target-BP recommendation specifies systolic target below 130 mmHg for known CVD and suggests the same systolic target for high-risk patients."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-007",
+      "query": "According to the ACC/AHA classification summarized in the review, what office blood pressure range defines stage 1 hypertension?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "ACC/AHA stage 1 hypertension office blood pressure classification",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S003",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 8,
+          "relevance": 3,
+          "rationale": "PMC Table 1 row directly lists ACC/AHA stage 1 hypertension as systolic 130–139 or diastolic 80–89 mmHg."
+        }
+      ],
+      "notes": "PMC-only table retrieval case."
+    },
+    {
+      "query_id": "MSV2-008",
+      "query": "في قياس الضغط المنزلي، المريض يأخذ القراءات متى وكم قراءة في كل مرة، ويتم تقييم المتوسط كل كم أسبوع؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Home blood pressure monitoring measurement schedule",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S003",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 18,
+          "relevance": 3,
+          "rationale": "PMC diagnostic-criteria paragraph specifies at least two readings one minute apart morning and evening and averaging every 2–4 weeks."
+        }
+      ],
+      "notes": "Arabic semantic retrieval into an English PMC paragraph."
+    },
+    {
+      "query_id": "MSV2-009",
+      "query": "In the review's meta-analysis summary, approximately how much did the DASH diet reduce systolic and diastolic blood pressure?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "DASH diet blood pressure reduction magnitude",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S009",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 45,
+          "relevance": 3,
+          "rationale": "PMC diet paragraph reports DASH reductions of about 7.6 mmHg systolic and 4.2 mmHg diastolic."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-010",
+      "query": "حسب المراجعة، ما الحد اليومي للصوديوم الذي توصي به الإرشادات الكندية والأوروبية لمرضى ارتفاع الضغط؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Sodium intake recommendations summarized in PMC review",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S009",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 46,
+          "relevance": 3,
+          "rationale": "PMC diet paragraph states Canadian and European guidelines recommend 2 g sodium, equivalent to 5 g salt, per day."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-011",
+      "query": "Which agent is described as the preferred fourth-line add-on therapy for resistant hypertension after other options have failed?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Preferred fourth-line add-on agent in resistant hypertension",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S012",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 65,
+          "relevance": 3,
+          "rationale": "PMC pharmacological-management paragraph identifies spironolactone as the most effective preferred fourth-line add-on agent."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-012",
+      "query": "في Table 5، جرعة Captopril الـstarting والـmaximum للضغط كام؟",
+      "language": "mixed",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Captopril starting and maximum dose in PMC Table 5",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S013",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 79,
+          "relevance": 3,
+          "rationale": "PMC Table 5 Captopril row gives starting dose 25 mg BID–TID and maximum 450 mg/day."
+        }
+      ],
+      "notes": "Tests retrieval_section_path for an ACE inhibitor row physically located under the broader JATS table section."
+    },
+    {
+      "query_id": "MSV2-013",
+      "query": "What does the review say about switching to an ARB after ACE-inhibitor cough or angioedema, and can ACE inhibitors and ARBs be combined?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "ARB alternative after ACE inhibitor intolerance and ACEi-ARB combination warning",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S014",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 122,
+          "relevance": 3,
+          "rationale": "PMC RAAS paragraph states ARBs are an alternative after ACE-inhibitor cough/angioedema and that ACE inhibitors and ARBs should not be combined."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-014",
+      "query": "Which conditions make verapamil or diltiazem inappropriate, and why should non-dihydropyridine CCBs not be combined with beta-blockers?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Non-dihydropyridine calcium-channel blocker contraindications and beta-blocker interaction",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S015",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 126,
+          "relevance": 3,
+          "rationale": "PMC CCB paragraph lists HFrEF, conduction disorders, sick sinus syndrome, WPW, and explains additive cardiac depression with beta-blockers."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-015",
+      "query": "ما أدوية ضغط الدم الفموية من الخط الأول المذكورة للاستخدام أثناء الحمل في المراجعة؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "First-line oral antihypertensive agents used in pregnancy",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S017",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 131,
+          "relevance": 3,
+          "rationale": "PMC pregnancy paragraph directly lists labetalol, methyldopa, and long-acting nifedipine as commonly used first-line oral agents."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 133,
+          "relevance": 2,
+          "rationale": "Table 6 provides the methyldopa first-line row."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 134,
+          "relevance": 2,
+          "rationale": "Table 6 provides the labetalol first-line row."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 135,
+          "relevance": 2,
+          "rationale": "Table 6 provides the long-acting nifedipine first-line row."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-016",
+      "query": "What is zilebesiran's mechanism described in the review, and what blood-pressure change was reported eight weeks after a single dose in the phase I study?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Zilebesiran mechanism and phase I blood pressure effect",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S019",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 139,
+          "relevance": 3,
+          "rationale": "PMC novel-drug paragraph describes hepatic angiotensinogen inhibition by siRNA and reports about 10 mmHg systolic and 5 mmHg diastolic reduction at eight weeks."
+        }
+      ],
+      "notes": "Novel-therapy retrieval case."
+    },
+    {
+      "query_id": "MSV2-017",
+      "query": "How is renal denervation described in the review, and roughly what systolic and diastolic BP reductions were reported?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Renal denervation mechanism and reported blood pressure reduction",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S020",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 140,
+          "relevance": 3,
+          "rationale": "PMC interventional-therapy paragraph describes disruption of sympathetic renal nerves and reports roughly 5 mmHg systolic and 2 mmHg diastolic reduction."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-018",
+      "query": "At what eGFR values does the review say thiazide or thiazide-like therapy becomes less effective or ineffective, and which diuretic class is then preferred?",
+      "language": "en",
+      "query_type": "acronym_heavy",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Thiazide effectiveness by eGFR and loop-diuretic preference",
+      "expected_parent_section_number": "DOC-PMC-CARD-0002-JATS-S013",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 120,
+          "relevance": 3,
+          "rationale": "PMC diuretic paragraph states reduced effectiveness below eGFR 45 mL/min, ineffectiveness below 30 mL/min, and preference for loop diuretics such as furosemide or torsemide."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "query_id": "MSV2-019",
+      "query": "For an adult with confirmed hypertension and no comorbidities, what treatment-initiation threshold is supported consistently across the current WHO and PMC sources?",
+      "language": "en",
+      "query_type": "multi_source",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Shared WHO 2021 treatment-initiation threshold across primary guideline and PMC review",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 12,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation gives the 140/90 mmHg initiation threshold for confirmed adult hypertension."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 60,
+          "relevance": 3,
+          "rationale": "PMC Table 4 reproduces the WHO 2021 no-comorbidity initiation threshold of at least 140/90 mmHg."
+        }
+      ],
+      "notes": "True shared-evidence case; both documents should be retrievable."
+    },
+    {
+      "query_id": "MSV2-020",
+      "query": "لمريض ارتفاع ضغط من دون أمراض مصاحبة، ما هدف ضغط الدم العلاجي الذي تدعمه وثيقة منظمة الصحة العالمية والمراجعة العلمية معًا؟",
+      "language": "ar",
+      "query_type": "multi_source",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Shared WHO 2021 no-comorbidity treatment target across both documents",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 37,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation sets a treatment goal below 140/90 mmHg for patients without comorbidities."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 32,
+          "relevance": 3,
+          "rationale": "PMC Table 2 reproduces the WHO 2021 no-comorbidity target below 140/90 mmHg."
+        }
+      ],
+      "notes": "Cross-lingual multi-source agreement case."
+    },
+    {
+      "query_id": "MSV2-021",
+      "query": "بعد بدء دواء الضغط أو تغييره، هل يدعم المصدران المتابعة الشهرية حتى الوصول إلى الهدف؟",
+      "language": "ar",
+      "query_type": "multi_source",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Monthly follow-up after antihypertensive initiation or change across WHO and PMC",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 41,
+          "relevance": 3,
+          "rationale": "WHO recommends monthly follow-up after initiation or medication change until target is reached."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 141,
+          "relevance": 3,
+          "rationale": "PMC monitoring section states monthly office follow-ups are recommended after initiation or medication change until control/target."
+        }
+      ],
+      "notes": "Shared follow-up evidence across both documents."
+    },
+    {
+      "query_id": "MSV2-022",
+      "query": "What do the current sources say about using a single-pill combination at treatment initiation and its relationship to adherence or BP control?",
+      "language": "en",
+      "query_type": "multi_source",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Single-pill combination therapy and adherence across WHO and PMC",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 32,
+          "relevance": 3,
+          "rationale": "WHO suggests initial combination therapy, preferably as a single-pill combination."
+        },
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 33,
+          "relevance": 2,
+          "rationale": "WHO implementation remarks connect single-pill combinations with adherence, persistence, and BP control."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 63,
+          "relevance": 3,
+          "rationale": "PMC pharmacological-management paragraph states single-pill combinations are highly favored for adherence and BP control."
+        }
+      ],
+      "notes": "Multi-source conceptual case rather than a single numeric fact."
+    },
+    {
+      "query_id": "MSV2-023",
+      "query": "According to the primary WHO guideline itself, which antihypertensive drug classes are recommended as initial treatment for adults?",
+      "language": "en",
+      "query_type": "source_selection",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO first-line antihypertensive classes",
+      "expected_parent_section_number": "3.4",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 27,
+          "relevance": 3,
+          "rationale": "The primary WHO recommendation lists thiazide/thiazide-like agents, ACEi/ARBs, and long-acting dihydropyridine CCBs."
+        },
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 28,
+          "relevance": 2,
+          "rationale": "WHO implementation remarks add class-selection context without changing the primary three-class recommendation."
+        }
+      ],
+      "notes": "Authority-sensitive: the PMC review has a semantically similar broader five-class statement and should act as a hard distractor."
+    },
+    {
+      "query_id": "MSV2-024",
+      "query": "لو المطلوب إجابة من WHO guideline الأصلي، عند أي BP نبدأ pharmacological treatment في مريض confirmed hypertension بدون comorbidities؟",
+      "language": "mixed",
+      "query_type": "source_selection",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO initiation threshold",
+      "expected_parent_section_number": "3.1",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 12,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation is the requested authoritative source for the 140/90 mmHg threshold."
+        }
+      ],
+      "notes": "Authority-sensitive: PMC Table 4 reproduces WHO 2021 and is intentionally not gold because the query requests the primary WHO source."
+    },
+    {
+      "query_id": "MSV2-025",
+      "query": "Using the original WHO guideline rather than a secondary review, what BP treatment goal is recommended for hypertension without comorbidities?",
+      "language": "en",
+      "query_type": "source_selection",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO no-comorbidity blood pressure target",
+      "expected_parent_section_number": "3.6",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 37,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation is the requested source for the below-140/90 mmHg target."
+        }
+      ],
+      "notes": "Authority-sensitive: PMC Table 2 contains the same WHO target but is a secondary representation."
+    },
+    {
+      "query_id": "MSV2-026",
+      "query": "من الـWHO primary guideline تحديدًا: بعد initiation أو تغيير antihypertensive medication، الـfollow-up يكون كل قد إيه لحد الـtarget؟",
+      "language": "mixed",
+      "query_type": "source_selection",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO follow-up frequency",
+      "expected_parent_section_number": "3.7",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 41,
+          "relevance": 3,
+          "rationale": "Primary WHO recommendation specifies monthly follow-up until target after initiation or medication change."
+        }
+      ],
+      "notes": "Authority-sensitive: PMC monitoring text contains a similar monthly recommendation and is a hard distractor."
+    },
+    {
+      "query_id": "MSV2-027",
+      "query": "إيه الـfirst-line antihypertensive treatment الموصى بيه لطفل عمره 8 سنين؟",
+      "language": "ar",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Pediatric hypertension treatment",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "Current indexed sources are adult/outpatient hypertension material and do not provide a pediatric first-line treatment recommendation."
+    },
+    {
+      "query_id": "MSV2-028",
+      "query": "What is the recommended first-line pharmacological treatment for pulmonary arterial hypertension?",
+      "language": "en",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Pulmonary arterial hypertension treatment",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "The current corpus concerns systemic arterial hypertension, not pulmonary arterial hypertension."
+    },
+    {
+      "query_id": "MSV2-029",
+      "query": "Does renal denervation reduce all-cause mortality in resistant hypertension, and by how much?",
+      "language": "en",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Renal denervation mortality effect",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "PMC B0140 reports BP reductions but the catalog does not provide a mortality-effect estimate; this is a hard-negative evidence-sufficiency case."
+    },
+    {
+      "query_id": "MSV2-030",
+      "query": "في severe hepatic impairment، إيه الـexact Losartan dose adjustment والـmaximum dose؟",
+      "language": "mixed",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Losartan dosing in severe hepatic impairment",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "PMC Table 5 gives general Losartan doses and a lower-starting-dose note for patients taking diuretics, but the catalog does not support a severe-hepatic-impairment adjustment."
+    }
+  ]
+}

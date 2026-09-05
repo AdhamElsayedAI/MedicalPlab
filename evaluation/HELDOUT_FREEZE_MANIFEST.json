@@ -1,0 +1,14 @@
+{
+  "eval_set_id": "medicalplab-retrieval-multisource-heldout-v1",
+  "version": "1.0.0",
+  "file": "evaluation/retrieval_eval_multisource_heldout_v1.json",
+  "sha256": "59956d5179f62795d1a1b28384090c2170959641ed555053dec81e5218afcdfe",
+  "case_count": 24,
+  "answerable_count": 20,
+  "unsupported_count": 4,
+  "corpus_document_ids": [
+    "DOC-WHO-CARD-0001",
+    "DOC-PMC-CARD-0002"
+  ],
+  "policy": "Freeze this file before the first held-out model run. Do not edit cases, gold labels, query wording, or retrieval settings in response to held-out results."
+}

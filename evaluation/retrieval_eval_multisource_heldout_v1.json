@@ -1,0 +1,579 @@
+{
+  "eval_set_id": "medicalplab-retrieval-multisource-heldout-v1",
+  "version": "1.0.0",
+  "corpus_document_ids": [
+    "DOC-WHO-CARD-0001",
+    "DOC-PMC-CARD-0002"
+  ],
+  "description": "Frozen independent held-out retrieval benchmark for MedicalPlab. Designed after DEV v2 architecture experiments but before any held-out model runs. Contains new target concepts and query formulations across WHO-only, PMC-only, multi-source, authority-sensitive, multilingual, and unsupported cases. Do not tune retrieval behavior on this set.",
+  "cases": [
+    {
+      "query_id": "HOLD-001",
+      "query": "How did WHO use the GRADE approach when judging certainty of evidence and developing hypertension recommendations?",
+      "language": "en",
+      "query_type": "paraphrase",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO use of GRADE for certainty of evidence and recommendation development",
+      "expected_parent_section_number": "2",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 7,
+          "relevance": 3,
+          "rationale": "Section 2.5 directly explains that WHO used GRADE to rate certainty of evidence and develop recommendations."
+        }
+      ],
+      "notes": "New methodology concept not used in DEV v2."
+    },
+    {
+      "query_id": "HOLD-002",
+      "query": "مين كانت المجموعات الثلاثة اللي منظمة الصحة العالمية أنشأتها لتطوير guideline علاج الضغط؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO guideline contributor groups",
+      "expected_parent_section_number": "2",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 3,
+          "relevance": 3,
+          "rationale": "Section 2.1 lists the WHO Steering Group, Guideline Development Group, and External Review Group."
+        }
+      ],
+      "notes": "Arabic query over a previously unused guideline-development block."
+    },
+    {
+      "query_id": "HOLD-003",
+      "query": "What does the WHO guideline say about hypertension burden and evidence gaps in disaster, humanitarian, and emergency settings?",
+      "language": "en",
+      "query_type": "clinical_style",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Hypertension in humanitarian and disaster settings",
+      "expected_parent_section_number": "4",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 49,
+          "relevance": 3,
+          "rationale": "Section 4.1 discusses hypertension burden, access, treatment, and evidence limitations in humanitarian and disaster settings."
+        }
+      ],
+      "notes": "Held-out special-settings concept."
+    },
+    {
+      "query_id": "HOLD-004",
+      "query": "في WHO guideline، هل hypertension كان مرتبط بـsevere COVID-19 أو mortality، وهل العلاقة كانت واضحة إنها causal؟",
+      "language": "mixed",
+      "query_type": "cross_lingual",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "WHO discussion of hypertension and severe COVID-19",
+      "expected_parent_section_number": "4",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 50,
+          "relevance": 3,
+          "rationale": "Section 4.2 describes the association between hypertension and severe COVID-19 or mortality while noting uncertainty about causality and confounding."
+        }
+      ],
+      "notes": "Held-out WHO special-setting query."
+    },
+    {
+      "query_id": "HOLD-005",
+      "query": "Which implementation platform does WHO say will be used to disseminate this hypertension guideline at country level?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "WHO HEARTS implementation and dissemination platform",
+      "expected_parent_section_number": "5",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 54,
+          "relevance": 3,
+          "rationale": "Section 5.2 states that the HEARTS technical package will be the platform used to implement and disseminate the guideline."
+        }
+      ],
+      "notes": "New implementation concept."
+    },
+    {
+      "query_id": "HOLD-006",
+      "query": "الـWHO guideline دي كان متوقع تفضل valid لمدة قد إيه قبل التحديث الروتيني؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "WHO guideline expected validity period",
+      "expected_parent_section_number": "5",
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 56,
+          "relevance": 3,
+          "rationale": "Section 5.4 states that the guideline is expected to be valid for five years, with earlier updates possible if needed."
+        }
+      ],
+      "notes": "Held-out publication/update concept."
+    },
+    {
+      "query_id": "HOLD-007",
+      "query": "How does the PMC review distinguish essential hypertension from secondary hypertension, and roughly what proportion of cases are essential?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "Essential versus secondary hypertension and prevalence",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 3,
+          "relevance": 3,
+          "rationale": "The Etiology section distinguishes essential from secondary hypertension and states that essential hypertension represents about 85–95% of cases."
+        }
+      ],
+      "notes": "PMC-only etiology concept not used in DEV v2."
+    },
+    {
+      "query_id": "HOLD-008",
+      "query": "قبل office BP measurement، المريض يقعد قد إيه وإيه وضعية الجسم الأساسية اللي المراجعة بتأكد عليها؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Office blood pressure measurement preparation and positioning",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 17,
+          "relevance": 3,
+          "rationale": "The diagnostic-criteria paragraph describes seated rest for five minutes with feet flat and back supported before measurement."
+        }
+      ],
+      "notes": "PMC-only measurement-technique query."
+    },
+    {
+      "query_id": "HOLD-009",
+      "query": "How frequently does the review describe ambulatory blood pressure monitors inflating during daytime and sleep?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "ABPM daytime and nighttime measurement frequency",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 19,
+          "relevance": 3,
+          "rationale": "The ABPM paragraph states that the monitor typically inflates every half hour during the day and once an hour during sleep."
+        }
+      ],
+      "notes": "New PMC monitoring concept distinct from home BP monitoring used in DEV."
+    },
+    {
+      "query_id": "HOLD-010",
+      "query": "حسب المراجعة، فقدان 6–8% من وزن الجسم أو حوالي 10 kg ممكن يقلل ضغط الدم قد إيه تقريبًا؟",
+      "language": "ar",
+      "query_type": "cross_lingual",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Blood pressure reduction associated with weight loss",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 36,
+          "relevance": 3,
+          "rationale": "The Weight loss section reports BP reductions after 6–8% body-weight loss and after approximately 10 kg loss."
+        }
+      ],
+      "notes": "PMC-only lifestyle intervention concept."
+    },
+    {
+      "query_id": "HOLD-011",
+      "query": "In the exercise meta-analysis summarized by the review, what reductions in resting systolic and diastolic BP were reported with moderate-to-high intensity aerobic exercise?",
+      "language": "en",
+      "query_type": "direct_fact",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Aerobic exercise blood pressure reduction magnitude",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 37,
+          "relevance": 3,
+          "rationale": "The Physical activity section reports about 8.3 mmHg systolic and 5.2 mmHg diastolic reductions in resting BP in a meta-analysis."
+        }
+      ],
+      "notes": "PMC-only physical-activity concept."
+    },
+    {
+      "query_id": "HOLD-012",
+      "query": "For patients taking beta-blockers, what does the review recommend monitoring at each visit وwhat home monitoring may also be encouraged?",
+      "language": "mixed",
+      "query_type": "clinical_style",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Heart-rate monitoring for patients using beta-blockers",
+      "expected_parent_section_number": null,
+      "evidence_scope": "single_source",
+      "target_document_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 129,
+          "relevance": 3,
+          "rationale": "The beta-blocker section advises measuring heart rate at each visit and notes that patients may record heart rate at home using BP monitors or wearables."
+        }
+      ],
+      "notes": "PMC-only safety-monitoring concept."
+    },
+    {
+      "query_id": "HOLD-013",
+      "query": "Across the WHO guideline and the PMC review, when are beta-blockers particularly justified in hypertension because of a cardiac comorbidity such as ischemic heart disease?",
+      "language": "en",
+      "query_type": "multi_source",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Beta-blocker use when ischemic heart disease is present",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 28,
+          "relevance": 3,
+          "rationale": "WHO implementation remarks identify beta-blockers as an agent to consider in ischemic heart disease."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 127,
+          "relevance": 3,
+          "rationale": "The PMC review says beta-blockers are not routine first-line therapy unless a compelling comorbidity such as heart failure or ischemic heart disease is present."
+        }
+      ],
+      "notes": "New cross-source comorbidity-selection concept."
+    },
+    {
+      "query_id": "HOLD-014",
+      "query": "هل المصدران بيتفقوا إن ACE inhibitors أو ARBs لازم نتجنبهم أثناء الحمل بسبب fetal toxicity؟",
+      "language": "ar",
+      "query_type": "multi_source",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Avoidance of renin-angiotensin system drugs during pregnancy",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 60,
+          "relevance": 3,
+          "rationale": "WHO implementation protocols warn that ACE inhibitors, ARBs, and related renin-angiotensin drugs have been associated with serious fetal toxicity."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 131,
+          "relevance": 3,
+          "rationale": "The PMC pregnancy section states that ACE inhibitors and ARBs should be avoided in pregnancy because of fetal risk."
+        }
+      ],
+      "notes": "Cross-source pregnancy safety concept not used in DEV v2."
+    },
+    {
+      "query_id": "HOLD-015",
+      "query": "Do the WHO guideline and the PMC review both support remote monitoring or telemedicine as an adjunct to hypertension follow-up?",
+      "language": "en",
+      "query_type": "multi_source",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Remote monitoring and telemedicine in hypertension follow-up",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 45,
+          "relevance": 2,
+          "rationale": "WHO implementation remarks encourage telemonitoring and community or home-based self-care when appropriate."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 142,
+          "relevance": 3,
+          "rationale": "The PMC review describes telemedicine as useful for remote check-ins, engagement, adherence, and access."
+        }
+      ],
+      "notes": "New cross-source delivery-model concept."
+    },
+    {
+      "query_id": "HOLD-016",
+      "query": "Across both sources, is there a preference for long-acting antihypertensive options, particularly long-acting dihydropyridine calcium-channel blockers?",
+      "language": "en",
+      "query_type": "multi_source",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Preference for long-acting antihypertensive therapy",
+      "expected_parent_section_number": null,
+      "evidence_scope": "multi_source",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001",
+        "DOC-PMC-CARD-0002"
+      ],
+      "preferred_document_id": null,
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 28,
+          "relevance": 2,
+          "rationale": "WHO implementation remarks state that long-acting antihypertensives are preferred."
+        },
+        {
+          "document_id": "DOC-PMC-CARD-0002",
+          "block_index": 125,
+          "relevance": 3,
+          "rationale": "The PMC review specifically prefers long-acting dihydropyridines such as amlodipine over shorter-acting alternatives."
+        }
+      ],
+      "notes": "Cross-source formulation-duration concept."
+    },
+    {
+      "query_id": "HOLD-017",
+      "query": "According to the original WHO guideline itself, what framework was used to rate certainty of evidence and develop recommendations?",
+      "language": "en",
+      "query_type": "source_selection",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO GRADE framework",
+      "expected_parent_section_number": "2",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 7,
+          "relevance": 3,
+          "rationale": "The primary WHO guideline's Section 2.5 explicitly describes use of GRADE."
+        }
+      ],
+      "notes": "Authority-sensitive methodology query. Held-out source-selection case."
+    },
+    {
+      "query_id": "HOLD-018",
+      "query": "من الـWHO primary guideline تحديدًا، إمتى نعتبر beta-blocker اختيار مناسب بسبب ischemic heart disease؟",
+      "language": "mixed",
+      "query_type": "source_selection",
+      "difficulty": "hard",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO beta-blocker indication in ischemic heart disease",
+      "expected_parent_section_number": "3.4",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 28,
+          "relevance": 3,
+          "rationale": "WHO implementation remarks identify beta-blockers as an agent to consider in ischemic heart disease."
+        }
+      ],
+      "notes": "Competes with similar PMC beta-blocker content but explicitly requests WHO primary source."
+    },
+    {
+      "query_id": "HOLD-019",
+      "query": "Using the original WHO document rather than a review article, which technical package is named as the platform for implementation and dissemination of the guideline?",
+      "language": "en",
+      "query_type": "source_selection",
+      "difficulty": "medium",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO HEARTS implementation platform",
+      "expected_parent_section_number": "5",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 54,
+          "relevance": 3,
+          "rationale": "The primary WHO guideline states that the HEARTS technical package will be used for implementation and dissemination."
+        }
+      ],
+      "notes": "Held-out authority-sensitive implementation query."
+    },
+    {
+      "query_id": "HOLD-020",
+      "query": "According to the primary WHO guideline, what was its expected routine validity period before an update might be needed?",
+      "language": "en",
+      "query_type": "source_selection",
+      "difficulty": "easy",
+      "expected_answerable": true,
+      "target_concept": "Primary-source WHO guideline validity period",
+      "expected_parent_section_number": "5",
+      "evidence_scope": "authority_sensitive",
+      "target_document_ids": [
+        "DOC-WHO-CARD-0001"
+      ],
+      "preferred_document_id": "DOC-WHO-CARD-0001",
+      "relevant_blocks": [
+        {
+          "document_id": "DOC-WHO-CARD-0001",
+          "block_index": 56,
+          "relevance": 3,
+          "rationale": "The primary WHO guideline states that it is expected to be valid for five years."
+        }
+      ],
+      "notes": "Held-out source-selection query from a non-clinical section."
+    },
+    {
+      "query_id": "HOLD-021",
+      "query": "هل home blood pressure monitoring مثبت في المصادر الحالية إنه يقلل stroke mortality بنسبة محددة؟",
+      "language": "ar",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Exact stroke mortality reduction attributable to home blood pressure monitoring",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "Current corpus discusses HBPM and adherence but does not provide an exact stroke-mortality reduction caused by HBPM."
+    },
+    {
+      "query_id": "HOLD-022",
+      "query": "What alpha-blocker regimen and dose does the current corpus recommend as first-line treatment for pheochromocytoma?",
+      "language": "en",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Pheochromocytoma alpha-blocker regimen and dosing",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "The current hypertension corpus does not provide a pheochromocytoma-specific alpha-blocker dosing protocol."
+    },
+    {
+      "query_id": "HOLD-023",
+      "query": "What exact five-year effect does renal denervation have on chronic kidney disease progression or eGFR decline?",
+      "language": "en",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Long-term renal denervation effect on CKD progression or eGFR",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "The review discusses BP reduction after renal denervation, not a quantified five-year CKD progression effect."
+    },
+    {
+      "query_id": "HOLD-024",
+      "query": "في patient على dialysis، إيه الـexact amlodipine dose adjustment والـmaximum dose الموصى بيهم مخصوص للdialysis؟",
+      "language": "mixed",
+      "query_type": "unsupported",
+      "difficulty": "hard",
+      "expected_answerable": false,
+      "target_concept": "Amlodipine dose adjustment specifically for dialysis",
+      "expected_parent_section_number": null,
+      "evidence_scope": "unsupported",
+      "target_document_ids": [],
+      "preferred_document_id": null,
+      "relevant_blocks": [],
+      "notes": "The current table includes amlodipine dosing but does not provide a dialysis-specific adjustment rule."
+    }
+  ]
+}
