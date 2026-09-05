@@ -4,7 +4,7 @@
   "query_instruction": "Instruct: Given a medical education query, retrieve the passages from the available medical sources that most directly support the requested claim. Respect any source explicitly requested by the query. Do not assume every query targets a guideline.\nQuery:",
   "include_source_labels": true,
   "evaluation_set_id": "medicalplab-retrieval-multisource-dev-v2",
-  "evaluation_path": "C:\\Users\\Adham Elsayed\\Downloads\\MedicalPlab-dev\\MedicalPlab-dev\\evaluation\\retrieval_eval_multisource_dev_v2.json",
+  "evaluation_path": "evaluation/retrieval_eval_multisource_dev_v2.json",
   "documents": [
     "DOC-WHO-CARD-0001",
     "DOC-PMC-CARD-0002"
@@ -1869,8 +1869,14 @@
     }
   ],
   "notes": [
-    "DEV benchmark only; not held-out performance.",
+    "Development benchmark only; not held-out performance.",
     "Unsupported cases are diagnostic only until a separate evidence-sufficiency threshold is calibrated.",
-    "Do not tune on this DEV set and then report it as an independent benchmark."
-  ]
+    "Do not tune on this development set and then report it as an independent benchmark."
+  ],
+  "metadata_revision": {
+    "type": "metadata_only",
+    "retrieval_metrics_modified": false,
+    "ranking_outputs_modified": false,
+    "reason": "Normalize benchmark identity, evaluation path, and DEV/held-out notes after the original runs."
+  }
 }

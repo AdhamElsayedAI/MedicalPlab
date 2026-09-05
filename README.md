@@ -2,9 +2,9 @@
 
 MedicalPlab is an evidence-grounded medical learning platform focused on reliable retrieval before generation.
 
-The current codebase is building the data and retrieval foundation for an adaptive medical education system: governed source acquisition, structure-aware extraction, canonical medical content, provenance-preserving chunking, multilingual retrieval, and document-aware evaluation.
+The current codebase is building the data, retrieval, and evidence-safety foundation for an adaptive medical education system: governed source acquisition, structure-aware extraction, canonical medical content, provenance-preserving chunking, multilingual retrieval, source-aware evaluation, and evidence sufficiency before grounded generation.
 
-The generation layer is intentionally not the center of the project yet. Retrieval quality, source traceability, and evaluation are being validated first.
+The generation layer is intentionally not the center of the project yet. Retrieval quality, source traceability, source selection, and evaluation are validated first.
 
 ## Current status
 
@@ -16,21 +16,51 @@ The active retrieval corpus currently contains two independently processed cardi
 | PMC hypertension review | PMC JATS XML -> structured extraction -> canonical adapter | 144 |
 | **Combined corpus** | Multi-document retrieval | **227** |
 
-Current dense retriever: `Qwen/Qwen3-Embedding-0.6B`
+Current dense retriever:
 
-Latest multi-document DEV regression:
+```text
+Qwen/Qwen3-Embedding-0.6B
+```
+
+Current retrieval representation:
+
+```text
+Source-aware dense retrieval
+```
+
+The selected representation includes explicit source-document identity in addition to semantic metadata and content. The decision was made after comparing content-only and source-aware retrieval on both DEV and a frozen held-out benchmark.
+
+### Frozen held-out retrieval result
+
+Evaluation set:
+
+```text
+medicalplab-retrieval-multisource-heldout-v1
+```
+
+Composition:
+
+```text
+24 total cases
+20 answerable
+4 unsupported
+```
+
+Source-aware dense retrieval:
 
 | Metric | Score |
 | --- | ---: |
-| Hit@1 | 1.0000 |
-| Recall@1 | 0.4697 |
-| Recall@3 | 0.7197 |
-| Recall@5 | 0.7652 |
-| Recall@10 | 0.8864 |
-| MRR | 1.0000 |
-| nDCG@10 | 0.8821 |
+| Hit@1 | 0.9500 |
+| Recall@1 | 0.8500 |
+| Recall@3 | 0.8750 |
+| Recall@5 | 0.9250 |
+| Recall@10 | 0.9750 |
+| MRR | 0.9563 |
+| nDCG@10 | 0.9357 |
+| GoldSourceRecall@10 | 0.9750 |
+| PreferredDoc@1 | 1.0000 |
 
-> These numbers are from a development regression set, not a held-out final benchmark. The current multi-document DEV set keeps WHO-scoped gold evidence while the PMC review acts as a semantically similar hard distractor.
+The frozen benchmark was validated and hashed before model evaluation. Unsupported questions are still diagnostic only because evidence-sufficiency calibration has not yet been completed.
 
 ## Architecture
 
@@ -54,13 +84,17 @@ Medical sources
         Structure-aware chunks
                 |
                 v
-        Dense / hybrid retrieval
+        Source-aware dense retrieval
                 |
                 v
-        Document-aware evaluation
+        Candidate evidence
+                |
+                +--> source / authority policy
+                |
+                +--> evidence sufficiency
                 |
                 v
-        RAG generation  [next]
+        Grounded RAG generation [next after sufficiency]
 ```
 
 Raw and processed medical data live under `Data/` and are intentionally excluded from Git.
@@ -138,17 +172,22 @@ Data/
 python Scripts\validate_chunks.py --file "Data\processed\cardiology\DOC-WHO-CARD-0001.chunks.json"
 python Scripts\validate_chunks.py --file "Data\processed\cardiology\DOC-PMC-CARD-0002.chunks.json"
 
-python Scripts\validate_retrieval_eval.py --eval-path "evaluation\retrieval_eval_v1.json"
-python Scripts\validate_retrieval_eval.py --eval-path "evaluation\retrieval_eval_multidoc_dev_v1.json"
+python Scripts\validate_retrieval_eval.py ^
+  --eval-path "evaluation\retrieval_eval_multisource_dev_v2.json" ^
+  --schema-path "schemas\retrieval_eval_v2.schema.json"
+
+python Scripts\validate_retrieval_eval.py ^
+  --eval-path "evaluation\retrieval_eval_multisource_heldout_v1.json" ^
+  --schema-path "schemas\retrieval_eval_v2.schema.json"
 ```
 
-Current multi-document dense regression:
+Current source-aware held-out benchmark:
 
 ```bat
-python Scripts\benchmark_qwen3_embedding_multidoc.py ^
-  --documents DOC-WHO-CARD-0001 DOC-PMC-CARD-0002 ^
-  --eval-path "evaluation\retrieval_eval_multidoc_dev_v1.json" ^
-  --results-name "qwen3_embedding_0.6b_multidoc_semantic_paths_v2.json"
+python Scripts\benchmark_qwen3_embedding_multisource_v2.py ^
+  --eval-path "evaluation\retrieval_eval_multisource_heldout_v1.json" ^
+  --include-source-labels ^
+  --results-name "qwen3_embedding_0.6b_multisource_heldout_v1_source_labels.json"
 ```
 
 ## Engineering principles
@@ -159,20 +198,34 @@ python Scripts\benchmark_qwen3_embedding_multidoc.py ^
 - PDF page provenance and XML element provenance are represented separately.
 - Retrieval metadata may be semantic without overwriting source-faithful structure.
 - Evaluation data stays separate from the retrieval corpus.
-- Development benchmarks are labeled as development benchmarks.
+- Development and held-out benchmarks remain clearly separated.
+- Frozen held-out data is not edited in response to benchmark results.
 - Source authority and semantic relevance are treated as separate concerns.
-- Unsupported questions should eventually be abstained from rather than forced into an answer.
+- Unsupported questions should be abstained from rather than forced into an answer.
+- Retrieval metrics are not presented as clinical accuracy.
 
 ## Next milestone
 
-Build a real multi-source evaluation set containing WHO-targeted, PMC-targeted, shared-evidence, Arabic, English, mixed-language, source-selection, hard-negative, and unsupported cases.
+**Evidence Sufficiency Calibration v1**
 
-After that: held-out evaluation, larger corpus ingestion, source-authority policy, vector indexing, retrieval service, evidence-grounded generation, citations, confidence/abstention, and API integration.
+The next task is to determine when the retrieved corpus contains enough evidence to support an answer and when MedicalPlab should abstain.
 
-See `docs/` for the working engineering notes.
+After that:
+
+```text
+evidence sufficiency
+-> source / authority policy
+-> retrieval service
+-> grounded generation
+-> citation verification
+-> adaptive learning
+-> API and product integration
+```
+
+See `docs/` for the engineering notes and architecture decisions.
 
 ## Project stage
 
-Active development. This repository currently represents the validated data and retrieval foundation, not a finished clinical product.
+Active development. This repository currently represents the validated data and retrieval foundation plus independent retrieval evaluation, not a finished clinical product.
 
 MedicalPlab is an educational system. It is not intended to provide patient-specific diagnosis or treatment decisions.

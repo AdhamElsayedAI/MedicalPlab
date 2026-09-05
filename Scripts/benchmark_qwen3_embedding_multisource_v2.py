@@ -775,7 +775,7 @@ def main() -> None:
 
     print(
         "\nMedicalPlab Qwen3 "
-        "Multi-Source DEV v2 Benchmark"
+        "Multi-Source Retrieval Benchmark"
     )
     print("=" * 72)
 
@@ -1267,8 +1267,15 @@ def main() -> None:
 
     result = {
         "benchmark_id": (
-            "medicalplab-qwen3-embedding-"
-            "0.6b-multisource-dev-v2"
+            "medicalplab-qwen3-embedding-0.6b-"
+            + str(
+                evaluation.get(
+                    "eval_set_id",
+                    "unknown-evaluation",
+                )
+            ).removeprefix(
+                "medicalplab-retrieval-"
+            )
         ),
         "model": MODEL_NAME,
         "query_instruction": (
@@ -1283,7 +1290,13 @@ def main() -> None:
             )
         ),
         "evaluation_path": (
-            str(eval_path)
+            eval_path.relative_to(
+                PROJECT_ROOT
+            ).as_posix()
+            if eval_path.is_relative_to(
+                PROJECT_ROOT
+            )
+            else str(eval_path)
         ),
         "documents": (
             loaded_documents
@@ -1339,23 +1352,42 @@ def main() -> None:
         "unsupported_diagnostics": (
             unsupported_rows
         ),
-        "notes": [
-            (
-                "DEV benchmark only; "
-                "not held-out performance."
-            ),
-            (
-                "Unsupported cases are "
-                "diagnostic only until a "
-                "separate evidence-sufficiency "
-                "threshold is calibrated."
-            ),
-            (
-                "Do not tune on this DEV set "
-                "and then report it as an "
-                "independent benchmark."
-            ),
-        ],
+        "notes": (
+            [
+                (
+                    "Frozen held-out benchmark; "
+                    "do not tune retrieval settings "
+                    "or edit gold labels from these results."
+                ),
+                (
+                    "Unsupported cases are diagnostic only "
+                    "until a separate evidence-sufficiency "
+                    "threshold is calibrated."
+                ),
+            ]
+            if "heldout"
+            in str(
+                evaluation.get(
+                    "eval_set_id",
+                    "",
+                )
+            ).lower()
+            else [
+                (
+                    "Development benchmark only; "
+                    "not held-out performance."
+                ),
+                (
+                    "Unsupported cases are diagnostic only "
+                    "until a separate evidence-sufficiency "
+                    "threshold is calibrated."
+                ),
+                (
+                    "Do not tune on this development set "
+                    "and then report it as an independent benchmark."
+                ),
+            ]
+        ),
     }
 
     with output_path.open(

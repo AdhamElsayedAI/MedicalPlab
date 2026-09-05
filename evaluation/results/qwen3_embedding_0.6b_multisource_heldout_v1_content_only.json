@@ -1,10 +1,10 @@
 {
-  "benchmark_id": "medicalplab-qwen3-embedding-0.6b-multisource-dev-v2",
+  "benchmark_id": "medicalplab-qwen3-embedding-0.6b-multisource-heldout-v1",
   "model": "Qwen/Qwen3-Embedding-0.6B",
   "query_instruction": "Instruct: Given a medical education query, retrieve the passages from the available medical sources that most directly support the requested claim. Respect any source explicitly requested by the query. Do not assume every query targets a guideline.\nQuery:",
   "include_source_labels": false,
   "evaluation_set_id": "medicalplab-retrieval-multisource-heldout-v1",
-  "evaluation_path": "C:\\Users\\Adham Elsayed\\Downloads\\MedicalPlab-dev\\MedicalPlab-dev\\evaluation\\retrieval_eval_multisource_heldout_v1.json",
+  "evaluation_path": "evaluation/retrieval_eval_multisource_heldout_v1.json",
   "documents": [
     "DOC-WHO-CARD-0001",
     "DOC-PMC-CARD-0002"
@@ -1522,8 +1522,13 @@
     }
   ],
   "notes": [
-    "DEV benchmark only; not held-out performance.",
-    "Unsupported cases are diagnostic only until a separate evidence-sufficiency threshold is calibrated.",
-    "Do not tune on this DEV set and then report it as an independent benchmark."
-  ]
+    "Frozen held-out benchmark; do not tune retrieval settings or edit gold labels from these results.",
+    "Unsupported cases are diagnostic only until a separate evidence-sufficiency threshold is calibrated."
+  ],
+  "metadata_revision": {
+    "type": "metadata_only",
+    "retrieval_metrics_modified": false,
+    "ranking_outputs_modified": false,
+    "reason": "Normalize benchmark identity, evaluation path, and DEV/held-out notes after the original runs."
+  }
 }

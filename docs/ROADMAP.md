@@ -14,7 +14,7 @@ Status: **completed for the first validated documents**
 
 ## Phase 2 - Retrieval foundation
 
-Status: **in progress**
+Status: **completed for the current two-source corpus**
 
 Completed:
 
@@ -24,51 +24,73 @@ Completed:
 - 0.6B reranker experiments;
 - document-aware multi-document retrieval;
 - semantic retrieval hierarchy for structured table rows;
-- multi-document DEV regression.
+- real multi-source DEV v2;
+- source-aware retrieval representation;
+- language, evidence-scope, and authority-sensitive slices.
 
-Current:
+Selected dense model:
 
-- real multi-source evaluation v2.
+```text
+Qwen/Qwen3-Embedding-0.6B
+```
 
-Next:
+Selected current representation:
 
-- WHO-targeted cases;
-- PMC-targeted cases;
-- shared-evidence cases;
-- source-authority cases;
-- unsupported cases;
-- Arabic / English / mixed queries;
-- harder paraphrases and clinical-style queries.
+```text
+Source-aware dense retrieval
+```
 
-## Phase 3 - Independent model evaluation
+## Phase 3 - Independent retrieval evaluation
 
-- freeze held-out benchmark before further tuning;
-- compare embedding model sizes on the same benchmark;
-- compare latency, VRAM, recall, MRR, and nDCG;
-- evaluate larger rerankers only if needed;
-- record deployment cost/constraints.
+Status: **completed v1**
 
-## Phase 4 - Retrieval service
+Completed:
 
-- vector database integration;
+- frozen held-out benchmark created before model runs;
+- held-out validation and SHA-256 freeze manifest;
+- content-only vs source-aware comparison;
+- authority-sensitive and multi-source analysis;
+- retrieval architecture decision record;
+- documented trade-offs and failure cases.
+
+The frozen held-out set is not to be edited in response to benchmark results.
+
+## Phase 4 - Evidence Sufficiency and Source Policy
+
+Status: **next**
+
+- create a dedicated calibration set;
+- measure answerable vs unsupported retrieval-score distributions;
+- evaluate Top-1 score, margins, Top-k structure, and source constraints;
+- define evidence-sufficiency decision logic;
+- calibrate abstention behavior;
+- keep source authority separate from semantic similarity;
+- define explicit-source request handling;
+- log evidence decisions for later evaluation.
+
+## Phase 5 - Retrieval service
+
 - deterministic index build;
+- vector database integration if justified;
 - document/source/provenance payload;
-- lexical + dense candidates;
+- dense candidates;
+- lexical candidates where useful;
 - source/evidence policy;
 - stable retrieval API;
-- retrieval traces.
+- retrieval traces;
+- latency and cost measurement.
 
-## Phase 5 - Evidence-grounded generation
+## Phase 6 - Evidence-grounded generation
 
 - generation from retrieved evidence only;
 - citations;
-- evidence sufficiency;
-- confidence/abstention;
+- citation verification;
 - refusal on unsupported evidence;
 - prompt/version tracking;
-- answer-level evaluation.
+- answer-level evaluation;
+- safety-oriented educational framing.
 
-## Phase 6 - Adaptive learning
+## Phase 7 - Adaptive learning
 
 - learner profile;
 - misconception tracking;
@@ -78,11 +100,12 @@ Next:
 - progress analytics;
 - educator question/case generation.
 
-## Phase 7 - Product integration
+## Phase 8 - Product integration
 
 - FastAPI production service;
-- authentication;
+- authentication and tenant-aware product boundaries where needed;
 - mobile integration;
 - observability;
 - deployment;
-- performance/cost monitoring.
+- performance/cost monitoring;
+- pilot feedback and product analytics.

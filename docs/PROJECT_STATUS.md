@@ -1,14 +1,16 @@
 # Project Status
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ## Current milestone
 
-**Multi-source retrieval evaluation foundation**
+**Retrieval evaluation foundation completed for the current two-source corpus**
 
-The ingestion and chunking paths for the first WHO and PMC cardiology documents are validated. Multi-document retrieval works with document-aware block identities.
+The first WHO and PMC cardiology ingestion paths are validated, the combined retrieval corpus contains 227 chunks, and multi-source retrieval has been evaluated on both DEV and a frozen held-out benchmark.
 
-The next task is to replace the current WHO-scoped regression set with a real multi-source evaluation set.
+The selected retrieval representation is source-aware dense retrieval using `Qwen/Qwen3-Embedding-0.6B`.
+
+The active next task is **Evidence Sufficiency Calibration v1**.
 
 ## Completed
 
@@ -18,7 +20,7 @@ The next task is to replace the current WHO-scoped regression set with a real mu
 - document schema;
 - question schema;
 - chunk schema;
-- retrieval evaluation schema;
+- retrieval evaluation schemas;
 - source/license policy foundation;
 - separation of corpus data from evaluation data.
 
@@ -62,51 +64,110 @@ Current output:
 0 integrity errors
 ```
 
-### Retrieval evaluation
+### Multi-source retrieval evaluation
 
-Single-document dense DEV:
-
-```text
-Qwen/Qwen3-Embedding-0.6B
-Hit@1    1.0000
-MRR      1.0000
-nDCG@10  0.9081
-```
-
-Multi-document semantic-path DEV regression:
+Current corpus:
 
 ```text
-Corpus     227 chunks
-Hit@1      1.0000
-Recall@1   0.4697
-Recall@3   0.7197
-Recall@5   0.7652
-Recall@10  0.8864
-MRR        1.0000
-nDCG@10    0.8821
+2 documents
+227 chunks
+192 unique source blocks
 ```
 
-These are development results, not final held-out claims.
+DEV v2:
 
-## Known retrieval finding
+```text
+30 total cases
+26 answerable
+4 unsupported
+```
 
-An Arabic treatment-initiation query initially ranked PMC drug-table rows above the WHO recommendation.
+Source-aware DEV result:
 
-The root cause was misleading semantic metadata inherited from the JATS placement of a broad drug table.
+```text
+Hit@1      0.9231
+Recall@5   0.9872
+MRR        0.9500
+nDCG@10    0.9302
+PreferredDoc@1 1.0000
+```
 
-The fix kept the source-faithful JATS path intact while adding `retrieval_section_path` for semantic retrieval context. The WHO evidence returned to rank 1 without source weighting or reranker tuning.
+Frozen held-out v1:
+
+```text
+24 total cases
+20 answerable
+4 unsupported
+```
+
+Frozen SHA-256:
+
+```text
+59956d5179f62795d1a1b28384090c2170959641ed555053dec81e5218afcdfe
+```
+
+Source-aware held-out result:
+
+```text
+Hit@1      0.9500
+Recall@1   0.8500
+Recall@3   0.8750
+Recall@5   0.9250
+Recall@10  0.9750
+MRR        0.9563
+nDCG@10    0.9357
+GoldSourceRecall@10 0.9750
+PreferredDoc@1      1.0000
+```
+
+These are retrieval results, not clinical accuracy claims.
+
+## Retrieval architecture decision
+
+Source-aware dense retrieval was selected over the content-only representation for the current startup MVP.
+
+The main reason is that explicit source identity improved preferred-source selection on both DEV and frozen held-out evaluation without reducing overall held-out Hit@1.
+
+Source identity does not fully solve exact passage selection. Authority policy and evidence sufficiency remain separate layers.
+
+See:
+
+```text
+docs/RETRIEVAL_ARCHITECTURE_DECISION_V1.md
+```
+
+## Important known retrieval finding
+
+`HOLD-018` remains a difficult authority-sensitive case.
+
+Source-aware retrieval improved document-family selection and moved the exact WHO gold evidence closer to the top results, but the exact evidence was still not Top-5.
+
+This supports the architecture decision to separate:
+
+1. semantic passage relevance;
+2. source authority / source constraints;
+3. evidence sufficiency.
 
 ## Current limitations
 
-- current multi-document DEV gold evidence is still WHO-scoped;
-- corpus currently covers a narrow cardiology slice;
-- no independent held-out multi-source benchmark yet;
-- source-authority policy is not yet implemented;
+- corpus currently covers a narrow cardiology slice with two source documents;
+- evidence-sufficiency / abstention calibration is not yet implemented;
+- explicit source-authority policy is not yet implemented as a production layer;
 - vector database integration is not yet the active retrieval path;
-- final RAG generation/citation/abstention layer is not yet integrated;
+- final RAG generation and citation verification are not yet integrated;
 - the PMC JATS adapter v1 is validated on the current article, not claimed as a universal parser;
-- PDF and XML artifact hashes are not yet represented in a dedicated multi-artifact registry.
+- PDF and XML artifact hashes are not yet represented in a dedicated multi-artifact registry;
+- held-out results are based on the current small corpus and should not be generalized to large-corpus production performance.
 
 ## Active next task
 
-Create a real multi-source retrieval evaluation with WHO-only, PMC-only, shared-evidence, unsupported, English, Arabic, mixed-language, paraphrase, clinical-style, acronym-heavy, source-selection, and hard-negative cases.
+Build **Evidence Sufficiency Calibration v1** using a dedicated calibration set rather than changing the frozen held-out benchmark.
+
+The goal is to distinguish:
+
+```text
+sufficient evidence -> answer
+insufficient evidence -> abstain
+```
+
+before integrating grounded generation.
