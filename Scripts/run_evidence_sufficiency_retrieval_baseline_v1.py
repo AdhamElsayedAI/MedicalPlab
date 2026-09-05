@@ -624,25 +624,35 @@ def threshold_metrics(
 def risk_coverage_curve(
     rows: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    ordered = sorted(
-        rows,
-        key=lambda row: float(
-            row[
-                "top1_score"
-            ]
-        ),
+    thresholds = sorted(
+        {
+            float(
+                row[
+                    "top1_score"
+                ]
+            )
+            for row in rows
+        },
         reverse=True,
     )
 
     curve = []
 
-    for prefix_size in range(
-        1,
-        len(ordered) + 1,
-    ):
-        accepted = ordered[
-            :prefix_size
+    for threshold in thresholds:
+        accepted = [
+            row
+            for row in rows
+            if float(
+                row[
+                    "top1_score"
+                ]
+            )
+            >= threshold
         ]
+
+        accepted_count = len(
+            accepted
+        )
 
         false_accepts = sum(
             1
@@ -657,18 +667,18 @@ def risk_coverage_curve(
 
         risk = (
             false_accepts
-            / prefix_size
+            / accepted_count
         )
 
         coverage = (
-            prefix_size
-            / len(ordered)
+            accepted_count
+            / len(rows)
         )
 
         curve.append(
             {
                 "accepted": (
-                    prefix_size
+                    accepted_count
                 ),
                 "coverage": (
                     coverage
@@ -677,11 +687,7 @@ def risk_coverage_curve(
                     risk
                 ),
                 "threshold_at_boundary": (
-                    float(
-                        accepted[-1][
-                            "top1_score"
-                        ]
-                    )
+                    threshold
                 ),
             }
         )

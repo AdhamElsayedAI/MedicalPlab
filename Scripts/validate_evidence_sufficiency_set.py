@@ -25,6 +25,13 @@ DEFAULT_SCHEMA_PATH = (
     / "evidence_sufficiency_calibration_v1.schema.json"
 )
 
+CHUNKS_DIR = (
+    PROJECT_ROOT
+    / "Data"
+    / "processed"
+    / "cardiology"
+)
+
 DEFAULT_COMPARE_EVALS = [
     PROJECT_ROOT
     / "evaluation"
@@ -79,6 +86,95 @@ def load_json(path: Path) -> dict[str, Any]:
         )
 
     return data
+
+
+def load_corpus_block_keys(
+    corpus_document_ids: set[str],
+) -> set[tuple[str, int]]:
+    keys: set[tuple[str, int]] = set()
+
+    for document_id in sorted(
+        corpus_document_ids
+    ):
+        chunks_path = (
+            CHUNKS_DIR
+            / f"{document_id}.chunks.json"
+        )
+
+        if not chunks_path.exists():
+            raise FileNotFoundError(
+                "Corpus chunk file not found: "
+                f"{chunks_path}"
+            )
+
+        document = load_json(
+            chunks_path
+        )
+
+        chunks = document.get(
+            "chunks",
+            [],
+        )
+
+        if not isinstance(
+            chunks,
+            list,
+        ):
+            raise ValueError(
+                "chunks must be a list in "
+                f"{chunks_path}"
+            )
+
+        for chunk in chunks:
+            if not isinstance(
+                chunk,
+                dict,
+            ):
+                raise ValueError(
+                    "Invalid chunk object in "
+                    f"{chunks_path}"
+                )
+
+            actual_document_id = str(
+                chunk.get(
+                    "document_id",
+                    "",
+                )
+            )
+
+            block_index = chunk.get(
+                "source_block_index"
+            )
+
+            if (
+                actual_document_id
+                != document_id
+            ):
+                raise ValueError(
+                    "Chunk document mismatch in "
+                    f"{chunks_path}: expected="
+                    f"{document_id}, found="
+                    f"{actual_document_id}"
+                )
+
+            if not isinstance(
+                block_index,
+                int,
+            ):
+                raise ValueError(
+                    "Invalid source_block_index in "
+                    f"{chunks_path}: "
+                    f"{block_index!r}"
+                )
+
+            keys.add(
+                (
+                    document_id,
+                    block_index,
+                )
+            )
+
+    return keys
 
 
 def normalize_query(value: str) -> str:
@@ -139,6 +235,26 @@ def main() -> None:
             [],
         )
     )
+
+    corpus_block_keys: set[
+        tuple[str, int]
+    ] | None
+
+    try:
+        corpus_block_keys = (
+            load_corpus_block_keys(
+                corpus_document_ids
+            )
+        )
+    except (
+        FileNotFoundError,
+        ValueError,
+    ) as exc:
+        corpus_block_keys = None
+        errors.append(
+            "Corpus block catalog validation "
+            f"failed: {exc}"
+        )
 
     seen_case_ids: set[str] = set()
     seen_queries: dict[str, str] = {}
@@ -238,6 +354,21 @@ def main() -> None:
                         f"{block_index:04d}"
                     )
                 block_keys.add(key)
+
+                if (
+                    corpus_block_keys
+                    is not None
+                    and document_id
+                    in corpus_document_ids
+                    and key
+                    not in corpus_block_keys
+                ):
+                    errors.append(
+                        f"{case_id}: supporting block "
+                        f"does not exist in corpus: "
+                        f"{document_id}:B"
+                        f"{block_index:04d}"
+                    )
 
         required_document_id = case.get(
             "required_document_id"

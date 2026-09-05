@@ -1,7 +1,7 @@
 {
   "baseline_id": "medicalplab-evidence-sufficiency-retrieval-only-baseline-v1",
   "version": "1.0.0",
-  "generated_at_utc": "2026-09-05T21:22:32.282269+00:00",
+  "generated_at_utc": "2026-09-05T23:15:57.547460+00:00",
   "status": "calibration_experiment_not_final_test",
   "calibration": {
     "file": "evaluation/evidence_sufficiency_calibration_v1.json",
@@ -1254,12 +1254,6 @@
       "coverage": 0.16666666666666666,
       "risk_non_supported_among_accepted": 0.125,
       "threshold_at_boundary": 0.7568359375
-    },
-    {
-      "accepted": 9,
-      "coverage": 0.1875,
-      "risk_non_supported_among_accepted": 0.2222222222222222,
-      "threshold_at_boundary": 0.74951171875
     },
     {
       "accepted": 10,
