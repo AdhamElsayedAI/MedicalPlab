@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medicalplab.local/schemas/evidence_sufficiency_calibration_v1.schema.json",
+  "title": "MedicalPlab Evidence Sufficiency Calibration Set v1",
+  "type": "object",
+  "required": [
+    "calibration_set_id",
+    "version",
+    "purpose",
+    "corpus_document_ids",
+    "label_policy",
+    "cases"
+  ],
+  "properties": {
+    "calibration_set_id": {
+      "type": "string",
+      "pattern": "^medicalplab-evidence-sufficiency-calibration-"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "corpus_document_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "label_policy": {
+      "type": "object",
+      "required": [
+        "supported",
+        "partial",
+        "unsupported"
+      ],
+      "properties": {
+        "supported": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partial": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unsupported": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "case_id",
+          "query",
+          "language",
+          "difficulty",
+          "claim_type",
+          "support_label",
+          "expected_action",
+          "target_concept",
+          "required_document_id",
+          "supporting_blocks",
+          "missing_support",
+          "negative_type",
+          "hard_negative",
+          "contrast_group_id",
+          "notes"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^ESCAL-V1-[0-9]{3}$"
+          },
+          "query": {
+            "type": "string",
+            "minLength": 3
+          },
+          "language": {
+            "type": "string",
+            "enum": [
+              "en",
+              "ar",
+              "mixed"
+            ]
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "medium",
+              "hard"
+            ]
+          },
+          "claim_type": {
+            "type": "string",
+            "enum": [
+              "direct_fact",
+              "numeric_fact",
+              "recommendation",
+              "clinical_education",
+              "multi_claim",
+              "source_specific",
+              "comparison",
+              "patient_specific_request"
+            ]
+          },
+          "support_label": {
+            "type": "string",
+            "enum": [
+              "supported",
+              "partial",
+              "unsupported"
+            ]
+          },
+          "expected_action": {
+            "type": "string",
+            "enum": [
+              "answer",
+              "qualified_answer",
+              "abstain"
+            ]
+          },
+          "target_concept": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_document_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "supporting_blocks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "document_id",
+                "block_index",
+                "support_strength",
+                "rationale"
+              ],
+              "properties": {
+                "document_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "block_index": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "support_strength": {
+                  "type": "string",
+                  "enum": [
+                    "direct",
+                    "supporting"
+                  ]
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "missing_support": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "negative_type": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              null,
+              "exact_fact_absent",
+              "wrong_population",
+              "wrong_condition",
+              "out_of_corpus",
+              "source_constraint_miss",
+              "temporal_out_of_scope",
+              "patient_specific",
+              "semantically_related_but_unsupported",
+              "multi_claim_partial"
+            ]
+          },
+          "hard_negative": {
+            "type": "boolean"
+          },
+          "contrast_group_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^CG-[0-9]{3}$"
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
