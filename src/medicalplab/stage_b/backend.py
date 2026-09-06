@@ -256,40 +256,58 @@ LOCAL_GENERATION = {
 
 
 
-def local_preflight():
 
-    import torch
+def preflight():
+    try:
+        import torch
+    except ImportError as e:
+        raise RuntimeError(
+            "Benchmark CUDA PyTorch is not installed"
+        ) from e
 
     if not torch.cuda.is_available():
-        raise RuntimeError(
-            "CUDA GPU required"
-        )
-
+        raise RuntimeError("CUDA GPU required")
 
     free, total = torch.cuda.mem_get_info()
 
-
-    if total < 6 * 1024**3:
-
-        warnings.warn(
-            "GPU has less than recommended 6GB VRAM"
+    # Canonical benchmark model requirement
+    # Qwen3-8B-AWQ requires a larger GPU than local development model
+    if total < 14 * 1024**3:
+        raise RuntimeError(
+            f"Need >=14 GiB VRAM, found {total/1024**3:.2f} GiB"
         )
 
+    actual = {}
+
+    for name in VERSIONS:
+        try:
+            actual[name] = version(name)
+        except PackageNotFoundError:
+            actual[name] = None
+
+    missing = {
+        k: v for k, v in actual.items()
+        if v is None
+    }
+
+    if missing:
+        raise RuntimeError(
+            f"Missing benchmark packages: {missing}"
+        )
+
+    if actual != VERSIONS:
+        raise RuntimeError(
+            f"Benchmark package mismatch: {actual}"
+        )
 
     return {
         "gpu": torch.cuda.get_device_name(),
         "total_vram": total,
         "free_vram": free,
+        "packages": actual,
         "torch": torch.__version__,
         "cuda": torch.version.cuda,
     }
-
-
-
-class LocalQwenBackend:
-
-    model = LOCAL_MODEL
-    quantization = "BNB NF4"
 
 
 
