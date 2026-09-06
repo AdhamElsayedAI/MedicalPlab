@@ -43,3 +43,7 @@ Thumbs.db
 desktop.ini
 evaluation/audits/evidence_sufficiency_negative_label_audit_candidates_v1.json
 evaluation/audits/evidence_sufficiency_negative_label_audit_candidates_v1.md
+
+# Local Stage-B bundles, run checkpoints and GPU setup
+.stage_b/
+*.stage-b.zip
