@@ -456,3 +456,145 @@ def preflight():
         import torch
 
         return torch.cuda.max_memory_allocated()
+
+
+    # ---------------------------------------------------------------------------
+# Local RTX3060 development backend
+# ---------------------------------------------------------------------------
+
+LOCAL_MODEL = "Qwen/Qwen3-4B"
+
+LOCAL_GENERATION = {
+    "do_sample": False,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+}
+
+
+def local_preflight():
+    import torch
+
+    if not torch.cuda.is_available():
+        raise RuntimeError("CUDA GPU required")
+
+    free, total = torch.cuda.mem_get_info()
+
+    if total < 6 * 1024**3:
+        warnings.warn(
+            "GPU has less than recommended 6GB VRAM"
+        )
+
+    return {
+        "gpu": torch.cuda.get_device_name(),
+        "total_vram": total,
+        "free_vram": free,
+        "torch": torch.__version__,
+        "cuda": torch.version.cuda,
+    }
+
+
+class LocalQwenBackend:
+
+    model = LOCAL_MODEL
+    quantization = "BNB NF4"
+
+    def __init__(self, revision="main"):
+
+        self.hardware = local_preflight()
+
+        import torch
+
+        from transformers import (
+            AutoTokenizer,
+            AutoModelForCausalLM,
+            BitsAndBytesConfig,
+            GenerationConfig,
+        )
+
+        torch.manual_seed(42)
+
+        self.revision = revision
+
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            LOCAL_MODEL,
+            revision=revision
+        )
+
+        quant_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_compute_dtype=torch.float16,
+        )
+
+        self.network = AutoModelForCausalLM.from_pretrained(
+            LOCAL_MODEL,
+            revision=revision,
+            device_map="auto",
+            torch_dtype=torch.float16,
+            quantization_config=quant_config,
+            low_cpu_mem_usage=True,
+        )
+
+        self.network.eval()
+
+        self.config = GenerationConfig(
+            **LOCAL_GENERATION,
+            eos_token_id=self.tokenizer.eos_token_id,
+            pad_token_id=self.tokenizer.pad_token_id,
+        )
+
+        torch.cuda.empty_cache()
+        torch.cuda.reset_peak_memory_stats()
+
+
+    def generate(self, system, user):
+
+        import torch
+
+        prompt = self.tokenizer.apply_chat_template(
+            [
+                {
+                    "role": "system",
+                    "content": system,
+                },
+                {
+                    "role": "user",
+                    "content": user,
+                },
+            ],
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
+
+        inputs = self.tokenizer(
+            prompt,
+            return_tensors="pt"
+        ).to("cuda")
+
+
+        with torch.inference_mode():
+
+            output = self.network.generate(
+                **inputs,
+                generation_config=self.config
+            )
+
+
+        tokens = output[0, inputs.input_ids.shape[-1]:]
+
+        return {
+            "text": self.tokenizer.decode(
+                tokens,
+                skip_special_tokens=True
+            ),
+            "input_tokens": inputs.input_ids.shape[-1],
+            "output_tokens": len(tokens),
+        }
+
+
+    def peak_vram(self):
+
+        import torch
+
+        return torch.cuda.max_memory_allocated()    
