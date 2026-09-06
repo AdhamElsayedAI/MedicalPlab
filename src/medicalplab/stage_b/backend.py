@@ -1,6 +1,7 @@
 """Optional GPU adapter. No model import or download during deterministic tests."""
 
 from importlib.metadata import version
+from typing import Protocol, runtime_checkable
 
 MODEL = "Qwen/Qwen3-8B-AWQ"
 GENERATION = {
@@ -12,6 +13,47 @@ GENERATION = {
     "top_k": None,
 }
 VERSIONS = {"transformers": "4.51.3", "accelerate": "1.10.1", "autoawq": "0.2.9"}
+
+
+@runtime_checkable
+class Backend(Protocol):
+    """Structural interface for any Stage-B model backend.
+
+    StageBPipeline depends on this interface. QwenBackend is the canonical
+    benchmark implementation. StubBackend provides a development-only
+    alternative for machines that cannot satisfy QwenBackend's GPU requirements.
+    """
+
+    model: str
+    revision: str
+    quantization: str
+
+    def generate(self, system: str, user: str) -> dict: ...
+
+    def peak_vram(self) -> int | None: ...
+
+
+class StubBackend:
+    """Development-only backend for pipeline testing without GPU inference.
+
+    Returns a fixed unsupported verdict for every query. NOT valid for
+    benchmark evaluation — results will be recorded as contract failures
+    because the canned response cannot match arbitrary claim structures.
+    """
+
+    model = "stub"
+    revision = "local-development"
+    quantization = "none"
+
+    def generate(self, system, user):
+        return {
+            "text": '{"claims":[]}',
+            "input_tokens": 0,
+            "output_tokens": 0,
+        }
+
+    def peak_vram(self):
+        return None
 
 
 def preflight():
@@ -43,6 +85,7 @@ def preflight():
 
 class QwenBackend:
     model = MODEL
+    quantization = "AWQ 4-bit"
 
     def __init__(self, revision):
         import re

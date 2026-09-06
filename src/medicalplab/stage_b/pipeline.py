@@ -63,7 +63,7 @@ class StageBPipeline:
         metadata = ModelRunMetadata(
             self.backend.model,
             self.backend.revision,
-            "AWQ 4-bit",
+            getattr(self.backend, "quantization", "AWQ 4-bit"),
             sum(x["input_tokens"] for x in self.trace),
             sum(x["output_tokens"] for x in self.trace),
             planner_seconds,
