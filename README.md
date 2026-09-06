@@ -229,3 +229,10 @@ See `docs/` for the engineering notes and architecture decisions.
 Active development. This repository currently represents the validated data and retrieval foundation plus independent retrieval evaluation, not a finished clinical product.
 
 MedicalPlab is an educational system. It is not intended to provide patient-specific diagnosis or treatment decisions.
+
+## Canonical Stage-B candidate
+
+The active verifier is `src/medicalplab/stage_b/`. See [Stage-B](docs/stage_b.md)
+for its contracts, limitations, deterministic tests and Colab calibration workflow.
+The candidate awaits GPU calibration; historical metrics are not its results.
+Use `evaluation/run_stage_b_calibration.py` for both regression and calibration.
