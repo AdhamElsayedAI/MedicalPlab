@@ -56,3 +56,14 @@ python -c "import torch; print(torch.__version__); print('CUDA:', torch.cuda.is_
 - `requirements-retrieval.txt` pins the validated retrieval stack.
 - GPU-specific PyTorch installation remains platform dependent.
 - Raw and processed medical data under `Data/` are intentionally excluded from Git.
+
+## Stage-B isolation
+
+Stage-B contracts, policies, unit tests and evaluation metrics use the standard
+library only. No Gemini SDK is a core dependency. Core data-pipeline dependencies
+remain used and unchanged. `uv.lock` core dependencies remain unchanged.
+
+The AWQ benchmark uses a separate Linux environment and `requirements-benchmark.txt`;
+do not install it over `requirements-retrieval.txt` (different Transformers versions).
+The Colab notebook installs CUDA torch 2.6.0 first and the benchmark dependencies
+second. GPU installation and inference still need validation on Colab hardware.
