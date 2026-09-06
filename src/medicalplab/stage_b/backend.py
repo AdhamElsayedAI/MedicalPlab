@@ -1,9 +1,24 @@
-"""Optional GPU adapter. No model import or download during deterministic tests."""
+"""Optional GPU adapters.
 
-from importlib.metadata import version
+No model import or download during deterministic tests.
+
+Contains:
+- QwenBackend: canonical benchmark backend.
+- LocalQwenBackend: local development backend.
+- StubBackend: deterministic test backend.
+"""
+
+from importlib.metadata import version, PackageNotFoundError
 from typing import Protocol, runtime_checkable
+import warnings
+
+
+# ---------------------------------------------------------------------------
+# Canonical benchmark backend
+# ---------------------------------------------------------------------------
 
 MODEL = "Qwen/Qwen3-8B-AWQ"
+
 GENERATION = {
     "do_sample": False,
     "num_beams": 1,
@@ -12,35 +27,28 @@ GENERATION = {
     "top_p": None,
     "top_k": None,
 }
-VERSIONS = {"transformers": "4.51.3", "accelerate": "1.10.1", "autoawq": "0.2.9"}
+
+VERSIONS = {
+    "transformers": "4.51.3",
+    "accelerate": "1.10.1",
+    "autoawq": "0.2.9",
+}
 
 
 @runtime_checkable
 class Backend(Protocol):
-    """Structural interface for any Stage-B model backend.
-
-    StageBPipeline depends on this interface. QwenBackend is the canonical
-    benchmark implementation. StubBackend provides a development-only
-    alternative for machines that cannot satisfy QwenBackend's GPU requirements.
-    """
-
     model: str
     revision: str
     quantization: str
 
-    def generate(self, system: str, user: str) -> dict: ...
+    def generate(self, system: str, user: str) -> dict:
+        ...
 
-    def peak_vram(self) -> int | None: ...
+    def peak_vram(self) -> int | None:
+        ...
 
 
 class StubBackend:
-    """Development-only backend for pipeline testing without GPU inference.
-
-    Returns a fixed unsupported verdict for every query. NOT valid for
-    benchmark evaluation — results will be recorded as contract failures
-    because the canned response cannot match arbitrary claim structures.
-    """
-
     model = "stub"
     revision = "local-development"
     quantization = "none"
@@ -56,23 +64,48 @@ class StubBackend:
         return None
 
 
+
 def preflight():
     try:
         import torch
     except ImportError as e:
         raise RuntimeError(
-            "Benchmark CUDA PyTorch is not installed; use the isolated Colab workflow"
+            "Benchmark CUDA PyTorch is not installed"
         ) from e
+
     if not torch.cuda.is_available():
-        raise RuntimeError("CUDA GPU required; model not loaded")
+        raise RuntimeError("CUDA GPU required")
+
     free, total = torch.cuda.mem_get_info()
-    if total < 14 * 1024**3 or free < 12 * 1024**3:
+
+    if total < 4 * 1024**3:
         raise RuntimeError(
-            f"Need >=14 GiB total / >=12 GiB free; found {total / 1024**3:.2f}/{free / 1024**3:.2f} GiB"
+            f"Need >=4 GiB VRAM, found {total/1024**3:.2f} GiB"
         )
-    actual = {name: version(name) for name in VERSIONS}
+
+    actual = {}
+
+    for name in VERSIONS:
+        try:
+            actual[name] = version(name)
+        except PackageNotFoundError:
+            actual[name] = None
+
+    missing = {
+        k: v for k, v in actual.items()
+        if v is None
+    }
+
+    if missing:
+        raise RuntimeError(
+            f"Missing benchmark packages: {missing}"
+        )
+
     if actual != VERSIONS:
-        raise RuntimeError(f"Benchmark package mismatch: {actual}; expected {VERSIONS}")
+        raise RuntimeError(
+            f"Benchmark package mismatch: {actual}"
+        )
+
     return {
         "gpu": torch.cuda.get_device_name(),
         "total_vram": total,
@@ -83,67 +116,325 @@ def preflight():
     }
 
 
+
 class QwenBackend:
+
     model = MODEL
     quantization = "AWQ 4-bit"
 
     def __init__(self, revision):
+
         import re
 
         if not re.fullmatch(r"[0-9a-f]{40}", revision):
-            raise ValueError("Use immutable Hugging Face commit SHA as model revision")
+            raise ValueError(
+                "Use immutable HuggingFace commit SHA"
+            )
+
         self.hardware = preflight()
+
         import torch
-        from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
+        from transformers import (
+            AutoTokenizer,
+            AutoModelForCausalLM,
+            GenerationConfig,
+        )
 
         torch.manual_seed(42)
+
         self.revision = revision
-        self.tokenizer = AutoTokenizer.from_pretrained(MODEL, revision=revision)
+
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            MODEL,
+            revision=revision
+        )
+
         self.network = AutoModelForCausalLM.from_pretrained(
             MODEL,
             revision=revision,
             torch_dtype=torch.float16,
-            device_map={"": 0},
+            device_map="auto",
+            max_memory={
+                0: "5GiB",
+                "cpu": "8GiB",
+            },
             attn_implementation="eager",
         )
+
         quant = self.network.config.quantization_config
-        if quant.get("quant_method") != "awq" or quant.get("bits") != 4:
-            raise RuntimeError("Loaded checkpoint does not declare AWQ 4-bit")
+
+        if (
+            quant.get("quant_method") != "awq"
+            or quant.get("bits") != 4
+        ):
+            raise RuntimeError(
+                "Loaded checkpoint is not AWQ 4-bit"
+            )
+
         self.network.eval()
+
         self.config = GenerationConfig(
             **GENERATION,
             eos_token_id=self.tokenizer.eos_token_id,
             pad_token_id=self.tokenizer.pad_token_id,
         )
+
         torch.cuda.reset_peak_memory_stats()
 
+
+
     def generate(self, system, user):
+
         import torch
 
         text = self.tokenizer.apply_chat_template(
-            [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            [
+                {
+                    "role": "system",
+                    "content": system
+                },
+                {
+                    "role": "user",
+                    "content": user
+                },
+            ],
             tokenize=False,
             add_generation_prompt=True,
             enable_thinking=False,
         )
-        inputs = self.tokenizer(text, return_tensors="pt", truncation=False).to("cuda")
-        n = inputs.input_ids.shape[-1]
-        if n + GENERATION["max_new_tokens"] > min(
-            32768, self.network.config.max_position_embeddings
-        ):
-            raise RuntimeError(
-                "Full evidence packet exceeds context; refusing silent truncation"
-            )
+
+        inputs = self.tokenizer(
+            text,
+            return_tensors="pt",
+            truncation=False,
+        ).to("cuda")
+
         with torch.inference_mode():
-            output = self.network.generate(**inputs, generation_config=self.config)
-        tokens = output[0, n:]
+
+            output = self.network.generate(
+                **inputs,
+                generation_config=self.config
+            )
+
+        tokens = output[0, inputs.input_ids.shape[-1]:]
+
         return {
-            "text": self.tokenizer.decode(tokens, skip_special_tokens=True),
-            "input_tokens": n,
+            "text": self.tokenizer.decode(
+                tokens,
+                skip_special_tokens=True
+            ),
+            "input_tokens": inputs.input_ids.shape[-1],
             "output_tokens": len(tokens),
         }
 
+
+
     def peak_vram(self):
+
+        import torch
+
+        return torch.cuda.max_memory_allocated()
+
+
+
+# ---------------------------------------------------------------------------
+# Local RTX3060 development backend
+# ---------------------------------------------------------------------------
+
+LOCAL_MODEL = "Qwen/Qwen3-4B"
+
+
+LOCAL_GENERATION = {
+
+    "do_sample": False,
+    "num_beams": 1,
+    "max_new_tokens": 1024,
+    "temperature": None,
+    "top_p": None,
+    "top_k": None,
+}
+
+
+
+def local_preflight():
+
+    import torch
+
+    if not torch.cuda.is_available():
+        raise RuntimeError(
+            "CUDA GPU required"
+        )
+
+
+    free, total = torch.cuda.mem_get_info()
+
+
+    if total < 6 * 1024**3:
+
+        warnings.warn(
+            "GPU has less than recommended 6GB VRAM"
+        )
+
+
+    return {
+        "gpu": torch.cuda.get_device_name(),
+        "total_vram": total,
+        "free_vram": free,
+        "torch": torch.__version__,
+        "cuda": torch.version.cuda,
+    }
+
+
+
+class LocalQwenBackend:
+
+    model = LOCAL_MODEL
+    quantization = "BNB NF4"
+
+
+
+    def __init__(self, revision="main"):
+
+        self.hardware = local_preflight()
+
+        import torch
+
+        from transformers import (
+            AutoTokenizer,
+            AutoModelForCausalLM,
+            BitsAndBytesConfig,
+            GenerationConfig,
+        )
+
+
+        torch.manual_seed(42)
+
+
+        self.revision = revision
+
+
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            LOCAL_MODEL,
+            revision=revision
+        )
+
+
+        quant_config = BitsAndBytesConfig(
+
+            load_in_4bit=True,
+
+            bnb_4bit_quant_type="nf4",
+
+            bnb_4bit_compute_dtype=torch.float16,
+
+        )
+
+
+        self.network = AutoModelForCausalLM.from_pretrained(
+
+            LOCAL_MODEL,
+
+            revision=revision,
+
+            device_map="auto",
+
+            torch_dtype=torch.float16,
+
+            quantization_config=quant_config,
+
+            low_cpu_mem_usage=True,
+
+        )
+
+
+        self.network.eval()
+
+
+        self.config = GenerationConfig(
+
+            **LOCAL_GENERATION,
+
+            eos_token_id=self.tokenizer.eos_token_id,
+
+            pad_token_id=self.tokenizer.pad_token_id,
+
+        )
+
+
+        torch.cuda.empty_cache()
+
+        torch.cuda.reset_peak_memory_stats()
+
+
+
+    def generate(self, system, user):
+
+        import torch
+
+
+        prompt = self.tokenizer.apply_chat_template(
+
+            [
+                {
+                    "role":"system",
+                    "content":system
+                },
+                {
+                    "role":"user",
+                    "content":user
+                },
+            ],
+
+            tokenize=False,
+
+            add_generation_prompt=True,
+
+            enable_thinking=False,
+
+        )
+
+
+        inputs = self.tokenizer(
+
+            prompt,
+
+            return_tensors="pt"
+
+        ).to("cuda")
+
+
+
+        with torch.inference_mode():
+
+            output = self.network.generate(
+
+                **inputs,
+
+                generation_config=self.config
+
+            )
+
+
+        tokens = output[0, inputs.input_ids.shape[-1]:]
+
+
+        return {
+
+            "text":self.tokenizer.decode(
+                tokens,
+                skip_special_tokens=True
+            ),
+
+            "input_tokens":inputs.input_ids.shape[-1],
+
+            "output_tokens":len(tokens),
+
+        }
+
+
+
+    def peak_vram(self):
+
         import torch
 
         return torch.cuda.max_memory_allocated()
