@@ -6,7 +6,7 @@ import uuid
 
 from .claim_planner import parse_plan
 from .evidence_policy import validate_and_apply
-from .models import ModelRunMetadata, StageBResult, require
+from .models import ModelRunMetadata, StageBResult, require, strict_json
 from .prompts import PLANNER, VERIFIER
 from .verifier import parse_verification
 
@@ -15,39 +15,107 @@ class ModelFailure(RuntimeError):
     pass
 
 
+
 class StageBPipeline:
 
+
     def __init__(self, backend):
+
         self.backend = backend
         self.trace = []
 
 
+
     def generate(self, system, user):
+
         try:
-            result = self.backend.generate(system, user)
+
+            result = self.backend.generate(
+                system,
+                user,
+            )
+
 
             require(
                 isinstance(result, dict),
                 "Backend response must be dictionary",
             )
 
+
             require(
                 "text" in result,
                 "Backend response missing text",
             )
 
+
             return result
 
+
         except Exception as e:
+
             raise ModelFailure(
                 f"{type(e).__name__}: {e}"
             ) from e
 
 
 
-    def run(self, query, packet):
+    def generate_json_safe(
+        self,
+        system,
+        user,
+        retries=2,
+    ):
+
+        last_error = None
+
+        original_user = user
+
+        for attempt in range(retries + 1):
+
+            try:
+
+                prompt = original_user
+                if attempt > 0:
+                    prompt = (
+                        original_user
+                        + "\n\nIMPORTANT:\n"
+                        "Return ONLY valid JSON. "
+                        "No markdown. "
+                        "No explanation."
+                    )
+
+                result = self.generate(
+                    system,
+                    prompt,
+                )
+
+
+                text = result["text"].strip()
+
+
+                strict_json(text)
+
+                return result
+
+
+            except Exception as e:
+
+                last_error = e
+
+
+        raise ModelFailure(
+            f"JSON generation failed: {last_error}"
+        )
+
+
+    def run(
+        self,
+        query,
+        packet,
+    ):
 
         self.trace = []
+
 
         run_id = str(uuid.uuid4())
 
@@ -77,13 +145,14 @@ class StageBPipeline:
 
 
         # =============================
-        # Planner Stage
+        # Planner
         # =============================
+
 
         planner_start = time.perf_counter()
 
 
-        plan = self.generate(
+        plan = self.generate_json_safe(
             PLANNER,
             json.dumps(
                 {
@@ -110,7 +179,8 @@ class StageBPipeline:
 
         planner_seconds = (
             time.perf_counter()
-            - planner_start
+            -
+            planner_start
         )
 
 
@@ -130,20 +200,23 @@ class StageBPipeline:
 
 
         # =============================
-        # Verifier Stage
+        # Verifier
         # =============================
 
 
         verifier_start = time.perf_counter()
 
 
-        verification = self.generate(
+        verification = self.generate_json_safe(
             VERIFIER,
             json.dumps(
                 {
                     "query": query,
                     "claims": [
-                        asdict(c)
+                        {
+                            "claim_id": c.claim_id,
+                            "text": c.text,
+                        }
                         for c in claims
                     ],
                     "evidence": [
@@ -154,7 +227,6 @@ class StageBPipeline:
                 ensure_ascii=False,
             ),
         )
-
 
 
         print("\n===== RAW VERIFIER OUTPUT =====")
@@ -169,10 +241,13 @@ class StageBPipeline:
         )
 
 
+
         verifier_seconds = (
             time.perf_counter()
-            - verifier_start
+            -
+            verifier_start
         )
+
 
 
         self.trace.append(
@@ -191,7 +266,7 @@ class StageBPipeline:
 
 
         # =============================
-        # Evidence Policy Validation
+        # Policy
         # =============================
 
 
@@ -223,7 +298,8 @@ class StageBPipeline:
 
         total_seconds = (
             time.perf_counter()
-            - start
+            -
+            start
         )
 
 
@@ -242,18 +318,20 @@ class StageBPipeline:
                 "AWQ 4-bit",
             ),
             sum(
-                x.get("input_tokens", 0)
-                for x in [
-                    self.trace[0]["raw"],
-                    self.trace[1]["raw"],
-                ]
+                x["raw"].get(
+                    "input_tokens",
+                    0
+                )
+                for x in self.trace
+                if "raw" in x
             ),
             sum(
-                x.get("output_tokens", 0)
-                for x in [
-                    self.trace[0]["raw"],
-                    self.trace[1]["raw"],
-                ]
+                x["raw"].get(
+                    "output_tokens",
+                    0
+                )
+                for x in self.trace
+                if "raw" in x
             ),
             planner_seconds,
             verifier_seconds,
@@ -261,21 +339,6 @@ class StageBPipeline:
             self.backend.peak_vram(),
         )
 
-
-        self.trace.append(
-            {
-                "run_id": run_id,
-                "stage": "complete",
-                "seconds": total_seconds,
-                "verdict": [
-                    {
-                        "claim_id": c.claim_id,
-                        "status": c.status.value,
-                    }
-                    for c in final
-                ],
-            }
-        )
 
 
         return StageBResult(

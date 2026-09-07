@@ -17,52 +17,75 @@ OPEN_SLOT = re.compile(
 )
 
 
-INCOMPLETE_PATTERNS = [
-    r"\bis defined$",
-    r"\bis treated$",
-    r"\bis associated$",
-    r"\bis related$",
-    r"\bis used$",
-    r"\bis recommended$",
-    r"^information about ",
-    r"^details of ",
-    r"^overview of ",
-    r"^description of ",
-]
+DOCUMENT_ID_PATTERN = re.compile(
+    r"\bDOC-[A-Z0-9-]+\b",
+    re.I,
+)
 
 
-def repair_claim(claim: MaterialClaim) -> MaterialClaim:
-    """
-    Repair incomplete planner compression.
+def normalize_claim_text(claim: MaterialClaim) -> MaterialClaim:
 
-    Rules:
-    - Keep claim as a factual statement.
-    - Do not add medical facts.
-    - Do not create heading/topic phrases.
-    """
+    text = claim.text.strip()
 
-    text = normalize(claim.text).strip().lower()
-
-
-    repairs = {
-
-        "hypertension is defined":
-            "Hypertension is defined according to stated criteria",
-
-        "hypertension is a medical condition":
-            "Hypertension is a medical condition",
-
+    replacements = {
+        "information about ": "Requested ",
+        "details of ": "Requested ",
+        "overview of ": "Requested ",
+        "description of ": "Requested ",
     }
 
 
-    if text in repairs:
+    lowered = text.lower()
+
+    for old, new in replacements.items():
+
+        if lowered.startswith(old):
+
+            text = (
+                new
+                + text[len(old):]
+            )
+
+            break
+
+
+    if text == claim.text:
+        return claim
+
+
+    return MaterialClaim(
+        claim_id=claim.claim_id,
+        text=text,
+        origin=claim.origin,
+        query_span=claim.query_span,
+        source_document=claim.source_document,
+        exact=claim.exact,
+    )
+
+
+
+def normalize_source_document(
+    claim: MaterialClaim,
+    query: str,
+):
+
+    """
+    Source document is only allowed
+    when explicitly requested by user.
+    """
+
+    if not claim.source_document:
+        return claim
+
+
+    if not DOCUMENT_ID_PATTERN.search(query):
 
         return MaterialClaim(
             claim_id=claim.claim_id,
-            text=repairs[text],
+            text=claim.text,
             origin=claim.origin,
             query_span=claim.query_span,
-            source_document=claim.source_document,
+            source_document=None,
             exact=claim.exact,
         )
 
@@ -70,26 +93,62 @@ def repair_claim(claim: MaterialClaim) -> MaterialClaim:
     return claim
 
 
+
 def validate_claim_quality(claim: MaterialClaim):
-
-    text = normalize(claim.text).strip().lower()
-
 
     if claim.origin == ClaimOrigin.PERSONAL_CONTEXT:
         return
 
 
+    text = normalize(
+        claim.text
+    ).strip()
+
+
     require(
-        len(text.split()) >= 3,
-        f"Incomplete claim: {claim.claim_id}",
+        len(text.split()) >= 2,
+        f"Claim too short: {claim.claim_id}",
     )
 
 
-    for pattern in INCOMPLETE_PATTERNS:
+    require(
+        not text.endswith("?"),
+        f"Claim cannot be question: {claim.text}",
+    )
+
+
+    forbidden = [
+
+        r"^the answer is ",
+
+        r"^according to evidence ",
+
+        r"^therefore ",
+
+        r"^the patient has ",
+
+        r"^treatment is ",
+
+        r"^drug .* is recommended",
+
+        r"^hypertension is ",
+
+        r"^diabetes is ",
+
+    ]
+
+
+    lowered = text.lower()
+
+
+    for pattern in forbidden:
 
         require(
-            not re.search(pattern, text),
-            f"Incomplete claim statement: {claim.text}",
+            not re.search(
+                pattern,
+                lowered,
+            ),
+            f"Answer leakage detected: {claim.text}",
         )
 
 
@@ -97,6 +156,7 @@ def validate_claim_quality(claim: MaterialClaim):
 def parse_plan(raw, query, documents):
 
     obj = strict_json(raw)
+
 
     exact_keys(
         obj,
@@ -107,14 +167,18 @@ def parse_plan(raw, query, documents):
     require(
         isinstance(obj["claims"], list)
         and 1 <= len(obj["claims"]) <= 12,
-        "Invalid plan length",
+        "Invalid claim count",
     )
 
 
     claims = []
 
 
-    for i, data in enumerate(obj["claims"], 1):
+    for index, data in enumerate(
+        obj["claims"],
+        1
+    ):
+
 
         exact_keys(
             data,
@@ -131,10 +195,12 @@ def parse_plan(raw, query, documents):
 
         try:
 
-            c = MaterialClaim(
+            claim = MaterialClaim(
                 **{
                     **data,
-                    "origin": ClaimOrigin(data["origin"]),
+                    "origin": ClaimOrigin(
+                        data["origin"]
+                    ),
                 }
             )
 
@@ -145,62 +211,71 @@ def parse_plan(raw, query, documents):
         ) as e:
 
             raise ValueError(
-                f"Invalid plan: {e}"
+                f"Invalid claim: {e}"
             ) from e
 
 
 
         require(
-            c.claim_id == f"C{i}",
-            "Claim IDs must be sequential and unique",
+            claim.claim_id == f"C{index}",
+            "Claim IDs must be sequential",
         )
 
 
-
         require(
-            normalize(c.query_span)
+            normalize(claim.query_span)
             in normalize(query),
-            "Invented query span",
+            "Query span not found in query",
         )
 
 
+        claim = normalize_source_document(
+            claim,
+            query,
+        )
+
 
         require(
-            c.source_document is None
-            or c.source_document in documents,
-            "Unknown source constraint",
+            claim.source_document is None
+            or claim.source_document in documents,
+            "Unknown source document",
         )
 
 
 
         require(
             not (
-                c.origin == ClaimOrigin.SOURCE_PREMISE
-                and OPEN_SLOT.search(c.query_span)
+                claim.origin == ClaimOrigin.SOURCE_PREMISE
+                and OPEN_SLOT.search(
+                    claim.query_span
+                )
             ),
-            "Open slots must remain requested facts, not factual assertions",
+            "Question cannot be source premise",
         )
 
 
 
-        # Repair compressed planner output
-        c = repair_claim(c)
+        claim = normalize_claim_text(
+            claim
+        )
 
 
+        validate_claim_quality(
+            claim
+        )
 
-        validate_claim_quality(c)
 
+        if claim.origin != ClaimOrigin.PERSONAL_CONTEXT:
 
-
-        if c.origin != ClaimOrigin.PERSONAL_CONTEXT:
-
-            claims.append(c)
+            claims.append(
+                claim
+            )
 
 
 
     require(
-        bool(claims),
-        "No material requests identified",
+        len(claims) > 0,
+        "No valid claims generated",
     )
 
 
