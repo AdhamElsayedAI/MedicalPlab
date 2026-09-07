@@ -83,21 +83,16 @@ The claim must NOT contain the information itself.
 
 VALID CLAIM FORMS:
 
-Use forms like:
+Use normalized, stable verification targets (concise noun phrases describing the information target):
 
-"Whether X is Y"
-
-"Criteria used to define X"
-
-"Recommended treatment for X"
-
-"Risk factors of X"
-
-"Duration of X treatment"
-
-"Blood pressure levels used to define X"
-
-"Causes associated with X"
+"X Y classification"
+"X definition information"
+"X definition criteria"
+"X definition blood pressure levels"
+"Recommended X treatment information"
+"X risk factors information"
+"X treatment duration information"
+"X causes information"
 
 
 
@@ -105,18 +100,19 @@ INVALID:
 
 Do NOT create:
 
+"Whether X is Y"
+"The requested definition of X"
+"Criteria used to define X"
+"Blood pressure levels used to define X"
 "Information about X"
-
 "Details of X"
-
 "Overview of X"
-
 "Definition of X"
-
 "Description of X"
 
-
-These are headings, not verification targets.
+Do not write questions.
+Do not write headings.
+Write neutral verification target phrases.
 
 
 
@@ -124,16 +120,25 @@ EXAMPLES:
 
 
 User:
-"What is hypertension?"
-
+"Is hypertension considered a medical condition?"
 
 Correct:
-
-"Whether hypertension is a medical condition"
-
+"Hypertension medical condition classification"
 
 Incorrect:
+"Whether hypertension is a medical condition"
+"Hypertension is a medical condition"
 
+
+
+User:
+"What is hypertension?"
+
+Correct:
+"Hypertension definition information"
+
+Incorrect:
+"The requested definition of hypertension"
 "Hypertension is a medical condition"
 
 
@@ -141,44 +146,23 @@ Incorrect:
 User:
 "How is hypertension defined?"
 
-
 Correct:
-
-"Criteria used to define hypertension"
-
+"Hypertension definition criteria"
 
 Incorrect:
-
+"Criteria used to define hypertension according to the guideline"
 "Hypertension is defined using blood pressure levels"
 
 
 
 User:
-"Is hypertension a medical condition?"
-
+"What specific blood pressure levels are used to define hypertension?"
 
 Correct:
-
-"Whether hypertension is a medical condition"
-
+"Hypertension definition blood pressure levels"
 
 Incorrect:
-
-"Hypertension is a medical condition"
-
-
-
-User:
-"What blood pressure levels define hypertension?"
-
-
-Correct:
-
 "Blood pressure levels used to define hypertension"
-
-
-Incorrect:
-
 "Blood pressure levels are 120/80"
 
 
@@ -186,15 +170,24 @@ Incorrect:
 User:
 "What treatment is recommended?"
 
-
 Correct:
-
-"Recommended treatment for hypertension"
-
+"Recommended hypertension treatment information"
 
 Incorrect:
-
+"The recommended treatment for hypertension"
 "ACE inhibitors are recommended"
+
+
+
+User:
+"What does the guideline say about hypertension?"
+
+Correct:
+"Hypertension definition information"
+
+Incorrect:
+"Whether hypertension is a medical condition"
+"Hypertension is a serious condition"
 
 
 
@@ -448,31 +441,56 @@ SUPPORTED RULE:
 
 A claim is supported when:
 
-1. Evidence contains a literal quote.
-2. The quote directly satisfies the requested information target.
-3. citations contains at least one citation.
+1. Evidence contains a literal quote from supplied evidence.
+2. The quote directly satisfies the requested verification target.
+3. citations contains at least one valid citation from supplied evidence.
 
 
 
-Important:
+TARGET MATCHING GUIDELINES:
 
-Information-target claims can be supported.
+Planned claims are normalized verification targets. A target claim is "supported" when the supplied evidence directly provides the information being classified or specified.
 
-Example:
+Examples:
 
-Claim:
-
-"Criteria used to define hypertension"
-
+Target Claim:
+"Hypertension medical condition classification"
 
 Evidence:
-
-"Hypertension can be defined using specific systolic and diastolic blood pressure levels"
-
+"Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2)."
 
 Result:
+supported (Evidence explicitly classifies hypertension as a medical condition)
 
-supported
+
+Target Claim:
+"Hypertension definition criteria"
+
+Evidence:
+"Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
+
+Result:
+supported (Evidence explicitly states the criteria used to define hypertension)
+
+
+Target Claim:
+"Hypertension definition information"
+
+Evidence:
+"Hypertension – or elevated blood pressure – is a serious medical condition... Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
+
+Result:
+supported (Evidence directly provides definition information about hypertension)
+
+
+Target Claim:
+"Hypertension definition blood pressure levels"
+
+Evidence:
+"Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
+
+Result:
+supported (Evidence directly specifies that systolic and diastolic blood pressure levels define hypertension)
 
 
 
@@ -486,9 +504,13 @@ UNSUPPORTED:
 
 Return unsupported when:
 
-- evidence is missing.
-- evidence does not satisfy the target.
-- external knowledge is required.
+- Evidence is missing or does not contain information satisfying the target.
+- The claim asks for something absent or impossible:
+  * Exact cure dose for a chronic condition where no cure exists
+  * Medication that completely eliminates hypertension
+  * Universal cure
+  * Specific mortality percentage or treatment duration not stated in the evidence
+- External knowledge is required.
 
 
 

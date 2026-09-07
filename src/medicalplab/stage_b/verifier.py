@@ -67,7 +67,7 @@ def parse_verification(raw, claims):
 
 
         require(
-            data["text"] == original_claim.text,
+            data["text"].strip() == original_claim.text.strip(),
             "Claim text modified",
         )
 
@@ -125,7 +125,7 @@ def parse_verification(raw, claims):
 
         result = VerifierResult(
             claim_id=data["claim_id"],
-            text=data["text"],
+            text=original_claim.text,
             status=status,
             citations=citations,
             bindings=bindings,
