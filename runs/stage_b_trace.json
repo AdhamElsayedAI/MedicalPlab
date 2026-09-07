@@ -1,0 +1,83 @@
+[
+  {
+    "run_id": "2f3b37be-71d1-4998-a5fb-0927d81f167e",
+    "stage": "planner",
+    "raw": {
+      "text": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"C1\",\n      \"text\": \"Hypertension is defined\",\n      \"origin\": \"requested_fact\",\n      \"query_span\": \"What is hypertension and how is it defined?\",\n      \"source_document\": null,\n      \"exact\": false\n    },\n    {\n      \"claim_id\": \"C2\",\n      \"text\": \"Hypertension is a medical condition\",\n      \"origin\": \"requested_fact\",\n      \"query_span\": \"What is hypertension and how is it defined?\",\n      \"source_document\": null,\n      \"exact\": false\n    }\n  ]\n}",
+      "input_tokens": 662,
+      "output_tokens": 134
+    },
+    "parsed_claims": [
+      {
+        "claim_id": "C1",
+        "text": "Hypertension is defined according to stated criteria",
+        "origin": "requested_fact",
+        "query_span": "What is hypertension and how is it defined?",
+        "source_document": null,
+        "exact": false
+      },
+      {
+        "claim_id": "C2",
+        "text": "Hypertension is a medical condition",
+        "origin": "requested_fact",
+        "query_span": "What is hypertension and how is it defined?",
+        "source_document": null,
+        "exact": false
+      }
+    ],
+    "seconds": 9.062449200078845
+  },
+  {
+    "run_id": "2f3b37be-71d1-4998-a5fb-0927d81f167e",
+    "stage": "verifier",
+    "raw": {
+      "text": "{\n  \"claims\": [\n    {\n      \"claim_id\": \"C1\",\n      \"text\": \"Hypertension is defined according to stated criteria\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"ref\": \"DOC-WHO-CARD-0001:B0001:C01\",\n          \"quote\": \"Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2). Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications.\"\n        }\n      ],\n      \"bindings\": [],\n      \"reason\": \"The evidence explicitly states that hypertension can be defined using specific blood pressure levels or antihypertensive medications.\"\n    },\n    {\n      \"claim_id\": \"C2\",\n      \"text\": \"Hypertension is a medical condition\",\n      \"status\": \"supported\",\n      \"citations\": [\n        {\n          \"ref\": \"DOC-WHO-CARD-0001:B0001:C01\",\n          \"quote\": \"Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2).\"\n        }\n      ],\n      \"bindings\": [],\n      \"reason\": \"The evidence explicitly refers to hypertension as a serious medical condition.\"\n    }\n  ]\n}",
+      "input_tokens": 3721,
+      "output_tokens": 315
+    },
+    "parsed_judgments": [
+      {
+        "claim_id": "C1",
+        "text": "Hypertension is defined according to stated criteria",
+        "status": "supported",
+        "citations": [
+          {
+            "ref": "DOC-WHO-CARD-0001:B0001:C01",
+            "quote": "Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2). Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
+          }
+        ],
+        "bindings": [],
+        "reason": "The evidence explicitly states that hypertension can be defined using specific blood pressure levels or antihypertensive medications."
+      },
+      {
+        "claim_id": "C2",
+        "text": "Hypertension is a medical condition",
+        "status": "supported",
+        "citations": [
+          {
+            "ref": "DOC-WHO-CARD-0001:B0001:C01",
+            "quote": "Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2)."
+          }
+        ],
+        "bindings": [],
+        "reason": "The evidence explicitly refers to hypertension as a serious medical condition."
+      }
+    ],
+    "seconds": 20.233990699984133
+  },
+  {
+    "run_id": "2f3b37be-71d1-4998-a5fb-0927d81f167e",
+    "stage": "complete",
+    "seconds": 29.29673949989956,
+    "verdict": [
+      {
+        "claim_id": "C1",
+        "status": "supported"
+      },
+      {
+        "claim_id": "C2",
+        "status": "supported"
+      }
+    ]
+  }
+]

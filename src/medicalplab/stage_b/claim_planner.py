@@ -18,16 +18,12 @@ OPEN_SLOT = re.compile(
 
 
 INCOMPLETE_PATTERNS = [
-    r"\bis defined\b$",
-    r"\bis treated\b$",
-    r"\bis associated\b$",
-    r"\bis related\b$",
-    r"\bis used\b$",
-    r"\bis recommended\b$",
-    r"\bdefined$",
-    r"\btreated$",
-
-    # heading/meta claims
+    r"\bis defined$",
+    r"\bis treated$",
+    r"\bis associated$",
+    r"\bis related$",
+    r"\bis used$",
+    r"\bis recommended$",
     r"^information about ",
     r"^details of ",
     r"^overview of ",
@@ -37,30 +33,30 @@ INCOMPLETE_PATTERNS = [
 
 def repair_claim(claim: MaterialClaim) -> MaterialClaim:
     """
-    Repair common LLM claim compression mistakes.
+    Repair incomplete planner compression.
 
-    The planner model sometimes converts:
-    "How is hypertension defined?"
-    into:
-    "Hypertension is defined"
-
-    This layer restores a verifiable claim.
+    Rules:
+    - Keep claim as a factual statement.
+    - Do not add medical facts.
+    - Do not create heading/topic phrases.
     """
 
     text = normalize(claim.text).strip().lower()
 
+
     repairs = {
+
         "hypertension is defined":
-            "Hypertension is defined using specific systolic and diastolic blood pressure levels",
+            "Hypertension is defined according to stated criteria",
 
-        "hypertension is a medical condition characterized by persistently elevated blood pressure":
+        "hypertension is a medical condition":
             "Hypertension is a medical condition",
 
-        "hypertension is a medical condition characterized by elevated blood pressure":
-            "Hypertension is a medical condition",
     }
 
+
     if text in repairs:
+
         return MaterialClaim(
             claim_id=claim.claim_id,
             text=repairs[text],
@@ -70,16 +66,14 @@ def repair_claim(claim: MaterialClaim) -> MaterialClaim:
             exact=claim.exact,
         )
 
+
     return claim
 
 
-
 def validate_claim_quality(claim: MaterialClaim):
-    """
-    Validate claim quality before evidence verification.
-    """
 
     text = normalize(claim.text).strip().lower()
+
 
     if claim.origin == ClaimOrigin.PERSONAL_CONTEXT:
         return
@@ -92,6 +86,7 @@ def validate_claim_quality(claim: MaterialClaim):
 
 
     for pattern in INCOMPLETE_PATTERNS:
+
         require(
             not re.search(pattern, text),
             f"Incomplete claim statement: {claim.text}",
@@ -103,7 +98,10 @@ def parse_plan(raw, query, documents):
 
     obj = strict_json(raw)
 
-    exact_keys(obj, ["claims"])
+    exact_keys(
+        obj,
+        ["claims"],
+    )
 
 
     require(
@@ -140,7 +138,11 @@ def parse_plan(raw, query, documents):
                 }
             )
 
-        except (ValueError, TypeError) as e:
+
+        except (
+            ValueError,
+            TypeError,
+        ) as e:
 
             raise ValueError(
                 f"Invalid plan: {e}"
@@ -154,10 +156,13 @@ def parse_plan(raw, query, documents):
         )
 
 
+
         require(
-            normalize(c.query_span) in normalize(query),
+            normalize(c.query_span)
+            in normalize(query),
             "Invented query span",
         )
+
 
 
         require(
@@ -165,6 +170,7 @@ def parse_plan(raw, query, documents):
             or c.source_document in documents,
             "Unknown source constraint",
         )
+
 
 
         require(
@@ -176,14 +182,18 @@ def parse_plan(raw, query, documents):
         )
 
 
-        # repair before validation
+
+        # Repair compressed planner output
         c = repair_claim(c)
+
 
 
         validate_claim_quality(c)
 
 
+
         if c.origin != ClaimOrigin.PERSONAL_CONTEXT:
+
             claims.append(c)
 
 

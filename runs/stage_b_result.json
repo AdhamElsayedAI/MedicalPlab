@@ -1,0 +1,46 @@
+{
+  "query": "\nWhat is hypertension and how is it defined?\n",
+  "started": "2026-09-07T05:43:48.683441",
+  "finished": "2026-09-07T05:44:40.503820",
+  "verdict": "supported",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Hypertension is defined according to stated criteria",
+      "status": "supported",
+      "citations": [
+        {
+          "ref": "DOC-WHO-CARD-0001:B0001:C01",
+          "quote": "Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2). Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
+        }
+      ],
+      "bindings": [],
+      "reason": "The evidence explicitly states that hypertension can be defined using specific blood pressure levels or antihypertensive medications."
+    },
+    {
+      "claim_id": "C2",
+      "text": "Hypertension is a medical condition",
+      "status": "supported",
+      "citations": [
+        {
+          "ref": "DOC-WHO-CARD-0001:B0001:C01",
+          "quote": "Hypertension – or elevated blood pressure – is a serious medical condition that significantly increases the risk of diseases of the heart, brain, kidneys and other organs (2)."
+        }
+      ],
+      "bindings": [],
+      "reason": "The evidence explicitly refers to hypertension as a serious medical condition."
+    }
+  ],
+  "metadata": {
+    "model": "Qwen/Qwen3-4B",
+    "revision": "main",
+    "quantization": "BNB NF4",
+    "input_tokens": 4383,
+    "output_tokens": 449,
+    "planner_seconds": 9.062449200078845,
+    "verifier_seconds": 20.233990699984133,
+    "total_seconds": 29.29673949989956,
+    "peak_vram_bytes": 3699531776
+  },
+  "policy_downgrades": []
+}
