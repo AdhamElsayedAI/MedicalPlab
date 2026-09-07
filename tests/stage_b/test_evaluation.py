@@ -103,10 +103,10 @@ class Evaluation(unittest.TestCase):
         from medicalplab.stage_b.backend import preflight
 
         cuda = SimpleNamespace(
-            is_available=lambda: True, mem_get_info=lambda: (6 * 1024**3, 6 * 1024**3)
+            is_available=lambda: True, mem_get_info=lambda: (3 * 1024**3, 3 * 1024**3)
         )
         with patch.dict(sys.modules, {"torch": SimpleNamespace(cuda=cuda)}):
-            with self.assertRaisesRegex(RuntimeError, "Need >=14 GiB"):
+            with self.assertRaisesRegex(RuntimeError, "Need >=4 GiB"):
                 preflight()
 
     def test_metrics_denominators(self):
@@ -203,5 +203,5 @@ class Evaluation(unittest.TestCase):
                 Path(temp) / "out.json",
                 {"rows": []},
             )
-        self.assertEqual(result["metrics"]["contract_failures"], 2)
+        self.assertEqual(result["metrics"]["model_failures"], 2)
         self.assertTrue(result["complete"])

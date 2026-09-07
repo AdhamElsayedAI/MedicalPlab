@@ -23,9 +23,6 @@ GENERATION = {
     "do_sample": False,
     "num_beams": 1,
     "max_new_tokens": 2048,
-    "temperature": None,
-    "top_p": None,
-    "top_k": None,
 }
 
 VERSIONS = {
@@ -243,224 +240,6 @@ class QwenBackend:
 
 LOCAL_MODEL = "Qwen/Qwen3-4B"
 
-
-LOCAL_GENERATION = {
-    "do_sample": False,
-    "num_beams": 1,
-    "max_new_tokens": 1024,
-    "temperature": 1.0,
-    "top_p": 1.0,
-    "top_k": 0,
-}
-
-
-
-
-def preflight():
-    try:
-        import torch
-    except ImportError as e:
-        raise RuntimeError(
-            "Benchmark CUDA PyTorch is not installed"
-        ) from e
-
-    if not torch.cuda.is_available():
-        raise RuntimeError("CUDA GPU required")
-
-    free, total = torch.cuda.mem_get_info()
-
-    # Canonical benchmark model requirement
-    # Qwen3-8B-AWQ requires a larger GPU than local development model
-    if total < 14 * 1024**3:
-        raise RuntimeError(
-            f"Need >=14 GiB VRAM, found {total/1024**3:.2f} GiB"
-        )
-
-    actual = {}
-
-    for name in VERSIONS:
-        try:
-            actual[name] = version(name)
-        except PackageNotFoundError:
-            actual[name] = None
-
-    missing = {
-        k: v for k, v in actual.items()
-        if v is None
-    }
-
-    if missing:
-        raise RuntimeError(
-            f"Missing benchmark packages: {missing}"
-        )
-
-    if actual != VERSIONS:
-        raise RuntimeError(
-            f"Benchmark package mismatch: {actual}"
-        )
-
-    return {
-        "gpu": torch.cuda.get_device_name(),
-        "total_vram": total,
-        "free_vram": free,
-        "packages": actual,
-        "torch": torch.__version__,
-        "cuda": torch.version.cuda,
-    }
-
-
-
-    def __init__(self, revision="main"):
-
-        self.hardware = local_preflight()
-
-        import torch
-
-        from transformers import (
-            AutoTokenizer,
-            AutoModelForCausalLM,
-            BitsAndBytesConfig,
-            GenerationConfig,
-        )
-
-
-        torch.manual_seed(42)
-
-
-        self.revision = revision
-
-
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            LOCAL_MODEL,
-            revision=revision
-        )
-
-
-        quant_config = BitsAndBytesConfig(
-
-            load_in_4bit=True,
-
-            bnb_4bit_quant_type="nf4",
-
-            bnb_4bit_compute_dtype=torch.float16,
-
-        )
-
-
-        self.network = AutoModelForCausalLM.from_pretrained(
-
-            LOCAL_MODEL,
-
-            revision=revision,
-
-            device_map="auto",
-
-            torch_dtype=torch.float16,
-
-            quantization_config=quant_config,
-
-            low_cpu_mem_usage=True,
-
-        )
-
-
-        self.network.eval()
-
-
-        self.config = GenerationConfig(
-
-            **LOCAL_GENERATION,
-
-            eos_token_id=self.tokenizer.eos_token_id,
-
-            pad_token_id=self.tokenizer.pad_token_id,
-
-        )
-
-
-        torch.cuda.empty_cache()
-
-        torch.cuda.reset_peak_memory_stats()
-
-
-
-    def generate(self, system, user):
-
-        import torch
-
-
-        prompt = self.tokenizer.apply_chat_template(
-
-            [
-                {
-                    "role":"system",
-                    "content":system
-                },
-                {
-                    "role":"user",
-                    "content":user
-                },
-            ],
-
-            tokenize=False,
-
-            add_generation_prompt=True,
-
-            enable_thinking=False,
-
-        )
-
-
-        inputs = self.tokenizer(
-
-            prompt,
-
-            return_tensors="pt"
-
-        ).to("cuda")
-
-
-
-        with torch.inference_mode():
-            output = self.network.generate(
-                **inputs,
-                generation_config=self.config,
-                do_sample=False,
-                num_beams=1,
-                max_new_tokens=1024,
-            )
-
-        tokens = output[0, inputs.input_ids.shape[-1]:]
-
-
-        return {
-
-            "text":self.tokenizer.decode(
-                tokens,
-                skip_special_tokens=True
-            ),
-
-            "input_tokens":inputs.input_ids.shape[-1],
-
-            "output_tokens":len(tokens),
-
-        }
-
-
-
-    def peak_vram(self):
-
-        import torch
-
-        return torch.cuda.max_memory_allocated()
-
-
-    # ---------------------------------------------------------------------------
-# Local RTX3060 development backend
-# ---------------------------------------------------------------------------
-
-LOCAL_MODEL = "Qwen/Qwen3-4B"
-
 LOCAL_GENERATION = {
     "do_sample": False,
     "num_beams": 1,
@@ -505,7 +284,6 @@ class LocalQwenBackend:
             AutoTokenizer,
             AutoModelForCausalLM,
             BitsAndBytesConfig,
-            GenerationConfig,
         )
 
         torch.manual_seed(42)
@@ -533,17 +311,23 @@ class LocalQwenBackend:
         )
 
         self.network.eval()
-        self.network.generation_config.do_sample = False
-        self.network.generation_config.temperature = None
-        self.network.generation_config.top_p = None
-        self.network.generation_config.top_k = None
-        self.network.generation_config.num_beams = 1
 
-        self.config = GenerationConfig(
-            **LOCAL_GENERATION,
-            eos_token_id=self.tokenizer.eos_token_id,
-            pad_token_id=self.tokenizer.pad_token_id,
-        )
+        # Normalize model-level generation_config to greedy decoding.
+        # Qwen3 ships with do_sample=True, top_p=0.95, temperature=0
+        # in its saved generation_config.json.
+        #
+        # We write None directly into gc.__dict__ to shadow the class-level
+        # descriptor without triggering setter validation. delattr is avoided
+        # because it exposes the class descriptor which returns a non-None
+        # default that Transformers' merge path then picks up and rejects.
+        gc = self.network.generation_config
+        gc.__dict__["do_sample"] = False
+        gc.__dict__["temperature"] = None
+        gc.__dict__["top_p"] = None
+        gc.__dict__["top_k"] = None
+
+        self._eos_token_id = self.tokenizer.eos_token_id
+        self._pad_token_id = self.tokenizer.pad_token_id
 
         torch.cuda.empty_cache()
         torch.cuda.reset_peak_memory_stats()
@@ -579,7 +363,10 @@ class LocalQwenBackend:
 
             output = self.network.generate(
                 **inputs,
-                generation_config=self.config
+                do_sample=False,
+                max_new_tokens=LOCAL_GENERATION["max_new_tokens"],
+                eos_token_id=self._eos_token_id,
+                pad_token_id=self._pad_token_id,
             )
 
 
@@ -599,4 +386,4 @@ class LocalQwenBackend:
 
         import torch
 
-        return torch.cuda.max_memory_allocated()    
+        return torch.cuda.max_memory_allocated()

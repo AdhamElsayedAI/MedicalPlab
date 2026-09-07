@@ -10,38 +10,130 @@ from .models import (
 )
 
 
+REQUIRED_FIELDS = [
+    "claim_id",
+    "text",
+    "status",
+    "citations",
+    "bindings",
+    "reason",
+]
+
+
 def parse_verification(raw, claims):
+
     obj = strict_json(raw)
-    exact_keys(obj, ["claims"])
+
+    exact_keys(
+        obj,
+        ["claims"],
+    )
+
     require(
-        isinstance(obj["claims"], list) and len(obj["claims"]) == len(claims),
+        isinstance(obj["claims"], list),
+        "Claims must be list",
+    )
+
+    require(
+        len(obj["claims"]) == len(claims),
         "Claim count changed",
     )
-    result = []
-    for data, claim in zip(obj["claims"], claims):
+
+
+    results = []
+
+
+    for data, original_claim in zip(
+        obj["claims"],
+        claims,
+    ):
+
+        require(
+            isinstance(data, dict),
+            "Invalid verifier claim object",
+        )
+
+
         exact_keys(
-            data, ["claim_id", "text", "status", "citations", "bindings", "reason"]
+            data,
+            REQUIRED_FIELDS,
         )
+
+
         require(
-            isinstance(data["citations"], list) and isinstance(data["bindings"], list),
-            "Invalid evidence lists",
+            data["claim_id"] == original_claim.claim_id,
+            "Claim id modified",
         )
+
+
+        require(
+            data["text"] == original_claim.text,
+            "Claim text modified",
+        )
+
+
+        require(
+            isinstance(data["citations"], list),
+            "Invalid citations",
+        )
+
+
+        require(
+            isinstance(data["bindings"], list),
+            "Invalid bindings",
+        )
+
+
         try:
-            citations = tuple(Citation(**c) for c in data["citations"])
-            bindings = tuple(ExactBinding(**b) for b in data["bindings"])
-            row = VerifierResult(
-                data["claim_id"],
-                data["text"],
-                ClaimSupport(data["status"]),
-                citations,
-                bindings,
-                data["reason"],
+
+            citations = tuple(
+                Citation(**item)
+                for item in data["citations"]
             )
-        except (TypeError, ValueError) as e:
-            raise ContractError(str(e)) from e
-        require(
-            row.claim_id == claim.claim_id and row.text == claim.text,
-            "Fixed claims modified",
+
+
+            bindings = tuple(
+                ExactBinding(**item)
+                for item in data["bindings"]
+            )
+
+
+            status = ClaimSupport(
+                data["status"]
+            )
+
+
+        except (
+            TypeError,
+            ValueError,
+        ) as e:
+
+            raise ContractError(
+                str(e)
+            ) from e
+
+
+
+        if (
+            status == ClaimSupport.SUPPORTED
+            and not citations
+        ):
+            raise ContractError(
+                "Supported claim requires citation"
+            )
+
+
+        result = VerifierResult(
+            claim_id=data["claim_id"],
+            text=data["text"],
+            status=status,
+            citations=citations,
+            bindings=bindings,
+            reason=data["reason"],
         )
-        result.append(row)
-    return tuple(result)
+
+
+        results.append(result)
+
+
+    return tuple(results)
