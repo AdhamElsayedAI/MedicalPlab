@@ -25,33 +25,110 @@ DOCUMENT_ID_PATTERN = re.compile(
 
 def normalize_claim_text(claim: MaterialClaim) -> MaterialClaim:
 
-    text = claim.text.strip()
+    text = claim.text.strip().rstrip("?؟").strip()
 
-    replacements = {
-        "information about ": "Requested ",
-        "details of ": "Requested ",
-        "overview of ": "Requested ",
-        "description of ": "Requested ",
-    }
+    # 1. "Whether X is [considered] [a/an] Y" -> "X Y classification"
+    m = re.match(
+        r"^whether\s+(.+?)\s+is(?:\s+considered)?(?:\s+(?:a|an))?\s+(.+)$",
+        text,
+        re.I,
+    )
+    if m:
+        x = m.group(1).strip()
+        y = m.group(2).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} {y} classification"
 
+    # 2. "Criteria used to define X [according to ...]" -> "X definition criteria"
+    elif re.match(
+        r"^(?:the\s+)?criteria\s+(?:used\s+)?to\s+define\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+        text,
+        re.I,
+    ):
+        m = re.match(
+            r"^(?:the\s+)?criteria\s+(?:used\s+)?to\s+define\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+            text,
+            re.I,
+        )
+        x = m.group(1).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} definition criteria"
 
-    lowered = text.lower()
+    # 3. "Blood pressure levels used to define X [according to ...]" -> "X definition blood pressure levels"
+    elif re.match(
+        r"^(?:the\s+)?(?:specific\s+)?blood\s+pressure\s+levels\s+used\s+to\s+define\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+        text,
+        re.I,
+    ):
+        m = re.match(
+            r"^(?:the\s+)?(?:specific\s+)?blood\s+pressure\s+levels\s+used\s+to\s+define\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+            text,
+            re.I,
+        )
+        x = m.group(1).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} definition blood pressure levels"
 
-    for old, new in replacements.items():
+    # 4. "The requested definition of X" / "Definition of X" -> "X definition information"
+    elif re.match(
+        r"^(?:the\s+)?(?:requested\s+)?definition\s+of\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+        text,
+        re.I,
+    ):
+        m = re.match(
+            r"^(?:the\s+)?(?:requested\s+)?definition\s+of\s+(.+?)(?:\s+according\s+to\s+.*)?$",
+            text,
+            re.I,
+        )
+        x = m.group(1).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} definition information"
 
-        if lowered.startswith(old):
+    elif re.match(
+        r"^(?:the\s+)?requested\s+(.+?)\s+definition$",
+        text,
+        re.I,
+    ):
+        m = re.match(
+            r"^(?:the\s+)?requested\s+(.+?)\s+definition$",
+            text,
+            re.I,
+        )
+        x = m.group(1).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} definition information"
 
-            text = (
-                new
-                + text[len(old):]
-            )
+    # 5. "The recommended treatment for X" -> "X recommended treatment information"
+    elif re.match(
+        r"^(?:the\s+)?recommended\s+(?:treatment|therapy)\s+(?:for|of)\s+(.+)$",
+        text,
+        re.I,
+    ):
+        m = re.match(
+            r"^(?:the\s+)?recommended\s+(?:treatment|therapy)\s+(?:for|of)\s+(.+)$",
+            text,
+            re.I,
+        )
+        x = m.group(1).strip()
+        x = x[0].upper() + x[1:] if x else x
+        text = f"{x} recommended treatment information"
 
-            break
-
+    # Fallback legacy heading transformations
+    else:
+        replacements = {
+            "information about ": "Requested ",
+            "details of ": "Requested ",
+            "overview of ": "Requested ",
+            "description of ": "Requested ",
+        }
+        lowered = text.lower()
+        for old, new in replacements.items():
+            if lowered.startswith(old):
+                text = new + text[len(old):]
+                break
 
     if text == claim.text:
         return claim
-
 
     return MaterialClaim(
         claim_id=claim.claim_id,
