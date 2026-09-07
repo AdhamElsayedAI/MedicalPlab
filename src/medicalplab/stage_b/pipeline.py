@@ -53,6 +53,11 @@ class StageBPipeline:
             ),
         )
         self.trace.append({"stage": "verifier", **verification})
+
+        print("\n===== RAW VERIFIER OUTPUT =====")
+        print(verification["text"])
+        print("===== END OUTPUT =====\n")
+
         judgments = parse_verification(verification["text"], claims)
         verifier_seconds = time.perf_counter() - before
         final, downgrades = [], []

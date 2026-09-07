@@ -40,19 +40,41 @@ def strict_json(text):
             result[k] = v
         return result
 
+    if not isinstance(text, str):
+        raise ContractError("JSON input must be string")
+
+    text = text.strip()
+
+    # Remove markdown fences if model returned them
+    if "```" in text:
+        text = text.replace("```json", "")
+        text = text.replace("```", "")
+        text = text.strip()
+
+    # Extract only JSON object
+    start = text.find("{")
+    end = text.rfind("}")
+
+    if start == -1 or end == -1:
+        raise ContractError("No JSON object found")
+
+    text = text[start:end + 1]
+
     try:
         return json.loads(
             text,
             object_pairs_hook=pairs,
             parse_constant=lambda s: require(False, f"Invalid JSON: {s}"),
         )
+
     except (TypeError, json.JSONDecodeError) as e:
         raise ContractError(str(e)) from e
 
 
 def exact_keys(value, keys):
     require(
-        isinstance(value, dict) and set(value) == set(keys), f"Expected fields: {keys}"
+        isinstance(value, dict) and set(value) == set(keys),
+        f"Expected fields: {keys}",
     )
 
 
@@ -67,9 +89,16 @@ class EvidenceBlock:
     block_type: str = "text"
 
     def __post_init__(self):
-        strings(self.ref, self.document_id, self.source, self.text)
+        strings(
+            self.ref,
+            self.document_id,
+            self.source,
+            self.text,
+        )
+
         require(
-            self.ref.startswith(self.document_id + ":B"), "Reference/document mismatch"
+            self.ref.startswith(self.document_id + ":B"),
+            "Reference/document mismatch",
         )
 
 
@@ -83,11 +112,25 @@ class MaterialClaim:
     exact: bool
 
     def __post_init__(self):
-        strings(self.claim_id, self.text, self.query_span)
-        require(isinstance(self.origin, ClaimOrigin), "Invalid claim origin")
-        require(type(self.exact) is bool, "exact must be boolean")
+        strings(
+            self.claim_id,
+            self.text,
+            self.query_span,
+        )
+
         require(
-            self.source_document is None or isinstance(self.source_document, str),
+            isinstance(self.origin, ClaimOrigin),
+            "Invalid claim origin",
+        )
+
+        require(
+            type(self.exact) is bool,
+            "exact must be boolean",
+        )
+
+        require(
+            self.source_document is None
+            or isinstance(self.source_document, str),
             "Invalid source constraint",
         )
 
@@ -98,12 +141,15 @@ class Citation:
     quote: str
 
     def __post_init__(self):
-        strings(self.ref, self.quote)
+        strings(
+            self.ref,
+            self.quote,
+        )
 
 
 @dataclass(frozen=True)
 class ExactBinding:
-    """Literal spans in ONE cited local context, not a model's invented explanation."""
+    """Literal spans in ONE cited local context."""
 
     ref: str
     context: str
@@ -114,7 +160,10 @@ class ExactBinding:
     role: str
 
     def __post_init__(self):
-        strings(*(getattr(self, f.name) for f in fields(self)))
+        strings(
+            *(getattr(self, f.name) for f in fields(self))
+        )
+
         require(
             self.role
             in {
@@ -143,20 +192,32 @@ class VerifierResult:
     reason: str
 
     def __post_init__(self):
-        strings(self.claim_id, self.text, self.reason)
-        require(isinstance(self.status, ClaimSupport), "Invalid claim support")
+        strings(
+            self.claim_id,
+            self.text,
+            self.reason,
+        )
+
+        require(
+            isinstance(self.status, ClaimSupport),
+            "Invalid claim support",
+        )
+
         require(
             isinstance(self.citations, tuple)
             and all(isinstance(c, Citation) for c in self.citations),
             "Invalid citations",
         )
+
         require(
             isinstance(self.bindings, tuple)
             and all(isinstance(b, ExactBinding) for b in self.bindings),
             "Invalid bindings",
         )
+
         require(
-            self.status != ClaimSupport.SUPPORTED or bool(self.citations),
+            self.status != ClaimSupport.SUPPORTED
+            or bool(self.citations),
             "Supported claim requires evidence",
         )
 
@@ -183,5 +244,4 @@ class StageBResult:
     @property
     def verdict(self):
         from .aggregator import aggregate
-
         return aggregate(self.claims)
