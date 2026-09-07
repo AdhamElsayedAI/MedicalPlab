@@ -245,13 +245,12 @@ LOCAL_MODEL = "Qwen/Qwen3-4B"
 
 
 LOCAL_GENERATION = {
-
     "do_sample": False,
     "num_beams": 1,
     "max_new_tokens": 1024,
-    "temperature": None,
-    "top_p": None,
-    "top_k": None,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 0,
 }
 
 
@@ -423,15 +422,13 @@ def preflight():
 
 
         with torch.inference_mode():
-
             output = self.network.generate(
-
                 **inputs,
-
-                generation_config=self.config
-
+                generation_config=self.config,
+                do_sample=False,
+                num_beams=1,
+                max_new_tokens=1024,
             )
-
 
         tokens = output[0, inputs.input_ids.shape[-1]:]
 
@@ -536,6 +533,11 @@ class LocalQwenBackend:
         )
 
         self.network.eval()
+        self.network.generation_config.do_sample = False
+        self.network.generation_config.temperature = None
+        self.network.generation_config.top_p = None
+        self.network.generation_config.top_k = None
+        self.network.generation_config.num_beams = 1
 
         self.config = GenerationConfig(
             **LOCAL_GENERATION,
