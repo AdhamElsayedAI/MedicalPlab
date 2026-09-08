@@ -31,6 +31,8 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
+APP_START_TIME = time.time()
+
 # 2. Configure CORS
 # Pull allowed origins from environment variable or default to Vercel and local origins
 allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "")
@@ -52,6 +54,31 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def add_process_time_header(request: Request, call_next):
+    """Log request and attach latency header."""
+    start_time = time.perf_counter()
+    response = await call_next(request)
+    process_time = (time.perf_counter() - start_time) * 1000.0
+    response.headers["X-Process-Time-Ms"] = f"{process_time:.2f}"
+    return response
+
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    """Global exception handler providing structured JSON errors."""
+    logger.error("Unhandled API exception on %s %s: %s", request.method, request.url.path, exc, exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={
+            "error": "Internal Server Error",
+            "message": "An unexpected error occurred during request processing.",
+            "path": request.url.path,
+        },
+    )
+
 
 # 3. Instantiate Stage-G Platform Router
 platform_router = create_demo_platform()
@@ -96,10 +123,13 @@ NICE_EVIDENCE_MAP: Dict[str, Dict[str, Any]] = {
 # --------------------------------------------------------------------------
 @app.get("/health")
 def health():
-    """Health check endpoint for Render, Railway, Fly.io, and load balancers."""
+    """Health check endpoint for Google Cloud Run, Vercel, and monitoring."""
     return {
         "status": "healthy",
         "service": "MedicalPlab API",
+        "version": "1.0.0",
+        "uptime_seconds": round(time.time() - APP_START_TIME, 2),
+        "stage_g": "initialized",
     }
 
 
