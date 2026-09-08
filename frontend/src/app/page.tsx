@@ -18,6 +18,7 @@ import { FinalBattleHub } from "@/components/battle/FinalBattleHub";
 import { ValidationHub } from "@/components/validation/ValidationHub";
 import { GrandChampionshipHub } from "@/components/grand_championship/GrandChampionshipHub";
 import GlobalIntelligenceHub from "@/components/global_intelligence/GlobalIntelligenceHub";
+import StartupCommandCenter from "@/components/startup_execution/StartupCommandCenter";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
@@ -185,6 +186,10 @@ export default function Home() {
 
         {currentMode === "global_intelligence" && (
           <GlobalIntelligenceHub />
+        )}
+
+        {currentMode === "startup_execution" && (
+          <StartupCommandCenter />
         )}
       </main>
 

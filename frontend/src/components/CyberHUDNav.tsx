@@ -17,6 +17,7 @@ import {
   TrendingUp,
   Crown,
   Globe,
+  Rocket,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -53,6 +54,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "validation", label: "Impact & Validation", icon: <TrendingUp className="w-4 h-4 text-emerald-400" /> },
     { mode: "grand_championship", label: "Grand Championship", icon: <Crown className="w-4 h-4 text-amber-300" /> },
     { mode: "global_intelligence", label: "Global Intelligence", icon: <Globe className="w-4 h-4 text-cyan-400" /> },
+    { mode: "startup_execution", label: "Startup Launch", icon: <Rocket className="w-4 h-4 text-emerald-400" /> },
   ];
 
 
@@ -113,6 +115,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Stage-Y Startup Launch & Investor Readiness Layer Quick Button */}
+            <button
+              onClick={() => onSelectMode("startup_execution")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "startup_execution"
+                  ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-black border-emerald-300 shadow-[0_0_20px_rgba(16,185,129,0.7)] animate-pulse"
+                  : "bg-slate-900/90 text-emerald-300 border-emerald-500/50 hover:bg-emerald-950/40"
+              }`}
+            >
+              <Rocket className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Startup Mode</span>
+            </button>
+
             {/* Stage-X Global Intelligence Visionary Layer Quick Button */}
             <button
               onClick={() => onSelectMode("global_intelligence")}
