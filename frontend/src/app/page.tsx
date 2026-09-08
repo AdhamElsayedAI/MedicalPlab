@@ -22,8 +22,10 @@ import StartupCommandCenter from "@/components/startup_execution/StartupCommandC
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
-
 import { NavigationMode, StudentMasteryProfile, UserRole } from "@/lib/types";
+
+// Modes where the evidence status bar is contextually relevant
+const EVIDENCE_HUD_MODES: NavigationMode[] = ["tutor", "quiz", "simulation", "anatomy"];
 
 export default function Home() {
   const [currentMode, setCurrentMode] = useState<NavigationMode>("landing");
@@ -88,12 +90,12 @@ export default function Home() {
     });
   };
 
-  return (
-    <div className="min-h-screen bg-[#050811] text-slate-100 flex flex-col relative selection:bg-cyan-500 selection:text-black">
-      {/* Scanline Texture Overlay */}
-      <div className="fixed inset-0 scanline-overlay z-40 pointer-events-none" />
+  const showEvidenceHUD = EVIDENCE_HUD_MODES.includes(currentMode);
 
-      {/* Top Header HUD Navigation */}
+  return (
+    <div className="min-h-screen flex flex-col relative" style={{ background: '#0b1120' }}>
+
+      {/* Top Header Navigation */}
       <CyberHUDNav
         currentMode={currentMode}
         onSelectMode={setCurrentMode}
@@ -110,16 +112,18 @@ export default function Home() {
         onStartDemoJourney={startDemoJourney}
       />
 
-      {/* Real-Time AI Intelligence HUD */}
-      <AIIntelligenceHUD
-        evidenceConfidence={98.6}
-        sourceCorpus="NICE NG185, NG128 & BNF 85"
-        safetyStatus="VERIFIED"
-        personalizationLevel={`${studentProfile.masteryLevel} (${(studentProfile.overallAccuracy * 100).toFixed(0)}%)`}
-      />
+      {/* Contextual Evidence Status Bar — only shown in AI-active modes */}
+      {showEvidenceHUD && (
+        <AIIntelligenceHUD
+          evidenceConfidence={98.6}
+          sourceCorpus="NICE NG185, NG128 & BNF 85"
+          safetyStatus="VERIFIED"
+          personalizationLevel={`${studentProfile.masteryLevel} (${(studentProfile.overallAccuracy * 100).toFixed(0)}%)`}
+        />
+      )}
 
-      {/* Dynamic Content Canvas by Mode */}
-      <main className="flex-1 pb-24">
+      {/* Main Content */}
+      <main className="flex-1 pb-16">
         {currentMode === "landing" && (
           <HeroExperience
             onLaunchMode={setCurrentMode}
@@ -193,9 +197,7 @@ export default function Home() {
         )}
       </main>
 
-
-
-      {/* Guided 3-Minute Demo Stepper HUD */}
+      {/* Guided Demo Stepper HUD */}
       {isDemoActive && (
         <DemoJourneyController
           currentStepIndex={demoStepIdx}
@@ -204,7 +206,7 @@ export default function Home() {
         />
       )}
 
-      {/* Hackathon Architecture Pipeline Deep Dive Modal */}
+      {/* Architecture Pipeline Deep Dive Modal */}
       <HackathonDeepDiveModal
         isOpen={isPipelineModalOpen}
         onClose={() => setIsPipelineModalOpen(false)}

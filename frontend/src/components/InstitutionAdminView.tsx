@@ -5,148 +5,154 @@ import {
   Users,
   Activity,
   AlertTriangle,
-  Cpu,
   ShieldCheck,
-  DollarSign,
   TrendingUp,
   FileCheck,
+  Building2,
+  BookOpen,
 } from "lucide-react";
 
 export const InstitutionAdminView: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 med-fade-in" aria-label="Clinical Faculty Analytics">
       {/* Title */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="p-1.5 rounded-lg bg-indigo-950 text-indigo-400 border border-indigo-500/40">
-              <Users className="w-4 h-4" />
-            </span>
-            <h2 className="text-xl sm:text-2xl font-black text-white tracking-wide">
-              INSTITUTIONAL COHORT & TELEMETRY DASHBOARD
-            </h2>
+          <div className="flex items-center gap-2.5 mb-1.5">
+            <div
+              className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "rgba(14,165,233,0.15)", border: "1px solid rgba(14,165,233,0.25)" }}
+            >
+              <Users className="w-5 h-5 text-sky-400" />
+            </div>
+            <div>
+              <h1 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                Clinical Faculty &amp; Cohort Analytics
+              </h1>
+              <p className="text-xs text-slate-400 mt-0.5">
+                Cohort diagnostic telemetry, curriculum compliance audit, and weak-topic heatmaps.
+              </p>
+            </div>
           </div>
-          <p className="text-xs text-slate-400 font-mono">
-            STAGE-G PRODUCT PLATFORM // MULTI-TENANT ISOLATION // AI USAGE & COST AUDIT
-          </p>
         </div>
 
         <div className="flex items-center gap-2">
-          <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-mono text-cyan-300">
-            TENANT: NHS Imperial College Trust
+          <span className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-sky-300 flex items-center gap-1.5">
+            <Building2 className="w-3.5 h-3.5" />
+            NHS Imperial College Healthcare Trust
           </span>
         </div>
       </div>
 
       {/* 4 KPI Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="cyber-card rounded-2xl p-4 border border-cyan-500/20 bg-slate-950/85">
-          <div className="text-[11px] font-mono text-slate-400 mb-1">TOTAL TRAINEES</div>
-          <div className="text-2xl font-black font-mono text-white">48 Students</div>
-          <span className="text-[10px] font-mono text-emerald-400">42 Active this week</span>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="med-card p-5 space-y-1.5">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Trainees</div>
+          <div className="text-2xl font-black font-mono text-white">48 Doctors</div>
+          <span className="text-[11px] text-emerald-400 font-medium">42 Active in current revision diet</span>
         </div>
 
-        <div className="cyber-card rounded-2xl p-4 border border-cyan-500/20 bg-slate-950/85">
-          <div className="text-[11px] font-mono text-slate-400 mb-1">COHORT MEAN ACCURACY</div>
-          <div className="text-2xl font-black font-mono text-cyan-300">76.8%</div>
-          <span className="text-[10px] font-mono text-cyan-400">Above UK National Benchmark</span>
+        <div className="med-card p-5 space-y-1.5">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cohort Mean Accuracy</div>
+          <div className="text-2xl font-black font-mono text-sky-300">76.8%</div>
+          <span className="text-[11px] text-sky-400 font-medium">+4.2% Above UK National Benchmark</span>
         </div>
 
-        <div className="cyber-card rounded-2xl p-4 border border-cyan-500/20 bg-slate-950/85">
-          <div className="text-[11px] font-mono text-slate-400 mb-1">AI INFERENCE LATENCY</div>
-          <div className="text-2xl font-black font-mono text-emerald-400">62.4ms</div>
-          <span className="text-[10px] font-mono text-slate-400">Stage-F Orchestrated</span>
+        <div className="med-card p-5 space-y-1.5">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Clinical Decision Speed</div>
+          <div className="text-2xl font-black font-mono text-emerald-400">&lt;80ms</div>
+          <span className="text-[11px] text-slate-400 font-medium">Real-time Socratic preceptor latency</span>
         </div>
 
-        <div className="cyber-card rounded-2xl p-4 border border-cyan-500/20 bg-slate-950/85">
-          <div className="text-[11px] font-mono text-slate-400 mb-1">AI CLOUD COST (MTD)</div>
-          <div className="text-2xl font-black font-mono text-purple-400">$0.048 USD</div>
-          <span className="text-[10px] font-mono text-purple-300">12,400 Tokens Processed</span>
+        <div className="med-card p-5 space-y-1.5">
+          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Patient Safety Violations</div>
+          <div className="text-2xl font-black font-mono text-purple-400">0 Reported</div>
+          <span className="text-[11px] text-purple-300 font-medium">All contraindications caught in simulation</span>
         </div>
       </div>
 
-      {/* Cohort Difficult Topics & Guideline Ingestion Status */}
+      {/* Cohort Difficult Topics & Guideline Compliance Status */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Difficult Topics (Left 6 Cols) */}
-        <div className="lg:col-span-6 cyber-card rounded-2xl p-5 border border-cyan-500/20 bg-slate-950/85 space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
-            <span className="text-xs font-mono text-amber-400 font-bold flex items-center gap-1.5">
+        <div className="lg:col-span-6 med-card p-6 space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5 uppercase tracking-wider">
               <AlertTriangle className="w-4 h-4" />
-              COHORT HIGH-DIFFICULTY TOPICS (&lt;60% ACCURACY)
+              Cohort High-Difficulty Topics (&lt;60% Accuracy)
             </span>
           </div>
 
-          <div className="space-y-3">
-            <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+          <div className="space-y-3 text-xs">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-white block">Cardiac Tamponade vs Tension Pneumothorax</span>
-                <span className="text-[11px] font-mono text-slate-400">Missed in 42% of mock simulation attempts</span>
+                <span className="font-bold text-white block text-[13px]">Cardiac Tamponade vs Tension Pneumothorax</span>
+                <span className="text-[11px] text-slate-400">Confusion regarding JVP elevation with muffled heart sounds</span>
               </div>
-              <span className="text-xs font-mono font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
+              <span className="text-xs font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
                 51.2% Acc
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-white block">Thrombolysis Absolute Contraindications</span>
-                <span className="text-[11px] font-mono text-slate-400">Confusion regarding ischemic vs hemorrhagic stroke</span>
+                <span className="font-bold text-white block text-[13px]">Thrombolysis Absolute Contraindications</span>
+                <span className="text-[11px] text-slate-400">Differentiation between ischemic and hemorrhagic intracranial events</span>
               </div>
-              <span className="text-xs font-mono font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
+              <span className="text-xs font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
                 54.8% Acc
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-xs font-bold text-white block">Subarachnoid Haemorrhage LP Timing</span>
-                <span className="text-[11px] font-mono text-slate-400">Xanthochromia window (&gt;12h) often neglected</span>
+                <span className="font-bold text-white block text-[13px]">Subarachnoid Haemorrhage LP Timing</span>
+                <span className="text-[11px] text-slate-400">Xanthochromia window (&gt;12 hours post-headache) frequently misidentified</span>
               </div>
-              <span className="text-xs font-mono font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
+              <span className="text-xs font-bold text-amber-400 px-2.5 py-1 rounded bg-amber-950/80 border border-amber-500/30">
                 58.0% Acc
               </span>
             </div>
           </div>
         </div>
 
-        {/* Ingestion & Compliance Audit (Right 6 Cols) */}
-        <div className="lg:col-span-6 cyber-card rounded-2xl p-5 border border-cyan-500/20 bg-slate-950/85 space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-800 pb-2.5">
-            <span className="text-xs font-mono text-cyan-400 font-bold flex items-center gap-1.5">
+        {/* Guideline Compliance Status (Right 6 Cols) */}
+        <div className="lg:col-span-6 med-card p-6 space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+            <span className="text-xs font-bold text-sky-400 flex items-center gap-1.5 uppercase tracking-wider">
               <FileCheck className="w-4 h-4" />
-              KNOWLEDGE INGESTION PIPELINE (STAGE-G)
+              Verified Clinical Guidelines Ingested
             </span>
-            <span className="text-[10px] font-mono text-emerald-400">100% ONLINE</span>
+            <span className="text-[11px] font-bold text-emerald-400">100% AUDITED</span>
           </div>
 
-          <div className="space-y-3 text-xs font-mono">
-            <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+          <div className="space-y-3 text-xs">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-white font-bold block">NICE Guideline NG185 (ACS)</span>
-                <span className="text-[11px] text-slate-400">2,450 KB // 142 Extracted Evidence Blocks</span>
+                <span className="text-white font-bold block text-[13px]">NICE Guideline NG185 (Acute Coronary Syndromes)</span>
+                <span className="text-[11px] text-slate-400">Extractive Reperfusion Protocols &amp; PPCI Delivery Targets</span>
               </div>
-              <span className="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
-                AVAILABLE
+              <span className="px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
+                COMPLIANT
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-white font-bold block">NICE Guideline NG128 (Stroke)</span>
-                <span className="text-[11px] text-slate-400">1,820 KB // 98 Extracted Evidence Blocks</span>
+                <span className="text-white font-bold block text-[13px]">NICE Guideline NG128 (Stroke &amp; TIA)</span>
+                <span className="text-[11px] text-slate-400">Thrombolysis Windows &amp; Mechanical Thrombectomy Criteria</span>
               </div>
-              <span className="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
-                AVAILABLE
+              <span className="px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
+                COMPLIANT
               </span>
             </div>
 
-            <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div>
-                <span className="text-white font-bold block">British National Formulary (BNF 85)</span>
-                <span className="text-[11px] text-slate-400">4,100 KB // Drug Dosages & Contraindications</span>
+                <span className="text-white font-bold block text-[13px]">British National Formulary (BNF 85)</span>
+                <span className="text-[11px] text-slate-400">Prescribing Dosages, Renal Adjustments &amp; Lethal Interactions</span>
               </div>
-              <span className="px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
-                AVAILABLE
+              <span className="px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/40 text-[10px] font-bold">
+                COMPLIANT
               </span>
             </div>
           </div>
