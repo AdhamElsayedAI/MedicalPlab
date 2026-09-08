@@ -13,6 +13,7 @@ import {
   UserCheck,
   Sparkles,
   Trophy,
+  Swords,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -45,7 +46,9 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "investor", label: "Investor Pitch", icon: <ShieldCheck className="w-4 h-4 text-emerald-400" /> },
     { mode: "founder", label: "Founder Hub", icon: <Sparkles className="w-4 h-4 text-cyan-300" /> },
     { mode: "championship", label: "Championship", icon: <Trophy className="w-4 h-4 text-amber-400" /> },
+    { mode: "battle", label: "Final Battle", icon: <Swords className="w-4 h-4 text-cyan-300" /> },
   ];
+
 
 
 
@@ -104,6 +107,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Final Battle Station Quick Button */}
+            <button
+              onClick={() => onSelectMode("battle")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "battle"
+                  ? "bg-gradient-to-r from-red-950 to-purple-950 text-cyan-300 border-cyan-400 shadow-[0_0_15px_rgba(0,242,254,0.4)]"
+                  : "bg-slate-900/90 text-cyan-300 border-cyan-500/40 hover:bg-cyan-950/40"
+              }`}
+            >
+              <Swords className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Final Battle</span>
+            </button>
+
             {/* Championship Quick Button */}
             <button
               onClick={() => onSelectMode("championship")}
@@ -116,6 +132,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
               <Trophy className="w-3.5 h-3.5 text-amber-400" />
               <span>Championship</span>
             </button>
+
 
             {/* Founder Hub Quick Button */}
             <button
