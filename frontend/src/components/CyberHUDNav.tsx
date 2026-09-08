@@ -12,12 +12,6 @@ import {
   ChevronRight,
   Settings,
   LogOut,
-  Crown,
-  Rocket,
-  Globe,
-  TrendingUp,
-  Swords,
-  Trophy,
   UserCheck,
   ShieldCheck,
   Sparkles,
@@ -44,14 +38,7 @@ const PRIMARY_NAV: { mode: NavigationMode; label: string; icon: React.ReactNode 
 ];
 
 const ADVANCED_MODES: { mode: NavigationMode; label: string; icon: React.ReactNode; description: string }[] = [
-  { mode: "championship",       label: "Championship",       icon: <Trophy     className="w-4 h-4" />, description: "Competition hub & scoring" },
-  { mode: "battle",             label: "Final Battle",       icon: <Swords     className="w-4 h-4" />, description: "Judge arena & pitch drills" },
-  { mode: "founder",            label: "Founder Hub",        icon: <Sparkles   className="w-4 h-4" />, description: "Pitch deck & demo controller" },
-  { mode: "investor",           label: "Investor Pitch",     icon: <ShieldCheck className="w-4 h-4" />, description: "Investor readiness view" },
-  { mode: "validation",         label: "Impact & Validation",icon: <TrendingUp className="w-4 h-4" />, description: "Real-world outcomes data" },
-  { mode: "grand_championship", label: "Grand Championship", icon: <Crown      className="w-4 h-4" />, description: "Grand stage presentation" },
-  { mode: "global_intelligence",label: "Global Intelligence",icon: <Globe      className="w-4 h-4" />, description: "Global AI intelligence layer" },
-  { mode: "startup_execution",  label: "Startup Launch",     icon: <Rocket     className="w-4 h-4" />, description: "Fundraising & execution mode" },
+  { mode: "investor", label: "Investor Pitch", icon: <ShieldCheck className="w-4 h-4" />, description: "Investor readiness view" },
 ];
 
 const ROLE_LABELS: Record<UserRole, string> = {

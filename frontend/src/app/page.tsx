@@ -12,13 +12,6 @@ import { CaseSimulationRoom } from "@/components/CaseSimulationRoom";
 import { StudentCommandCenter } from "@/components/StudentCommandCenter";
 import { InstitutionAdminView } from "@/components/InstitutionAdminView";
 import { InvestorPitchView } from "@/components/InvestorPitchView";
-import { FounderControlCenter } from "@/components/founder/FounderControlCenter";
-import { ChampionshipCommandCenter } from "@/components/championship/ChampionshipCommandCenter";
-import { FinalBattleHub } from "@/components/battle/FinalBattleHub";
-import { ValidationHub } from "@/components/validation/ValidationHub";
-import { GrandChampionshipHub } from "@/components/grand_championship/GrandChampionshipHub";
-import GlobalIntelligenceHub from "@/components/global_intelligence/GlobalIntelligenceHub";
-import StartupCommandCenter from "@/components/startup_execution/StartupCommandCenter";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
@@ -167,34 +160,6 @@ export default function Home() {
         {currentMode === "admin" && <InstitutionAdminView />}
 
         {currentMode === "investor" && <InvestorPitchView />}
-
-        {currentMode === "founder" && (
-          <FounderControlCenter onNavigateToMode={setCurrentMode} />
-        )}
-
-        {currentMode === "championship" && (
-          <ChampionshipCommandCenter onNavigateToMode={setCurrentMode} />
-        )}
-
-        {currentMode === "battle" && (
-          <FinalBattleHub onNavigateToMode={setCurrentMode} />
-        )}
-
-        {currentMode === "validation" && (
-          <ValidationHub onNavigateToMode={setCurrentMode} />
-        )}
-
-        {currentMode === "grand_championship" && (
-          <GrandChampionshipHub onNavigateToMode={setCurrentMode} />
-        )}
-
-        {currentMode === "global_intelligence" && (
-          <GlobalIntelligenceHub />
-        )}
-
-        {currentMode === "startup_execution" && (
-          <StartupCommandCenter />
-        )}
       </main>
 
       {/* Guided Demo Stepper HUD */}
