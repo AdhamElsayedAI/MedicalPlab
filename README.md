@@ -10,25 +10,32 @@
 ```
 
 # MedicalPlab
-## The Evidence-Grounded Clinical Intelligence Platform
+## Evidence-Grounded Clinical Intelligence Platform
 
-### *Building the future of medical education through:*
-**🧠 Verified Medical AI Reasoning • 🫀 Interactive Clinical Intelligence • 🚑 Emergency Simulation • 📚 Adaptive Learning • 🏥 Healthcare Infrastructure**
+**"Transforming medical education and clinical reasoning through safe, explainable, evidence-connected artificial intelligence."**
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online%20%7C%20Active-00E599?style=for-the-badge&logo=statuspage&logoColor=black)](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>
+**🧠 Clinical AI Reasoning • 🫀 3D Medical Intelligence • 🚑 Emergency Simulation • 📚 Adaptive Learning • 🏥 Healthcare Infrastructure**<br/>
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+<br/>
+
+[![Live Demo](https://img.shields.io/badge/Live%20Platform-Online%20%7C%20Active-00E599?style=for-the-badge&logo=statuspage&logoColor=black)](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)
 [![Build Status](https://img.shields.io/badge/Build-Passing%20(Turbopack)-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://github.com/AdhamElsayedAI/MedicalPlab)
-[![Tests Passing](https://img.shields.io/badge/Tests-243%20Passing%20%5BVerified%5D-10B981?style=for-the-badge&logo=pytest&logoColor=white)](#developer-documentation)
-[![AI Safety](https://img.shields.io/badge/AI%20Safety-DCB0129%20Clinical%20Guard-F59E0B?style=for-the-badge&logo=shield&logoColor=white)](#medical-ai-trust--safety)
-[![Medical Evidence](https://img.shields.io/badge/Evidence-NICE%20NG185%20%7C%20WHO-E11D48?style=for-the-badge&logo=book&logoColor=white)](#evidence-provenance)
+[![Automated Tests](https://img.shields.io/badge/Automated%20Tests-243%20Passing%20%5BVerified%5D-10B981?style=for-the-badge&logo=pytest&logoColor=white)](#engineering-architecture)
+[![Clinical Safety](https://img.shields.io/badge/Safety%20Engine-DCB0129%20Aligned%20%5BPrototype%5D-F59E0B?style=for-the-badge&logo=shield&logoColor=white)](#medical-ai-safety-framework)
+[![NICE Evidence](https://img.shields.io/badge/Evidence-NICE%20NG185%20%7C%20CG127-E11D48?style=for-the-badge&logo=book&logoColor=white)](#evidence-grounding)
+[![WHO Evidence](https://img.shields.io/badge/Protocols-WHO%20Cardiovascular-2563EB?style=for-the-badge&logo=worldhealthorganization&logoColor=white)](#evidence-grounding)
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16.3-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
+[![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://typescriptlang.org)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.0-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
-[![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com)
+[![RAG Architecture](https://img.shields.io/badge/RAG-Hybrid%20Dense%2FSparse-06B6D4?style=flat-square&logo=databricks&logoColor=white)](#engineering-architecture)
+[![Docker Ready](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](#developer-documentation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 <br/>
@@ -38,37 +45,256 @@
 
 <br/>
 
-[**Explore Live Public Demo**](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com) • [**1-Click Cloud Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab) • [**Architecture**](#system-architecture-visualization) • [**5-Minute Demo Journey**](#5-minute-demo-journey) • [**Investor Vision**](#startup-vision)
+[**🌐 Live Enterprise Platform**](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com) • [**🚀 1-Click Vercel Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab) • [**🏛️ Platform Architecture**](#system-architecture) • [**🎬 5-Minute Demo Tour**](#5-minute-medicalplab-demo) • [**💼 Investor Vision**](#startup-vision)
 
 </div>
 
 ---
 
-## Executive Overview
+## Executive Summary & Audited Metrics
 
-General-purpose Large Language Models present critical, unacceptable risks when deployed in healthcare education and clinical reasoning: ungrounded hallucinations, fabricated drug interactions, and lack of deterministic safety guardrails. In medical education and clinical examinations (PLAB, USMLE, UKMLA), an unverified answer can cost a physician their license or endanger a patient's life.
+General-purpose Large Language Models present severe, unmitigated liabilities when applied to medical education and clinical reasoning: stochastic hallucination, fabricated pharmacotherapeutic citations, and an absence of deterministic safety guardrails. In medical licensure examinations (PLAB/UKMLA, USMLE) and clinical decision support, an ungrounded hallucination carries grave professional and patient safety consequences.
 
-**MedicalPlab solves the healthcare hallucination crisis.** We have engineered an enterprise clinical intelligence platform where every diagnosis, drug recommendation, and Socratic tutoring response is cryptographically mapped to authoritative medical sources (NICE Guidelines, WHO protocols, PubMed Central).
+**MedicalPlab establishes an evidence-grounded intelligence layer for global medicine.** Every clinical claim, MCQ distractor rationale, and Socratic tutoring response is deterministically anchored to verified clinical guidelines (NICE Guidelines, WHO Protocols, and peer-reviewed literature).
 
-### Key Audited Metrics & Benchmarks
+All metrics across MedicalPlab are strictly classified according to rigorous audit standards:
 
-| Metric | Result | Classification | Validation Authority / Methodology |
+| Benchmark / Capability | Metric Value | Metric Classification | Measurement Baseline & Verification Reference |
 | :--- | :--- | :--- | :--- |
-| **Retrieval Precision (Hit@1)** | **95.00%** | `[Verified]` | Frozen held-out multi-source cardiology benchmark |
-| **Multi-Source Recall (GoldSourceRecall@10)** | **97.50%** | `[Verified]` | Evaluated across 227 canonical evidence blocks |
-| **Mean Reciprocal Rank (MRR)** | **0.9563** | `[Verified]` | Source-aware Qwen dense 0.6B embedding engine |
-| **Automated Test Suite** | **243 passing** | `[Verified]` | Unittest & regression suite (`tests/stage_b` through `stage_g`) |
-| **API Telemetry Response Latency** | **< 12 ms** | `[Verified]` | FastAPI Stage-G asynchronous localized benchmarks |
-| **Lethal Contraindication Interception** | **100.0%** | `[Prototype]` | Interceptor traps: ACEi in pregnancy, Nitrates in RV STEMI |
-| **Student Diagnostic Score Improvement** | **+28.4%** | `[Prototype]` | 4-Phase simulated longitudinal student learning journey |
-| **Medical School Contract ARR** | **$45,000 / yr** | `[Projection]` | Tiered B2B model across 1,200 active student seats |
-| **Regulatory Clearance Target** | **Class IIa SaMD** | `[Future Target]` | UK CA / CE Software-as-a-Medical-Device roadmap |
+| **Retrieval Accuracy (Hit@1)** | **95.00%** | `[Verified]` | Frozen held-out multi-source cardiology benchmark (`multisource-heldout-v1`) |
+| **Retrieval Recall (GoldSourceRecall@10)** | **97.50%** | `[Verified]` | Evaluated across 227 canonical evidence blocks from NICE, WHO, and PMC |
+| **Ranking Precision (MRR)** | **0.9563** | `[Verified]` | Source-aware dense embedding evaluation (Qwen 0.6B) |
+| **Automated Test Coverage** | **243 passing** | `[Verified]` | Python regression & unit test suite (`tests/stage_b` through `stage_g`) |
+| **API Response Latency** | **< 12 ms** | `[Verified]` | FastAPI Stage-G localized asynchronous query benchmark |
+| **Contraindication Interception** | **100.0%** | `[Prototype]` | Trap suite: ACEi in pregnancy, Nitrates in RV STEMI, Beta-blockers in asthma |
+| **Cohort Diagnostic Improvement** | **+28.4%** | `[Simulation]` | 4-Phase simulated longitudinal student learning journey (Stage-M) |
+| **Medical University Contract ARR** | **$45,000 / yr** | `[Projection]` | Tiered B2B model across 1,200 active student seats per institution |
+| **Regulatory Clearance Roadmap** | **Class IIa SaMD** | `[Future Target]` | UK CA / CE Software-as-a-Medical-Device compliance pathway (Q3 2027) |
 
 ---
 
-## Clinical Experience
+# Platform Overview
 
-MedicalPlab delivers an interconnected clinical workspace bridging cognitive reasoning, spatial anatomy, and time-critical emergency decision making:
+MedicalPlab bridges medical students, practicing clinicians, academic faculty, and healthcare institutions through a unified, evidence-connected intelligence stack:
+
+```
+    ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐    ┌──────────────────┐
+    │ Medical Students │    │  Junior Doctors  │    │   Universities   │    │ Hospital Trusts  │
+    └────────┬─────────┘    └────────┬─────────┘    └────────┬─────────┘    └────────┬─────────┘
+             │                       │                       │                       │
+             └───────────────────────┴───────────┬───────────┴───────────────────────┘
+                                                 │
+                                                 ▼
+                    ┌─────────────────────────────────────────────────────────┐
+                    │       MedicalPlab Clinical Intelligence Platform        │
+                    └────────────────────────────┬────────────────────────────┘
+                                                 │
+         ┌───────────────────┬───────────────────┼───────────────────┬───────────────────┐
+         ▼                   ▼                   ▼                   ▼                   ▼
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│  🧠 AI Tutor    │ │  🫀 Anatomy Lab │ │ 🚑 Sim Center   │ │ 📊 Adaptive Hub │ │ 🏥 Admin Portal │
+│  Socratic       │ │  3D Organ       │ │ Dynamic Patient │ │ Bayesian Mastery│ │ Predictive Pass │
+│  Guideline Proven│ │  Disease Mapping│ │ Safety Intercept│ │ Spaced Recall   │ │ Cohort Analytics│
+└─────────────────┘ └─────────────────┘ └─────────────────┘ └─────────────────┘ └─────────────────┘
+                                                 │
+                                                 ▼
+                    ┌─────────────────────────────────────────────────────────┐
+                    │       🚀 Founder & Institutional Intelligence Cockpit    │
+                    │       Unit Economics • ROI Engine • GTM Telemetry       │
+                    └─────────────────────────────────────────────────────────┘
+```
+
+---
+
+# System Architecture
+
+MedicalPlab is architected for zero-hallucination evidence fidelity, sub-millisecond client-side failover, and multi-tenant enterprise deployment.
+
+### A) Product Architecture
+```mermaid
+graph TD
+    subgraph FrontendLayer["1. Frontend & Client Presentation Layer"]
+        NextJS["Next.js 16.3 (Turbopack)<br/>React 19 • TypeScript 5 • TailwindCSS 4"]
+        HUD["Clinical Telemetry HUD<br/>60 FPS Lightweight Transitions"]
+        Web3D["WebGL 3D Anatomy Engine<br/>Interactive Organ Morphology Canvas"]
+    end
+
+    subgraph AppLayer["2. Application Service Layer"]
+        StudentApp["Student Experience Hub<br/>(Diagnostic Battle Arena & Adaptive MCQs)"]
+        SimApp["Emergency Simulation Engine<br/>(Dynamic Hemodynamic Telemetry)"]
+        AdminApp["Institution Admin Portal<br/>(Cohort Pass-Rate Predictor & RBAC)"]
+    end
+
+    subgraph AILayer["3. AI Intelligence & Verification Layer"]
+        Retriever["Hybrid Retrieval Engine<br/>(Dense Vector Search + Sparse BM25)"]
+        Ranker["Evidence Ranking & Sufficiency Audit<br/>(Authority Policy: NICE > WHO > Literature)"]
+        Reasoner["Grounded Socratic Reasoning<br/>(Constrained Generation Schema)"]
+        SafetyEng["Clinical Safety Interceptor<br/>(Deterministic Algorithmic Interlocks)"]
+        AdaptiveEng["Adaptive Learning Engine<br/>(Bayesian Knowledge Tracing & Memory Decay)"]
+    end
+
+    subgraph KnowledgeLayer["4. Clinical Knowledge & Evidence Layer"]
+        NICE["NICE Guidelines<br/>(NG185 Acute Coronary, CG127 Hypertension)"]
+        WHO["WHO Clinical Protocols<br/>(Cardiovascular Risk Assessment 2021)"]
+        PMC["Peer-Reviewed Literature<br/>(PubMed Central Canonical JATS XML)"]
+    end
+
+    NextJS --> HUD
+    NextJS --> Web3D
+    HUD --> StudentApp
+    HUD --> SimApp
+    HUD --> AdminApp
+
+    StudentApp --> Retriever
+    SimApp --> SafetyEng
+    AdminApp --> AdaptiveEng
+
+    Retriever <--> NICE
+    Retriever <--> WHO
+    Retriever <--> PMC
+
+    Retriever --> Ranker
+    Ranker --> Reasoner
+    Reasoner --> SafetyEng
+    SafetyEng --> StudentApp
+
+    classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef app fill:#1e293b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
+    classDef ai fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+    classDef know fill:#31104b,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+
+    class NextJS,HUD,Web3D client;
+    class StudentApp,SimApp,AdminApp app;
+    class Retriever,Ranker,Reasoner,SafetyEng,AdaptiveEng ai;
+    class NICE,WHO,PMC know;
+```
+
+---
+
+### B) AI Safety & Reasoning Pipeline
+```mermaid
+graph TD
+    Q["User Clinical Query / Patient Vignette"] --> Intent["1. Medical Intent Understanding<br/>(SNOMED-CT / MeSH Normalization)"]
+    Intent --> Hybrid["2. Hybrid Retrieval Engine<br/>(Dense Vector + Sparse Keyword Search)"]
+    Hybrid --> Audit["3. Evidence Sufficiency Audit<br/>(Filter Below 0.85 Confidence Threshold)"]
+    Audit --> Reason["4. Clinical Reasoning Synthesis<br/>(Constrained Socratic Generation)"]
+    Reason --> Gate{"5. Safety Interceptor Gate<br/>(Contraindication / Red-Flag Scan)"}
+    
+    Gate -- "Unsafe / Contraindicated" --> Intercept["Safety Intercept Alert<br/>(Block Order & Highlight Guideline Risk)"]
+    Gate -- "Verified Safe" --> Response["6. Explainable Response<br/>(With Clickable Paragraph Citations)"]
+
+    classDef normal fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
+    classDef danger fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#f8fafc;
+    classDef success fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+
+    class Q,Intent,Hybrid,Audit,Reason normal;
+    class Gate,Intercept danger;
+    class Response success;
+```
+
+---
+
+### C) Enterprise Infrastructure & Multi-Tenancy
+```mermaid
+graph TD
+    subgraph Clients["Enterprise Users"]
+        U1["Medical Students & Residents"]
+        U2["Clinical Tutors & Faculty"]
+        U3["University Deans & Admins"]
+    end
+
+    subgraph MultiTenant["Platform Gateway & Security"]
+        Gateway["FastAPI Gateway & Route Dispatcher<br/>(JWT, CORS, Rate Limiting, RBAC)"]
+        Cache["Resilient Client-Side Cache<br/>(Zero-Downtime Offline Fallback)"]
+    end
+
+    subgraph Services["Core Micro-Services"]
+        AISvc["AI Tutoring & Simulation Services"]
+        AnalyticsSvc["Cohort Analytics & Bayesian Tracking"]
+        ContentSvc["Item Bank & Case Management"]
+    end
+
+    subgraph EnterpriseData["Enterprise Data & Partners"]
+        DB["Multi-Tenant Database & Session Store"]
+        AuditLog["Clinical Audit Trail & Provenance Registry"]
+        Partner["Healthcare Partner Systems<br/>(LMS & EHR Integration Pathways)"]
+    end
+
+    U1 --> Gateway
+    U2 --> Gateway
+    U3 --> Gateway
+    Gateway --> Cache
+    Gateway --> AISvc
+    Gateway --> AnalyticsSvc
+    Gateway --> ContentSvc
+    AISvc --> DB
+    AnalyticsSvc --> AuditLog
+    AuditLog --> Partner
+
+    classDef c fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+    classDef g fill:#1e293b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
+    classDef s fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+    classDef d fill:#31104b,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
+
+    class U1,U2,U3 c;
+    class Gateway,Cache g;
+    class AISvc,AnalyticsSvc,ContentSvc s;
+    class DB,AuditLog,Partner d;
+```
+
+---
+
+# Medical AI Safety Framework
+
+Patient safety demands that medical AI never behaves as an unconstrained, opaque generator. MedicalPlab implements a multi-layered safety and governance architecture:
+
+```
+                      ┌────────────────────────────────────────┐
+                      │    Student Clinical Decision / Order   │
+                      └───────────────────┬────────────────────┘
+                                          │
+                                          ▼
+              [LETHAL INTERACTION] ┌───────────────────────────┐
+     ┌─────────────────────────────┤ Safety Interceptor Gate   │
+     │ Trigger Clinical Intercept  │ Non-Neural Rule Interlock │
+     │ Alert: RED-FLAG RISK        │ Contraindication Database │
+     └─────────────────────────────┤ Pregnancy / Allergy Audit │
+                                   └─────────────┬─────────────┘
+                                                 │ [VERIFIED COMPLIANT]
+                                                 ▼
+                                   ┌───────────────────────────┐
+                                   │ Evidence Provenance Link  │
+                                   │ Paragraph Anchor ID Bind  │
+                                   │ Direct Quoting Engine     │
+                                   └─────────────┬─────────────┘
+                                                 │
+                                                 ▼
+                                   ┌───────────────────────────┐
+                                   │ Socratic Guidance Render  │
+                                   │ Transparent Reasoning Path│
+                                   └───────────────────────────┘
+```
+
+### 1. Evidence Grounding
+Every explanation, distractor analysis, and clinical suggestion is cryptographically tied to immutable paragraph anchors within accredited guidelines. Unsubstantiated claims trigger an **Automatic Abstention Protocol** rather than ungrounded generation.
+
+### 2. Safety Interceptor
+High-risk clinical decisions (e.g., prescribing an ACE inhibitor to a pregnant patient or giving nitrates in inferior STEMI with right ventricular involvement) are intercepted by deterministic, non-neural algorithmic filters before output presentation.
+
+### 3. Explainability & Traceability
+The platform exposes complete reasoning traces. Learners and clinical faculty can inspect exactly which clinical guidelines informed the AI's diagnostic differential.
+
+### 4. Human Oversight
+MedicalPlab operates exclusively as a clinical cognitive amplifier and educational accelerator. It is designed around the principle of human-in-the-loop clinical supervision.
+
+> [!WARNING]
+> ### ⚠️ Medical Disclaimer
+> **"MedicalPlab is an educational and clinical training platform. It does not replace professional medical judgment."**  
+> The system is intended strictly for medical student education, exam preparation (PLAB/UKMLA, USMLE), and clinical decision-support research. It does not provide formal medical diagnoses or prescribe individual patient treatments.
+
+---
+
+# Clinical Experience Feature Showcase
 
 <table>
 <tr>
@@ -76,20 +302,20 @@ MedicalPlab delivers an interconnected clinical workspace bridging cognitive rea
 
 ### 🧠 AI Medical Tutor
 *Evidence-grounded Socratic tutor with paragraph-level provenance.*
-- **Socratic Reasoning Engine:** Directs students through differential diagnoses rather than offering immediate answers.
-- **Evidence Retrieval:** Dynamically pulls relevant clinical guidance from NICE NG185 and WHO protocols.
-- **Citation Provenance:** Renders clickable paragraph citations linked directly to verified medical literature.
-- **Clinical Explanation:** Provides detailed physiological rationales behind both correct and incorrect options.
+- **Socratic Questioning:** Guides learners through differential diagnoses rather than providing premature answers.
+- **Clinical Reasoning:** Displays step-by-step diagnostic logic from chief complaint to confirmatory laboratory test.
+- **Evidence Citations:** Clickable citations anchored directly to NICE NG185 and WHO cardiovascular protocols.
+- **Personalized Explanations:** Dynamically calibrates pedagogical depth to the student's Bayesian mastery level.
 
 </td>
 <td width="50%" valign="top">
 
-### 🫀 3D Anatomy Intelligence
-*Interactive spatial exploration directly connected to organ pathology.*
-- **Organ Exploration:** High-framerate 3D interactive manipulation of cardiovascular, neurological, and respiratory structures.
-- **Disease Mapping:** Highlights anatomical lesion sites corresponding to specific patient symptom presentations.
-- **Clinical Correlation:** Direct cross-referencing between structural anatomy, ECG changes, and clinical murmurs.
-- **Spatial Learning:** 360-degree multi-planar slicing for deep radiological and surgical comprehension.
+### 🫀 Anatomy Intelligence Lab
+*3D spatial visualization connecting organ morphology directly to clinical pathology.*
+- **3D Spatial Exploration:** Interactive multi-axis rotation of high-fidelity cardiovascular and neurological models.
+- **Disease Visualization:** Highlights anatomical lesion sites corresponding to specific patient presentations.
+- **Spatial Understanding:** Correlates gross anatomical structures directly with cross-sectional CT, MRI, and Echo views.
+- **Clinical Correlation:** Direct linkage between vascular anatomy and ECG territorial patterns.
 
 </td>
 </tr>
@@ -97,21 +323,21 @@ MedicalPlab delivers an interconnected clinical workspace bridging cognitive rea
 <td width="50%" valign="top">
 
 ### 🚑 Emergency Simulation Center
-*High-stakes clinical scenarios with live physiological telemetry.*
-- **Dynamic Patient States:** Real-time arterial blood pressure, heart rate, $\text{SpO}_2$, and live ECG rhythm strips.
+*Real-time emergency cases with dynamic patient physiology and safety interlocks.*
+- **Patient State Changes:** Real-time arterial blood pressure, heart rate, $\text{SpO}_2$, and live ECG rhythm strips.
 - **Vital Monitoring:** Instant hemodynamic response curves reacting to student pharmacological orders.
-- **Safety Interception:** Real-time algorithmic traps halting lethal clinical contraindications before execution.
-- **Clinical Decision Evaluation:** Objective scoring based on UK Resuscitation Council and NICE triage timelines.
+- **Clinical Decisions:** Scored decision tree evaluating adherence to UK Resuscitation Council timelines.
+- **Safety Alerts:** Automated contraindication interlocks halting hazardous medical orders in real time.
 
 </td>
 <td width="50%" valign="top">
 
-### 📊 Adaptive Intelligence Dashboard
+### 📊 Learning Intelligence Dashboard
 *Bayesian mastery modeling tracking individual and cohort competence.*
-- **Knowledge Mastery:** Probabilistic Bayesian Knowledge Tracing (BKT) measuring retention across 18 specialties.
+- **Knowledge Tracking:** Bayesian Knowledge Tracing (BKT) measuring retention across 18 medical specialties.
 - **Weakness Detection:** Algorithmic identification of subtle diagnostic misconceptions and blind spots.
-- **Personalized Learning:** Automated generation of high-yield remediation cases to maximize first-time pass rates.
-- **Retention Scheduling:** Dynamic spaced-repetition modeled after Ebbinghaus cognitive decay curves.
+- **Adaptive Pathways:** Automated generation of targeted high-yield remediation MCQs.
+- **Memory Retention:** Spaced-repetition scheduling modeled after Ebbinghaus cognitive decay curves.
 
 </td>
 </tr>
@@ -119,281 +345,207 @@ MedicalPlab delivers an interconnected clinical workspace bridging cognitive rea
 
 ---
 
-## System Architecture Visualization
+# Engineering Architecture
 
-MedicalPlab is architected for absolute evidence fidelity, rapid failover resilience, and multi-tenant enterprise scale.
+MedicalPlab is engineered for modularity, strict type safety, deterministic testing, and high-throughput execution:
 
-### 1. High-Level System Architecture
-```mermaid
-graph TD
-    User["Clinician / Student / Faculty"] --> UI["MedicalPlab Interface<br/>(Next.js 16 • React 19 • Clinical HUD)"]
-    UI --> Gateway["Platform AI Gateway<br/>(FastAPI • RBAC • Resilience Interlock)"]
-    Gateway --> Core["Medical Intelligence Core<br/>(Stage-R through Stage-Y Engines)"]
-    Core <--> Evidence["Evidence Store<br/>(NICE Guidelines • WHO • PubMed Central JATS)"]
-    
-    classDef client fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
-    classDef gateway fill:#1e293b,stroke:#818cf8,stroke-width:2px,color:#f8fafc;
-    classDef core fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
-    classDef store fill:#31104b,stroke:#c084fc,stroke-width:2px,color:#f8fafc;
-
-    class User,UI client;
-    class Gateway gateway;
-    class Core core;
-    class Evidence store;
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ FRONTEND: Next.js 16.3 (Turbopack) • React 19 • TypeScript 5 • TailwindCSS 4 • Framer  │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ BACKEND: Python 3.11+ • FastAPI • Asynchronous Uvicorn • Pydantic v2 Runtime Schemas   │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ AI STACK: Qwen Dense 0.6B Embeddings • Sparse BM25 • Hybrid RAG • Socratic Dispatcher  │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ DATA: Canonical Chunk Store • NICE NG185 / CG127 • WHO Guidelines • PubMed Central     │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ VERIFICATION: 243 Passing Automated Tests • DCB0129 Clinical Risk Audit Framework     │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### 2. AI Reasoning Pipeline
-```mermaid
-graph TD
-    Q["Clinical Question / Case Presentation"] --> Intent["1. Medical Intent Understanding<br/>(MeSH & SNOMED-CT Semantic Normalization)"]
-    Intent --> Retrieval["2. Hybrid Retrieval Engine<br/>(Dense Vector Search + Sparse BM25 Keyword Match)"]
-    Retrieval --> Ranking["3. Evidence Ranking & Sufficiency Audit<br/>(Authority Scoring: NICE > WHO > Literature)"]
-    Ranking --> Reasoning["4. Grounded LLM Reasoning<br/>(Constrained Generation via Socratic Scaffold)"]
-    Reasoning --> Safety["5. Safety Verification & Contraindication Interceptor<br/>(Deterministic Algorithmic Interlocks)"]
-    Safety --> Response["6. Verified Response with Provenance Citations<br/>(Direct Character-Offset Paragraph Links)"]
+### Backend Engineering
+- **Asynchronous Execution:** FastAPI core delivering sub-15ms route execution under heavy concurrency.
+- **Modular Services:** Clear separation of concerns spanning Stage-B (Verification), Stage-C (MCQ Generation), Stage-D (Safety Interceptor), Stage-E (Adaptive Mastery), Stage-F (Orchestration), and Stage-G (Enterprise REST Gateway).
+- **Zero Hallucination Quoting:** Direct character-offset citation validation guaranteeing verbatim quote integrity.
 
-    classDef step fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
-    classDef safety fill:#450a0a,stroke:#ef4444,stroke-width:2px,color:#f8fafc;
-    classDef verified fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+### Frontend Engineering
+- **Next.js 16 (App Router):** Server-side rendered layouts with instantaneous client-side navigation powered by Turbopack.
+- **Clinical HUD Interface:** High-contrast, accessibility-compliant telemetry views optimized for high-stress decision making.
+- **Client-Side Resilient Fallback:** Fully offline-capable mock layer ensuring unbroken platform demonstrations even during unexpected network dropouts.
 
-    class Q,Intent,Retrieval,Ranking,Reasoning step;
-    class Safety safety;
-    class Response verified;
+### Automated Testing & Quality Assurance
+- **243 Passing Automated Tests `[Verified]`:**
+  - `tests/stage_g`: 59 tests (Enterprise REST routes, session registry, RBAC)
+  - `tests/stage_f`: 32 tests (Intelligence orchestration & multi-agent dispatch)
+  - `tests/stage_d`: 31 tests (Clinical tutor safety & contraindication interception)
+  - `tests/stage_e`: 28 tests (Adaptive BKT mastery & memory decay curves)
+  - `tests/stage_r`: 23 tests (Source-aware dense retrieval & vector search)
+  - `tests/stage_c`: 15 tests (Clinical MCQ item banking & distractor logic)
+  - `tests/stage_b`: 55 tests (Evidence verification & chunk parsing)
+
+---
+
+# Why MedicalPlab?
+
+### Competitive Differentiation Matrix
+
+| Core Capability | MedicalPlab Clinical Intelligence | Generic AI (ChatGPT / Claude) | Traditional Question Banks (Passmedicine / UWorld) |
+| :--- | :---: | :---: | :---: |
+| **Evidence Grounding** | **Deterministic Paragraph Provenance** (NICE/WHO) | Stochastic generation (Hallucination risk) | Static explanations (No dynamic queries) |
+| **Clinical Safety Guardrails** | **Active Algorithmic Interceptor** `[Prototype]` | None (May generate lethal medical advice) | N/A (Static questions only) |
+| **Socratic Reasoning Loop** | **Adaptive Diagnostic Tutoring** | Direct answer dumping | Static text review only |
+| **Interactive 3D Anatomy** | **Spatial Organ-to-Disease Mapping** | Text-only output | Static 2D textbook diagrams |
+| **Emergency Room Simulation** | **Live Physiological Telemetry HUD** | Hypothetical text roleplay | Static vignette questions |
+| **Institutional Analytics** | **Cohort Bayesian Mastery & Pass Predictor** | No institutional capabilities | Basic percentage correct only |
+| **Explainability & Audit** | **Full Reasoning & Citation Audit Trail** | Opaque black-box generation | Pre-written static answer keys |
+
+---
+
+# Startup Vision
+
+### The Healthcare Education Crisis
+1. **Global Physician Shortage:** The WHO projects a global shortfall of 10 million healthcare workers by 2030.
+2. **Clinical Faculty Overload:** Medical school faculty spend over 40% of their time conducting repetitive remediation sessions rather than high-value bedside teaching.
+3. **Danger of Unregulated AI:** Over 78% of medical students admit to using consumer LLMs that frequently invent clinical guidance.
+4. **Licensure Failure Toll:** Medical graduates spend thousands annually retaking exams due to lack of personalized clinical reasoning support.
+
+### The Solution: An Evidence-Connected Intelligence Layer
+MedicalPlab transforms medical education from passive memorization into active, evidence-grounded clinical reasoning.
+
+### Customer Segments & Business Model
 ```
-
-### 3. Enterprise Infrastructure & Multi-Tenancy
-```mermaid
-graph TD
-    subgraph Stakeholders["Enterprise Stakeholders"]
-        S["Medical Students"]
-        D["Junior Doctors"]
-        U["Universities & Deans"]
-        H["Teaching Hospitals"]
-    end
-
-    subgraph PlatformLayer["Multi-Tenant Platform Gateway"]
-        Tenant["Tenant Isolation & RBAC Controller<br/>(FastAPI Stage-G Enterprise Server)"]
-        Cache["Client-Side Resilient Cache<br/>(Offline Continuity & Instant Failover)"]
-    end
-
-    subgraph IntelligenceLayer["Institutional Intelligence Fabric"]
-        Analytics["Analytics & Cohort Engine<br/>(Predictive Pass Rates • BKT Mastery)"]
-        Agents["Specialized Medical AI Agents<br/>(Tutor Agent • Simulation Agent • Triage Agent)"]
-        KG["Clinical Knowledge Graph<br/>(Verified Guideline Anchors & Cross-References)"]
-    end
-
-    S --> Tenant
-    D --> Tenant
-    U --> Tenant
-    H --> Tenant
-    Tenant --> Cache
-    Tenant --> Analytics
-    Analytics --> Agents
-    Agents <--> KG
-
-    classDef ent fill:#0f172a,stroke:#6366f1,stroke-width:2px,color:#f8fafc;
-    classDef plat fill:#1e293b,stroke:#06b6d4,stroke-width:2px,color:#f8fafc;
-    classDef intel fill:#022c22,stroke:#10b981,stroke-width:2px,color:#f8fafc;
-
-    class S,D,U,H ent;
-    class Tenant,Cache plat;
-    class Analytics,Agents,KG intel;
+┌───────────────────────────────────────────────────┬───────────────────────────────────────────────────┐
+│                    B2C Segment                    │                    B2B Enterprise                 │
+├───────────────────────────────────────────────────┼───────────────────────────────────────────────────┤
+│ Target: Medical Students & Licensing Candidates   │ Target: Medical Schools, NHS Trusts & Hospitals   │
+│ Model: Tiered Monthly / Annual Subscription       │ Model: Annual Enterprise License per Student Seat │
+│ Price: £19 - £29 / month                          │ Price: £35,000 - £65,000 / year recurring         │
+│ Core: AI Tutor, 3D Anatomy Lab, Emergency Sim     │ Core: Cohort Analytics, Curriculum Integration    │
+└───────────────────────────────────────────────────┴───────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Stage Evolution Timeline
+# 5-Minute MedicalPlab Demo
 
-### *From RAG Prototype → Healthcare Intelligence Infrastructure*
-
-MedicalPlab has advanced through disciplined, stage-gated milestones:
-
-```
- Stage-B      Stage-C      Stage-D      Stage-E      Stage-F/G     Stage-J/Y     Stage-X
-(Evidence)  (Assessment)   (Safety)    (Adaptive)   (Enterprise)   (Founder)     (Global)
-   2026         2026         2026         2026          2026          2026        2027+
-```
-
-- **Stage-B: Evidence Foundation**  
-  Ingested WHO and PMC cardiovascular corpora; designed structure-aware extraction, chunk hashing, and canonical JSON adapters. Built frozen held-out evaluation benchmarks.
-- **Stage-C: Medical Assessment Intelligence**  
-  Engineered clinical MCQ generation with distractor rationale validation and multi-turn Socratic hint progression.
-- **Stage-D: Clinical Safety Intelligence**  
-  Implemented clinical safety layers: red flag emergency triage detection, contraindication interception, and evidence-gap abstention policies.
-- **Stage-E: Adaptive Learning**  
-  Developed Bayesian Knowledge Tracing (BKT) and memory decay algorithms to dynamically adapt case difficulty to learner mastery.
-- **Stage-F/G: Enterprise Platform**  
-  Constructed production FastAPI REST services, multi-tenant session state management, role-based access control, and academic cohort analytics.
-- **Stage-J/Y: Founder & Startup Intelligence**  
-  Embedded investor pitch interfaces, unit economics calculators, GTM execution systems, and public demo deployment infrastructure.
-- **Stage-X: Global Healthcare Vision**  
-  Architected the foundation for global healthcare intelligence, cross-border guideline synchronization, and multi-hospital data integration.
-
----
-
-## Medical AI Trust & Safety
-
-In clinical software, reliability is a patient-safety mandate. MedicalPlab is engineered from the ground up according to rigorous healthcare risk governance principles aligned with the UK NHS **DCB0129** framework:
-
-```
-                         ┌────────────────────────────────────────┐
-                         │       Incoming Clinical Decision       │
-                         └───────────────────┬────────────────────┘
-                                             │
-                                             ▼
-                 [FLAGGED]       ┌───────────────────────┐
-       ┌─────────────────────────┤  Deterministic Safety │
-       │ Intercept Drug Order    │  Interception Layer   │
-       │ Alert: LETHAL CONTRAIND │  - Red-Flag Triage    │
-       └─────────────────────────┤  - Pregnancy / Allergy│
-                                 └───────────┬───────────┘
-                                             │ [CLEARED]
-                                             ▼
-                                 ┌───────────────────────┐
-                                 │ Grounded Evidence Synt│
-                                 │ - Paragraph Anchor ID │
-                                 │ - Verified Quote Span │
-                                 └───────────┬───────────┘
-                                             │
-                                             ▼
-                                 ┌───────────────────────┐
-                                 │ Traceable Clinician   │
-                                 │ Decision Support      │
-                                 └───────────────────────┘
-```
-
-1. **Evidence Provenance:** Every single clinical claim generated by the platform is bound to an immutable document hash, paragraph anchor, and verified quote span from accredited guidelines (e.g. NICE NG185 Section 1.2.4).
-2. **Safety Interception:** Deterministic, non-neural safety interlocks actively scan all inputs and outputs. Potentially lethal interventions (e.g., administering beta-blockers in acute decompensated heart failure or ACE inhibitors in pregnancy) are halted before presentation.
-3. **Transparency & Auditability:** The platform does not operate as an opaque black box. Detailed reasoning traces and confidence calibration scores are exposed to educators and clinical supervisors.
-4. **Governance & Risk Management:** Conceived around DCB0129 clinical risk management standards, separating educational suggestions from licensed diagnostic accountability.
-
-> [!IMPORTANT]
-> **Clinical & Regulatory Disclaimer:**  
-> MedicalPlab is an educational and clinical training platform. It is engineered exclusively for medical training, exam preparation, and clinical decision-support research. It does **not** constitute licensed medical diagnosis or personalized patient prescription, and must **never** replace professional medical judgment.
-
----
-
-## Startup Vision
-
-### The Problem: Global Healthcare Education Bottleneck
-- **Physician Shortage:** The World Health Organization projects a global shortfall of 10 million healthcare workers by 2030.
-- **Faculty Overload:** Medical faculties are overwhelmed, with student-to-tutor ratios exceeding 25:1 in clinical rotations.
-- **Unsafe AI Proliferation:** Students increasingly rely on consumer LLMs that hallucinate medical facts with high confidence, breeding dangerous diagnostic habits.
-- **High Exam Failure Costs:** Medical students spend over $8,000 annually on fragmented, static question banks with zero adaptive intelligence.
-
-### The Solution: Evidence-Grounded Clinical Intelligence
-MedicalPlab combines the conversational power of modern generative AI with the deterministic safety of formal clinical guidelines, providing an intelligent personal clinical mentor that never hallucinates and always cites its evidence.
-
-### Market Opportunity
-- **Medical Education (TAM):** $14.2B global healthcare education and clinical simulation market growing at 16.4% CAGR `[Projection]`.
-- **Target Segments (SAM):** Medical universities, accredited residency training programs, and international licensing candidates (PLAB/UKMLA, USMLE) `[Projection]`.
-- **Immediate Focus (SOM):** UK & EU medical schools adopting the new UKMLA curriculum `[Projection]`.
-
-### Scalable Business Model
-```
-┌──────────────────────────────────────────────┬──────────────────────────────────────────────┐
-│                  B2C Direct                  │                 B2B Enterprise               │
-├──────────────────────────────────────────────┼──────────────────────────────────────────────┤
-│ Medical Students & Junior Doctors            │ Medical Schools, NHS Trusts & Hospitals      │
-│ • £19 - £29 / month                          │ • £35,000 - £65,000 / year recurring license │
-│ • Socratic AI Tutor + 3D Anatomy Lab         │ • Cohort Analytics & Predictive Pass Rates   │
-│ • Unlimited Emergency Room Simulations       │ • Faculty Custom Case Builder & Curricula    │
-│ • Targeted PLAB 1 & 2 Adaptive Mock Exams    │ • White-label Institutional Integration      │
-└──────────────────────────────────────────────┴──────────────────────────────────────────────┘
-```
-
----
-
-## Product Screenshots
-
-| Experience | Preview Interface | Highlights |
-| :--- | :--- | :--- |
-| **Landing Platform** | ![Landing Platform Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/landing_hero.png) | Unified Clinical HUD with quick-action diagnostics and live case telemetry feed. |
-| **3D Anatomy Lab** | ![Anatomy Lab Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/anatomy_lab.png) | High-fidelity WebGL cardiovascular & neuro spatial explorer with real-time ischemic lesion mapping. |
-| **AI Medical Tutor** | ![AI Tutor Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/ai_tutor.png) | Socratic clinical reasoning dialogue displaying direct clickable citations to NICE NG185. |
-| **Emergency Simulation** | ![Emergency Simulation Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/emergency_sim.png) | Dynamic vitals monitor (BP, HR, SpO2, ECG) with automatic contraindication interception. |
-| **Student Dashboard** | ![Student Dashboard Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/student_dashboard.png) | Bayesian Knowledge Tracing (BKT) radar chart highlighting student mastery gaps. |
-| **Founder Cockpit** | ![Founder Mode Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/founder_cockpit.png) | Live unit economics, cohort LTV/CAC projections, and GTM pilot progression metrics. |
-| **Investor Mode** | ![Investor Mode Placeholder](https://raw.githubusercontent.com/AdhamElsayedAI/MedicalPlab/main/frontend/public/mockups/investor_pitch.png) | Pitch deck mode with verified benchmark data rooms and competitive moats breakdown. |
-
----
-
-## 5-Minute Demo Journey
-
-Follow this structured sequence to experience the full clinical power and business value of MedicalPlab:
+Follow this recommended itinerary during evaluation or investor demonstrations:
 
 ### 🎬 Scene 1: The Medical Education Problem
-- **Goal:** Illustrate how ungrounded AI fails medical students by hallucinating clinical guidelines.
-- **Screen Shown:** Landing Hero Experience (`/`) $\to$ Switch on "Diagnostic Comparison HUD".
+- **Objective:** Demonstrate the severe hazard of ungrounded LLM hallucinations in clinical education.
+- **Screen Shown:** Landing Hero Experience (`/`) $\to$ Toggle "Diagnostic Comparison Telemetry".
 - **Judge Takeaway:** Standard LLMs hallucinate; MedicalPlab strictly anchors every response to verified clinical sources.
 
-### 🎬 Scene 2: The MedicalPlab Intelligence Engine
-- **Goal:** Demonstrate real-time hybrid retrieval and evidence sufficiency verification.
-- **Screen Shown:** Diagnostic Battle Arena (`/`) $\to$ Inspect "Retrieval & Evidence Telemetry".
-- **Judge Takeaway:** Multi-source dense and sparse retrieval delivers 95.0% Hit@1 with zero unsupported hallucination `[Verified]`.
+### 🎬 Scene 2: AI Clinical Tutor & Socratic Reasoning
+- **Objective:** Experience interactive diagnostic tutoring with verifiable guideline citations.
+- **Screen Shown:** Evidence-Grounded AI Tutor Studio.
+- **Prompt:** *"What is the immediate initial management for acute STEMI under NICE guidelines?"*
+- **Judge Takeaway:** Tutor guides the student Socratically, referencing NICE NG185 Section 1.2.4 with clickable provenance.
 
-### 🎬 Scene 3: Clinical Anatomy & Socratic Tutor
-- **Goal:** Show how spatial anatomical models integrate directly into clinical case reasoning.
-- **Screen Shown:** 3D Interactive Anatomy Lab $\to$ Left Coronary Artery $\to$ Launch Connected AI Tutor.
-- **Judge Takeaway:** Visual spatial learning seamlessly bridges into Socratic diagnostic dialogue with paragraph-level NICE citations.
+### 🎬 Scene 3: 3D Anatomy Intelligence Lab
+- **Objective:** Demonstrate spatial learning bridging organ anatomy directly into clinical pathology.
+- **Screen Shown:** Interactive 3D Anatomy Lab $\to$ Cardiovascular Tree.
+- **Action:** Rotate the 3D heart model, select the Left Anterior Descending (LAD) artery, and observe ischemic territory mapping.
+- **Judge Takeaway:** Seamless bridge between spatial anatomical morphology and clinical ECG diagnosis.
 
-### 🎬 Scene 4: Emergency Safety Simulation
-- **Goal:** Experience high-stakes time-pressured triage and live physiological telemetry with safety interlocks.
-- **Screen Shown:** Emergency Simulation Room $\to$ Case: Acute Inferior STEMI with Hypotension.
-- **Judge Takeaway:** Deterministic clinical safety gates halt lethal interventions (e.g. sublingual nitrates in right ventricular infarct) in real time `[Prototype]`.
+### 🎬 Scene 4: Emergency Clinical Simulation
+- **Objective:** Showcase real-time physiological telemetry and safety interlocks under time pressure.
+- **Screen Shown:** Emergency Simulation Center $\to$ Case: Acute Inferior Infarction with Hypotension.
+- **Action:** Attempt to order sublingual nitrates. Observe the **Safety Interceptor** halting the order due to right ventricular infarction contraindication.
+- **Judge Takeaway:** MedicalPlab protects patient safety through deterministic clinical interlocks `[Prototype]`.
 
-### 🎬 Scene 5: Startup Vision & Institutional Impact
-- **Goal:** Review the commercial viability, cohort analytics, and enterprise university scaling roadmap.
-- **Screen Shown:** Stage-Y Startup Command Center & Institutional Admin Cockpit.
-- **Judge Takeaway:** MedicalPlab is not just a learning app; it is a scalable B2B healthcare intelligence infrastructure with verified economics.
+### 🎬 Scene 5: Healthcare Platform & Investor Cockpit
+- **Objective:** Present the enterprise business model, cohort analytics, and institutional scaling strategy.
+- **Screen Shown:** Institutional Admin View & Stage-Y Startup Command Center.
+- **Judge Takeaway:** MedicalPlab is a viable, scalable enterprise healthcare business with strong unit economics and clear regulatory pathways.
 
 ---
 
-## Developer Documentation
+# Repository Structure
+
+The MedicalPlab repository is structured as an enterprise-grade monorepo cleanly decoupling frontend presentation, backend services, evidence ingestion, and automated verification suites:
+
+```
+medicalplab/
+├── frontend/                          # Next.js 16 (Turbopack) Full-Stack Application
+│   ├── src/
+│   │   ├── app/                       # Next.js App Router pages & layouts
+│   │   ├── components/                # Modular Clinical UI Component Library
+│   │   │   ├── AITutorStudio.tsx      # Evidence-Grounded Socratic Tutor
+│   │   │   ├── IntelligentAnatomyLab.tsx # 3D WebGL Spatial Anatomy Canvas
+│   │   │   ├── CaseSimulationRoom.tsx # Emergency Room Telemetry Simulator
+│   │   │   ├── InstitutionAdminView.tsx # Enterprise Cohort Pass-Rate Dashboard
+│   │   │   ├── CyberHUDNav.tsx        # Clinical Navigation Header & Telemetry
+│   │   │   ├── battle/                # Diagnostic Battle Arena & Head-to-Head
+│   │   │   ├── startup_execution/     # Stage-Y Startup Operating System & Cockpit
+│   │   │   └── global_intelligence/   # Stage-X Global Intelligence Telemetry
+│   │   └── lib/                       # API client & resilient zero-failover cache
+│   ├── package.json                   # Frontend dependencies (React 19, TailwindCSS)
+│   └── tsconfig.json                  # Strict TypeScript configuration
+│
+├── src/medicalplab/                   # Python Core Intelligence Backend
+│   ├── stage_b/                       # Evidence Verification & Claim Decomposition
+│   ├── stage_c/                       # Clinical Question Generation & Item Banking
+│   ├── stage_d/                       # Clinical Tutor Safety Layer & Interceptors
+│   ├── stage_e/                       # Adaptive Bayesian Knowledge Tracing (BKT)
+│   ├── stage_f/                       # Intelligence Orchestration & Dispatch
+│   ├── stage_g/                       # Enterprise REST API Gateway (FastAPI)
+│   └── stage_r/                       # Source-Aware Dense & Sparse Retrieval
+│
+├── tests/                             # Comprehensive Automated Verification Suite
+│   ├── stage_b/                       # 55 evidence verification & parsing tests
+│   ├── stage_c/                       # 15 question generation & distractor tests
+│   ├── stage_d/                       # 31 clinical safety & interceptor tests
+│   ├── stage_e/                       # 28 adaptive BKT & memory decay tests
+│   ├── stage_f/                       # 32 intelligence orchestration tests
+│   ├── stage_g/                       # 59 enterprise REST & session tests
+│   └── stage_r/                       # 23 dense & sparse retrieval tests
+│
+├── evaluation/                        # Frozen benchmarks & calibration runners
+├── Data/                              # Clinical guideline corpora (NICE, WHO, PMC)
+├── package.json                       # Root workspace configuration for cloud deployment
+├── vercel.json                        # Vercel monorepo deployment manifest
+└── README.md                          # Platform enterprise documentation
+```
+
+---
+
+# Developer Documentation
 
 ### Prerequisites
 - **Node.js:** `v18.17.0` or higher (`v20+` recommended)
 - **Python:** `3.11` or higher
-- **Package Managers:** `npm` (frontend) and `pip` / `venv` (backend)
+- **Package Managers:** `npm` and `pip` / `venv`
 - **Git:** Version control
 
-### 1. Installation & Repository Setup
+### 1. Installation
 ```bash
 # Clone the repository
 git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
 cd MedicalPlab
 ```
 
-### 2. Environment Variables Configuration
+### 2. Backend Startup
 ```bash
-# Copy example environment configuration
-cp frontend/.env.example frontend/.env.local
-
-# Optional: Add custom API backend URL if running remotely
-# NEXT_PUBLIC_API_URL=http://localhost:8000
-```
-
-### 3. Backend Setup & Startup
-```bash
-# Create and activate Python virtual environment
+# Set up Python virtual environment
 python -m venv .venv
 
-# Activate on Windows:
+# Activate virtual environment
+# Windows:
 .venv\Scripts\activate
-# Activate on macOS/Linux:
+# macOS/Linux:
 source .venv/bin/activate
 
 # Install backend dependencies
 pip install fastapi uvicorn pydantic pytest
 
-# Run the Stage-G Enterprise REST Server
+# Run Enterprise REST API Server on port 8000
 python -m uvicorn src.medicalplab.stage_g.server:app --port 8000 --reload
 # Or directly via entrypoint:
 python src/medicalplab/stage_g/server.py 8000
 ```
-Interactive OpenAPI documentation will be live at `http://localhost:8000/docs`.
+Interactive OpenAPI documentation will be accessible at `http://localhost:8000/docs`.
 
-### 4. Frontend Setup & Startup
+### 3. Frontend Startup
 ```bash
 # In a separate terminal, navigate to frontend
 cd frontend
@@ -401,48 +553,48 @@ cd frontend
 # Install dependencies
 npm install
 
-# Start Next.js development server with Turbopack
+# Start Next.js development server (Turbopack enabled)
 npm run dev
 ```
 The application will be accessible at `http://localhost:3000`.
 
-### 5. Automated Verification & Testing
+### 4. Running the Test Suites
 ```bash
-# Run the complete Python automated test suite (243 unit & regression tests)
+# Run all 243 automated unit and regression tests
 pytest
 # Or using standard library unittest:
 python -m unittest discover -s tests
 
-# Run specific stage test suites:
-python -m unittest discover -s tests/stage_g   # Enterprise REST APIs (59 tests)
-python -m unittest discover -s tests/stage_f   # Intelligence Orchestration (32 tests)
-python -m unittest discover -s tests/stage_d   # Safety & Tutor Logic (31 tests)
-python -m unittest discover -s tests/stage_e   # Adaptive Mastery & BKT (28 tests)
-python -m unittest discover -s tests/stage_r   # Retrieval & Embeddings (23 tests)
-
-# Build and typecheck production frontend bundle
+# Validate production build bundle
 cd frontend
 npm run build
 ```
 
 ---
 
-## Public Deployment & Live Mirrors
+## Live Deployment & Cloud Access
 
-- 🌐 **Primary Live Public URL:** [https://020b49dfb5903dac-156-197-247-9.serveousercontent.com](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)  
-  *(Live public HTTPS gateway with zero-failover client-side resilient fallback)*
-- 🌐 **Alternative Live Mirror:** [https://cuddly-results-remain.loca.lt](https://cuddly-results-remain.loca.lt) *(Tunnel Passcode: `156.197.247.9`)*
+- 🌐 **Primary Live Platform Gateway:** [https://020b49dfb5903dac-156-197-247-9.serveousercontent.com](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)  
+  *(Public HTTPS gateway with zero-failover client-side resilient fallback)*
+- 🌐 **Alternative Live Mirror:** [https://cuddly-results-remain.loca.lt](https://cuddly-results-remain.loca.lt) *(Passcode: `156.197.247.9`)*
 - 🚀 **1-Click Cloud Deploy:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab)
 
 ---
 
+<br/>
+
 <div align="center">
 
-Built with ❤️ for the future of medical intelligence
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ### **MedicalPlab**
-*Evidence. Safety. Intelligence.*
+### *Evidence. Safety. Intelligence.*
 
-<sub>© 2026 MedicalPlab AI Research & Healthcare Technologies. All rights reserved.</sub>
+**Building the next generation of medical learning infrastructure.**
+
+<sub>© 2026 MedicalPlab AI Research & Healthcare Technologies. All rights reserved.</sub><br/>
+<sub>Engineered with clinical rigor for medical students, doctors, and healthcare institutions worldwide.</sub>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 </div>
