@@ -1,7 +1,16 @@
-import { ChatMessage, PatientCase, PLABQuestion, StudentMasteryProfile } from "./types";
-import { INITIAL_STUDENT_PROFILE, PLAB_QUESTIONS, DEMO_PATIENT_CASE } from "./demo-data";
+import { StudentMasteryProfile } from "./types";
+import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
+const RUNTIME_MODE = (process.env.NEXT_PUBLIC_RUNTIME_MODE || "demo").trim().toLowerCase();
+const DEMO_FALLBACKS_ALLOWED = RUNTIME_MODE === "demo" || RUNTIME_MODE === "test";
+
+export class ApiUnavailableError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "ApiUnavailableError";
+  }
+}
 
 class PlatformApiClient {
   private userId: string = "user_alice";
@@ -16,6 +25,10 @@ class PlatformApiClient {
     return API_BASE_URL;
   }
 
+  getRuntimeMode(): string {
+    return RUNTIME_MODE;
+  }
+
   private getHeaders(): HeadersInit {
     return {
       "Content-Type": "application/json",
@@ -24,7 +37,14 @@ class PlatformApiClient {
     };
   }
 
-  async checkHealth(): Promise<{ status: string; service: string; isOnline: boolean; uptime_seconds?: number }> {
+  async checkHealth(): Promise<{
+    status: string;
+    service: string;
+    isOnline: boolean;
+    uptime_seconds?: number;
+    runtime_mode?: string;
+    demo_fallbacks_enabled?: boolean;
+  }> {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 6000);
     try {
@@ -37,8 +57,8 @@ class PlatformApiClient {
         const data = await response.json();
         return { ...data, isOnline: true };
       }
-    } catch (e) {
-      // Unreachable or offline
+    } catch {
+      // Explicit offline state below.
     } finally {
       clearTimeout(timeoutId);
     }
@@ -49,12 +69,15 @@ class PlatformApiClient {
     explanation: string;
     intent: string;
     next_actions: string[];
-    citations?: any[];
+    citations?: unknown[];
     latency_ms: number;
     safety_validated: boolean;
+    demo_fallback?: boolean;
+    runtime_mode?: string;
+    model_name?: string;
   }> {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 1500);
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
     try {
       const response = await fetch(`${API_BASE_URL}/ai/chat`, {
         method: "POST",
@@ -66,22 +89,39 @@ class PlatformApiClient {
       if (response.ok) {
         const data = await response.json();
         return {
-          explanation: data.explanation || `Grounded response: ${prompt}`,
+          explanation: data.explanation || "",
           intent: data.intent || "teaching",
-          next_actions: data.next_actions || ["Review Guideline", "Test Understanding"],
-          latency_ms: data.latency_ms || 84.5,
-          safety_validated: true,
+          next_actions: data.next_actions || [],
+          latency_ms: Number(data.latency_ms ?? 0),
+          safety_validated: data.safety_validated === true,
           citations: data.citations || [],
+          demo_fallback: data.demo_fallback === true,
+          runtime_mode: data.runtime_mode,
+          model_name: data.model_name,
         };
       }
-    } catch (e) {
-      // Graceful fallback to client-side clinical intelligence on network disconnect or timeout
+
+      let detail = `MedicalPlab API returned HTTP ${response.status}.`;
+      try {
+        const errorData = await response.json();
+        detail = errorData.message || errorData.error || detail;
+      } catch {
+        // Keep status-based detail.
+      }
+      throw new ApiUnavailableError(detail);
+    } catch (error) {
+      if (DEMO_FALLBACKS_ALLOWED) {
+        return this.fallbackClinicalAI(prompt);
+      }
+      if (error instanceof ApiUnavailableError) {
+        throw error;
+      }
+      throw new ApiUnavailableError(
+        "MedicalPlab AI is unavailable. Pilot/production mode does not fabricate a clinical response."
+      );
     } finally {
       clearTimeout(timeoutId);
     }
-
-    // High-fidelity clinical reasoning fallback
-    return this.fallbackClinicalAI(prompt);
   }
 
   async getStudentAnalytics(): Promise<StudentMasteryProfile> {
@@ -102,12 +142,18 @@ class PlatformApiClient {
           weakTopics: data.weak_topics?.length ? data.weak_topics : INITIAL_STUDENT_PROFILE.weakTopics,
         };
       }
-    } catch (e) {
-      // Fallback
+      throw new ApiUnavailableError(`Student analytics returned HTTP ${response.status}.`);
+    } catch (error) {
+      if (DEMO_FALLBACKS_ALLOWED) {
+        return INITIAL_STUDENT_PROFILE;
+      }
+      if (error instanceof ApiUnavailableError) {
+        throw error;
+      }
+      throw new ApiUnavailableError("Student analytics are unavailable.");
     } finally {
       clearTimeout(timeoutId);
     }
-    return INITIAL_STUDENT_PROFILE;
   }
 
   async recordAttempt(topic: string, isCorrect: boolean): Promise<boolean> {
@@ -121,8 +167,9 @@ class PlatformApiClient {
         signal: controller.signal,
       });
       return response.ok;
-    } catch (e) {
-      return true;
+    } catch {
+      // Never report a successful write that the server did not acknowledge.
+      return false;
     } finally {
       clearTimeout(timeoutId);
     }
@@ -131,56 +178,45 @@ class PlatformApiClient {
   private fallbackClinicalAI(prompt: string) {
     const pLower = prompt.toLowerCase();
     let explanation = "";
-    let citations = [];
+    let citations: Array<Record<string, unknown>> = [];
 
     if (pLower.includes("lad") || pLower.includes("stemi") || pLower.includes("coronary")) {
       explanation =
-        "The Left Anterior Descending (LAD) artery provides perfusion to the anterior ventricular septum and apex. Occlusion generates ST-segment elevation in precordial leads V1-V4. Under NICE Guideline NG185, primary PCI within 120 minutes of diagnosis is mandatory over fibrinolysis whenever feasible.";
+        "DEMO ONLY: The Left Anterior Descending (LAD) artery provides perfusion to the anterior ventricular septum and apex. This client-side fallback is presentation content and must not be counted as a model or clinical benchmark result.";
       citations = [
         {
-          ref: "NICE-NG185:Sec 1.2",
-          guideline: "NICE NG185 Acute Coronary Syndromes",
-          section: "Reperfusion in STEMI",
-          quote: "Offer coronary angiography with immediate PPCI to patients with acute STEMI if presented within 12 hours.",
-          confidence: 0.985,
-          status: "supported" as const,
+          ref: "DEMO-NICE-NG185",
+          guideline: "Demo reference only",
+          section: "Not validated by live RAG",
+          status: "demo",
         },
       ];
     } else if (pLower.includes("tamponade") || pLower.includes("beck")) {
       explanation =
-        "Cardiac tamponade is characterised by Beck's triad: hypotension, elevated jugular venous pressure with absent y-descent, and muffled heart sounds. Pulsus paradoxus (>10 mmHg drop in systolic pressure during inspiration) is diagnostic. Immediate focused bedside ultrasound and emergency pericardiocentesis are life-saving.";
+        "DEMO ONLY: Cardiac tamponade teaching content is being shown because the live API is unavailable. This is not a model-generated or evidence-verified result.";
       citations = [
         {
-          ref: "NICE-CG95:Sec 4.1",
-          guideline: "NICE CG95 Chest Pain Evaluation",
-          section: "Pericardial Effusion Emergencies",
-          quote: "Perform immediate echocardiography to assess hemodynamic compromise and tamponade physiology.",
-          confidence: 0.992,
-          status: "supported" as const,
+          ref: "DEMO-TAMPONADE",
+          guideline: "Demo reference only",
+          section: "Not validated by live RAG",
+          status: "demo",
         },
       ];
     } else {
       explanation =
-        "MedicalPlab AI Tutor: Clinical management must prioritize rapid hemodynamic assessment, guideline-directed evidence verification, and elimination of contraindications according to NICE and GMC Good Medical Practice.";
-      citations = [
-        {
-          ref: "GMC-GMP:Dom 1",
-          guideline: "GMC Good Medical Practice",
-          section: "Patient Safety and Evidence",
-          quote: "You must provide effective treatments based on the best available evidence.",
-          confidence: 0.96,
-          status: "supported" as const,
-        },
-      ];
+        "DEMO ONLY: MedicalPlab is offline, so this screen is displaying a non-clinical placeholder rather than fabricating a grounded answer.";
     }
 
     return {
       explanation,
-      intent: "teaching",
-      next_actions: ["Explore in 3D Anatomy", "Attempt Clinical Question", "Simulate Case"],
+      intent: "demo_fallback",
+      next_actions: ["Reconnect to MedicalPlab API"],
       citations,
-      latency_ms: 62.4,
-      safety_validated: true,
+      latency_ms: 0,
+      safety_validated: false,
+      demo_fallback: true,
+      runtime_mode: RUNTIME_MODE,
+      model_name: "demo-fallback",
     };
   }
 }
