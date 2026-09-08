@@ -1,6 +1,8 @@
 """AI usage tracking and cost accounting for Stage-G.
 
 Logs every AI core request, token volume, model inference latency, and estimated cloud cost.
+Demo/unconfigured runtime events are explicitly non-billable so telemetry never attributes
+model cost to requests that did not execute a real model.
 """
 
 from collections import Counter
@@ -13,11 +15,20 @@ from .database import DatabaseService
 from .models import AIUsageRecord
 
 
-# Pricing per 1k tokens in USD
+# Pricing per 1k tokens in USD.
+# Non-model runtime states are deliberately zero-cost and explicitly named.
 MODEL_PRICING: dict[str, dict[str, float]] = {
     "qwen-2.5-7b-instruct": {
         "input_per_1k": 0.0015,
         "output_per_1k": 0.0020,
+    },
+    "demo-fallback": {
+        "input_per_1k": 0.0,
+        "output_per_1k": 0.0,
+    },
+    "unconfigured": {
+        "input_per_1k": 0.0,
+        "output_per_1k": 0.0,
     },
     "default": {
         "input_per_1k": 0.0015,
@@ -104,6 +115,7 @@ class AIUsageTracker:
                 "average_latency_ms": 0.0,
                 "success_rate": 1.0,
                 "requests_by_type": {},
+                "requests_by_model": {},
             }
 
         total_reqs = len(records)
@@ -113,6 +125,7 @@ class AIUsageTracker:
         avg_lat = sum(r.latency_ms for r in records) / total_reqs
         succ_count = sum(1 for r in records if r.success)
         types_counter = Counter(r.request_type for r in records)
+        models_counter = Counter(r.model_name for r in records)
 
         return {
             "total_requests": total_reqs,
@@ -123,4 +136,5 @@ class AIUsageTracker:
             "average_latency_ms": round(avg_lat, 2),
             "success_rate": round(succ_count / total_reqs, 4),
             "requests_by_type": dict(types_counter),
+            "requests_by_model": dict(models_counter),
         }
