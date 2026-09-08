@@ -11,7 +11,8 @@ export type NavigationMode =
   | "investor"
   | "founder"
   | "championship"
-  | "battle";
+  | "battle"
+  | "validation";
 
 
 
@@ -371,6 +372,120 @@ export interface DefenseTopic {
   keyQuotesOrFormulas: string;
   counterPunch: string;
 }
+
+// ===================================================
+// STAGE-M: REAL-WORLD VALIDATION & IMPACT LAYER
+// ===================================================
+
+export type ValidationSubTab =
+  | "journey"
+  | "outcomes"
+  | "institution"
+  | "roi"
+  | "story"
+  | "defense"
+  | "safe_mode";
+
+export type MetricComplianceBadge =
+  | "[Demo Simulation]"
+  | "[Prototype Projection]"
+  | "[Future Target]";
+
+export interface JourneyPhase {
+  id: number;
+  phaseNumber: number;
+  phaseTitle: string;
+  userState: {
+    persona: string;
+    clinicalConfidence: string;
+    diagnosticScore: number;
+    errorState: string;
+    sentiment: string;
+  };
+  aiAction: {
+    stage: string;
+    algorithm: string;
+    intervention: string;
+    runtimeLatency: string;
+  };
+  medicalObjective: {
+    condition: string;
+    guidelineRef: string;
+    learningGoal: string;
+    safetyRule: string;
+  };
+  visualTransition: {
+    fromColor: string;
+    toColor: string;
+    animationKey: string;
+    hudBadge: string;
+  };
+}
+
+export interface OutcomeMetricItem {
+  id: string;
+  metricName: string;
+  category: "Clinical Safety" | "Exam Performance" | "Study Efficiency" | "Knowledge Retention";
+  legacyBaseline: string;
+  medicalPlabValue: string;
+  deltaGain: string;
+  isPositive: boolean;
+  complianceBadge: MetricComplianceBadge;
+  calculationSource: string;
+  clinicalImpactSummary: string;
+}
+
+export interface InstitutionCohortAnalytics {
+  deaneryName: string;
+  activeCandidates: number;
+  examReadyPct: number;
+  developingPct: number;
+  criticalRemediationPct: number;
+  averageStudyHours: number;
+  highRiskTopics: {
+    topic: string;
+    failureRate: number;
+    guidelineRef: string;
+    suggestedIntervention: string;
+  }[];
+  curriculumRecommendations: {
+    priority: "HIGH" | "MEDIUM" | "ROUTINE";
+    title: string;
+    targetCandidates: number;
+    actionPlan: string;
+  }[];
+  engagementIndicators: {
+    dailyActivePct: number;
+    avgSimulationsPerUser: number;
+    tutorQuestionsLogged: number;
+    safetyIncidentsIntercepted: number;
+  };
+}
+
+export interface ImpactStoryItem {
+  id: string;
+  dimension: "Student Transformation" | "Clinical Safety Interception" | "Institutional Scaling";
+  title: string;
+  heroQuote: string;
+  protagonist: string;
+  clinicalContext: string;
+  crisisProblem: string;
+  medicalPlabIntervention: string;
+  expectedOutcome: string;
+  complianceBadge: MetricComplianceBadge;
+  outcomeStats: { label: string; value: string }[];
+}
+
+export interface JudgeImpactDefenseItem {
+  id: string;
+  question: string;
+  founderResponse: string;
+  technicalExplanation: string;
+  honestLimitation: string;
+  futureValidationRoadmap: string;
+  complianceBadge: MetricComplianceBadge;
+}
+
 
 
 

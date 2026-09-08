@@ -14,6 +14,7 @@ import {
   Sparkles,
   Trophy,
   Swords,
+  TrendingUp,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -47,6 +48,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "founder", label: "Founder Hub", icon: <Sparkles className="w-4 h-4 text-cyan-300" /> },
     { mode: "championship", label: "Championship", icon: <Trophy className="w-4 h-4 text-amber-400" /> },
     { mode: "battle", label: "Final Battle", icon: <Swords className="w-4 h-4 text-cyan-300" /> },
+    { mode: "validation", label: "Impact & Validation", icon: <TrendingUp className="w-4 h-4 text-emerald-400" /> },
   ];
 
 
@@ -107,6 +109,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Impact & Validation Quick Button */}
+            <button
+              onClick={() => onSelectMode("validation")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "validation"
+                  ? "bg-gradient-to-r from-emerald-950 to-teal-950 text-emerald-300 border-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.4)]"
+                  : "bg-slate-900/90 text-emerald-300 border-emerald-500/40 hover:bg-emerald-950/40"
+              }`}
+            >
+              <TrendingUp className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Impact</span>
+            </button>
+
             {/* Final Battle Station Quick Button */}
             <button
               onClick={() => onSelectMode("battle")}
