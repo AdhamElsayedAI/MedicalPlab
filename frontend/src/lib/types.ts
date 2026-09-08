@@ -10,7 +10,9 @@ export type NavigationMode =
   | "admin"
   | "investor"
   | "founder"
-  | "championship";
+  | "championship"
+  | "battle";
+
 
 
 
@@ -278,5 +280,97 @@ export interface ImpactComparisonDimension {
   };
   deltaImpact: string;
 }
+
+// ===================================================
+// STAGE-L: FINAL BATTLE & JUDGE MASTERY LAYER
+// ===================================================
+
+export type BattleSubTab =
+  | "demo_master"
+  | "pitch_trainer"
+  | "judge_arena"
+  | "judge_panel"
+  | "founder_coach"
+  | "defense_library"
+  | "failure_drills"
+  | "submission_pro"
+  | "presentation_analytics"
+  | "safe_mode";
+
+export interface BattleScene {
+  id: number;
+  title: string;
+  stageBadge: string;
+  durationSeconds: number;
+  targetMode: NavigationMode;
+  speakerScript: string;
+  screenAction: string;
+  judgeTakeaway: string;
+  backupState: string;
+}
+
+export interface JudgeMemoryItem {
+  id: string;
+  category: "Basic" | "Technical" | "Business" | "Clinical Safety";
+  question: string;
+  hiddenJudgeConcern: string;
+  winningFounderAnswer: string;
+  technicalProof: {
+    stages: string[];
+    metric: string;
+    mechanism: string;
+    codeContract: string;
+  };
+  evaluationCriteria: string[];
+  commonWeakAnswers: string[];
+  winningAnswerStructure: string[];
+  mistakesToAvoid: string[];
+  followUpDefense: string;
+}
+
+export interface SimulatedJudgeProfile {
+  id: string;
+  name: string;
+  role: "Medical Judge" | "AI Systems Judge" | "Investor Judge";
+  title: string;
+  focusArea: string;
+  score: number;
+  verdict: "STRONG ADVANCE" | "GRAND CHAMPION" | "SERIES SEED READY";
+  critiqueQuote: string;
+  standoutPraise: string;
+  criteriaScores: {
+    category: string;
+    score: number;
+    feedback: string;
+  }[];
+}
+
+export interface FailureDrillScenario {
+  id: string;
+  title: string;
+  severity: "CRITICAL" | "HIGH" | "MEDIUM";
+  symptom: string;
+  underlyingCause: string;
+  instantRecoveryAction: string;
+  recoveryCodeOrKey: string;
+}
+
+export interface CoachAuditPoint {
+  area: "Pitch Weakness" | "Timing Bottleneck" | "Business Proof" | "Technical Balance";
+  observation: string;
+  coachingAdvice: string;
+  status: "OPTIMIZED" | "RESOLVED";
+}
+
+export interface DefenseTopic {
+  id: string;
+  title: string;
+  category: "AI Technology" | "Clinical Safety" | "Business & Scale";
+  summary: string;
+  architecturalDetails: string[];
+  keyQuotesOrFormulas: string;
+  counterPunch: string;
+}
+
 
 

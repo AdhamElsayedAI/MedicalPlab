@@ -14,6 +14,7 @@ import { InstitutionAdminView } from "@/components/InstitutionAdminView";
 import { InvestorPitchView } from "@/components/InvestorPitchView";
 import { FounderControlCenter } from "@/components/founder/FounderControlCenter";
 import { ChampionshipCommandCenter } from "@/components/championship/ChampionshipCommandCenter";
+import { FinalBattleHub } from "@/components/battle/FinalBattleHub";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
@@ -165,6 +166,10 @@ export default function Home() {
 
         {currentMode === "championship" && (
           <ChampionshipCommandCenter onNavigateToMode={setCurrentMode} />
+        )}
+
+        {currentMode === "battle" && (
+          <FinalBattleHub onNavigateToMode={setCurrentMode} />
         )}
       </main>
 
