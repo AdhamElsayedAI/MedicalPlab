@@ -14,7 +14,8 @@ export type NavigationMode =
   | "battle"
   | "validation"
   | "grand_championship"
-  | "global_intelligence";
+  | "global_intelligence"
+  | "startup_execution";
 
 
 
