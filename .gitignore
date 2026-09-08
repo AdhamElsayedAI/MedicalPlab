@@ -50,3 +50,8 @@ evaluation/audits/evidence_sufficiency_negative_label_audit_candidates_v1.md
 .stage_b_env/
 bundle_fix/
 *.zip
+
+# Node / Next.js
+node_modules/
+.next/
+*.tsbuildinfo
