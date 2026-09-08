@@ -12,7 +12,8 @@ export type NavigationMode =
   | "founder"
   | "championship"
   | "battle"
-  | "validation";
+  | "validation"
+  | "grand_championship";
 
 
 

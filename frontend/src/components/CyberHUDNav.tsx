@@ -15,6 +15,7 @@ import {
   Trophy,
   Swords,
   TrendingUp,
+  Crown,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -49,6 +50,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "championship", label: "Championship", icon: <Trophy className="w-4 h-4 text-amber-400" /> },
     { mode: "battle", label: "Final Battle", icon: <Swords className="w-4 h-4 text-cyan-300" /> },
     { mode: "validation", label: "Impact & Validation", icon: <TrendingUp className="w-4 h-4 text-emerald-400" /> },
+    { mode: "grand_championship", label: "Grand Championship", icon: <Crown className="w-4 h-4 text-amber-300" /> },
   ];
 
 
@@ -109,6 +111,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Grand Championship Quick Button */}
+            <button
+              onClick={() => onSelectMode("grand_championship")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "grand_championship"
+                  ? "bg-gradient-to-r from-amber-500 to-amber-600 text-black border-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.6)] animate-pulse"
+                  : "bg-slate-900/90 text-amber-300 border-amber-500/40 hover:bg-amber-950/40"
+              }`}
+            >
+              <Crown className="w-3.5 h-3.5 text-amber-400" />
+              <span>Grand Stage</span>
+            </button>
+
             {/* Impact & Validation Quick Button */}
             <button
               onClick={() => onSelectMode("validation")}
