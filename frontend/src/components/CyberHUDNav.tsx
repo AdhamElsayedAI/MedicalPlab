@@ -11,7 +11,9 @@ import {
   Terminal,
   Play,
   UserCheck,
+  Sparkles,
 } from "lucide-react";
+
 import { NavigationMode, UserRole } from "@/lib/types";
 
 interface CyberHUDNavProps {
@@ -39,8 +41,10 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "simulation", label: "Emergency Sim", icon: <Activity className="w-4 h-4" /> },
     { mode: "command_center", label: "Command Center", icon: <Terminal className="w-4 h-4" /> },
     { mode: "admin", label: "Admin Analytics", icon: <UserCheck className="w-4 h-4" /> },
-    { mode: "investor", label: "Investor Mode", icon: <ShieldCheck className="w-4 h-4 text-emerald-400" /> },
+    { mode: "investor", label: "Investor Pitch", icon: <ShieldCheck className="w-4 h-4 text-emerald-400" /> },
+    { mode: "founder", label: "Founder Hub", icon: <Sparkles className="w-4 h-4 text-cyan-300" /> },
   ];
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-cyan-500/20 bg-slate-950/80 backdrop-blur-xl">
@@ -96,7 +100,20 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
           </nav>
 
           {/* Right Action Bar */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
+            {/* Founder Hub Quick Button */}
+            <button
+              onClick={() => onSelectMode("founder")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "founder"
+                  ? "bg-cyan-950 text-cyan-300 border-cyan-400 shadow-[0_0_12px_rgba(0,242,254,0.35)]"
+                  : "bg-slate-900/90 text-cyan-300 border-cyan-500/40 hover:bg-cyan-950/40"
+              }`}
+            >
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Founder Mode</span>
+            </button>
+
             {/* 3-Minute Guided Demo Launch Button */}
             <button
               onClick={onStartDemoJourney}
@@ -105,6 +122,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
               <Play className="w-3.5 h-3.5 fill-current" />
               <span>3-Min Demo Tour</span>
             </button>
+
 
             {/* Hackathon Architecture Deep Dive */}
             <button
