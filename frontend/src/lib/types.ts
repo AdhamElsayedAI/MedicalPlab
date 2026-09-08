@@ -9,7 +9,9 @@ export type NavigationMode =
   | "command_center"
   | "admin"
   | "investor"
-  | "founder";
+  | "founder"
+  | "championship";
+
 
 
 export interface OrganHotspot {
@@ -204,4 +206,77 @@ export type FounderSubTab =
   | "competitive"
   | "business"
   | "telemetry";
+
+// ===================================================
+// STAGE-K: CHAMPIONSHIP & SUBMISSION INTELLIGENCE
+// ===================================================
+
+export type ChampionshipSubTab =
+  | "demo_engine"
+  | "founder_narrative"
+  | "judge_attack"
+  | "submission"
+  | "impact_story"
+  | "safety_showcase"
+  | "reliability";
+
+export interface ChampionshipScene {
+  id: number;
+  title: string;
+  stageBadge: string;
+  durationSeconds: number;
+  targetMode: NavigationMode;
+  keyMessage: string;
+  spokenScript: string;
+  transitionInstruction: string;
+  presenterAction: string;
+  screenAction: string;
+  judgeTakeaway: string;
+  fallbackState: string;
+}
+
+export interface JudgeAttackItem {
+  id: string;
+  category: "Technical" | "Business" | "Clinical Safety";
+  question: string;
+  hiddenJudgeConcern: string;
+  founderAnswer: string;
+  technicalProof: {
+    stages: string[];
+    metric: string;
+    mechanism: string;
+    contractOrCode: string;
+  };
+  followUpDefense: string;
+}
+
+export interface SubmissionSection {
+  id: string;
+  title: string;
+  summary: string;
+  contentMarkdown: string;
+}
+
+export interface SubmissionChecklistItem {
+  id: string;
+  criteria: string;
+  proofInProduct: string;
+  isVerified: boolean;
+}
+
+export interface ImpactComparisonDimension {
+  dimension: string;
+  traditionalWay: {
+    title: string;
+    description: string;
+    painPoint: string;
+  };
+  medicalPlabWay: {
+    title: string;
+    description: string;
+    clinicalAdvantage: string;
+  };
+  deltaImpact: string;
+}
+
 

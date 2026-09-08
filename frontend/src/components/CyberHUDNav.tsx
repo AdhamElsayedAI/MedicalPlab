@@ -12,6 +12,7 @@ import {
   Play,
   UserCheck,
   Sparkles,
+  Trophy,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -43,7 +44,9 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "admin", label: "Admin Analytics", icon: <UserCheck className="w-4 h-4" /> },
     { mode: "investor", label: "Investor Pitch", icon: <ShieldCheck className="w-4 h-4 text-emerald-400" /> },
     { mode: "founder", label: "Founder Hub", icon: <Sparkles className="w-4 h-4 text-cyan-300" /> },
+    { mode: "championship", label: "Championship", icon: <Trophy className="w-4 h-4 text-amber-400" /> },
   ];
+
 
 
   return (
@@ -101,6 +104,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Championship Quick Button */}
+            <button
+              onClick={() => onSelectMode("championship")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "championship"
+                  ? "bg-amber-950 text-amber-300 border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.4)]"
+                  : "bg-slate-900/90 text-amber-300 border-amber-500/40 hover:bg-amber-950/40"
+              }`}
+            >
+              <Trophy className="w-3.5 h-3.5 text-amber-400" />
+              <span>Championship</span>
+            </button>
+
             {/* Founder Hub Quick Button */}
             <button
               onClick={() => onSelectMode("founder")}
@@ -113,6 +129,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
               <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>Founder Mode</span>
             </button>
+
 
             {/* 3-Minute Guided Demo Launch Button */}
             <button
