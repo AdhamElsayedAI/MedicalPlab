@@ -2,13 +2,15 @@
 
 Enforces authentication, RBAC, tenant isolation, and subscription quotas before routing to Stage-F.
 Tracks end-to-end latency, token usage, cloud costs, and security audit trails.
+
+Demo/test mode may preserve the historical fallback response for backwards-compatible
+hackathon demos. Pilot/production modes fail closed when no real orchestrator is wired.
 """
 
 import json
 import time
 from typing import Any
 
-from medicalplab.stage_b.models import ContractError, require
 from .audit import AuditService
 from .database import DatabaseService
 from .models import (
@@ -17,6 +19,7 @@ from .models import (
     AuditEventType,
     UserRecord,
 )
+from .runtime import demo_fallbacks_allowed, get_runtime_mode
 from .security import PERM_AI_ASSIST, SecurityService
 from .usage import AIUsageTracker
 
@@ -31,12 +34,14 @@ class AIGateway:
         usage: AIUsageTracker,
         audit: AuditService,
         orchestrator: Any | None = None,
+        runtime_mode: str | None = None,
     ):
         self.db = db
         self.security = security
         self.usage = usage
         self.audit = audit
         self.orchestrator = orchestrator
+        self.runtime_mode = get_runtime_mode(runtime_mode)
 
     def process_request(
         self,
@@ -88,6 +93,35 @@ class AIGateway:
 
         input_tokens = max(1, len(input_text) // 4)
 
+        if self.orchestrator is None and not demo_fallbacks_allowed(self.runtime_mode):
+            elapsed_ms = (time.perf_counter() - start_time) * 1000.0
+            self.usage.record_usage(
+                tenant_id=user.tenant_id,
+                user_id=user.user_id,
+                request_type="unavailable",
+                stage_used="stage_f",
+                latency_ms=elapsed_ms,
+                success=False,
+                input_tokens=input_tokens,
+                output_tokens=0,
+                model_name=None,
+            )
+            return APIResponse(
+                status_code=503,
+                body=json.dumps(
+                    {
+                        "error": "AI runtime unavailable",
+                        "code": "AI_ORCHESTRATOR_NOT_CONFIGURED",
+                        "runtime_mode": self.runtime_mode.value,
+                        "message": (
+                            "Pilot/production mode requires a real AI orchestrator. "
+                            "Demo fallback generation is disabled."
+                        ),
+                        "latency_ms": round(elapsed_ms, 2),
+                    }
+                ),
+            )
+
         try:
             if self.orchestrator:
                 platform_response = self.orchestrator.handle_request(
@@ -99,17 +133,22 @@ class AIGateway:
                 explanation = platform_response.explanation
                 next_actions = list(platform_response.next_actions)
                 payload_data = dict(platform_response.payload)
+                model_name = getattr(platform_response, "model_name", None)
+                is_demo_fallback = False
             else:
+                # Backwards-compatible demo/test path only. Never used in pilot/production.
                 intent_str = "teaching"
                 explanation = f"AI assistant response for: {input_text}"
                 next_actions = ["Continue learning"]
-                payload_data = {"status": "ok"}
+                payload_data = {"status": "demo_fallback"}
+                model_name = None
+                is_demo_fallback = True
 
             output_text = f"{explanation} {' '.join(next_actions)}"
             output_tokens = max(1, len(output_text) // 4)
             elapsed_ms = (time.perf_counter() - start_time) * 1000.0
 
-            # 6. Record Usage Analytics
+            # 6. Record Usage Analytics. Demo fallback is explicitly tagged.
             self.usage.record_usage(
                 tenant_id=user.tenant_id,
                 user_id=user.user_id,
@@ -119,7 +158,7 @@ class AIGateway:
                 success=True,
                 input_tokens=input_tokens,
                 output_tokens=output_tokens,
-                model_name="qwen-2.5-7b-instruct",
+                model_name=model_name,
             )
 
             # 7. Record Security Audit Event
@@ -128,16 +167,25 @@ class AIGateway:
                 actor_id=user.user_id,
                 event_type=AuditEventType.AI_REQUEST,
                 action=f"AI Request: {intent_str}",
-                metadata={"tokens": str(input_tokens + output_tokens), "latency_ms": str(int(elapsed_ms))},
+                metadata={
+                    "tokens": str(input_tokens + output_tokens),
+                    "latency_ms": str(int(elapsed_ms)),
+                    "runtime_mode": self.runtime_mode.value,
+                    "demo_fallback": str(is_demo_fallback).lower(),
+                },
             )
 
-            response_body = json.dumps({
-                "intent": intent_str,
-                "explanation": explanation,
-                "payload": payload_data,
-                "next_actions": next_actions,
-                "latency_ms": round(elapsed_ms, 2),
-            })
+            response_body = json.dumps(
+                {
+                    "intent": intent_str,
+                    "explanation": explanation,
+                    "payload": payload_data,
+                    "next_actions": next_actions,
+                    "latency_ms": round(elapsed_ms, 2),
+                    "runtime_mode": self.runtime_mode.value,
+                    "demo_fallback": is_demo_fallback,
+                }
+            )
 
             return APIResponse(status_code=200, body=response_body)
 
@@ -152,6 +200,7 @@ class AIGateway:
                 success=False,
                 input_tokens=input_tokens,
                 output_tokens=0,
+                model_name=None,
             )
             return APIResponse(
                 status_code=500,
