@@ -43,7 +43,7 @@
 
 <br/>
 
-[**🌐 Live Enterprise Platform**](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com) • [**🚀 1-Click Vercel Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab) • [**🏛️ System Architecture**](#system-architecture) • [**🧠 How It Thinks**](#how-medicalplab-thinks) • [**🛡️ Trust Center**](#medicalplab-trust-center) • [**💼 Investor Vision**](#from-prototype-to-healthcare-company)
+[**🌐 Live Enterprise Platform**](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com) • [**🚀 1-Click Vercel Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab&root-directory=frontend) • [**🏛️ System Architecture**](#system-architecture) • [**🧠 How It Thinks**](#how-medicalplab-thinks) • [**🛡️ Trust Center**](#medicalplab-trust-center) • [**💼 Investor Vision**](#from-prototype-to-healthcare-company)
 
 </div>
 
@@ -596,7 +596,7 @@ npm run build
 - 🌐 **Primary Live Platform Gateway:** [https://020b49dfb5903dac-156-197-247-9.serveousercontent.com](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)  
   *(Public HTTPS gateway with zero-failover client-side resilient fallback)*
 - 🌐 **Alternative Live Mirror:** [https://cuddly-results-remain.loca.lt](https://cuddly-results-remain.loca.lt) *(Passcode: `156.197.247.9`)*
-- 🚀 **1-Click Cloud Deploy:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab)
+- 🚀 **1-Click Cloud Deploy:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab&root-directory=frontend)
 
 ---
 
