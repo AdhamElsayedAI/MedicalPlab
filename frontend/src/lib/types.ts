@@ -13,7 +13,8 @@ export type NavigationMode =
   | "championship"
   | "battle"
   | "validation"
-  | "grand_championship";
+  | "grand_championship"
+  | "global_intelligence";
 
 
 
