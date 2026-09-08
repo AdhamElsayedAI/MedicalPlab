@@ -7,7 +7,8 @@ export type NavigationMode =
   | "quiz"
   | "simulation"
   | "command_center"
-  | "admin";
+  | "admin"
+  | "investor";
 
 export interface OrganHotspot {
   id: string;

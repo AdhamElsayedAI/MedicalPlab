@@ -11,6 +11,7 @@ import { ClinicalMCQEngine } from "@/components/ClinicalMCQEngine";
 import { CaseSimulationRoom } from "@/components/CaseSimulationRoom";
 import { StudentCommandCenter } from "@/components/StudentCommandCenter";
 import { InstitutionAdminView } from "@/components/InstitutionAdminView";
+import { InvestorPitchView } from "@/components/InvestorPitchView";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
 import { NavigationMode, StudentMasteryProfile, UserRole } from "@/lib/types";
@@ -151,6 +152,8 @@ export default function Home() {
         )}
 
         {currentMode === "admin" && <InstitutionAdminView />}
+
+        {currentMode === "investor" && <InvestorPitchView />}
       </main>
 
       {/* Guided 3-Minute Demo Stepper HUD */}

@@ -39,6 +39,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "simulation", label: "Emergency Sim", icon: <Activity className="w-4 h-4" /> },
     { mode: "command_center", label: "Command Center", icon: <Terminal className="w-4 h-4" /> },
     { mode: "admin", label: "Admin Analytics", icon: <UserCheck className="w-4 h-4" /> },
+    { mode: "investor", label: "Investor Mode", icon: <ShieldCheck className="w-4 h-4 text-emerald-400" /> },
   ];
 
   return (
@@ -62,7 +63,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
                     MEDICAL<span className="text-cyan-400">PLAB</span>
                   </span>
                   <span className="px-1.5 py-0.5 text-[10px] font-mono tracking-widest uppercase bg-cyan-950/90 text-cyan-300 border border-cyan-500/40 rounded">
-                    STAGE-H v2.0
+                    STAGE-I PROD
                   </span>
                 </div>
                 <div className="text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
