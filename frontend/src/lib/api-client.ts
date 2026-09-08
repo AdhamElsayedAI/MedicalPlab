@@ -1,7 +1,7 @@
 import { ChatMessage, PatientCase, PLABQuestion, StudentMasteryProfile } from "./types";
 import { INITIAL_STUDENT_PROFILE, PLAB_QUESTIONS, DEMO_PATIENT_CASE } from "./demo-data";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
 
 class PlatformApiClient {
   private userId: string = "user_alice";
@@ -12,12 +12,37 @@ class PlatformApiClient {
     this.tenantId = tenantId;
   }
 
+  getBaseUrl(): string {
+    return API_BASE_URL;
+  }
+
   private getHeaders(): HeadersInit {
     return {
       "Content-Type": "application/json",
       "X-User-Id": this.userId,
       "X-Tenant-Id": this.tenantId,
     };
+  }
+
+  async checkHealth(): Promise<{ status: string; service: string; isOnline: boolean; uptime_seconds?: number }> {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
+    try {
+      const response = await fetch(`${API_BASE_URL}/health`, {
+        method: "GET",
+        headers: this.getHeaders(),
+        signal: controller.signal,
+      });
+      if (response.ok) {
+        const data = await response.json();
+        return { ...data, isOnline: true };
+      }
+    } catch (e) {
+      // Unreachable or offline
+    } finally {
+      clearTimeout(timeoutId);
+    }
+    return { status: "offline", service: "MedicalPlab API", isOnline: false };
   }
 
   async sendAIQuery(prompt: string): Promise<{
@@ -28,11 +53,14 @@ class PlatformApiClient {
     latency_ms: number;
     safety_validated: boolean;
   }> {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1500);
     try {
       const response = await fetch(`${API_BASE_URL}/ai/chat`, {
         method: "POST",
         headers: this.getHeaders(),
         body: JSON.stringify({ query: prompt }),
+        signal: controller.signal,
       });
 
       if (response.ok) {
@@ -43,10 +71,13 @@ class PlatformApiClient {
           next_actions: data.next_actions || ["Review Guideline", "Test Understanding"],
           latency_ms: data.latency_ms || 84.5,
           safety_validated: true,
+          citations: data.citations || [],
         };
       }
     } catch (e) {
-      // Graceful fallback to client-side clinical intelligence
+      // Graceful fallback to client-side clinical intelligence on network disconnect or timeout
+    } finally {
+      clearTimeout(timeoutId);
     }
 
     // High-fidelity clinical reasoning fallback
@@ -54,10 +85,13 @@ class PlatformApiClient {
   }
 
   async getStudentAnalytics(): Promise<StudentMasteryProfile> {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
     try {
       const response = await fetch(`${API_BASE_URL}/student/analytics`, {
         method: "GET",
         headers: this.getHeaders(),
+        signal: controller.signal,
       });
       if (response.ok) {
         const data = await response.json();
@@ -70,20 +104,27 @@ class PlatformApiClient {
       }
     } catch (e) {
       // Fallback
+    } finally {
+      clearTimeout(timeoutId);
     }
     return INITIAL_STUDENT_PROFILE;
   }
 
   async recordAttempt(topic: string, isCorrect: boolean): Promise<boolean> {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
     try {
       const response = await fetch(`${API_BASE_URL}/student/attempts`, {
         method: "POST",
         headers: this.getHeaders(),
         body: JSON.stringify({ topic, is_correct: isCorrect, time_spent_seconds: 28.0 }),
+        signal: controller.signal,
       });
       return response.ok;
     } catch (e) {
       return true;
+    } finally {
+      clearTimeout(timeoutId);
     }
   }
 

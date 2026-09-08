@@ -1,0 +1,40 @@
+# Git and CI/CD
+.git
+.gitignore
+.gitattributes
+.github
+
+# Virtual Environments
+.venv
+.stage_b_env
+venv
+ENV
+
+# Python bytecode and caches
+__pycache__
+*.py[cod]
+*$py.class
+.pytest_cache
+.ruff_cache
+build/
+dist/
+*.egg-info/
+
+# Frontend (deployed on Vercel)
+frontend/
+node_modules/
+
+# Notebooks and Experimental Data
+notebooks/
+runs/
+evaluation/
+tests/
+docs/
+
+# OS and IDE Files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
