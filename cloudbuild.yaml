@@ -1,0 +1,63 @@
+# Google Cloud Build Pipeline for MedicalPlab Production Cloud Run
+steps:
+  # Step 1: Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Build Container Image'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/medicalplab-api:$COMMIT_SHA'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/medicalplab-api:latest'
+      - '.'
+
+  # Step 2: Push container image with commit SHA tag
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Commit Image'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/medicalplab-api:$COMMIT_SHA'
+
+  # Step 3: Push container image with latest tag
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Latest Image'
+    args:
+      - 'push'
+      - 'gcr.io/$PROJECT_ID/medicalplab-api:latest'
+
+  # Step 4: Deploy container to Google Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy to Cloud Run'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'medicalplab-api'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/medicalplab-api:$COMMIT_SHA'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      - '--port'
+      - '8080'
+      - '--memory'
+      - '1Gi'
+      - '--cpu'
+      - '1'
+      - '--min-instances'
+      - '0'
+      - '--max-instances'
+      - '10'
+      - '--timeout'
+      - '300'
+      - '--set-env-vars'
+      - 'ALLOWED_ORIGINS=https://medical-plab.vercel.app'
+
+images:
+  - 'gcr.io/$PROJECT_ID/medicalplab-api:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/medicalplab-api:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
