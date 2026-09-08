@@ -13,7 +13,9 @@ import { StudentCommandCenter } from "@/components/StudentCommandCenter";
 import { InstitutionAdminView } from "@/components/InstitutionAdminView";
 import { InvestorPitchView } from "@/components/InvestorPitchView";
 import { FounderControlCenter } from "@/components/founder/FounderControlCenter";
+import { ChampionshipCommandCenter } from "@/components/championship/ChampionshipCommandCenter";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
+
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
 
 import { NavigationMode, StudentMasteryProfile, UserRole } from "@/lib/types";
@@ -160,7 +162,12 @@ export default function Home() {
         {currentMode === "founder" && (
           <FounderControlCenter onNavigateToMode={setCurrentMode} />
         )}
+
+        {currentMode === "championship" && (
+          <ChampionshipCommandCenter onNavigateToMode={setCurrentMode} />
+        )}
       </main>
+
 
 
       {/* Guided 3-Minute Demo Stepper HUD */}
