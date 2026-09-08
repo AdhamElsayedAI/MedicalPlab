@@ -8,7 +8,9 @@ export type NavigationMode =
   | "simulation"
   | "command_center"
   | "admin"
-  | "investor";
+  | "investor"
+  | "founder";
+
 
 export interface OrganHotspot {
   id: string;
@@ -136,3 +138,70 @@ export interface PipelineStageInfo {
   inputContract: string;
   outputContract: string;
 }
+
+// ==========================================
+// STAGE-J: FOUNDER MODE & COMPETITION LAYER
+// ==========================================
+
+export type MetricLabel = "Verified metric" | "Demo projection" | "Future target";
+
+export interface PitchMetric {
+  label: string;
+  value: string;
+  tag: MetricLabel;
+  detail: string;
+}
+
+export interface PitchSlide {
+  id: number;
+  title: string;
+  subtitle: string;
+  category: "Problem" | "Solution" | "Product" | "Market" | "Business" | "Vision";
+  bulletPoints: string[];
+  metrics: PitchMetric[];
+  speakerNotes: string;
+  targetDurationSeconds: number;
+}
+
+export interface JudgeQAItem {
+  id: string;
+  category: "Technical" | "Business";
+  question: string;
+  tags: string[];
+  executiveSummary: string; // 20-40s crisp spoken response in confident founder voice
+  technicalDeepDive: {
+    architecture: string;
+    activeStages: string[];
+    proofMetric: string;
+    codeContractOrLogic: string;
+  };
+  sampleJudgeFollowUp: string;
+  followUpDefense: string;
+}
+
+export interface CompetitiveDimension {
+  dimension: string;
+  description: string;
+  genericAI: { status: "fail" | "partial" | "pass"; details: string };
+  traditionalBanks: { status: "fail" | "partial" | "pass"; details: string };
+  medicalPlab: { status: "pass"; details: string };
+}
+
+export interface PreloadedDemoScenario {
+  id: string;
+  name: string;
+  condition: string;
+  system: string;
+  vitals: { hr: number; bp: string; spo2: number; rr: number; ecg: string };
+  interventions: { name: string; safe: boolean; feedback: string }[];
+  evidenceCitations: { source: string; quote: string; verified: boolean }[];
+}
+
+export type FounderSubTab =
+  | "pitch"
+  | "judge_qa"
+  | "demo_controller"
+  | "competitive"
+  | "business"
+  | "telemetry";
+
