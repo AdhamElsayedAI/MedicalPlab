@@ -52,28 +52,24 @@ class AIGateway:
         """Execute request through the security gateway to the AI core."""
         start_time = time.perf_counter()
 
-        # 1. User Authentication & Inactivity Check
         if not user.is_active:
             return APIResponse(
                 status_code=401,
                 body=json.dumps({"error": "User account is inactive or disabled"}),
             )
 
-        # 2. RBAC Permission Check
         if not self.security.has_permission(user.role, PERM_AI_ASSIST):
             return APIResponse(
                 status_code=403,
                 body=json.dumps({"error": f"Role '{user.role.value}' not authorized for AI assistance"}),
             )
 
-        # 3. Tenant Isolation Check
         if api_request.tenant_id and api_request.tenant_id != user.tenant_id:
             return APIResponse(
                 status_code=403,
                 body=json.dumps({"error": "Cross-tenant access forbidden"}),
             )
 
-        # 4. Subscription Quota Check
         used_today = self.usage.get_user_request_count(user.user_id)
         if not self.security.check_quota(user.tier, used_today):
             return APIResponse(
@@ -83,7 +79,6 @@ class AIGateway:
                 }),
             )
 
-        # 5. Forwarding to Stage-F Orchestrator
         input_text = api_request.body.strip()
         if not input_text:
             return APIResponse(
@@ -104,7 +99,7 @@ class AIGateway:
                 success=False,
                 input_tokens=input_tokens,
                 output_tokens=0,
-                model_name=None,
+                model_name="unconfigured",
             )
             return APIResponse(
                 status_code=503,
@@ -133,22 +128,20 @@ class AIGateway:
                 explanation = platform_response.explanation
                 next_actions = list(platform_response.next_actions)
                 payload_data = dict(platform_response.payload)
-                model_name = getattr(platform_response, "model_name", None)
+                model_name = getattr(platform_response, "model_name", "unconfigured") or "unconfigured"
                 is_demo_fallback = False
             else:
-                # Backwards-compatible demo/test path only. Never used in pilot/production.
                 intent_str = "teaching"
                 explanation = f"AI assistant response for: {input_text}"
                 next_actions = ["Continue learning"]
                 payload_data = {"status": "demo_fallback"}
-                model_name = None
+                model_name = "demo-fallback"
                 is_demo_fallback = True
 
             output_text = f"{explanation} {' '.join(next_actions)}"
             output_tokens = max(1, len(output_text) // 4)
             elapsed_ms = (time.perf_counter() - start_time) * 1000.0
 
-            # 6. Record Usage Analytics. Demo fallback is explicitly tagged.
             self.usage.record_usage(
                 tenant_id=user.tenant_id,
                 user_id=user.user_id,
@@ -161,7 +154,6 @@ class AIGateway:
                 model_name=model_name,
             )
 
-            # 7. Record Security Audit Event
             self.audit.record_event(
                 tenant_id=user.tenant_id,
                 actor_id=user.user_id,
@@ -172,6 +164,7 @@ class AIGateway:
                     "latency_ms": str(int(elapsed_ms)),
                     "runtime_mode": self.runtime_mode.value,
                     "demo_fallback": str(is_demo_fallback).lower(),
+                    "model_name": model_name,
                 },
             )
 
@@ -184,6 +177,7 @@ class AIGateway:
                     "latency_ms": round(elapsed_ms, 2),
                     "runtime_mode": self.runtime_mode.value,
                     "demo_fallback": is_demo_fallback,
+                    "model_name": model_name,
                 }
             )
 
@@ -200,7 +194,7 @@ class AIGateway:
                 success=False,
                 input_tokens=input_tokens,
                 output_tokens=0,
-                model_name=None,
+                model_name="unconfigured",
             )
             return APIResponse(
                 status_code=500,
