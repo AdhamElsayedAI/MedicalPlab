@@ -15,6 +15,7 @@ import { InvestorPitchView } from "@/components/InvestorPitchView";
 import { FounderControlCenter } from "@/components/founder/FounderControlCenter";
 import { ChampionshipCommandCenter } from "@/components/championship/ChampionshipCommandCenter";
 import { FinalBattleHub } from "@/components/battle/FinalBattleHub";
+import { ValidationHub } from "@/components/validation/ValidationHub";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
@@ -170,6 +171,10 @@ export default function Home() {
 
         {currentMode === "battle" && (
           <FinalBattleHub onNavigateToMode={setCurrentMode} />
+        )}
+
+        {currentMode === "validation" && (
+          <ValidationHub onNavigateToMode={setCurrentMode} />
         )}
       </main>
 
