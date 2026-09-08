@@ -16,6 +16,7 @@ import {
   Swords,
   TrendingUp,
   Crown,
+  Globe,
 } from "lucide-react";
 
 import { NavigationMode, UserRole } from "@/lib/types";
@@ -51,6 +52,7 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
     { mode: "battle", label: "Final Battle", icon: <Swords className="w-4 h-4 text-cyan-300" /> },
     { mode: "validation", label: "Impact & Validation", icon: <TrendingUp className="w-4 h-4 text-emerald-400" /> },
     { mode: "grand_championship", label: "Grand Championship", icon: <Crown className="w-4 h-4 text-amber-300" /> },
+    { mode: "global_intelligence", label: "Global Intelligence", icon: <Globe className="w-4 h-4 text-cyan-400" /> },
   ];
 
 
@@ -111,6 +113,19 @@ export const CyberHUDNav: React.FC<CyberHUDNavProps> = ({
 
           {/* Right Action Bar */}
           <div className="flex items-center gap-2.5">
+            {/* Stage-X Global Intelligence Visionary Layer Quick Button */}
+            <button
+              onClick={() => onSelectMode("global_intelligence")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
+                currentMode === "global_intelligence"
+                  ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-black border-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.7)] animate-pulse"
+                  : "bg-slate-900/90 text-cyan-300 border-cyan-500/50 hover:bg-cyan-950/40"
+              }`}
+            >
+              <Globe className="w-3.5 h-3.5 text-cyan-400" />
+              <span>Global Intel</span>
+            </button>
+
             {/* Grand Championship Quick Button */}
             <button
               onClick={() => onSelectMode("grand_championship")}

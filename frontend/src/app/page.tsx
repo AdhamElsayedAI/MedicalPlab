@@ -17,6 +17,7 @@ import { ChampionshipCommandCenter } from "@/components/championship/Championshi
 import { FinalBattleHub } from "@/components/battle/FinalBattleHub";
 import { ValidationHub } from "@/components/validation/ValidationHub";
 import { GrandChampionshipHub } from "@/components/grand_championship/GrandChampionshipHub";
+import GlobalIntelligenceHub from "@/components/global_intelligence/GlobalIntelligenceHub";
 import { HackathonDeepDiveModal } from "@/components/HackathonDeepDiveModal";
 
 import { INITIAL_STUDENT_PROFILE } from "@/lib/demo-data";
@@ -180,6 +181,10 @@ export default function Home() {
 
         {currentMode === "grand_championship" && (
           <GrandChampionshipHub onNavigateToMode={setCurrentMode} />
+        )}
+
+        {currentMode === "global_intelligence" && (
+          <GlobalIntelligenceHub />
         )}
       </main>
 
