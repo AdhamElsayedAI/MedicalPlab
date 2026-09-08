@@ -28,7 +28,7 @@
 [![Docker Ready](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](#contribution--development)
 [![Tests Passing](https://img.shields.io/badge/Tests-243%20Passing%20%5BVerified%5D-brightgreen?style=for-the-badge&logo=pytest&logoColor=white)](#contribution--development)
 
-[**Explore Live Demo**](https://ecfe1db1794f0967-156-197-247-9.serveousercontent.com) • [**1-Click Cloud Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab) • [**Architecture**](#architecture) • [**Clinical Safety**](#safety--trust) • [**Investor Cockpit**](#-from-medical-education-to-global-healthcare-intelligence)
+[**Explore Live Demo**](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com) • [**1-Click Cloud Deploy**](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab) • [**Architecture**](#architecture) • [**Clinical Safety**](#safety--trust) • [**Investor Cockpit**](#-from-medical-education-to-global-healthcare-intelligence)
 
 </div>
 
@@ -316,8 +316,8 @@ MedicalPlab has evolved through a disciplined, stage-gated engineering lifecycle
 Experience MedicalPlab directly through our live public deployment or run it locally in under 3 minutes:
 
 ### Live Public Links
-- 🌐 **Primary Live Public URL:** [https://ecfe1db1794f0967-156-197-247-9.serveousercontent.com](https://ecfe1db1794f0967-156-197-247-9.serveousercontent.com)  
-  *(Public HTTPS tunnel running live with full client-side resilient offline fallback)*
+- 🌐 **Primary Live Public URL:** [https://020b49dfb5903dac-156-197-247-9.serveousercontent.com](https://020b49dfb5903dac-156-197-247-9.serveousercontent.com)  
+  *(Live public HTTPS gateway with zero-failover client-side resilient fallback)*
 - 🌐 **Alternative Live Mirror:** [https://cuddly-results-remain.loca.lt](https://cuddly-results-remain.loca.lt) *(Tunnel Passcode: `156.197.247.9`)*
 - 🚀 **1-Click Cloud Deploy:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FAdhamElsayedAI%2FMedicalPlab)
 
