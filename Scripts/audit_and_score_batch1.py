@@ -2,6 +2,8 @@
 import json
 from pathlib import Path
 
+from medicalplab.plab.governance import question_content_hash
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 BATCH_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
 QUEUE_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1_review_queue.json"
@@ -57,6 +59,8 @@ def main():
 
         queue_item = {
             "question_id": qid,
+            "question_version": 1,
+            "question_content_sha256": question_content_hash(q),
             "specialty": q["specialty"],
             "topic": topic,
             "difficulty": q["difficulty"],
@@ -67,17 +71,21 @@ def main():
             "prescreen_score": total_score,
             "prescreen_priority": priority,
             "prescreen_rubric": rubric,
-            "human_review_status": "pending",
-            "human_reviewer": None,
-            "human_reviewed_at": None,
-            "human_clinical_correctness": None,
-            "human_sba_unambiguity": None,
-            "human_uk_alignment": None,
-            "human_evidence_entailment": None,
-            "human_distractor_quality": None,
-            "human_explanation_quality": None,
-            "human_comments": None,
-            "human_decision": None,
+            "review_status": "pending",
+            "clinical_correctness": None,
+            "sba_unambiguity": None,
+            "uk_alignment": None,
+            "evidence_adequacy": None,
+            "distractor_quality": None,
+            "explanation_quality": None,
+            "reviewer_id": None,
+            "reviewer_name": None,
+            "review_started_at": None,
+            "reviewed_at": None,
+            "review_comments": None,
+            "revision_notes": None,
+            "final_decision": None,
+            "revision_history": [],
             "golden_status": False
         }
         queue_items.append(queue_item)
@@ -98,7 +106,7 @@ def main():
     print(f"Successfully created review queue: {QUEUE_PATH}")
     print(f"Total queued: {len(queue_items)}")
     print(f"Pre-screen scores: Min={min(score_distribution)}, Max={max(score_distribution)}, Mean={sum(score_distribution)/len(score_distribution):.1f}")
-    print(f"All 36 questions are marked human_review_status = 'pending' and golden_status = False.")
+    print(f"All 36 questions are marked review_status = 'pending' and golden_status = False.")
 
 if __name__ == "__main__":
     main()
