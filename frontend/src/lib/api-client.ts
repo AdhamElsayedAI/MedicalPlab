@@ -3,7 +3,8 @@ import {
   PLABProgress,
   PLABQuestionPublic,
   StudentMasteryProfile,
-} from "./types";
+} from './types';
+import type { CourseLearningRequest, CourseLearningResponse, AnatomyCommandRequest, AnatomyCommandResponse } from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
@@ -236,6 +237,30 @@ class PlatformApiClient {
     return response.json();
   }
 
+  async queryCourseLearning(input: CourseLearningRequest): Promise<CourseLearningResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/learn/query`, {
+      method: "POST",
+      headers: this.getHeaders(),
+      body: JSON.stringify(input),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Course learning returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async sendAnatomyCommand(input: AnatomyCommandRequest): Promise<AnatomyCommandResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/anatomy/command`, {
+      method: "POST",
+      headers: this.getHeaders(),
+      body: JSON.stringify(input),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Anatomy command returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
   private fallbackClinicalAI(prompt: string) {
     const pLower = prompt.toLowerCase();
     let explanation = "";
@@ -283,3 +308,4 @@ class PlatformApiClient {
 }
 
 export const api = new PlatformApiClient();
+

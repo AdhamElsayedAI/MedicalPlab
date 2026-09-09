@@ -12,6 +12,8 @@ class AnatomyAction(str, Enum):
     ISOLATE = "isolate"
     GHOST = "ghost"
     RESET = "reset"
+    SHOW = "show"
+    HIDE = "hide"
 
 
 @dataclass(frozen=True)
@@ -34,5 +36,5 @@ class AnatomyCommand:
         if self.opacity is not None and not 0.05 <= self.opacity <= 1.0:
             raise ValueError("opacity must be between 0.05 and 1.0")
 
-        if self.action != AnatomyAction.GHOST and self.opacity is not None:
-            raise ValueError("opacity is only valid for ghost commands")
+        if self.action not in (AnatomyAction.GHOST, AnatomyAction.HIDE) and self.opacity is not None:
+            raise ValueError("opacity is only valid for ghost or hide commands")

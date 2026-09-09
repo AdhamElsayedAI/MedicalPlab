@@ -18,7 +18,9 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from medicalplab.plab.pilot import PLABPilotService
+from medicalplab.plab.data_manifest import verify_production_data_manifest
+from medicalplab.plab.pilot import PLABPilotService, PLABProductError
+from medicalplab.stage_g.product_api import get_plab_service
 from medicalplab.stage_g.product_api import configure_plab_service, router as product_router
 from medicalplab.stage_g.runtime import get_runtime_mode, runtime_metadata, strict_runtime_enabled
 
@@ -72,6 +74,52 @@ app.add_middleware(
 app.include_router(product_router)
 
 
+@app.get("/ready")
+def ready() -> dict[str, object]:
+    manifest = verify_production_data_manifest()
+    blockers: list[str] = list(manifest.blockers)
+
+    service = None
+    try:
+        service = get_plab_service()
+    except Exception as exc:
+        blockers.append(f"PLAB_SERVICE_UNAVAILABLE: {exc}")
+
+    gov: dict[str, int] = {}
+    if service is None:
+        blockers.append("PLAB_SERVICE_UNAVAILABLE")
+        gov = {"golden": 0, "pending": 0, "approved": 0}
+    else:
+        gov = service.governance_counts()
+        if gov.get("golden", 0) == 0:
+            blockers.append("NO_GOLDEN_QUESTIONS")
+
+    preview = os.environ.get("MEDICALPLAB_PLAB_PREVIEW_QA", "").strip().lower() in {"1", "true", "yes"}
+    engineering_ready = manifest.is_valid and (service is not None)
+    clinical_ready = gov.get("golden", 0) > 0
+    is_ready = engineering_ready and (clinical_ready or preview)
+
+    return {
+        "ready": is_ready,
+        "engineering_ready": engineering_ready,
+        "clinical_ready": clinical_ready,
+        "preview_qa": preview,
+        "runtime_mode": RUNTIME_MODE.value,
+        "service_initialized": service is not None,
+        "data_integrity": {
+            "valid": manifest.is_valid,
+            "data_root": manifest.data_root,
+            "document_count": manifest.document_count,
+            "chunk_count": manifest.chunk_count,
+            "question_count": manifest.question_count,
+            "batch_version": manifest.batch_version,
+            "snapshot_id": manifest.snapshot_id,
+        },
+        "governance": gov,
+        "blockers": list(dict.fromkeys(blockers)),
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, object]:
     return {
@@ -90,6 +138,7 @@ def root() -> dict[str, object]:
         "status": "healthy",
         "docs": "/docs",
         "health": "/health",
+        "ready": "/ready",
         "version_endpoint": "/api/v1/version",
         **runtime_metadata(RUNTIME_MODE),
     }

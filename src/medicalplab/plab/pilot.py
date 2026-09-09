@@ -25,6 +25,7 @@ from .governance import (
     question_content_hash,
 )
 from .models import PLABCitation, PLABChoice, PLABQuestion, PLABQuestionStatus
+from .persistence import SQLitePilotPersistence
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -146,6 +147,7 @@ class PLABPilotService:
         chunk_index: Mapping[str, Mapping[str, str]],
         batch_version: str,
         preview_qa: bool = False,
+        persistence: SQLitePilotPersistence | None = None,
     ):
         self.questions = {str(q["question_id"]): dict(q) for q in questions}
         review_payloads = {str(r["question_id"]): r for r in reviews}
@@ -166,12 +168,18 @@ class PLABPilotService:
         self.chunk_index = dict(chunk_index)
         self.batch_version = batch_version
         self.preview_qa = preview_qa
+        self.persistence = persistence
         self.revisions: dict[str, list[dict[str, object]]] = defaultdict(list)
         self.attempts: dict[tuple[str, str], dict[str, object]] = {}
         self.telemetry = PilotTelemetry()
 
     @classmethod
-    def load_default(cls, preview_qa: bool = False) -> "PLABPilotService":
+    def load_default(
+        cls,
+        preview_qa: bool = False,
+        persistence_path: Path | str | None = None,
+        enable_persistence: bool = True,
+    ) -> "PLABPilotService":
         data_root = Path(os.environ.get("MEDICALPLAB_DATA_ROOT", str(PROJECT_ROOT / "Data")))
         batch_path = data_root / "questions" / "cardiorespiratory_batch_1.json"
         queue_path = data_root / "questions" / "cardiorespiratory_batch_1_review_queue.json"
@@ -196,7 +204,36 @@ class PLABPilotService:
                 f"The verified PLAB corpus is unavailable or invalid: {exc}",
                 503,
             ) from exc
-        return cls(batch["questions"], queue["queue"], chunks, str(queue["batch_version"]), preview_qa)
+
+        persistence = None
+        if enable_persistence:
+            db_file = Path(persistence_path) if persistence_path else data_root / "persistence" / "pilot_store.db"
+            try:
+                persistence = SQLitePilotPersistence(db_file)
+            except Exception:
+                persistence = None
+
+        instance = cls(batch["questions"], queue["queue"], chunks, str(queue["batch_version"]), preview_qa, persistence=persistence)
+
+        if persistence:
+            try:
+                persisted_reviews = persistence.load_reviews()
+                for qid, record in persisted_reviews.items():
+                    if qid in instance.reviews:
+                        instance.reviews[qid] = record
+
+                persisted_revs, revised_questions = persistence.load_revisions()
+                for qid, revs in persisted_revs.items():
+                    instance.revisions[qid].extend(revs)
+                for qid, q_data in revised_questions.items():
+                    instance.questions[qid] = q_data
+
+                persisted_attempts = persistence.load_attempts()
+                instance.attempts.update(persisted_attempts)
+            except Exception:
+                pass
+
+        return instance
 
     def _promotion(self, question_id: str):
         payload = self.questions[question_id]
@@ -308,6 +345,11 @@ class PLABPilotService:
             }
             attempt["response"] = response
             self.attempts[key] = attempt
+            if self.persistence:
+                try:
+                    self.persistence.save_attempt(attempt)
+                except Exception:
+                    pass
             self.telemetry.attempts_submitted += 1
             self.telemetry.correct_attempts += int(is_correct)
             self.telemetry.topic_distribution[str(payload["topic"])] += 1
@@ -363,6 +405,11 @@ class PLABPilotService:
         if question_id not in self.reviews:
             raise PLABProductError("QUESTION_NOT_FOUND", "Question not found.", 404)
         self.reviews[question_id] = self.reviews[question_id].start(reviewer_id, reviewer_name)
+        if self.persistence:
+            try:
+                self.persistence.save_review(self.reviews[question_id])
+            except Exception:
+                pass
         return self.review_status(question_id)
 
     def submit_review(
@@ -389,6 +436,11 @@ class PLABPilotService:
             if not promotion.promoted:
                 raise PLABProductError("GOLDEN_PROMOTION_FAILED", ",".join(promotion.error_codes), 409)
             self.reviews[question_id] = replace(decided, golden_status=True)
+        if self.persistence:
+            try:
+                self.persistence.save_review(self.reviews[question_id])
+            except Exception:
+                pass
         return self.review_status(question_id)
 
     def revise_question(
@@ -417,19 +469,50 @@ class PLABPilotService:
             review_status=ReviewStatus.REVISED,
             revision_notes=revision_reason,
         )
+        if self.persistence:
+            try:
+                self.persistence.save_revision(revision, merged)
+                self.persistence.save_review(self.reviews[question_id])
+            except Exception:
+                pass
         return self.review_status(question_id)
 
     def review_status(self, question_id: str) -> dict[str, object]:
         if question_id not in self.reviews:
             raise PLABProductError("QUESTION_NOT_FOUND", "Question not found.", 404)
         record = asdict(self.reviews[question_id])
+        q = self.questions.get(question_id, {})
         return {
             **record,
             "review_status": self.reviews[question_id].review_status.value,
             "final_decision": self.reviews[question_id].final_decision.value if self.reviews[question_id].final_decision else None,
             **{dimension: getattr(self.reviews[question_id], dimension).value if getattr(self.reviews[question_id], dimension) else None for dimension in REVIEW_DIMENSIONS},
             **self.review_metadata.get(question_id, {}),
+            "stem": q.get("stem"),
+            "choices": q.get("choices"),
+            "correct_answer": q.get("correct_answer"),
+            "explanation": q.get("explanation"),
+            "citations": q.get("citations"),
+            "specialty": q.get("specialty"),
+            "topic": q.get("topic"),
+            "learning_objective": q.get("learning_objective"),
             "revision_history": self.revisions[question_id],
+        }
+
+    def check_promotion_eligibility(self, question_id: str) -> dict[str, object]:
+        if question_id not in self.questions:
+            raise PLABProductError("QUESTION_NOT_FOUND", "Question not found.", 404)
+        promotion = self._promotion(question_id)
+        review = self.reviews[question_id]
+        return {
+            "question_id": question_id,
+            "eligible": promotion.promoted,
+            "error_codes": list(promotion.error_codes),
+            "review_status": review.review_status.value,
+            "final_decision": review.final_decision.value if review.final_decision else None,
+            "golden_status": self.is_golden(question_id),
+            "question_version": review.question_version,
+            "question_content_sha256": review.question_content_sha256,
         }
 
     def governance_counts(self) -> dict[str, int]:

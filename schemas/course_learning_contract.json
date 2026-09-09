@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MedicalPlabCourseLearningContract",
+  "description": "API contracts for evidence-grounded course learning across medical modules.",
+  "type": "object",
+  "definitions": {
+    "CourseQueryRequest": {
+      "type": "object",
+      "required": ["course_id", "query"],
+      "properties": {
+        "course_id": {
+          "type": "string",
+          "description": "Identifier of the educational course/module (e.g. cardiorespiratory, urinary_renal)."
+        },
+        "query": {
+          "type": "string",
+          "description": "Student educational question or clinical concept."
+        },
+        "intent": {
+          "type": "string",
+          "enum": ["explain", "question", "compare", "check"],
+          "description": "Optional learning intent."
+        }
+      }
+    },
+    "StudentCitation": {
+      "type": "object",
+      "required": ["document_id", "title", "reference"],
+      "properties": {
+        "document_id": { "type": "string" },
+        "title": { "type": "string" },
+        "section": { "type": ["string", "null"] },
+        "reference": { "type": "string" }
+      }
+    },
+    "LearningCheck": {
+      "type": "object",
+      "required": ["stem", "choices", "correct_answer", "explanation", "learning_objective"],
+      "properties": {
+        "stem": { "type": "string" },
+        "choices": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": ["id", "text"],
+            "properties": {
+              "id": { "type": "string", "enum": ["A", "B", "C", "D", "E"] },
+              "text": { "type": "string" }
+            }
+          }
+        },
+        "correct_answer": { "type": "string", "enum": ["A", "B", "C", "D", "E"] },
+        "explanation": { "type": "string" },
+        "learning_objective": { "type": "string" }
+      }
+    },
+    "CourseQueryResponse": {
+      "type": "object",
+      "required": [
+        "course_id",
+        "query",
+        "grounding_status",
+        "citations",
+        "evidence_sufficiency_state",
+        "trace_id"
+      ],
+      "properties": {
+        "course_id": { "type": "string" },
+        "query": { "type": "string" },
+        "grounding_status": {
+          "type": "string",
+          "enum": ["GROUNDED", "INSUFFICIENT_EVIDENCE", "UNSUPPORTED", "DATA_SOURCE_MISSING"]
+        },
+        "answer": { "type": ["string", "null"] },
+        "explanation": { "type": ["string", "null"] },
+        "citations": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/StudentCitation" }
+        },
+        "evidence_sufficiency_score": { "type": ["number", "null"] },
+        "evidence_sufficiency_state": {
+          "type": "string",
+          "enum": ["SUFFICIENT", "INSUFFICIENT", "NO_EVIDENCE"]
+        },
+        "learning_check": {
+          "type": ["object", "null"],
+          "$ref": "#/definitions/LearningCheck"
+        },
+        "trace_id": { "type": "string" },
+        "warning": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

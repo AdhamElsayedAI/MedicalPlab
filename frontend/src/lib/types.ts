@@ -533,3 +533,70 @@ export interface JudgeImpactDefenseItem {
 
 
 
+
+// Course Learning & Anatomy AI Contracts (Mentor Specification)
+export interface StudentCitation {
+  document_id: string;
+  title: string;
+  section: string | null;
+  reference: string;
+}
+
+export interface LearningCheckChoice {
+  id: "A" | "B" | "C" | "D" | "E";
+  text: string;
+}
+
+export interface LearningCheck {
+  stem: string;
+  choices: LearningCheckChoice[];
+  correct_answer: "A" | "B" | "C" | "D" | "E";
+  explanation: string;
+  learning_objective: string;
+}
+
+export interface CourseLearningRequest {
+  course_id: string;
+  query: string;
+  intent?: "explain" | "question" | "compare" | "check";
+}
+
+export interface CourseLearningResponse {
+  course_id: string;
+  query: string;
+  grounding_status: "GROUNDED" | "INSUFFICIENT_EVIDENCE" | "UNSUPPORTED" | "DATA_SOURCE_MISSING";
+  answer: string | null;
+  explanation: string | null;
+  citations: StudentCitation[];
+  evidence_sufficiency_score: number | null;
+  evidence_sufficiency_state: "SUFFICIENT" | "INSUFFICIENT" | "NO_EVIDENCE";
+  learning_check: LearningCheck | null;
+  trace_id: string;
+  warning?: string | null;
+}
+
+export interface AnatomyCommandRequest {
+  query?: string;
+  action?: "focus" | "highlight" | "isolate" | "ghost" | "reset" | "show" | "hide";
+  structure_ids?: string[];
+  opacity?: number;
+}
+
+export interface AnatomyCommandResponse {
+  schema_version: string;
+  validated: boolean;
+  command: {
+    action: string;
+    structure_ids: string[];
+    opacity: number | null;
+  };
+  educational_context?: {
+    structure_id: string;
+    name?: string;
+    system?: string;
+    educational_summary?: string;
+    camera_target?: [number, number, number];
+    default_zoom?: number;
+    related_structures?: string[];
+  };
+}

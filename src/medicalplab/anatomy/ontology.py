@@ -23,7 +23,7 @@ MVP_STRUCTURES: tuple[AnatomyStructure, ...] = (
     AnatomyStructure("heart", "Heart", ("cardiac organ",), "cardiovascular"),
     AnatomyStructure("lad", "Left Anterior Descending Artery", ("left anterior descending", "lad artery", "anterior interventricular artery"), "cardiovascular", "heart", ("left_ventricle",)),
     AnatomyStructure("rca", "Right Coronary Artery", ("right coronary", "rca artery"), "cardiovascular", "heart", ("right_ventricle",)),
-    AnatomyStructure("lcx", "Left Circumflex Artery", ("circumflex artery", "left circumflex", "lcx artery"), "cardiovascular", "heart", ("left_atrium", "left_ventricle")),
+    AnatomyStructure("lcx", "Left Circumflex Artery", ("circumflex", "circumflex artery", "left circumflex", "lcx artery"), "cardiovascular", "heart", ("left_atrium", "left_ventricle")),
     AnatomyStructure("aorta", "Aorta", ("ascending aorta", "aortic root"), "cardiovascular", "heart"),
     AnatomyStructure("left_atrium", "Left Atrium", ("la",), "cardiovascular", "heart", ("mitral_valve",)),
     AnatomyStructure("right_atrium", "Right Atrium", ("ra",), "cardiovascular", "heart", ("right_ventricle",)),

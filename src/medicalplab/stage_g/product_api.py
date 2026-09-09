@@ -9,14 +9,17 @@ from __future__ import annotations
 
 import hmac
 import os
-from typing import Literal
+from typing import Any, Literal
 
 from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, Field
 
+from medicalplab.anatomy.agent import AnatomyAgentError, resolve_query_to_command
 from medicalplab.anatomy.commands import AnatomyAction, AnatomyCommand
 from medicalplab.anatomy.ontology import MVP_STRUCTURES
 from medicalplab.anatomy.validator import AnatomyCommandError, validate_anatomy_command
+from medicalplab.learn.models import CourseQueryRequest
+from medicalplab.learn.service import CourseLearningService
 from medicalplab.plab.governance import REVIEW_DIMENSIONS, ReviewDecision, ReviewFinding
 from medicalplab.plab.pilot import PLABPilotService, PLABProductError
 from medicalplab.stage_g.runtime import runtime_metadata
@@ -24,6 +27,7 @@ from medicalplab.stage_g.runtime import runtime_metadata
 
 router = APIRouter(prefix="/api/v1")
 _plab_service: PLABPilotService | None = None
+_course_learning_service: CourseLearningService | None = None
 
 
 def configure_plab_service(service: PLABPilotService | None) -> None:
@@ -38,6 +42,13 @@ def get_plab_service() -> PLABPilotService:
         preview = os.environ.get("MEDICALPLAB_PLAB_PREVIEW_QA", "").strip().lower() in {"1", "true", "yes"}
         _plab_service = PLABPilotService.load_default(preview_qa=preview)
     return _plab_service
+
+
+def get_course_learning_service() -> CourseLearningService:
+    global _course_learning_service
+    if _course_learning_service is None:
+        _course_learning_service = CourseLearningService()
+    return _course_learning_service
 
 
 def _product_error(exc: PLABProductError) -> HTTPException:
@@ -70,9 +81,16 @@ def _reviewer_identity(
 
 
 class AnatomyCommandRequest(BaseModel):
-    action: Literal["focus", "highlight", "isolate", "ghost", "reset"]
+    query: str | None = Field(default=None, max_length=1000)
+    action: Literal["focus", "highlight", "isolate", "ghost", "reset", "show", "hide"] | None = None
     structure_ids: list[str] = Field(default_factory=list, max_length=16)
     opacity: float | None = Field(default=None, ge=0.05, le=1.0)
+
+
+class CourseLearningQueryRequest(BaseModel):
+    course_id: str = Field(min_length=2, max_length=100)
+    query: str = Field(min_length=3, max_length=4000)
+    intent: Literal["explain", "question", "compare", "check"] | None = None
 
 
 class ClinicalReasonRequest(BaseModel):
@@ -146,6 +164,39 @@ def anatomy_structures() -> dict[str, object]:
 
 @router.post("/anatomy/command")
 def anatomy_command(request: AnatomyCommandRequest) -> dict[str, object]:
+    # 1. Natural language query resolution via Anatomy Agent
+    if request.query and request.query.strip():
+        try:
+            cmd, edu_ctx = resolve_query_to_command(request.query)
+            return {
+                "schema_version": cmd.schema_version,
+                "validated": True,
+                "command": {
+                    "action": cmd.action.value,
+                    "structure_ids": list(cmd.structure_ids),
+                    "opacity": cmd.opacity,
+                },
+                "educational_context": edu_ctx,
+            }
+        except AnatomyAgentError as exc:
+            raise HTTPException(
+                status_code=422,
+                detail={
+                    "code": "UNSUPPORTED_ANATOMY_REQUEST",
+                    "message": str(exc),
+                },
+            ) from exc
+
+    # 2. Direct typed command validation
+    if not request.action:
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "code": "MISSING_ACTION_OR_QUERY",
+                "message": "Either 'query' (natural language) or 'action' must be provided.",
+            },
+        )
+
     try:
         command = AnatomyCommand(
             action=AnatomyAction(request.action),
@@ -173,6 +224,19 @@ def anatomy_command(request: AnatomyCommandRequest) -> dict[str, object]:
     }
 
 
+@router.post("/learn/query")
+def course_learn_query(request: CourseLearningQueryRequest) -> dict[str, object]:
+    """Execute an evidence-grounded course learning query across medical tracks."""
+    service = get_course_learning_service()
+    req = CourseQueryRequest(
+        course_id=request.course_id,
+        query=request.query,
+        intent=request.intent,
+    )
+    res = service.query(req)
+    return res.to_dict()
+
+
 @router.post("/clinical/reason")
 def clinical_reason(_: ClinicalReasonRequest) -> None:
     raise HTTPException(
@@ -180,17 +244,6 @@ def clinical_reason(_: ClinicalReasonRequest) -> None:
         detail={
             "code": "CLINICAL_AI_NOT_CONFIGURED",
             "message": "Real clinical reasoning service is not wired to the Product API yet; no demo response was generated.",
-        },
-    )
-
-
-@router.post("/plab/question")
-def plab_question(_: PLABQuestionRequest) -> None:
-    raise HTTPException(
-        status_code=503,
-        detail={
-            "code": "PLAB_GENERATOR_NOT_CONFIGURED",
-            "message": "Evidence-grounded five-option PLAB generation is not wired to the Product API yet; no demo question was generated.",
         },
     )
 
@@ -286,6 +339,20 @@ def start_plab_review(
         raise HTTPException(422, detail={"code": str(exc), "message": "Review could not be started."}) from exc
 
 
+@router.get("/internal/plab/review/{question_id}/promotion-eligibility")
+def plab_promotion_eligibility(
+    question_id: str,
+    reviewer_id: str = Header(alias="X-User-Id"),
+    authorization: str | None = Header(default=None),
+    x_user_role: str | None = Header(default=None),
+) -> dict[str, object]:
+    _reviewer_identity(authorization, reviewer_id, x_user_role)
+    try:
+        return get_plab_service().check_promotion_eligibility(question_id)
+    except PLABProductError as exc:
+        raise _product_error(exc) from exc
+
+
 @router.post("/internal/plab/review/{question_id}/decision")
 def submit_plab_review(
     question_id: str,
@@ -329,3 +396,4 @@ def plab_telemetry(
     _reviewer_identity(authorization, reviewer_id, x_user_role)
     service = get_plab_service()
     return service.telemetry.snapshot(service.governance_counts())
+
