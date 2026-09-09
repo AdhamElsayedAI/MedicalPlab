@@ -1,0 +1,174 @@
+{
+  "corpus_id": "medicalplab-cardiorespiratory-corpus-v1",
+  "version": "1.0.0",
+  "created_at": "2026-09-09T03:27:37.295800+00:00",
+  "document_count": 13,
+  "total_chunks": 817,
+  "documents": [
+    {
+      "document_id": "DOC-WHO-CARD-0001",
+      "specialty": "cardiology",
+      "title": "Guideline for the pharmacological treatment of hypertension in adults",
+      "license_name": "CC BY-NC-SA 3.0 IGO",
+      "license_status": "conditional",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-WHO-CARD-0001.chunks.json",
+      "chunk_count": 83,
+      "chunks_sha256": "a84ad34a2b7e66cc165b3301b1f6d0ff1de3609334ab71a8f6ff47ab5aceb786",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0002",
+      "specialty": "cardiology",
+      "title": "Outpatient management of essential hypertension: a review based on the latest clinical guidelines",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0002.chunks.json",
+      "chunk_count": 144,
+      "chunks_sha256": "1845f390f095bd4c53f558576c9965495382eef4822dec02387ce4a62f81fd33",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0008",
+      "specialty": "cardiology",
+      "title": "Advances in Atrial Fibrillation Management: A Guide for General Internists",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0008.chunks.json",
+      "chunk_count": 42,
+      "chunks_sha256": "89fa22ffd17bb2dc6a0d1c59c5c445c6caa0f8aaeab72614b54f5ab5d9825301",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0009",
+      "specialty": "cardiology",
+      "title": "Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0009.chunks.json",
+      "chunk_count": 54,
+      "chunks_sha256": "c5d9a8d1556d79453c5bc99e99ce7fec3a08fe934f087d91bbbe4a9452320d41",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0003",
+      "specialty": "respiratory_medicine",
+      "title": "Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0003.chunks.json",
+      "chunk_count": 64,
+      "chunks_sha256": "b74e4a51e5aede2e41f8ac627db3eed6ea6df42714255cd05c92801c4a15c49d",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-EMERG-0001",
+      "specialty": "emergency_medicine",
+      "title": "Cardiopulmonary Resuscitation: Clinical Updates and Perspectives",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\emergency_medicine\\DOC-PMC-EMERG-0001.chunks.json",
+      "chunk_count": 11,
+      "chunks_sha256": "b818b59b85ce13cb36d4944cc3b7695f2ca18fd859c72c9f53a0f7ae1467488f",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0004",
+      "specialty": "respiratory_medicine",
+      "title": "Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0004.chunks.json",
+      "chunk_count": 58,
+      "chunks_sha256": "c9d40acc922efa2a78f072cbd5c046a678d64160569d22337787eee6cf8e4f73",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0005",
+      "specialty": "respiratory_medicine",
+      "title": "Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0005.chunks.json",
+      "chunk_count": 38,
+      "chunks_sha256": "e9559a614664aa7731a6ad4137e8502d2dd3ebc03edd70bbc3399b21e87d8b9c",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0010",
+      "specialty": "cardiology",
+      "title": "Management of cardiogenic shock: a narrative review",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0010.chunks.json",
+      "chunk_count": 77,
+      "chunks_sha256": "13fce0136cdc72d19228575d263b42348e188ead8e3d1b21e13be4bee351b25c",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0011",
+      "specialty": "cardiology",
+      "title": "Native Infective Endocarditis: A State-of-the-Art-Review",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0011.chunks.json",
+      "chunk_count": 85,
+      "chunks_sha256": "f68ad8c3aee8f495ce1d722bb5240270471f5c67474d54996333852c2d33cb9c",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0012",
+      "specialty": "cardiology",
+      "title": "Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0012.chunks.json",
+      "chunk_count": 69,
+      "chunks_sha256": "c0c5fb99b9a6917ec83780aa812e9c672c739be9642416a53bb5bd8de974561a",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0013",
+      "specialty": "cardiology",
+      "title": "Diagnostic Challenges in Aortic Stenosis",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0013.chunks.json",
+      "chunk_count": 62,
+      "chunks_sha256": "7ee814bff044e82c8584ddb658e7762f6836f24076c856037ad898a8a9aac2cf",
+      "ingestion_status": "verified_local"
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0014",
+      "specialty": "cardiology",
+      "title": "Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our Road Map for the Appropriate Strategy",
+      "license_name": "CC BY 4.0",
+      "license_status": "approved",
+      "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0014.chunks.json",
+      "chunk_count": 30,
+      "chunks_sha256": "be86e4a7cf022676bfad11b477051a0dc9bab49cbf193e28fdb57ee60f43728c",
+      "ingestion_status": "verified_local"
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "DOC-PMC-CARD-0003_to_0007",
+      "reason": "Wave 1 PMC artifacts missing locally in current workspace - preserved as NOT VERIFIED"
+    },
+    {
+      "id": "DOC-PMC-RESP-0001_to_0002",
+      "reason": "Wave 1 RESP artifacts missing locally in current workspace - preserved as NOT VERIFIED"
+    },
+    {
+      "id": "SRC-NICE-*",
+      "reason": "NICE guidelines excluded from production RAG ingestion per license terms - REFERENCE_ONLY"
+    },
+    {
+      "id": "SRC-RCUK-ALS-2025",
+      "reason": "RCUK guidelines excluded per licensing policy - REFERENCE_ONLY"
+    },
+    {
+      "id": "SRC-BTS-PLEURAL-2023",
+      "reason": "BTS guidelines excluded per licensing policy - REFERENCE_ONLY"
+    }
+  ]
+}
