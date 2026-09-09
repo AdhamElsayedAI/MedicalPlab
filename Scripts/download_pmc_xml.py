@@ -2,6 +2,7 @@ import argparse
 import hashlib
 import json
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from xml.etree import ElementTree
@@ -59,6 +60,36 @@ def load_manifest() -> list[dict[str, Any]]:
     raise ValueError(
         "Unsupported document manifest structure."
     )
+
+
+def record_download_provenance(
+    document_id: str,
+    sha256: str,
+    retrieved_at: str,
+) -> None:
+    """Persist immutable acquisition metadata without changing manifest shape."""
+    with MANIFEST_PATH.open("r", encoding="utf-8") as file:
+        payload = json.load(file)
+
+    if isinstance(payload, list):
+        documents = payload
+    elif isinstance(payload, dict) and isinstance(payload.get("documents"), list):
+        documents = payload["documents"]
+    else:
+        raise ValueError("Unsupported document manifest structure.")
+
+    for document in documents:
+        if isinstance(document, dict) and document.get("document_id") == document_id:
+            document["sha256"] = sha256
+            document["retrieved_at"] = retrieved_at
+            document["ingestion_status"] = "downloaded"
+            break
+    else:
+        raise ValueError(f"Document not found: {document_id}")
+
+    with MANIFEST_PATH.open("w", encoding="utf-8") as file:
+        json.dump(payload, file, indent=2, ensure_ascii=False)
+        file.write("\n")
 
 
 def find_document(
@@ -319,6 +350,16 @@ def main() -> None:
         content
     )
 
+    retrieved_at = datetime.now(
+        timezone.utc
+    ).isoformat()
+
+    record_download_provenance(
+        args.document_id,
+        digest,
+        retrieved_at,
+    )
+
     print(
         "\nPMC XML ACQUIRED ✅"
     )
@@ -333,6 +374,10 @@ def main() -> None:
 
     print(
         f"SHA256  : {digest}"
+    )
+
+    print(
+        f"UTC     : {retrieved_at}"
     )
 
     print(

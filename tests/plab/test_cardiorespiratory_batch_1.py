@@ -6,6 +6,7 @@ are 100% grounded in verified corpus chunks, and cover all 12 UK topics.
 """
 
 from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 import unittest
@@ -23,6 +24,9 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 BATCH_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
 SNAPSHOT_PATH = (
     PROJECT_ROOT / "Data" / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
+)
+MANIFEST_PATH = (
+    PROJECT_ROOT / "Data" / "metadata" / "cardiorespiratory_batch_1_v1.manifest.json"
 )
 
 EXPECTED_TOPICS = {
@@ -73,6 +77,20 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
         self.assertEqual(self.batch_data.get("topics_covered"), 12)
         self.assertEqual(self.batch_data.get("questions_per_topic"), 3)
         self.assertEqual(len(self.batch_data["questions"]), 36)
+
+    def test_frozen_manifest_matches_batch_bytes_and_lifecycle(self):
+        with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
+            manifest = json.load(f)
+
+        actual_sha256 = hashlib.sha256(BATCH_PATH.read_bytes()).hexdigest()
+        self.assertEqual(manifest["batch_file_sha256"], actual_sha256)
+        self.assertEqual(manifest["total_questions"], len(self.batch_data["questions"]))
+        self.assertEqual(
+            manifest["question_ids"],
+            [question["question_id"] for question in self.batch_data["questions"]],
+        )
+        self.assertEqual(manifest["human_review_status"], "PENDING")
+        self.assertFalse(manifest["golden_dataset_status"])
 
     def test_all_12_topics_represented_equally(self):
         topics = [q["topic"] for q in self.batch_data["questions"]]
