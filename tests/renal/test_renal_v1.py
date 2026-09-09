@@ -37,6 +37,12 @@ def test_frozen_corpus_and_licenses_resolve():
     assert all(item["rag_ingestion_decision"] is True for item in licenses)
     assert all(item["commercial_use"] is True for item in licenses)
     assert all(item["license"].startswith("CC BY") for item in licenses)
+    for item in licenses:
+        raw = DATA / "raw" / "renal_v1" / f"{item['document_id']}.xml"
+        assert hashlib.sha256(raw.read_bytes()).hexdigest() == item["sha256"]
+
+    report = ROOT / snapshot["benchmark_report"]
+    assert hashlib.sha256(report.read_bytes()).hexdigest() == snapshot["benchmark_report_sha256"]
 
 
 def test_benchmark_is_single_run_and_sba_gate_is_closed():
