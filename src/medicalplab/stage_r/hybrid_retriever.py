@@ -11,6 +11,7 @@ from typing import Sequence
 
 from medicalplab.stage_b.models import require
 from medicalplab.stage_b.evidence_policy import normalize
+from medicalplab.stage_g.runtime import get_runtime_mode, strict_runtime_enabled
 from .models import (
     EvidenceBlock,
     EvidenceCandidate,
@@ -147,6 +148,15 @@ class HybridRetriever:
             isinstance(alpha, (int, float)) and 0.0 <= alpha <= 1.0,
             "'alpha' must be between 0.0 and 1.0",
         )
+        if strict_runtime_enabled():
+            if dense_retriever is None:
+                raise ValueError(
+                    f"In strict runtime mode ({get_runtime_mode().value}), dense_retriever must be explicitly provided. Silent fallback to StubDenseRetriever is forbidden."
+                )
+            if isinstance(dense_retriever, StubDenseRetriever):
+                raise ValueError(
+                    f"StubDenseRetriever cannot be used in strict runtime mode ({get_runtime_mode().value}). Fail closed."
+                )
         self.dense_retriever = dense_retriever or StubDenseRetriever()
         self.sparse_retriever = SparseBM25Retriever()
         self.alpha = float(alpha)

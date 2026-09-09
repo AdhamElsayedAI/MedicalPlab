@@ -9,6 +9,7 @@ from typing import Sequence
 import uuid
 
 from medicalplab.stage_b.models import require, strings
+from medicalplab.stage_g.runtime import get_runtime_mode, strict_runtime_enabled
 from .context_compressor import ContextCompressor
 from .evidence_builder import build_evidence_packet
 from .hybrid_retriever import DenseRetrieverInterface, HybridRetriever
@@ -17,6 +18,7 @@ from .models import (
     EvidencePacket,
     RetrievalQuery,
 )
+from .qwen3_dense_retriever import Qwen3DenseRetriever
 from .query_expansion import expand_query
 from .reranker import MedicalReranker, RerankerInterface
 
@@ -31,9 +33,16 @@ class StageRPipeline:
         alpha: float = 0.5,
         top_k: int = 5,
         compress: bool = True,
+        use_neural_dense: bool = False,
     ):
         require(0.0 <= alpha <= 1.0, "'alpha' must be between 0.0 and 1.0")
         require(top_k >= 1, "'top_k' must be >= 1")
+
+        if dense_retriever is None:
+            if strict_runtime_enabled():
+                dense_retriever = Qwen3DenseRetriever(fallback_to_stub=False)
+            elif use_neural_dense:
+                dense_retriever = Qwen3DenseRetriever(fallback_to_stub=True)
 
         self.retriever = HybridRetriever(dense_retriever=dense_retriever, alpha=alpha)
         self.reranker = reranker or MedicalReranker()

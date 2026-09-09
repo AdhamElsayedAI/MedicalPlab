@@ -1,0 +1,91 @@
+{
+  "benchmark_id": "medicalplab-heldout-retrieval-comparison-v1",
+  "timestamp": "2026-09-09T03:43:42.507244+00:00",
+  "evaluation_set": {
+    "eval_set_id": "medicalplab-retrieval-multisource-heldout-v1",
+    "version": "1.0.0",
+    "answerable_queries": 20
+  },
+  "corpus": {
+    "version": "1.0.0",
+    "snapshot_id": "medicalplab-cardiorespiratory-corpus-v1",
+    "documents_evaluated": [
+      "DOC-WHO-CARD-0001",
+      "DOC-PMC-CARD-0002"
+    ],
+    "chunk_count": 227
+  },
+  "model": {
+    "dense_model": "Qwen/Qwen3-Embedding-0.6B",
+    "device": "cpu",
+    "model_load_seconds": 6.33,
+    "corpus_encode_seconds": 352.33
+  },
+  "summary_metrics": {
+    "bm25_only": {
+      "hit@1": 0.75,
+      "hit@3": 0.85,
+      "hit@5": 0.9,
+      "recall@1": 0.7,
+      "recall@3": 0.775,
+      "recall@5": 0.825,
+      "recall@10": 0.9,
+      "mrr": 0.8112,
+      "ndcg@10": 0.806,
+      "authority_accuracy": 0.75,
+      "latency_ms": 4.27
+    },
+    "dense_only": {
+      "hit@1": 0.9,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@1": 0.8,
+      "recall@3": 0.975,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "mrr": 0.9417,
+      "ndcg@10": 0.9442,
+      "authority_accuracy": 1.0,
+      "latency_ms": 772.86
+    },
+    "bm25_dense_blend": {
+      "hit@1": 0.85,
+      "hit@3": 0.95,
+      "hit@5": 1.0,
+      "recall@1": 0.8,
+      "recall@3": 0.875,
+      "recall@5": 0.925,
+      "recall@10": 0.975,
+      "mrr": 0.8958,
+      "ndcg@10": 0.9007,
+      "authority_accuracy": 1.0,
+      "latency_ms": 0.22
+    },
+    "hybrid_weighted_rrf": {
+      "hit@1": 0.85,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@1": 0.8,
+      "recall@3": 0.925,
+      "recall@5": 0.95,
+      "recall@10": 0.975,
+      "mrr": 0.9083,
+      "ndcg@10": 0.9088,
+      "authority_accuracy": 1.0,
+      "latency_ms": 0.03
+    },
+    "hybrid_medical_reranker": {
+      "hit@1": 0.6,
+      "hit@3": 0.8,
+      "hit@5": 0.95,
+      "recall@1": 0.575,
+      "recall@3": 0.725,
+      "recall@5": 0.85,
+      "recall@10": 0.925,
+      "mrr": 0.737,
+      "ndcg@10": 0.7655,
+      "authority_accuracy": 0.75,
+      "latency_ms": 5.02
+    }
+  }
+}

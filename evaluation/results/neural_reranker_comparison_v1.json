@@ -1,0 +1,66 @@
+{
+  "benchmark_id": "medicalplab-reranker-decision-v1",
+  "timestamp": "2026-09-09T03:52:27.557303+00:00",
+  "evaluation_set": {
+    "eval_set_id": "medicalplab-retrieval-multisource-heldout-v1",
+    "version": "1.0.0",
+    "answerable_queries": 20
+  },
+  "corpus": {
+    "snapshot_id": "medicalplab-cardiorespiratory-corpus-v1",
+    "document_count": 2,
+    "chunk_count": 227
+  },
+  "models": {
+    "dense_retriever": "Qwen/Qwen3-Embedding-0.6B",
+    "neural_reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "device": "cpu"
+  },
+  "metrics": {
+    "non_reranked_hybrid_rrf": {
+      "hit@1": 0.85,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "recall@1": 0.8,
+      "recall@3": 0.925,
+      "recall@5": 0.95,
+      "recall@10": 0.975,
+      "mrr": 0.9083,
+      "ndcg@10": 0.9088,
+      "authority_accuracy": 1.0,
+      "latency_mean_ms": 749.83,
+      "latency_p50_ms": 751.52,
+      "latency_p95_ms": 937.97
+    },
+    "heuristic_medical_reranker": {
+      "hit@1": 0.25,
+      "hit@3": 0.55,
+      "hit@5": 0.8,
+      "recall@1": 0.2,
+      "recall@3": 0.475,
+      "recall@5": 0.725,
+      "recall@10": 0.85,
+      "mrr": 0.4617,
+      "ndcg@10": 0.5214,
+      "authority_accuracy": 0.5,
+      "latency_mean_ms": 752.99,
+      "latency_p50_ms": 754.2,
+      "latency_p95_ms": 942.37
+    },
+    "neural_cross_encoder": {
+      "hit@1": 0.65,
+      "hit@3": 0.7,
+      "hit@5": 0.8,
+      "recall@1": 0.575,
+      "recall@3": 0.65,
+      "recall@5": 0.75,
+      "recall@10": 0.925,
+      "mrr": 0.7089,
+      "ndcg@10": 0.7394,
+      "authority_accuracy": 0.5,
+      "latency_mean_ms": 1504.57,
+      "latency_p50_ms": 1524.24,
+      "latency_p95_ms": 2021.17
+    }
+  }
+}

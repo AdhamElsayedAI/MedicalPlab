@@ -26,6 +26,7 @@ from .hybrid_retriever import (
     SparseBM25Retriever,
     StubDenseRetriever,
 )
+from .qwen3_dense_retriever import Qwen3DenseRetriever
 from .reranker import (
     MedicalReranker,
     RerankerInterface,
@@ -65,6 +66,7 @@ __all__ = [
     "HybridRetriever",
     "SparseBM25Retriever",
     "StubDenseRetriever",
+    "Qwen3DenseRetriever",
     # Reranking
     "MedicalReranker",
     "RerankerInterface",
