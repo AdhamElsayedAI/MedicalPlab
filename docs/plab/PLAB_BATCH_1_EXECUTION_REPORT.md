@@ -1,9 +1,9 @@
 # MedicalPlab Cardiorespiratory PLAB 1 SBA Batch 1 Execution Report
 
-**Batch Identifier:** `cardiorespiratory_batch_1`  
+**Batch Identifier:** `cardiorespiratory_batch_1_v1`  
 **Date:** 2026-09-09  
 **Branch:** `ai-data-execution-v1`  
-**Status:** **APPROVED & FULLY VERIFIED** ✅  
+**Status:** **AUTOMATED VALIDATION PASSED — PENDING CLINICAL HUMAN REVIEW** ⏳  
 **Corpus Baseline:** `medicalplab-cardiorespiratory-corpus-v1` (13 documents, 817 chunks)  
 **Total Questions Generated & Validated:** 36 questions  
 **Batch Output File:** [`Data/questions/cardiorespiratory_batch_1.json`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/Data/questions/cardiorespiratory_batch_1.json)  
@@ -13,15 +13,15 @@
 
 ## 1. Executive Summary
 
-This report documents the successful generation, validation, and freezing of the first production-grade **Cardiorespiratory Single Best Answer (SBA) question batch** for MedicalPlab. 
-All 36 questions were developed under strict GMC PLAB 1 / UK MLA standards and are 100% grounded in verified evidence from the frozen 817-chunk cardiorespiratory corpus.
+This report documents the generation, automated contract validation, and initial evidence-linkage verification of the first **Cardiorespiratory Single Best Answer (SBA) question batch** for MedicalPlab. 
+All 36 questions were developed to conform to the GMC PLAB 1 / UK MLA five-option single-best-answer format and were verified against locally cached chunks from the frozen 817-chunk cardiorespiratory corpus snapshot.
 
-Key Quality Milestones:
+Key Validation Milestones:
 1. **12 Mapped UK Topics Covered:** Exactly 3 single-best-answer questions per topic across all 12 topics verified in [`PLAB_UK_GROUND_TRUTH_12_TOPIC_GATE.md`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/docs/plab/PLAB_UK_GROUND_TRUTH_12_TOPIC_GATE.md).
-2. **PLAB 1 Contract Adherence:** Every question contains exactly five choices (A, B, C, D, E), a single best answer, distinct and clinically plausible distractors, a clinical vignette stem (>=8 words), and a comprehensive rationale (>=8 words).
-3. **100% Verbatim Evidence Grounding:** Every question is linked to at least one locally verified chunk with an exact verbatim quote matching the underlying chunk text. Zero hallucination.
-4. **UK Statutory Reconciliation:** Strict reconciliation with NICE, RCUK, BTS, FICM, and BSAC clinical practice guidelines.
-5. **Balanced Answer Key Distribution:** Eliminated option-order bias through balanced distribution:
+2. **PLAB 1 Contract Adherence:** Every question contains exactly five choices (A, B, C, D, E), a single best answer pointer, distinct distractor texts, a clinical vignette stem (>=8 words), and a detailed educational explanation (>=8 words).
+3. **Automated Evidence Linkage (36/36 PASS):** 36/36 questions passed automated evidence-linkage validation with exact verbatim citation matching against the 817-chunk local corpus snapshot. Exact citation matching confirms evidence linkage; it does not substitute for independent clinical review.
+4. **UK Clinical Authority Reconciliation:** Structured clinical propositions were cross-referenced against authoritative UK clinical references (NICE, RCUK, BTS, FICM, and BSAC).
+5. **Balanced Answer Key Distribution:** Designed to prevent option-position bias:
    - **A:** 8 (22.2%)
    - **B:** 7 (19.4%)
    - **C:** 7 (19.4%)
@@ -32,7 +32,7 @@ Key Quality Milestones:
 
 ## 2. Topic Distribution & Evidence Attribution Matrix
 
-| # | Topic | Questions | Specialty | Supporting Document(s) | Primary Cited Chunk(s) | UK Statutory Authority | Key Clinical Reconciliation Point |
+| # | Topic | Questions | Specialty | Supporting Document(s) | Primary Cited Chunk(s) | UK Clinical Authority / Reference | Key Clinical Reconciliation Point |
 |---|---|---|---|---|---|---|---|
 | 1 | **Hypertension (Essential & Secondary)** | `PLAB-CARD-0001`<br>`PLAB-CARD-0002`<br>`PLAB-CARD-0003` | Cardiology | `DOC-WHO-CARD-0001`<br>`DOC-PMC-CARD-0002` | `DOC-WHO-CARD-0001-B0001-C01`<br>`DOC-PMC-CARD-0002-B0003-C01`<br>`DOC-WHO-CARD-0001-B0001-C03` | NICE NG136 | Step 1 CCB for age >=55 or Black-African/Caribbean; aldosterone/renin ratio for suspected Conn's with hypokalemia; Step 2 ACEi+CCB combination. |
 | 2 | **Atrial Fibrillation** | `PLAB-CARD-0004`<br>`PLAB-CARD-0005`<br>`PLAB-CARD-0006` | Cardiology | `DOC-PMC-CARD-0008` | `DOC-PMC-CARD-0008-B0015-C01`<br>`DOC-PMC-CARD-0008-B0018-C01`<br>`DOC-PMC-CARD-0008-B0011-C01` | NICE NG196 | CHA2DS2-VASc score determines DOAC indication (score >=1 men, >=2 women); standard beta-blockers 1st-line rate control; smoking/alcohol lifestyle intervention reduces recurrence. |
@@ -63,4 +63,5 @@ The generated batch was subjected to two levels of automated testing:
 1. **Script Validation:** `Scripts/generate_cardiorespiratory_plab_batch1.py` executes `validate_plab_question` across all 36 questions with exact evidence texts retrieved directly from the corpus snapshot. Result: **36/36 PASS**.
 2. **Automated Unit Testing:** `pytest tests/plab/test_cardiorespiratory_batch_1.py` runs a 4-test suite checking metadata, complete 12-topic coverage, balanced answer keys, and end-to-end evidence grounding. Result: **4/4 PASS** in 0.08s.
 
-The question batch is ready for immediate deployment, tutor integration, and student evaluation.
+The question batch has passed all automated contract and evidence-linkage validation checks and is now queued for independent human medical review. It is NOT yet approved as Golden.
+

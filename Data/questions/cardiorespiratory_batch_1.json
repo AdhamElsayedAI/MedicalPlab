@@ -1,11 +1,11 @@
 {
-  "batch_id": "cardiorespiratory_batch_1",
+  "batch_id": "cardiorespiratory_batch_1_v1",
   "title": "MedicalPlab UK PLAB 1 SBA Cardiorespiratory Question Batch 1",
   "corpus_version": "medicalplab-cardiorespiratory-corpus-v1",
   "total_questions": 36,
   "topics_covered": 12,
   "questions_per_topic": 3,
-  "status": "APPROVED",
+  "status": "AUTOMATED_VALIDATION_PASSED_PENDING_HUMAN_REVIEW",
   "questions": [
     {
       "question_id": "PLAB-CARD-0001",
@@ -45,7 +45,7 @@
           "quote": "Hypertension can be defined using specific systolic and diastolic blood pressure levels or reported use of antihypertensive medications."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -86,7 +86,7 @@
           "quote": "Hypertension can be divided into two major categories: essential (or primary) hypertension and secondary hypertension"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -127,7 +127,7 @@
           "quote": "Although several countries and professional societies have guidelines on the topic of hypertension, these are specific to the population of that particular country or the specific setting or constituency of the professional society."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -168,7 +168,7 @@
           "quote": "Several clinical risk scores have been developed to assess stroke risk in patients with AF, with each offering unique advantages and considerations for clinical use."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -209,7 +209,7 @@
           "quote": "Commonly used medications for rate control include atrio-ventricular (AV) nodal blockers, such as beta-blockers or calcium channel blockers (CCBs)"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -250,7 +250,7 @@
           "quote": "Smoking and excessive alcohol consumption both adversely affect AF outcomes. Smoking is associated with an increased risk for post-ablation AF recurrence and worse cardiovascular outcomes in patients"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -291,7 +291,7 @@
           "quote": "Orthostatic syncope refers to a TLOC resulting from a postural decrease in BP. It can occur with or without premonitory symptoms (e.g., dizziness, asthenia, fatigue, palpitations, sweating, visual and"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -332,7 +332,7 @@
           "quote": "Distinguishing between the cardiac and non-cardiac causes of syncope is critical to performing proper risk stratification and guiding diagnostic and therapeutic management."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -373,7 +373,7 @@
           "quote": "Asystole > 3 s and/or a fall in BP > 50 mmHg after CSM suggests carotid sinus syndrome [ 68 ]."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -414,7 +414,7 @@
           "quote": "Preventing and managing exacerbations is crucial in COPD care to reduce disease progression, hospitalizations, and mortality rates."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -455,7 +455,7 @@
           "quote": "Patients with fewer frequent exacerbations are managed with long-acting muscarinic antagonists (LAMA), long-acting beta-agonists (LABA)"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -496,7 +496,7 @@
           "quote": "Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition’s heterogeneity"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -537,7 +537,7 @@
           "quote": "Cardiopulmonary resuscitation (CPR) stands as a cornerstone in emergency care, representing the crucial link between life and death for victims of cardiac arrest."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -578,7 +578,7 @@
           "quote": "Effective CPR is an arduous task that requires skill, precision, and quick decision making—it is a stressful task per se."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -619,7 +619,7 @@
           "quote": "Post-resuscitation care plays a crucial role in neurological outcome and overall recovery. As the incidence of OHCA is high and the survival rate is low, it remains a challenge to"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -660,7 +660,7 @@
           "quote": "Several studies indicate that observation alone is sufficient for the management of stable pneumothorax."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -701,7 +701,7 @@
           "quote": "The incidence of primary spontaneous pneumothorax (PSP) admissions is 14.1 per 100,000 people age 15 years and older, with a higher rate for males (20.8) than females (7.6)"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -742,7 +742,7 @@
           "quote": "For PSP, Brown et al. [ 11 ] evaluated the observation approach in comparison to interventional treatment. It was a multicenter, open-label, non-inferiority trial."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -783,7 +783,7 @@
           "quote": "ARDS severity is assessed by the degree of hypoxemia, quantified by the ratio of arterial partial pressure of oxygen (PaO 2 ) to the fraction of inspired oxygen (FiO 2 ) as per the Berlin criteria, which"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -824,7 +824,7 @@
           "quote": "In moderate–severe ARDS patients, respiratory management is similar for ARDS from all causes including COVID-19 ( Figure 2 ) [ 26 , 40 , 48 , 75 , 79 , 91 ]."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -865,7 +865,7 @@
           "quote": "prone positioning is being increasingly used to improve oxygenation in spontaneously-breathing non-intubated patients with hypoxemic respiratory failure"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -906,7 +906,7 @@
           "quote": "Indications: First-line vasopressor in cardiogenic shock"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -947,7 +947,7 @@
           "quote": "Indications: First-line inotropic agent in cardiogenic shock"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -988,7 +988,7 @@
           "quote": "The cornerstone of treatment that improved CS prognosis in AMI patients is emergent coronary revascularization (or Percutaneous Coronary Intervention PCI) in patients with coronary"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1029,7 +1029,7 @@
           "quote": "Blood cultures represent a crucial diagnostic tool for the identification and treatment of infective endocarditis. Moreover, they fulfill a primary criterion established by the Duke criteria."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1070,7 +1070,7 @@
           "quote": "In the case where transesophageal echocardiography (TEE) is more sensitive than transthoracic echocardiography (TTE) for identifying valvular vegetations and periannular complications of NVE, TEE should be employed as the initial diagnostic tool."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1111,7 +1111,7 @@
           "quote": "The requisite momentum for the production of biofilms and the impact of these on the maturation of antibiotic tolerance have been the subject of study."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1152,7 +1152,7 @@
           "quote": "Implantable cardiac devices are at the forefront of managing tachy-arrhythmias, brady-arrhythmias and heart failure with concomitant conduction disease."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1193,7 +1193,7 @@
           "quote": "Right ventricular apical pacing (RVAP) is the most common ventricular pacing site. However, it can be associated with ventricular desynchrony, pacing induced cardiomyopathy and impaired ventricular function [ 1 ]."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1234,7 +1234,7 @@
           "quote": "In a 2022 meta-analysis comparing HBP to right ventricular pacing (RVP), Abdin et al . [ 13 ] found that HBP was associated with a lower risk of heart failure hospitalisation, new AF"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1275,7 +1275,7 @@
           "quote": "Aortic stenosis (AS) is the most prevalent degenerative valvular disease in western countries."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1316,7 +1316,7 @@
           "quote": "Aortic stenosis (AS) is a relevant entity in daily practice due to several factors. It is the most common heart valve disease in developed nations [ 1 ], with an increased occurrence in the elderly (10–15% of individuals over 80 years of age)"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1357,7 +1357,7 @@
           "quote": "Regarding transcatheter aortic valve replacement (TAVR), CT is the reference technique for procedural planning."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1398,7 +1398,7 @@
           "quote": "The optimal surgical approach for the treatment of FMR remains a controversial topic. In contrast to degenerative mitral regurgitation, in which mitral valve repair is highly recommended, current guidelines for FMR suggest that the surgical approach"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1439,7 +1439,7 @@
           "quote": "Objectives: The optimal surgical approach for the treatment of functional mitral regurgitation (FMR) remains controversial. Current guidelines suggest that the surgical approach has to be tailored to the individual patient."
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     },
     {
@@ -1480,7 +1480,7 @@
           "quote": "Despite concerns that the presumed high MR recurrence rate has a negative impact on survival, several studies reported a higher survival rate in patients who underwent MV repair for functional MR"
         }
       ],
-      "status": "approved",
+      "status": "needs_review",
       "schema_version": "plab-question-v1"
     }
   ]

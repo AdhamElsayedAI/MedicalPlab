@@ -65,8 +65,11 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
                 }
 
     def test_batch_metadata_and_structure(self):
-        self.assertEqual(self.batch_data.get("batch_id"), "cardiorespiratory_batch_1")
-        self.assertEqual(self.batch_data.get("status"), "APPROVED")
+        self.assertEqual(self.batch_data.get("batch_id"), "cardiorespiratory_batch_1_v1")
+        self.assertEqual(
+            self.batch_data.get("status"),
+            "AUTOMATED_VALIDATION_PASSED_PENDING_HUMAN_REVIEW",
+        )
         self.assertEqual(self.batch_data.get("topics_covered"), 12)
         self.assertEqual(self.batch_data.get("questions_per_topic"), 3)
         self.assertEqual(len(self.batch_data["questions"]), 36)
@@ -113,7 +116,7 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
                 learning_objective=q_data["learning_objective"],
                 difficulty=q_data["difficulty"],
                 citations=citations,
-                status=PLABQuestionStatus(q_data.get("status", "approved")),
+                status=PLABQuestionStatus(q_data.get("status", "needs_review")),
                 schema_version=q_data.get("schema_version", "plab-question-v1"),
             )
 

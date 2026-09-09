@@ -1391,7 +1391,7 @@ def main() -> None:
                 learning_objective=item["learning_objective"],
                 difficulty=item["difficulty"],
                 citations=citations,
-                status=PLABQuestionStatus.APPROVED,
+                status=PLABQuestionStatus.NEEDS_REVIEW,
                 schema_version="plab-question-v1",
             )
         except Exception as e:
@@ -1440,13 +1440,13 @@ def main() -> None:
     # Serialize to JSON
     QUESTIONS_DIR.mkdir(parents=True, exist_ok=True)
     serialized_batch = {
-        "batch_id": "cardiorespiratory_batch_1",
+        "batch_id": "cardiorespiratory_batch_1_v1",
         "title": "MedicalPlab UK PLAB 1 SBA Cardiorespiratory Question Batch 1",
         "corpus_version": "medicalplab-cardiorespiratory-corpus-v1",
         "total_questions": len(validated_questions),
         "topics_covered": 12,
         "questions_per_topic": 3,
-        "status": "APPROVED",
+        "status": "AUTOMATED_VALIDATION_PASSED_PENDING_HUMAN_REVIEW",
         "questions": [
             {
                 "question_id": q.question_id,

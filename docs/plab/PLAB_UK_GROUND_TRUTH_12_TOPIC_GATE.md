@@ -3,13 +3,13 @@
 **Corpus Baseline:** `medicalplab-cardiorespiratory-corpus-v1` (13 documents, 817 chunks)  
 **Status:** VERIFIED FOR PRODUCTION GATE  
 **Date:** 2026-09-09  
-**Policy Reminder:** Authority ≠ Ingestion Permission. All UK statutory clinical guidelines (NICE, RCUK, BTS, FICM, BSAC) remain **REFERENCE-ONLY** (no unauthorized ingestion into RAG chunk stores). Supporting evidence is provided by locally verified CC BY 4.0 PMC documents and WHO open-access guidance. When an open-access PMC text differs from current UK statutory practice, UK statutory guidance controls clinical reconciliation.
+**Policy Reminder:** Authority ≠ Ingestion Permission. All UK clinical guidelines and reference authorities (NICE, RCUK, BTS, FICM, BSAC) remain **REFERENCE-ONLY** (no unauthorized ingestion into RAG chunk stores). Supporting evidence is provided by locally verified CC BY 4.0 PMC documents and WHO open-access guidance. When an open-access PMC text differs from current UK clinical practice, authoritative UK guidance controls clinical reconciliation.
 
 ---
 
 ## 1. Explicit 12-Topic UK Clinical Ground-Truth Table
 
-| # | Topic | MLA / PLAB Relevance | UK Authority | Guideline / Identifier | Current / Version Date | Freshness Status | Reference-Only vs Ingestible | Supporting Locally Verified Documents | Coverage Status | Clinical Caveats & Conflict Reconciliation |
+| # | Topic | MLA / PLAB Relevance | UK Clinical Authority | Guideline / Identifier | Current / Version Date | Freshness Status | Reference-Only vs Ingestible | Supporting Locally Verified Documents | Coverage Status | Clinical Caveats & Conflict Reconciliation |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 1 | **Hypertension (Essential & Secondary)** | GMC Domain 6 (P0); core outpatient & acute blood pressure management. | NICE | NICE NG136 (*Hypertension in adults: diagnosis and management*) | Aug 2019, updated Nov 2023 | CURRENT (2026 active) | **REFERENCE-ONLY** (NICE copyright / licence restricted) | `DOC-WHO-CARD-0001` (83 chunks), `DOC-PMC-CARD-0002` (144 chunks) | **FULL** (227 chunks) | **NICE Stepped Care Rule:** Step 1 is ACEi/ARB for age <55 non-black-African/African-Caribbean, CCB for age ≥55 or black-African/African-Caribbean. ABPM/HBPM ≥135/85 mmHg defines Stage 1 HTN in UK (WHO/global literature often cites office 140/90). UK threshold & stepped algorithm strictly govern answer reconciliation. |
 | 2 | **Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)** | GMC Domain 6 (P0); acute & chronic arrhythmia management, stroke prevention. | NICE | NICE NG196 (*Atrial fibrillation: diagnosis and management*) | Apr 2021 | CURRENT (2026 active) | **REFERENCE-ONLY** | `DOC-PMC-CARD-0008` (42 chunks) | **FULL** (42 chunks) | **Anticoagulation Scoring Rule:** NICE mandates CHA₂DS₂-VASc (DOAC 1st-line for men score ≥1, women score ≥2). NICE mandates **ORBIT** bleeding risk tool instead of HAS-BLED. Rate control (beta-blocker or diltiazem/verapamil) is 1st-line unless reversible cause or heart failure. |
@@ -29,7 +29,7 @@
 ## 2. Topic Coverage & Evidence Readiness Summary
 
 - **Total Mapped Topics:** 12
-- **UK Statutory References Documented:** 12 (NICE: 7, RCUK: 2, BTS: 1, FICM/ICS: 1, BSAC/NICE: 1)
+- **UK Clinical References Documented:** 12 (NICE: 7, RCUK: 2, BTS: 1, FICM/ICS: 1, BSAC/NICE: 1)
 - **Licensing Compliance:** 100% compliant. Zero unauthorized ingestion of Crown/NICE/RCUK/BTS text.
 - **Locally Verified Supporting Evidence:** 817 chunks across 13 open-access CC BY 4.0 / CC BY-NC-SA 3.0 IGO documents.
 - **UK-Best-Practice Reconciliation Guardrails:** Embedded into question validation pipeline. Any clinical divergence between PMC international discussion and UK NICE/RCUK guidance is automatically resolved in favor of current UK practice.

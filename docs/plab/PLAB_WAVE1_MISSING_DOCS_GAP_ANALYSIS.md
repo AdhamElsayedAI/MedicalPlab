@@ -53,6 +53,6 @@ In Wave 2, 11 new open-access PMC documents were ingested through the JATS pipel
      - Mitral Regurgitation (30 chunks)
 2. **Current Controlled PLAB Generation Strategy:**
    - The first 30–40 question batch will be strictly generated from the **12 strongly supported topics** above.
-   - Topics with evidence gaps (e.g. Asthma, PE, acute CAP, chronic HF) will be held back from question generation until Wave 3, ensuring 100% evidence grounding and zero hallucination.
+   - Topics with evidence gaps (e.g. Asthma, PE, acute CAP, chronic HF) will be held back from question generation until Wave 3, ensuring verified evidence grounding against local corpus chunks.
 3. **Wave 3 Roadmap:**
    - After completing the 817-chunk benchmark, evidence calibration, and initial 30-40 question batch, ingesting clean, open-access, CC BY 4.0 PMC sources for the 7 gaps identified above will complete full Cardiorespiratory coverage.
