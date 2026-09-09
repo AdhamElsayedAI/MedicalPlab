@@ -1,4 +1,9 @@
-import { StudentMasteryProfile } from "./types";
+import {
+  PLABEvaluationResult,
+  PLABProgress,
+  PLABQuestionPublic,
+  StudentMasteryProfile,
+} from "./types";
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
@@ -173,6 +178,62 @@ class PlatformApiClient {
     } finally {
       clearTimeout(timeoutId);
     }
+  }
+
+  async getPLABQuestions(): Promise<PLABQuestionPublic[]> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/plab/questions`, {
+      method: "GET",
+      headers: this.getHeaders(),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`PLAB questions returned HTTP ${response.status}.`);
+    }
+    const body = await response.json();
+    return Array.isArray(body.items) ? body.items : [];
+  }
+
+  async getPLABQuestion(questionId: string): Promise<PLABQuestionPublic> {
+    const response = await fetch(
+      `${API_BASE_URL}/api/v1/plab/questions/${encodeURIComponent(questionId)}`,
+      { method: "GET", headers: this.getHeaders() }
+    );
+    if (!response.ok) {
+      throw new ApiUnavailableError(`PLAB question returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async evaluatePLABAnswer(input: {
+    questionId: string;
+    selectedOption: "A" | "B" | "C" | "D" | "E";
+    idempotencyKey: string;
+    responseTimeMs?: number;
+  }): Promise<PLABEvaluationResult> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/plab/evaluate`, {
+      method: "POST",
+      headers: this.getHeaders(),
+      body: JSON.stringify({
+        question_id: input.questionId,
+        selected_option: input.selectedOption,
+        idempotency_key: input.idempotencyKey,
+        response_time_ms: input.responseTimeMs,
+      }),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`PLAB evaluation returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async getPLABProgress(): Promise<PLABProgress> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/plab/progress`, {
+      method: "GET",
+      headers: this.getHeaders(),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`PLAB progress returned HTTP ${response.status}.`);
+    }
+    return response.json();
   }
 
   private fallbackClinicalAI(prompt: string) {

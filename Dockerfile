@@ -15,6 +15,7 @@ RUN useradd -m -u 1000 appuser
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PORT=8080 \
+    MEDICALPLAB_RUNTIME_MODE=production \
     PYTHONPATH=/app/src:/app
 
 # Install python dependencies
@@ -26,7 +27,7 @@ RUN grep -v "^-e" requirements.txt > requirements-prod.txt && \
 # Copy application source code and schemas
 COPY src/ src/
 COPY schemas/ schemas/
-COPY main.py ./
+COPY main.py production_main.py ./
 
 # Install medicalplab package
 RUN pip install --no-cache-dir --no-deps -e .
@@ -43,4 +44,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:${PORT:-8080}/health || exit 1
 
 # Start Uvicorn gateway bound to 0.0.0.0 and dynamic $PORT
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8080}"]
+CMD ["sh", "-c", "uvicorn production_main:app --host 0.0.0.0 --port ${PORT:-8080}"]

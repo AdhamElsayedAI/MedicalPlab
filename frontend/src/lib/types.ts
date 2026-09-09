@@ -76,6 +76,47 @@ export interface PLABQuestion {
   difficulty: "Novice" | "Developing" | "Competent" | "Mastery";
 }
 
+/** Student-safe API contract. It deliberately cannot contain answers or explanations. */
+export interface PLABQuestionPublic {
+  question_id: string;
+  stem: string;
+  options: { id: "A" | "B" | "C" | "D" | "E"; text: string }[];
+  topic: string;
+  specialty?: string;
+  difficulty: "easy" | "medium" | "hard";
+  question_version: number;
+  content_mode: "GOLDEN" | "PREVIEW_QA";
+  warning: string | null;
+}
+
+export interface PLABEvaluationResult {
+  attempt_id: string;
+  correct: boolean;
+  selected_answer: "A" | "B" | "C" | "D" | "E";
+  correct_answer: "A" | "B" | "C" | "D" | "E";
+  explanation: string;
+  citations: { document_id: string; reference: string }[];
+  topic: string;
+  learning_feedback: string;
+  question_version: number;
+  content_mode: "GOLDEN" | "PREVIEW_QA";
+}
+
+export interface PLABProgress {
+  user_id: string;
+  question_count: number;
+  total_attempts?: number;
+  correct_attempts?: number;
+  overall_accuracy: number | null;
+  recent_accuracy: number | null;
+  first_attempt_accuracy?: number | null;
+  question_completion?: number;
+  topic_accuracy: Record<string, number>;
+  weak_topics: string[];
+  strongest_topics: string[];
+  mastery_model: "descriptive_attempt_metrics";
+}
+
 export interface PatientCase {
   id: string;
   title: string;

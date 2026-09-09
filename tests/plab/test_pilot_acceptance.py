@@ -205,3 +205,134 @@ def test_golden_promotion_fails_without_completed_clinician_review():
     configured = service()
     assert configured.is_golden("PLAB-TEST-0001") is False
     assert configured.governance_counts()["golden"] == 0
+
+
+def test_version_endpoint_works(client):
+    response = client.get("/api/v1/version")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["api_version"] == "v1"
+    assert "runtime_mode" in data
+
+
+def test_golden_promotion_rejects_missing_reviewer_id():
+    configured = service(approved=True)
+    review = configured.reviews["PLAB-TEST-0001"]
+    broken_review = review.__class__(
+        **{**review.__dict__, "reviewer_id": None}
+    )
+    configured.reviews["PLAB-TEST-0001"] = broken_review
+    assert configured.is_golden("PLAB-TEST-0001") is False
+    res = configured._promotion("PLAB-TEST-0001")
+    assert "reviewer_missing" in res.error_codes
+
+
+def test_golden_promotion_rejects_missing_review_timestamp():
+    configured = service(approved=True)
+    review = configured.reviews["PLAB-TEST-0001"]
+    broken_review = review.__class__(
+        **{**review.__dict__, "reviewed_at": None}
+    )
+    configured.reviews["PLAB-TEST-0001"] = broken_review
+    assert configured.is_golden("PLAB-TEST-0001") is False
+    res = configured._promotion("PLAB-TEST-0001")
+    assert "review_timestamp_missing" in res.error_codes
+
+
+def test_golden_promotion_rejects_changed_content_after_review():
+    configured = service(approved=True)
+    # Mutate question content after approval
+    configured.questions["PLAB-TEST-0001"]["stem"] = "Altered stem that has not been clinician-approved."
+    assert configured.is_golden("PLAB-TEST-0001") is False
+    res = configured._promotion("PLAB-TEST-0001")
+    assert "question_changed_after_review" in res.error_codes
+
+
+def test_missing_corpus_fails_closed(monkeypatch):
+    monkeypatch.setenv("MEDICALPLAB_DATA_ROOT", "C:/non_existent_data_directory_for_fail_closed_test")
+    from medicalplab.plab.pilot import PLABProductError
+    with pytest.raises(PLABProductError) as exc_info:
+        PLABPilotService.load_default()
+    assert exc_info.value.status_code == 503
+    assert exc_info.value.code == "PLAB_CONTENT_UNAVAILABLE"
+
+
+def test_question_revision_increments_version_and_resets_approval():
+    configured = service(approved=True)
+    assert configured.is_golden("PLAB-TEST-0001") is True
+    assert configured.reviews["PLAB-TEST-0001"].question_version == 1
+
+    revised_status = configured.revise_question(
+        question_id="PLAB-TEST-0001",
+        updated={"stem": "Updated stem with improved clinical phrasing."},
+        revision_reason="Refined clinical vignette clarity.",
+        editor_id="CLINICAL-EDITOR-1",
+    )
+    assert revised_status["question_version"] == 2
+    assert revised_status["review_status"] == "revised"
+    assert revised_status["golden_status"] is False
+    assert configured.is_golden("PLAB-TEST-0001") is False
+    assert len(revised_status["revision_history"]) == 1
+
+
+def test_progress_tracks_first_attempt_accuracy_and_completion():
+    configured = service(approved=True)
+    # First attempt: wrong
+    configured.evaluate(
+        user_id="user-analytics-1",
+        question_id="PLAB-TEST-0001",
+        selected_option="B",
+        idempotency_key="attempt-1",
+    )
+    # Second attempt on same question: correct
+    configured.evaluate(
+        user_id="user-analytics-1",
+        question_id="PLAB-TEST-0001",
+        selected_option="A",
+        idempotency_key="attempt-2",
+    )
+    prog = configured.progress("user-analytics-1")
+    assert prog["total_attempts"] == 2
+    assert prog["correct_attempts"] == 1
+    assert prog["overall_accuracy"] == 0.5
+    # First attempt was wrong (0.0)
+    assert prog["first_attempt_accuracy"] == 0.0
+    assert prog["question_completion"] == 1.0
+
+
+def test_reviewer_authorized_workflow(client, monkeypatch):
+    configured = service()
+    configure_plab_service(configured)
+    monkeypatch.setenv("MEDICALPLAB_INTERNAL_REVIEW_TOKEN", "valid-reviewer-token")
+    headers = {
+        "Authorization": "Bearer valid-reviewer-token",
+        "X-User-Id": "DR-EXAMINER-1",
+        "X-User-Role": "DOCTOR",
+    }
+    # 1. Start review
+    start_resp = client.post(
+        "/api/v1/internal/plab/review/PLAB-TEST-0001/start",
+        headers=headers,
+        json={"reviewer_name": "Dr. Examiner"},
+    )
+    assert start_resp.status_code == 200
+    assert start_resp.json()["review_status"] == "in_review"
+
+    # 2. Submit rejection
+    reject_resp = client.post(
+        "/api/v1/internal/plab/review/PLAB-TEST-0001/decision",
+        headers=headers,
+        json={
+            "final_decision": "REJECT",
+            "clinical_correctness": "fail",
+            "sba_unambiguity": "fail",
+            "uk_alignment": "fail",
+            "evidence_adequacy": "fail",
+            "distractor_quality": "fail",
+            "explanation_quality": "fail",
+            "review_comments": "Vignette does not meet PLAB standard.",
+        },
+    )
+    assert reject_resp.status_code == 200
+    assert reject_resp.json()["review_status"] == "rejected"
+    assert reject_resp.json()["golden_status"] is False

@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    startCommand: uvicorn production_main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     autoDeploy: true
     envVars:
@@ -13,3 +13,9 @@ services:
         value: 8000
       - key: ALLOWED_ORIGINS
         value: https://medical-plab.vercel.app,http://localhost:3000
+      - key: MEDICALPLAB_RUNTIME_MODE
+        value: production
+      - key: MEDICALPLAB_DATA_ROOT
+        value: /data
+      - key: MEDICALPLAB_PLAB_PREVIEW_QA
+        value: "false"

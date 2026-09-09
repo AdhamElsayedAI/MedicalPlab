@@ -55,3 +55,5 @@ bundle_fix/
 node_modules/
 .next/
 *.tsbuildinfo
+.pytest_local/
+.pytest_tmp/

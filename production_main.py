@@ -13,11 +13,13 @@ from __future__ import annotations
 
 import os
 import time
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from medicalplab.stage_g.product_api import router as product_router
+from medicalplab.plab.pilot import PLABPilotService
+from medicalplab.stage_g.product_api import configure_plab_service, router as product_router
 from medicalplab.stage_g.runtime import get_runtime_mode, runtime_metadata, strict_runtime_enabled
 
 
@@ -30,12 +32,26 @@ if not strict_runtime_enabled(RUNTIME_MODE):
 
 APP_START_TIME = time.time()
 
+
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    preview = os.environ.get("MEDICALPLAB_PLAB_PREVIEW_QA", "").strip().lower() in {"1", "true", "yes"}
+    try:
+        configure_plab_service(PLABPilotService.load_default(preview_qa=preview))
+    except PLABProductError:
+        configure_plab_service(None)
+    try:
+        yield
+    finally:
+        configure_plab_service(None)
+
 app = FastAPI(
     title="MedicalPlab Product API",
     description="Fail-closed MedicalPlab API for pilot and production clients",
     version="1.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
+    lifespan=lifespan,
 )
 
 allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "")

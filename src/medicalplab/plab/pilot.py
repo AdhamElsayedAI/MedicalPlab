@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 import uuid
 from collections import Counter, defaultdict
 from dataclasses import asdict, replace
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Mapping
 
@@ -26,9 +28,6 @@ from .models import PLABCitation, PLABChoice, PLABQuestion, PLABQuestionStatus
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
-DEFAULT_BATCH_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
-DEFAULT_QUEUE_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1_review_queue.json"
-DEFAULT_SNAPSHOT_PATH = PROJECT_ROOT / "Data" / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
 
 
 class PLABProductError(RuntimeError):
@@ -97,6 +96,7 @@ class PilotTelemetry:
         self.unsupported_query_count = 0
         self.retrieval_latencies_ms: list[float] = []
         self.evidence_outcomes: Counter[str] = Counter()
+        self.topic_distribution: Counter[str] = Counter()
 
     def record_request(self, started: float, success: bool) -> None:
         self.request_count += 1
@@ -132,6 +132,7 @@ class PilotTelemetry:
                 "questions_served": self.questions_served,
                 "attempts_submitted": self.attempts_submitted,
                 "answer_accuracy": self.correct_attempts / self.attempts_submitted if self.attempts_submitted else None,
+                "topic_distribution": dict(self.topic_distribution),
             },
             "content_governance": dict(governance),
         }
@@ -171,13 +172,18 @@ class PLABPilotService:
 
     @classmethod
     def load_default(cls, preview_qa: bool = False) -> "PLABPilotService":
+        data_root = Path(os.environ.get("MEDICALPLAB_DATA_ROOT", str(PROJECT_ROOT / "Data")))
+        batch_path = data_root / "questions" / "cardiorespiratory_batch_1.json"
+        queue_path = data_root / "questions" / "cardiorespiratory_batch_1_review_queue.json"
+        snapshot_path = data_root / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
         try:
-            batch = json.loads(DEFAULT_BATCH_PATH.read_text(encoding="utf-8"))
-            queue = json.loads(DEFAULT_QUEUE_PATH.read_text(encoding="utf-8"))
-            snapshot = json.loads(DEFAULT_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+            batch = json.loads(batch_path.read_text(encoding="utf-8"))
+            queue = json.loads(queue_path.read_text(encoding="utf-8"))
+            snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
             chunks: dict[str, dict[str, str]] = {}
             for document in snapshot["documents"]:
-                path = PROJECT_ROOT / str(document["chunks_file"])
+                relative = Path(str(document["chunks_file"]))
+                path = data_root / Path(*relative.parts[1:]) if relative.parts and relative.parts[0].lower() == "data" else data_root / relative
                 chunk_data = json.loads(path.read_text(encoding="utf-8"))
                 for chunk in chunk_data["chunks"]:
                     chunks[str(chunk["chunk_id"])] = {
@@ -232,6 +238,7 @@ class PLABPilotService:
             "stem": payload["stem"],
             "options": [{"id": c["id"], "text": c["text"]} for c in payload["choices"]],
             "topic": payload["topic"],
+            "specialty": payload.get("specialty", "Cardiorespiratory"),
             "difficulty": payload["difficulty"],
             "question_version": review.question_version,
             "content_mode": "GOLDEN" if self.is_golden(question_id) else "PREVIEW_QA",
@@ -279,7 +286,7 @@ class PLABPilotService:
                 "selected_option": selected_option,
                 "correct_option": correct,
                 "is_correct": is_correct,
-                "submitted_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
+                "submitted_at": datetime.now(timezone.utc).isoformat(),
                 "response_time_ms": response_time_ms,
                 "runtime_mode": get_runtime_mode().value,
                 "question_lifecycle_state": "GOLDEN" if self.is_golden(question_id) else "HUMAN_REVIEW_PENDING_PREVIEW_QA",
@@ -303,6 +310,7 @@ class PLABPilotService:
             self.attempts[key] = attempt
             self.telemetry.attempts_submitted += 1
             self.telemetry.correct_attempts += int(is_correct)
+            self.telemetry.topic_distribution[str(payload["topic"])] += 1
             self.telemetry.record_request(started, True)
             return dict(response)
         except PLABProductError:
@@ -312,7 +320,11 @@ class PLABPilotService:
     def progress(self, user_id: str) -> dict[str, object]:
         attempts = [a for (uid, _), a in self.attempts.items() if uid == user_id]
         by_topic: dict[str, list[dict[str, object]]] = defaultdict(list)
+        first_attempts: dict[str, int] = {}
         for attempt in attempts:
+            qid = str(attempt["question_id"])
+            if qid not in first_attempts:
+                first_attempts[qid] = int(attempt["is_correct"])
             by_topic[str(attempt["topic"])].append(attempt)
         topic_accuracy = {
             topic: sum(int(a["is_correct"]) for a in values) / len(values)
@@ -320,11 +332,27 @@ class PLABPilotService:
         }
         ordered = sorted(topic_accuracy.items(), key=lambda item: (item[1], item[0]))
         recent = attempts[-10:]
+        total_attempts = len(attempts)
+        correct_attempts = sum(int(a["is_correct"]) for a in attempts)
+        first_attempt_acc = (
+            sum(first_attempts.values()) / len(first_attempts)
+            if first_attempts
+            else None
+        )
+        completion = (
+            len(first_attempts) / len(self.questions)
+            if self.questions
+            else 0.0
+        )
         return {
             "user_id": user_id,
-            "question_count": len(attempts),
-            "overall_accuracy": sum(int(a["is_correct"]) for a in attempts) / len(attempts) if attempts else None,
+            "question_count": total_attempts,
+            "total_attempts": total_attempts,
+            "correct_attempts": correct_attempts,
+            "overall_accuracy": correct_attempts / total_attempts if total_attempts else None,
             "recent_accuracy": sum(int(a["is_correct"]) for a in recent) / len(recent) if recent else None,
+            "first_attempt_accuracy": first_attempt_acc,
+            "question_completion": round(completion, 4),
             "topic_accuracy": topic_accuracy,
             "weak_topics": [topic for topic, score in ordered if score < 0.6],
             "strongest_topics": [topic for topic, score in reversed(ordered) if score >= 0.8],

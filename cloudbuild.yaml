@@ -53,7 +53,7 @@ steps:
       - '--timeout'
       - '300'
       - '--set-env-vars'
-      - 'ALLOWED_ORIGINS=https://medical-plab.vercel.app'
+      - 'ALLOWED_ORIGINS=https://medical-plab.vercel.app,MEDICALPLAB_RUNTIME_MODE=production,MEDICALPLAB_DATA_ROOT=/data,MEDICALPLAB_PLAB_PREVIEW_QA=false'
 
 images:
   - 'gcr.io/$PROJECT_ID/medicalplab-api:$COMMIT_SHA'
