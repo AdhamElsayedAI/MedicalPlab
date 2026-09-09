@@ -160,7 +160,7 @@ All 4xx and 5xx responses conform to this uniform JSON envelope:
 
 ---
 
-### 4.2 Course Learning Track (Cardiorespiratory & Urinary)
+### 4.2 Course Learning Track (Cardiorespiratory & Renal/Urinary)
 
 #### A. Execute Grounded Learning Query
 - **Method:** `POST`
@@ -208,22 +208,29 @@ All 4xx and 5xx responses conform to this uniform JSON envelope:
 }
 ```
 
-**Urinary Track Response Example (Source Data Missing - No Fabrication):**
+**Renal v1 Grounded Extractive Response Example:**
 ```json
 {
   "course_id": "urinary_renal",
   "query": "What are the diagnostic criteria for acute kidney injury?",
-  "grounding_status": "DATA_SOURCE_MISSING",
-  "answer": null,
-  "explanation": "The urinary/renal course learning track architecture is configured, but verified clinical course reference documents are currently pending ingestion. Please place authorized course materials into Data/raw/urinary/ according to Data/metadata/urinary_track_specification.json.",
-  "citations": [],
-  "evidence_sufficiency_score": null,
-  "evidence_sufficiency_state": "NO_EVIDENCE",
+  "grounding_status": "GROUNDED",
+  "answer": "<extractive text from the top frozen Renal v1 evidence chunk>",
+  "explanation": "Extractive answer from the top frozen Renal v1 evidence chunk; dense score 0.900000 passed threshold 0.819929.",
+  "citations": [{
+    "document_id": "DOC-PMC-RENAL-0006",
+    "title": "The Japanese clinical practice guideline for acute kidney injury 2016.",
+    "section": "Abstract",
+    "reference": "DOC-PMC-RENAL-0006#DOC-PMC-RENAL-0006-B0001-C01"
+  }],
+  "evidence_sufficiency_score": 0.9,
+  "evidence_sufficiency_state": "SUFFICIENT",
   "learning_check": null,
   "trace_id": "LRN-C71E04B291AA",
-  "warning": "URINARY_SOURCE_DATA = NOT AVAILABLE. Awaiting clinical reference PDFs."
+  "warning": null
 }
 ```
+
+Renal v1 uses the frozen section-aware, metadata-aware Qwen dense configuration. Clients must still handle `INSUFFICIENT_EVIDENCE`, `UNSUPPORTED`, and `DATA_SOURCE_MISSING`. For `intent: "quiz"`, the current response contains no learning check and warns that Renal SBA generation is blocked because the measured evidence-recall gate did not pass. Do not present renal content as clinically approved; Human reviewed and Golden counts remain 0.
 
 ---
 

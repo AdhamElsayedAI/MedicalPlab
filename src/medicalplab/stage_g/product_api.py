@@ -51,6 +51,12 @@ def get_course_learning_service() -> CourseLearningService:
     return _course_learning_service
 
 
+def configure_course_learning_service(service: CourseLearningService | None) -> None:
+    """Inject or clear the course service for startup and contract tests."""
+    global _course_learning_service
+    _course_learning_service = service
+
+
 def _product_error(exc: PLABProductError) -> HTTPException:
     return HTTPException(exc.status_code, detail={"code": exc.code, "message": str(exc)})
 
@@ -90,7 +96,7 @@ class AnatomyCommandRequest(BaseModel):
 class CourseLearningQueryRequest(BaseModel):
     course_id: str = Field(min_length=2, max_length=100)
     query: str = Field(min_length=3, max_length=4000)
-    intent: Literal["explain", "question", "compare", "check"] | None = None
+    intent: Literal["explain", "question", "compare", "check", "quiz"] | None = None
 
 
 class ClinicalReasonRequest(BaseModel):
@@ -138,7 +144,7 @@ def version() -> dict[str, object]:
     return {
         "service": "MedicalPlab Product API",
         "api_version": "v1",
-        "contract_version": "2026-09-09",
+        "contract_version": "2026-09-10",
         **runtime_metadata(),
     }
 

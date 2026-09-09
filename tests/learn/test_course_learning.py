@@ -1,9 +1,34 @@
 """Unit tests for Course Learning Service across Cardiorespiratory and Urinary tracks."""
 
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from medicalplab.learn.models import CourseQueryRequest, CourseTrack, GroundingStatus
 from medicalplab.learn.service import CourseLearningService
+from medicalplab.learn.renal_retrieval import RenalRetrievalHit, RenalRetrieverUnavailable
+
+
+RENAL_CHUNK = {
+    "document_id": "DOC-PMC-RENAL-0006",
+    "chunk_id": "DOC-PMC-RENAL-0006-B0001-C01",
+    "section_path": ["Abstract"],
+    "text": "Acute kidney injury requires early detection and intervention.",
+}
+
+
+class FakeRenalRetriever:
+    def __init__(self, score=0.9, hits=True):
+        self.score = score
+        self.hits = hits
+
+    def retrieve(self, query, top_k=5):
+        return [RenalRetrievalHit(RENAL_CHUNK, self.score)] if self.hits else []
+
+
+class UnavailableRenalRetriever:
+    def retrieve(self, query, top_k=5):
+        raise RenalRetrieverUnavailable("optional runtime absent")
 
 
 class TestCourseLearningService(unittest.TestCase):
@@ -56,18 +81,50 @@ class TestCourseLearningService(unittest.TestCase):
             self.assertIn("refuses to speculate", res.explanation.lower())
 
     def test_urinary_track_reports_source_data_missing_truthfully(self):
+        with TemporaryDirectory() as folder:
+            service = CourseLearningService(data_root=Path(folder), renal_retriever=FakeRenalRetriever())
+            res = service.query(CourseQueryRequest(course_id="urinary_renal", query="AKI criteria"))
+        self.assertEqual(res.grounding_status, GroundingStatus.DATA_SOURCE_MISSING)
+        self.assertIn("corpus files are missing", res.warning)
+
+    def test_renal_grounded_extract_is_cited(self):
+        service = CourseLearningService(renal_retriever=FakeRenalRetriever(score=0.9))
         req = CourseQueryRequest(
             course_id="urinary_renal",
             query="What are the diagnostic criteria for acute kidney injury?",
         )
-        res = self.service.query(req)
+        res = service.query(req)
         self.assertEqual(res.course_id, "urinary_renal")
-        self.assertEqual(res.grounding_status, GroundingStatus.DATA_SOURCE_MISSING)
-        self.assertEqual(res.evidence_sufficiency_state, "NO_EVIDENCE")
+        self.assertEqual(res.grounding_status, GroundingStatus.GROUNDED)
+        self.assertEqual(res.evidence_sufficiency_state, "SUFFICIENT")
+        self.assertEqual(res.answer, RENAL_CHUNK["text"])
+        self.assertEqual(res.citations[0].reference, "DOC-PMC-RENAL-0006#DOC-PMC-RENAL-0006-B0001-C01")
+
+    def test_renal_insufficient_evidence_fails_closed(self):
+        service = CourseLearningService(renal_retriever=FakeRenalRetriever(score=0.7))
+        res = service.query(CourseQueryRequest(course_id="renal", query="AKI criteria"))
+        self.assertEqual(res.grounding_status, GroundingStatus.INSUFFICIENT_EVIDENCE)
         self.assertIsNone(res.answer)
-        self.assertIsNotNone(res.warning)
-        self.assertIn("URINARY_SOURCE_DATA = NOT AVAILABLE", res.warning)
-        self.assertIn("Data/raw/urinary", res.explanation)
+        self.assertEqual(res.evidence_sufficiency_state, "INSUFFICIENT")
+
+    def test_renal_unsupported_when_retrieval_is_empty(self):
+        service = CourseLearningService(renal_retriever=FakeRenalRetriever(hits=False))
+        res = service.query(CourseQueryRequest(course_id="renal", query="uncovered topic"))
+        self.assertEqual(res.grounding_status, GroundingStatus.UNSUPPORTED)
+        self.assertEqual(res.citations, ())
+
+    def test_renal_optional_runtime_failure_is_safe(self):
+        service = CourseLearningService(renal_retriever=UnavailableRenalRetriever())
+        res = service.query(CourseQueryRequest(course_id="renal", query="AKI criteria"))
+        self.assertEqual(res.grounding_status, GroundingStatus.INSUFFICIENT_EVIDENCE)
+        self.assertIsNone(res.answer)
+
+    def test_renal_quiz_stays_blocked_by_quality_gate(self):
+        service = CourseLearningService(renal_retriever=FakeRenalRetriever(score=0.9))
+        res = service.query(CourseQueryRequest(course_id="renal", query="AKI criteria", intent="quiz"))
+        self.assertEqual(res.grounding_status, GroundingStatus.GROUNDED)
+        self.assertIsNone(res.learning_check)
+        self.assertIn("SBA generation is quality-gated", res.warning)
 
     def test_unregistered_course_module_rejected(self):
         req = CourseQueryRequest(

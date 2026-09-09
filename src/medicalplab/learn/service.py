@@ -2,10 +2,8 @@
 
 from __future__ import annotations
 
-import hashlib
 import json
 import math
-import os
 import re
 import uuid
 from collections import Counter
@@ -15,22 +13,29 @@ from typing import Any
 from .models import (
     CourseQueryRequest,
     CourseQueryResponse,
-    CourseTrack,
     GroundingStatus,
-    LearningCheck,
-    LearningCheckChoice,
-    LearningIntent,
     StudentCitation,
+)
+from .renal_retrieval import (
+    RENAL_SUFFICIENCY_THRESHOLD,
+    QwenRenalRetriever,
+    RenalRetriever,
+    RenalRetrieverUnavailable,
 )
 
 CALIBRATED_SUFFICIENCY_TAU = 0.7223
-URINARY_SOURCE_DATA_STATUS = "NOT AVAILABLE"
+URINARY_SOURCE_DATA_STATUS = "RENAL_V1_AVAILABLE"
 
 
 class CourseLearningService:
     """Production service for evidence-grounded course learning across medical modules."""
 
-    def __init__(self, data_root: Path | str | None = None) -> None:
+    def __init__(
+        self,
+        data_root: Path | str | None = None,
+        *,
+        renal_retriever: RenalRetriever | None = None,
+    ) -> None:
         self.data_root = Path(data_root) if data_root else Path(__file__).resolve().parents[3] / "Data"
         self._doc_titles: dict[str, str] = {}
         self._chunks: list[dict[str, Any]] = []
@@ -38,6 +43,7 @@ class CourseLearningService:
         self._df: Counter[str] = Counter()
         self.urinary_available = False
         self._load_corpora()
+        self._renal_retriever = renal_retriever or QwenRenalRetriever(self.data_root)
 
     def _load_corpora(self) -> None:
         # 1. Load document titles from manifest
@@ -74,12 +80,76 @@ class CourseLearningService:
                         pass
 
         # 3. Check urinary track presence
-        urinary_raw = self.data_root / "raw" / "urinary"
-        urinary_proc = self.data_root / "processed" / "urinary"
-        if (urinary_raw.exists() and any(urinary_raw.iterdir())) or (urinary_proc.exists() and any(urinary_proc.iterdir())):
-            self.urinary_available = True
-        else:
-            self.urinary_available = False
+        registry = self.data_root / "metadata" / "renal_source_registry_v1.json"
+        chunks = self.data_root / "experiments" / "renal" / "chunking" / "C_section_aware"
+        self.urinary_available = registry.exists() and chunks.exists() and any(chunks.glob("*.chunks.json"))
+
+        if registry.exists():
+            try:
+                data = json.loads(registry.read_text(encoding="utf-8"))
+                for doc in data.get("documents", []):
+                    if doc.get("status") == "accepted":
+                        self._doc_titles[str(doc["document_id"])] = str(doc.get("title", doc["document_id"]))
+            except Exception:
+                self.urinary_available = False
+
+    def _query_renal(self, query: str, intent: str | None, trace_id: str) -> CourseQueryResponse:
+        if not query:
+            return CourseQueryResponse(
+                course_id="urinary_renal", query=query, grounding_status=GroundingStatus.UNSUPPORTED,
+                answer=None, explanation="Empty query provided.", citations=(), evidence_sufficiency_score=0.0,
+                evidence_sufficiency_state="NO_EVIDENCE", learning_check=None, trace_id=trace_id,
+            )
+        try:
+            hits = self._renal_retriever.retrieve(query, top_k=5)
+        except RenalRetrieverUnavailable as exc:
+            return CourseQueryResponse(
+                course_id="urinary_renal", query=query,
+                grounding_status=GroundingStatus.INSUFFICIENT_EVIDENCE, answer=None,
+                explanation="Renal v1 is present, but its frozen dense retriever is unavailable; MedicalPlab fails closed.",
+                citations=(), evidence_sufficiency_score=None, evidence_sufficiency_state="INSUFFICIENT",
+                learning_check=None, trace_id=trace_id, warning=str(exc),
+            )
+        if not hits:
+            return CourseQueryResponse(
+                course_id="urinary_renal", query=query, grounding_status=GroundingStatus.UNSUPPORTED,
+                answer=None, explanation="No evidence was retrieved from the frozen Renal v1 corpus.", citations=(),
+                evidence_sufficiency_score=0.0, evidence_sufficiency_state="NO_EVIDENCE",
+                learning_check=None, trace_id=trace_id,
+            )
+
+        top = hits[0]
+        score = round(top.score, 6)
+        citations = tuple(
+            StudentCitation(
+                document_id=str(hit.chunk["document_id"]),
+                title=self._doc_titles.get(str(hit.chunk["document_id"]), str(hit.chunk["document_id"])),
+                section=" > ".join(hit.chunk.get("section_path", [])) or None,
+                reference=f"{hit.chunk['document_id']}#{hit.chunk['chunk_id']}",
+            )
+            for hit in hits[:3]
+        )
+        if score < RENAL_SUFFICIENCY_THRESHOLD:
+            return CourseQueryResponse(
+                course_id="urinary_renal", query=query,
+                grounding_status=GroundingStatus.INSUFFICIENT_EVIDENCE, answer=None,
+                explanation=(f"Retrieved renal evidence scored {score:.6f}, below the frozen calibration threshold "
+                             f"{RENAL_SUFFICIENCY_THRESHOLD:.6f}; MedicalPlab refuses to speculate."),
+                citations=citations, evidence_sufficiency_score=score, evidence_sufficiency_state="INSUFFICIENT",
+                learning_check=None, trace_id=trace_id,
+            )
+
+        text = str(top.chunk.get("text", "")).strip()
+        requested_check = (intent or "").strip().lower() in {"check", "question", "quiz"}
+        return CourseQueryResponse(
+            course_id="urinary_renal", query=query, grounding_status=GroundingStatus.GROUNDED,
+            answer=text, explanation=("Extractive answer from the top frozen Renal v1 evidence chunk; "
+                                      f"dense score {score:.6f} passed threshold {RENAL_SUFFICIENCY_THRESHOLD:.6f}."),
+            citations=citations, evidence_sufficiency_score=score, evidence_sufficiency_state="SUFFICIENT",
+            learning_check=None, trace_id=trace_id,
+            warning=("Renal SBA generation is quality-gated and remains unavailable pending improved evidence recall "
+                     "and genuine clinician review." if requested_check else None),
+        )
 
     def _tokenize(self, text: str) -> list[str]:
         return [w for w in re.findall(r"[a-zA-Z0-9]+", text.casefold()) if len(w) > 2]
@@ -133,8 +203,9 @@ class CourseLearningService:
                     evidence_sufficiency_state="NO_EVIDENCE",
                     learning_check=None,
                     trace_id=trace_id,
-                    warning=f"URINARY_SOURCE_DATA = {URINARY_SOURCE_DATA_STATUS}. Awaiting clinical reference PDFs.",
+                    warning="URINARY_SOURCE_DATA = NOT AVAILABLE. Frozen Renal v1 corpus files are missing.",
                 )
+            return self._query_renal(query, request.intent, trace_id)
 
         # Handle Course Track: Cardiorespiratory
         if course_id in ["cardiorespiratory", "cardiology", "respiratory"]:

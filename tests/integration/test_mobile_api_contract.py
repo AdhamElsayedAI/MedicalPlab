@@ -12,8 +12,20 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from medicalplab.stage_g.product_api import configure_plab_service, router
+from medicalplab.stage_g.product_api import configure_course_learning_service, configure_plab_service, router
 from medicalplab.plab.pilot import PLABPilotService
+from medicalplab.learn.service import CourseLearningService
+from medicalplab.learn.renal_retrieval import RenalRetrievalHit
+
+
+class _ContractRenalRetriever:
+    def retrieve(self, query, top_k=5):
+        return [RenalRetrievalHit({
+            "document_id": "DOC-PMC-RENAL-0006",
+            "chunk_id": "DOC-PMC-RENAL-0006-B0001-C01",
+            "section_path": ["Abstract"],
+            "text": "Acute kidney injury requires early detection and intervention.",
+        }, 0.9)]
 
 
 class TestMobileApiContract(unittest.TestCase):
@@ -26,6 +38,7 @@ class TestMobileApiContract(unittest.TestCase):
     def setUp(self):
         # Default strict pilot service (0 Golden, Preview QA off)
         configure_plab_service(PLABPilotService.load_default(preview_qa=False, enable_persistence=False))
+        configure_course_learning_service(None)
 
     def test_version_endpoint_contract(self):
         res = self.client.get("/api/v1/version")
@@ -33,7 +46,7 @@ class TestMobileApiContract(unittest.TestCase):
         data = res.json()
         self.assertEqual(data.get("service"), "MedicalPlab Product API")
         self.assertEqual(data.get("api_version"), "v1")
-        self.assertEqual(data.get("contract_version"), "2026-09-09")
+        self.assertEqual(data.get("contract_version"), "2026-09-10")
 
     def test_anatomy_structures_contract(self):
         res = self.client.get("/api/v1/anatomy/structures")
@@ -93,7 +106,8 @@ class TestMobileApiContract(unittest.TestCase):
         self.assertTrue(len(data.get("citations", [])) > 0)
         self.assertTrue(data.get("trace_id", "").startswith("LRN-"))
 
-    def test_course_learning_urinary_track_source_missing_honesty(self):
+    def test_course_learning_renal_grounded_contract(self):
+        configure_course_learning_service(CourseLearningService(renal_retriever=_ContractRenalRetriever()))
         payload = {
             "course_id": "urinary_renal",
             "query": "Diagnostic criteria for acute kidney injury and staging",
@@ -103,10 +117,10 @@ class TestMobileApiContract(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         data = res.json()
         self.assertEqual(data.get("course_id"), "urinary_renal")
-        self.assertEqual(data.get("grounding_status"), "DATA_SOURCE_MISSING")
-        self.assertEqual(data.get("evidence_sufficiency_state"), "NO_EVIDENCE")
-        self.assertIsNone(data.get("answer"))
-        self.assertIn("URINARY_SOURCE_DATA = NOT AVAILABLE", data.get("warning", ""))
+        self.assertEqual(data.get("grounding_status"), "GROUNDED")
+        self.assertEqual(data.get("evidence_sufficiency_state"), "SUFFICIENT")
+        self.assertIsNotNone(data.get("answer"))
+        self.assertEqual(data["citations"][0]["document_id"], "DOC-PMC-RENAL-0006")
 
     def test_plab_questions_empty_in_production_golden_only(self):
         res = self.client.get("/api/v1/plab/questions")

@@ -3,7 +3,7 @@
   "info": {
     "title": "MedicalPlab Product API",
     "description": "Fail-closed MedicalPlab API for pilot and production clients",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "paths": {
     "/api/v1/version": {
@@ -1103,7 +1103,8 @@
                   "explain",
                   "question",
                   "compare",
-                  "check"
+                  "check",
+                  "quiz"
                 ]
               },
               {
