@@ -1,0 +1,3743 @@
+{
+  "document_id": "DOC-PMC-RENAL-0012",
+  "source_id": "SRC-PMC-PMC10889283",
+  "title": "Urological Guidelines for Kidney Stones: Overview and Comprehensive Update.",
+  "medical_specialty": "Renal Medicine",
+  "topics": [
+    "nephrolithiasis",
+    "renal colic",
+    "urinary obstruction"
+  ],
+  "source_sha256": "8e31b32880a3b597a5fe3be714077a0bb57630dfdb72bef0491f8bfe2fd4365e",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1600,
+    "maximum_characters": 2200,
+    "minimum_characters": 250,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T10:38:57.080392+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0001-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "ff6ae6de7c200ed3b65ae9c7145eb43928f6ae590953e744e77781dfac8f21b5",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Abstract Background: Evidence-based guidelines are published by urological organisations for various conditions, including urolithiasis. In this paper, we provide guidance on the management of kidney stone disease (KSD) and compare the American Urological Association (AUA) and European Association of Urologists (EAU) guidelines. Methods: We evaluate and appraise the evidence and grade of recommendation provided by the AUA and EAU guidelines on urolithiasis (both surgical and medical management). Results: Both the AUA and EAU guidelines provide guidance on the type of imaging, treatment options, and medical therapies and advice on specific patient groups, such as in paediatrics and pregnancy. While the guidelines are generally aligned and based on evidence, some subtle differences exist in the recommendations, but both are generally unanimous for the majority of the principles of management. Conclusions: We recommend that the guidelines should undergo regular updates based on recently published material, and while these guidelines provide a framework, treatment plans should still be personalised, respecting patient preferences, surgical expertise, and various other individual factors, to offer the best outcome for kidney stone patients. Keywords: kidney calculi, ureteroscopy, PCNL, bladder calculi, laser",
+      "character_count": 1324,
+      "content_sha256": "ff6ae6de7c200ed3b65ae9c7145eb43928f6ae590953e744e77781dfac8f21b5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0002-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "fd3ea90d69f44245c88f526473f28d04301611372d61611da762003b38984dba",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Urolithiasis is a significantly common disease globally, despite the notable difference in the rate of occurrence based on various factors like gender, climate, diet, and other risk factors. There has been a yearly increase in the prevalence of stone occurrence in people above the age of 30 for all genders [ 1 ]. This rise in incidence, along with advances in modern technology, places a significant financial burden on healthcare facilities for the treatment of kidney stone disease (KSD), accounting for an estimated USD 5.3 billion spent on the disease globally in 2014, making it the second most costly urological ailment [ 2 ].",
+      "character_count": 634,
+      "content_sha256": "fd3ea90d69f44245c88f526473f28d04301611372d61611da762003b38984dba",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0003-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "34302f85f2d123d051226d268344b8af02bcef47c83c7e34ab89d7ab59d2315d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Extensive guidelines on urolithiasis have been published by various accomplished institutes throughout the world. Those developed by the American Urology Association (AUA) and the European Association of Urology (EAU) are widely accepted and used by clinicians worldwide to help them in the diagnosis, management, and follow-up of patients with kidney stone disease (KSD). Separate guidelines are published by the AUA for the medical and surgical management of KSD, which last saw an update in 2019 and 2016, respectively [ 3 , 4 ]. In comparison, the EAU provides a single document titled Urolithiasis for the management of urinary tract stones, with the latest update being in 2023 [ 5 ].",
+      "character_count": 690,
+      "content_sha256": "34302f85f2d123d051226d268344b8af02bcef47c83c7e34ab89d7ab59d2315d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0004-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "037c1cae6f8f72aa15e0d557fb33f9cc6a5ab465e09f5d3214d9b05d613deb5a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Separate methods are used by both guidelines to assess the strength of evidence used in the guidelines. The AUA guidelines use letters for grading, namely A, B, and C, depending on the quality and certainty of the evidence [ 6 ]; this is followed by certain nomenclature that differs for medical and surgical guidelines. The surgical guidelines use statements of strong, moderate, or conditional recommendations, whereas the medical guidelines use nomenclature reflecting the options, recommendations, and standards, all of which are based on the risk–benefit ratio for patients. Cases where evidence is lacking, clinical principles, and expert opinions are used to provide additional information.",
+      "character_count": 697,
+      "content_sha256": "037c1cae6f8f72aa15e0d557fb33f9cc6a5ab465e09f5d3214d9b05d613deb5a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0005-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "4484ba55d2f6214cf0ec50c9ab5e98d3b2d6d321fbfd1fbe7cc474b6b1c6036f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In contrast, the EAU classifies its recommendations as “strong” or “weak”, using the guiding concept of the GRADE methodology [ 7 ], based on various factors, such as the quality and extent of the effect, certainty, balanced outcomes, and patient values and preferences [ 8 ]. The EAU guidelines also outline goals that the panel aims to achieve for the 2024 update, which are aimed at further evaluating evidence for efficient practice in endourology and questioning the accuracy of the stone size in selecting treatment options.",
+      "character_count": 530,
+      "content_sha256": "4484ba55d2f6214cf0ec50c9ab5e98d3b2d6d321fbfd1fbe7cc474b6b1c6036f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0006-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "d5cec7b866e5cad7dd1411e525ca2096629fde1206d68e99c8e3bb708afb9494",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "While guidelines provide valuable information and clinical frameworks by consolidating the best available evidence, they can never guarantee the best results for patients, especially due to limitations in their upgradation [ 8 ]. Hence, when formulating a treatment plan, clinical expertise and individual patient circumstances should always be the foremost factors under consideration, and guidelines should never override these.",
+      "character_count": 430,
+      "content_sha256": "d5cec7b866e5cad7dd1411e525ca2096629fde1206d68e99c8e3bb708afb9494",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0007-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "468d3e625c1b923f0a0df2a0c6d0e018f745ec61b8ec4acc46b53affbc8a0eca",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S002",
+      "parent_section_heading": "2. Initial Assessment",
+      "section_path": [
+        "2. Initial Assessment",
+        "2.1. Presentation and Evaluation"
+      ],
+      "heading": "2.1. Presentation and Evaluation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Urolithiasis can present a variety of symptoms, ranging from fever, vomiting, and loin pain to being completely asymptomatic. Bladder stones can present as recurrent urinary tract infections (UTIs), urinary frequency, terminal haematuria, or suprapubic pain. A detailed medical history review and a physical examination should be carried out during presentation. The EAU recommends expediting the investigation if there is a lack of understanding of the diagnosis, pyrexia, or a solitary kidney (strong recommendation). However, the imaging modality should not delay effective analgesia and resuscitation.",
+      "character_count": 605,
+      "content_sha256": "468d3e625c1b923f0a0df2a0c6d0e018f745ec61b8ec4acc46b53affbc8a0eca",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Initial Assessment",
+        "2.1. Presentation and Evaluation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0008-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "f6379fe972baf3161d708fc04784939a0f60ec5f5e74c44e0b91ae528d2147ea",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S004",
+      "parent_section_heading": "2.2. Investigations",
+      "section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ],
+      "heading": "2.2.1. Renal and Ureteric Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The EAU recommends ultrasound (US) as the initial investigation in asymptomatic patients as it is safe, less costly, and can identify hydronephrosis and calculi in the renal calyces, pelvis, and pelvic-ureteric and vesico-ureteric junctions. Non-contrast-enhanced computed tomography (NCCT) is the investigation of choice in symptomatic patients as it can classify the stone density, diameter, volume, distance from the skin, and the adjacent anatomy, all of which can help in selecting from the treatment options available (EAU: strong recommendation). It is appreciably more precise than US or an intravenous urogram (IVU) [ 9 ]. If the assessment of the anatomy of the collecting system is required before stone removal, contrast-enhanced imaging should be performed (EAU: strong recommendation). The EAU also suggests that although kidney ureter bladder (KUB) X-ray can differentiate the radiopacity of stones, they need not be performed if NCCT is being considered.",
+      "character_count": 970,
+      "content_sha256": "f6379fe972baf3161d708fc04784939a0f60ec5f5e74c44e0b91ae528d2147ea",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0009-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "9266abb3d57f5ae9af2895032397f6afd5c029dc3bbd0a35889975be9577bc7b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S004",
+      "parent_section_heading": "2.2. Investigations",
+      "section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ],
+      "heading": "2.2.1. Renal and Ureteric Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The AUA also recommends NCCT as the imaging method of choice for the assessment of patients with urolithiasis prior to percutaneous nephrolithotomy (PCNL) (AUA: strong recommendation) and also for treatment selection between shock wave lithotripsy (SWL) and ureteroscopy (URS) (AUA: conditional recommendation), and it discourages the use of US solely for this purpose. If significant kidney injury is suspected, functional imaging modalities such as a diethylene-triamine-penta-acetate (DTPA) or mercaptoacetyltriglycine (MAG-3) renogram can be used to help guide treatment (AUA: conditional recommendation).",
+      "character_count": 609,
+      "content_sha256": "9266abb3d57f5ae9af2895032397f6afd5c029dc3bbd0a35889975be9577bc7b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0010-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "322be710cc264df59818449b8282212608bfc48658c919a6586b11fe9b44eb68",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S004",
+      "parent_section_heading": "2.2. Investigations",
+      "section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ],
+      "heading": "2.2.1. Renal and Ureteric Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Besides imaging, various haematology, serum biochemistry, and coagulation tests should also be performed. The EAU recommends serum creatinine, uric acid, ionised calcium, sodium, potassium, blood cell counts, C-reactive protein, and coagulation tests if an intervention is planned (EAU: strong recommendation). Both the EAU and AUA strongly recommend a urine culture and microscopy before any intervention.",
+      "character_count": 406,
+      "content_sha256": "322be710cc264df59818449b8282212608bfc48658c919a6586b11fe9b44eb68",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0011-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "f22d95517241ee22561b13187256efdf20ebcd7ee215190d86470e17b125ac4b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S004",
+      "parent_section_heading": "2.2. Investigations",
+      "section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.2. Bladder Stones"
+      ],
+      "heading": "2.2.2. Bladder Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Symptomatic patients presenting with suspected bladder stones should undergo US as the first imaging modality; however, if the patient remains symptomatic, with US being inconclusive, NCCT or cystoscopy should be considered, given the higher sensitivity of both for diagnosis when compared to US [ 10 ] (EAU: strong recommendation). X-ray KUB, despite providing useful information on radiopacity, has low accuracy for stone detection [ 11 ]; hence, there is a weak recommendation to use it in treatment planning and the follow-up of patients (EAU: weak recommendation). Given the sparseness of evidence, there are no specific guidelines on imaging modalities for children with suspected bladder stones. The AUA does not provide any guidelines on the diagnosis of bladder stones.",
+      "character_count": 778,
+      "content_sha256": "f22d95517241ee22561b13187256efdf20ebcd7ee215190d86470e17b125ac4b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.2. Bladder Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0012-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "6edcae4a7e8a8adc935e341909b3ea22d9fd686ab67b902b523cf2342cf5753d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.1. Medical Treatment"
+      ],
+      "heading": "3.1. Medical Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Several drugs are available to be used as medical expulsive therapy (MET) for urolithiasis [ 3 , 4 , 5 ]. These include α-blockers, calcium channel inhibitors, and phosphodiesterase type 5 (PDE5) inhibitors, and, although an off-label indication, a class effect of α-blockers has been demonstrated as MET through various meta-analyses [ 5 ]. α-blockers should be considered for distal ureteral stones >5 mm (EAU: strong recommendation), and distal ureteral stones ≤10 mm should be offered α-blockers (AUA: strong recommendation).",
+      "character_count": 529,
+      "content_sha256": "6edcae4a7e8a8adc935e341909b3ea22d9fd686ab67b902b523cf2342cf5753d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.1. Medical Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0013-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "6fa5347dfa745b01edf2ff4a56f3abf73311222faac482610aa11831194fc114",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.2. Oral Chemolysis"
+      ],
+      "heading": "3.2. Oral Chemolysis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Oral chemolitholysis, based on the alkalinisation of the urine by alkaline citrate or sodium bicarbonate, can be used to dissolve uric acid stones. Although this treatment has been used for a long time, no randomised controlled trials (RCTs) are available [ 5 ]. Potassium citrate should be offered for the alkalinisation of urine to patients with uric acid and cystine stones. However, favourable outcomes in the form of stone dissolution are inconsistent (AUA: expert opinion). Patients undergoing this treatment should be monitored during and after chemolysis, be informed on how to check the urinary pH, and monitored to alter the drug dose accordingly (EAU: strong recommendation).",
+      "character_count": 686,
+      "content_sha256": "6fa5347dfa745b01edf2ff4a56f3abf73311222faac482610aa11831194fc114",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.2. Oral Chemolysis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0014-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "6afb73a06b969ac45109f71d57037f1f414a9dd918eb40acdc28b6501725534d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S010",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.3. Extracorporeal Shock Wave Lithotripsy (ESWL)"
+      ],
+      "heading": "3.3. Extracorporeal Shock Wave Lithotripsy (ESWL)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "SWL, although having a lower stone-free rate (SFR), is associated with fewer overall complications than other endourology procedures, like ureteroscopy (URS) and PCNL [ 12 , 13 ]. Factors determining the efficacy of SWL include the patient’s habitus; the size, location, and composition of the stone; and the performance of SWL [ 5 ]. An appropriate coupling agent, such as an ultrasound gel, should be used to prevent the deflection of shock waves, along with meticulous radiological monitoring with either fluoroscopy or US during the procedure (EAU: strong recommendation). Adequate analgesia should be prescribed as it improves the outcome by limiting pain-induced movements (EAU: strong recommendation). Antibiotics should be prescribed in the case of infected stones or laboratory evidence of infection before any intervention (AUA/EAU: strong recommendation). The AUA strongly recommends not routinely placing stents in patients undergoing SWL; the EAU also advises no improvement in SFR with routine stenting, although it might reduce the formation of steinstrasse. α-blockers can be prescribed following SWL to ease the passage of stones, after informing the patient of it being an off-label indication (AUA: moderate recommendation), while the EAU also recommends the same when using MET after SWL. The EAU lists certain contraindications to SWL, which include uncontrolled UTIs, severe skeletal malformations and obesity, pregnancy, bleeding disorders, anatomical obstructions distal to the stone, and an arterial aneurysm close to the stone.",
+      "character_count": 1553,
+      "content_sha256": "6afb73a06b969ac45109f71d57037f1f414a9dd918eb40acdc28b6501725534d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.3. Extracorporeal Shock Wave Lithotripsy (ESWL)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0015-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "bfd3731ae5225469d37fbc2a0056561ba4e90c8c2e2ba203d4b6c71410611a19",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S011",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.4. Ureteroscopy (URS)"
+      ],
+      "heading": "3.4. Ureteroscopy (URS)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "URS is associated with a higher SFR and a better clinical outcome when compared to SWL [ 14 ]. The morbidity and complications of the procedure have also been appreciably better in the current endourological times [ 15 ]. Pre-procedural stent placement is not recommended by either the AUA (AUA: strong recommendation) or the EAU [ 4 , 5 ]. The AUA suggests that pre-stenting may be associated with a higher SFR and shorter operative time. However, in the absence of high-level evidence, the panel advocates against this practice. Following the intervention, if the patient is not at an increased risk of complications post-procedure, stenting should be avoided due to its association with higher morbidity and not being cost-effective (EAU/AUA: strong recommendation). If stented, both guidelines agree on the administration of α-blockers to reduce stent discomfort (EAU: strong recommendation, AUA: moderate recommendation). Stone removal should always be done under direct visualisation of the stone (EAU: strong recommendation), and a safety guide wire used where possible (AUA: expert opinion). The EAU advises on the use of a ureteral access sheath (UAS) if expecting a long operating time or when encountering large and multiple renal stones [ 16 ]. Being effective in all stone types, the EAU recommends using the holmium:yttrium–aluminium–garnet (Ho:YAG) laser for URS (EAU: strong recommendation); however, while the results of the thulium fibre laser (TFL) seem to be equivalent to those of Ho:YAG, more comparative clinical studies are currently needed between these modalities [ 5 ].",
+      "character_count": 1596,
+      "content_sha256": "b7d711fac2eb506783f19c378a6577c6f487e081b7f9dc3e405a0ab8065ffcf9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.4. Ureteroscopy (URS)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0015-C02",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "bfd3731ae5225469d37fbc2a0056561ba4e90c8c2e2ba203d4b6c71410611a19",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S011",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.4. Ureteroscopy (URS)"
+      ],
+      "heading": "3.4. Ureteroscopy (URS)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Both guidelines agree on the use of peri-operative prophylactic antibiotics before any endoscopic procedure. The EAU also advocates for the use of percutaneous antegrade URS if SWL has failed and retrograde URS is not an option for ureteral stones, and the use of flexible URS if PCNL and SWL are not an option, even for stones > 2 cm (EAU: strong recommendation). URS is also the treatment of choice in cases where stone removal is required without discontinuation of antithrombotic therapy (EAU/AUA: strong recommendation). Apart from general complications associated with anaesthesia and untreated UTIs, the EAU documents URS to be safe for the majority of patients without any particular contraindications [ 5 ].",
+      "character_count": 716,
+      "content_sha256": "6a0eb93cd80384c5bf3948ee212c5b59aebc20a8990f4992183c4d4f67aec3f8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.4. Ureteroscopy (URS)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0016-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "ba628fe131b42ca1d1ff37b73f8501558bd45eefd0f00946921e2e257ba2ce69",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S012",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.5. Percutaneous Nephrolithotomy (PCNL)"
+      ],
+      "heading": "3.5. Percutaneous Nephrolithotomy (PCNL)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "PCNL is the first-line procedure for most large renal calculi, as it offers the advantage of a higher SFR since the effectiveness of this method is not limited by the stone burden or composition [ 17 , 18 ]. Before the procedure, essential imaging should be available to delineate the anatomy of the collecting system and surrounding structures, to ensure a safe percutaneous path to the renal stone. This can either be a US or a CT scan (EAU: strong recommendation), and the AUA also strongly recommends obtaining an NCCT before a PCNL. The EAU advises patient positioning to depend on the surgical competence and equipment available, with both prone and supine positions being equally safe, and the use of small instruments with mini-PNL (mPNL 12-22Fr) is associated with a shorter hospital stay, less blood loss, and an SFR similar to that of a standard PCNL (>22Fr) [ 5 ]. To allow the removal of fragments from areas not accessible by a rigid nephroscope, flexible nephroscopy should be a standard part of PCNL. To prevent electrolyte derangements, normal saline should always be used as an irrigation solution for PCNL and URS (AUA: strong recommendation). If the procedure has been uncomplicated, a tubeless PCNL (i.e., without nephrostomy) or totally tubeless (i.e., without nephrostomy and ureteral stent) should be considered, as it is linked with a shorter hospital inpatient stay and better pain control postoperatively (EAU: strong recommendation, AUA: conditional recommendation). A significant change highlighted by the EAU guidelines compared to the last version includes collecting a urine or stone culture directly from the renal pelvis during PCNL (EAU: strong recommendation).",
+      "character_count": 1696,
+      "content_sha256": "c52969a3ee9cfe1fbe9481cb5ed17304a55ba0f1a94018dcd6cdc69e96f25550",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.5. Percutaneous Nephrolithotomy (PCNL)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0016-C02",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "ba628fe131b42ca1d1ff37b73f8501558bd45eefd0f00946921e2e257ba2ce69",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S012",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.5. Percutaneous Nephrolithotomy (PCNL)"
+      ],
+      "heading": "3.5. Percutaneous Nephrolithotomy (PCNL)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "This is based on the fact that sepsis can occur during or after the procedure, even with a sterile pre-op urinary culture. Hence, cultures taken directly from the pelvis can more accurately anticipate this episode [ 19 , 20 ] and guide antibiotic therapy by recognising the causative organisms. The EAU mentions contraindications of PCNL as follows: tumour in the access tract area, malignant renal tumour, pregnancy, untreated UTIs, and anti-coagulant therapy, which must be carefully monitored and discontinued pre-operatively [ 5 ].",
+      "character_count": 535,
+      "content_sha256": "c7f405590845da52450c6aaace85cc2dc01f5b7f5a1386a656a2f49256b58e73",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.5. Percutaneous Nephrolithotomy (PCNL)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0017-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "0bcfe68604e20f0e311ce97ce67d3924edceec585a3636475da9e87bfe24f99b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S007",
+      "parent_section_heading": "3. Available Treatment Options and Their Specific Considerations",
+      "section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.6. Open Surgery and Laparoscopy"
+      ],
+      "heading": "3.6. Open Surgery and Laparoscopy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Developments in endourology have led to open and laparoscopic approaches for the treatment of urolithiasis being rarely used. Both guidelines agree strongly on offering open or laparoscopic approaches for stone removal only when SWL, URS, and PCNL are unlikely to provide a decent opportunity for stone removal and more likely to fail (EAU/AUA: strong recommendation). The AUA mentions patients with stones and anatomical defects requiring reconstruction as one of the cases where an open or laparoscopic approach may prove to be more beneficial than endourology [ 4 ].",
+      "character_count": 569,
+      "content_sha256": "0bcfe68604e20f0e311ce97ce67d3924edceec585a3636475da9e87bfe24f99b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Available Treatment Options and Their Specific Considerations",
+        "3.6. Open Surgery and Laparoscopy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0018-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "34d33ad80259fd816de484f4bc9b9c73205f92695ec7b61e64893c9c07b6b280",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S014",
+      "parent_section_heading": "4. Management",
+      "section_path": [
+        "4. Management",
+        "4.1. Renal Colic"
+      ],
+      "heading": "4.1. Renal Colic",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Ureteral stones causing acute renal colic usually present as an emergency that requires immediate and adequate analgesia [ 21 ]. Paracetamol and non-steroidal anti-inflammatory drugs (NSAIDs) can prove to be very effective in this instance and provide better pain relief than opioids; hence, they should be used as a first-line drug after ruling out contraindications. They also reduce inflammation and prevent pain relapse in patients being managed conservatively (EAU: strong recommendation). Pain persisting despite analgesia warrants renal decompression and endoscopic stone removal (EAU: strong recommendation).",
+      "character_count": 616,
+      "content_sha256": "34d33ad80259fd816de484f4bc9b9c73205f92695ec7b61e64893c9c07b6b280",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.1. Renal Colic"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0019-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "7ab2d73e5ae36b4f6eb562b41a714f8a1b6a1dd02f73e34224650c893f8f3c8e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S016",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S014",
+      "parent_section_heading": "4. Management",
+      "section_path": [
+        "4. Management",
+        "4.2. Obstruction, Sepsis, Anuria"
+      ],
+      "heading": "4.2. Obstruction, Sepsis, Anuria",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Sepsis secondary to an infected obstructed system accounts for major mortality and morbidity related to urolithiasis and its treatment [ 22 , 23 ]. Both the EAU and AUA strongly recommend urgent decompression with either percutaneous nephrostomy (PCN) or ureteric stenting, with none proving to be superior to the other, delaying any definitive treatment until the resolution of sepsis. Antibiotic treatment should not be delayed; it can be modified later once sensitivities have returned. Intensive care input should be sought if required, and a urine sample collected at the time of decompression (EAU: strong recommendation).",
+      "character_count": 628,
+      "content_sha256": "7ab2d73e5ae36b4f6eb562b41a714f8a1b6a1dd02f73e34224650c893f8f3c8e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0019",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.2. Obstruction, Sepsis, Anuria"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0020-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "f013d371b64472536bcaafcbe571358f3230b3075f2519de7a261d195a8a8fbe",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S018",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+      ],
+      "heading": "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "A policy of wait and watch/observation with regular evaluation can be applied to patients without complications due to stone disease [ 24 ]. The EAU does not specify any stone size and refers to the stone size as small, but it highlights that stone expulsion spontaneously is inversely proportional to the stone size and is different for every patient [ 25 ] (EAU: strong recommendation). In contrast, the AUA specifies a stone size of ≤10 mm for this policy (AUA: strong recommendation).",
+      "character_count": 488,
+      "content_sha256": "f013d371b64472536bcaafcbe571358f3230b3075f2519de7a261d195a8a8fbe",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0021-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "9bb5e90f778c2bcc53e26cb21ce7c717644b1eba5afcdfbecd2e25ab3e9f7c24",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S018",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+      ],
+      "heading": "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Both the AUA and EAU recommend the use of an α-blocker as MET for distal ureteric stones; the AUA suggests this for stones of ≤10 mm, whereas the EAU implies this for stones of <5 mm in size (AUA/EAU: strong recommendation). The AUA suggests that this treatment should be carried out for 4–6 weeks, and, following this, if not successful, a definitive treatment plan should be formulated (AUA: moderate recommendation). The EAU does not recommend any specific interval between MET and definitive treatment.",
+      "character_count": 506,
+      "content_sha256": "9bb5e90f778c2bcc53e26cb21ce7c717644b1eba5afcdfbecd2e25ab3e9f7c24",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0022-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "4a70f8680f46e0591da44213c2d0195e556884222429085a85506fe548001e42",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Active stone removal is warranted by either shock wave lithotripsy (SWL) or ureteroscopy (URS) for the following patients [ 5 ]:",
+      "character_count": 128,
+      "content_sha256": "4a70f8680f46e0591da44213c2d0195e556884222429085a85506fe548001e42",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0023-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "7f9ca8ca39daafa00467897015978aa9b075705046da210dfbc51e55ac6f0917",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Stones unlikely to pass spontaneously;",
+      "character_count": 38,
+      "content_sha256": "7f9ca8ca39daafa00467897015978aa9b075705046da210dfbc51e55ac6f0917",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0024-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "72751176719a4be2514d2a7a16de861a452443340be2b957d368d306a3e7067e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Urolithiasis causing obstruction;",
+      "character_count": 33,
+      "content_sha256": "72751176719a4be2514d2a7a16de861a452443340be2b957d368d306a3e7067e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0025-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "0dcedbc6d7bfae586df3cfb77fdf50b74d6700117ca4789c1b672a33d33f694d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Pain despite adequate analgesia;",
+      "character_count": 32,
+      "content_sha256": "0dcedbc6d7bfae586df3cfb77fdf50b74d6700117ca4789c1b672a33d33f694d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0026-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "ba1432015854e8d0f05b60427790ace1ae338b076b1412f9819f6d00476f8849",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Decreased renal function either due to renal failure, solitary kidney, or bilateral obstruction.",
+      "character_count": 96,
+      "content_sha256": "ba1432015854e8d0f05b60427790ace1ae338b076b1412f9819f6d00476f8849",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0027-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "463cca65e17a87174bd9ea38c7a362c50a73e34efa365605575b8fc45f89eb10",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Reimaging in the form of X-ray KUB, US, or CT should be considered before any intervention if the initial presentation has changed, as this might indicate a change in the position and hence modified management is necessary (AUA: clinical principle). Patients undergoing intervention should be informed by the clinician about URS being associated with a higher stone-free rate (SFR) and lesser need to reperform the procedure when compared to SWL [ 26 ]; however, SWL is safer, with fewer complications and lower morbidity, in comparison with URS (AUA/EAU: strong recommendation).",
+      "character_count": 579,
+      "content_sha256": "463cca65e17a87174bd9ea38c7a362c50a73e34efa365605575b8fc45f89eb10",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0028-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "71c6df34b448909237db3e31028d36f348ceb3a8de53e4a6f66b930678545146",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The EAU recommends URS as the first-line treatment for stones either in the proximal or distal ureter measuring >10 mm; for <10 mm, either URS or SWL can be selected for first-line management ( Table 1 ). Severe obesity also warrants URS as a first-line treatment option (EAU: strong recommendation). The AUA suggests offering URS to all patients requiring intervention with stones in the mid- and distal ureter due to a higher SFR, particularly with a stone size <10 mm, and SWL should be offered if the patient declines URS (AUA: strong recommendation). The AUA recommends that this guideline does not apply to stones in the proximal ureter as the SFR with URS for proximal ureteric calculi > 10 mm was not found to be superior to that of SWL based on the panel’s analysis.",
+      "character_count": 775,
+      "content_sha256": "71c6df34b448909237db3e31028d36f348ceb3a8de53e4a6f66b930678545146",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0029-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "3f6fbffac294dd2768529f0d1f4d86074260129365898eb963f0fc18ef272f03",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "4.3.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 EAU and AUA recommendations based on ureteric stone size and location.",
+      "character_count": 78,
+      "content_sha256": "3f6fbffac294dd2768529f0d1f4d86074260129365898eb963f0fc18ef272f03",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0030-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "becb525940774ce567d1bd034dee6f761ebc5175150cf81d70b3c406475532bd",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 EAU and AUA recommendations based on ureteric stone size and location. — Anatomical Location: Proximal ureter; Stone Size: <10 mm; Type of Intervention (EAU): SWL or URS; Type of Intervention (AUA): SWL or URS",
+      "character_count": 217,
+      "content_sha256": "becb525940774ce567d1bd034dee6f761ebc5175150cf81d70b3c406475532bd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0031-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "4025283276280e169f0bb6e255ba87047d41453b82d206bd297b79b8efeea6ac",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 EAU and AUA recommendations based on ureteric stone size and location. — Anatomical Location: Proximal ureter; Stone Size: >10 mm; Type of Intervention (EAU): 1. URS (first line) 2. SWL (second line); Type of Intervention (AUA): SWL or URS",
+      "character_count": 247,
+      "content_sha256": "4025283276280e169f0bb6e255ba87047d41453b82d206bd297b79b8efeea6ac",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0032",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0032-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "9b2a676bedbb86db0ac5245cf1c17a872038a958befd97bf9dbdebcb85d831c9",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 EAU and AUA recommendations based on ureteric stone size and location. — Anatomical Location: Distal ureter; Stone Size: <10 mm; Type of Intervention (EAU): SWL or URS; Type of Intervention (AUA): 1. URS (first line) 2. SWL (second line)",
+      "character_count": 245,
+      "content_sha256": "9b2a676bedbb86db0ac5245cf1c17a872038a958befd97bf9dbdebcb85d831c9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0033-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "63f7f431f372a925eb3ed19cacc8cc23680e8844f9f9c984c5467c8b9c0c2577",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 EAU and AUA recommendations based on ureteric stone size and location. — Anatomical Location: Distal ureter; Stone Size: >10 mm; Type of Intervention (EAU): 1. URS (first line) 2. SWL (second line); Type of Intervention (AUA): 1. URS (first line) 2. SWL (second line)",
+      "character_count": 275,
+      "content_sha256": "63f7f431f372a925eb3ed19cacc8cc23680e8844f9f9c984c5467c8b9c0c2577",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0034-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "de5cb7b3cdd50e555b368fb495b2bb76a206dc7b1f8235ca0137c535facebfff",
+      "block_type": "table_note",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S017",
+      "parent_section_heading": "4.3. Ureteric Stones",
+      "section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 SWL—shockwave lithotripsy, URS—ureteroscopy.",
+      "character_count": 52,
+      "content_sha256": "de5cb7b3cdd50e555b368fb495b2bb76a206dc7b1f8235ca0137c535facebfff",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.3. Ureteric Stones",
+        "4.3.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0035-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "2a6cf308399707829eddab953e28de0b35bfb6fdad97df45af1d19cb1365418c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S021",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.1. Conservative Management"
+      ],
+      "heading": "4.4.1. Conservative Management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Due to advances in and the increased use of imaging technology, it is becoming easier to detect asymptomatic renal stones. Patients presenting with non-problematic stones in the calyces, which are not causing obstruction, can be offered observational treatment (AUA: conditional recommendation). This depends on the natural history of non-obstructing small renal calculi and the risk of progression, which are both unclear and not well defined [ 5 ]. Hence, this treatment option remains debatable due to the lack of high-quality evidence according to both the AUA and EAU. Both guidelines suggest active surveillance if opting for conservative treatment. While the AUA does not provide any specific timeframe, the EAU recommends 6 months for the first follow-up and yearly thereafter to assess for symptoms and stone growth with US or X-ray. If considering intervention, then NCCT should be used as the imaging modality (EAU: strong recommendation).",
+      "character_count": 950,
+      "content_sha256": "2a6cf308399707829eddab953e28de0b35bfb6fdad97df45af1d19cb1365418c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.1. Conservative Management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0036-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "1afeae41a499981a1182acb9495078b4a45ae0fb714b58bb6be30e29598cf2bd",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S022",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.2. Active Treatment"
+      ],
+      "heading": "4.4.2. Active Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Depending on the patient’s history and any previously available stone analysis, or the Hounsfield Units (HU) of the current stone on a CT scan, the stone’s composition should be assessed before offering any active treatment, as SWL is unlikely to be effective for stones with a density of >1000 HU (EAU: strong recommendation)",
+      "character_count": 326,
+      "content_sha256": "1afeae41a499981a1182acb9495078b4a45ae0fb714b58bb6be30e29598cf2bd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0037",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.2. Active Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0037-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "5d7e49ccb4f693e74ec04aa3c5e1bccdcc9e2fa1b0ca4491cc1c1544b7a3a6b2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Stones measuring >20 mm should be treated with PCNL as the first-line treatment (AUA/EAU: strong recommendation) ( Table 2 ). This is due to the higher SFR with PCNL and lesser need for secondary procedures. Moreover, the effectiveness of PCNL when compared to SWL and URS is less affected by the stone’s location, density, and composition [ 4 ]. If PCNL is not available as an option, flexible URS or SWL should be considered (EAU: strong recommendation). Owing to the acceptable SFR with URS and SWL for <20 mm stones, they should be offered as first-line treatments for <20 mm calculi in this anatomical location (AUA: strong recommendation). The EAU suggests either SWL, URS, or PCNL for 10–20 mm stones; for <10 mm, it recommends SWL or URS as the first line, followed by PCNL.",
+      "character_count": 782,
+      "content_sha256": "5d7e49ccb4f693e74ec04aa3c5e1bccdcc9e2fa1b0ca4491cc1c1544b7a3a6b2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0038",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0038-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "7129b9c92fd71ea4469c9697ac3cf3cabeeec833ba151155cf4c0102c89087a7",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location.",
+      "character_count": 75,
+      "content_sha256": "7129b9c92fd71ea4469c9697ac3cf3cabeeec833ba151155cf4c0102c89087a7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0039-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "381193a3189074abbfc25e8e3b94bc5de7dbc3100c0835889256b2e0ed44b2d2",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: Upper/middle calyces/renal pelvis; Stone Size: <10 mm; Type of Intervention (EAU): 1. SWL or URS (first line) 2. PCNL (second line); Type of Intervention (AUA): SWL or URS",
+      "character_count": 291,
+      "content_sha256": "381193a3189074abbfc25e8e3b94bc5de7dbc3100c0835889256b2e0ed44b2d2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0041",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0040-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "842b31970448788f35dfed5c83f8f18abf00d3300355aa02a36d2f62494e42f4",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: 10–20 mm; Stone Size: PCNL/URS or SWL; Type of Intervention (EAU): SWL or URS",
+      "character_count": 197,
+      "content_sha256": "842b31970448788f35dfed5c83f8f18abf00d3300355aa02a36d2f62494e42f4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0041-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "eaf913bbe17bba80c1337471ab9e68b43272f62e0dbfc07b3d275de29f9f037d",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: >20 mm; Stone Size: 1. PCNL (first line) 2. URS or SWL (second line); Type of Intervention (EAU): 1. PCNL (first line) 2. URS or SWL (second line)",
+      "character_count": 266,
+      "content_sha256": "eaf913bbe17bba80c1337471ab9e68b43272f62e0dbfc07b3d275de29f9f037d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0042-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "837561f9f13124ebe312626d4c2778a36cf412c61c1f08d02fc5af685faf3375",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: Lower pole; Stone Size: <10 mm; Type of Intervention (EAU): 1. SWL or URS (first line) 2. PCNL (second line); Type of Intervention (AUA): SWL or URS",
+      "character_count": 268,
+      "content_sha256": "837561f9f13124ebe312626d4c2778a36cf412c61c1f08d02fc5af685faf3375",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0043-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "4b08ff56cb6c09436aa2746f610a5a04c5d15fab8e552e8ff13f4911dedbe65d",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: 10–20 mm; Stone Size: SWL or URS/PCNL (favourable factors for SWL) PCNL/URS as first line, SWL as second line (unfavourable factors for SWL); Type of Intervention (EAU): 1. PCNL/URS (first line) 2. SWL (second line)",
+      "character_count": 335,
+      "content_sha256": "4b08ff56cb6c09436aa2746f610a5a04c5d15fab8e552e8ff13f4911dedbe65d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0045",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0044-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "eaf913bbe17bba80c1337471ab9e68b43272f62e0dbfc07b3d275de29f9f037d",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 EAU and AUA recommendations based on renal stone size and location. — Anatomical Location in Collecting System: >20 mm; Stone Size: 1. PCNL (first line) 2. URS or SWL (second line); Type of Intervention (EAU): 1. PCNL (first line) 2. URS or SWL (second line)",
+      "character_count": 266,
+      "content_sha256": "eaf913bbe17bba80c1337471ab9e68b43272f62e0dbfc07b3d275de29f9f037d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0046",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0045-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "95069e68786c52e6a85d7f9e5024bd910592cd923e1aa6b28b9d0d43d7933888",
+      "block_type": "table_note",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S023",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 SWL—shockwave lithotripsy, URS—ureteroscopy, PCNL—percutaneous neprolithotomy.",
+      "character_count": 86,
+      "content_sha256": "95069e68786c52e6a85d7f9e5024bd910592cd923e1aa6b28b9d0d43d7933888",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0046-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "4a6d5aa70ae988689b394a5fe82d4e5bdcfa819b16ac9a1d39e3fa45769bf57f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S024",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.4. Lower Pole Calculi"
+      ],
+      "heading": "4.4.4. Lower Pole Calculi",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The guidelines of the AUA and EAU for >20 mm lower pole calculi remain the same as those for upper and middle pole calculi. For ≤10 mm stones, they consider SWL or URS as the first line (AUA: strong recommendation). The EAU also suggests SWL or URS initially and PCNL as a second line. The guidelines slightly differ for calculi between 10 and 20 mm. Owing to the considerable benefit of the endoscopic approach over SWL, the AUA advocates strongly against offering SWL as a first line for 10–20 mm stones and to inform patients of the higher SFR with PCNL but also the associated increased morbidity (AUA: strong recommendation). The EAU describes favourable and unfavourable factors for SWL consideration; if adverse factors are present, it recommends PCNL (EAU: strong recommendation). However, in the presence of favourable factors, SWL can be considered alongside PCNL and URS as a first-line procedure. The EAU lists a narrow infundibulum, a long skin to stone distance, a long calyx, stones that are shock-wave-resistant (calcium oxalate monohydrate, brushite, cystine), and a steep infundibular-pelvic angle as factors that are unfavourable for SWL [ 5 ].",
+      "character_count": 1163,
+      "content_sha256": "4a6d5aa70ae988689b394a5fe82d4e5bdcfa819b16ac9a1d39e3fa45769bf57f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.4. Lower Pole Calculi"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0047-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "6bf932bcc1d174949911e88179a0ac65348c8f7a4d0192885b0f4736e6f6c957",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S025",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S020",
+      "parent_section_heading": "4.4. Renal Stones",
+      "section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.5. Bladder Stones"
+      ],
+      "heading": "4.4.5. Bladder Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Migratory bladder stones (those that have passed from the upper urinary tract) can be treated conservatively, especially if asymptomatic. However, primary (i.e., forming in absence of any other urinary tract abnormality) and secondary (i.e., occurring in the presence of other urinary tract pathologies) ones are less likely to pass spontaneously and require active management [ 5 ]. Several treatment options for bladder calculi are available. Of these, transurethral, endoscopic, and percutaneous treatments have similar SFRs but offer the advantage of a shorter duration of surgery, hospital stay, and catheterisation when compared to open cystolithotomy [ 27 ]. Transurethral cystolithotripsy should therefore be offered to adults as a first line and, where not possible, a percutaneous cystolithotripsy should be considered (EAU: strong recommendation). Open cystolithotomy can be used as a first line for very large bladder stones (EAU: weak recommendation). When endoscopic techniques are not preferable, laparoscopic, SWL, or open cystolithotomy approaches can be used as alternative options (EAU: weak recommendation), although the guidelines highlight the fact that SWL is associated with a lower SFR for bladder calculi compared to open or endoscopic procedures.",
+      "character_count": 1273,
+      "content_sha256": "6bf932bcc1d174949911e88179a0ac65348c8f7a4d0192885b0f4736e6f6c957",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Management",
+        "4.4. Renal Stones",
+        "4.4.5. Bladder Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0048-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "b640660d8cad2abc186e4e0a9421d137b2e7dbf2a8561dcedad4e81a6e4168f0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S027",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ],
+      "heading": "5.1. Paediatric Population",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Urolithiasis in children can present with ill-defined symptoms, which can vary with age. Older children can present clinically with haematuria, flank pain, and recurrent UTIs [ 28 ], whereas, in infants, the symptoms can be vomiting, irritability, and crying [ 29 ].",
+      "character_count": 266,
+      "content_sha256": "b640660d8cad2abc186e4e0a9421d137b2e7dbf2a8561dcedad4e81a6e4168f0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0049-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "d9decb7b7343d93b1cdf96aab68b7c2db88668101d23d9aad0720f8ba9809976",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S027",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ],
+      "heading": "5.1. Paediatric Population",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Keeping in mind the effects of radiation and observing the principle of ALARA (As Low As Reasonably Achievable), US should be performed as primary imaging in the paediatric population with suspected stones; however, if it fails to provide adequate information, X-ray KUB or NCCT should be considered (EAU: strong recommendation). The AUA suggests NCCT before PCNL in children (AUA: strong recommendation).",
+      "character_count": 405,
+      "content_sha256": "d9decb7b7343d93b1cdf96aab68b7c2db88668101d23d9aad0720f8ba9809976",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0050-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "a3bf30699205f2a7c1c35bbb8068ca25ee70d072b701a68169c1b838e84eba58",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S027",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ],
+      "heading": "5.1. Paediatric Population",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "The EAU documents a paucity of evidence for the observational management of stones in children; however, it can be the first approach for asymptomatic lower pole, <7 mm stones not composed of struvite or cystine and with no anatomical abnormalities [ 5 ]. It also suggests that although MET can increase the expulsion rate and control pain, it is associated with more side effects in children. Conversely, the AUA recommends conservative management with or without the use of MET as a first line for ≤10 mm ureteral stones [ 3 ], and, if MET is being used, parents or patients should be informed about the off-label indication (AUA: moderate recommendation). Stenting should not be routinely carried out prior to URS in children (AUA: expert opinion). Indications for SWL, URS, and PCNL are similar to those in adults, and SWL should be offered as a first line for single ureteral stones <10 mm, followed by URS as a second line if SWL fails or is not feasible (EAU: strong recommendation). Ureteroscopy and lasertripsy is a safe option with good outcomes provided that it is carried out by surgeons experienced in managing the complications associated with the procedure in the paediatric population [ 30 ]. The AUA advises either SWL or URS depending on the anatomy and body habitus with a failed observational strategy or a trial of MET; however, it suggests that the use of SWL may be restricted in this instance given the inability of ultrasound-based lithotriptors to accurately visualise the ureters, especially the mid-ureter, but it can prove more effective in specific groups of patients, such as small children, where their anatomy makes URS access more difficult (AUA: strong recommendation).",
+      "character_count": 1704,
+      "content_sha256": "16ab95beea50195fe09300a9edbed156251c513a361233f95a3bc0167b9f5724",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0050-C02",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "a3bf30699205f2a7c1c35bbb8068ca25ee70d072b701a68169c1b838e84eba58",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S027",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ],
+      "heading": "5.1. Paediatric Population",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Cases with renal calculi <20 mm should be offered SWL as a first line (EAU: strong recommendation). Flexible ureteroscopy (FURS) can be utilised if SWL fails, especially for lower calyceal stones [ 31 ]. The AUA agrees with using either SWL or URS for <20 mm renal stones (AUA: moderate recommendation). For renal stones >20 mm, PCNL should be offered (EAU: strong recommendation). PCNL, while offering a higher SFR, is associated with greater side effects in the paediatric population; however, the use of mini and ultra-mini PCNL techniques has led to a fall in complications, particularly those associated with the size of the tract, such as renal extravasation and haematuria [ 32 ]. However, the AUA differs slightly by advocating for both SWL (with stent or nephrostomy placement) and PCNL, being acceptable options for >20 mm renal calculi (AUA: moderate recommendation). The AUA also suggests the conservative treatment of non-obstructing, asymptomatic renal stones with regular routine US surveillance (AUA: expert opinion). Stone material should be analysed in all children, followed by a metabolic assessment depending on the results (EAU: strong recommendation).",
+      "character_count": 1174,
+      "content_sha256": "763856139d5c86eb05eaa7a6ac38880eaf0825ad6352d0ccd110337c7738792a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.1. Paediatric Population"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0051-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "2963e2f5d5db884bbe9e6dc49a74556b8a0480798e4c33adf3875a86ef137fed",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S028",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ],
+      "heading": "5.2. Pregnancy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Urolithiasis in pregnancy can present a challenging clinical scenario and should be managed with a multidisciplinary approach involving radiologists, urologists, obstetricians, and the patient [ 33 , 34 ].",
+      "character_count": 205,
+      "content_sha256": "2963e2f5d5db884bbe9e6dc49a74556b8a0480798e4c33adf3875a86ef137fed",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0053",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0052-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 52,
+      "source_block_sha256": "cb99bb7f2c7bcd1e61657cb4a7a5a5b9d7983f790d64f263655788501d5a52af",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S028",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ],
+      "heading": "5.2. Pregnancy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For pregnant patients, although NCCT has a higher positive predictive value than magnetic resonance imaging (MRI) and US, it should still be used as the last line, with US being the initial investigation, followed by MRI (EAU: strong recommendation). The AUA recommends a multidisciplinary approach before considering any diagnostic imaging in pregnant patients (AUA: clinical principle).",
+      "character_count": 388,
+      "content_sha256": "cb99bb7f2c7bcd1e61657cb4a7a5a5b9d7983f790d64f263655788501d5a52af",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0054",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0053-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 53,
+      "source_block_sha256": "ea404c9a1925ff16d2b71de03f41dc3919950b97cc1cf84d113febe628d94b3f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S028",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ],
+      "heading": "5.2. Pregnancy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Where possible, uncomplicated and asymptomatic nephrolithiasis in pregnancy should be treated with an observational approach (AUA/EAU: strong recommendation). If conservative treatment fails, URS should be considered, or temporary decompression with ureteral stent or nephrostomy; however, they do require frequent exchanges due to rapid encrustation (AUA: strong recommendation). The EAU documents that URS (when compared to a temporary stenting) is associated with better patient satisfaction, lesser irritation of the urinary tract, and a reduced requirement for ureteric stent exchange [ 5 ].",
+      "character_count": 596,
+      "content_sha256": "ea404c9a1925ff16d2b71de03f41dc3919950b97cc1cf84d113febe628d94b3f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0055",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.2. Pregnancy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0054-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 54,
+      "source_block_sha256": "737f6cf700a0686d3c2fb18710e831d07d24d944499c5530a18b012987963ca0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S029",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.3. Renal Transplant Patients"
+      ],
+      "heading": "5.3. Renal Transplant Patients",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Although uncommon, stones in transplanted kidneys can present a difficult and clinically challenging scenario. They can arise as de novo allograft urolithasis or can be present in the donor kidney before transplant and can be detected by US or NCCT if US is inconclusive [ 5 ]. Obstruction secondary to stones in transplant patients requires immediate and effective treatment as they are dependent on the solitary kidney for the maintenance of renal function. The EAU suggests offering patients any of the available treatment options, SWL, URS, or PCNL, depending on various factors including, but not limited to, anatomical variations in the transplanted kidney, the transplant function, and the clotting status of the patient (EAU: weak recommendation). The treatment of donor stones prior to transplant may be required as it increases the donor pool and also because calculi in a donor kidney are considered a relative contraindication to donation. Ex vivo stone surgery, also known as ex vivo bench surgery, including ureteroscopy or pyelolithomy, can be carried out immediately after donor nephrectomy and has been proven to be safe, without any effect on the allograft’s function [ 35 ]. In addition, URS performed at experienced centres has also been demonstrated to be a safe technique, with good outcomes for both donor and post-transplanted kidneys [ 36 ]. Finally, SWL, although infrequently utilised for de novo lithiasis in transplant patients, has also been proven to be potent, with a low risk of major complications [ 37 ].",
+      "character_count": 1539,
+      "content_sha256": "737f6cf700a0686d3c2fb18710e831d07d24d944499c5530a18b012987963ca0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0056",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.3. Renal Transplant Patients"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0055-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 55,
+      "source_block_sha256": "6bb7e85c5981a8af3b3b5f9f7f0827e1ad00166e94572b0496f73146d0484dcf",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S030",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.4. Post-Procedural Imaging"
+      ],
+      "heading": "5.4. Post-Procedural Imaging",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Following treatment with endourology or SWL, there may be residual fragments, which may require additional treatment [ 4 ]. The EAU recommends performing imaging following these interventions (EAU: strong recommendation). Due to the sparsity of high-quality evidence, the EAU suggests that the timing for imaging and the decision for the treatment of stone fragments should be based on the judgment of the treating clinician in conjunction with patient preferences. The EAU also advises that imaging within 4 weeks may lead to false positive results due to dust particles and consequently lead to overtreatment. NCCT has higher sensitivity to detect these fragments when compared with X-ray, US, and IVU; however, this decision must be based on the risks and benefits considering that NCCT is associated with increased radiation exposure and the detection of clinically insignificant particles [ 5 ]. The AUA advocates for considering endourological procedures if residual fragments are detected, and especially in the presence of infected stones (AUA: moderate recommendation).",
+      "character_count": 1078,
+      "content_sha256": "6bb7e85c5981a8af3b3b5f9f7f0827e1ad00166e94572b0496f73146d0484dcf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0057",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.4. Post-Procedural Imaging"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0056-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "abc3b5e06bc54a8442f6f91e6c0e9eff6fcb1886870a145c8cb4fe5d80504bca",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S031",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ],
+      "heading": "5.5. Recurrence Prevention and Metabolic Evaluation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Following a new diagnosis of urolithiasis, all patients will need further metabolic work-up. Hence, an initial screening evaluation should be performed, which should include a detailed medical and nutritional history, drug history, urinalysis including dipstick and microscopy, and a serum blood sample including parathyroid hormone levels (PTH) if suspecting hyperparathyroidism (AUA: clinical principle). Once the stone has passed, patients can be classified as being of high or low risk for stone formation depending on the basic screening evaluation and stone analysis [ 5 ]. Therefore, when possible, all first-time stones should be sent for stone analysis with X-ray diffraction or infrared spectroscopy (EAU: strong recommendation, AUA: clinical principle). A repeat analysis is warranted for the early or late recurrence of stones or recurrence despite being on medical therapy (EAU: strong recommendation).",
+      "character_count": 915,
+      "content_sha256": "abc3b5e06bc54a8442f6f91e6c0e9eff6fcb1886870a145c8cb4fe5d80504bca",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0057-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 57,
+      "source_block_sha256": "7c9a828b5e9ede1f20248bc67d17f2b39cec44eed9c2fc1192d35b59046dc7c8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S031",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ],
+      "heading": "5.5. Recurrence Prevention and Metabolic Evaluation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Patients falling into the high-risk group require metabolic assessment as they are likely to benefit from medical therapy. This can be extended to first-time stone formers as well for nutritional guidance or even for drug therapy if applicable (AUA: standard). Specific dietary therapy based on the metabolic evaluation results is more effective than general dietary guidance to prevent recurrence [ 38 ].",
+      "character_count": 405,
+      "content_sha256": "7c9a828b5e9ede1f20248bc67d17f2b39cec44eed9c2fc1192d35b59046dc7c8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0059",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0058-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 58,
+      "source_block_sha256": "ed3e3d24354f75ee9379d8d4a8a77915c1137ff678619f8c4e12c98391cb35d2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S031",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ],
+      "heading": "5.5. Recurrence Prevention and Metabolic Evaluation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "One or two 24-h urinary samples should be collected for metabolic assessment, with the AUA panel preferring two samples. When the patient is on a random diet, this should be assessed at least for pH, volume, calcium, uric acid, sodium, citrate, oxalate, potassium, and creatinine (AUA: expert opinion). The EAU also favours the collection of two consecutive 24-h urinary samples. It also mentions spot urine samples, although of limited use, but they can be an alternative when 24-h collection is not possible (for example, in children) [ 5 ]. Ideally, the patient should be stone-free for at least 20 days and on their normal regular diet before the initial metabolic assessment [ 39 ].",
+      "character_count": 687,
+      "content_sha256": "ed3e3d24354f75ee9379d8d4a8a77915c1137ff678619f8c4e12c98391cb35d2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0060",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0059-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 59,
+      "source_block_sha256": "37dc4c5f14a4cef8d6763418c6296e62c6fbb5360c5d1a24325b2e2b0a230de6",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S031",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ],
+      "heading": "5.5. Recurrence Prevention and Metabolic Evaluation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Both guidelines provide dietary and medical management advice depending on the metabolic assessment and stone analysis results. The EAU also provides general preventive measures, including lifestyle, fluid, and general nutritional advice for a balanced diet. The EAU and AUA both stress the importance of fluid intake, highlighting the fact that the risk of stone formation is inversely related to high fluid intake, and recommend generous fluid intake to allow the 24-h urinary volume to be at least >2.5 L (EAU: strong recommendation, AUA: standard).",
+      "character_count": 552,
+      "content_sha256": "37dc4c5f14a4cef8d6763418c6296e62c6fbb5360c5d1a24325b2e2b0a230de6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0061",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.5. Recurrence Prevention and Metabolic Evaluation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0060-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 60,
+      "source_block_sha256": "d6a8249d8059fb0956f762f1ce7632e7e9d7d510e55b92ec845d93b3ee243b00",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "5.6. Calcium Oxalate Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The most common metabolic abnormalities associated with calcium stone formation include hyperoxaluria, hyperuricosuria, hypocitraturia, hypomagnesuria, and hypocalciuria [ 5 ] ( Table 3 ). Recurrent calcium stones in the absence of abnormalities in a 24-h urinary sample should be treated with potassium citrate and/or thiazide diuretics (AUA: standard).",
+      "character_count": 354,
+      "content_sha256": "d6a8249d8059fb0956f762f1ce7632e7e9d7d510e55b92ec845d93b3ee243b00",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0062",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0061-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 61,
+      "source_block_sha256": "435ed9aba7622ee3ec0c4ae8ec8d0e4a004fcc7fbf1c8a2420edf450ede0e13c",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "5.6. Calcium Oxalate Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones.",
+      "character_count": 45,
+      "content_sha256": "435ed9aba7622ee3ec0c4ae8ec8d0e4a004fcc7fbf1c8a2420edf450ede0e13c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0063",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0062-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 62,
+      "source_block_sha256": "e1332c8ac1e58c23f70d7686faebbd2fde68e091aa3bcedfbd087a58ff9d93b0",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hypocitraturia; EAU Recommendations: Alkaline citrate or sodium bicarbonate; EAU Strength of Recommendation: Strong; AUA Recommendations: Increase vegetables and fruits in diet, limit non-dairy animal protein and high-acid food Potassium citrate; AUA Strength of Recommendation: Expert opinion Standard",
+      "character_count": 380,
+      "content_sha256": "e1332c8ac1e58c23f70d7686faebbd2fde68e091aa3bcedfbd087a58ff9d93b0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0065",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0063-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 63,
+      "source_block_sha256": "7e89196ca75c027aec55f043fb4cfdce0031a820969bc4d6babca8463dad6c6d",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hyperoxaluria; EAU Recommendations: Calcium supplements in enteric hyperoxaluria Pyridoxine in primary hyperoxaluria type 1 Alkaline citrate in enteric hyperoxaluria Reduced dietary fat and oxalate in enteric hyperoxaluria Oxalate restriction; EAU Strength of Recommendation: Strong Strong Weak Weak Weak; AUA Recommendations: Restrictive oxalate diet along with calcium supplements in case of enteric hyperoxaluria; AUA Strength of Recommendation: Expert opinion",
+      "character_count": 541,
+      "content_sha256": "7e89196ca75c027aec55f043fb4cfdce0031a820969bc4d6babca8463dad6c6d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0066",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0064-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 64,
+      "source_block_sha256": "996144984033f53cc684fc662ad4110e8905a021c444be702042b68b66d4e8d8",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hypercalciuria; EAU Recommendations: Thiazide or alkaline citrate or both; EAU Strength of Recommendation: Strong; AUA Recommendations: Limit sodium intake (panel suggestion 2300 mg/day), consume 1000–1200 mg/day of dietary calcium Thiazide; AUA Strength of Recommendation: Standard Standard",
+      "character_count": 369,
+      "content_sha256": "996144984033f53cc684fc662ad4110e8905a021c444be702042b68b66d4e8d8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0067",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0065-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 65,
+      "source_block_sha256": "6f2df8f8edba69ebe6474c475b59f12e6760cb89b4bf8ff2779906ea42340d89",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hyperuricosuria; EAU Recommendations: Allopurinol as first line Febuxostat as second line Avoid excessive intake of animal proteins; EAU Strength of Recommendation: Strong Strong Strong; AUA Recommendations: Reduce intake of non-dairy animal protein and counsel to decrease acid load and increase alkali load in diet Allopurinol; AUA Strength of Recommendation: Expert opinion Standard",
+      "character_count": 463,
+      "content_sha256": "6f2df8f8edba69ebe6474c475b59f12e6760cb89b4bf8ff2779906ea42340d89",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0068",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0066-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 66,
+      "source_block_sha256": "f1ddcbea11d00407e6ea3b68f79e00d36d7095ef7d9e500c8723e6100f04be30",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hypomagnesuria; EAU Recommendations: Magnesium",
+      "character_count": 124,
+      "content_sha256": "f1ddcbea11d00407e6ea3b68f79e00d36d7095ef7d9e500c8723e6100f04be30",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0069",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0067-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 67,
+      "source_block_sha256": "3cc7b643490900794f1b738a9d5898efd536701ff96e1c12847c4cbc0b69bdea",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S032",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Management of calcium oxalate stones. — Metabolic Assessment Outcome: Hypernatriuria; EAU Recommendations: Reduce salt intake; EAU Strength of Recommendation: Strong",
+      "character_count": 173,
+      "content_sha256": "3cc7b643490900794f1b738a9d5898efd536701ff96e1c12847c4cbc0b69bdea",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0070",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.6. Calcium Oxalate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0068-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 68,
+      "source_block_sha256": "a59b36cfb50a6ec5fc1a466ea2036996e52f93efea1444023edc7ba86932ea87",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S033",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ],
+      "heading": "5.7. Uric Acid and Urate-Containing Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The recurrence rate in uric acid and ammonium urate stone formers is considered to be high [ 5 ] ( Table 4 ). Uric acid stones are commonly associated with a low urinary pH or hyperuricosuria. Ammonium urate stones are rare and are associated with malnutrition, UTIs, hypokalaemia, hypophosphatemia, and malabsorption [ 5 ]. The urinary pH should be raised by administering potassium citrate, and persistent alkalinisation can also help to dissolve existing stones [ 40 , 41 ]. Allopurinol should not be offered as a first line to uric acid stone formers (AUA: expert opinion). The EAU strongly recommends using allopurinol in the case of high urinary uric acid levels (EAU: strong recommendation).",
+      "character_count": 698,
+      "content_sha256": "a59b36cfb50a6ec5fc1a466ea2036996e52f93efea1444023edc7ba86932ea87",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0071",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0069-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 69,
+      "source_block_sha256": "1510e0ef635d8d8310c3aba08c615c55b6813bcf76d9bd05fee9ce3fd81fd7ed",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S033",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ],
+      "heading": "5.7. Uric Acid and Urate-Containing Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 4 Management of uric acid stones.",
+      "character_count": 39,
+      "content_sha256": "1510e0ef635d8d8310c3aba08c615c55b6813bcf76d9bd05fee9ce3fd81fd7ed",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0072",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0070-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 70,
+      "source_block_sha256": "4e42435e8a2e23dde0226f13105979af5b2bc2f0252caf7b71911de30fdc669b",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S033",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ],
+      "heading": "Table 4",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 4 Management of uric acid stones. — Metabolic Assessment Outcome: Hyper-acidic urinary pH < 5.5; EAU Recommendations: Alkaline citrate; EAU Strength of Recommendation: Strong; AUA Recommendation: Potassium citrate; AUA Strength of Recommendation: Expert opinion",
+      "character_count": 267,
+      "content_sha256": "4e42435e8a2e23dde0226f13105979af5b2bc2f0252caf7b71911de30fdc669b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0074",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0071-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 71,
+      "source_block_sha256": "7eb8c997a01544bc6f97128506f14874502f66bf9d9ceb9ebee09d8330ee9e5b",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S033",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ],
+      "heading": "Table 4",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 4 Management of uric acid stones. — Metabolic Assessment Outcome: Hyperuricosuria; EAU Recommendations: Allopurinol; EAU Strength of Recommendation: Strong; AUA Recommendation: Reduce intake of non-dairy animal protein; AUA Strength of Recommendation: Expert opinion",
+      "character_count": 272,
+      "content_sha256": "7eb8c997a01544bc6f97128506f14874502f66bf9d9ceb9ebee09d8330ee9e5b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0075",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0072-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 72,
+      "source_block_sha256": "b83ad686397fe1e7f0a981dba00742e883be3b96b2ad9b7863895d56065340e5",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S033",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ],
+      "heading": "Table 4",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 4 Management of uric acid stones. — Metabolic Assessment Outcome: Urinary pH > 6.5 in ammonium urate stone; EAU Recommendations: L-methionine",
+      "character_count": 147,
+      "content_sha256": "b83ad686397fe1e7f0a981dba00742e883be3b96b2ad9b7863895d56065340e5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0076",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.7. Uric Acid and Urate-Containing Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0073-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 73,
+      "source_block_sha256": "9f6473354584c6884b5d8a4e9ef8fa9de29c74130d763bb6421867cb7d5d905d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S034",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ],
+      "heading": "5.8. Cystine Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The main management strategy for cystine stones includes maintaining the pH of urine > 7.5 along with dietary therapy [ 42 , 43 ] ( Table 5 ). Since the formation of cystine stones is based on the concentration of cystine, high fluid intake is essential [ 3 ], and the AUA recommends at least 4 L/day and the EAU suggests 3.5 L/day. Sodium and protein intake should be limited, and potassium citrate is used as a drug therapy for alkalinisation (AUA: expert opinion). The EAU agrees on the use of potassium citrate and also recommends tiopronin in cases where alkalinisation and dietary therapy are not effective (EAU: strong recommendation).",
+      "character_count": 642,
+      "content_sha256": "9f6473354584c6884b5d8a4e9ef8fa9de29c74130d763bb6421867cb7d5d905d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0077",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0074-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 74,
+      "source_block_sha256": "22cf957da36f7689e63f357feecb20bf5216a04a765121887b3b62721d2d41c8",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S034",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ],
+      "heading": "5.8. Cystine Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 5 Management of cystine stones.",
+      "character_count": 37,
+      "content_sha256": "22cf957da36f7689e63f357feecb20bf5216a04a765121887b3b62721d2d41c8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0078",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0075-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 75,
+      "source_block_sha256": "0b340ef1a35fac0b1ec68e6742dbbf4e63b975a1628e986b73cae2ef8e0811eb",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S034",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ],
+      "heading": "Table 5",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 5 Management of cystine stones. — Metabolic Assessment Outcome: Cystine excretion < 3 mmol/day; EAU Recommendations: Potassium citrate Increase daily fluid intake for urinary volume > 3 L/day; EAU Strength of Recommendation: Strong Strong; AUA Recommendation: Limit sodium and protein, increase fluid intake Potassium citrate Tiopronin, if dietary and alkalinisation therapies fail; AUA Strength of Recommendation: Expert opinion Expert opinion Expert opinion",
+      "character_count": 465,
+      "content_sha256": "0b340ef1a35fac0b1ec68e6742dbbf4e63b975a1628e986b73cae2ef8e0811eb",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0080",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0076-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 76,
+      "source_block_sha256": "59a286568775933419a52ab9bc317015206084115f3f37c8362dfcace7326427",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S034",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ],
+      "heading": "Table 5",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 5 Management of cystine stones. — Metabolic Assessment Outcome: Cystine excretion > 3 mmol/day; EAU Recommendations: Tiopronin in addition to above measures; EAU Strength of Recommendation: Strong",
+      "character_count": 202,
+      "content_sha256": "59a286568775933419a52ab9bc317015206084115f3f37c8362dfcace7326427",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0081",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.8. Cystine Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0077-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 77,
+      "source_block_sha256": "2505cb4e78603e875fd9405c0ae4bd619d1cf970d02204b33a3b5df1767c3332",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S035",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ],
+      "heading": "5.9. Calcium Phosphate Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Brushite and carbonate apatite are two different mineral forms in which calcium phosphate stones can appear; while brushite is associated with hypercalciuria and hyperphosphatemia, carbonate apatite can occur due to infections [ 5 ] ( Table 6 ). Therefore, calcium phosphate stones can be seen in UTIs, hyperparathyroidism, and renal tubular acidosis. The EAU strongly recommends prescribing thiazides in the case of hypercalciuria (EAU: strong recommendation)",
+      "character_count": 460,
+      "content_sha256": "2505cb4e78603e875fd9405c0ae4bd619d1cf970d02204b33a3b5df1767c3332",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0082",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0078-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 78,
+      "source_block_sha256": "293d783ba44f0ce93500e63ce257afdc963d95a510650b89e5331d6ad4e9ae5e",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S035",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ],
+      "heading": "5.9. Calcium Phosphate Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 6 Management of calcium phosphate stones.",
+      "character_count": 47,
+      "content_sha256": "293d783ba44f0ce93500e63ce257afdc963d95a510650b89e5331d6ad4e9ae5e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0083",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0079-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 79,
+      "source_block_sha256": "2a6edd4b92fda9f946c1033846037c83cca3d71439b55fd9f6f3696bb988e416",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S035",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ],
+      "heading": "Table 6",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 6 Management of calcium phosphate stones. — Metabolic Assessment Outcome: Hypercalciuria; EAU Recommendations: Thiazide; EAU Strength of Recommendation: Strong; AUA Recommendation: Limit sodium intake (panel suggestion 2300 mg/day), consume 1000–1200 mg/day of dietary calcium Thiazide; AUA Strength of Recommendation: Standard Standard",
+      "character_count": 342,
+      "content_sha256": "2a6edd4b92fda9f946c1033846037c83cca3d71439b55fd9f6f3696bb988e416",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0085",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0080-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 80,
+      "source_block_sha256": "70cb287d817e5036ca97a792197338f59bc3d246ef45634ec82aa17882b42acd",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S035",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ],
+      "heading": "Table 6",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 6 Management of calcium phosphate stones. — Metabolic Assessment Outcome: Urinary pH > 6.5–6.8; EAU Recommendations: L-Methionine",
+      "character_count": 135,
+      "content_sha256": "70cb287d817e5036ca97a792197338f59bc3d246ef45634ec82aa17882b42acd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0086",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.9. Calcium Phosphate Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0081-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 81,
+      "source_block_sha256": "599e127ba5a0e58b734810c5e3a8e2effd86461a5ba0e65f485c1123e15091b4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S036",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ],
+      "heading": "5.10. Struvite Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Stones containing struvite can either form from scratch or from the infection of pre-existing stones by urease-producing bacteria [ 44 , 45 ] ( Table 7 ). In either case, the first-line treatment is complete surgical removal and antibiotic prescription in the case of persistent bacteriuria (EAU: strong recommendation). The AUA recommends offering acetohydroxamic acid (AHA), which acts as a urease inhibitor, when the surgical options are exhausted (AUA: expert opinion).",
+      "character_count": 473,
+      "content_sha256": "599e127ba5a0e58b734810c5e3a8e2effd86461a5ba0e65f485c1123e15091b4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0087",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0082-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 82,
+      "source_block_sha256": "d3f7abb14c476a1335226fd1cccd006cc79aef96443c77f5dfa57a2cfcd4ba1b",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S036",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ],
+      "heading": "5.10. Struvite Stones",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 7 Management of struvite stones.",
+      "character_count": 38,
+      "content_sha256": "d3f7abb14c476a1335226fd1cccd006cc79aef96443c77f5dfa57a2cfcd4ba1b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0088",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0083-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 83,
+      "source_block_sha256": "4f73e4457f8da087cb0b8b2b1b585579127608146a6295b78cf6c3b4c8e8a0f6",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S036",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S026",
+      "parent_section_heading": "5. Specific Patient Groups",
+      "section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ],
+      "heading": "Table 7",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 7 Management of struvite stones. — EAU Recommendations: Complete surgical removal Antibiotics if persistent bacteriuria Ammonium chloride for urinary acidification Methionine as an alternative for urinary acidification Acetohydroxamic acid may be an option for persistent bacterial colonisation; EAU Strength of Recommendation: Strong Strong Weak Weak; AUA Recommendation: Surgical removal, and, if surgical options exhausted, acetohydroxamic acid can be offered Monitor patients with urease-producing organisms for reinfection; prophylactic antibiotics may prevent recurrence; AUA Strength of Recommendation: Option Expert opinion",
+      "character_count": 637,
+      "content_sha256": "4f73e4457f8da087cb0b8b2b1b585579127608146a6295b78cf6c3b4c8e8a0f6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0090",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Specific Patient Groups",
+        "5.10. Struvite Stones"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0084-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 84,
+      "source_block_sha256": "4104a6e7f9a4f6267ffb4d2b48e5e52008f884fd440540759aadfc6ec21d1047",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S037",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "6. Areas of Future Research"
+      ],
+      "heading": "6. Areas of Future Research",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Future studies should include costs and patient-reported outcomes in their reports. Similarly, newer technological innovations should be included with regular updates, with new lasers, day-case surgery, smaller scopes, artificial intelligence, and suction devices. Standardised definitions and reporting should be encouraged to help to compare outcomes, improve patient counselling, and inform decision making.",
+      "character_count": 410,
+      "content_sha256": "4104a6e7f9a4f6267ffb4d2b48e5e52008f884fd440540759aadfc6ec21d1047",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0091",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "6. Areas of Future Research"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0085-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 85,
+      "source_block_sha256": "7ce32e0c7b207e809ebd4cefc340560a92683e0d8a0beaf9ac58fd6f2eab1149",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S038",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Conclusions"
+      ],
+      "heading": "7. Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Kidney stone disease is a worldwide prevalent disease, and, due to various factors, especially diet- and climate-related, the prevalence across all ages, races, and sexes is showing an upward trend. At the same time, endourology is undergoing constant evolution, which in turn will alter the future management of urolithiasis. Guidelines like those published by the AUA and EAU cover an extensive area and use a high-quality, evidence-based approach towards helping clinicians to tailor specific plans for the management of stone disease. Despite the minor differences between the AUA and EAU guidelines, especially on management related to the stone size in specific scenarios, both are generally unanimous for the majority of the principles of management.",
+      "character_count": 757,
+      "content_sha256": "7ce32e0c7b207e809ebd4cefc340560a92683e0d8a0beaf9ac58fd6f2eab1149",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0092",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Conclusions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0086-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 86,
+      "source_block_sha256": "621fc05e1ae2d3f650719eb3b2cc662f8a719566f2ce809f8cec92f1c41de3f6",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S038",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Conclusions"
+      ],
+      "heading": "7. Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Future studies should consider patient-reported outcomes and measurable and comparable end points, which are more homogenously reported. We also recommend that the guidelines should undergo regular updates based on recently published material, and, while these guidelines provide a framework, treatment plans should still be personalised, respecting patient preferences, surgical expertise, and various other individual factors, to offer the best outcome for kidney stone patients.",
+      "character_count": 481,
+      "content_sha256": "621fc05e1ae2d3f650719eb3b2cc662f8a719566f2ce809f8cec92f1c41de3f6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0093",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Conclusions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0087-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 87,
+      "source_block_sha256": "3a87752365743e16cdc394cad1b25014faefc15eb87c1c5b9fb6a2f17f4abdb1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S039",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Author Contributions"
+      ],
+      "heading": "Author Contributions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Conceptualisation: M.A. and V.J. Methodology, formal analysis: M.A. Writing and editing: M.A., A.S., R.G., L.T., E.E., N.F.D. and B.K.S. All authors have read and agreed to the published version of the manuscript.",
+      "character_count": 213,
+      "content_sha256": "3a87752365743e16cdc394cad1b25014faefc15eb87c1c5b9fb6a2f17f4abdb1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0094",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Author Contributions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0088-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 88,
+      "source_block_sha256": "a3014a36534d5612e7e04f74fc455b30bd0101d370991d349923efd6cc69ebc0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S040",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Institutional Review Board Statement"
+      ],
+      "heading": "Institutional Review Board Statement",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Not applicable.",
+      "character_count": 15,
+      "content_sha256": "a3014a36534d5612e7e04f74fc455b30bd0101d370991d349923efd6cc69ebc0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0095",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Institutional Review Board Statement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0089-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 89,
+      "source_block_sha256": "a3014a36534d5612e7e04f74fc455b30bd0101d370991d349923efd6cc69ebc0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S041",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Informed Consent Statement"
+      ],
+      "heading": "Informed Consent Statement",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Not applicable.",
+      "character_count": 15,
+      "content_sha256": "a3014a36534d5612e7e04f74fc455b30bd0101d370991d349923efd6cc69ebc0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0096",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Informed Consent Statement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0090-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 90,
+      "source_block_sha256": "f5f14dde32790d5d17188dde9e7248798094454e56ee646ca217862e0b52f446",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S042",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Data Availability Statement"
+      ],
+      "heading": "Data Availability Statement",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The study data are freely available.",
+      "character_count": 36,
+      "content_sha256": "f5f14dde32790d5d17188dde9e7248798094454e56ee646ca217862e0b52f446",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0097",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Data Availability Statement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0091-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 91,
+      "source_block_sha256": "d844552709650c02c406fe2e7d85f119e5f568f5b961c18fbe8c40b221d29086",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S043",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Conflicts of Interest"
+      ],
+      "heading": "Conflicts of Interest",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The authors declare no conflicts of interest.",
+      "character_count": 45,
+      "content_sha256": "d844552709650c02c406fe2e7d85f119e5f568f5b961c18fbe8c40b221d29086",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0098",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Conflicts of Interest"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0092-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 92,
+      "source_block_sha256": "1cd68a91ab9ded6c245656872d678c6f107f0e3fb9fb10ec2113e74127ff6e08",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S044",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Funding Statement"
+      ],
+      "heading": "Funding Statement",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "This research received no external funding.",
+      "character_count": 43,
+      "content_sha256": "1cd68a91ab9ded6c245656872d678c6f107f0e3fb9fb10ec2113e74127ff6e08",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0099",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Funding Statement"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0093-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 93,
+      "source_block_sha256": "688ed38cbaff07148e9c3b690e314047a88aa0b3a782432d90e364afd3dc6b31",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S045",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Footnotes"
+      ],
+      "heading": "Footnotes",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.",
+      "character_count": 369,
+      "content_sha256": "688ed38cbaff07148e9c3b690e314047a88aa0b3a782432d90e364afd3dc6b31",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0100",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Footnotes"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0012-B0094-C01",
+      "document_id": "DOC-PMC-RENAL-0012",
+      "source_id": "SRC-PMC-PMC10889283",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "nephrolithiasis",
+        "renal colic",
+        "urinary obstruction"
+      ],
+      "source_block_index": 94,
+      "source_block_sha256": "f5f14dde32790d5d17188dde9e7248798094454e56ee646ca217862e0b52f446",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0012-JATS-S049",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0012-JATS-S048",
+      "parent_section_heading": "Associated Data",
+      "section_path": [
+        "Associated Data",
+        "Data Availability Statement"
+      ],
+      "heading": "Data Availability Statement",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The study data are freely available.",
+      "character_count": 36,
+      "content_sha256": "f5f14dde32790d5d17188dde9e7248798094454e56ee646ca217862e0b52f446",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0012-JATS-B0101",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Associated Data",
+        "Data Availability Statement"
+      ]
+    }
+  ],
+  "configuration": "C",
+  "token_target": "section-aware <=2200 characters"
+}

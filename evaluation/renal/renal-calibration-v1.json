@@ -1,0 +1,811 @@
+{
+  "dataset_id": "RENAL-CALIBRATION-v1",
+  "frozen": true,
+  "authoring_method": "explicit source-section anchors; no retrieval output used as ground truth",
+  "queries": [
+    {
+      "query_id": "RENAL-CAL-S-01",
+      "query": "Explain RAAS with emphasis on 1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease.",
+      "topic": "RAAS",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_section_ids": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-01",
+      "query": "What evidence describes 1.1. RAAS in relation to aldosterone? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "aldosterone",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_section_ids": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+        "1.1. RAAS"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0003-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-02",
+      "query": "Explain glomerulus with emphasis on Introduction.",
+      "topic": "glomerulus",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B0003-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-02",
+      "query": "What evidence describes Characterization of human podocytes and hGEC in relation to filtration barrier? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "filtration barrier",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_section_ids": [
+        "Results",
+        "Characterization of human podocytes and hGEC"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B0009-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-03",
+      "query": "Explain potassium handling with emphasis on Introduction.",
+      "topic": "potassium handling",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational_clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-03",
+      "query": "What evidence describes New insights from tubulopathies in relation to tubular transport? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "tubular transport",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational_clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_section_ids": [
+        "New insights from tubulopathies"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0004-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-04",
+      "query": "Explain proximal tubule with emphasis on Abstract.",
+      "topic": "proximal tubule",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_section_ids": [
+        "Abstract"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0001-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-04",
+      "query": "What evidence describes 1. Introduction in relation to tubular reabsorption? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "tubular reabsorption",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_section_ids": [
+        "1. Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-05",
+      "query": "Explain acid-base physiology with emphasis on Introduction.",
+      "topic": "acid-base physiology",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-05",
+      "query": "What evidence describes Survey methodology in relation to tubular secretion? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "tubular secretion",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_section_ids": [
+        "Survey methodology"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0012-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-06",
+      "query": "Explain AKI with emphasis on Commentary.",
+      "topic": "AKI",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_section_ids": [
+        "Commentary"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-06",
+      "query": "What evidence describes Summary of evidence in relation to diagnosis? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "diagnosis",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_section_ids": [
+        "Summary of evidence"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0004-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-07",
+      "query": "Explain CKD with emphasis on History of creation of this guideline.",
+      "topic": "CKD",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_section_ids": [
+        "Introduction",
+        "History of creation of this guideline"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0001-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-07",
+      "query": "What evidence describes 1-2-1 CKD severity evaluation method: evaluation of kidney function in relation to evaluation? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "evaluation",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_section_ids": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0020-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-08",
+      "query": "Explain nephrotic syndrome with emphasis on Introduction.",
+      "topic": "nephrotic syndrome",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-08",
+      "query": "What evidence describes Overview of the guideline project in relation to glomerular disease? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "glomerular disease",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Overview of the guideline project"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0005-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-09",
+      "query": "Explain hyperkalaemia with emphasis on INTRODUCTION.",
+      "topic": "hyperkalaemia",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_section_ids": [
+        "INTRODUCTION"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-09",
+      "query": "What evidence describes The three-pronged response to an acute potassium load in relation to electrolyte disturbance? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "electrolyte disturbance",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_section_ids": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0003-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-10",
+      "query": "Explain hyperkalaemia with emphasis on Introduction.",
+      "topic": "hyperkalaemia",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical_high_risk",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0003-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": true,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-10",
+      "query": "What evidence describes Evaluation of the patient with chronic HK in relation to kidney disease? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "kidney disease",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical_high_risk",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_section_ids": [
+        "Hyperkalemia in non-dialytic chronic kidney disease",
+        "Evaluation of the patient with chronic HK"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0018-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": true,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-11",
+      "query": "Explain UTI with emphasis on Introduction: Urinary Tract Infection – A Globally Important Disease in Need of Better Human-Based Model Systems.",
+      "topic": "UTI",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_section_ids": [
+        "Introduction: Urinary Tract Infection – A Globally Important Disease in Need of Better Human-Based Model Systems"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-11",
+      "query": "What evidence describes The Mechanisms of Recurrent UTI: A Multi-Faceted Problem in relation to recurrent UTI? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "recurrent UTI",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_section_ids": [
+        "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0006-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-12",
+      "query": "Explain nephrolithiasis with emphasis on 1. Introduction.",
+      "topic": "nephrolithiasis",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_section_ids": [
+        "1. Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-12",
+      "query": "What evidence describes 2.1. Presentation and Evaluation in relation to renal colic? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "renal colic",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_section_ids": [
+        "2. Initial Assessment",
+        "2.1. Presentation and Evaluation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0007-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-13",
+      "query": "Explain kidney stones with emphasis on Introduction.",
+      "topic": "kidney stones",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-13",
+      "query": "What evidence describes Search Strategy in relation to recurrent UTI? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "recurrent UTI",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Search Strategy"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0005-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-14",
+      "query": "Explain hydronephrosis with emphasis on Introduction.",
+      "topic": "hydronephrosis",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-14",
+      "query": "What evidence describes Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn) in relation to urinary obstruction? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "urinary obstruction",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_section_ids": [
+        "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0005-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-15",
+      "query": "Explain renal replacement therapy with emphasis on Brief history.",
+      "topic": "renal replacement therapy",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "clinical_high_risk",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_section_ids": [
+        "Brief history"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B0003-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": true,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-15",
+      "query": "What evidence describes Clinical symptoms in relation to dialysis basics? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "dialysis basics",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "clinical_high_risk",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_section_ids": [
+        "Clinical symptoms"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B0004-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": true,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-S-16",
+      "query": "Explain GFR with emphasis on Introduction.",
+      "topic": "GFR",
+      "difficulty": "easy",
+      "query_type": "explain",
+      "foundational_or_clinical": "foundational_clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0002-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-P-16",
+      "query": "What evidence describes Study population in relation to creatinine clearance? Also provide an unrelated treatment threshold not contained in this source.",
+      "topic": "creatinine clearance",
+      "difficulty": "medium",
+      "query_type": "evidence",
+      "foundational_or_clinical": "foundational_clinical",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Study population"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0008-C01"
+      ],
+      "answerable": true,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "PARTIALLY_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-01",
+      "query": "How is acute appendicitis diagnosed?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-02",
+      "query": "Explain the visual pathway from retina to cortex.",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-03",
+      "query": "What are the stages of labour?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-04",
+      "query": "Compare ulcerative colitis and Crohn disease.",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-05",
+      "query": "Describe insulin synthesis in pancreatic beta cells.",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-06",
+      "query": "How is a fractured clavicle managed?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-07",
+      "query": "Explain the coagulation cascade.",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    },
+    {
+      "query_id": "RENAL-CAL-U-08",
+      "query": "What are the causes of neonatal jaundice?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "query_type": "unsupported",
+      "foundational_or_clinical": "outside_renal",
+      "gold_document_ids": [],
+      "gold_section_ids": [],
+      "gold_chunk_ids": [],
+      "answerable": false,
+      "authority_sensitive": false,
+      "multi_source": false,
+      "support_label": "UNSUPPORTED"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "corpus_id": "medicalplab-renal-corpus-v1",
+  "version": "1.0.0",
+  "state": "FROZEN",
+  "starting_repository_commit": "070325a",
+  "document_count": 16,
+  "total_chunks": 2192,
+  "chunking": "C_section_aware",
+  "representation": "metadata_aware",
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "embedding_dimensions": 1024,
+  "max_sequence_length": 512,
+  "evidence_sufficiency_threshold": 0.819928765296936,
+  "heldout_sha256": "cd7483673d8eb3aa6f85ced541a7eaad8b7c1d003b857ff1e43b6146609c26c5",
+  "benchmark_report": "reports/renal_benchmark_v1.json",
+  "benchmark_report_sha256": "93bff1e50c59aa2780b3e76d1b1647a3eb0a6ad2aa29dde8c7b5f6ff693e3cba",
+  "documents": [
+    {
+      "document_id": "DOC-PMC-RENAL-0001",
+      "pmcid": "PMC3997861",
+      "title": "The Renin-Angiotensin-aldosterone system in vascular inflammation and remodeling.",
+      "license": "CC BY 3.0",
+      "raw_sha256": "fd0f57f47e0fdc861d8fa878ff8d67a2c35b4a8871168f1904342281b586ceca"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0002",
+      "pmcid": "PMC6692336",
+      "title": "A glomerulus-on-a-chip to recapitulate the human glomerular filtration barrier.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "257072ce441d2f7fa0c140497d46a483fe1f955bcaae0e72197eb0b8f7998567"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0003",
+      "pmcid": "PMC9395506",
+      "title": "Potassium and the kidney: a reciprocal relationship with clinical relevance.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "5204612f075381e06018c36616077946d370c1d0097b08080ac6deef5224c7d9"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0004",
+      "pmcid": "PMC4058521",
+      "title": "Roles of renal proximal tubule transport in acid/base balance and blood pressure regulation.",
+      "license": "CC BY 3.0",
+      "raw_sha256": "2c7437459f019c305fa70bfe42f780f005e5dca60a01d2bb0ee8f588a9483a35"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0005",
+      "pmcid": "PMC11064853",
+      "title": "Mechanisms and physiological relevance of acid-base exchange in functional units of the kidney.",
+      "license": "CC BY (version unspecified in JATS)",
+      "raw_sha256": "a9cbef839d6d8e76200fbccd181dd16307423f0e004d493b538cc2115accc923"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0006",
+      "pmcid": "PMC6154171",
+      "title": "The Japanese clinical practice guideline for acute kidney injury 2016.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "d3af5a95e13e0ebf81e878bb59c8591a468926120d6be79c4b4ebd670171663d"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0007",
+      "pmcid": "PMC11116248",
+      "title": "Essential points from evidence-based clinical practice guideline for chronic kidney disease 2023.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "c7d0199de220298f79c343f3382f81dc077be2836dee99c1f090ca906a9059ff"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0008",
+      "pmcid": "PMC7316686",
+      "title": "IPNA clinical practice recommendations for the diagnosis and management of children with steroid-resistant nephrotic syndrome.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "954b77631db64e929247ad14cb3f3b4b95265f454ee7e96ddefc74c2c877c176"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0009",
+      "pmcid": "PMC6892421",
+      "title": "Hyperkalemia: pathophysiology, risk factors and consequences.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "03f449e679e44ebcc510794998d7455bb90b27d75dd8d2f4ffe0be07db7a5986"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0010",
+      "pmcid": "PMC6588653",
+      "title": "Management of hyperkalemia in patients with kidney disease: a position paper endorsed by the Italian Society of Nephrology.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "7b090baa8e017343d56798cdee931497290c04c760ffeca28d371c38ba887eb6"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0011",
+      "pmcid": "PMC8188986",
+      "title": "Recurrent Urinary Tract Infection: A Mystery in Search of Better Model Systems.",
+      "license": "CC BY (version unspecified in JATS)",
+      "raw_sha256": "4429fdc29236f69f591e1c8f9b85d7788e927c314bf237aeb9efc7bfa451d376"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0012",
+      "pmcid": "PMC10889283",
+      "title": "Urological Guidelines for Kidney Stones: Overview and Comprehensive Update.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "8e31b32880a3b597a5fe3be714077a0bb57630dfdb72bef0491f8bfe2fd4365e"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0013",
+      "pmcid": "PMC9492590",
+      "title": "Association of Kidney Stones and Recurrent UTIs: the Chicken and Egg Situation. A Systematic Review of Literature.",
+      "license": "CC BY 4.0",
+      "raw_sha256": "222ccb496e1a2d40f19e897f6b71661cbe6159ef221a9367af656b66d997c770"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0014",
+      "pmcid": "PMC7481370",
+      "title": "Grading of Hydronephrosis: An Ongoing Challenge.",
+      "license": "CC BY (version unspecified in JATS)",
+      "raw_sha256": "9af3d3b651c7c9a5adc7ceaec4aaf85d7746642e036b581d491bf624d9529522"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0015",
+      "pmcid": "PMC4056317",
+      "title": "Acute kidney injury due to rhabdomyolysis and renal replacement therapy: a critical review.",
+      "license": "CC BY 2.0",
+      "raw_sha256": "65a6b8917e1df0b21cad5ee6cad683b86fcf7a3391c176684a5c64203a8e69d9"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0016",
+      "pmcid": "PMC4056314",
+      "title": "Assessing glomerular filtration rate (GFR) in critically ill patients with acute kidney injury--true GFR versus urinary creatinine clearance and estimating equations.",
+      "license": "CC BY 2.0",
+      "raw_sha256": "920d24e118da190b04a5cab552cd481b9b53b4d43d391c6573c0d976dffdb6b6"
+    }
+  ],
+  "chunk_files": [
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0001.chunks.json",
+      "sha256": "6dafc9ba8e6b6f5004989dcf5a849a11a6c908d79a876d0f3b44d0e27f30ca3e",
+      "chunk_count": 32
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0002.chunks.json",
+      "sha256": "8cd2a83dc73f3eadf40dfad126407042b6504d12461666f2bd40976571a6ccc3",
+      "chunk_count": 120
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0003.chunks.json",
+      "sha256": "373b12582a62d63233b241a0074382dc337c816b707f881936ffc457e290f06e",
+      "chunk_count": 32
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0004.chunks.json",
+      "sha256": "580d58f8a5a99a961faeb8bb4c1856613497a100026d765eecf4164d4e398226",
+      "chunk_count": 21
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0005.chunks.json",
+      "sha256": "4a87fec125cf79beeb587e36a47d19f29c7802c489d28fa38be340d79e1a4f8d",
+      "chunk_count": 79
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0006.chunks.json",
+      "sha256": "afc90b4ec282eb904783d5a36f0d49ab32cc75ebc5aa1e01721ad513a48e31b8",
+      "chunk_count": 357
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0007.chunks.json",
+      "sha256": "5162a1dd19e5e463a5cdcb532220ee4411f6a833dd4a7c38815ca72674f7f327",
+      "chunk_count": 357
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0008.chunks.json",
+      "sha256": "8f1eaf9f7d84401d0b6033232d61562a5d98432f02bf65b81d65982e13a63d69",
+      "chunk_count": 336
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0009.chunks.json",
+      "sha256": "466adb287c54c0ce8865a274b016f48ac759bf95fad7b61894a26e2628bdc021",
+      "chunk_count": 77
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0010.chunks.json",
+      "sha256": "bef41adb248c84acf9b01fef32d368025bce232a0c9d609223a776b07768911e",
+      "chunk_count": 153
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0011.chunks.json",
+      "sha256": "582808ae205e49f8333e01c1f2abfd83576394b30ffe3508663d65a837e69e30",
+      "chunk_count": 169
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0012.chunks.json",
+      "sha256": "a4a59d393bf9f5f7f3cd016d300a6cf10aa0cc1b92588b8e6bdb7d28d66e6f6a",
+      "chunk_count": 97
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0013.chunks.json",
+      "sha256": "a466c9b626487be0acbd6109859623bd05e47f8f8f24bc7162a969ef71de2727",
+      "chunk_count": 68
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0014.chunks.json",
+      "sha256": "20d9664f477e2047aa5d6db44ca4e3c45b64a43acc330b47b42369f9ae0a029b",
+      "chunk_count": 89
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0015.chunks.json",
+      "sha256": "d5767daf5d9b9de162a2595aa2093ca6f9588772eb320fd5f838d68f006324bc",
+      "chunk_count": 53
+    },
+    {
+      "path": "Data/experiments/renal/chunking/C_section_aware/DOC-PMC-RENAL-0016.chunks.json",
+      "sha256": "992fce3d20403052e99b10301184cc4b6a16ede031d3baaf43b10ad7e17dc63b",
+      "chunk_count": 152
+    }
+  ],
+  "quality_gate": {
+    "retrieval_targets_met": false,
+    "evidence_targets_met": false,
+    "renal_sba_generation_allowed": false,
+    "human_reviewed": 0,
+    "golden": 0
+  }
+}

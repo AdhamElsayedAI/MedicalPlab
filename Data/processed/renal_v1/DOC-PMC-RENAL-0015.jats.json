@@ -1,0 +1,1666 @@
+{
+  "schema_version": "medicalplab-jats-normalized-v1",
+  "document_id": "DOC-PMC-RENAL-0015",
+  "source_format": "pmc_jats_xml",
+  "source": {
+    "file": "Data\\raw\\renal_v1\\DOC-PMC-RENAL-0015.xml",
+    "sha256": "65a6b8917e1df0b21cad5ee6cad683b86fcf7a3391c176684a5c64203a8e69d9"
+  },
+  "article": {
+    "title": "Acute kidney injury due to rhabdomyolysis and renal replacement therapy: a critical review",
+    "journal": "Critical Care",
+    "publication_year": "2014",
+    "identifiers": {
+      "pmcid": "PMC4056317",
+      "pmcaid": "4056317",
+      "pmcaiid": "4056317",
+      "pmid": "25043142",
+      "doi": "10.1186/cc13897"
+    }
+  },
+  "sections": [
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S001",
+      "source_section_id": "sec1",
+      "title": "Introduction",
+      "depth": 1,
+      "path": [
+        "Introduction"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S001"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S002",
+      "source_section_id": "sec2",
+      "title": "Brief history",
+      "depth": 1,
+      "path": [
+        "Brief history"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S002"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S003",
+      "source_section_id": "sec3",
+      "title": "Clinical symptoms",
+      "depth": 1,
+      "path": [
+        "Clinical symptoms"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S003"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S004",
+      "source_section_id": "sec4",
+      "title": "Etiology",
+      "depth": 1,
+      "path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S005",
+      "source_section_id": "sec5",
+      "title": "Pathophysiology of rhabdomyolysis and following acute kidney injury",
+      "depth": 2,
+      "path": [
+        "Etiology",
+        "Pathophysiology of rhabdomyolysis and following acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S005"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S006",
+      "source_section_id": "sec6",
+      "title": "Acute kidney injury is one of the most severe complications of rhabdomyolysis",
+      "depth": 2,
+      "path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S007",
+      "source_section_id": "sec7",
+      "title": "Diagnosis",
+      "depth": 1,
+      "path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S008",
+      "source_section_id": "sec8",
+      "title": "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+      "depth": 1,
+      "path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S009",
+      "source_section_id": "sec9",
+      "title": "Diuretic agent – mannitol",
+      "depth": 2,
+      "path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Diuretic agent – mannitol"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008",
+        "DOC-PMC-RENAL-0015-JATS-S009"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S010",
+      "source_section_id": "sec10",
+      "title": "Antioxidant therapy",
+      "depth": 2,
+      "path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Antioxidant therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008",
+        "DOC-PMC-RENAL-0015-JATS-S010"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S011",
+      "source_section_id": "sec11",
+      "title": "Renal replacement therapy",
+      "depth": 1,
+      "path": [
+        "Renal replacement therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S011"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S012",
+      "source_section_id": "sec12",
+      "title": "Conclusions",
+      "depth": 1,
+      "path": [
+        "Conclusions"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S012"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S013",
+      "source_section_id": "sec13",
+      "title": "Abbreviations",
+      "depth": 1,
+      "path": [
+        "Abbreviations"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S013"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S014",
+      "source_section_id": "sec14",
+      "title": "Competing interests",
+      "depth": 1,
+      "path": [
+        "Competing interests"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S014"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S015",
+      "source_section_id": "_ci93_",
+      "title": "Contributor Information",
+      "depth": 1,
+      "path": [
+        "Contributor Information"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S015"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S016",
+      "source_section_id": "ref-list1",
+      "title": "References",
+      "depth": 1,
+      "path": [
+        "References"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S016"
+      ]
+    },
+    {
+      "section_id": "DOC-PMC-RENAL-0015-JATS-S017",
+      "source_section_id": "ref-list1_sec2",
+      "title": "[UNTITLED SECTION]",
+      "depth": 2,
+      "path": [
+        "References",
+        "[UNTITLED SECTION]"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S016",
+        "DOC-PMC-RENAL-0015-JATS-S017"
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0001",
+      "block_type": "abstract",
+      "text": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophysiology of rhabdomyolysis and following AKI could widen treatment options, leading to preservation of the kidney: the decision to initiate renal replacement therapy in clinical practice should not be made on the basis of the myoglobin or creatine phosphokinase serum concentrations.",
+      "section_path": [
+        "Abstract"
+      ],
+      "section_id_path": [],
+      "section_depth": 0,
+      "source_element_id": "abstract1",
+      "metadata": {
+        "abstract_index": 1
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0002",
+      "block_type": "paragraph",
+      "text": "Rhabdomyolysis (RM) is a clinical syndrome characterized by injury to skeletal muscle fibers with disruption and release of their contents into the circulation. Myoglobin, creatine phosphokinase (CK) and lactate dehydrogenase are the most important substances for indicating muscle damage [ 1 ].",
+      "section_path": [
+        "Introduction"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S001"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0003",
+      "block_type": "paragraph",
+      "text": "The history of RM goes back to the Second World War in 1941 when the condition was described for the first time. The London Blitz was the sustained strategic bombing of many cities in the United Kingdom and the ensuing crush injuries led to typical symptoms of RM [ 2 ]. Today, we know the causes of RM are legion and include trauma, drugs such as statins, infections, toxins, extreme physical exertion, temperature extremes, hereditary and acquired metabolic myopathies [ 3 ].",
+      "section_path": [
+        "Brief history"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S002"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0004",
+      "block_type": "paragraph",
+      "text": "The clinical symptoms of RM are well known: myalgia, weakness and swelling involving injured muscles, usually associated with myoglobinuria. The clinical symptoms might include nonspecific symptoms such as fever, nausea, dyspepsia and/or vomiting. Mild and subclinical cases of RM, called in clinical practice myopathies, are typically characterized by elevated serum CK and myalgias [ 4 ].",
+      "section_path": [
+        "Clinical symptoms"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S003"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0005",
+      "block_type": "paragraph",
+      "text": "The severity of RM escalates from myoglobinuria, which can result in acute kidney injury (AKI), to other severe systemic complications such as disseminated intravascular coagulopathy and acute compartment syndrome from swelling muscle, and reduced macrocirculation and microcirculation of injured limbs. Extracted fluid from the circulation into the swollen muscle groups leads to hypotension and shock. Typical metabolic alterations accompanying RM are hyperkalemia, metabolic acidosis, hypocalcemia or hypercalcemia, hyperuricemia, hyponatremia and hyperphosphatemia with possible cardiac dysrhythmias [ 5 , 6 ]. AKI due to rhabdomyolysis occurs in 13 to 50% of all cases [ 7 ].",
+      "section_path": [
+        "Clinical symptoms"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S003"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0006",
+      "block_type": "paragraph",
+      "text": "As already mentioned, the development of RM is associated with a large number of conditions and pathological disorders. Medical research, reviews, studies and case reports describe different possible causes of RM (Table 1 ) [ 3 , 8 , 9 ].",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0007",
+      "block_type": "table_caption",
+      "text": "Table 1 Etiology of rhabdomyolysis and myopathies",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "label": "Table 1"
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0008",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Acquired | Hereditary",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 1,
+        "is_header": true,
+        "cells": [
+          "Acquired",
+          "Hereditary"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0009",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Extreme physical activity | Metabolic myopathies caused by disorders of:",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 2,
+        "is_header": false,
+        "cells": [
+          "Extreme physical activity",
+          "Metabolic myopathies caused by disorders of:"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0010",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Influence of extreme temperatures | Fatty acid oxidation",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 3,
+        "is_header": false,
+        "cells": [
+          "Influence of extreme temperatures",
+          "Fatty acid oxidation"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0011",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Metabolic disorders of water and salts | Mitochondrial metabolism",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 4,
+        "is_header": false,
+        "cells": [
+          "Metabolic disorders of water and salts",
+          "Mitochondrial metabolism"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0012",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Trauma and crush syndrome | Glycolysis/glycogenolysis",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 5,
+        "is_header": false,
+        "cells": [
+          "Trauma and crush syndrome",
+          "Glycolysis/glycogenolysis"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0013",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Vascular ischemia | Purine nucleotide cycle",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 6,
+        "is_header": false,
+        "cells": [
+          "Vascular ischemia",
+          "Purine nucleotide cycle"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0014",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Influence of drugs | Pentose phosphate pathway",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 7,
+        "is_header": false,
+        "cells": [
+          "Influence of drugs",
+          "Pentose phosphate pathway"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0015",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Infections, sepsis",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 8,
+        "is_header": false,
+        "cells": [
+          "Infections, sepsis",
+          ""
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0016",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Toxins",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 9,
+        "is_header": false,
+        "cells": [
+          "Toxins",
+          ""
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0017",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Malignant hyperthermia",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 10,
+        "is_header": false,
+        "cells": [
+          "Malignant hyperthermia",
+          ""
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0018",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Endocrine disorders",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 11,
+        "is_header": false,
+        "cells": [
+          "Endocrine disorders",
+          ""
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0019",
+      "block_type": "table_row",
+      "text": "Table 1 — Etiology of rhabdomyolysis and myopathies — Electrical current",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T1",
+      "metadata": {
+        "table_id": "T1",
+        "table_label": "Table 1",
+        "row_index": 12,
+        "is_header": false,
+        "cells": [
+          "Electrical current",
+          ""
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0020",
+      "block_type": "paragraph",
+      "text": "Under physiological conditions, skeletal muscle cell contraction requires a nervous impulse originating in a voluntary process. The nervous impulse is then transferred to a thin muscle cell membrane called the sarcolemma. The sarcolemma is a physical barrier and mediator between cell and external signals. In healthy myocytes, the sarcolemma contains different pumps for regulating the process of cellular electrochemical gradients [ 10 ]. The most important is Na-K-ATP-ase for sodium and potassium exchange. Under normal conditions, sodium ions are actively excluded from the muscle cell and potassium ions are allowed passage. This process is energy dependent and builds on calcium removal in Na/Ca by changing the intracellular electrical gradient during active removal of sodium. Both processes depend on ATP as a source of energy [ 11 , 12 ].",
+      "section_path": [
+        "Etiology",
+        "Pathophysiology of rhabdomyolysis and following acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S005"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0021",
+      "block_type": "paragraph",
+      "text": "The sarcoplasm is the specialized cytoplasm of the muscle cell that contains the usual subcellular elements along with Golgi apparatus, myofibrils, a modified endoplasmic reticulum known as the sarcoplasmic reticulum, myoglobin and mitochondria. The primary function of the sarcoplasmic reticulum is to store calcium, which is released by muscular contraction. The most serious consequence of RM is ATP depletion, resulting in membrane cell pump dysfunction. The extrusion of sodium is impaired and the efflux of calcium from the cell is impaired [ 13 ]. If a high concentration of calcium persists in the sarcoplasm this activates cytolytic enzymes such as hydroxylases, proteases, nucleases and many others. The following impairment of cell organelles, especially of mitochondria, leads to progressive decrease in ATP, the production of free oxygen radicals and cell damage [ 12 ]. The result of cell impairment is release of potassium, phosphates, myoglobin, CK, lactate dehydrogenase and aldolase into the blood circulation with typical clinical presentation of RM.",
+      "section_path": [
+        "Etiology",
+        "Pathophysiology of rhabdomyolysis and following acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S005"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0022",
+      "block_type": "paragraph",
+      "text": "The pathophysiology of RM-induced AKI is believed to be triggered by myoglobin as the toxin causing renal dysfunction [ 14 ]. This claim is given substance from studies in animal models of glycerol-induced AKI. Intramuscular injection of glycerol in the rabbit induces a model of AKI at a dose of 10 mg/kg that resembles the AKI caused by massive release of myoglobin in crush syndrome in humans [ 15 ]. Glycerol-induced AKI is characterized by myoglobinuria, tubular necrosis and renal vasoconstriction [ 16 ]. The most important role in glycerol-induced nephrotoxicity has been attributed to reactive oxygen metabolites (reactive oxygen species), in particular the hydroxyl radical (OH . ), the same cause as for myoglobin-induced AKI [ 17 ].",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0023",
+      "block_type": "paragraph",
+      "text": "Myoglobin is an oxygen and iron binding protein with a molecular weight of 17,500 Da. Myoglobin is found in the muscle tissue of vertebrates, has a higher affinity for oxygen than hemoglobin and assists myocytes to acquire energy. Myoglobin can be detected in urine in small concentrations <5 μg/l, but meets the diagnostic criteria for myoglobinuria at concentrations >20 μg/l [ 9 ].",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0024",
+      "block_type": "paragraph",
+      "text": "Myoglobin – which may undergo reabsorption from the glomerular filtrate, is catabolized within proximal tubule cells and is easily filtered through the glomerular basement membrane – has been recognized as playing a part in the development of AKI in the setting of myoglobinuria. The clinical study by Gburek and colleagues demonstrated that renal uptake of myoglobin is mediated by the endocytic receptors, megalin and cubilin [ 18 ]. The same membrane cell receptors play an important role in nephrotoxicity; for example, those of antibiotics.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0025",
+      "block_type": "paragraph",
+      "text": "The three different mechanisms of renal toxicity by myoglobin are usually reported as renal vasoconstriction, formation of intratubular casts and the direct toxicity of myoglobin to kidney tubular cells [ 19 - 27 ] (Figure 1 ).",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0026",
+      "block_type": "figure_caption",
+      "text": "Figure 1 Pathophysiology of rhabdomyolysis-induced acute kidney injury. CO, carbon monoxide; EC, extracellular; Fe 2+ , ferrous iron; Fe 3+ , ferric iron; Fe 4 = O, ferryl iron; HO-1, heme oxygenase-1; H 2 O 2 , hydrogen peroxide; MB, myoglobin; MC, muscle cell; MT, mitochondria; NO, nitric oxide; OH − , hydroxyl anion; O 2 •– , superoxide radical; OH • , hydroxyl radical, RAAS, renin–angiotensin–aldosterone system; RBF, renal blood flow; ROS, reactive oxygen species; SOD, superoxide dismutase; TC, tubular cell.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": "F1",
+      "metadata": {
+        "figure_id": "F1",
+        "label": "Figure 1"
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0027",
+      "block_type": "paragraph",
+      "text": "Renal vasoconstriction is caused by reduced renal blood flow due to excessive leakage of extracellular fluid into the damaged muscle cells and by secondary activation of the renin–angiotensin–aldosterone system. However, a second theory favors the effect of the nitric oxide scavenging characteristics of myoglobin and release of cytokines [ 25 , 26 ]. The formation of intratubular casts explains the urine concentration and the following reaction of myoglobin with Tamm–Horsfall tubular protein. Further, renal vasoconstriction, the decrease in renal blood flow due to volume depletion and the low pH of urine promote this pathological process by formation of stronger and more rapid bonds between Tamm–Horsfall protein and myoglobin [ 12 , 20 ].",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0028",
+      "block_type": "paragraph",
+      "text": "Heme released from myoglobin is, under normal conditions, degraded by the enzyme heme oxygenase-1 with marked vasodilatating effect. Heme oxygenase-1 is upregulated in proximal tubular cells in response to oxidant stress and exerts cytoprotective and anti-inflammatory effects [ 14 , 21 , 22 ]. Zager and colleagues [ 19 ] studied intrarenal heme oxygenase-1 induction in response to four different experimental AKI models: glycerol, cisplatin, ischemic–reperfusion and a bilateral ureteral obstruction model. In the glycerol AKI model that best reflects kidney damage during myoglobinuric AKI, heme oxygenase-1 was detectable in plasma and the renal cortex, and these changes were associated with an approximately 10-fold increase in renal heme oxygenase-1 mRNA. With the urinary heme oxygenase-1 concentration increase in the glycerol AKI model, further increases were observed 4 and 24 hours after glycerol injection. Finally, the authors tested whether the above findings might have clinical relevance in 20 critically ill patients: one-half of the patients had AKI and one-half had no AKI. Only the AKI group had significantly elevated plasma and urinary heme oxygenase-1 concentrations, and these investigations led to the conclusion that AKI can evoke heme oxygenase-1 elevation in plasma and urine [ 19 ]. However, the whole molecular pathophysiology of myoglobin-induced AKI is based on the deleterious effects of reactive oxygen species directly on the tubular cells and their organelles.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0029",
+      "block_type": "paragraph",
+      "text": "Reactive oxygen species also play an important and protective role in the living organism against pathogens and cancer during phagocytosis and other, especially metabolic, reactions. But overproduction of reactive oxygen species may lead to damage to living cells via lipid peroxidation of fatty acids and to the production of malondialdehyde, which can cause the polymerization of protein and DNA [ 23 ]. The hydroxyl radical is the most reactive of the reactive oxygen species group and is produced by the reaction between superoxide and hydrogen peroxide catalyzed by iron in Fenton’s reaction (Figure 1 ).",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0030",
+      "block_type": "paragraph",
+      "text": "In previous years, iron-mediated hydroxyl radical production with resultant oxidant stress was hypothesized to be the dominant pathway for heme protein nephrotoxicity [ 17 ]. However, it was later shown that Fe-mediated proximal tubular system lipid peroxidation was more hydrogen peroxide dependent than hydroxyl anion (OH − ) dependent and that blockage of myoglobin cytotoxicity via only decreasing hydroxyl anion generation may be inadequate [ 24 ]. For myoglobin to catalyze lipid peroxidation, ferrous (Fe 2+ ) myoglobin must be oxidized to the ferric (Fe 3+ ) form, which leads to induced lipid peroxidation by redox cycling with ferryl (Fe 4 = O) myoglobin. This is a highly reactive form of myoglobin, which can potently induce lipid peroxidation [ 27 ]. Redox cycling between ferric and ferryl myoglobin yields radical species that cause severe oxidative damage to the kidney [ 28 ].",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0031",
+      "block_type": "paragraph",
+      "text": "This process has been shown to be pH dependent and alkaline conditions prevent myoglobin-induced lipid peroxidation by stabilizing the reactive ferryl–myoglobin complex [ 29 , 30 ]. Alkaline conditions stabilize the ferryl species, making myoglobin considerably less reactive towards lipids and lipid hydroperoxides [ 31 ]. The fact that RM can be considered an oxidative stress-mediated pathology also with mitochondria as the primary target, and possibly the source of reactive oxygen and nitrogen species, has been reported in a study by Plotnikov and colleagues [ 32 ]. However, the authors speculate that RM-induced kidney damage involves direct interaction of myoglobin with mitochondria possibly resulting in iron ion release from myoglobin’s heme, and this promotes the peroxidation of mitochondrial membranes [ 32 ]. This problem, however, appears to be more complicated.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0032",
+      "block_type": "paragraph",
+      "text": "In summary, better knowledge of the pathophysiology can optimize prevention and treatment measures in cases of RM kidney injury.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0033",
+      "block_type": "paragraph",
+      "text": "In typical clinical conditions, patients with RM experience muscular weakness, myalgia, swelling, tenderness or stiffness and dark brown urine [ 1 ]. Correct diagnosis is the most important step to initiating proper treatment. The clinical and laboratory diagnostics summarized in Table 2 are the basic approach in differential diagnosis.",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0034",
+      "block_type": "table_caption",
+      "text": "Table 2 Diagnosis of rhabdomyolysis and following acute kidney injury",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "label": "Table 2"
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0035",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Clinical presentation",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 1,
+        "is_header": true,
+        "cells": [
+          "Clinical presentation"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0036",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Muscular weakness, myalgia, swelling, tenderness, stiffness",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 2,
+        "is_header": false,
+        "cells": [
+          "Muscular weakness, myalgia, swelling, tenderness, stiffness"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0037",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Fever, feelings of nausea, vomiting, tachycardia",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 3,
+        "is_header": false,
+        "cells": [
+          "Fever, feelings of nausea, vomiting, tachycardia"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0038",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Oligoanuria or anuria in connection with renal damage or in the presence of volume depletion",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 4,
+        "is_header": false,
+        "cells": [
+          "Oligoanuria or anuria in connection with renal damage or in the presence of volume depletion"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0039",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Signs of the underlying disease",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 5,
+        "is_header": false,
+        "cells": [
+          "Signs of the underlying disease"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0040",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Laboratory findings",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 6,
+        "is_header": false,
+        "cells": [
+          "Laboratory findings"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0041",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Serum: creatinine, urea nitrogen, creatine phosphokinase, myoglobin, ions (potassium, phosphorus, calcium), lactate dehydrogenase, transaminases, acid–base balance",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 7,
+        "is_header": false,
+        "cells": [
+          "Serum: creatinine, urea nitrogen, creatine phosphokinase, myoglobin, ions (potassium, phosphorus, calcium), lactate dehydrogenase, transaminases, acid–base balance"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0042",
+      "block_type": "table_row",
+      "text": "Table 2 — Diagnosis of rhabdomyolysis and following acute kidney injury — Urine: myoglobin or positive dipstick test without any erythrocytes",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": "T2",
+      "metadata": {
+        "table_id": "T2",
+        "table_label": "Table 2",
+        "row_index": 8,
+        "is_header": false,
+        "cells": [
+          "Urine: myoglobin or positive dipstick test without any erythrocytes"
+        ]
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0043",
+      "block_type": "paragraph",
+      "text": "Serum myoglobin is normally bound to plasma globulins such as haptoglobin and α 2 -globulin and has a rapid renal clearance to maintain a low plasma concentration of 3 μg/l [ 33 ]. Radioimmunoassays or imunolatex, imunoturbidimetric methods can detect myoglobin in plasma or urine. Normal serum levels are 30 to 80 μg/l and normal urine levels are 3 to 20 μg/l [ 3 ]. After the development of RM, free serum myoglobin increases due to exceeding the binding capacity of plasma globulins and then kidney filtrate appears in the urine which contributes to the brownish (tea) urine color. Furthermore, urine myoglobin concentrations are normally measured to assess RM; surprisingly, one in vitro study observed that low pH is not by itself a cause of urine myoglobin instability. The extent of instability depended not only on urine pH and temperature but also on unidentified urinary factors and initial urinary myoglobin concentrations [ 34 ]. Another way to diagnose myoglobinuria is a positive test for the presence of blood in urine without finding erythrocytes.",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0044",
+      "block_type": "paragraph",
+      "text": "Serum levels of CK correlate with the severity of RM but less so with myoglobinuric AKI. Normal serum levels are 0.15 to 3.24 μkat/l or 9 to 194 U/l in men and 0.15 to 2.85 μkat/l or 9 to 171 U/l in women. To predict AKI following RM, the clinician needs a better marker than serum CK, which is routinely used as a marker in the assessment of these disorders. Very important findings about the use of myoglobin as a marker and predictor in AKI were described by Premru and colleagues [ 35 ]. The authors investigated and restrospectively analyzed the incidence of myoglobin-induced AKI (serum creatinine >200 μmol/l) and the need for hemodialysis in 484 patients with suspected RM. The median peak myoglobin was 7,163 μg/l. The incidence of myoglobin-induced AKI was significantly higher (64.9%) in patients with a peak serum myoglobin >15,000 μg/l ( P <0.01). Most of these patients needed treatment with hemodialysis (28%). Myoglobin levels >15,000 μg/l were most significantly related to the development of AKI and the need for hemodialysis. Based on these results, serum myoglobin was recommended as a valuable early predictor and marker of RM and myoglobinuric AKI [ 35 ].",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0045",
+      "block_type": "paragraph",
+      "text": "In another retrospective observational cohort study, El-Abdellati and colleagues studied CK, serum myoglobin and urinary myoglobin as markers of RM and AKI in 1,769 adult patients. The results for the best cutoff values for prediction of AKI were CK >773 U/l, serum myoglobin >368 μg/l and urine myoglobin >38 μg/l, respectively [ 36 ].",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0046",
+      "block_type": "paragraph",
+      "text": "The first step in medical intervention is usually treatment of underlying disease. In the case of preserved diuresis in the setting of RM, we must initiate conservative measures, which usually include massive hydration, use of mannitol, urine alkalization and forced diuresis [ 25 , 37 - 39 ] (Figure 2 ).",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0047",
+      "block_type": "figure_caption",
+      "text": "Figure 2 Therapeutic approaches in rhabdomyolysis for prevention and treatment of acute kidney injury. AKI, acute kidney injury; KDIGO, Kidney Disease Improving Global Outcomes; RM, rhabdomyolysis; RRT, renal replacement therapy; S cr , serum creatinine; UO, urine output.",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008"
+      ],
+      "section_depth": 1,
+      "source_element_id": "F2",
+      "metadata": {
+        "figure_id": "F2",
+        "label": "Figure 2"
+      }
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0048",
+      "block_type": "paragraph",
+      "text": "Early and aggressive fluid resuscitation to restore renal perfusion and increase the urine flow rate is agreed on as the main intervention for preventing and treating AKI [ 6 ]. Fluid resuscitation with crystalloid solutions is the ubiquitous intervention in critical care medicine [ 40 ]. One caveat, however, is that these therapeutic measures are not useful in the context of severe oliguria or anuria and may lead to interstitial and pulmonary edema. Clinicians have to be careful about oliguria which is a normal response to hypovolemia and should not be used solely as a trigger or end point for fluid resuscitation, particularly in the post-resuscitation period [ 41 ]. Further, while aggressive volume resuscitation may preserve cardiac output and renal perfusion pressure, in the presence of oliguria it is an independent predictor for developing secondary abdominal compartment syndrome with decreased renal perfusion pressure or can lead to acute respiratory distress syndrome [ 42 ].",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0049",
+      "block_type": "paragraph",
+      "text": "Mannitol is an osmotic agent that attracts the fluid of the interstitial space and so may reduce muscular swelling. As a diuretic agent, mannitol prevents intrarenal heme pigment trapping, decreasing cast formation. Mannitol can increase renal blood flow and glomerular filtration. Several studies have highlighted its hydroxyl anion-scavenging effect, although in an experimental study Zager and colleagues concluded that its protective influence is probably more due to a diuretic than to antioxidant effect [ 43 ]. Bragadottir and colleagues [ 44 ] studied the effects of mannitol on renal blood flow, the glomerular filtration rate, renal oxygen consumption and extraction in 11 postoperative cardiac patients with AKI. In all patients, a bolus dose of mannitol 225 mg/kg was given, followed by an infusion at a rate of 75 mg/kg/hour for two 30-minute periods. The authors reported that mannitol treatment in these cases increased urine flow by 61% ( P <0.001), induced renal vasodilation and redistributed systemic blood flow to the kidney. In addition, mannitol does not affect the filtration fraction or renal oxygenation [ 44 ].",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Diuretic agent – mannitol"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008",
+        "DOC-PMC-RENAL-0015-JATS-S009"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0050",
+      "block_type": "paragraph",
+      "text": "There are some controversial views on post-traumatic RM, where the recommendation is to re-evaluate the standards of therapy with bicarbonate and mannitol because this combination does not prevent renal failure, dialysis or mortality in patients with CK levels >5,000 U/l [ 45 ]. Knowledge of the timing of adequate hydration in severe post-traumatic patients would be valuable.",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Diuretic agent – mannitol"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008",
+        "DOC-PMC-RENAL-0015-JATS-S009"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0051",
+      "block_type": "paragraph",
+      "text": "Based on the pathophysiology of myoglobinuric AKI, we can predict protective effects of antioxidative therapy by inhibition of lipid peroxidation of the proximal tubular cells and redox cycling between ferric and ferryl myoglobin [ 28 ]. Acetaminophen, which inhibits hemoprotein-catalyzed lipid peroxidation, is one of several investigated drugs that attenuate RM-induced AKI. Acetaminophen inhibits prostaglandin hydrogen synthase by reducing the protoporphyrin radical cation and blocking formation of the catalytic tyrosyl radical [ 46 , 47 ]. However, one experimental in vitro study showed that its administration is necessary after RM to achieve the desired outcome in blocking lipid peroxidation [ 28 ].",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Antioxidant therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008",
+        "DOC-PMC-RENAL-0015-JATS-S010"
+      ],
+      "section_depth": 2,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0052",
+      "block_type": "paragraph",
+      "text": "The first factor we need to recognize is that the greatest filter for removing myoglobin is the kidney, and in critical care nephrology there is no preventive kidney replacement therapy. However, the kidneys need a perfusion pressure and fluid volume to help them eliminate the toxin. The initiation of renal replacement therapy in clinical practice should not be managed by the myoglobin or CK serum concentration but by the status of renal impairment, with complications such as life-threatening hyperkalemia, hypercalcemia, hyperazotemia, anuria or hyperhydration without response to diuretic therapy. For better orientation to the requirements of renal replacement therapy initialization in AKI on critical care, we can use the Kidney Disease Improving Global Outcomes guidelines. These guidelines include a comprehensive therapeutic approach for management of AKI (Figure 2 ) [ 39 , 48 ]. Renal replacement therapies are mostly efficient in cases of RM-induced AKI, but they are extracorporeal circuits with many potential complications. However, in clinical practice it is very important to take into account all coincident factors in the patient’s illness and to individualize treatment if necessary.",
+      "section_path": [
+        "Renal replacement therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S011"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0053",
+      "block_type": "paragraph",
+      "text": "The possibility of using a method of renal replacement therapy, either intermittent hemodialysis or continuous kidney replacement methods in the case of RM, has been investigated in several studies [ 49 - 51 ]. Plasmapheresis has also been used with described success. When we proceed to treat patients with these procedures, we must take into account that myoglobin has a molecular mass of 17 kDa and is poorly removed from circulation using conventional extracorporeal techniques. Intermittent hemodialysis is mostly mandated by renal or metabolic indications and preventive extracorporeal elimination is not recommended. Sorrentino and colleagues [ 52 ] reported the effective removal of myoglobin by extended dialysis performed using a single-pass batch dialysis system and a polysulphone high-flux dialyzer (surface area 1.8 m 2 ), allowing elimination of substances with a molecular weight of up to 30 kDa. In six patients with myoglobinuric AKI, a median myoglobin clearance of 90.5 ml/minute (range 52.4 to 126.3 ml/minute) was achieved, resulting in a median myoglobin removal per treatment hour of 0.54 g (range 0.15 to 2.21 g) [ 52 ].",
+      "section_path": [
+        "Renal replacement therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S011"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0054",
+      "block_type": "paragraph",
+      "text": "Myoglobin clearance by super high-flux hemofiltration in a 53-year-old female suffering from RM and AKI was investigated by Naka and colleagues [ 53 ]. Continuous venovenous hemofiltration was performed with a high-permeability membrane (cutoff point 100 kDa) at 2 to 4 l/hour ultrafiltration in an attempt to clear myoglobin. The sieving coefficient was 68 to 72%, myoglobin clearance was up to 56.4 l/day and the amount of myoglobin removed was 4.4 to 5.1 g/day [ 53 ]. The effect of high cutoff membrane hemodiafiltration on myoglobin removal was investigated in six patients with myoglobinuric AKI using a 45 kDa cutoff hemofilter with a surface area 2.1 m 2 . Postdilutional fluid substitution was 2 to 3 l/hour, resulting in a mean myoglobin clearance of 81 ml/minute (range 42 to 131 ml/minute). The reduction ratio ranged from 62 to 89% [ 54 ].",
+      "section_path": [
+        "Renal replacement therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S011"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0055",
+      "block_type": "paragraph",
+      "text": "The use of plasmapheresis to remove serum myoglobin sounds controversial but successful therapy of RM induced by statins was reported by Swaroop and colleagues [ 55 ]. The plasmapheresis was performed in addition to hemodialysis daily for 5 days. The effect of hemodialysis alone is questionable, and the authors did not describe the type of hemodialysis or membrane used [ 55 ]. The undeniable fact is the obligation to treat underlying disease that led to RM. If we do not eliminate the cause of the RM – especially in trauma, infectious disorders and septic disorders – the removal of myoglobin is only a supportive measure for increasing its clearance in the case of AKI. However, inefficient removal of myoglobin also results in a persistent high circulating level of the molecule with kidney damage and delay in renal function recovery [ 56 ]. From all these data, the effect of high-permeability membranes on eliminating circulating myoglobin has been demonstrated but care must be taken to prevent unwanted albumin loss. It is questionable whether a percentage of myoglobin clearance is not hepatic because of a decrease in serum myoglobin in patients with oligoanuric AKI. The recommended most useful mode of renal replacement therapy used to be hemofiltration, but in recent years we use high-permeability membranes in daily clinical practice for continuous venovenous hemodialysis without undesirable decrease in albumin levels. The molecular weight of albumin is 67 kDa and high-permeability membranes with a cutoff value <67 kDa in a predominantly diffusion type of elimination can be a prospective measure for the supplementary treatment of RM if necessary.",
+      "section_path": [
+        "Renal replacement therapy"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S011"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0056",
+      "block_type": "paragraph",
+      "text": "This review provides a comprehensive view on AKI induced by RM. Thorough knowledge of the pathophysiology will lead to new approaches for diagnosis and treatment, leading to the preservation of the kidney. Renal replacement methods have a supportive role but they are not the first line of treatment for AKI-induced RM, especially in cases of preserved diuresis. The kidney is a miraculous organ but it can be overwhelmed if the threshold is exceeded. We should try to preserve kidney function where possible by looking at the whole picture.",
+      "section_path": [
+        "Conclusions"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S012"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0057",
+      "block_type": "paragraph",
+      "text": "AKI: Acute kidney injury; CK: Creatine phosphokinase; RM: Rhabdomyolysis.",
+      "section_path": [
+        "Abbreviations"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S013"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0058",
+      "block_type": "paragraph",
+      "text": "The authors declare that they have no competing interests.",
+      "section_path": [
+        "Competing interests"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S014"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0059",
+      "block_type": "paragraph",
+      "text": "Nadezda Petejova, Email: petejova@seznam.cz.",
+      "section_path": [
+        "Contributor Information"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S015"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    },
+    {
+      "block_id": "DOC-PMC-RENAL-0015-JATS-B0060",
+      "block_type": "paragraph",
+      "text": "Arnost Martinek, Email: jankaduricova82@gmail.com.",
+      "section_path": [
+        "Contributor Information"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S015"
+      ],
+      "section_depth": 1,
+      "source_element_id": null,
+      "metadata": {}
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "T1",
+      "label": "Table 1",
+      "caption": "Etiology of rhabdomyolysis and myopathies",
+      "section_path": [
+        "Etiology"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004"
+      ],
+      "rows": [
+        {
+          "row_index": 1,
+          "is_header": true,
+          "cells": [
+            {
+              "type": "th",
+              "text": "Acquired",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "th",
+              "text": "Hereditary",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Extreme physical activity",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Metabolic myopathies caused by disorders of:",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Influence of extreme temperatures",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Fatty acid oxidation",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Metabolic disorders of water and salts",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Mitochondrial metabolism",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 5,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Trauma and crush syndrome",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Glycolysis/glycogenolysis",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 6,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Vascular ischemia",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Purine nucleotide cycle",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 7,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Influence of drugs",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "Pentose phosphate pathway",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 8,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Infections, sepsis",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 9,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Toxins",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 10,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Malignant hyperthermia",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 11,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Endocrine disorders",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 12,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Electrical current",
+              "colspan": "1",
+              "rowspan": "1"
+            },
+            {
+              "type": "td",
+              "text": "",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "T2",
+      "label": "Table 2",
+      "caption": "Diagnosis of rhabdomyolysis and following acute kidney injury",
+      "section_path": [
+        "Diagnosis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S007"
+      ],
+      "rows": [
+        {
+          "row_index": 1,
+          "is_header": true,
+          "cells": [
+            {
+              "type": "th",
+              "text": "Clinical presentation",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 2,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Muscular weakness, myalgia, swelling, tenderness, stiffness",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 3,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Fever, feelings of nausea, vomiting, tachycardia",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 4,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Oligoanuria or anuria in connection with renal damage or in the presence of volume depletion",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 5,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Signs of the underlying disease",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 6,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Laboratory findings",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 7,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Serum: creatinine, urea nitrogen, creatine phosphokinase, myoglobin, ions (potassium, phosphorus, calcium), lactate dehydrogenase, transaminases, acid–base balance",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        },
+        {
+          "row_index": 8,
+          "is_header": false,
+          "cells": [
+            {
+              "type": "td",
+              "text": "Urine: myoglobin or positive dipstick test without any erythrocytes",
+              "colspan": "1",
+              "rowspan": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "figure_id": "F1",
+      "label": "Figure 1",
+      "caption": "Pathophysiology of rhabdomyolysis-induced acute kidney injury. CO, carbon monoxide; EC, extracellular; Fe 2+ , ferrous iron; Fe 3+ , ferric iron; Fe 4 = O, ferryl iron; HO-1, heme oxygenase-1; H 2 O 2 , hydrogen peroxide; MB, myoglobin; MC, muscle cell; MT, mitochondria; NO, nitric oxide; OH − , hydroxyl anion; O 2 •– , superoxide radical; OH • , hydroxyl radical, RAAS, renin–angiotensin–aldosterone system; RBF, renal blood flow; ROS, reactive oxygen species; SOD, superoxide dismutase; TC, tubular cell.",
+      "section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S004",
+        "DOC-PMC-RENAL-0015-JATS-S006"
+      ]
+    },
+    {
+      "figure_id": "F2",
+      "label": "Figure 2",
+      "caption": "Therapeutic approaches in rhabdomyolysis for prevention and treatment of acute kidney injury. AKI, acute kidney injury; KDIGO, Kidney Disease Improving Global Outcomes; RM, rhabdomyolysis; RRT, renal replacement therapy; S cr , serum creatinine; UO, urine output.",
+      "section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury"
+      ],
+      "section_id_path": [
+        "DOC-PMC-RENAL-0015-JATS-S008"
+      ]
+    }
+  ],
+  "references": {
+    "count": 0,
+    "ids": [],
+    "included_in_rag_blocks": false
+  }
+}

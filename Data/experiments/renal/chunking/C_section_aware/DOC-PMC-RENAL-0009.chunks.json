@@ -1,0 +1,2995 @@
+{
+  "document_id": "DOC-PMC-RENAL-0009",
+  "source_id": "SRC-PMC-PMC6892421",
+  "title": "Hyperkalemia: pathophysiology, risk factors and consequences.",
+  "medical_specialty": "Renal Medicine",
+  "topics": [
+    "hyperkalaemia",
+    "electrolyte disturbance",
+    "potassium"
+  ],
+  "source_sha256": "03f449e679e44ebcc510794998d7455bb90b27d75dd8d2f4ffe0be07db7a5986",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1600,
+    "maximum_characters": 2200,
+    "minimum_characters": 250,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T10:38:56.063195+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0001-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "67316dbbf683dcfd53d214e489924448ec951b7a0fc6f4510b615aed5e1fcf7d",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Abstract There have been significant recent advances in our understanding of the mechanisms that maintain potassium homoeostasis and the clinical consequences of hyperkalemia. In this article we discuss these advances within a concise review of the pathophysiology, risk factors and consequences of hyperkalemia. We highlight aspects that are of particular relevance for clinical practice. Hyperkalemia occurs when renal potassium excretion is limited by reductions in glomerular filtration rate, tubular flow, distal sodium delivery or the expression of aldosterone-sensitive ion transporters in the distal nephron. Accordingly, the major risk factors for hyperkalemia are renal failure, diabetes mellitus, adrenal disease and the use of angiotensin-converting enzyme inhibitors, angiotensin receptor blockers or potassium-sparing diuretics. Hyperkalemia is associated with an increased risk of death, and this is only in part explicable by hyperkalemia-induced cardiac arrhythmia. In addition to its well-established effects on cardiac excitability, hyperkalemia could also contribute to peripheral neuropathy and cause renal tubular acidosis. Hyperkalemia—or the fear of hyperkalemia—contributes to the underprescription of potentially beneficial medications, particularly in heart failure. The newer potassium binders could play a role in attempts to minimize reduced prescribing of renin–angiotensin inhibitors and mineraolocorticoid antagonists in this context.",
+      "character_count": 1467,
+      "content_sha256": "67316dbbf683dcfd53d214e489924448ec951b7a0fc6f4510b615aed5e1fcf7d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0002-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "b2bda476a9b38040104785452001dbd64e44d8697905aef65d3abeb87df10993",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "INTRODUCTION"
+      ],
+      "heading": "INTRODUCTION",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The introduction of new potassium binders (patiromer and zirconium cyclosilicate) has refocused attention on hyperkalemia. There have also been significant recent advances in our understanding of the mechanisms that maintain potassium homoeostasis and the clinical consequences of hyperkalemia. In this article we aim to present these recent advances in the context of a concise review of the pathophysiology, risk factors and consequences of hyperkalemia. We will highlight aspects that are of particular relevance for clinical practice.",
+      "character_count": 538,
+      "content_sha256": "b2bda476a9b38040104785452001dbd64e44d8697905aef65d3abeb87df10993",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "INTRODUCTION"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0003-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "93e6aff5a92a37df79da4a0b7c4f31d577b26765c087ba78b13ffe92d52291a4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "heading": "The three-pronged response to an acute potassium load",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The extracellular potassium concentration, [K + ] e , is kept under tight control to maintain the resting membrane potential (RP) of excitable cells. This control is under continual threat from two sources of potassium influx. The first is internal: 98% of total body potassium (3–4 mol) is stored within cells, predominantly skeletal muscle. The second is external: our potassium-rich diet. A modern Western diet contains ∼120 mmol potassium per day and throughout most of our evolutionary history this was a great deal more (∼300 mmol per day in the palaeolithic diet) [ 1 ].",
+      "character_count": 577,
+      "content_sha256": "93e6aff5a92a37df79da4a0b7c4f31d577b26765c087ba78b13ffe92d52291a4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0004-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "9c7e4c7ec0801fc07237909cb6a3454ef3cedb679221ea7e8e278263e71d8c85",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "heading": "The three-pronged response to an acute potassium load",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Consequently we have evolved robust mechanisms to defend against potassium influx into the extracellular space (reviewed in McDonough and Youn [ 2 ]). Without this defence, we would rarely make it past breakfast: a banana smoothie delivering 35 mmol of potassium to an extracellular fluid volume of 12 L would induce a potentially fatal [K + ] e increase of ∼3 mM. We survive the banana smoothie because of a rapid response that shifts potassium into cells and into the urine. Thus the large intracellular potassium store constitutes a potential threat but is also a lifesaving buffer.",
+      "character_count": 585,
+      "content_sha256": "9c7e4c7ec0801fc07237909cb6a3454ef3cedb679221ea7e8e278263e71d8c85",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0005-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "fb85879a3f44516820322442f51cb1de866777368d8c8b18c6a08cf9e86b7c51",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "heading": "The three-pronged response to an acute potassium load",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Recent studies in healthy human subjects have helped to delineate three prongs to the response to a dietary potassium load [ 3 ]. When subjects were administered 35 mmol K + , plasma [K + ] rose by ∼0.5 mM and was accompanied by increases in plasma [aldosterone] and renal K + excretion (Prong 1: the classic aldosterone-dependent negative feedback loop). When the same potassium load was administered as part of a complex meal, there was no change in plasma [K + ], probably reflecting insulin-mediated transcellular potassium shifts (Prong 2). Despite there being no change in venous plasma [K + ], there was an increase in renal potassium excretion, which was not prevented by treatment with the mineraolocorticoid receptor (MR) antagonist eplerenone. This provides evidence for an aldosterone-independent, gut-to-kidney feedforward kaliuretic signal (Prong 3).",
+      "character_count": 864,
+      "content_sha256": "fb85879a3f44516820322442f51cb1de866777368d8c8b18c6a08cf9e86b7c51",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0006-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "a6633f16feb371d1c6e3d918773836d4e530e46d17711626ae0d3aa1e7703201",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "heading": "The three-pronged response to an acute potassium load",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Although only recently confirmed in humans, this mode of feedforward control has been known about for several decades in sheep [ 4 ] and has been studied in some detail in rodents [ 5 , 6 ]. In one particularly meticulous study, potassium loads were administered to rats via an enteral or intravenous route in such a way as to induce identical increases in plasma [K + ]. Enteral loads elicited a kaliuretic response of greater magnitude [ 6 ]. The gut-responsive ‘kaliuretic factor’ has not been identified. It has been hypothesized to be a peptide hormone or a centrally mediated reflex [ 7 ], but one cannot discount the possibility that there is no mystery factor and instead the error signal driving kaliuresis is a small increase in the potassium concentration in the renal peritubular capillaries, not readily detectable by venous sampling. Testing a panel of known gut or pituitary peptide hormones did not reveal a likely culprit [ 6 ].",
+      "character_count": 945,
+      "content_sha256": "a6633f16feb371d1c6e3d918773836d4e530e46d17711626ae0d3aa1e7703201",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0007-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "6fa0e6455931daa5758785fce2062c2fb1957c0df43df5f69eea4d55bbd612fc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "heading": "The three-pronged response to an acute potassium load",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Whatever the mechanism(s), the clinical ramifications of these physiological observations have not been explored fully. Is hyperkalemia more likely to be provoked by intravenous than by oral potassium supplements? Could manipulation of diet composition , rather than mere potassium content per se prevent hyperkalemia in patients with end-stage renal disease? If we could determine the molecular basis of the gut potassium ‘sensor’, then could we target this with novel drug therapies?",
+      "character_count": 485,
+      "content_sha256": "6fa0e6455931daa5758785fce2062c2fb1957c0df43df5f69eea4d55bbd612fc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0008-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "a32adc3758a804afc0625248aba78755dfb3a9c584a46f267b0c529908fab3a4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ],
+      "heading": "Chronic potassium homoeostasis: not just aldosterone",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Plasma [K + ] is controlled by aldosterone in a negative feedback loop. Aldosterone is synthesized by aldosterone synthase (AS) in the adrenal cortex in response to high [K + ] e and angiotensin II. It acts in the distal nephron to increase the activity of sodium (Na)–K–adenosine triphosphatase (ATPase) pumps and epithelial sodium channel (ENaC), renal outer medullary potassium (ROMK) and large (‘big’) potassium (BK) channels to promote kaliuresis [ 8 ]. (We discuss the molecular basis of renal potassium excretion in more detail below.)",
+      "character_count": 542,
+      "content_sha256": "a32adc3758a804afc0625248aba78755dfb3a9c584a46f267b0c529908fab3a4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0009-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "a68276941c3c90b02e28abcb50f49bb4c4b918a960eb23c7e58c769f03e3f3e3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ],
+      "heading": "Chronic potassium homoeostasis: not just aldosterone",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Aldosterone is the dominant factor regulating plasma [K + ], but it is not the only one. Two mouse models have been used to explore the extent to which aldosterone is necessary for potassium homoeostasis: AS-null mice (which are unable to synthesize aldosterone) and kidney-specific MR-null mice (which possess kidneys that are unable to respond to aldosterone signalling) [ 9 , 10 ]. Both models develop hyperkalemia when challenged with supraphysiological potassium loads. However, AS-null mice can maintain a normal plasma [K + ] in the face of physiological (2%) dietary K + , demonstrating that aldosterone-independent pathways can stimulate kaliuresis in this context.",
+      "character_count": 674,
+      "content_sha256": "a68276941c3c90b02e28abcb50f49bb4c4b918a960eb23c7e58c769f03e3f3e3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0010-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "d0d550046ca0b3045c964ed95d21a41bea9f899abe10c0e52bed2ef3c4dbdc1c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ],
+      "heading": "Chronic potassium homoeostasis: not just aldosterone",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Chronic potassium homoeostasis is maintained not only by fine-tuning renal K + excretion, but also by modulating transcellular potassium shifts. The magnitude of (net) transcellular potassium shifts can be measured experimentally using a ‘potassium clamp’, in which the rate that potassium exits the vascular space is inferred from the rate of potassium infusion required to clamp plasma [K + ] at a constant level. This approach was used in the rat to demonstrate key features of the insulin–potassium homoeostatic system [ 11 ]. After short-term potassium depletion, insulin-induced potassium shifts were markedly reduced (without any change in insulin-mediated glucose clearance). Thus the gain of this system is modified by potassium status and is regulated independently from insulin–glucose homoeostasis.",
+      "character_count": 810,
+      "content_sha256": "d0d550046ca0b3045c964ed95d21a41bea9f899abe10c0e52bed2ef3c4dbdc1c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0011-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "7917bcbb823585c7894bb181166ca8fafac46663acda27cf6bffb2b86e8c115a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "It’s complicated!"
+      ],
+      "heading": "It’s complicated!",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Of course, the above model is an over-simplification. Potassium homoeostasis is not independent from the many other facets of systemic physiology and we are continually learning about new pieces in the puzzle. One particularly intriguing story that has emerged in recent years is that of the circadian influences on potassium excretion. Renal potassium excretion follows a circadian rhythm, being highest around noon and lowest around midnight. Renal tubular cells possess an intrinsic molecular clock that is now well-characterized. This is synchronized with the central (brain) clock, in part through glucocorticoid signalling [ 12 ].",
+      "character_count": 636,
+      "content_sha256": "7917bcbb823585c7894bb181166ca8fafac46663acda27cf6bffb2b86e8c115a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "It’s complicated!"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0012-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "7ac570c9f5834417ea15102199481be7194916889b79056c452a597caba664b2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S003",
+      "parent_section_heading": "Principles of potassium homoeostasis: a battle waged on two fronts",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "It’s complicated!"
+      ],
+      "heading": "It’s complicated!",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "It follows that the risk of hyperkalemia is almost certainly influenced by the timing of meals, potassium loads and drug administrations. Could this be exploited to minimize the risk of hyperkalemia in high-risk patients?",
+      "character_count": 221,
+      "content_sha256": "7ac570c9f5834417ea15102199481be7194916889b79056c452a597caba664b2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "It’s complicated!"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0013-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "d702d8e1a9d4e37645065f843638ccd9ebdba76a09a27cba39560c1af74aeac1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S007",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from transcellular potassium shifts"
+      ],
+      "heading": "Hyperkalemia from transcellular potassium shifts",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The huge size of the intracellular potassium store means that transcellular shifts can have large and rapid effects on plasma [K + ]. Potassium shifted from the intra- to the extracellular space are induced by acute metabolic acidosis and opposed by insulin and β-adrenergic signalling [ 13 ]. Widespread cell death (as in tumour lysis or rhabdomyolysis) may also release potassium from the intracellular space.",
+      "character_count": 411,
+      "content_sha256": "d702d8e1a9d4e37645065f843638ccd9ebdba76a09a27cba39560c1af74aeac1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from transcellular potassium shifts"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0014-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "7dedecb58139a0002b70d285334a81b2cd08a485e1e349b99b1c886509426474",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S007",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from transcellular potassium shifts"
+      ],
+      "heading": "Hyperkalemia from transcellular potassium shifts",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Transcellular shifts can be quantitatively more important than external potassium load, as was demonstrated by randomized controlled trials (RCTs) of perioperative intravenous fluid therapy in kidney transplant recipients. Patients randomized to receive 0.9% sodium chloride (NaCl; containing no potassium) had a greater incidence of hyperkalemia than those randomized to receive plasmalyte-148 (containing 4 mM potassium) [ 14 , 15 ]. The likely explanation for this apparent paradox is that chloride-rich 0.9% NaCl induces metabolic acidosis, whereas buffered plasmalyte-148 does not.",
+      "character_count": 586,
+      "content_sha256": "7dedecb58139a0002b70d285334a81b2cd08a485e1e349b99b1c886509426474",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from transcellular potassium shifts"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0015-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "e1440f9e2c015f23705fe4a9e394327a170d17920b272f8b78c92c97e45fff13",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron"
+      ],
+      "heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Ninety percent of excreted potassium exits via the kidneys and the kidneys have a remarkable capacity to increase potassium excretion in the face of potassium excess [ 16 ]. Consequently hyperkalemia is almost never encountered clinically in the context of normal renal function and a normal adrenal–kidney axis.",
+      "character_count": 312,
+      "content_sha256": "e1440f9e2c015f23705fe4a9e394327a170d17920b272f8b78c92c97e45fff13",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0016-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "16a0775762e3c788bad06d8abb905c5dd7cae1ecc85e03664b228a17c18ad5da",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron"
+      ],
+      "heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Physiological control of potassium excretion is exercised in the aldosterone-sensitive distal nephron (reviewed in McDonough and Youn [ 2 ] and Welling [ 8 ]). An understanding of the molecular pathways of potassium excretion can help in understanding the clinical insults that induce hyperkalemia. Potassium is secreted through renal tubular cells via the sodium–potassium pump in the basolateral membrane and at least four different types of ion channels in the apical membrane. The most well-studied of these are the ROMK channel and the BK channel.",
+      "character_count": 552,
+      "content_sha256": "16a0775762e3c788bad06d8abb905c5dd7cae1ecc85e03664b228a17c18ad5da",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0017-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "055895c91018697e6be6a9fd57899c8fb92200eef3f90702d0fb62cf88464a41",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ],
+      "heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "ROMK channels are expressed in principal cells alongside the ENaC. This arrangement means that potassium excretion in the distal nephron is coupled to sodium reabsorption. Na + reabsorption through the ENaC generates a lumen-negative potential, favouring K + excretion. When sodium influx through the ENaC is high (e.g. in response to aldosterone signalling), potassium efflux is also high. Conversely, when sodium influx is low (as in volume depletion, when sodium delivery to the distal nephron is limited), potassium efflux is diminished. In potassium excess, hyperkalemia is avoided because ROMK is upregulated through aldosterone-dependent and -independent pathways [ 8 ].",
+      "character_count": 677,
+      "content_sha256": "055895c91018697e6be6a9fd57899c8fb92200eef3f90702d0fb62cf88464a41",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0018-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "804788c9498e4ee9e8e291f9d987591f0ebf745d5dad2150de2816fc391b776c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ],
+      "heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Sodium delivery to the distal nephron is therefore an important determinant of potassium excretion. Except in extreme volume depletion, tubuloglomerular feedback ensures that a constant load of NaCl is delivered to the post-macular renal tubule [ 17 ]. Therefore the supply of sodium to the ENaC in the connecting tubule and collecting ducts is determined primarily by the activity of the distal electroneutral sodium reabsorption pathways: sodium chloride cotransporter (NCC) in the distal convoluted tubule and the sodium-dependent Cl − /HCO 3 − exchanger (NDCBE) in the β-intercalated cell, functionally coupled with pendrin [ 18 ]. Reciprocal studies in mice show the importance for potassium homoeostasis of coordinated crosstalk between these distal sodium transporters: double genetic deletion of NCC and NDCBE caused hypokalemia in mice, which could not be explained solely on the basis of activation of the renin–angiotensin–aldosterone system [ 19 ]: the expression of ENaC, ROMK and BK proteins was increased as was the natriuretic effect of amiloride. Conversely, transgenic mice carrying the Q562E mutation in WNK4 that causes pseudohypoaldosteronism type II (PHAII) mutation were hyperkalemic due to combined activation of NCC and pendrin/NDCBE and ‘reduced’ potassium secretion by the principal cell [ 20 ].",
+      "character_count": 1322,
+      "content_sha256": "804788c9498e4ee9e8e291f9d987591f0ebf745d5dad2150de2816fc391b776c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0019-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "6eff4862c1e33410818aa4b6731673617e7b01c8c0b971d64df294ad178a4550",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ],
+      "heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The balance between electroneutral and electrogenic distal Na + reabsorption determines net potassium excretion. This physiological switch is manipulated by the mechanisms that maintain potassium homoeostasis. Potassium channels (Kir4.1) in the basolateral membranes of distal convoluted tubule cells act as ‘potassium sensors’, activating NCC in response to potassium depletion [ 21 , 22 ]. Furthermore, NCC activity can be controlled by phosphorylation/dephosphorylation of critical residues in the N-terminus. Dephosphorylation, suppressing NCC activity, helps to enhance potassium excretion after a potassium-rich meal: the effector arm of the gut–kidney feedforward loop [ 2 ]. Dephosphorylation is also observed following acute hyperkalemia in the rat [ 23 ], and the urinary abundance of phosphorylated NCC is negatively correlated with plasma [K + ] in humans [ 24 ]. NCC is directly activated by aldosterone [ 25–27 ] but can also be controlled by aldosterone-independent mechanisms. For example, potassium restriction stimulates NCC activity in kidney-specific MR-null mice [ 10 ].",
+      "character_count": 1091,
+      "content_sha256": "6eff4862c1e33410818aa4b6731673617e7b01c8c0b971d64df294ad178a4550",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0019",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0020-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "f16f6c05528ec1fcd6dcd3db3c96c9a6b1c12f9597440d9e7866f76166dcae81",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "BK channels and their regulation by urinary flow rate and alkalinization"
+      ],
+      "heading": "BK channels and their regulation by urinary flow rate and alkalinization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "BK channels are expressed in principal and intercalated cells. These are activated by high tubular flow rates and thus mediate flow-induced potassium secretion. The ‘flow sensor’ has recently been determined: bending of the primary cilium on the principle cell opens transient receptor potential vanilloid type 4 channels, causing an influx of calcium that in turn activates BK channels [ 28 ]. BK channels are also upregulated in response to potassium loading. The mechanism here is fascinating. BK channels are formed from two subunits, both of which are required for channel activity. Aldosterone upregulates the expression of the α-subunit and bicarbonate upregulates expression of the β-subunit. Therefore it has been argued that regulation of BK channel activity is critical in the response to a ‘Palaeolithic’ low-sodium, high-potassium, alkaline diet [ 8 ]. In support of this, mice fed a low-sodium, high-potassium diet become hyperkalemic when they are also given an acid load [ 29 ].",
+      "character_count": 994,
+      "content_sha256": "f16f6c05528ec1fcd6dcd3db3c96c9a6b1c12f9597440d9e7866f76166dcae81",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "BK channels and their regulation by urinary flow rate and alkalinization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0021-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "aedb2db642068e2722dafa3001a9f5365b1e5215a2dbc236e4c8f101560b7613",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ],
+      "heading": "Clinical implications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "These molecular processes explain why hyperkalemia invariably occurs in response to stimuli that limit any of five key parameters ( Figure 1 ): (i) glomerular filtration rate, (ii) tubular flow rate, (iii) sodium delivery to the distal nephron, (iv) the expression of potassium and sodium channels in the apical cell membrane and the sodium–potassium pump in the basolateral membrane (controlled by aldosterone signalling) and (v) urinary pH.",
+      "character_count": 442,
+      "content_sha256": "aedb2db642068e2722dafa3001a9f5365b1e5215a2dbc236e4c8f101560b7613",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0022-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "9f3c3600dca1c4c2c0e708f04aca34dc4421fe1a8b00863cab2c9d65543b4e68",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ],
+      "heading": "Clinical implications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "FIGURE 1 Pathogenesis of hyperkalemia: mechanisms in the distal nephron. Factors that can cause hyperkalemia are in red text. These perturb one or more of five key variables: glomerular filtration, urine flow, sodium delivery to the distal nephron, expression of aldosterone-sensitive ion channels and transporters and urinary pH. PHAI, type I pseudohypoaldosteronism; CNI, calcineurin inhibitor.",
+      "character_count": 396,
+      "content_sha256": "9f3c3600dca1c4c2c0e708f04aca34dc4421fe1a8b00863cab2c9d65543b4e68",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "ce910078c7f566e770a91283b0c922f2dcb9b4c39e753149d226d7521e4a1b5b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ],
+      "heading": "Clinical implications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In clinical practice, the first three of these are frequently encountered together, explaining the pathogenesis of hyperkalemia in acute kidney injury (AKI). The normal physiological response to volume depletion drives upregulation of aldosterone synthesis, so that any reductions in (i)–(iii) are offset by increases in (iv), maintaining potassium homoeostasis. Hyperkalemia ensues when this response is prevented, for example, by renin–angiotensin system (RAS) inhibitors or MR blockers.",
+      "character_count": 489,
+      "content_sha256": "ce910078c7f566e770a91283b0c922f2dcb9b4c39e753149d226d7521e4a1b5b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0024-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "1766be780e2fe145166b4c105036ffda88f76a7aef8ed27ede4391b36f26f8d7",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S008",
+      "parent_section_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ],
+      "heading": "Clinical implications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Hyperkalemia can occur when NCC activity is stimulated , leading to reduced reabsorption of sodium through the electrogenic pathway. The archetypal example of this is type II pseudohypoaldosteronism (Gordon’s syndrome), in which inherited mutations in the Wnk-SPAK kinase cascade or the KLHL3–CUL3 ubiquitin ligase complex that regulates it lead to the constitutive phosphorylation (and therefore activation) of NCC [ 30 ]. More commonly, this syndrome, characterized by hypertension, hyperkalemia and hyperchloremic acidosis, may be acquired by renal transplant recipients taking the calcineurin inhibitor tacrolimus. Tacrolimus indirectly activates NCC [ 31 ] by inactivating negative regulators in the KLHL3–CUL3 ubiquitin ligase complex [ 32 ]. Alternatively, hyperkalemia may occur when ENaC activity is inhibited by drugs (e.g. amiloride, trimethoprim and pentamidine) in adrenal disease (because of impaired aldosterone synthesis) or by heritable mutations inactivating ENaC or MR (type I pseudohypoaldosteronism).",
+      "character_count": 1021,
+      "content_sha256": "1766be780e2fe145166b4c105036ffda88f76a7aef8ed27ede4391b36f26f8d7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0025-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "186682a10f2812bc879e58fe452f0ec881a29a750eb2563792da5b8719a5af4a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S012",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective extrarenal potassium excretion"
+      ],
+      "heading": "Hyperkalemia from defective extrarenal potassium excretion",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients with healthy kidneys, the colon excretes 10% of ingested potassium; this route of excretion becomes relatively more important in patients with advanced renal failure. In a RCT comparing spironolactone, losartan and placebo in combination with lisinopril in patients with diabetic nephropathy, spironolactone caused greater elevations in serum [K + ] than losartan, despite exerting similar effects on urinary potassium excretion, suggesting a significant effect of spironolactone on extrarenal potassium excretion [ 33 ].",
+      "character_count": 533,
+      "content_sha256": "186682a10f2812bc879e58fe452f0ec881a29a750eb2563792da5b8719a5af4a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective extrarenal potassium excretion"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0026-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "18fb419228a801a20e513364992fe2aa9fdf973100b2bc57070ee411f3781937",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S012",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S002",
+      "parent_section_heading": "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective extrarenal potassium excretion"
+      ],
+      "heading": "Hyperkalemia from defective extrarenal potassium excretion",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For some anuric patients, the colon undoubtedly makes a clinically significant contribution to total potassium excretion [ 34 ]. However, colonic potassium excretion probably makes a modest contribution to systemic potassium homoeostasis in most patients with end-stage renal disease. There have been several small RCTs of mineralocorticoid antagonist therapy in oligoanuric hemodialysis patients. By and large, these have shown that mineraolocorticoid antagonists do increase the risk of hyperkalemia, but this is rarely severe enough to warrant discontinuation of therapy [ 35–37 ].",
+      "character_count": 584,
+      "content_sha256": "18fb419228a801a20e513364992fe2aa9fdf973100b2bc57070ee411f3781937",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective extrarenal potassium excretion"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0027-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "63c7b135fd24f2618df0d812a7ef2844d48e968c458cb43fd9809e3d9b308baf",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S014",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Quantitatively important risk factors"
+      ],
+      "heading": "Quantitatively important risk factors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "From the above, it is clear that the major risk factors for hyperkalemia are renal impairment - either AKI or advanced chronic kidney disease (CKD) - and any acquired or inherited defects in potassium excretion in the distal nephron. In CKD, hyperkalemia is typically encountered after the estimated glomerular filtration rate (eGFR) drops below 15 mL/min [ 38 ].",
+      "character_count": 363,
+      "content_sha256": "63c7b135fd24f2618df0d812a7ef2844d48e968c458cb43fd9809e3d9b308baf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Quantitatively important risk factors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0028-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "0e8539cd8363bfac6948b9bec80b05335a541ba9f782359e72f9877c2bfd3980",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S014",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Quantitatively important risk factors"
+      ],
+      "heading": "Quantitatively important risk factors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The risk factors for hyperkalemia were studied in a meta-analysis of data from >1.2 million individuals with CKD [ 39 ]. The risk of hyperkalemia (K > 5.5 mM) was strongly correlated with eGFR across the entire range of kidney function (from eGFR 15 to 105 mL/min). A decrease in eGFR of 15 mL/min approximately doubled the odds of hyperkalemia [ 39 ]. Albuminuria was also a risk factor, but the association was far weaker (odds ratio for hyperkalemia < 2 even in heavy albuminuria) [ 39 ]. Other risk factors for hyperkalemia included male sex; non-black race; lower body mass index; smoking, history of diabetes mellitus, coronary heart disease or stroke and use of angiotensin-converting enzyme inhibitor (ACEi), angiotensin receptor blocker (ARB) or potassium-sparing diuretics. Unsurprisingly, the use of thiazide or loop diuretics was protective.",
+      "character_count": 853,
+      "content_sha256": "0e8539cd8363bfac6948b9bec80b05335a541ba9f782359e72f9877c2bfd3980",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Quantitatively important risk factors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0029-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "46bdad4af6fdf61ae52791b15a63ebb2dbe42bdeb66055fa9db966f2c9a3da99",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Drug therapies as risk factors for hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The medications associated with hyperkalemia are listed in Table 1 .",
+      "character_count": 68,
+      "content_sha256": "46bdad4af6fdf61ae52791b15a63ebb2dbe42bdeb66055fa9db966f2c9a3da99",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0030-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "3615627010d5e8195a3f1dfddb387139b03eeb3ce91711abe87064eb3bebd0c0",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Drug therapies as risk factors for hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia",
+      "character_count": 35,
+      "content_sha256": "3615627010d5e8195a3f1dfddb387139b03eeb3ce91711abe87064eb3bebd0c0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0031-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "40c193326c03c9c06d892b8d6b0cce757623c9b6d8b91385c060ba2c3a9bcacd",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective aldosterone signalling — Mechanism: Impaired renin production; Drug: β-Blockers and NSAIDs",
+      "character_count": 148,
+      "content_sha256": "40c193326c03c9c06d892b8d6b0cce757623c9b6d8b91385c060ba2c3a9bcacd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective aldosterone signalling"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0032-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "34054fae3b6886ea05cf3aca8cb8fd52135fb35be9ec75e9e6968caca3fedcb0",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective aldosterone signalling — Mechanism: Impaired renin–angiotensin signalling; Drug: Aliskiren, ACEis and ARBs",
+      "character_count": 164,
+      "content_sha256": "34054fae3b6886ea05cf3aca8cb8fd52135fb35be9ec75e9e6968caca3fedcb0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective aldosterone signalling"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0033-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "1922b8f7736b4b70fe8e4f002207b2689332d2877fe68fafbecb80d9dea3bf97",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective aldosterone signalling — Mechanism: Impaired aldosterone synthesis; Drug: Heparin [ 40 ] and ketoconazole",
+      "character_count": 163,
+      "content_sha256": "1922b8f7736b4b70fe8e4f002207b2689332d2877fe68fafbecb80d9dea3bf97",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective aldosterone signalling"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0034-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "d19497169139e650ea156f0f69b6bb7f646d83bc7140fc59e0f866d4c5d54446",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective aldosterone signalling — Mechanism: MR blockade; Drug: Spironolactone and eplerenone",
+      "character_count": 142,
+      "content_sha256": "d19497169139e650ea156f0f69b6bb7f646d83bc7140fc59e0f866d4c5d54446",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective aldosterone signalling"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0035-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "42959de57ec67920a4500a3b8194a1d47d85fc43bb52c85a712fd791c1f676af",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective distal electrogenic sodium reabsorption — Mechanism: ENaC blockade; Drug: Amiloride, triamterene, trimethoprim [ 41–43 ], pentamidine and lithium",
+      "character_count": 203,
+      "content_sha256": "42959de57ec67920a4500a3b8194a1d47d85fc43bb52c85a712fd791c1f676af",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective distal electrogenic sodium reabsorption"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0036-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "d15cb42f47f780c9f72b666e555f595a738327dbc85556a6560636d9c65437c7",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Defective distal electrogenic sodium reabsorption — Mechanism: NCC activation; Drug: CNIs [ 31 ]",
+      "character_count": 144,
+      "content_sha256": "d15cb42f47f780c9f72b666e555f595a738327dbc85556a6560636d9c65437c7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0040",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Defective distal electrogenic sodium reabsorption"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0037-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "e55e7d2d4da0d9d6b356afc2366eaecb9081eedb0d7c43fc38048763de1333fa",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Cellular K + translocation — Mechanism: Changes in transcellular transporters; Drug: α-Agonists, β-blockers, digoxin, succinylcholine, isofluorane, minoxidil and somatostatin",
+      "character_count": 222,
+      "content_sha256": "e55e7d2d4da0d9d6b356afc2366eaecb9081eedb0d7c43fc38048763de1333fa",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Cellular K + translocation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0038-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "3a716a32792a96e1ad5b920410bbc5d5ef2efb1e35a254bafe6b148517ed5440",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Cellular K + translocation — Mechanism: Solvent drag in osmotic shifts; Drug: Mannitol",
+      "character_count": 134,
+      "content_sha256": "3a716a32792a96e1ad5b920410bbc5d5ef2efb1e35a254bafe6b148517ed5440",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Cellular K + translocation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0039-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "b5d2c7590f845c6ae78bb92f1e8cca5453d07d187ff6553f090cc9aff0afacb7",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Drug causes of hyperkalemia — Category: Exogenous potassium load — Mechanism: High-potassium content; Drug: Penicillins (intravenous) [ 40 ]",
+      "character_count": 148,
+      "content_sha256": "b5d2c7590f845c6ae78bb92f1e8cca5453d07d187ff6553f090cc9aff0afacb7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Exogenous potassium load"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0040-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "5fb97bb9c56f7dd66fa3efabe1b53613815a4e33a197b226d25f77abac3e8511",
+      "block_type": "table_note",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 CNI, calcineurin inhibitor; NSAIDs, non-steroidal anti-inflammatory drugs.",
+      "character_count": 82,
+      "content_sha256": "5fb97bb9c56f7dd66fa3efabe1b53613815a4e33a197b226d25f77abac3e8511",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0041-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "a278c602c7239a293e72bc279abf6e454ece750c0d27ad0e39aaac07d7a7dd9e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S016",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "RAS blockade"
+      ],
+      "heading": "RAS blockade",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For most patients, RAS blockade with a single agent confers a low risk of hyperkalemia. Furthermore, patients at risk of hyperkalemia can be identified by the presence of the classical risk factors discussed above. A risk score, combining information from six risk factors (male sex, baseline [K + ], eGFR, diabetes, heart failure and use of potassium-sparing diuretics) performed well at predicting hyperkalemia after initiation of RAS inhibitors (RASis) in Swedish and American populations [ 44 ].",
+      "character_count": 499,
+      "content_sha256": "a278c602c7239a293e72bc279abf6e454ece750c0d27ad0e39aaac07d7a7dd9e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "RAS blockade"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0042-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "c1ae4e9afdb858ecaf4b010ab350fb0a2b9742d40fd808e1be1ed0e357e9f1fe",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S016",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "RAS blockade"
+      ],
+      "heading": "RAS blockade",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "However, there are significant risks of hyperkalemia when the RAS is targeted with multiple agents. The risks of dual blockade were revealed by large RCTs: Aliskiren Trial in Type 2 Diabetes Using Cardiorenal Endpoints (ALTITUDE), Veterans Affairs Nephropathy in Diabetes (VA NEPHRON-D) and Ongoing Telmisartan Alone and in Combination with Ramipril Global Endpoint Trial (ONTARGET) [ 45–47 ]. The first two trials, both conducted in patients with type 2 diabetes, were terminated prematurely because of safety concerns. Hyperkalemia (>6 mM) was significantly more common in the dual-blockade group than in a single-blockade control group (11.2% versus 7.2% in ALTITUDE and 9.9% versus 4.4% in VA NEPHRON-D). This effect was also present but less marked in ONTARGET, which studied a population with less advanced renal disease and <40% prevalence of diabetes.",
+      "character_count": 859,
+      "content_sha256": "c1ae4e9afdb858ecaf4b010ab350fb0a2b9742d40fd808e1be1ed0e357e9f1fe",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "RAS blockade"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0043-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "a5cfb73240248ee28205bbcc807acd17133ce15bc10e1e76a7c0e9eefaaca1ce",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S017",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ],
+      "heading": "MR antagonists",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Due to the pivotal role of aldosterone in the control of potassium homoeostasis, MR antagonist (MRA) therapy is a risk factor for hyperkalemia. In a meta-analysis of RCTs conducted in >16 000 patients with heart failure or after myocardial infarction, hyperkalemia (defined by the individual studies as [K + ] >5.5 or 6.0 mM) occurred in 4.3% of patients allocated to placebo versus 9.3% of patients allocated to MRAs [ 48 ].",
+      "character_count": 425,
+      "content_sha256": "a5cfb73240248ee28205bbcc807acd17133ce15bc10e1e76a7c0e9eefaaca1ce",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0044-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "f15ef86480dcede215a264555c824efb011551d13bc428e87d02a2f1aca51db0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S017",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ],
+      "heading": "MR antagonists",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Famously, dangerous hyperkalemia became more common after the publication of the Randomized Aldactone Evaluation Study (RALES) study, which demonstrated a morbidity and mortality benefit from spironolactone therapy in heart failure with reduced ejection fraction (HFrEF). Large-scale data linkage in a Canadian population revealed that the rates of both hospitalization for hyperkalemia and in-hospital hyperkalemia-related mortality more than doubled after the publication of RALES in September 1999 [ 49 ].",
+      "character_count": 508,
+      "content_sha256": "f15ef86480dcede215a264555c824efb011551d13bc428e87d02a2f1aca51db0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0045-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "3a332de4122055827a6e429645b8f07bbd3a8bf79b1b82ebd496ae9c04429fa5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S017",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ],
+      "heading": "MR antagonists",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In animal models and in Phase 1/2 clinical trials, novel non-steroidal MR antagonists have a more favourable therapeutic index than spironolactone or eplerenone—that is, they carry a lower risk of hyperkalemia at therapeutic doses in heart failure and proteinuric CKD [ 50 , 51 ].",
+      "character_count": 280,
+      "content_sha256": "3a332de4122055827a6e429645b8f07bbd3a8bf79b1b82ebd496ae9c04429fa5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0053",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "MR antagonists"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0046-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "239d8ffb7440685b473382e584f2b5bd0340545bf64b89014336f8866915259a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S018",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S015",
+      "parent_section_heading": "Drug therapies as risk factors for hyperkalemia",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "Other drugs"
+      ],
+      "heading": "Other drugs",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Large data-linkage studies are helping to quantify the risk of hyperkalemia associated with other medications. For example, trimethoprim prescription for urinary tract infection (compared with alternative antibiotics) was associated with a small increase in the odds of hyperkalemia in patients >65 years of age. For every 1000 infections, treatment with trimethoprim rather than amoxicillin results in one to two cases of hyperkalemia in an unselected population. In keeping with the pervasive concept that risk is potentiated when drugs that predispose to hyperkalemia are prescribed in combination in patients also taking RAS inhibitors or MRAs, trimethoprim would cause ∼18 additional cases of hyperkalemia [ 52 ].",
+      "character_count": 718,
+      "content_sha256": "239d8ffb7440685b473382e584f2b5bd0340545bf64b89014336f8866915259a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0054",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Drug therapies as risk factors for hyperkalemia",
+        "Other drugs"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0047-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "7eb012ff5d1df414add9e8d711b380b5d3d4d6805b6fef0242c996de6a296f9f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S019",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Other risk factors"
+      ],
+      "heading": "Other risk factors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Diabetes mellitus is a risk factor for hyperkalemia (independent of RAS blockade) because of its association with hyporeninemic hypoaldosteronism. This state is presumed to arise from decreased sympathetic drive to renin secretion (in diabetic autonomic neuropathy), decreased capacity to synthesise renin because of injury to the juxtaglomerular apparatus (in afferent arteriolar hyalinosis and diabetic nephropathy) and a decreased volume stimulus to renin release because of chronic renal salt retention [ 53 , 54 ].",
+      "character_count": 519,
+      "content_sha256": "7eb012ff5d1df414add9e8d711b380b5d3d4d6805b6fef0242c996de6a296f9f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0055",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Other risk factors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0048-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "037898af60e14f84fca015af4812a1a66b1d54afcf150ef0fb080a46b4d157dc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S019",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Other risk factors"
+      ],
+      "heading": "Other risk factors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Hyperkalemia may also arise, via some unknown mechanism, in the ‘hungry bones’ syndrome after parathyroidectomy for secondary hyperparathyroidism. The risk may be particularly high in patients who have been treated with cinacalcet [ 55 ].",
+      "character_count": 238,
+      "content_sha256": "037898af60e14f84fca015af4812a1a66b1d54afcf150ef0fb080a46b4d157dc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0056",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Other risk factors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0049-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "db8ba6b39c6dc927f0704d5bd56efb2b5634cb0ee1a1d13747846928799f4f52",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S020",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S013",
+      "parent_section_heading": "RISK FACTORS FOR HYPERKALEMIA",
+      "section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Risk factors for hyperkalemia in dialysis patients"
+      ],
+      "heading": "Risk factors for hyperkalemia in dialysis patients",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Patients receiving dialysis for end-stage renal failure form a group worthy of special consideration, because the risk of hyperkalemia can be influenced by variables in dialysis therapy. For example, in patients receiving maintenance hemodialysis, serum [K + ] is influenced by time since the last dialysis therapy, being higher after a 3-day than a 2-day gap (reviewed in Rhee [ 56 ]). Interestingly however, the potassium content of the hemodialysis fluid does not appear to be a major determinant of serum [K + ], as measured 2 or 3 days later before the next dialysis session [ 57 ].",
+      "character_count": 587,
+      "content_sha256": "db8ba6b39c6dc927f0704d5bd56efb2b5634cb0ee1a1d13747846928799f4f52",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0057",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Risk factors for hyperkalemia in dialysis patients"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0050-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "0511cdfb663be0c03cf168f9e1071554d0a29b5c46fffb45c4bf8ce8ac5bbc05",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA"
+      ],
+      "heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The most notorious consequence of hyperkalemia is that of potentially fatal cardiac dysrhythmia. However, there are several other consequences worthy of discussion. Hyperkalemia is associated with increased mortality (although we do not know whether hyperkalemia causes increased mortality outside of the context of cardiac arrhythmia in extreme hyperkalemia). Consequently, hyperkalemia—or the fear of hyperkalemia—may prompt changes in prescribing practice (e.g. avoiding RAS blockade and MRAs). Finally, recent data show that hyperkalemia can cause renal tubular acidosis and may contribute to peripheral neuropathy in CKD patients.",
+      "character_count": 635,
+      "content_sha256": "0511cdfb663be0c03cf168f9e1071554d0a29b5c46fffb45c4bf8ce8ac5bbc05",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0051-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "d9cc1683098f691e214b23097404944aa6d9836ab09fa969a03b6c09b800030e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S022",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Mortality: epidemiology"
+      ],
+      "heading": "Mortality: epidemiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Large observational studies demonstrate an association between hyperkalemia and an increased risk of death [ 39 , 58 , 59 ]. In a meta-analysis of data from >1.2 million individuals with CKD, serum [K + ] exhibited a U-shaped relationship with all-cause and cardiovascular mortality, with a nadir at ∼4.2 mM. The adjusted hazard ratio for all-cause mortality was ∼1.22 for [K + ] >5.5 mM [ 39 ]. This association persisted after adjustment for a large number of covariates [ 39 , 60 ]. However, as there have been no large interventional studies testing the effects of potassium-lowering therapies (or of plasma [K + ] targets) per se on mortality, we do not know whether this association is due to residual confounding (i.e. whether or not mild-to-moderate hyperkalemia causes an increased risk of death).",
+      "character_count": 806,
+      "content_sha256": "d9cc1683098f691e214b23097404944aa6d9836ab09fa969a03b6c09b800030e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0059",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Mortality: epidemiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0052-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 52,
+      "source_block_sha256": "cc4d776e4dfce7d4110e3acb8ac560f17b4a756351f0f6eeca409854cdbf0901",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S022",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Mortality: epidemiology"
+      ],
+      "heading": "Mortality: epidemiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The most plausible mechanism whereby hyperkalemia could cause death is by the induction of fatal cardiac arrhythmia. In patients with acute myocardial infarction, hyperkalemia did indeed increase the risk of ventricular arrhythmias [ 58 ]. However, there are some observations to suggest that any mortality risk associated with hyperkalemia cannot be solely attributed to arrhythmogenic death. For example, in a racially diverse population of community-dwelling older adults, hyperkalemia was not associated with sudden cardiac death, whereas it was associated with death from cancer and other non-cardiac causes [ 60 ]. Moreover, adverse outcomes have been associated with higher plasma [K + ] values that remain well within the reference range [ 39 , 60 , 61 ]. Therefore we still have much to learn about the methodology of epidemiological studies in this area and/or the pathogenic consequences of hyperkalemia [ 62 ].",
+      "character_count": 922,
+      "content_sha256": "cc4d776e4dfce7d4110e3acb8ac560f17b4a756351f0f6eeca409854cdbf0901",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0060",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Mortality: epidemiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0053-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 53,
+      "source_block_sha256": "df59299ee9a561778c857a21b39140a5993ec765220b0a5132e510606c4dccc5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "An increase in [K + ] e has several consequences for the myocardial action potential (AP; Figure 2 ). These are driven by depolarization of the resting (RP) and activation of inward rectifier potassium channels (carrying currents I K1 and I Kr ).",
+      "character_count": 246,
+      "content_sha256": "df59299ee9a561778c857a21b39140a5993ec765220b0a5132e510606c4dccc5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0061",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0054-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 54,
+      "source_block_sha256": "ae97d41b751de0bf3f712942135d1c0e3c8f2153e2567484131003932b739a65",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "FIGURE 2 Mechanism of cardiac arrhythmia in hyperkalemia. In normokalemia, the cell membrane of the cardiomyocyte is polarized (resting potential around −90 mV). In moderate hyperkalemia, the cell membrane becomes partially depolarized, bringing the resting potential closer to the threshold potential for AP initiation. Therefore fast sodium channels (Na v 1.5) are activated more readily, increasing excitability and conduction velocity. This manifests as T wave peaking on the ECG as a mass of ventricular cardiomyocytes undergo (synchronous) early repolarization. In severe hyperkalemia, voltage-dependent inactivation of Na v 1.5 channels and activation of inwardly rectifying potassium channels (K ir ) lead to reductions in conduction velocity and can render cells refractory to excitation. This manifests as broadening of ECG complexes and/or conduction blocks. This figure represents an idealized model, as there is poor correlation between ECG features and the degree of hyperkalemia.",
+      "character_count": 994,
+      "content_sha256": "ae97d41b751de0bf3f712942135d1c0e3c8f2153e2567484131003932b739a65",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0062",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0055-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 55,
+      "source_block_sha256": "a4beb9f6b6d8e919f48ec9ce300202e8285c1b839b3ca378979ca0ad8986ec96",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Depolarization of the RP exerts a biphasic effect on myocardial excitability and conduction velocity [ 63–65 ]. Modest increases in [K + ] e (up to ∼8 mM) increase excitability and conduction velocity as the RP moves closer to the threshold potential for AP initiation [via activation of voltage-gated Na + channels (Na V 1.5)]. Further increases in [K + ] e reduce conduction velocity or even prevent AP initiation (at [K + ] e ∼14 mM), due to the steady-state inactivation of Na V 1.5 channels at depolarized membrane potentials [ 63 , 66 ]. Activation of inward rectifier K + currents during repolarization (AP Phases 3 and 4) induces rapid repolarization and retards diastolic depolarization of Purkinje fibres.",
+      "character_count": 715,
+      "content_sha256": "a4beb9f6b6d8e919f48ec9ce300202e8285c1b839b3ca378979ca0ad8986ec96",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0063",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0056-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "e3faeec8b7b2bb0b65dbbd84b31b3481f1f4d4bd0e28cf00356a1a983f9ef089",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The net effect is that as [K + ] e rises modestly, the AP duration shortens, manifesting as peaked T-waves on an electrocardiogram (ECG), as a mass of myocardium undergoes premature synchronous repolarization [ 64 , 65 ]. Furthermore, conduction velocity increases so that cardiac conduction blocks may resolve (hence why cardiologists request measures to increase plasma [K + ] to high–normal in bradyarrhythmias). These pro-excitatory changes may induce fibrillation or tachyarrhythmias.",
+      "character_count": 489,
+      "content_sha256": "e3faeec8b7b2bb0b65dbbd84b31b3481f1f4d4bd0e28cf00356a1a983f9ef089",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0064",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0057-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 57,
+      "source_block_sha256": "c080abbaf743a749e08e8ed085f05a9d9ef4b7ee563b98741758a77de591b7b6",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "As [K + ] e increases still further, conduction velocity decreases (broadening the P and QRS complexes) and the refractory period increases, promoting cardiac conduction blocks. As depolarization merges with (premature) repolarization, there may be Q–T shortening (and apparent ST segment elevation) or the classic ‘sine wave’ ECG [ 64 ].",
+      "character_count": 338,
+      "content_sha256": "c080abbaf743a749e08e8ed085f05a9d9ef4b7ee563b98741758a77de591b7b6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0065",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0058-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 58,
+      "source_block_sha256": "e8fb821ec6d7f25c8346cf334eef461771fdea38e0b9f4055aefed4de263007f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Thus hyperkalemia may manifest as any of various ECG abnormalities: P, QRS, ST or T wave changes, resolution of conduction blocks, new conduction blocks, asystole, atrial fibrillation, ventricular fibrillation or ventricular tachycardia. However, the sensitivity and specificity of ECG changes for hyperkalemia (and for cardiac death in hyperkalemia) are poor, and there are many case reports of normal or near-normal ECGs in patients with severe hyperkalemia [ 65 , 67 ].",
+      "character_count": 472,
+      "content_sha256": "e8fb821ec6d7f25c8346cf334eef461771fdea38e0b9f4055aefed4de263007f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0066",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0059-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 59,
+      "source_block_sha256": "74dcd8cad9ff94bac7e1554f500358db263c86005f3d8b13b59f7abea5a5c41b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S023",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "heading": "Cardiac dysrhythmia: mechanism",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The pro-arrhythmogenic effects of hyperkalemia may be reversed by therapy with calcium (typically administered as chloride or gluconate salts) or sodium (typically as sodium bicarbonate) [ 68 , 69 ].",
+      "character_count": 199,
+      "content_sha256": "74dcd8cad9ff94bac7e1554f500358db263c86005f3d8b13b59f7abea5a5c41b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0067",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0060-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 60,
+      "source_block_sha256": "7b9706ff32de6814b0bd46492ef7bc977b07d1dc01e08c05ab85df9ed04d1ba5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S024",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Peripheral neuropathy"
+      ],
+      "heading": "Peripheral neuropathy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The effects of hyperkalemia on myocardial excitability can be dramatic, but there is emerging evidence that hyperkalemia may also exert clinically important effects on neuronal excitability. Median nerve conduction studies in hemodialysis patients have demonstrated pre-dialysis axonal depolarization (when serum [K + ] was ∼5.4 mM) [ 70 ]. Using an elegant protocol in which the nerve conduction studies were repeated after dialysis against a high-dialysate [K + ] (effectively a ‘potassium clamp’) and again after dialysis against a low-dialysate [K + ], Arnold et al. [ 71 ] demonstrated that a normal electrophysiological profile could be restored by lowering serum [K + ] but not by the clearance of other uremic toxins. They speculate that chronic hyperkalemia could contribute to the pathogenesis of uremic neuropathy and myopathy. In support of this, dietary potassium restriction improved peripheral nerve function in patients with CKD in a single-blind RCT [ 71 ].",
+      "character_count": 974,
+      "content_sha256": "7b9706ff32de6814b0bd46492ef7bc977b07d1dc01e08c05ab85df9ed04d1ba5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0068",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Peripheral neuropathy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0061-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 61,
+      "source_block_sha256": "3e1c3e43d3eebcc788dc3a55dd6a5eb7941164fc379775385a8ae2f2762c5b5b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S025",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Renal tubular acidosis"
+      ],
+      "heading": "Renal tubular acidosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The combination of hyperkalemia and impaired renal acid excretion is termed type IV renal tubular acidosis. In 1970s–1990s, experiments in cultured cells, intact rodents, dogs and humans demonstrated that hyperkalemia can impair ammoniagenesis in the proximal renal tubule [ 72–74 ]. Because net renal acid excretion is the sum of ammonium and titratable acid excretion minus bicarbonate excretion, this suggests that hyperkalemia per se could cause renal tubular acidosis. However, with otherwise normal renal and adrenal function, acid–base homoeostasis is maintained in hyperkalemia by compensatory mechanisms (largely driven by increased aldosterone production). Consequently, type IV RTA is invariably encountered clinically in the context of hypoaldosteronism, either true or functional [ 74 ].",
+      "character_count": 800,
+      "content_sha256": "3e1c3e43d3eebcc788dc3a55dd6a5eb7941164fc379775385a8ae2f2762c5b5b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0069",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Renal tubular acidosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0062-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 62,
+      "source_block_sha256": "e02dc1efcd24a32c2d2c510d1463acc5d85192832cde45166c23c081123c3448",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S025",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Renal tubular acidosis"
+      ],
+      "heading": "Renal tubular acidosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Compelling evidence that hyperkalemia can cause renal tubular acidosis was recently obtained from a mouse model of PHAII [ 75 ]. These mice carry a mutation that drives constitutive activation of the thiazide-sensitive co-transporter, NCC. They exhibited hyperkalemia, hyperchloremic metabolic acidosis and reduced urinary ammonia excretion, phenomena that were all corrected by dietary potassium restriction or thiazide administration. Furthermore, this model was exploited to determine the molecular mechanisms whereby hyperkalemia impairs renal ammonium excretion. Mice had reduced expression of ammoniagenic enzymes (phosphoenolpyruvate carboxykinase and phosphate-dependent glutaminase) and increased expression of an ammonia-recycling enzyme (glutamine synthetase) in the proximal tubule, changes that would be expected to result in reduced ammonia production. Expression of transport proteins in the collecting duct (Rhcg and H + -ATPase) was altered in a manner expected to reduce ammonia secretion into the urine. These molecular changes were also corrected when plasma [K + ] was normalized with thiazide treatment.",
+      "character_count": 1125,
+      "content_sha256": "e02dc1efcd24a32c2d2c510d1463acc5d85192832cde45166c23c081123c3448",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0070",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Renal tubular acidosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0063-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 63,
+      "source_block_sha256": "2b76909edfff6f7abd3bd2eb50edee9671e06f1a59b4530ca44f967c865ee05d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S026",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Consequences of hyperkalemia in patients receiving dialysis"
+      ],
+      "heading": "Consequences of hyperkalemia in patients receiving dialysis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Again, we can consider patients on dialysis as a special group for two reasons: first, the prevalence of hyperkalemia (pre-dialysis serum [K+] >5.5 mM in ∼20% of hemodialysis patients) and second, the prevalence of comorbidities that might potentiate any risk of cardiac arrhythmia and death (e.g. left ventricular hypertrophy) [ 57 , 76 ].",
+      "character_count": 340,
+      "content_sha256": "2b76909edfff6f7abd3bd2eb50edee9671e06f1a59b4530ca44f967c865ee05d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0071",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Consequences of hyperkalemia in patients receiving dialysis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0064-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 64,
+      "source_block_sha256": "9fc08deef0ceaa7f7ecb5ee8bf64afcc19ee877c57fea3f871062a059c8c3603",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S026",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S021",
+      "parent_section_heading": "CONSEQUENCES OF HYPERKALEMIA",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Consequences of hyperkalemia in patients receiving dialysis"
+      ],
+      "heading": "Consequences of hyperkalemia in patients receiving dialysis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients receiving maintenance hemo- and peritoneal dialysis, hyperkalemia has been associated with an increased risk of all-cause mortality, cardiac arrhythmia and hospitalization [ 56 , 57 , 76 ]. In hemodialysis, the risks of hyperkalemia may be augmented during the long interdialytic gap. In an observational study of >50 000 hemodialysis patients, hyperkalemia (>5.5 mM pre-dialysis) was associated with an increased risk of hospitalization in the subsequent 4 days and this risk was highest for [K + ] measured on a Friday (i.e. before a 3-day gap) than for [K + ] measured on a Monday or Wednesday (i.e. before a 2-day gap) [ 76 ].",
+      "character_count": 642,
+      "content_sha256": "9fc08deef0ceaa7f7ecb5ee8bf64afcc19ee877c57fea3f871062a059c8c3603",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0072",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Consequences of hyperkalemia in patients receiving dialysis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0065-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 65,
+      "source_block_sha256": "3b7ff3a01070607ce5b0bb149477d9b224748fdf5f51a45a220afe6ae37c6970",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S028",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Prescribing behaviour in hyperkalemia"
+      ],
+      "heading": "Prescribing behaviour in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The risk of hyperkalemia may deter physicians or patients from choosing certain medications. For example, only 40% of eligible patients with heart failure were prescribed an MRA in a Swedish registry of >11 000 heart failure patients. Creatinine clearance <60 mL/min was associated with non-prescription of MRA therapy (but serum [K + ] was not) [ 77 ]. A systematic review of observational and registry data from >80 000 patients with HFrEF estimated that the ‘treatment gap’ (i.e. proportion of eligible patients who were not prescribed treatments for HFrEF) was 13.1% for ACEis/ARBs and 16.8% for MRAs and that renal failure was associated with non-prescription [ 78 ].",
+      "character_count": 672,
+      "content_sha256": "3b7ff3a01070607ce5b0bb149477d9b224748fdf5f51a45a220afe6ae37c6970",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0073",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Prescribing behaviour in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0066-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 66,
+      "source_block_sha256": "7d0bdd82de2380585759a33a0502557e478313e9be9df5f0d44d83821a229f12",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S028",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Prescribing behaviour in hyperkalemia"
+      ],
+      "heading": "Prescribing behaviour in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In an observational study of >190 000 UK patients with pre-dialysis CKD Stages 3–5, serum [K + ] exhibited a J-shaped relationship with rates of RASi discontinuation [ 79 ]. The adjusted incidence rate ratios for RASi discontinuation if [K + ] within 30 days >6.0 mM was ∼4.4 (compared with the reference category 4.5–5.0 mM). This value was ∼1.9 for [K + ] 5.5–6.0 mM. Other significant associations with RASi discontinuation were lower GFR, diabetes mellitus, use of diuretics and male sex.",
+      "character_count": 492,
+      "content_sha256": "7d0bdd82de2380585759a33a0502557e478313e9be9df5f0d44d83821a229f12",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0074",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Prescribing behaviour in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0067-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 67,
+      "source_block_sha256": "33e7af10d2ed53fa614849969f1ca9b3e8dd112fa14f9efad63c0023c14380be",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S029",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ],
+      "heading": "Strategies to avoid ‘deprescribing’ in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "RASi and MR antagonists might be legitimately withheld due to well-justified fears of hyperkalemia in patients with significant risk factors or in patients who prioritize avoidance of hyperkalemia (or other factors such as tablet burden) over any potential prognostic benefit. On the other hand, they may be withheld because of an exaggerated fear of hyperkalemia on the part of the physician or patient. To our knowledge, there have been no robust studies that have succeeded in exploring the underlying reasons for this gap in a large population.",
+      "character_count": 548,
+      "content_sha256": "33e7af10d2ed53fa614849969f1ca9b3e8dd112fa14f9efad63c0023c14380be",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0075",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0068-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 68,
+      "source_block_sha256": "c58683c2fb4d24e17092e0b459d34a85c907bb830f98bcfbef1a78543b54f9a8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S029",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ],
+      "heading": "Strategies to avoid ‘deprescribing’ in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Several potential strategies could be used to minimize ‘deprescribing’ and thus realize the potential benefit of RASis and MRAs in target patient groups. First, we could ensure that prescribing decisions are made in the context of accurate data regarding the presence—or risk—of hyperkalemia in any individual patient. Large datasets have been used to construct hyperkalemia ‘risk scores’ [ 44 , 79 ]. Emerging technologies (such as wearable and needle-free potassium sensors) providing real-time [K + ] e data could allow RASis/MRAs to be omitted only on hyperkalemic days rather than being permanently discontinued in high-risk patients.",
+      "character_count": 639,
+      "content_sha256": "c58683c2fb4d24e17092e0b459d34a85c907bb830f98bcfbef1a78543b54f9a8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0076",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0069-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 69,
+      "source_block_sha256": "4d63827b944cd4e2f0743b8ddfced17199b91ee7416c32d1fd6aa90595693293",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S029",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ],
+      "heading": "Strategies to avoid ‘deprescribing’ in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Second, novel alternative drugs, such as non-steroidal MR antagonists, may confer less risk of hyperkalemia than conventional agents. These are being tested in clinical trials.",
+      "character_count": 176,
+      "content_sha256": "4d63827b944cd4e2f0743b8ddfced17199b91ee7416c32d1fd6aa90595693293",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0077",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0070-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 70,
+      "source_block_sha256": "2ae06541035a6b73426f371eff1fbd0d8b4faada53feeff47d1faa8a8f7304b8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S029",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ],
+      "heading": "Strategies to avoid ‘deprescribing’ in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Third, one should not forget tried-and-trusted methods for lowering potassium levels. Effective dietary advice and dietetic input can play a vital role in limiting hyperkalemia. Administration of loop and thiazide diuretics can be a useful strategy in selected patients.",
+      "character_count": 270,
+      "content_sha256": "2ae06541035a6b73426f371eff1fbd0d8b4faada53feeff47d1faa8a8f7304b8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0078",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0071-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 71,
+      "source_block_sha256": "e3da856ed085bafe63680c55532fc41587a2c58a14c63517e1d0c4ed6a7b175d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S029",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-RENAL-0009-JATS-S027",
+      "parent_section_heading": "Changes in prescribing practice",
+      "section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ],
+      "heading": "Strategies to avoid ‘deprescribing’ in hyperkalemia",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Finally, hyperkalemia could be avoided by the co-prescription of tolerable potassium binders (patiromer or sodium zirconium cyclosilicate). This strategy was successful in preventing RASi deprescribing in a small RCT [ 80 ]. So far, these novel agents appear to be a valuable addition to our therapeutic armoury. However, we should be relatively cautious about the introduction into widespread clinical practice and remain vigilant for side effects that may emerge during post-marketing surveillance. In clinical trials, patiromer was associated with adverse reactions including hypomagnesemia and gastrointestinal upset and sodium zirconium cyclosilicate was associated with hypokalemia and oedema [ 81 , 82 ].",
+      "character_count": 711,
+      "content_sha256": "e3da856ed085bafe63680c55532fc41587a2c58a14c63517e1d0c4ed6a7b175d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0079",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Changes in prescribing practice",
+        "Strategies to avoid ‘deprescribing’ in hyperkalemia"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0072-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 72,
+      "source_block_sha256": "345fb0362e4cd7469be6f0efe8b61ad3db1275f9f360f755745597bf56916158",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "CONCLUSIONS",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In classical models of potassium homoeostasis, aldosterone exerts negative feedback control of renal potassium excretion. There is an increasing appreciation that feedforward gut-to-kidney signalling plays an important role.",
+      "character_count": 224,
+      "content_sha256": "345fb0362e4cd7469be6f0efe8b61ad3db1275f9f360f755745597bf56916158",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0080",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0073-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 73,
+      "source_block_sha256": "ba50cc6d3c126bd14f0efe7fe7814e4c04e29f5cc41491ab29bc67a23f65a956",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "CONCLUSIONS",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Hyperkalemia occurs when renal potassium excretion is limited by reductions in GFR, tubular flow, distal sodium delivery or the expression of (aldosterone-sensitive) ion transporters in the distal nephron. Accordingly, the major risk factors for hyperkalemia are renal failure, diabetes mellitus, adrenal disease and the use of ACEis, ARBs or potassium-sparing diuretics.",
+      "character_count": 371,
+      "content_sha256": "ba50cc6d3c126bd14f0efe7fe7814e4c04e29f5cc41491ab29bc67a23f65a956",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0081",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0074-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 74,
+      "source_block_sha256": "21f7f3a5fcca99c9cd168b03eb8732fcf04792af06768410bb3993da287e21fb",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "CONCLUSIONS",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Hyperkalemia is associated with an increased risk of death and this is explicable only in part by hyperkalemia-induced cardiac arrhythmia. In addition to its well-established effects on cardiac excitability, hyperkalemia may also contribute to peripheral neuropathy and cause renal tubular acidosis. Fear of hyperkalemia might also contribute to the underprescription of potentially beneficial medications, particularly in HFrEF. The novel potassium binders may find a role in maximizing RASi and MRA use in heart failure and proteinuric kidney disease. We summarize the points that are most relevant for clinical practice in Table 2 .",
+      "character_count": 635,
+      "content_sha256": "21f7f3a5fcca99c9cd168b03eb8732fcf04792af06768410bb3993da287e21fb",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0082",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0075-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 75,
+      "source_block_sha256": "578e0d163dfa6bade249bc5ef027b23bb8f2cf3215695546283dcdd136cf3973",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "CONCLUSIONS",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Clinical ‘pearls’",
+      "character_count": 25,
+      "content_sha256": "578e0d163dfa6bade249bc5ef027b23bb8f2cf3215695546283dcdd136cf3973",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0083",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0076-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 76,
+      "source_block_sha256": "824a6f36667645bfb5659f30b1e1835bba0e46a4eb5dac03f493f9786336f1d6",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Clinical ‘pearls’ — Column 1: Oral potassium loads induce a lesser increase in plasma [K + ] when administered along with a complex meal (in healthy volunteers) Intravenous 0.9% NaCl is more likely than plasmalyte to cause an acute increase in plasma [K + ] Renal potassium excretion can be improved by measures that increase tubular flow rate, distal tubular sodium delivery and urinary alkalinization CNIs can cause hyperkalemia by activating the thiazide-sensitive NaCl co-transporter and NCC In CKD, the relative risk of hyperkalemia approximately doubles for every decrease in eGFR of 15 mL/min The risk of developing hyperkalemia after initiation of RAS blockade can be predicted with a score derived from six risk factors: male sex, baseline [K + ], eGFR, diabetes, heart failure and use of potassium-sparing diuretics The risk of hyperkalemia with dual RAS blockade (as opposed to single-agent blockade) is approximately doubled in RCTs in diabetic nephropathy The sensitivity and specificity of ECG changes for hyperkalemia are poor In patients on maintenance hemodialysis, the risk of hospitalization associated with hyperkalemia is higher when the hyperkalemia is detected prior to the long (3 days) interdialytic gap",
+      "character_count": 1236,
+      "content_sha256": "824a6f36667645bfb5659f30b1e1835bba0e46a4eb5dac03f493f9786336f1d6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0084",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RENAL-0009-B0077-C01",
+      "document_id": "DOC-PMC-RENAL-0009",
+      "source_id": "SRC-PMC-PMC6892421",
+      "medical_specialty": "Renal Medicine",
+      "topics": [
+        "hyperkalaemia",
+        "electrolyte disturbance",
+        "potassium"
+      ],
+      "source_block_index": 77,
+      "source_block_sha256": "e549ec3aaa50ded52e76b0cf0f180d0b44670845e92a352a8fac90200192d341",
+      "block_type": "table_note",
+      "section_number": "DOC-PMC-RENAL-0009-JATS-S030",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "CONCLUSIONS"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 CNIs, calcineurin inhibitors.",
+      "character_count": 37,
+      "content_sha256": "e549ec3aaa50ded52e76b0cf0f180d0b44670845e92a352a8fac90200192d341",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RENAL-0009-JATS-B0085",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "CONCLUSIONS"
+      ]
+    }
+  ],
+  "configuration": "C",
+  "token_target": "section-aware <=2200 characters"
+}

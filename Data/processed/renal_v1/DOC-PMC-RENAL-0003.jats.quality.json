@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-PMC-RENAL-0003",
+  "source_format": "pmc_jats_xml",
+  "source_sha256": "5204612f075381e06018c36616077946d370c1d0097b08080ac6deef5224c7d9",
+  "checks": {
+    "sections": {
+      "source": 13,
+      "extracted": 13
+    },
+    "prose_paragraphs": {
+      "source": 12,
+      "extracted": 12
+    },
+    "tables": {
+      "source": 1,
+      "extracted": 1
+    },
+    "table_rows": {
+      "source": 6,
+      "extracted": 6
+    },
+    "references": {
+      "source": 0,
+      "included_in_rag_blocks": 0
+    }
+  },
+  "warnings": [],
+  "validation": "PASS"
+}

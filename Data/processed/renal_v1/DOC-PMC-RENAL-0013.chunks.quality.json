@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-PMC-RENAL-0013",
+  "chunking_config": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1600,
+    "maximum_characters": 2200,
+    "minimum_characters": 250,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T10:38:57.384105+00:00"
+  },
+  "total_source_blocks": 68,
+  "nonempty_source_blocks": 68,
+  "skipped_empty_blocks": [],
+  "skipped_empty_block_count": 0,
+  "split_source_blocks": [],
+  "split_source_block_count": 0,
+  "total_chunks": 68,
+  "chunk_type_counts": {
+    "abstract": 1,
+    "paragraph": 48,
+    "table_caption": 2,
+    "table_row": 15,
+    "table_note": 2
+  },
+  "minimum_chunk_characters": 16,
+  "maximum_chunk_characters": 2200,
+  "average_chunk_characters": 585.16
+}
