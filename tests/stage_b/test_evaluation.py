@@ -55,11 +55,15 @@ class FakeBackend:
                 ]
             }
         else:
+            # Echo the claim text from the verifier input to match
+            # post-normalization text (normalize_claim_text strips trailing "?")
+            parsed_input = self.calls[-1]
+            claim_text = parsed_input["claims"][0]["text"]
             data = {
                 "claims": [
                     dict(
                         claim_id="C1",
-                        text="What fact?",
+                        text=claim_text,
                         status="supported",
                         citations=[{"ref": "D:B0000", "quote": "fact"}],
                         bindings=[],

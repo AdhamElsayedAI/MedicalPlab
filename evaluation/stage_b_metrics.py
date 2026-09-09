@@ -111,7 +111,11 @@ def metrics(rows):
         "p95_seconds": times[math.ceil(0.95 * len(times)) - 1] if times else None,
     }
     out["tokens"] = {
-        key: sum(t[key] for r in rows for t in r.get("trace", []))
+        key: sum(
+            t.get("raw", {}).get(key, 0)
+            for r in rows
+            for t in r.get("trace", [])
+        )
         for key in ["input_tokens", "output_tokens"]
     }
     out["failure_taxonomy"] = dict(
