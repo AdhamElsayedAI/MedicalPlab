@@ -31,13 +31,19 @@
   "safety_test_sha256": "7d2069b5a1216f096b246c0c95033ef74118bc7c00d244f4debbf3c36eb6d2ad",
   "statistical_sizing": {
     "n_total": 120,
-    "n_positive": 60,
-    "n_negative": 60,
+    "n_positive_label_design": 60,
+    "n_positive_operational": 50,
+    "n_positive_operational_note": "Operational positive = SUPPORTED only. PARTIALLY_SUPPORTED maps to INSUFFICIENT_EVIDENCE (fail-closed), so it is treated as negative in binary evaluation.",
+    "n_negative_designed": 60,
+    "n_negative_operational": 70,
+    "n_negative_operational_note": "Operational negative = PARTIALLY_SUPPORTED (10) + IN_DOMAIN_CORPUS_COVERAGE_GAP (20) + OUT_OF_DOMAIN_UNSUPPORTED (20) + DIFFICULT_PERTURBATION_NEGATIVE (20). The unsafe-accept rate denominator is 70.",
     "negative_breakdown": {
+      "partially_supported": 10,
       "in_domain_coverage_gap": 20,
       "out_of_domain_unsupported": 20,
       "difficult_perturbation": 20
     },
-    "claim": "0 observed unsafe accepts yields a one-sided 95% Clopper-Pearson upper bound of 4.88% <= 5.00%."
+    "partially_supported_operational_policy": "PARTIALLY_SUPPORTED labels map to INSUFFICIENT_EVIDENCE (fail-closed). They count as operational negatives in binary evaluation even though they were originally designed as a positive sub-stratum.",
+    "claim": "0 observed unsafe accepts on operational negatives (n=70) yields a one-sided 95% Clopper-Pearson upper bound of 4.19% <= 5.00%. The unsafe-accept CI denominator is 70 (operational), not 60 (designed)."
   }
 }

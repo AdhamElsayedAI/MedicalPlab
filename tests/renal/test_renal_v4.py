@@ -168,14 +168,26 @@ class TestRenalV4SBAGateAndSafetyCompliance:
             for bp in banned_phrases:
                 assert bp not in content, f"Banned phrase '{bp}' found in recovery audit!"
 
+        # Also check the main technical report for the retracted NLI overclaim
+        # (excluding blockquote lines which quote the retracted text in the audit section)
+        tech_rep = ROOT / "docs" / "demo" / "RENAL_TECHNICAL_RESULTS_V4.md"
+        if tech_rep.exists():
+            tech_content = tech_rep.read_text(encoding="utf-8")
+            non_quote_lines = [l for l in tech_content.splitlines() if not l.strip().startswith(">")]
+            substantive = "\n".join(non_quote_lines).lower()
+            assert "conclusively verifies the foundational hypothesis" not in substantive, (
+                "Retracted NLI overclaim still present in RENAL_TECHNICAL_RESULTS_V4.md"
+            )
+
 
 class TestRenalV4CourseLearningServiceIntegration:
     """Verifies service query flow, citation resolution, and fail-closed safety."""
 
     def test_service_initializes_with_v4_retriever(self):
+        """V4 retriever must remain accessible for historical/research use via explicit selection."""
         from medicalplab.learn.service import CourseLearningService
         from medicalplab.learn.renal_retrieval import QwenRenalRetrieverV4
-        service = CourseLearningService()
+        service = CourseLearningService(renal_runtime_version="v4")
         assert isinstance(service._renal_retriever, QwenRenalRetrieverV4)
 
     def test_service_fail_closed_on_unsupported_query(self):

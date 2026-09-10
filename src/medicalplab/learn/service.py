@@ -19,13 +19,35 @@ from .models import (
 from .renal_retrieval import (
     RENAL_SUFFICIENCY_THRESHOLD,
     QwenRenalRetriever,
+    QwenRenalRetrieverV3,
     QwenRenalRetrieverV4,
     RenalRetriever,
     RenalRetrieverUnavailable,
 )
 
 CALIBRATED_SUFFICIENCY_TAU = 0.7223
-URINARY_SOURCE_DATA_STATUS = "RENAL_V4_AVAILABLE"
+URINARY_SOURCE_DATA_STATUS = "RENAL_V3_AVAILABLE"
+
+# V3 is the conservative production default based on the V4.1 audit:
+# V4 did not demonstrate statistically significant superiority over V3 on
+# FINAL_V4_HELDOUT (PassageHit@1: V3=62%, V4=58%, McNemar p=0.5000).
+# Valid choices: "v3" (production default) | "v4" (research/historical) | "v1" (legacy).
+RENAL_RUNTIME_VERSION: str = "v3"
+
+
+def build_renal_retriever(data_root: "Path", version: str = RENAL_RUNTIME_VERSION) -> "RenalRetriever":
+    """Factory that selects the Renal retriever for the given version string.
+
+    Conservative production default is V3.  V4 is available for research/historical
+    reproducibility but was not statistically superior on the independent heldout.
+    """
+    v = version.lower().strip()
+    if v == "v4":
+        return QwenRenalRetrieverV4(data_root)
+    if v == "v1" or v == "legacy":
+        return QwenRenalRetriever(data_root)
+    # Default: v3 (conservative production choice)
+    return QwenRenalRetrieverV3(data_root)
 
 
 class CourseLearningService:
@@ -36,6 +58,7 @@ class CourseLearningService:
         data_root: Path | str | None = None,
         *,
         renal_retriever: RenalRetriever | None = None,
+        renal_runtime_version: str = RENAL_RUNTIME_VERSION,
     ) -> None:
         self.data_root = Path(data_root) if data_root else Path(__file__).resolve().parents[3] / "Data"
         self._doc_titles: dict[str, str] = {}
@@ -43,8 +66,9 @@ class CourseLearningService:
         self._chunk_tokens: list[list[str]] = []
         self._df: Counter[str] = Counter()
         self.urinary_available = False
+        self._renal_runtime_version = renal_runtime_version
         self._load_corpora()
-        self._renal_retriever = renal_retriever or QwenRenalRetrieverV4(self.data_root)
+        self._renal_retriever = renal_retriever or build_renal_retriever(self.data_root, renal_runtime_version)
 
     def _load_corpora(self) -> None:
         # 1. Load document titles from manifest
@@ -80,22 +104,41 @@ class CourseLearningService:
                     except Exception:
                         pass
 
-        # 3. Check urinary track presence
-        registry = self.data_root / "metadata" / "renal_source_registry_v1.json"
-        chunks = self.data_root / "experiments" / "renal" / "chunking" / "C_section_aware"
-        self.urinary_available = registry.exists() and chunks.exists() and any(chunks.glob("*.chunks.json"))
+        # 3. Check urinary track presence using the runtime-relevant V2 assets (primary).
+        # V3/V4 runtime uses renal_source_registry_v2.json + experiments/renal_v2/chunking/B_400_overlap.
+        # V1 legacy assets are checked as secondary fallback for backwards compatibility.
+        registry_v2 = self.data_root / "metadata" / "renal_source_registry_v2.json"
+        chunks_v2 = self.data_root / "experiments" / "renal_v2" / "chunking" / "B_400_overlap"
+        registry_v1 = self.data_root / "metadata" / "renal_source_registry_v1.json"
+        chunks_v1 = self.data_root / "experiments" / "renal" / "chunking" / "C_section_aware"
 
-        if registry.exists():
+        if registry_v2.exists() and chunks_v2.exists() and any(chunks_v2.glob("*.chunks.json")):
+            # Primary: V2 runtime assets present (used by V3 and V4 retrievers)
+            self.urinary_available = True
             try:
-                data = json.loads(registry.read_text(encoding="utf-8"))
-                for doc in data.get("documents", []):
+                data2 = json.loads(registry_v2.read_text(encoding="utf-8"))
+                for doc in data2.get("documents", []):
                     if doc.get("status") == "accepted":
                         self._doc_titles[str(doc["document_id"])] = str(doc.get("title", doc["document_id"]))
             except Exception:
                 self.urinary_available = False
+        elif registry_v1.exists() and chunks_v1.exists() and any(chunks_v1.glob("*.chunks.json")):
+            # Fallback: V1 legacy assets (backwards compatibility)
+            self.urinary_available = True
+            try:
+                data1 = json.loads(registry_v1.read_text(encoding="utf-8"))
+                for doc in data1.get("documents", []):
+                    if doc.get("status") == "accepted":
+                        self._doc_titles[str(doc["document_id"])] = str(doc.get("title", doc["document_id"]))
+            except Exception:
+                self.urinary_available = False
+        else:
+            self.urinary_available = False
 
-        registry_v2 = self.data_root / "metadata" / "renal_source_registry_v2.json"
-        if registry_v2.exists():
+        # Always merge V2 doc titles if registry_v2 present (even when V1 was the availability signal)
+        if registry_v2.exists() and not (
+            registry_v2.exists() and chunks_v2.exists() and any(chunks_v2.glob("*.chunks.json"))
+        ):
             try:
                 data2 = json.loads(registry_v2.read_text(encoding="utf-8"))
                 for doc in data2.get("documents", []):

@@ -27,8 +27,11 @@
   },
   "candidate_selection": {
     "superset_budget_B": 50,
+    "superset_budget_B_note": "DIAGNOSTIC ONLY. Measured analytically; not an active intelligent 50-to-20 selection stage in production. Production retrieval uses candidate_depth=20 (direct top-20 from first-stage scoring).",
     "reranker_input_budget_R": 20,
-    "selection_policy": "top_20_stage1_combined"
+    "reranker_input_budget_R_note": "Authoritative production reranker availability metric. RerankerInputHit@20 reflects actual evidence passage availability at inference time.",
+    "selection_policy": "direct_top20_stage1_combined",
+    "selection_policy_note": "QwenRenalRetrieverV4 uses candidate_depth=20 directly. The evaluation additionally computed CandidateCoverage@50 for diagnostic purposes only."
   },
   "reranker": {
     "model_id": "Qwen/Qwen3-Reranker-0.6B",

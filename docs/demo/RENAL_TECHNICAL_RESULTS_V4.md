@@ -37,8 +37,8 @@ Both the frozen historical V3 configuration and the frozen V4 configuration were
 | **SBA Technical Gate** | `SBA_GATE_FAIL` | **`SBA_GATE_FAIL`** | N/A | Generation remains `BLOCKED` |
 
 ### Key Scientific Takeaway
-- **Retrieval:** On fresh V4 DEV ($N=50$), adding separate structural section scoring ($\beta=0.12$) lifted PassageHit@1 from 56.0% (28/50) to 60.0% (30/50) and MRR from 0.6749 to 0.6949 by resolving intra-document section confusion. However, on the independent heldout ($N=50$), PassageHit@1 was 58.0% vs 62.0% ($p=0.5000$, non-significant), demonstrating that structural section scoring performs at parity without statistically significant degradation or advance over the V3 baseline. Candidate superset coverage at $B=50$ reached 98.00%, and reranker input hit reached 94.00%.
-- **Safety:** The retrieval-confidence classifier (calibrated on `SAFETY_CALIBRATION_V4` to $\tau=0.6886$) achieved an empirical Unsafe Accept rate of 0/70 (0.00%, 95% Clopper-Pearson UB: 4.19% $\le 5.0\%$) on `SAFETY_TEST_V4`, but suffered high false refusal (82.00%, recall 18.00%). On the independent `FINAL_V4_HELDOUT`, the classifier achieved 98.00% recall but allowed 40/50 unsafe accepts (80.00%). This conclusively verifies the foundational hypothesis: **retrieval-confidence features alone are inherently inadequate for discriminating semantically close but unsupported medical claims across varying query distributions without an explicit premise-to-hypothesis NLI verifier**.
+- **Retrieval:** On fresh V4 DEV ($N=50$), adding separate structural section scoring ($\beta=0.12$) lifted PassageHit@1 from 56.0% (28/50) to 60.0% (30/50) and MRR from 0.6749 to 0.6949 by resolving intra-document section confusion. However, on the independent heldout ($N=50$), PassageHit@1 was 58.0% vs 62.0% ($p=0.5000$, non-significant), demonstrating that structural section scoring performs at parity without statistically significant degradation or advance over the V3 baseline. Note: `CandidateCoverage@50` is a **diagnostic metric only** — the actual reranker input is the top-20 ranked candidates from the first stage (`candidate_depth=20`); the B=50 figure describes the candidate pool inspected analytically, not an active intelligent 50→20 selection filter in production. Reranker availability is correctly described by `RerankerInputHit@20` = 94.00%.
+- **Safety:** The retrieval-confidence classifier (calibrated on `SAFETY_CALIBRATION_V4` to $\tau=0.6886$) achieved an empirical Unsafe Accept rate of 0/70 (0.00%, 95% Clopper-Pearson UB: 4.19% $\le 5.0\%$) on `SAFETY_TEST_V4`, but suffered high false refusal (82.00%, recall 18.00%). On the independent `FINAL_V4_HELDOUT`, the classifier achieved 98.00% recall but allowed 40/50 unsafe accepts (80.00%). **The observed cross-dataset failure provides strong evidence that the tested retrieval-confidence feature classifier does not generalize reliably across these evaluation distributions. A dedicated claim/evidence semantic verifier is the next hypothesis to test.** V4 did not implement or test a genuine premise-to-hypothesis NLI model; no such claim should be interpreted from these results.
 - **Immutable SBA Policy:** The technical SBA gate failed (`SBA_GATE_FAIL`). In accordance with production policy, question generation remains disabled: **Generated = 0, Human reviewed = 0/100, Golden = 0/100**.
 
 ---
@@ -268,7 +268,7 @@ Benchmarked on NVIDIA GeForce RTX 3060 Laptop GPU (6.00 GB VRAM) under FP16 infe
 |---|---|---|---|---|---|
 | Query Encoding (`Qwen3-Embedding-0.6B`) | 24.2 ms | 23.8 ms | 28.5 ms | 34.1 ms | 1,240 MiB |
 | First-Stage Scoring (Dense + Doc + Section) | 1.8 ms | 1.6 ms | 2.4 ms | 3.2 ms | 32 MiB |
-| Candidate Selection ($B=50 \to R=20$) | 0.3 ms | 0.3 ms | 0.5 ms | 0.8 ms | <1 MiB |
+| Candidate Selection (Top-20 from first-stage; $B=50$ diagnostic) | 0.3 ms | 0.3 ms | 0.5 ms | 0.8 ms | <1 MiB |
 | Second-Stage Reranking (`Qwen3-Reranker-0.6B`, Top-20) | 558.4 ms | 552.1 ms | 798.6 ms | 1,280.4 ms | 2,890 MiB |
 | Evidence Safety Classifier (10 Feats + LR) | 0.2 ms | 0.2 ms | 0.3 ms | 0.5 ms | <1 MiB |
 | **End-to-End Pipeline (p50 / p95)** | **584.9 ms** | **578.0 ms** | **830.3 ms** | **1,319.0 ms** | **4,162 MiB** |
@@ -329,6 +329,89 @@ On the 23-document undergraduate renal corpus under frozen evaluations:
 > *"The frozen Renal V4 retrieval architecture achieves 98.00% (49/50) candidate coverage at depth 50 and 94.00% (47/50) reranker input coverage at depth 20, delivering 58.00% (29/50) to 60.00% (30/50) Top-1 passage localization and 100% mechanical citation resolution within a 590 ms median latency envelope on consumer GPU hardware (RTX 3060). However, retrieval-confidence features are insufficient for reliable claim verification across varying negative query distributions, and SBA generation remains strictly blocked under the immutable safety gate."*
 
 ### Next Exact Product Action
-1. **Maintain Frozen Runtime:** Keep `QwenRenalRetrieverV4` active in `CourseLearningService` for extractive grounded queries with fail-closed refusal.
-2. **Transition Safety to V5 Cross-Encoder NLI:** For the upcoming V5 cycle, implement a dedicated parameter-efficient medical NLI verifier (e.g. DeBERTa-v3-medical or Bioformer) evaluating premise-hypothesis entailment directly on the extracted candidate span, replacing pure retrieval-score classification.
-3. **Keep SBA Generation Blocked:** Do not enable SBA generation until clinical entailment verification satisfies the SBA gate with independent clinical panel review.
+1. **Conservative Production Default:** `CourseLearningService` defaults to the **V3 retriever** (`QwenRenalRetrieverV3`) as the conservative production choice. V4 (`QwenRenalRetrieverV4`) is preserved for research/historical access and can be selected explicitly via the runtime version API. V4 did not demonstrate statistically significant superiority over V3 on the independent heldout ($p=0.5000$); therefore V3 is the safer conservative choice per the empirical evidence.
+2. **Evidence Safety Remains Experimental:** The evidence-sufficiency safety classifier is experimental (EXPERIMENTAL label). It may not be relied upon as a production safety gate in isolation until generalization across query distributions is demonstrated on an independent test set.
+3. **Next Hypothesis for V5:** Implement a dedicated claim/evidence semantic verifier evaluating premise-hypothesis entailment, to address the cross-dataset failure of retrieval-confidence features. Do not assume NLI is proven necessary or sufficient based on V4 results alone.
+4. **Keep SBA Generation Blocked:** Do not enable SBA generation until the SBA gate criteria are met with independent clinical panel review.
+
+---
+
+## 15. POST-HOC V4.1 PRODUCTION & METHODOLOGY AUDIT
+
+**Audit Date:** Post-V4 final heldout run\
+**Audit Scope:** Reporting accuracy, production promotion policy, safety denominator discipline, architectural description accuracy, and availability detection.
+
+### Finding 1 — Safety Overclaim Retracted
+
+An earlier draft of Section 1 (Key Scientific Takeaway) stated:
+
+> *"This conclusively verifies the foundational hypothesis: retrieval-confidence features alone are inherently inadequate for discriminating semantically close but unsupported medical claims across varying query distributions without an explicit premise-to-hypothesis NLI verifier."*
+
+**This statement is scientifically too strong and has been retracted.** V4 did not implement a genuine premise-to-hypothesis NLI verifier. The cross-dataset safety failure is evidence of distributional fragility of retrieval-confidence features, not proof that NLI is required or sufficient. The corrected defensible claim (now in Section 1) is:
+
+> *"The observed cross-dataset failure provides strong evidence that the tested retrieval-confidence feature classifier does not generalize reliably across these evaluation distributions. A dedicated claim/evidence semantic verifier is the next hypothesis to test."*
+
+### Finding 2 — Production Retriever Selection Corrected
+
+Prior to this audit, `CourseLearningService` silently defaulted to `QwenRenalRetrieverV4`. The paired `FINAL_V4_HELDOUT` evaluation established:
+
+| System | PassageHit@1 | PassageHit@5 | MRR | McNemar $p$ |
+|---|---|---|---|---|
+| V3 (Frozen) | 62.00% (31/50) | 76.00% | 0.7013 | — |
+| V4 (Frozen) | 58.00% (29/50) | 76.00% | 0.6760 | 0.5000 |
+
+V4 did **not** demonstrate statistically significant superiority over V3 on the independent heldout. Silently promoting V4 as the production default is not justified by the empirical evidence. **Corrective action:** `CourseLearningService` now defaults to `QwenRenalRetrieverV3` (conservative choice). `QwenRenalRetrieverV4` remains fully available for explicit selection for research and historical reproducibility. Selection is controlled via the `renal_runtime_version` parameter.
+
+### Finding 3 — Safety Denominator Inconsistency Documented
+
+The safety config (`renal_v4_safety_config.json`) describes the `SAFETY_TEST_V4` composition as:
+
+```
+n_total    = 120
+n_positive = 60  (50 SUPPORTED + 10 PARTIALLY_SUPPORTED)
+n_negative = 60  (20 gap + 20 ood + 20 difficult)
+```
+
+However, the operational binary mapping in the evaluation code is:
+
+```python
+is_pos = int(label == "SUPPORTED")  # PARTIALLY_SUPPORTED → 0 (negative)
+```
+
+Therefore, the **actual operational binary split** is:
+
+| Operational Class | Count | Labels Included |
+|---|---|---|
+| **Positive (1)** | 50 | `SUPPORTED` only |
+| **Negative (0)** | 70 | `PARTIALLY_SUPPORTED` (10) + `IN_DOMAIN_CORPUS_COVERAGE_GAP` (20) + `OUT_OF_DOMAIN_UNSUPPORTED` (20) + `DIFFICULT_PERTURBATION_NEGATIVE` (20) |
+
+The **unsafe accept rate denominator is 70**, not 60. The 95% Clopper-Pearson one-sided upper bound of **4.19%** was computed on $k=0, n=70$, which is correct for the operational denominator. The config field `n_negative_designed = 60` (original stratum design intent) is now distinguished from `n_negative_operational = 70` (actual binary evaluation denominator). Historical frozen result files are preserved unmodified.
+
+### Finding 4 — B=50→R=20 Architecture Description Corrected
+
+The config field `superset_budget_B: 50` implied an active intelligent 50→20 passage selection stage. In production, `QwenRenalRetrieverV4` uses `candidate_depth=20` directly:
+
+```python
+cand_indices = combined_scores.argsort()[::-1][:self.candidate_depth]  # candidate_depth=20
+```
+
+The evaluation script constructs Top-50 then takes `cands50[:20]`, which is **mathematically equivalent to direct Top-20**. No intelligent 50→20 selection filter exists in the production path. `CandidateCoverage@50` is a **diagnostic metric** measured analytically, not a production pipeline stage. `RerankerInputHit@20` is the authoritative production reranker availability metric. Historical metrics are preserved unchanged; only the config description is corrected.
+
+### Finding 5 — Urinary Availability Detection Corrected
+
+`_load_corpora()` previously determined `urinary_available` based on legacy V1 assets (`renal_source_registry_v1.json`, `C_section_aware` chunks). The production runtime (V3 or V4) uses V2 registry (`renal_source_registry_v2.json`) and V2 chunks (`B_400_overlap`). **Corrective action:** `_load_corpora()` now detects availability against the runtime-relevant V2 assets (primary), with V1 as secondary fallback for backwards compatibility.
+
+### Immutable Firewall Confirmation
+
+The following artifacts were **NOT modified** during this V4.1 audit:
+
+| Artifact | SHA-256 (unchanged) |
+|---|---|
+| `evaluation/renal/renal-heldout-v2-final.json` | `8885b21bc1174ea6a05028c03813d4aa1e72cfb5ecbd254a7e08c56bf8c29b92` |
+| `evaluation/renal/v3/renal-heldout-v3-final.json` | `40c96f46be1c6547f2ffbdc29f90fb3444d48e66dfcfaae769cd3b8413082d32` |
+| `evaluation/renal/v3/renal-v3-safety-test-2.json` | `3fe59bb6011c5ab4c526cbcc092b8dc087709b67d3f2aaa7318acd6679dcf8eb` |
+| `evaluation/renal/v4/renal-heldout-v4-final.json` | `0368761712c91b068f913fef3760a2a331dfe0de735eb2ac5a77bcdef920a8c6` |
+| `evaluation/renal/v4/renal-safety-test-v4.json` | `7d2069b5a1216f096b246c0c95033ef74118bc7c00d244f4debbf3c36eb6d2ad` |
+| `reports/renal_v4/renal_v4_safety_test_results.json` | `e1c58c5c1c759f0dd4052ea17f4589b256b438b6d80afc7c67a3bd27af238f39` |
+| `reports/renal_v4/renal_v4_paired_final_heldout.json` | *(unchanged from mission end)* |
+| `models/renal_v4_evidence_classifier.pkl` | `54f42677b4776354740001bb35b69ecd9b7cc9851c17dacb540f046229e864de` |
