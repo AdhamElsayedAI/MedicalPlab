@@ -19,12 +19,13 @@ from .models import (
 from .renal_retrieval import (
     RENAL_SUFFICIENCY_THRESHOLD,
     QwenRenalRetriever,
+    QwenRenalRetrieverV4,
     RenalRetriever,
     RenalRetrieverUnavailable,
 )
 
 CALIBRATED_SUFFICIENCY_TAU = 0.7223
-URINARY_SOURCE_DATA_STATUS = "RENAL_V1_AVAILABLE"
+URINARY_SOURCE_DATA_STATUS = "RENAL_V4_AVAILABLE"
 
 
 class CourseLearningService:
@@ -43,7 +44,7 @@ class CourseLearningService:
         self._df: Counter[str] = Counter()
         self.urinary_available = False
         self._load_corpora()
-        self._renal_retriever = renal_retriever or QwenRenalRetriever(self.data_root)
+        self._renal_retriever = renal_retriever or QwenRenalRetrieverV4(self.data_root)
 
     def _load_corpora(self) -> None:
         # 1. Load document titles from manifest
@@ -93,6 +94,16 @@ class CourseLearningService:
             except Exception:
                 self.urinary_available = False
 
+        registry_v2 = self.data_root / "metadata" / "renal_source_registry_v2.json"
+        if registry_v2.exists():
+            try:
+                data2 = json.loads(registry_v2.read_text(encoding="utf-8"))
+                for doc in data2.get("documents", []):
+                    if doc.get("status") == "accepted":
+                        self._doc_titles[str(doc["document_id"])] = str(doc.get("title", doc["document_id"]))
+            except Exception:
+                pass
+
     def _query_renal(self, query: str, intent: str | None, trace_id: str) -> CourseQueryResponse:
         if not query:
             return CourseQueryResponse(
@@ -106,14 +117,14 @@ class CourseLearningService:
             return CourseQueryResponse(
                 course_id="urinary_renal", query=query,
                 grounding_status=GroundingStatus.INSUFFICIENT_EVIDENCE, answer=None,
-                explanation="Renal v1 is present, but its frozen dense retriever is unavailable; MedicalPlab fails closed.",
+                explanation="Renal is present, but its frozen retriever is unavailable; MedicalPlab fails closed.",
                 citations=(), evidence_sufficiency_score=None, evidence_sufficiency_state="INSUFFICIENT",
                 learning_check=None, trace_id=trace_id, warning=str(exc),
             )
         if not hits:
             return CourseQueryResponse(
                 course_id="urinary_renal", query=query, grounding_status=GroundingStatus.UNSUPPORTED,
-                answer=None, explanation="No evidence was retrieved from the frozen Renal v1 corpus.", citations=(),
+                answer=None, explanation="No evidence was retrieved from the frozen Renal corpus.", citations=(),
                 evidence_sufficiency_score=0.0, evidence_sufficiency_state="NO_EVIDENCE",
                 learning_check=None, trace_id=trace_id,
             )
@@ -129,13 +140,21 @@ class CourseLearningService:
             )
             for hit in hits[:3]
         )
-        if score < RENAL_SUFFICIENCY_THRESHOLD:
+
+        if top.is_grounded is not None:
+            is_sufficient = top.is_grounded
+            evidence_score = round(top.evidence_sufficiency_score, 6) if top.evidence_sufficiency_score is not None else score
+        else:
+            is_sufficient = score >= RENAL_SUFFICIENCY_THRESHOLD
+            evidence_score = score
+
+        if not is_sufficient:
             return CourseQueryResponse(
                 course_id="urinary_renal", query=query,
                 grounding_status=GroundingStatus.INSUFFICIENT_EVIDENCE, answer=None,
-                explanation=(f"Retrieved renal evidence scored {score:.6f}, below the frozen calibration threshold "
-                             f"{RENAL_SUFFICIENCY_THRESHOLD:.6f}; MedicalPlab refuses to speculate."),
-                citations=citations, evidence_sufficiency_score=score, evidence_sufficiency_state="INSUFFICIENT",
+                explanation=(f"Retrieved renal evidence scored {evidence_score:.6f}, below the frozen calibration threshold; "
+                             f"MedicalPlab refuses to speculate."),
+                citations=citations, evidence_sufficiency_score=evidence_score, evidence_sufficiency_state="INSUFFICIENT",
                 learning_check=None, trace_id=trace_id,
             )
 
@@ -143,9 +162,9 @@ class CourseLearningService:
         requested_check = (intent or "").strip().lower() in {"check", "question", "quiz"}
         return CourseQueryResponse(
             course_id="urinary_renal", query=query, grounding_status=GroundingStatus.GROUNDED,
-            answer=text, explanation=("Extractive answer from the top frozen Renal v1 evidence chunk; "
-                                      f"dense score {score:.6f} passed threshold {RENAL_SUFFICIENCY_THRESHOLD:.6f}."),
-            citations=citations, evidence_sufficiency_score=score, evidence_sufficiency_state="SUFFICIENT",
+            answer=text, explanation=("Extractive answer from the top frozen Renal evidence chunk; "
+                                      f"evidence sufficiency score {evidence_score:.6f} passed threshold."),
+            citations=citations, evidence_sufficiency_score=evidence_score, evidence_sufficiency_state="SUFFICIENT",
             learning_check=None, trace_id=trace_id,
             warning=("Renal SBA generation is quality-gated and remains unavailable pending improved evidence recall "
                      "and genuine clinician review." if requested_check else None),
