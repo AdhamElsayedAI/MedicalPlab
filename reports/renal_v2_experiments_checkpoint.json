@@ -822,7 +822,58 @@
       "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
       "precision": "fp16 autocast; float32 normalized embedding cache",
       "representation": "metadata_aware"
+    },
+    {
+      "batch_size": 16,
+      "cache_hit": false,
+      "chunk_count": 2760,
+      "chunking": "E_sentence_evidence_300",
+      "corpus_sha256": "fb2bf5c11f54db03041658ac6b79fcd241b406394a0d8fab630830f5a96e6724",
+      "dataset_sha256": "05d9ba3ae8ff27b3e364ed58737f4b06d61d20f2ab673b88bb913d879a9ddc72",
+      "device": "cuda:0 (NVIDIA GeForce RTX 3060 Laptop GPU)",
+      "elapsed_wall_seconds": 44.435,
+      "embedding_cache_key": "d6276d47cc5afe28d78bf0a442efbda1245a998480240a05cc2f9f1fc2905a39",
+      "max_sequence_length": 512,
+      "metrics": {
+        "authority_sensitive_at_5": {
+          "denominator": 17,
+          "numerator": 16,
+          "value": 0.9411764705882353
+        },
+        "gold_source_recall_at_10": {
+          "denominator": 69,
+          "numerator": 68,
+          "value": 0.9855072463768116
+        },
+        "hit_at_1": {
+          "denominator": 69,
+          "numerator": 12,
+          "value": 0.17391304347826086
+        },
+        "hit_at_10": {
+          "denominator": 69,
+          "numerator": 41,
+          "value": 0.5942028985507246
+        },
+        "hit_at_3": {
+          "denominator": 69,
+          "numerator": 26,
+          "value": 0.37681159420289856
+        },
+        "hit_at_5": {
+          "denominator": 69,
+          "numerator": 34,
+          "value": 0.4927536231884058
+        },
+        "mrr": 0.2935990338164251,
+        "n": 69,
+        "ndcg_at_10": 0.3355693954887315
+      },
+      "model": "Qwen/Qwen3-Embedding-0.6B",
+      "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "precision": "fp16 autocast; float32 normalized embedding cache",
+      "representation": "content_only"
     }
   ],
-  "updated_at": "2026-09-10T05:16:26Z"
+  "updated_at": "2026-09-10T06:58:41Z"
 }

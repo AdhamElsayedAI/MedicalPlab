@@ -42,7 +42,7 @@ MAX_SEQUENCE_LENGTH = 512
 NORMALIZATION_VERSION = "none-v1"
 RENDER_VERSION = "renal-v2-render-v1"
 INITIAL_BATCH_SIZE = 16
-CHUNKINGS = ("A_250", "B_400_overlap", "C_section_aware", "D_parent_child_v2")
+CHUNKINGS = ("A_250", "B_400_overlap", "C_section_aware", "D_parent_child_v2", "E_sentence_evidence_300")
 REPRESENTATIONS = ("content_only", "source_aware", "metadata_aware", "metadata_aware_v2")
 
 

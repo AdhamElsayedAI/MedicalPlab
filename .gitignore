@@ -50,6 +50,7 @@ evaluation/audits/evidence_sufficiency_negative_label_audit_candidates_v1.md
 .stage_b_env/
 .renal_env/
 bundle_fix/
+bundle_fix/
 *.zip
 
 # Node / Next.js
@@ -58,3 +59,4 @@ node_modules/
 *.tsbuildinfo
 .pytest_local/
 .pytest_tmp/
+.pytest_temp/

@@ -36,6 +36,8 @@ NEW_SOURCES = [
     ("DOC-PMC-RENAL-0021", "PMC10220024", ["acid-base physiology", "bicarbonate transport", "renal sensing"], "SUPPORTING"),
     ("DOC-PMC-RENAL-0022", "PMC4203353", ["sodium handling", "phosphate", "blood pressure"], "SUPPORTING"),
     ("DOC-PMC-RENAL-0023", "PMC12904963", ["urine concentration", "countercurrent mechanism", "renal medulla"], "CORE_EDUCATIONAL"),
+    ("DOC-PMC-RENAL-0024", "PMC13156944", ["renal endocrine", "erythropoietin", "calcitriol", "vitamin D"], "CORE_EDUCATIONAL"),
+    ("DOC-PMC-RENAL-0025", "PMC12411799", ["haematuria", "differential diagnosis", "glomerular vs non-glomerular", "investigation"], "CORE_EDUCATIONAL"),
 ]
 
 V1_CLASSIFICATION = {
@@ -76,19 +78,65 @@ def window(document: dict, size: int, overlap: int, label: str) -> dict:
     chunks = []
     for block in document["sections"]:
         words = re.findall(r"\S+", block["text"])
+        p_id = f"{document['document_id']}-P{int(block['block_index']):04d}"
         for start in range(0, len(words), size - overlap):
             part = words[start:start + size]
             if not part:
                 continue
             chunks.append({
                 "chunk_id": f"{document['document_id']}-{label}-C{len(chunks)+1:04d}",
-                "document_id": document["document_id"], "text": " ".join(part),
-                "heading": block.get("heading", ""), "section_path": block.get("section_path", []),
-                "source_block_index": block["block_index"], "retrieval_role": role_for(block),
+                "document_id": document["document_id"],
+                "parent_section_id": p_id,
+                "text": " ".join(part),
+                "heading": block.get("heading", ""),
+                "section_path": block.get("section_path", []),
+                "source_block_index": block["block_index"],
+                "retrieval_role": role_for(block),
             })
             if start + size >= len(words):
                 break
     return {"document_id": document["document_id"], "configuration": label, "chunks": chunks}
+
+
+def sentence_window(document: dict, target_words: int = 280, overlap_sentences: int = 1, label: str = "E") -> dict:
+    chunks = []
+    for block in document["sections"]:
+        sentences = re.split(r"(?<=[.!?])\s+", block["text"])
+        p_id = f"{document['document_id']}-P{int(block['block_index']):04d}"
+        current_sentences = []
+        current_words = 0
+        for s in sentences:
+            s = s.strip()
+            if not s:
+                continue
+            w = len(s.split())
+            if current_words + w > target_words and current_sentences:
+                chunks.append({
+                    "chunk_id": f"{document['document_id']}-{label}-C{len(chunks)+1:04d}",
+                    "document_id": document["document_id"],
+                    "parent_section_id": p_id,
+                    "text": " ".join(current_sentences),
+                    "heading": block.get("heading", ""),
+                    "section_path": block.get("section_path", []),
+                    "source_block_index": block["block_index"],
+                    "retrieval_role": role_for(block),
+                })
+                current_sentences = current_sentences[-overlap_sentences:] if overlap_sentences > 0 else []
+                current_words = sum(len(x.split()) for x in current_sentences)
+            current_sentences.append(s)
+            current_words += w
+        if current_sentences:
+            chunks.append({
+                "chunk_id": f"{document['document_id']}-{label}-C{len(chunks)+1:04d}",
+                "document_id": document["document_id"],
+                "parent_section_id": p_id,
+                "text": " ".join(current_sentences),
+                "heading": block.get("heading", ""),
+                "section_path": block.get("section_path", []),
+                "source_block_index": block["block_index"],
+                "retrieval_role": role_for(block),
+            })
+    return {"document_id": document["document_id"], "configuration": "E_sentence_evidence_300", "chunks": chunks}
 
 
 def main() -> None:
@@ -174,16 +222,24 @@ def main() -> None:
 
     for document in documents:
         doc_id = document["document_id"]
-        for script, extra in (("extract_pmc_jats.py", []), ("adapt_pmc_to_canonical.py", []), ("chunk_sections.py", ["--target-chars", "1600", "--max-chars", "2200", "--min-chars", "250"])):
-            subprocess.run(
-                [sys.executable, str(ROOT / "Scripts" / script), doc_id, "--specialty", "renal_v2", *extra],
-                cwd=ROOT, env={**os.environ, "PYTHONUTF8": "1"}, check=True,
-            )
-        enriched = json.loads((PROCESSED / f"{doc_id}.sections.enriched.json").read_text(encoding="utf-8"))
-        section_chunks = json.loads((PROCESSED / f"{doc_id}.chunks.json").read_text(encoding="utf-8"))
+        enriched_path = PROCESSED / f"{doc_id}.sections.enriched.json"
+        chunk_path = PROCESSED / f"{doc_id}.chunks.json"
+        if not (enriched_path.exists() and chunk_path.exists()):
+            for script, extra in (("extract_pmc_jats.py", []), ("adapt_pmc_to_canonical.py", []), ("chunk_sections.py", ["--target-chars", "1600", "--max-chars", "2200", "--min-chars", "250"])):
+                subprocess.run(
+                    [sys.executable, str(ROOT / "Scripts" / script), doc_id, "--specialty", "renal_v2", *extra],
+                    cwd=ROOT, env={**os.environ, "PYTHONUTF8": "1"}, check=True,
+                )
+        enriched = json.loads(enriched_path.read_text(encoding="utf-8"))
+        section_chunks = json.loads(chunk_path.read_text(encoding="utf-8"))
         for chunk in section_chunks["chunks"]:
             chunk["retrieval_role"] = role_for(chunk)
-        variants = {"A_250": window(enriched, 250, 0, "A"), "B_400_overlap": window(enriched, 400, 40, "B"), "C_section_aware": section_chunks}
+        variants = {
+            "A_250": window(enriched, 250, 0, "A"),
+            "B_400_overlap": window(enriched, 400, 40, "B"),
+            "C_section_aware": section_chunks,
+            "E_sentence_evidence_300": sentence_window(enriched, 280, 1, "E"),
+        }
         for name, payload in variants.items():
             path = CHUNK_ROOT / name / f"{doc_id}.chunks.json"; path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
@@ -204,7 +260,7 @@ def main() -> None:
         path.write_text(json.dumps({"document_id": doc_id, "parents": list(parents.values()), "children": children}, indent=2) + "\n", encoding="utf-8")
 
     counts = {}
-    for name in ("A_250", "B_400_overlap", "C_section_aware"):
+    for name in ("A_250", "B_400_overlap", "C_section_aware", "E_sentence_evidence_300"):
         counts[name] = sum(len(json.loads(path.read_text(encoding="utf-8"))["chunks"]) for path in (CHUNK_ROOT / name).glob("*.json"))
     counts["D_parent_child_v2"] = sum(len(json.loads(path.read_text(encoding="utf-8"))["children"]) for path in (CHUNK_ROOT / "D_parent_child_v2").glob("*.json"))
     print(json.dumps({"documents": len(documents), "chunk_counts": counts}, indent=2))

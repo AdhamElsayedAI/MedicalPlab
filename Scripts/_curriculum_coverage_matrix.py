@@ -52,7 +52,7 @@ CURRICULUM_TOPICS = [
     ("medullary_gradient",          "Medullary concentration gradient",  "FOUNDATIONAL", "ADEQUATE", ["DOC-PMC-RENAL-0023"]),
     ("raas",                        "RAAS physiology",                   "FOUNDATIONAL", "STRONG",   ["DOC-PMC-RENAL-0001", "DOC-PMC-RENAL-0020"]),
     ("acid_base_physiology",        "Acid-base physiology (renal)",      "FOUNDATIONAL", "STRONG",   ["DOC-PMC-RENAL-0004", "DOC-PMC-RENAL-0005", "DOC-PMC-RENAL-0021"]),
-    ("renal_endocrine",             "Renal endocrine functions (EPO, calcitriol)", "FOUNDATIONAL", "MISSING", []),
+    ("renal_endocrine",             "Renal endocrine functions (EPO, calcitriol)", "FOUNDATIONAL", "ADEQUATE", ["DOC-PMC-RENAL-0024"]),
     # CLINICAL
     ("aki",                         "AKI — overview",                    "CLINICAL",     "STRONG",   ["DOC-PMC-RENAL-0006", "DOC-PMC-RENAL-0007"]),
     ("aki_prerenal",                "Pre-renal AKI",                     "CLINICAL",     "ADEQUATE", ["DOC-PMC-RENAL-0006", "DOC-PMC-RENAL-0007"]),
@@ -64,7 +64,7 @@ CURRICULUM_TOPICS = [
     ("nephritic_syndrome",          "Nephritic syndrome / GN",           "CLINICAL",     "THIN",     ["DOC-PMC-RENAL-0008"]),
     ("glomerulonephritis",          "Glomerulonephritis",                "CLINICAL",     "THIN",     ["DOC-PMC-RENAL-0008"]),
     ("proteinuria",                 "Proteinuria",                       "CLINICAL",     "ADEQUATE", ["DOC-PMC-RENAL-0008", "DOC-PMC-RENAL-0018"]),
-    ("haematuria",                  "Haematuria",                        "CLINICAL",     "MISSING",  []),
+    ("haematuria",                  "Haematuria",                        "CLINICAL",     "ADEQUATE", ["DOC-PMC-RENAL-0025"]),
     ("electrolyte_hyperkalaemia",   "Hyperkalaemia — mechanism & mgt",   "CLINICAL",     "STRONG",   ["DOC-PMC-RENAL-0003", "DOC-PMC-RENAL-0009", "DOC-PMC-RENAL-0010"]),
     ("metabolic_acidosis",          "Metabolic acidosis (renal contribution)", "CLINICAL", "STRONG", ["DOC-PMC-RENAL-0004", "DOC-PMC-RENAL-0005"]),
     ("metabolic_alkalosis",         "Metabolic alkalosis (renal)",       "CLINICAL",     "THIN",     ["DOC-PMC-RENAL-0004"]),
@@ -101,6 +101,8 @@ SOURCE_ROLES = {
     "DOC-PMC-RENAL-0020": "SUPPORTING",            # Akt/SGK1 tubular transport
     "DOC-PMC-RENAL-0021": "SUPPORTING",            # AE4 acid-base sensing
     "DOC-PMC-RENAL-0023": "UNDERGRADUATE_CORE",    # Countercurrent / ADH
+    "DOC-PMC-RENAL-0024": "UNDERGRADUATE_CORE",    # Renal endocrine (EPO, vitamin D)
+    "DOC-PMC-RENAL-0025": "UNDERGRADUATE_CORE",    # Hematuria differential & mgt
 }
 
 MISSING_TOPICS = [t for t in CURRICULUM_TOPICS if t[3] == "MISSING"]

@@ -14,9 +14,11 @@
 #>
 param(
     [Parameter(Position=0, Mandatory=$true)]
-    [ValidateSet("matrix", "ablation", "reranker", "smoke")]
+    [ValidateSet("matrix", "ablation", "reranker", "smoke", "safety", "heldout")]
     [string]$Script,
-    [switch]$Smoke
+    [switch]$Smoke,
+    [Parameter(ValueFromRemainingArguments=$true)]
+    [string[]]$ExtraArgs
 )
 
 $ErrorActionPreference = "Stop"
@@ -42,6 +44,8 @@ $ScriptMap = @{
     "ablation" = Join-Path $Root "Scripts\run_renal_v2_ablation.py"
     "reranker" = Join-Path $Root "Scripts\run_renal_v2_reranker.py"
     "smoke"    = Join-Path $Root "Scripts\run_renal_v2_matrix.py"
+    "safety"   = Join-Path $Root "Scripts\run_renal_v2_safety.py"
+    "heldout"  = Join-Path $Root "Scripts\run_renal_v2_heldout.py"
 }
 
 $TargetScript = $ScriptMap[$Script]
@@ -64,6 +68,9 @@ Write-Host "============================================================"
 $PyArgs = @("-3.12", $TargetScript)
 if ($Script -eq "smoke" -or $Smoke) {
     $PyArgs += "--smoke"
+}
+if ($ExtraArgs) {
+    $PyArgs += $ExtraArgs
 }
 
 Write-Host "Running: py $($PyArgs -join ' ')"

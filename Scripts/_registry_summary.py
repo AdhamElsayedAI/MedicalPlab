@@ -13,6 +13,6 @@ print()
 for d in active:
     doc_id = d.get('document_id', '?')
     title = d.get('title', '?')[:55]
-    lic = d.get('license', '?')
+    lic = d.get('license_name') or d.get('license', '?')
     role = d.get('educational_classification', '?')
     print(f"  {doc_id}: {title}  lic={lic} role={role}")

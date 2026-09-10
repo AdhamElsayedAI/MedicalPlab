@@ -3,22 +3,11 @@
   "n_topics": 43,
   "coverage_summary": {
     "STRONG": 11,
-    "ADEQUATE": 17,
+    "ADEQUATE": 19,
     "THIN": 13,
-    "MISSING": 2
+    "MISSING": 0
   },
-  "missing_topics": [
-    {
-      "id": "renal_endocrine",
-      "name": "Renal endocrine functions (EPO, calcitriol)",
-      "type": "FOUNDATIONAL"
-    },
-    {
-      "id": "haematuria",
-      "name": "Haematuria",
-      "type": "CLINICAL"
-    }
-  ],
+  "missing_topics": [],
   "thin_topics": [
     {
       "id": "kidney_anatomy",
@@ -334,8 +323,10 @@
       "topic_id": "renal_endocrine",
       "topic_name": "Renal endocrine functions (EPO, calcitriol)",
       "topic_type": "FOUNDATIONAL",
-      "coverage": "MISSING",
-      "primary_document_ids": []
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ]
     },
     {
       "topic_id": "aki",
@@ -435,8 +426,10 @@
       "topic_id": "haematuria",
       "topic_name": "Haematuria",
       "topic_type": "CLINICAL",
-      "coverage": "MISSING",
-      "primary_document_ids": []
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ]
     },
     {
       "topic_id": "electrolyte_hyperkalaemia",
@@ -649,6 +642,18 @@
     {
       "document_id": "DOC-PMC-RENAL-0023",
       "title": "Active salt transport and countercurrent exchange as the basis of urine concentration: a proposal grounded on the microanatomy of the renal medulla",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0024",
+      "title": "Beyond traditional roles: vitamin D and erythropoietin as immune modulators in kidney diseases",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0025",
+      "title": "Clinical Significance, Differential Diagnosis and Initial Management of Hematuria in Emergency and Outpatient Settings",
       "educational_classification": "CORE_EDUCATIONAL",
       "curriculum_role_assessment": "UNDERGRADUATE_CORE"
     }
