@@ -1,0 +1,43 @@
+{
+  "safety_version": "RENAL_V4_SAFETY_FROZEN",
+  "mission": "MEDICALPLAB RENAL V4",
+  "frozen_at": "Phase 25 Safety Freeze Before Test",
+  "retrieval_config_path": "configs/renal_v4_retrieval_config.json",
+  "retrieval_config_sha256": "242edceaeeaf02ec1713e43c4f9e3b4061d5aaefb51b3dfbc7e1a6813a1a1c63",
+  "classifier_artifact_path": "models/renal_v4_evidence_classifier.pkl",
+  "classifier_artifact_sha256": "54f42677b4776354740001bb35b69ecd9b7cc9851c17dacb540f046229e864de",
+  "selected_architecture": "MODEL_A_RETRIEVAL_10_FEATS",
+  "feature_schema": [
+    "r_top1",
+    "r_top2",
+    "r_margin",
+    "r_top3_mean",
+    "dense_top1",
+    "dense_margin",
+    "doc_top1",
+    "doc_margin",
+    "doc_agreement",
+    "entropy"
+  ],
+  "operating_threshold_tau": 0.6886,
+  "label_action_mapping": {
+    "SUPPORTED": "GROUNDED",
+    "PARTIALLY_SUPPORTED": "INSUFFICIENT_EVIDENCE",
+    "IN_DOMAIN_CORPUS_COVERAGE_GAP": "INSUFFICIENT_EVIDENCE",
+    "OUT_OF_DOMAIN_UNSUPPORTED": "INSUFFICIENT_EVIDENCE",
+    "DIFFICULT_PERTURBATION_NEGATIVE": "UNSUPPORTED"
+  },
+  "safety_test_path": "evaluation/renal/v4/renal-safety-test-v4.json",
+  "safety_test_sha256": "7d2069b5a1216f096b246c0c95033ef74118bc7c00d244f4debbf3c36eb6d2ad",
+  "statistical_sizing": {
+    "n_total": 120,
+    "n_positive": 60,
+    "n_negative": 60,
+    "negative_breakdown": {
+      "in_domain_coverage_gap": 20,
+      "out_of_domain_unsupported": 20,
+      "difficult_perturbation": 20
+    },
+    "claim": "0 observed unsafe accepts yields a one-sided 95% Clopper-Pearson upper bound of 4.88% <= 5.00%."
+  }
+}
