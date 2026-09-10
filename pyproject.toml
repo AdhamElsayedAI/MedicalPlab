@@ -26,4 +26,5 @@ where = ["src"]
 include = ["medicalplab*"]
 
 [tool.pytest.ini_options]
+testpaths = ["tests"]
 addopts = "-o cache_dir=.pytest_local --basetemp=.pytest_temp"
