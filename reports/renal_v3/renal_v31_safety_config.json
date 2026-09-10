@@ -1,0 +1,104 @@
+{
+  "version": "v3.1",
+  "description": "V3.1 Pre-Evaluation Frozen Safety Classifier Configuration Audit",
+  "timestamp": "2026-09-10 09:47:20",
+  "frozen_datasets": {
+    "safety_train": {
+      "file": "renal-v3-safety-train.json",
+      "sha256": "5a47a390adec178b5b46c4e411a27afcd5d110f60f9055919b64b440449960c9",
+      "n_samples": 90
+    },
+    "safety_calibration": {
+      "file": "renal-v3-safety-calibration.json",
+      "sha256": "7ba9b6a05a4543f5641ad96e751ddf3cdf8725add16d90ce7d0b4635e3f249f0",
+      "n_samples": 60
+    },
+    "safety_test_2": {
+      "file": "renal-v3-safety-test-2.json",
+      "sha256": "3fe59bb6011c5ab4c526cbcc092b8dc087709b67d3f2aaa7318acd6679dcf8eb",
+      "n_samples": 70
+    }
+  },
+  "classifier_artifact": {
+    "file": "models/renal_v31_evidence_classifier.pkl",
+    "sha256": "768ec8df84b80c738c39c3646ac3cc5175f23eed13906e4d39e3058ac3711191",
+    "architecture": "LogisticRegression(C=0.5, max_iter=300, random_state=42)",
+    "fit_split": "SAFETY_TRAIN_ONLY"
+  },
+  "feature_schema": [
+    "reranker_top1",
+    "reranker_top2",
+    "reranker_margin",
+    "reranker_top3_mean",
+    "dense_top1",
+    "dense_margin",
+    "doc_top1",
+    "doc_margin",
+    "doc_agreement",
+    "entropy"
+  ],
+  "normalization_statistics": {
+    "fit_split": "SAFETY_TRAIN_ONLY",
+    "means": [
+      2.2878472805023193,
+      0.6072916388511658,
+      1.6805555820465088,
+      0.8262726664543152,
+      0.940947413444519,
+      0.012361261993646622,
+      0.7208880186080933,
+      0.03082369454205036,
+      0.6933332085609436,
+      0.9463261961936951
+    ],
+    "stds": [
+      5.525994777679443,
+      5.4528021812438965,
+      2.1759655475616455,
+      5.375307083129883,
+      0.05545360594987869,
+      0.010623164474964142,
+      0.06630700081586838,
+      0.025535698980093002,
+      0.223507359623909,
+      0.4836136996746063
+    ]
+  },
+  "model_weights": {
+    "intercept": -0.5687218904495239,
+    "coefficients": {
+      "reranker_top1": 0.7788426280021667,
+      "reranker_top2": 0.9422436356544495,
+      "reranker_margin": -0.3832723796367645,
+      "reranker_top3_mean": 0.8584278225898743,
+      "dense_top1": -0.12196072190999985,
+      "dense_margin": 0.2365281730890274,
+      "doc_top1": 0.8348679542541504,
+      "doc_margin": 0.05076790973544121,
+      "doc_agreement": -0.20114293694496155,
+      "entropy": -0.17380036413669586
+    }
+  },
+  "threshold_calibration": {
+    "split_used": "SAFETY_CALIBRATION_ONLY",
+    "search_range": [
+      0.1,
+      0.95
+    ],
+    "objective": "Unsafe Accept <= 0.05, maximizing Recall, tiebreak F1",
+    "calibrated_threshold": 0.705,
+    "calib_metrics": {
+      "tp": 20,
+      "fp": 1,
+      "tn": 29,
+      "fn": 10,
+      "precision": 0.9523809523809523,
+      "recall": 0.6666666666666666,
+      "f1": 0.7843137254901961,
+      "specificity": 0.9666666666666667,
+      "unsafe_accept": 0.03333333333333333,
+      "auroc": 0.9355555555555556,
+      "auprc": 0.9398952773748293
+    }
+  }
+}

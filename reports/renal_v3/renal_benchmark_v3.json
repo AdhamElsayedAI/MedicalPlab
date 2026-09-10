@@ -458,10 +458,20 @@
     }
   },
   "sba_gate_status": {
-    "status": "FAIL",
+    "status": "BLOCKED",
     "verdict": "SBA QUESTION GENERATION SAFELY BLOCKED",
     "questions_generated": 0,
-    "rationale": "While safety precision is 100% and unsafe accept is 0.0%, false refusal rate is 67.31% and passage hit rate is 61.54%, which does not meet automated unassisted generation requirements without clinical signoff."
+    "human_reviewed_count": 0,
+    "golden_count": 0,
+    "predeclared_quality_gate": {
+      "PassageHit@1": {"threshold": ">= 0.85", "measured_heldout": 0.6154, "status": "FAIL"},
+      "PassageHit@5": {"threshold": ">= 0.95", "measured_heldout": 0.8077, "status": "FAIL"},
+      "Safety_Precision": {"threshold": ">= 0.90", "measured_heldout": 1.0000, "status": "PASS"},
+      "Safety_Recall": {"threshold": ">= 0.75", "measured_heldout": 0.3269, "status": "FAIL"},
+      "Unsafe_Accept": {"threshold": "<= 0.05", "measured_heldout": 0.0000, "status": "PASS"},
+      "Mechanical_Citation_Resolution": {"threshold": "= 1.00", "measured_heldout": 1.0000, "status": "PASS"}
+    },
+    "rationale": "Autonomous question generation requires all quality criteria to pass simultaneously. While citation resolution, safety precision, and heldout unsafe accept rate met requirements, PassageHit@1 (61.54%), PassageHit@5 (80.77%), and Safety Recall (32.69%) failed the strict production thresholds. SBA remains BLOCKED."
   },
   "scientific_integrity_statement": {
     "human_reviewed_count": 0,
@@ -472,5 +482,56 @@
       "180-word micro-chunking (F_coherent_child_180) caused context starvation, dropping DEV Hit@1 from 36.2% to 33.3%.",
       "Hard cascade document filtering eliminated gold passages before reranking, severely damaging recall."
     ]
+  },
+  "post_hoc_scientific_audit_v31": {
+    "audit_timestamp": "2026-09-10T12:45:00Z",
+    "findings_documented": [
+      "Finding 1: Scripts/run_renal_v3_safety.py fitted LogisticRegression and selected the decision threshold on the identical CALIBRATION dataset (renal-calibration-v2.json), violating split discipline.",
+      "Finding 2: Independent SAFETY_TEST (renal-safety-test-v2.json) produced 4/34 unsafe accepts (11.76%), failing the primary safety constraint (Unsafe Accept <= 0.05).",
+      "Finding 3: Wording such as 'Zero Hallucinations' and 'Perfect Safety' was scientifically invalid. Unsafe accept is an empirical retrieval classifier error rate, not equivalent to the generative concept of hallucination. Heldout performance showed 0 unsafe accepts among 48 unsupported queries.",
+      "Finding 4: CandidateHit@50 reached 94.20% on DEV, but was 47/52 = 90.38% on the final V3 heldout (parity with V2's 47/52 = 90.38%). No final-heldout candidate recall improvement occurred."
+    ],
+    "corrective_cycle_v31": {
+      "protocol": "PREDECLARED_DATASET_INDEPENDENCE_AND_TRAINING_DISCIPLINE",
+      "datasets": {
+        "train": {
+          "name": "renal-v3-safety-train.json",
+          "sha256": "5a47a390adec178b5b46c4e411a27afcd5d110f60f9055919b64b440449960c9",
+          "n": 90,
+          "usage": "Scaler and LogisticRegression fitted on TRAIN only"
+        },
+        "calibration": {
+          "name": "renal-v3-safety-calibration.json",
+          "sha256": "7ba9b6a05a4543f5641ad96e751ddf3cdf8725add16d90ce7d0b4635e3f249f0",
+          "n": 60,
+          "usage": "Threshold calibration only (tau* = 0.7050 selected)"
+        },
+        "test_2": {
+          "name": "renal-v3-safety-test-2.json",
+          "sha256": "3fe59bb6011c5ab4c526cbcc092b8dc087709b67d3f2aaa7318acd6679dcf8eb",
+          "n": 70,
+          "usage": "Untouched single-run frozen evaluation"
+        }
+      },
+      "frozen_model_artifact": {
+        "file": "models/renal_v31_evidence_classifier.pkl",
+        "sha256": "768ec8df84b80c738c39c3646ac3cc5175f23eed13906e4d39e3058ac3711191",
+        "calibrated_threshold": 0.7050
+      },
+      "safety_test_2_results": {
+        "confusion_matrix": {"tp": 27, "fp": 2, "tn": 33, "fn": 8, "n": 70},
+        "precision": {"value": 0.9310, "numerator": 27, "denominator": 29, "n": 29},
+        "recall": {"value": 0.7714, "numerator": 27, "denominator": 35, "n": 35},
+        "f1": 0.8438,
+        "specificity": {"value": 0.9429, "numerator": 33, "denominator": 35, "n": 35},
+        "auroc": 0.9682,
+        "auprc": 0.9618,
+        "brier_score": 0.0734,
+        "unsafe_accept": {"value": 0.0571, "numerator": 2, "denominator": 35, "n": 35},
+        "false_refusal": {"value": 0.2286, "numerator": 8, "denominator": 35, "n": 35},
+        "gate_status": "SAFETY_GATE_FAIL",
+        "rationale": "Under the strict <= 5% constraint, 2/35 unsafe accepts (5.71%) exceeded the threshold. In compliance with Requirement 7, no post-hoc threshold adjustment or example removal was permitted. The result is documented as a gate failure. SBA remains BLOCKED."
+      }
+    }
   }
 }
