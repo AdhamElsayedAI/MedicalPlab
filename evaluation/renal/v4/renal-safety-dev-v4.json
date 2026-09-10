@@ -1,0 +1,1808 @@
+{
+  "dataset_name": "SAFETY_DEV_V4",
+  "n_total": 60,
+  "n_positive": 30,
+  "n_negative": 30,
+  "n_supported": 25,
+  "n_partially_supported": 5,
+  "n_coverage_gap": 10,
+  "n_out_of_domain": 10,
+  "n_difficult_perturbation": 10,
+  "queries": [
+    {
+      "query_id": "SAF-DEV-V4-001",
+      "query": "Where is active renin stored in the renal afferent arteriole prior to exocytic release?",
+      "topic": "raas",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Renin storage in juxtaglomerular granulated cells",
+      "medical_claim": "Renin is synthesized and packaged into dense storage granules within modified vascular smooth muscle juxtaglomerular cells of the afferent arteriole.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0002",
+        "DOC-PMC-RENAL-0001-P0003",
+        "DOC-PMC-RENAL-0001-P0013",
+        "DOC-PMC-RENAL-0001-P0014",
+        "DOC-PMC-RENAL-0001-P0015",
+        "DOC-PMC-RENAL-0001-P0021",
+        "DOC-PMC-RENAL-0001-P0023"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0002",
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0015",
+        "DOC-PMC-RENAL-0001-B-C0016",
+        "DOC-PMC-RENAL-0001-B-C0017",
+        "DOC-PMC-RENAL-0001-B-C0023",
+        "DOC-PMC-RENAL-0001-B-C0025"
+      ],
+      "primary_evidence_quote": "Renin is synthesized and packaged into dense storage granules within modified vascular smooth muscle juxtaglomerular cells of the afferent arteriole.",
+      "evidence_spans": [
+        "renin"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-002",
+      "query": "Which primary organ synthesizes and constitutively secretes circulating angiotensinogen?",
+      "topic": "raas",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Hepatic synthesis of circulating angiotensinogen",
+      "medical_claim": "The liver is the primary source of circulating angiotensinogen, whose transcription is stimulated by glucocorticoids, estrogens, and thyroid hormones.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0003",
+        "DOC-PMC-RENAL-0001-P0013",
+        "DOC-PMC-RENAL-0001-P0015"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0015",
+        "DOC-PMC-RENAL-0001-B-C0017"
+      ],
+      "primary_evidence_quote": "The liver is the primary source of circulating angiotensinogen, whose transcription is stimulated by glucocorticoids, estrogens, and thyroid hormones.",
+      "evidence_spans": [
+        "angiotensinogen"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-003",
+      "query": "What primary extracellular matrix structural scaffold is deposited by podocytes and endothelial cells at the on-chip capillary interface?",
+      "topic": "filtration_barrier",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Glomerular basement membrane collagen IV network on chip",
+      "medical_claim": "Podocytes and glomerular endothelial cells co-assemble a laminin-521 and collagen type IV meshwork forming a continuous basement membrane.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0002-P0007",
+        "DOC-PMC-RENAL-0002-P0017"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0018"
+      ],
+      "primary_evidence_quote": "Podocytes and glomerular endothelial cells co-assemble a laminin-521 and collagen type IV meshwork forming a continuous basement membrane.",
+      "evidence_spans": [
+        "collagen iv"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-004",
+      "query": "How does an intact glomerulus-on-a-chip restrict the passage of fluorescently labeled human serum albumin?",
+      "topic": "filtration_barrier",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Microfluidic albumin clearance across intact glomerular barrier",
+      "medical_claim": "The combined endothelial glycocalyx, slit diaphragm nephrin junctions, and negative charge barrier restrict albumin permeation to <5% baseline clearance.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0002-P0001",
+        "DOC-PMC-RENAL-0002-P0008",
+        "DOC-PMC-RENAL-0002-P0019",
+        "DOC-PMC-RENAL-0002-P0020",
+        "DOC-PMC-RENAL-0002-P0021",
+        "DOC-PMC-RENAL-0002-P0022",
+        "DOC-PMC-RENAL-0002-P0023",
+        "DOC-PMC-RENAL-0002-P0024",
+        "DOC-PMC-RENAL-0002-P0027",
+        "DOC-PMC-RENAL-0002-P0028",
+        "DOC-PMC-RENAL-0002-P0029",
+        "DOC-PMC-RENAL-0002-P0030",
+        "DOC-PMC-RENAL-0002-P0034",
+        "DOC-PMC-RENAL-0002-P0035",
+        "DOC-PMC-RENAL-0002-P0037",
+        "DOC-PMC-RENAL-0002-P0038",
+        "DOC-PMC-RENAL-0002-P0039",
+        "DOC-PMC-RENAL-0002-P0041",
+        "DOC-PMC-RENAL-0002-P0042",
+        "DOC-PMC-RENAL-0002-P0056",
+        "DOC-PMC-RENAL-0002-P0085",
+        "DOC-PMC-RENAL-0002-P0086",
+        "DOC-PMC-RENAL-0002-P0087",
+        "DOC-PMC-RENAL-0002-P0089",
+        "DOC-PMC-RENAL-0002-P0090",
+        "DOC-PMC-RENAL-0002-P0091"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0001",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0020",
+        "DOC-PMC-RENAL-0002-B-C0021",
+        "DOC-PMC-RENAL-0002-B-C0022",
+        "DOC-PMC-RENAL-0002-B-C0023",
+        "DOC-PMC-RENAL-0002-B-C0024",
+        "DOC-PMC-RENAL-0002-B-C0025",
+        "DOC-PMC-RENAL-0002-B-C0026",
+        "DOC-PMC-RENAL-0002-B-C0029",
+        "DOC-PMC-RENAL-0002-B-C0030",
+        "DOC-PMC-RENAL-0002-B-C0032",
+        "DOC-PMC-RENAL-0002-B-C0033",
+        "DOC-PMC-RENAL-0002-B-C0037",
+        "DOC-PMC-RENAL-0002-B-C0038",
+        "DOC-PMC-RENAL-0002-B-C0040",
+        "DOC-PMC-RENAL-0002-B-C0041",
+        "DOC-PMC-RENAL-0002-B-C0042",
+        "DOC-PMC-RENAL-0002-B-C0044",
+        "DOC-PMC-RENAL-0002-B-C0045",
+        "DOC-PMC-RENAL-0002-B-C0059",
+        "DOC-PMC-RENAL-0002-B-C0088",
+        "DOC-PMC-RENAL-0002-B-C0089",
+        "DOC-PMC-RENAL-0002-B-C0090",
+        "DOC-PMC-RENAL-0002-B-C0092",
+        "DOC-PMC-RENAL-0002-B-C0093",
+        "DOC-PMC-RENAL-0002-B-C0094"
+      ],
+      "primary_evidence_quote": "The combined endothelial glycocalyx, slit diaphragm nephrin junctions, and negative charge barrier restrict albumin permeation to <5% baseline clearance.",
+      "evidence_spans": [
+        "albumin"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-005",
+      "query": "What fraction of normal daily dietary potassium intake is excreted via the kidneys versus gastrointestinal tract?",
+      "topic": "potassium_handling",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: External potassium balance and gastrointestinal versus renal excretion",
+      "medical_claim": "Approximately 90% of daily dietary potassium is excreted by the kidneys, while the remaining 10% is eliminated in feces under normal physiological conditions.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0002",
+        "DOC-PMC-RENAL-0003-B-C0003"
+      ],
+      "primary_evidence_quote": "Approximately 90% of daily dietary potassium is excreted by the kidneys, while the remaining 10% is eliminated in feces under normal physiological conditions.",
+      "evidence_spans": [
+        "external potassium balance"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-006",
+      "query": "How does low peritubular potassium activate the SPAK kinase cascade in distal tubule cells?",
+      "topic": "potassium_handling",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: SPAK kinase phosphorylation of NCC during hypokalemia",
+      "medical_claim": "Low peritubular potassium hyperpolarizes the cell membrane, inducing chloride exit via basolateral channels and activating WNK-SPAK kinases to phosphorylate NCC.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0003",
+        "DOC-PMC-RENAL-0003-P0005",
+        "DOC-PMC-RENAL-0003-P0006",
+        "DOC-PMC-RENAL-0003-P0007"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0005",
+        "DOC-PMC-RENAL-0003-B-C0007",
+        "DOC-PMC-RENAL-0003-B-C0010",
+        "DOC-PMC-RENAL-0003-B-C0012"
+      ],
+      "primary_evidence_quote": "Low peritubular potassium hyperpolarizes the cell membrane, inducing chloride exit via basolateral channels and activating WNK-SPAK kinases to phosphorylate NCC.",
+      "evidence_spans": [
+        "spak"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-007",
+      "query": "What intracellular reaction is catalyzed by cytoplasmic carbonic anhydrase II in proximal tubular cells?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Cytosolic carbonic anhydrase II role in proximal bicarbonate synthesis",
+      "medical_claim": "Cytoplasmic CAII hydrates intracellular carbon dioxide into carbonic acid, rapidly yielding a proton for luminal extrusion and bicarbonate for basolateral export.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0001",
+        "DOC-PMC-RENAL-0004-P0002",
+        "DOC-PMC-RENAL-0004-P0004",
+        "DOC-PMC-RENAL-0004-P0006",
+        "DOC-PMC-RENAL-0004-P0008",
+        "DOC-PMC-RENAL-0004-P0013",
+        "DOC-PMC-RENAL-0004-P0017",
+        "DOC-PMC-RENAL-0004-P0021"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0001",
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0004",
+        "DOC-PMC-RENAL-0004-B-C0006",
+        "DOC-PMC-RENAL-0004-B-C0008",
+        "DOC-PMC-RENAL-0004-B-C0013",
+        "DOC-PMC-RENAL-0004-B-C0017",
+        "DOC-PMC-RENAL-0004-B-C0021"
+      ],
+      "primary_evidence_quote": "Cytoplasmic CAII hydrates intracellular carbon dioxide into carbonic acid, rapidly yielding a proton for luminal extrusion and bicarbonate for basolateral export.",
+      "evidence_spans": [
+        "bicarbonate"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-008",
+      "query": "Which genetic defect in the basolateral NBCe1 cotransporter (SLC4A4) causes autosomal recessive proximal RTA?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Proximal renal tubular acidosis type 2 in SLC4A4 loss of function",
+      "medical_claim": "Inactivating mutations in SLC4A4 impair basolateral sodium-bicarbonate exit, causing severe isolated proximal RTA with ocular abnormalities and short stature.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0001",
+        "DOC-PMC-RENAL-0004-P0002",
+        "DOC-PMC-RENAL-0004-P0004",
+        "DOC-PMC-RENAL-0004-P0005",
+        "DOC-PMC-RENAL-0004-P0006",
+        "DOC-PMC-RENAL-0004-P0007",
+        "DOC-PMC-RENAL-0004-P0008",
+        "DOC-PMC-RENAL-0004-P0009",
+        "DOC-PMC-RENAL-0004-P0010",
+        "DOC-PMC-RENAL-0004-P0016",
+        "DOC-PMC-RENAL-0004-P0017",
+        "DOC-PMC-RENAL-0004-P0018",
+        "DOC-PMC-RENAL-0004-P0019",
+        "DOC-PMC-RENAL-0004-P0021"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0001",
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0004",
+        "DOC-PMC-RENAL-0004-B-C0005",
+        "DOC-PMC-RENAL-0004-B-C0006",
+        "DOC-PMC-RENAL-0004-B-C0007",
+        "DOC-PMC-RENAL-0004-B-C0008",
+        "DOC-PMC-RENAL-0004-B-C0009",
+        "DOC-PMC-RENAL-0004-B-C0010",
+        "DOC-PMC-RENAL-0004-B-C0016",
+        "DOC-PMC-RENAL-0004-B-C0017",
+        "DOC-PMC-RENAL-0004-B-C0018",
+        "DOC-PMC-RENAL-0004-B-C0019",
+        "DOC-PMC-RENAL-0004-B-C0021"
+      ],
+      "primary_evidence_quote": "Inactivating mutations in SLC4A4 impair basolateral sodium-bicarbonate exit, causing severe isolated proximal RTA with ocular abnormalities and short stature.",
+      "evidence_spans": [
+        "NBCe1"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-009",
+      "query": "Why can patients with classical Type 1 distal RTA not lower their urine pH below 5.3 despite severe systemic metabolic acidosis?",
+      "topic": "acid_base",
+      "question_type": "pathophysiology",
+      "learning_objective": "Dev V4: Classical Type 1 distal RTA urinary pH and hypokalemia",
+      "medical_claim": "Impaired proton secretion by Type A intercalated cells prevents urinary acidification below pH 5.3, leading to persistent hyperchloremic metabolic acidosis and nephrocalcinosis.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0061"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0062"
+      ],
+      "primary_evidence_quote": "Impaired proton secretion by Type A intercalated cells prevents urinary acidification below pH 5.3, leading to persistent hyperchloremic metabolic acidosis and nephrocalcinosis.",
+      "evidence_spans": [
+        "distal renal tubular acidosis"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-010",
+      "query": "What absolute serum creatinine increase within 48 hours satisfies KDIGO Stage 1 AKI diagnostic criteria?",
+      "topic": "aki",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: KDIGO Stage 1 AKI serum creatinine rise cutoff",
+      "medical_claim": "An increase in serum creatinine of >=0.3 mg/dL (>=26.5 umol/L) within 48 hours or a 1.5 to 1.9-fold rise from baseline satisfies KDIGO Stage 1 AKI.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0003",
+        "DOC-PMC-RENAL-0006-P0005",
+        "DOC-PMC-RENAL-0006-P0012",
+        "DOC-PMC-RENAL-0006-P0020",
+        "DOC-PMC-RENAL-0006-P0028",
+        "DOC-PMC-RENAL-0006-P0034",
+        "DOC-PMC-RENAL-0006-P0035",
+        "DOC-PMC-RENAL-0006-P0036",
+        "DOC-PMC-RENAL-0006-P0037",
+        "DOC-PMC-RENAL-0006-P0038",
+        "DOC-PMC-RENAL-0006-P0039",
+        "DOC-PMC-RENAL-0006-P0040",
+        "DOC-PMC-RENAL-0006-P0041",
+        "DOC-PMC-RENAL-0006-P0042",
+        "DOC-PMC-RENAL-0006-P0043",
+        "DOC-PMC-RENAL-0006-P0044",
+        "DOC-PMC-RENAL-0006-P0048",
+        "DOC-PMC-RENAL-0006-P0065",
+        "DOC-PMC-RENAL-0006-P0073",
+        "DOC-PMC-RENAL-0006-P0132",
+        "DOC-PMC-RENAL-0006-P0134",
+        "DOC-PMC-RENAL-0006-P0153",
+        "DOC-PMC-RENAL-0006-P0163",
+        "DOC-PMC-RENAL-0006-P0164",
+        "DOC-PMC-RENAL-0006-P0165",
+        "DOC-PMC-RENAL-0006-P0169",
+        "DOC-PMC-RENAL-0006-P0180",
+        "DOC-PMC-RENAL-0006-P0181",
+        "DOC-PMC-RENAL-0006-P0187",
+        "DOC-PMC-RENAL-0006-P0221",
+        "DOC-PMC-RENAL-0006-P0230",
+        "DOC-PMC-RENAL-0006-P0231",
+        "DOC-PMC-RENAL-0006-P0272",
+        "DOC-PMC-RENAL-0006-P0279",
+        "DOC-PMC-RENAL-0006-P0280",
+        "DOC-PMC-RENAL-0006-P0281",
+        "DOC-PMC-RENAL-0006-P0282",
+        "DOC-PMC-RENAL-0006-P0283",
+        "DOC-PMC-RENAL-0006-P0284",
+        "DOC-PMC-RENAL-0006-P0285",
+        "DOC-PMC-RENAL-0006-P0286",
+        "DOC-PMC-RENAL-0006-P0287",
+        "DOC-PMC-RENAL-0006-P0288",
+        "DOC-PMC-RENAL-0006-P0289",
+        "DOC-PMC-RENAL-0006-P0290",
+        "DOC-PMC-RENAL-0006-P0291",
+        "DOC-PMC-RENAL-0006-P0292",
+        "DOC-PMC-RENAL-0006-P0293",
+        "DOC-PMC-RENAL-0006-P0294",
+        "DOC-PMC-RENAL-0006-P0301",
+        "DOC-PMC-RENAL-0006-P0309",
+        "DOC-PMC-RENAL-0006-P0342"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0003",
+        "DOC-PMC-RENAL-0006-B-C0005",
+        "DOC-PMC-RENAL-0006-B-C0012",
+        "DOC-PMC-RENAL-0006-B-C0020",
+        "DOC-PMC-RENAL-0006-B-C0028",
+        "DOC-PMC-RENAL-0006-B-C0034",
+        "DOC-PMC-RENAL-0006-B-C0035",
+        "DOC-PMC-RENAL-0006-B-C0036",
+        "DOC-PMC-RENAL-0006-B-C0037",
+        "DOC-PMC-RENAL-0006-B-C0038",
+        "DOC-PMC-RENAL-0006-B-C0039",
+        "DOC-PMC-RENAL-0006-B-C0040",
+        "DOC-PMC-RENAL-0006-B-C0041",
+        "DOC-PMC-RENAL-0006-B-C0042",
+        "DOC-PMC-RENAL-0006-B-C0043",
+        "DOC-PMC-RENAL-0006-B-C0044",
+        "DOC-PMC-RENAL-0006-B-C0048",
+        "DOC-PMC-RENAL-0006-B-C0066",
+        "DOC-PMC-RENAL-0006-B-C0075",
+        "DOC-PMC-RENAL-0006-B-C0134",
+        "DOC-PMC-RENAL-0006-B-C0136",
+        "DOC-PMC-RENAL-0006-B-C0155",
+        "DOC-PMC-RENAL-0006-B-C0165",
+        "DOC-PMC-RENAL-0006-B-C0166",
+        "DOC-PMC-RENAL-0006-B-C0167",
+        "DOC-PMC-RENAL-0006-B-C0171",
+        "DOC-PMC-RENAL-0006-B-C0182",
+        "DOC-PMC-RENAL-0006-B-C0183",
+        "DOC-PMC-RENAL-0006-B-C0189",
+        "DOC-PMC-RENAL-0006-B-C0223",
+        "DOC-PMC-RENAL-0006-B-C0232",
+        "DOC-PMC-RENAL-0006-B-C0233",
+        "DOC-PMC-RENAL-0006-B-C0275",
+        "DOC-PMC-RENAL-0006-B-C0282",
+        "DOC-PMC-RENAL-0006-B-C0283",
+        "DOC-PMC-RENAL-0006-B-C0284",
+        "DOC-PMC-RENAL-0006-B-C0285",
+        "DOC-PMC-RENAL-0006-B-C0286",
+        "DOC-PMC-RENAL-0006-B-C0287",
+        "DOC-PMC-RENAL-0006-B-C0288",
+        "DOC-PMC-RENAL-0006-B-C0289",
+        "DOC-PMC-RENAL-0006-B-C0290",
+        "DOC-PMC-RENAL-0006-B-C0291",
+        "DOC-PMC-RENAL-0006-B-C0292",
+        "DOC-PMC-RENAL-0006-B-C0293",
+        "DOC-PMC-RENAL-0006-B-C0294",
+        "DOC-PMC-RENAL-0006-B-C0295",
+        "DOC-PMC-RENAL-0006-B-C0296",
+        "DOC-PMC-RENAL-0006-B-C0297",
+        "DOC-PMC-RENAL-0006-B-C0304",
+        "DOC-PMC-RENAL-0006-B-C0312",
+        "DOC-PMC-RENAL-0006-B-C0345"
+      ],
+      "primary_evidence_quote": "An increase in serum creatinine of >=0.3 mg/dL (>=26.5 umol/L) within 48 hours or a 1.5 to 1.9-fold rise from baseline satisfies KDIGO Stage 1 AKI.",
+      "evidence_spans": [
+        "creatinine"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-011",
+      "query": "Why are balanced crystalloids (such as Plasma-Lyte or lactated Ringer's) preferred over 0.9% normal saline in septic AKI resuscitation?",
+      "topic": "aki",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Balanced crystalloids versus isotonic saline in sepsis-induced AKI",
+      "medical_claim": "Large volumes of 0.9% saline cause hyperchloremic metabolic acidosis and renal vasoconstriction, increasing the incidence of persistent renal dysfunction.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0126"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0128"
+      ],
+      "primary_evidence_quote": "Large volumes of 0.9% saline cause hyperchloremic metabolic acidosis and renal vasoconstriction, increasing the incidence of persistent renal dysfunction.",
+      "evidence_spans": [
+        "resuscitation"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-012",
+      "query": "Why are ACE inhibitors or ARBs prioritized in diabetic kidney disease with macroalbuminuria?",
+      "topic": "ckd",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Renin-angiotensin system blockade for proteinuric diabetic kidney disease",
+      "medical_claim": "ACEIs and ARBs preferentially dilate efferent arterioles, reducing intraglomerular capillary hydrostatic pressure and slowing the rate of GFR decline.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0065",
+        "DOC-PMC-RENAL-0007-P0154",
+        "DOC-PMC-RENAL-0007-P0156",
+        "DOC-PMC-RENAL-0007-P0234",
+        "DOC-PMC-RENAL-0007-P0277"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0065",
+        "DOC-PMC-RENAL-0007-B-C0154",
+        "DOC-PMC-RENAL-0007-B-C0156",
+        "DOC-PMC-RENAL-0007-B-C0234",
+        "DOC-PMC-RENAL-0007-B-C0277"
+      ],
+      "primary_evidence_quote": "ACEIs and ARBs preferentially dilate efferent arterioles, reducing intraglomerular capillary hydrostatic pressure and slowing the rate of GFR decline.",
+      "evidence_spans": [
+        "arb"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-013",
+      "query": "What daily dietary protein intake target is recommended for non-diabetic adults with advanced non-dialysis CKD?",
+      "topic": "ckd",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Dietary protein restriction in non-dialysis CKD stages G3-G5",
+      "medical_claim": "Clinical guidelines recommend a low-protein diet of 0.6 to 0.8 g/kg body weight/day to reduce uremic toxin accumulation and intraglomerular hypertension.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0132"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0132"
+      ],
+      "primary_evidence_quote": "Clinical guidelines recommend a low-protein diet of 0.6 to 0.8 g/kg body weight/day to reduce uremic toxin accumulation and intraglomerular hypertension.",
+      "evidence_spans": [
+        "dietary"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-014",
+      "query": "How does primary distal sodium retention ('overfill hypothesis') drive edema formation in nephrotic syndrome?",
+      "topic": "nephrotic_syndrome",
+      "question_type": "pathophysiology",
+      "learning_objective": "Dev V4: Overfill versus underfill hypotheses of nephrotic edema",
+      "medical_claim": "Filtered plasmin in nephrotic urine cleaves and activates apical ENaC channels in the collecting duct, inducing massive sodium retention independent of aldosterone.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0002",
+        "DOC-PMC-RENAL-0008-P0017",
+        "DOC-PMC-RENAL-0008-P0023",
+        "DOC-PMC-RENAL-0008-P0029",
+        "DOC-PMC-RENAL-0008-P0042",
+        "DOC-PMC-RENAL-0008-P0076",
+        "DOC-PMC-RENAL-0008-P0202",
+        "DOC-PMC-RENAL-0008-P0248",
+        "DOC-PMC-RENAL-0008-P0250",
+        "DOC-PMC-RENAL-0008-P0254",
+        "DOC-PMC-RENAL-0008-P0255",
+        "DOC-PMC-RENAL-0008-P0256",
+        "DOC-PMC-RENAL-0008-P0257",
+        "DOC-PMC-RENAL-0008-P0258"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0002",
+        "DOC-PMC-RENAL-0008-B-C0017",
+        "DOC-PMC-RENAL-0008-B-C0023",
+        "DOC-PMC-RENAL-0008-B-C0029",
+        "DOC-PMC-RENAL-0008-B-C0042",
+        "DOC-PMC-RENAL-0008-B-C0076",
+        "DOC-PMC-RENAL-0008-B-C0202",
+        "DOC-PMC-RENAL-0008-B-C0248",
+        "DOC-PMC-RENAL-0008-B-C0250",
+        "DOC-PMC-RENAL-0008-B-C0254",
+        "DOC-PMC-RENAL-0008-B-C0255",
+        "DOC-PMC-RENAL-0008-B-C0256",
+        "DOC-PMC-RENAL-0008-B-C0257",
+        "DOC-PMC-RENAL-0008-B-C0258"
+      ],
+      "primary_evidence_quote": "Filtered plasmin in nephrotic urine cleaves and activates apical ENaC channels in the collecting duct, inducing massive sodium retention independent of aldosterone.",
+      "evidence_spans": [
+        "edema"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-015",
+      "query": "What urinalysis dipstick protein reading defines a relapse in a previously remitted child with steroid-sensitive nephrotic syndrome?",
+      "topic": "nephrotic_syndrome",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Pediatric nephrotic syndrome relapse definition",
+      "medical_claim": "Relapse is defined as urinary dipstick protein >=3+ (or protein/creatinine ratio >2 mg/mg) for 3 consecutive days in a child previously in complete remission.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0023",
+        "DOC-PMC-RENAL-0008-P0026",
+        "DOC-PMC-RENAL-0008-P0027",
+        "DOC-PMC-RENAL-0008-P0031",
+        "DOC-PMC-RENAL-0008-P0032",
+        "DOC-PMC-RENAL-0008-P0060",
+        "DOC-PMC-RENAL-0008-P0217",
+        "DOC-PMC-RENAL-0008-P0219",
+        "DOC-PMC-RENAL-0008-P0221",
+        "DOC-PMC-RENAL-0008-P0223",
+        "DOC-PMC-RENAL-0008-P0293",
+        "DOC-PMC-RENAL-0008-P0296",
+        "DOC-PMC-RENAL-0008-P0297",
+        "DOC-PMC-RENAL-0008-P0298"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0023",
+        "DOC-PMC-RENAL-0008-B-C0026",
+        "DOC-PMC-RENAL-0008-B-C0027",
+        "DOC-PMC-RENAL-0008-B-C0031",
+        "DOC-PMC-RENAL-0008-B-C0032",
+        "DOC-PMC-RENAL-0008-B-C0060",
+        "DOC-PMC-RENAL-0008-B-C0217",
+        "DOC-PMC-RENAL-0008-B-C0219",
+        "DOC-PMC-RENAL-0008-B-C0221",
+        "DOC-PMC-RENAL-0008-B-C0223",
+        "DOC-PMC-RENAL-0008-B-C0293",
+        "DOC-PMC-RENAL-0008-B-C0296",
+        "DOC-PMC-RENAL-0008-B-C0297",
+        "DOC-PMC-RENAL-0008-B-C0298"
+      ],
+      "primary_evidence_quote": "Relapse is defined as urinary dipstick protein >=3+ (or protein/creatinine ratio >2 mg/mg) for 3 consecutive days in a child previously in complete remission.",
+      "evidence_spans": [
+        "relapse"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-016",
+      "query": "What early electrocardiographic finding on a 12-lead ECG is typically seen at serum potassium concentrations between 5.5 and 6.5 mmol/L?",
+      "topic": "hyperkalaemia",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: Peaked tall tented T waves on hyperkalemia ECG",
+      "medical_claim": "Symmetric, tall, narrow, 'tented' or 'peaked' T waves with a shortened QT interval represent the earliest ECG manifestation of acute hyperkalemia.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0054",
+        "DOC-PMC-RENAL-0009-P0058"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0054",
+        "DOC-PMC-RENAL-0009-B-C0058"
+      ],
+      "primary_evidence_quote": "Symmetric, tall, narrow, 'tented' or 'peaked' T waves with a shortened QT interval represent the earliest ECG manifestation of acute hyperkalemia.",
+      "evidence_spans": [
+        "T wave"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-017",
+      "query": "What is the standard intravenous regular insulin dose combined with 50% dextrose to acutely shift potassium into cells?",
+      "topic": "hyperkalaemia",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Intravenous insulin and glucose protocol for emergency hyperkalemia",
+      "medical_claim": "10 units of regular insulin administered with 25 to 50 g of glucose (50 mL of D50W) shifts extracellular potassium into myocytes via Na+/K+-ATPase activation within 15 to 30 minutes.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0023",
+        "DOC-PMC-RENAL-0010-P0045",
+        "DOC-PMC-RENAL-0010-P0048",
+        "DOC-PMC-RENAL-0010-P0064",
+        "DOC-PMC-RENAL-0010-P0114",
+        "DOC-PMC-RENAL-0010-P0115",
+        "DOC-PMC-RENAL-0010-P0116",
+        "DOC-PMC-RENAL-0010-P0122",
+        "DOC-PMC-RENAL-0010-P0123",
+        "DOC-PMC-RENAL-0010-P0124",
+        "DOC-PMC-RENAL-0010-P0130",
+        "DOC-PMC-RENAL-0010-P0131",
+        "DOC-PMC-RENAL-0010-P0132"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0023",
+        "DOC-PMC-RENAL-0010-B-C0045",
+        "DOC-PMC-RENAL-0010-B-C0048",
+        "DOC-PMC-RENAL-0010-B-C0064",
+        "DOC-PMC-RENAL-0010-B-C0114",
+        "DOC-PMC-RENAL-0010-B-C0115",
+        "DOC-PMC-RENAL-0010-B-C0116",
+        "DOC-PMC-RENAL-0010-B-C0122",
+        "DOC-PMC-RENAL-0010-B-C0123",
+        "DOC-PMC-RENAL-0010-B-C0124",
+        "DOC-PMC-RENAL-0010-B-C0130",
+        "DOC-PMC-RENAL-0010-B-C0131",
+        "DOC-PMC-RENAL-0010-B-C0132"
+      ],
+      "primary_evidence_quote": "10 units of regular insulin administered with 25 to 50 g of glucose (50 mL of D50W) shifts extracellular potassium into myocytes via Na+/K+-ATPase activation within 15 to 30 minutes.",
+      "evidence_spans": [
+        "insulin"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-018",
+      "query": "Why is nitrofurantoin highly effective for acute uncomplicated lower cystitis but ineffective for pyelonephritis?",
+      "topic": "uti",
+      "question_type": "pharmacology",
+      "learning_objective": "Dev V4: Nitrofurantoin clinical efficacy in acute uncomplicated cystitis",
+      "medical_claim": "Nitrofurantoin achieves exceptionally high bactericidal concentrations in bladder urine but minimal therapeutic tissue penetration into the renal parenchyma.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0022",
+        "DOC-PMC-RENAL-0011-P0067",
+        "DOC-PMC-RENAL-0011-P0091",
+        "DOC-PMC-RENAL-0011-P0106",
+        "DOC-PMC-RENAL-0011-P0152"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0023",
+        "DOC-PMC-RENAL-0011-B-C0068",
+        "DOC-PMC-RENAL-0011-B-C0092",
+        "DOC-PMC-RENAL-0011-B-C0107",
+        "DOC-PMC-RENAL-0011-B-C0153"
+      ],
+      "primary_evidence_quote": "Nitrofurantoin achieves exceptionally high bactericidal concentrations in bladder urine but minimal therapeutic tissue penetration into the renal parenchyma.",
+      "evidence_spans": [
+        "cystitis"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-019",
+      "query": "How does catheter-associated urothelial biofilm production mediate antibiotic resistance in recurrent catheter-associated UTIs?",
+      "topic": "uti",
+      "question_type": "pathophysiology",
+      "learning_objective": "Dev V4: Bladder catheter-associated biofilm formation by uropathogens",
+      "medical_claim": "Bacteria produce an extracellular polymeric matrix on catheter surfaces that impedes antimicrobial penetration and facilitates phenotypic persister cell survival.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0011",
+        "DOC-PMC-RENAL-0011-P0012",
+        "DOC-PMC-RENAL-0011-P0013",
+        "DOC-PMC-RENAL-0011-P0018",
+        "DOC-PMC-RENAL-0011-P0065",
+        "DOC-PMC-RENAL-0011-P0138",
+        "DOC-PMC-RENAL-0011-P0142"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0011",
+        "DOC-PMC-RENAL-0011-B-C0012",
+        "DOC-PMC-RENAL-0011-B-C0013",
+        "DOC-PMC-RENAL-0011-B-C0014",
+        "DOC-PMC-RENAL-0011-B-C0019",
+        "DOC-PMC-RENAL-0011-B-C0066",
+        "DOC-PMC-RENAL-0011-B-C0139",
+        "DOC-PMC-RENAL-0011-B-C0143"
+      ],
+      "primary_evidence_quote": "Bacteria produce an extracellular polymeric matrix on catheter surfaces that impedes antimicrobial penetration and facilitates phenotypic persister cell survival.",
+      "evidence_spans": [
+        "biofilm"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-020",
+      "query": "What is the primary indication for retrograde intrarenal surgery (flexible ureteroscopy) over shock wave lithotripsy?",
+      "topic": "nephrolithiasis",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Flexible ureteroscopy with holmium laser lithotripsy indications",
+      "medical_claim": "Ureteroscopy with laser lithotripsy is preferred for lower pole calculi >10 mm, hard stones (>1000 HU), obese patients, or patients on anticoagulation.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0001",
+        "DOC-PMC-RENAL-0012-P0009",
+        "DOC-PMC-RENAL-0012-P0014",
+        "DOC-PMC-RENAL-0012-P0022",
+        "DOC-PMC-RENAL-0012-P0034",
+        "DOC-PMC-RENAL-0012-P0045",
+        "DOC-PMC-RENAL-0012-P0050",
+        "DOC-PMC-RENAL-0012-P0054"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0001",
+        "DOC-PMC-RENAL-0012-B-C0009",
+        "DOC-PMC-RENAL-0012-B-C0014",
+        "DOC-PMC-RENAL-0012-B-C0022",
+        "DOC-PMC-RENAL-0012-B-C0034",
+        "DOC-PMC-RENAL-0012-B-C0045",
+        "DOC-PMC-RENAL-0012-B-C0050",
+        "DOC-PMC-RENAL-0012-B-C0055"
+      ],
+      "primary_evidence_quote": "Ureteroscopy with laser lithotripsy is preferred for lower pole calculi >10 mm, hard stones (>1000 HU), obese patients, or patients on anticoagulation.",
+      "evidence_spans": [
+        "ureteroscopy"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-021",
+      "query": "What parameters are incorporated into the standardized multidisciplinary UTD consensus classification?",
+      "topic": "hydronephrosis",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: Urinary tract dilation UTD classification system",
+      "medical_claim": "The UTD system evaluates anterior-posterior renal pelvic diameter, calyceal dilation, parenchymal thickness, parenchymal appearance, ureteral dilation, and bladder abnormalities.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0001",
+        "DOC-PMC-RENAL-0014-P0039",
+        "DOC-PMC-RENAL-0014-P0040",
+        "DOC-PMC-RENAL-0014-P0041",
+        "DOC-PMC-RENAL-0014-P0042",
+        "DOC-PMC-RENAL-0014-P0044",
+        "DOC-PMC-RENAL-0014-P0071",
+        "DOC-PMC-RENAL-0014-P0076",
+        "DOC-PMC-RENAL-0014-P0077",
+        "DOC-PMC-RENAL-0014-P0078",
+        "DOC-PMC-RENAL-0014-P0081",
+        "DOC-PMC-RENAL-0014-P0082",
+        "DOC-PMC-RENAL-0014-P0083"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0001",
+        "DOC-PMC-RENAL-0014-B-C0002",
+        "DOC-PMC-RENAL-0014-B-C0040",
+        "DOC-PMC-RENAL-0014-B-C0041",
+        "DOC-PMC-RENAL-0014-B-C0042",
+        "DOC-PMC-RENAL-0014-B-C0043",
+        "DOC-PMC-RENAL-0014-B-C0045",
+        "DOC-PMC-RENAL-0014-B-C0072",
+        "DOC-PMC-RENAL-0014-B-C0077",
+        "DOC-PMC-RENAL-0014-B-C0078",
+        "DOC-PMC-RENAL-0014-B-C0079",
+        "DOC-PMC-RENAL-0014-B-C0082",
+        "DOC-PMC-RENAL-0014-B-C0083",
+        "DOC-PMC-RENAL-0014-B-C0084"
+      ],
+      "primary_evidence_quote": "The UTD system evaluates anterior-posterior renal pelvic diameter, calyceal dilation, parenchymal thickness, parenchymal appearance, ureteral dilation, and bladder abnormalities.",
+      "evidence_spans": [
+        "utd"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-022",
+      "query": "What serum creatine kinase (CK) threshold level is most commonly associated with substantial risk of acute tubular necrosis?",
+      "topic": "rhabdomyolysis",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: Serum creatine kinase CK cutoff predictive of rhabdomyolysis AKI",
+      "medical_claim": "A serum CK concentration exceeding 5,000 U/L (or 5 times the upper limit of normal) correlates with significantly increased risk of developing myoglobinuric AKI.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0002",
+        "DOC-PMC-RENAL-0015-P0003",
+        "DOC-PMC-RENAL-0015-P0004",
+        "DOC-PMC-RENAL-0015-P0005",
+        "DOC-PMC-RENAL-0015-P0015",
+        "DOC-PMC-RENAL-0015-P0024",
+        "DOC-PMC-RENAL-0015-P0035",
+        "DOC-PMC-RENAL-0015-P0037",
+        "DOC-PMC-RENAL-0015-P0038",
+        "DOC-PMC-RENAL-0015-P0043",
+        "DOC-PMC-RENAL-0015-P0044",
+        "DOC-PMC-RENAL-0015-P0045",
+        "DOC-PMC-RENAL-0015-P0050"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0002",
+        "DOC-PMC-RENAL-0015-B-C0003",
+        "DOC-PMC-RENAL-0015-B-C0004",
+        "DOC-PMC-RENAL-0015-B-C0005",
+        "DOC-PMC-RENAL-0015-B-C0015",
+        "DOC-PMC-RENAL-0015-B-C0024",
+        "DOC-PMC-RENAL-0015-B-C0035",
+        "DOC-PMC-RENAL-0015-B-C0037",
+        "DOC-PMC-RENAL-0015-B-C0038",
+        "DOC-PMC-RENAL-0015-B-C0043",
+        "DOC-PMC-RENAL-0015-B-C0044",
+        "DOC-PMC-RENAL-0015-B-C0045",
+        "DOC-PMC-RENAL-0015-B-C0050"
+      ],
+      "primary_evidence_quote": "A serum CK concentration exceeding 5,000 U/L (or 5 times the upper limit of normal) correlates with significantly increased risk of developing myoglobinuric AKI.",
+      "evidence_spans": [
+        "CK"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-023",
+      "query": "What specialized intercellular junction bridges adjacent podocyte pedicels to form the final size-selective filtration sieve?",
+      "topic": "filtration_barrier",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Slit diaphragm bridging interdigitating podocyte pedicels",
+      "medical_claim": "The slit diaphragm, composed of nephrin, podocin, NEPH1, and FAT1, forms an isoporous molecular filter bridging adjacent interdigitating pedicels.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0001",
+        "DOC-PMC-RENAL-0018-P0003",
+        "DOC-PMC-RENAL-0018-P0006",
+        "DOC-PMC-RENAL-0018-P0024",
+        "DOC-PMC-RENAL-0018-P0025",
+        "DOC-PMC-RENAL-0018-P0026",
+        "DOC-PMC-RENAL-0018-P0027",
+        "DOC-PMC-RENAL-0018-P0028",
+        "DOC-PMC-RENAL-0018-P0029",
+        "DOC-PMC-RENAL-0018-P0030",
+        "DOC-PMC-RENAL-0018-P0033",
+        "DOC-PMC-RENAL-0018-P0034",
+        "DOC-PMC-RENAL-0018-P0035",
+        "DOC-PMC-RENAL-0018-P0038"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0001",
+        "DOC-PMC-RENAL-0018-B-C0003",
+        "DOC-PMC-RENAL-0018-B-C0006",
+        "DOC-PMC-RENAL-0018-B-C0024",
+        "DOC-PMC-RENAL-0018-B-C0025",
+        "DOC-PMC-RENAL-0018-B-C0026",
+        "DOC-PMC-RENAL-0018-B-C0027",
+        "DOC-PMC-RENAL-0018-B-C0028",
+        "DOC-PMC-RENAL-0018-B-C0029",
+        "DOC-PMC-RENAL-0018-B-C0030",
+        "DOC-PMC-RENAL-0018-B-C0033",
+        "DOC-PMC-RENAL-0018-B-C0034",
+        "DOC-PMC-RENAL-0018-B-C0035",
+        "DOC-PMC-RENAL-0018-B-C0038"
+      ],
+      "primary_evidence_quote": "The slit diaphragm, composed of nephrin, podocin, NEPH1, and FAT1, forms an isoporous molecular filter bridging adjacent interdigitating pedicels.",
+      "evidence_spans": [
+        "podocyte"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-024",
+      "query": "Which solute carrier gene mutation causes benign familial renal glucosuria without systemic metabolic defects?",
+      "topic": "tubular_transport",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Familial renal glucosuria SLC5A2 gene mutations",
+      "medical_claim": "Loss-of-function mutations in the SLC5A2 gene encoding apical SGLT2 cause isolated, benign familial renal glucosuria with normal blood glucose levels.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0041",
+        "DOC-PMC-RENAL-0019-P0062",
+        "DOC-PMC-RENAL-0019-P0063"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0041",
+        "DOC-PMC-RENAL-0019-B-C0062",
+        "DOC-PMC-RENAL-0019-B-C0063"
+      ],
+      "primary_evidence_quote": "Loss-of-function mutations in the SLC5A2 gene encoding apical SGLT2 cause isolated, benign familial renal glucosuria with normal blood glucose levels.",
+      "evidence_spans": [
+        "slc5a2"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-025",
+      "query": "Which three homologous subunits compose the functional apical epithelial sodium channel (ENaC) in principal cells?",
+      "topic": "tubular_transport",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Principal cell ENaC sodium channel subunits and amiloride sensitivity",
+      "medical_claim": "ENaC is a heterotrimeric channel formed by alpha, beta, and gamma subunits that mediates electrogenic sodium entry inhibited by amiloride and triamterene.",
+      "answerable": true,
+      "is_partial": false,
+      "evaluation_label": "SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0001",
+        "DOC-PMC-RENAL-0020-P0004",
+        "DOC-PMC-RENAL-0020-P0021",
+        "DOC-PMC-RENAL-0020-P0022",
+        "DOC-PMC-RENAL-0020-P0023",
+        "DOC-PMC-RENAL-0020-P0024",
+        "DOC-PMC-RENAL-0020-P0033"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0001",
+        "DOC-PMC-RENAL-0020-B-C0004",
+        "DOC-PMC-RENAL-0020-B-C0021",
+        "DOC-PMC-RENAL-0020-B-C0022",
+        "DOC-PMC-RENAL-0020-B-C0023",
+        "DOC-PMC-RENAL-0020-B-C0024",
+        "DOC-PMC-RENAL-0020-B-C0033"
+      ],
+      "primary_evidence_quote": "ENaC is a heterotrimeric channel formed by alpha, beta, and gamma subunits that mediates electrogenic sodium entry inhibited by amiloride and triamterene.",
+      "evidence_spans": [
+        "enac"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-026",
+      "query": "Does AT2 receptor stimulation oppose the pressor actions of AT1 receptor activation?",
+      "topic": "raas",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Angiotensin type 2 receptor AT2R vasodilatory effects",
+      "medical_claim": "AT2R activation stimulates nitric oxide and cGMP production, promoting vasodilation and anti-fibrotic actions that counterbalance AT1R effects.",
+      "answerable": true,
+      "is_partial": true,
+      "evaluation_label": "PARTIALLY_SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0003",
+        "DOC-PMC-RENAL-0001-P0008",
+        "DOC-PMC-RENAL-0001-P0011",
+        "DOC-PMC-RENAL-0001-P0012",
+        "DOC-PMC-RENAL-0001-P0017",
+        "DOC-PMC-RENAL-0001-P0023"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0008",
+        "DOC-PMC-RENAL-0001-B-C0011",
+        "DOC-PMC-RENAL-0001-B-C0014",
+        "DOC-PMC-RENAL-0001-B-C0019",
+        "DOC-PMC-RENAL-0001-B-C0025"
+      ],
+      "primary_evidence_quote": "AT2R activation stimulates nitric oxide and cGMP production, promoting vasodilation and anti-fibrotic actions that counterbalance AT1R effects.",
+      "evidence_spans": [
+        "AT1R"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-027",
+      "query": "Can acute oral potassium loading induce rapid kaliuresis without measurable increases in aldosterone?",
+      "topic": "potassium_handling",
+      "question_type": "physiology",
+      "learning_objective": "Dev V4: Aldosterone-independent kaliuresis following dietary potassium load",
+      "medical_claim": "Gut sensing and direct basolateral sensing of potassium in the distal nephron trigger rapid kaliuresis even in the absence of elevated aldosterone.",
+      "answerable": true,
+      "is_partial": true,
+      "evaluation_label": "PARTIALLY_SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0001",
+        "DOC-PMC-RENAL-0003-P0002",
+        "DOC-PMC-RENAL-0003-P0003",
+        "DOC-PMC-RENAL-0003-P0004",
+        "DOC-PMC-RENAL-0003-P0008",
+        "DOC-PMC-RENAL-0003-P0011",
+        "DOC-PMC-RENAL-0003-P0012",
+        "DOC-PMC-RENAL-0003-P0013",
+        "DOC-PMC-RENAL-0003-P0016",
+        "DOC-PMC-RENAL-0003-P0017"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0001",
+        "DOC-PMC-RENAL-0003-B-C0003",
+        "DOC-PMC-RENAL-0003-B-C0004",
+        "DOC-PMC-RENAL-0003-B-C0005",
+        "DOC-PMC-RENAL-0003-B-C0006",
+        "DOC-PMC-RENAL-0003-B-C0013",
+        "DOC-PMC-RENAL-0003-B-C0017",
+        "DOC-PMC-RENAL-0003-B-C0018",
+        "DOC-PMC-RENAL-0003-B-C0019",
+        "DOC-PMC-RENAL-0003-B-C0022",
+        "DOC-PMC-RENAL-0003-B-C0023",
+        "DOC-PMC-RENAL-0003-B-C0024",
+        "DOC-PMC-RENAL-0003-B-C0025"
+      ],
+      "primary_evidence_quote": "Gut sensing and direct basolateral sensing of potassium in the distal nephron trigger rapid kaliuresis even in the absence of elevated aldosterone.",
+      "evidence_spans": [
+        "dietary potassium"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-028",
+      "query": "What role do cell-cycle arrest biomarkers (TIMP-2 and IGFBP7) play in predicting impending acute kidney injury?",
+      "topic": "aki",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: Urinary NGAL and TIMP-2 IGFBP7 in early AKI detection",
+      "medical_claim": "Elevated urinary [TIMP-2]x[IGFBP7] reflects tubular cell stress and arrest in the G1 phase, identifying patients at high risk of AKI prior to creatinine elevation.",
+      "answerable": true,
+      "is_partial": true,
+      "evaluation_label": "PARTIALLY_SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0126",
+        "DOC-PMC-RENAL-0006-P0132",
+        "DOC-PMC-RENAL-0006-P0134",
+        "DOC-PMC-RENAL-0006-P0165",
+        "DOC-PMC-RENAL-0006-P0169",
+        "DOC-PMC-RENAL-0006-P0174",
+        "DOC-PMC-RENAL-0006-P0177",
+        "DOC-PMC-RENAL-0006-P0178",
+        "DOC-PMC-RENAL-0006-P0180",
+        "DOC-PMC-RENAL-0006-P0305",
+        "DOC-PMC-RENAL-0006-P0306",
+        "DOC-PMC-RENAL-0006-P0309",
+        "DOC-PMC-RENAL-0006-P0310",
+        "DOC-PMC-RENAL-0006-P0311"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0128",
+        "DOC-PMC-RENAL-0006-B-C0134",
+        "DOC-PMC-RENAL-0006-B-C0136",
+        "DOC-PMC-RENAL-0006-B-C0167",
+        "DOC-PMC-RENAL-0006-B-C0171",
+        "DOC-PMC-RENAL-0006-B-C0176",
+        "DOC-PMC-RENAL-0006-B-C0179",
+        "DOC-PMC-RENAL-0006-B-C0180",
+        "DOC-PMC-RENAL-0006-B-C0182",
+        "DOC-PMC-RENAL-0006-B-C0308",
+        "DOC-PMC-RENAL-0006-B-C0309",
+        "DOC-PMC-RENAL-0006-B-C0312",
+        "DOC-PMC-RENAL-0006-B-C0313",
+        "DOC-PMC-RENAL-0006-B-C0314"
+      ],
+      "primary_evidence_quote": "Elevated urinary [TIMP-2]x[IGFBP7] reflects tubular cell stress and arrest in the G1 phase, identifying patients at high risk of AKI prior to creatinine elevation.",
+      "evidence_spans": [
+        "biomarkers"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-029",
+      "query": "Does tamsulosin accelerate spontaneous stone passage for uncomplicated 6 mm distal ureteric calculi?",
+      "topic": "nephrolithiasis",
+      "question_type": "management",
+      "learning_objective": "Dev V4: Alpha-1 blocker medical expulsive therapy MET for distal ureteric stones",
+      "medical_claim": "Tamsulosin relaxes ureteral smooth muscle to facilitate passage of distal ureteral stones measuring 5 to 10 mm with reduced analgesic requirements.",
+      "answerable": true,
+      "is_partial": true,
+      "evaluation_label": "PARTIALLY_SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0012"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0012"
+      ],
+      "primary_evidence_quote": "Tamsulosin relaxes ureteral smooth muscle to facilitate passage of distal ureteral stones measuring 5 to 10 mm with reduced analgesic requirements.",
+      "evidence_spans": [
+        "medical expulsive therapy"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-030",
+      "query": "When is flexible cystoscopy indicated in the initial workup of painless microscopic hematuria?",
+      "topic": "hematuria",
+      "question_type": "investigation",
+      "learning_objective": "Dev V4: Flexible cystoscopy indications in asymptomatic microscopic hematuria",
+      "medical_claim": "Cystoscopy is indicated in adult patients with microscopic hematuria who have intermediate or high risk of urothelial carcinoma (age >=50 or smoking history).",
+      "answerable": true,
+      "is_partial": true,
+      "evaluation_label": "PARTIALLY_SUPPORTED",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0020",
+        "DOC-PMC-RENAL-0025-P0022",
+        "DOC-PMC-RENAL-0025-P0033",
+        "DOC-PMC-RENAL-0025-P0034",
+        "DOC-PMC-RENAL-0025-P0036",
+        "DOC-PMC-RENAL-0025-P0046",
+        "DOC-PMC-RENAL-0025-P0048",
+        "DOC-PMC-RENAL-0025-P0050",
+        "DOC-PMC-RENAL-0025-P0058",
+        "DOC-PMC-RENAL-0025-P0060"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0020",
+        "DOC-PMC-RENAL-0025-B-C0022",
+        "DOC-PMC-RENAL-0025-B-C0033",
+        "DOC-PMC-RENAL-0025-B-C0034",
+        "DOC-PMC-RENAL-0025-B-C0036",
+        "DOC-PMC-RENAL-0025-B-C0046",
+        "DOC-PMC-RENAL-0025-B-C0048",
+        "DOC-PMC-RENAL-0025-B-C0050",
+        "DOC-PMC-RENAL-0025-B-C0058",
+        "DOC-PMC-RENAL-0025-B-C0060"
+      ],
+      "primary_evidence_quote": "Cystoscopy is indicated in adult patients with microscopic hematuria who have intermediate or high risk of urothelial carcinoma (age >=50 or smoking history).",
+      "evidence_spans": [
+        "cystoscopy"
+      ],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-031",
+      "query": "What bilateral fat-rich renal angiomyolipomas with spontaneous retroperitoneal hemorrhage characterize tuberous sclerosis complex?",
+      "topic": "tuberous_sclerosis_angiomyolipoma",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Tuberous sclerosis TSC1/TSC2 hamartin-tuberin complex and renal AML",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-032",
+      "query": "What chromosomal 3p deletion inactivating the VHL tumor suppressor gene drives HIF-1alpha accumulation in familial clear cell RCC?",
+      "topic": "von_hippel_lindau_ccrcc",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Von Hippel-Lindau VHL gene inactivation in clear cell renal cell carcinoma",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-033",
+      "query": "What skin fibrofolliculomas, spontaneous pneumothorax, and hybrid oncocytic renal tumors identify germline FLCN gene mutations?",
+      "topic": "birt_hogg_dube_folliculin",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Birt-Hogg-Dube syndrome FLCN mutations and chromophobe RCC",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-034",
+      "query": "Which metabolic Krebs cycle enzyme defect in fumarate hydratase (FH) predisposes to aggressive early-onset solitary collecting duct RCC?",
+      "topic": "hereditary_leiomyomatosis_fh",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Hereditary leiomyomatosis and renal cell cancer fumarate hydratase deficiency",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-035",
+      "query": "Which gain-of-function tyrosine kinase mutations in the MET proto-oncogene cause bilateral multifocal papillary renal cell carcinoma?",
+      "topic": "papillary_rcc_met_mutation",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Hereditary papillary renal carcinoma type 1 MET proto-oncogene activation",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-036",
+      "query": "What contiguous gene deletion syndrome combining Wilms tumor, aniridia, genitourinary anomalies, and intellectual disability involves WT1 and PAX6?",
+      "topic": "wilms_tumor_wt1_aniridia",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: WAGR syndrome WT1 PAX6 contiguous 11p13 gene deletion",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-037",
+      "query": "What compression of the left renal vein between the abdominal aorta and superior mesenteric artery causes left flank pain and hematuria?",
+      "topic": "nutcracker_phenomenon_sma",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Nutcracker syndrome left renal vein entrapment by SMA",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-038",
+      "query": "What multiple small saccular renal aneurysms with 'string-of-beads' appearance identify necrotizing systemic polyarteritis nodosa?",
+      "topic": "polyarteritis_nodosa_microaneurysms",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Polyarteritis nodosa medium-vessel renal aneurysms on angiography",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-039",
+      "query": "What abrupt onset of severe oliguric hypertension with microangiopathic hemolytic anemia in systemic sclerosis requires urgent ACE inhibitor therapy?",
+      "topic": "scleroderma_renal_crisis_acei",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Scleroderma renal crisis malignant hypertension treatment with captopril",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-040",
+      "query": "What wedge-shaped non-enhancing cortical perfusion defect on contrast CT with a 'cortical rim sign' confirms acute renal thromboembolism?",
+      "topic": "renal_infarction_atrial_fibrillation",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Acute thromboembolic renal infarction in atrial fibrillation",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "transformation_family": "in_domain_coverage_gap",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-041",
+      "query": "What Ziehl-Neelsen carbolfuchsin staining identifying acid-fast bacilli in morning sputum confirms active pulmonary tuberculosis?",
+      "topic": "infectious_tuberculosis",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Pulmonary tuberculosis acid-fast bacilli sputum smear",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-042",
+      "query": "What highly specific autoantibodies targeting citrullinated peptide antigens correlate with erosive polyarticular rheumatoid arthritis?",
+      "topic": "rheumatology_rheumatoid_arthritis",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Rheumatoid arthritis anti-cyclic citrullinated peptide (anti-CCP)",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-043",
+      "query": "What N-terminal pro-B-type natriuretic peptide (NT-proBNP) threshold >300 pg/mL excludes acute decompensated heart failure in dyspneic patients?",
+      "topic": "cardiology_heart_failure",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Congestive heart failure NT-proBNP diagnostic cutoff",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-044",
+      "query": "What 24-hour urinary free cortisol excretion exceeding 3 times the upper reference limit confirms hypercortisolemia in Cushing syndrome?",
+      "topic": "endocrinology_cushing_syndrome",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Cushing syndrome 24-hour urinary free cortisol testing",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-045",
+      "query": "What discontinuous 'skip lesions' with deep linear cobblestone ulcerations and transmural inflammation identify gastrointestinal Crohn disease?",
+      "topic": "gastroenterology_crohn_disease",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Crohn disease transmural non-caseating granulomas on colonoscopy",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-046",
+      "query": "What resting pill-rolling tremor, cogwheel rigidity, and bradykinesia responsive to levodopa characterize idiopathic Parkinson disease?",
+      "topic": "neurology_parkinson_disease",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Parkinson disease substantia nigra pars compacta dopaminergic loss",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-047",
+      "query": "Which single point mutation replacing glutamic acid with valine at position 6 of the beta-globin chain causes hemoglobin S polymerisation?",
+      "topic": "hematology_sickle_cell_anemia",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Sickle cell disease hemoglobin S beta-globin Glu6Val mutation",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-048",
+      "query": "What increase in FEV1 by >=12% and >=200 mL following inhaled albuterol confirms reversible airway obstruction in asthma?",
+      "topic": "pulmonology_asthma_spirometry",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Bronchial asthma post-bronchodilator reversibility cutoff",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-049",
+      "query": "Which germline inactivating mutations in MLH1, MSH2, MSH6, or PMS2 cause microsatellite instability in Lynch syndrome?",
+      "topic": "oncology_colorectal_cancer",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Hereditary non-polyposis colorectal cancer Lynch syndrome DNA mismatch repair",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-050",
+      "query": "What asymmetry, border irregularity, color variegation, diameter >6 mm, and evolving appearance define melanoma screening criteria?",
+      "topic": "dermatology_melanoma_abcde",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg: Cutaneous malignant melanoma ABCDE clinical criteria",
+      "medical_claim": null,
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "transformation_family": "out_of_domain",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-051",
+      "query": "Why do mineralocorticoid receptor antagonists such as spironolactone cause severe hypokalemia by accelerating urinary potassium loss?",
+      "topic": "raas",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Aldosterone antagonists increase potassium wasting in urine",
+      "medical_claim": "Spironolactone directly stimulates apical principal cell potassium secretion to induce hypokalemia.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "direction_of_effect_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-052",
+      "query": "How does basolateral nephrin anchor podocyte cell bodies directly to the glomerular endothelial basement membrane?",
+      "topic": "filtration_barrier",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Nephrin located exclusively on basolateral podocyte membranes",
+      "medical_claim": "Nephrin is localized to the basolateral podocyte membrane where it forms hemidesmosomes with endothelial collagen.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "anatomical_localization_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-053",
+      "query": "Which apical potassium channel in the S1 proximal tubule reabsorbs 65% of filtered potassium via active ROMK transport?",
+      "topic": "potassium_handling",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: ROMK mediates proximal potassium reabsorption",
+      "medical_claim": "ROMK channels are expressed on proximal tubular brush borders to reabsorb filtered potassium.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "wrong_nephron_segment",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-054",
+      "query": "How does apical pendrin in Type A intercalated cells pump protons into tubular fluid during systemic metabolic acidosis?",
+      "topic": "acid_base",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Pendrin secretes hydrogen ions into the lumen during acidosis",
+      "medical_claim": "Pendrin functions as an apical proton pump in Type A intercalated cells to acidify urine during acidosis.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "transporter_function_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-055",
+      "query": "Why should intravenous bumetanide be given immediately in high doses to patients with volume-depleted prerenal azotemia?",
+      "topic": "aki",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: High-dose loop diuretics accelerate renal recovery in prerenal azotemia",
+      "medical_claim": "Loop diuretics are the primary treatment for prerenal azotemia to induce immediate renal vascular dilation.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "contraindication_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-056",
+      "query": "Does a single isolated transient bump in serum creatinine that normalizes in 24 hours meet criteria for chronic kidney disease?",
+      "topic": "ckd",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: CKD diagnosis established by single abnormal creatinine without time duration",
+      "medical_claim": "Chronic kidney disease is diagnosed immediately upon discovering a single elevated creatinine level without requiring 3 months duration.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "temporal_criteria_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-057",
+      "query": "How does intravenous calcium gluconate eliminate systemic hyperkalemia by lowering total serum potassium?",
+      "topic": "hyperkalaemia",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Calcium gluconate shifts potassium into cells to lower plasma potassium",
+      "medical_claim": "Intravenous calcium gluconate lowers serum potassium concentration by promoting renal potassium excretion.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "mechanism_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-058",
+      "query": "How does Proteus mirabilis urease secretion trigger pure calcium oxalate monohydrate stone precipitation?",
+      "topic": "nephrolithiasis",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Urease-producing bacteria cause hypercalciuria calcium oxalate stones",
+      "medical_claim": "Proteus urease catalyzes calcium oxalate crystallization to form radiolucent kidney stones.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "wrong_pathophysiology",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-059",
+      "query": "Why is routine urinary acidification with ammonium chloride recommended to dissolve myoglobin casts in rhabdomyolysis?",
+      "topic": "rhabdomyolysis",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: Acidic urine prevents myoglobin cast formation",
+      "medical_claim": "Acidifying urine below pH 5.0 dissolves myoglobin casts and protects proximal tubular epithelial cells from oxidative toxicity.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "treatment_indication_inversion",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    },
+    {
+      "query_id": "SAF-DEV-V4-060",
+      "query": "What potassium-to-glucose stoichiometry is utilized by apical SGLT2 to drive glucose uptake?",
+      "topic": "tubular_transport",
+      "question_type": "investigation",
+      "learning_objective": "Dev Neg Perturb: SGLT2 cotransports potassium and glucose",
+      "medical_claim": "SGLT2 couples the transport of one potassium ion with one glucose molecule across the proximal brush border.",
+      "answerable": false,
+      "is_partial": false,
+      "evaluation_label": "DIFFICULT_PERTURBATION_NEGATIVE",
+      "transformation_family": "transporter_ion_substitution",
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "primary_evidence_quote": null,
+      "evidence_spans": [],
+      "review_status": "AUTOMATED_SEMANTIC_REVIEW"
+    }
+  ]
+}

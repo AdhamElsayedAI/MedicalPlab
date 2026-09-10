@@ -1,0 +1,2655 @@
+{
+  "heldout_sha": "0368761712c91b068f913fef3760a2a331dfe0de735eb2ac5a77bcdef920a8c6",
+  "results": {
+    "V4-HELD-001": {
+      "query_id": "V4-HELD-001",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 8.4375,
+        "is_grounded": true,
+        "latency_ms": 1839.6603999935905,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0019",
+        "top1_doc_id": "DOC-PMC-RENAL-0002",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.4375,
+        "sufficiency_prob": 0.9691644906997681,
+        "is_grounded": true,
+        "latency_ms": 1565.7898999925237,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0019",
+        "top1_doc_id": "DOC-PMC-RENAL-0002",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-002": {
+      "query_id": "V4-HELD-002",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 3.6875,
+        "is_grounded": true,
+        "latency_ms": 753.3837000009953,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0001",
+        "top1_doc_id": "DOC-PMC-RENAL-0002",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 3.6875,
+        "sufficiency_prob": 0.8502674698829651,
+        "is_grounded": true,
+        "latency_ms": 750.5898000017623,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0001",
+        "top1_doc_id": "DOC-PMC-RENAL-0002",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-003": {
+      "query_id": "V4-HELD-003",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 4.75,
+        "is_grounded": true,
+        "latency_ms": 751.0709999987739,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0031",
+        "top1_doc_id": "DOC-PMC-RENAL-0018",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.875,
+        "sufficiency_prob": 0.7971044778823853,
+        "is_grounded": true,
+        "latency_ms": 781.4752999984194,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0031",
+        "top1_doc_id": "DOC-PMC-RENAL-0018",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-004": {
+      "query_id": "V4-HELD-004",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 6.625,
+        "is_grounded": true,
+        "latency_ms": 827.6884000006248,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0033",
+        "top1_doc_id": "DOC-PMC-RENAL-0018",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 6.625,
+        "sufficiency_prob": 0.8523627519607544,
+        "is_grounded": true,
+        "latency_ms": 814.4495999949868,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0033",
+        "top1_doc_id": "DOC-PMC-RENAL-0018",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-005": {
+      "query_id": "V4-HELD-005",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 7.75,
+        "is_grounded": true,
+        "latency_ms": 659.9203000005218,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0037",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.09090909090909091
+      },
+      "v4": {
+        "top1_score": 7.75,
+        "sufficiency_prob": 0.8889796733856201,
+        "is_grounded": true,
+        "latency_ms": 657.8541999988374,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0037",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.1
+      }
+    },
+    "V4-HELD-006": {
+      "query_id": "V4-HELD-006",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 7.9375,
+        "is_grounded": true,
+        "latency_ms": 676.4585000055376,
+        "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0059",
+        "top1_doc_id": "DOC-PMC-RENAL-0023",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.25
+      },
+      "v4": {
+        "top1_score": 7.9375,
+        "sufficiency_prob": 0.9073632955551147,
+        "is_grounded": true,
+        "latency_ms": 677.5887999974657,
+        "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0059",
+        "top1_doc_id": "DOC-PMC-RENAL-0023",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.25
+      }
+    },
+    "V4-HELD-007": {
+      "query_id": "V4-HELD-007",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 7.4375,
+        "is_grounded": true,
+        "latency_ms": 487.8813999966951,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0097",
+        "top1_doc_id": "DOC-PMC-RENAL-0019",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.4375,
+        "sufficiency_prob": 0.9335341453552246,
+        "is_grounded": true,
+        "latency_ms": 488.3479999989504,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0097",
+        "top1_doc_id": "DOC-PMC-RENAL-0019",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-008": {
+      "query_id": "V4-HELD-008",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 8.125,
+        "is_grounded": true,
+        "latency_ms": 449.0261999962968,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0028",
+        "top1_doc_id": "DOC-PMC-RENAL-0019",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.125,
+        "sufficiency_prob": 0.9273403882980347,
+        "is_grounded": true,
+        "latency_ms": 448.9887000017916,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0028",
+        "top1_doc_id": "DOC-PMC-RENAL-0019",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-009": {
+      "query_id": "V4-HELD-009",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 8.6875,
+        "is_grounded": true,
+        "latency_ms": 566.5045999921858,
+        "top1_chunk_id": "DOC-PMC-RENAL-0020-B-C0022",
+        "top1_doc_id": "DOC-PMC-RENAL-0020",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.6875,
+        "sufficiency_prob": 0.9500546455383301,
+        "is_grounded": true,
+        "latency_ms": 537.1423999968101,
+        "top1_chunk_id": "DOC-PMC-RENAL-0020-B-C0022",
+        "top1_doc_id": "DOC-PMC-RENAL-0020",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-010": {
+      "query_id": "V4-HELD-010",
+      "is_answerable": true,
+      "curriculum_stratum": "physiology",
+      "v3": {
+        "top1_score": 9.0625,
+        "is_grounded": true,
+        "latency_ms": 523.8658000016585,
+        "top1_chunk_id": "DOC-PMC-RENAL-0020-B-C0003",
+        "top1_doc_id": "DOC-PMC-RENAL-0020",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 9.0625,
+        "sufficiency_prob": 0.9281978011131287,
+        "is_grounded": true,
+        "latency_ms": 548.2850000043982,
+        "top1_chunk_id": "DOC-PMC-RENAL-0020-B-C0003",
+        "top1_doc_id": "DOC-PMC-RENAL-0020",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-011": {
+      "query_id": "V4-HELD-011",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 4.3125,
+        "is_grounded": true,
+        "latency_ms": 922.2956000012346,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0004",
+        "top1_doc_id": "DOC-PMC-RENAL-0001",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.3125,
+        "sufficiency_prob": 0.9358893036842346,
+        "is_grounded": true,
+        "latency_ms": 918.7422999966657,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0004",
+        "top1_doc_id": "DOC-PMC-RENAL-0001",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-012": {
+      "query_id": "V4-HELD-012",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 5.8125,
+        "is_grounded": true,
+        "latency_ms": 948.3171999963815,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0020",
+        "top1_doc_id": "DOC-PMC-RENAL-0001",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.5
+      },
+      "v4": {
+        "top1_score": 5.8125,
+        "sufficiency_prob": 0.9459018111228943,
+        "is_grounded": true,
+        "latency_ms": 943.4861999980058,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0020",
+        "top1_doc_id": "DOC-PMC-RENAL-0001",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-013": {
+      "query_id": "V4-HELD-013",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 5.5625,
+        "is_grounded": true,
+        "latency_ms": 508.3071999979438,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0008",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.05
+      },
+      "v4": {
+        "top1_score": 5.5625,
+        "sufficiency_prob": 0.9033918976783752,
+        "is_grounded": true,
+        "latency_ms": 512.1158999972977,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0008",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.05
+      }
+    },
+    "V4-HELD-014": {
+      "query_id": "V4-HELD-014",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 6.6875,
+        "is_grounded": true,
+        "latency_ms": 768.6133999959566,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0016",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.16666666666666666
+      },
+      "v4": {
+        "top1_score": 6.6875,
+        "sufficiency_prob": 0.8540830612182617,
+        "is_grounded": true,
+        "latency_ms": 768.5245000029681,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0016",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.16666666666666666
+      }
+    },
+    "V4-HELD-015": {
+      "query_id": "V4-HELD-015",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 6.0,
+        "is_grounded": true,
+        "latency_ms": 833.4839000017382,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0026",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.09090909090909091
+      },
+      "v4": {
+        "top1_score": 6.0,
+        "sufficiency_prob": 0.7601450681686401,
+        "is_grounded": true,
+        "latency_ms": 820.1185000070836,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0026",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.09090909090909091
+      }
+    },
+    "V4-HELD-016": {
+      "query_id": "V4-HELD-016",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 7.0,
+        "is_grounded": true,
+        "latency_ms": 808.8489999936428,
+        "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+        "top1_doc_id": "DOC-PMC-RENAL-0004",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.0,
+        "sufficiency_prob": 0.8221979737281799,
+        "is_grounded": true,
+        "latency_ms": 810.5527999941842,
+        "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+        "top1_doc_id": "DOC-PMC-RENAL-0004",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-017": {
+      "query_id": "V4-HELD-017",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 8.6875,
+        "is_grounded": true,
+        "latency_ms": 783.4834000022965,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0049",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.6875,
+        "sufficiency_prob": 0.8672937154769897,
+        "is_grounded": true,
+        "latency_ms": 785.6126000042423,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0049",
+        "top1_doc_id": "DOC-PMC-RENAL-0005",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-018": {
+      "query_id": "V4-HELD-018",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 7.6875,
+        "is_grounded": true,
+        "latency_ms": 536.9730999955209,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0058",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.625,
+        "sufficiency_prob": 0.642028272151947,
+        "is_grounded": false,
+        "latency_ms": 539.2382999998517,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0058",
+        "top1_doc_id": "DOC-PMC-RENAL-0009",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-019": {
+      "query_id": "V4-HELD-019",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 10.125,
+        "is_grounded": true,
+        "latency_ms": 534.4621000040206,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0129",
+        "top1_doc_id": "DOC-PMC-RENAL-0010",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 10.125,
+        "sufficiency_prob": 0.9144425988197327,
+        "is_grounded": true,
+        "latency_ms": 533.6621999958879,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0129",
+        "top1_doc_id": "DOC-PMC-RENAL-0010",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-020": {
+      "query_id": "V4-HELD-020",
+      "is_answerable": true,
+      "curriculum_stratum": "raas_tubular",
+      "v3": {
+        "top1_score": 8.875,
+        "is_grounded": true,
+        "latency_ms": 843.103000006522,
+        "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0001",
+        "top1_doc_id": "DOC-PMC-RENAL-0021",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.875,
+        "sufficiency_prob": 0.8869955539703369,
+        "is_grounded": true,
+        "latency_ms": 844.5917999997619,
+        "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0001",
+        "top1_doc_id": "DOC-PMC-RENAL-0021",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-021": {
+      "query_id": "V4-HELD-021",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 5.5625,
+        "is_grounded": true,
+        "latency_ms": 714.0390999993542,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0146",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 5.0,
+        "sufficiency_prob": 0.879504919052124,
+        "is_grounded": true,
+        "latency_ms": 713.8250000061817,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0008",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.25
+      }
+    },
+    "V4-HELD-022": {
+      "query_id": "V4-HELD-022",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 2.5625,
+        "is_grounded": true,
+        "latency_ms": 546.770100001595,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0041",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.5
+      },
+      "v4": {
+        "top1_score": 2.5625,
+        "sufficiency_prob": 0.8518567085266113,
+        "is_grounded": true,
+        "latency_ms": 534.1852999990806,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0041",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-023": {
+      "query_id": "V4-HELD-023",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 6.75,
+        "is_grounded": true,
+        "latency_ms": 549.7585000048275,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0181",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.25
+      },
+      "v4": {
+        "top1_score": 6.75,
+        "sufficiency_prob": 0.9136387705802917,
+        "is_grounded": true,
+        "latency_ms": 547.3024000020814,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0181",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.25
+      }
+    },
+    "V4-HELD-024": {
+      "query_id": "V4-HELD-024",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 4.875,
+        "is_grounded": true,
+        "latency_ms": 512.3574000026565,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0034",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.875,
+        "sufficiency_prob": 0.8434092998504639,
+        "is_grounded": true,
+        "latency_ms": 512.9224000047543,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0034",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-025": {
+      "query_id": "V4-HELD-025",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 5.875,
+        "is_grounded": true,
+        "latency_ms": 556.3275000022259,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 5.875,
+        "sufficiency_prob": 0.9148971438407898,
+        "is_grounded": true,
+        "latency_ms": 556.7866999990656,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+        "top1_doc_id": "DOC-PMC-RENAL-0015",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-026": {
+      "query_id": "V4-HELD-026",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 7.8125,
+        "is_grounded": true,
+        "latency_ms": 782.1473000003607,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0324",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "rr": 0.0
+      },
+      "v4": {
+        "top1_score": 7.8125,
+        "sufficiency_prob": 0.9127012491226196,
+        "is_grounded": true,
+        "latency_ms": 787.0304000025499,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0324",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 0,
+        "doc_hit5": 0,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "candidate_coverage50": 1,
+        "rr": 0.0
+      }
+    },
+    "V4-HELD-027": {
+      "query_id": "V4-HELD-027",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 4.9375,
+        "is_grounded": true,
+        "latency_ms": 673.1321000042954,
+        "top1_chunk_id": "DOC-PMC-RENAL-0016-B-C0002",
+        "top1_doc_id": "DOC-PMC-RENAL-0016",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.9375,
+        "sufficiency_prob": 0.7944821119308472,
+        "is_grounded": true,
+        "latency_ms": 696.9612000029883,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0310",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-028": {
+      "query_id": "V4-HELD-028",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 8.125,
+        "is_grounded": true,
+        "latency_ms": 829.0686999971513,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0233",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.5
+      },
+      "v4": {
+        "top1_score": 8.125,
+        "sufficiency_prob": 0.9279319643974304,
+        "is_grounded": true,
+        "latency_ms": 828.8361999948393,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0233",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-029": {
+      "query_id": "V4-HELD-029",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 3.0625,
+        "is_grounded": true,
+        "latency_ms": 742.1206999933929,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0194",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "rr": 0.0
+      },
+      "v4": {
+        "top1_score": 3.125,
+        "sufficiency_prob": 0.8473064303398132,
+        "is_grounded": true,
+        "latency_ms": 745.9076000013738,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0194",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "candidate_coverage50": 1,
+        "rr": 0.0
+      }
+    },
+    "V4-HELD-030": {
+      "query_id": "V4-HELD-030",
+      "is_answerable": true,
+      "curriculum_stratum": "aki",
+      "v3": {
+        "top1_score": 7.0,
+        "is_grounded": true,
+        "latency_ms": 748.9720000012312,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0231",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.16666666666666666
+      },
+      "v4": {
+        "top1_score": 7.0,
+        "sufficiency_prob": 0.9240429401397705,
+        "is_grounded": true,
+        "latency_ms": 751.6351000012946,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0231",
+        "top1_doc_id": "DOC-PMC-RENAL-0006",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.16666666666666666
+      }
+    },
+    "V4-HELD-031": {
+      "query_id": "V4-HELD-031",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 7.75,
+        "is_grounded": true,
+        "latency_ms": 531.8979999938165,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0045",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.75,
+        "sufficiency_prob": 0.912163257598877,
+        "is_grounded": true,
+        "latency_ms": 519.829299999401,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0045",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-032": {
+      "query_id": "V4-HELD-032",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 7.0,
+        "is_grounded": true,
+        "latency_ms": 481.38870000548195,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0010",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "rr": 0.0
+      },
+      "v4": {
+        "top1_score": 7.0,
+        "sufficiency_prob": 0.9179095029830933,
+        "is_grounded": true,
+        "latency_ms": 482.6743000012357,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0010",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 0,
+        "candidate_coverage50": 0,
+        "rr": 0.0
+      }
+    },
+    "V4-HELD-033": {
+      "query_id": "V4-HELD-033",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 7.375,
+        "is_grounded": true,
+        "latency_ms": 342.82990000065183,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0125",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.375,
+        "sufficiency_prob": 0.9560097455978394,
+        "is_grounded": true,
+        "latency_ms": 328.4443000011379,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0125",
+        "top1_doc_id": "DOC-PMC-RENAL-0007",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-034": {
+      "query_id": "V4-HELD-034",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 4.4375,
+        "is_grounded": true,
+        "latency_ms": 615.1506000023801,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0059",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.4375,
+        "sufficiency_prob": 0.9261106848716736,
+        "is_grounded": true,
+        "latency_ms": 615.5128000027617,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0059",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-035": {
+      "query_id": "V4-HELD-035",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 8.375,
+        "is_grounded": true,
+        "latency_ms": 638.5751999987406,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.375,
+        "sufficiency_prob": 0.9148236513137817,
+        "is_grounded": true,
+        "latency_ms": 637.3719999974128,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-036": {
+      "query_id": "V4-HELD-036",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 4.0625,
+        "is_grounded": true,
+        "latency_ms": 488.317499999539,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0061",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 4.1875,
+        "sufficiency_prob": 0.8999103307723999,
+        "is_grounded": true,
+        "latency_ms": 427.68939999950817,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0061",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-037": {
+      "query_id": "V4-HELD-037",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 7.6875,
+        "is_grounded": true,
+        "latency_ms": 719.867300002079,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0014",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.5
+      },
+      "v4": {
+        "top1_score": 7.6875,
+        "sufficiency_prob": 0.9523429274559021,
+        "is_grounded": true,
+        "latency_ms": 719.4595000037225,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0014",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-038": {
+      "query_id": "V4-HELD-038",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 3.0,
+        "is_grounded": true,
+        "latency_ms": 568.5291000045254,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0074",
+        "top1_doc_id": "DOC-PMC-RENAL-0014",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 3.0,
+        "sufficiency_prob": 0.8912745118141174,
+        "is_grounded": true,
+        "latency_ms": 554.6854000058374,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0074",
+        "top1_doc_id": "DOC-PMC-RENAL-0014",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-039": {
+      "query_id": "V4-HELD-039",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 6.8125,
+        "is_grounded": true,
+        "latency_ms": 595.0994000086212,
+        "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0006",
+        "top1_doc_id": "DOC-PMC-RENAL-0024",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 6.8125,
+        "sufficiency_prob": 0.9304674863815308,
+        "is_grounded": true,
+        "latency_ms": 597.8787000058219,
+        "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0006",
+        "top1_doc_id": "DOC-PMC-RENAL-0024",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-040": {
+      "query_id": "V4-HELD-040",
+      "is_answerable": true,
+      "curriculum_stratum": "ckd",
+      "v3": {
+        "top1_score": 5.9375,
+        "is_grounded": true,
+        "latency_ms": 724.5476000025519,
+        "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0043",
+        "top1_doc_id": "DOC-PMC-RENAL-0024",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.1
+      },
+      "v4": {
+        "top1_score": 5.9375,
+        "sufficiency_prob": 0.9551640748977661,
+        "is_grounded": true,
+        "latency_ms": 690.1250000009895,
+        "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0043",
+        "top1_doc_id": "DOC-PMC-RENAL-0024",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.1
+      }
+    },
+    "V4-HELD-041": {
+      "query_id": "V4-HELD-041",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 9.0625,
+        "is_grounded": true,
+        "latency_ms": 553.2462999981362,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0018",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 9.0625,
+        "sufficiency_prob": 0.9446370005607605,
+        "is_grounded": true,
+        "latency_ms": 555.7737999988603,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0018",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-042": {
+      "query_id": "V4-HELD-042",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 10.0625,
+        "is_grounded": true,
+        "latency_ms": 421.7120999965118,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0021",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 10.0625,
+        "sufficiency_prob": 0.9676841497421265,
+        "is_grounded": true,
+        "latency_ms": 420.99859999871114,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0021",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-043": {
+      "query_id": "V4-HELD-043",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 6.75,
+        "is_grounded": true,
+        "latency_ms": 519.664899999043,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0069",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.06666666666666667
+      },
+      "v4": {
+        "top1_score": 6.75,
+        "sufficiency_prob": 0.945671021938324,
+        "is_grounded": true,
+        "latency_ms": 528.8677999997162,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0069",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.06666666666666667
+      }
+    },
+    "V4-HELD-044": {
+      "query_id": "V4-HELD-044",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 9.0,
+        "is_grounded": true,
+        "latency_ms": 568.1539999932284,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0186",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.16666666666666666
+      },
+      "v4": {
+        "top1_score": 9.0,
+        "sufficiency_prob": 0.9561009407043457,
+        "is_grounded": true,
+        "latency_ms": 568.0898999999044,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0186",
+        "top1_doc_id": "DOC-PMC-RENAL-0008",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.14285714285714285
+      }
+    },
+    "V4-HELD-045": {
+      "query_id": "V4-HELD-045",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 2.3125,
+        "is_grounded": true,
+        "latency_ms": 847.0908999952371,
+        "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0011",
+        "top1_doc_id": "DOC-PMC-RENAL-0011",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 2.3125,
+        "sufficiency_prob": 0.9359201192855835,
+        "is_grounded": true,
+        "latency_ms": 849.4331999972928,
+        "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0011",
+        "top1_doc_id": "DOC-PMC-RENAL-0011",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-046": {
+      "query_id": "V4-HELD-046",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 8.8125,
+        "is_grounded": true,
+        "latency_ms": 823.2180999984848,
+        "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0013",
+        "top1_doc_id": "DOC-PMC-RENAL-0011",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.8125,
+        "sufficiency_prob": 0.9481692314147949,
+        "is_grounded": true,
+        "latency_ms": 822.8521999990335,
+        "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0013",
+        "top1_doc_id": "DOC-PMC-RENAL-0011",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-047": {
+      "query_id": "V4-HELD-047",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 8.375,
+        "is_grounded": true,
+        "latency_ms": 619.4040999980643,
+        "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0043",
+        "top1_doc_id": "DOC-PMC-RENAL-0013",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 8.375,
+        "sufficiency_prob": 0.7549926042556763,
+        "is_grounded": true,
+        "latency_ms": 620.6472000048961,
+        "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0043",
+        "top1_doc_id": "DOC-PMC-RENAL-0013",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-048": {
+      "query_id": "V4-HELD-048",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 8.0625,
+        "is_grounded": true,
+        "latency_ms": 665.9223999959067,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0082",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "rr": 0.16666666666666666
+      },
+      "v4": {
+        "top1_score": 8.0625,
+        "sufficiency_prob": 0.8604713678359985,
+        "is_grounded": true,
+        "latency_ms": 667.7264999962063,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0082",
+        "top1_doc_id": "DOC-PMC-RENAL-0012",
+        "doc_hit1": 0,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 0,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.16666666666666666
+      }
+    },
+    "V4-HELD-049": {
+      "query_id": "V4-HELD-049",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 7.3125,
+        "is_grounded": true,
+        "latency_ms": 552.9739999983576,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+        "top1_doc_id": "DOC-PMC-RENAL-0025",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 1.0
+      },
+      "v4": {
+        "top1_score": 7.3125,
+        "sufficiency_prob": 0.948432445526123,
+        "is_grounded": true,
+        "latency_ms": 553.4038999976474,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+        "top1_doc_id": "DOC-PMC-RENAL-0025",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 1,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 1.0
+      }
+    },
+    "V4-HELD-050": {
+      "query_id": "V4-HELD-050",
+      "is_answerable": true,
+      "curriculum_stratum": "gn_vascular",
+      "v3": {
+        "top1_score": 7.625,
+        "is_grounded": true,
+        "latency_ms": 520.3509000057238,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0017",
+        "top1_doc_id": "DOC-PMC-RENAL-0025",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "rr": 0.5
+      },
+      "v4": {
+        "top1_score": 7.625,
+        "sufficiency_prob": 0.9258341193199158,
+        "is_grounded": true,
+        "latency_ms": 521.6689000080805,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0017",
+        "top1_doc_id": "DOC-PMC-RENAL-0025",
+        "doc_hit1": 1,
+        "doc_hit5": 1,
+        "passage_hit1": 0,
+        "passage_hit5": 1,
+        "reranker_input_hit20": 1,
+        "candidate_coverage50": 1,
+        "rr": 0.5
+      }
+    },
+    "V4-HELD-051": {
+      "query_id": "V4-HELD-051",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 6.125,
+        "is_grounded": true,
+        "latency_ms": 512.6229000015883,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0009",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      },
+      "v4": {
+        "top1_score": 6.125,
+        "sufficiency_prob": 0.9166832566261292,
+        "is_grounded": true,
+        "latency_ms": 512.2933999955421,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0009",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      }
+    },
+    "V4-HELD-052": {
+      "query_id": "V4-HELD-052",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 3.875,
+        "is_grounded": true,
+        "latency_ms": 793.3138000007602,
+        "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0054",
+        "top1_doc_id": "DOC-PMC-RENAL-0023"
+      },
+      "v4": {
+        "top1_score": 3.9375,
+        "sufficiency_prob": 0.9353498816490173,
+        "is_grounded": true,
+        "latency_ms": 782.7784000037354,
+        "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0054",
+        "top1_doc_id": "DOC-PMC-RENAL-0023"
+      }
+    },
+    "V4-HELD-053": {
+      "query_id": "V4-HELD-053",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -5.4375,
+        "is_grounded": false,
+        "latency_ms": 759.3607000017073,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0060",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      },
+      "v4": {
+        "top1_score": -5.4375,
+        "sufficiency_prob": 0.5851379632949829,
+        "is_grounded": false,
+        "latency_ms": 759.4702999995206,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0060",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      }
+    },
+    "V4-HELD-054": {
+      "query_id": "V4-HELD-054",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -2.5625,
+        "is_grounded": false,
+        "latency_ms": 819.3847000002279,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0042",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      },
+      "v4": {
+        "top1_score": -2.5625,
+        "sufficiency_prob": 0.775619626045227,
+        "is_grounded": true,
+        "latency_ms": 824.0302000049269,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0047",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      }
+    },
+    "V4-HELD-055": {
+      "query_id": "V4-HELD-055",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 0.125,
+        "is_grounded": false,
+        "latency_ms": 696.8651999923168,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0065",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      },
+      "v4": {
+        "top1_score": 0.125,
+        "sufficiency_prob": 0.8285111784934998,
+        "is_grounded": true,
+        "latency_ms": 696.4448999933666,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0065",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      }
+    },
+    "V4-HELD-056": {
+      "query_id": "V4-HELD-056",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 1.625,
+        "is_grounded": true,
+        "latency_ms": 444.46090000565164,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0293",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": 1.625,
+        "sufficiency_prob": 0.873132586479187,
+        "is_grounded": true,
+        "latency_ms": 444.2156000077375,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0293",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-057": {
+      "query_id": "V4-HELD-057",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -0.375,
+        "is_grounded": false,
+        "latency_ms": 589.5882000040729,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0293",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -0.5,
+        "sufficiency_prob": 0.8397040367126465,
+        "is_grounded": true,
+        "latency_ms": 613.2109999962267,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0293",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-058": {
+      "query_id": "V4-HELD-058",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 0.5,
+        "is_grounded": false,
+        "latency_ms": 710.1430999973672,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0062",
+        "top1_doc_id": "DOC-PMC-RENAL-0005"
+      },
+      "v4": {
+        "top1_score": 0.5,
+        "sufficiency_prob": 0.7894532680511475,
+        "is_grounded": true,
+        "latency_ms": 709.8881999918376,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0062",
+        "top1_doc_id": "DOC-PMC-RENAL-0005"
+      }
+    },
+    "V4-HELD-059": {
+      "query_id": "V4-HELD-059",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 3.125,
+        "is_grounded": true,
+        "latency_ms": 747.739400001592,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0062",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      },
+      "v4": {
+        "top1_score": 3.125,
+        "sufficiency_prob": 0.821403443813324,
+        "is_grounded": true,
+        "latency_ms": 748.2393999962369,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0062",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      }
+    },
+    "V4-HELD-060": {
+      "query_id": "V4-HELD-060",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -5.0,
+        "is_grounded": false,
+        "latency_ms": 585.1754999966943,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0183",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -5.0,
+        "sufficiency_prob": 0.42717933654785156,
+        "is_grounded": false,
+        "latency_ms": 679.7149999983958,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0183",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-061": {
+      "query_id": "V4-HELD-061",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -5.6875,
+        "is_grounded": false,
+        "latency_ms": 552.4467000068398,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0007",
+        "top1_doc_id": "DOC-PMC-RENAL-0014"
+      },
+      "v4": {
+        "top1_score": -5.6875,
+        "sufficiency_prob": 0.5526972413063049,
+        "is_grounded": false,
+        "latency_ms": 658.6895000073127,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0007",
+        "top1_doc_id": "DOC-PMC-RENAL-0014"
+      }
+    },
+    "V4-HELD-062": {
+      "query_id": "V4-HELD-062",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 6.0625,
+        "is_grounded": true,
+        "latency_ms": 582.6394000032451,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      },
+      "v4": {
+        "top1_score": 6.0625,
+        "sufficiency_prob": 0.8469341397285461,
+        "is_grounded": true,
+        "latency_ms": 583.5003999964101,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      }
+    },
+    "V4-HELD-063": {
+      "query_id": "V4-HELD-063",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -1.0625,
+        "is_grounded": false,
+        "latency_ms": 722.7615000010701,
+        "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0049",
+        "top1_doc_id": "DOC-PMC-RENAL-0013"
+      },
+      "v4": {
+        "top1_score": -1.0625,
+        "sufficiency_prob": 0.7098230123519897,
+        "is_grounded": true,
+        "latency_ms": 704.8912000027485,
+        "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0049",
+        "top1_doc_id": "DOC-PMC-RENAL-0013"
+      }
+    },
+    "V4-HELD-064": {
+      "query_id": "V4-HELD-064",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -4.875,
+        "is_grounded": false,
+        "latency_ms": 444.42419999541016,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0044",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -4.875,
+        "sufficiency_prob": 0.6140310764312744,
+        "is_grounded": false,
+        "latency_ms": 435.2435999971931,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0044",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-065": {
+      "query_id": "V4-HELD-065",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -6.28125,
+        "is_grounded": false,
+        "latency_ms": 448.46800000959774,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0042",
+        "top1_doc_id": "DOC-PMC-RENAL-0014"
+      },
+      "v4": {
+        "top1_score": -6.28125,
+        "sufficiency_prob": 0.5616700649261475,
+        "is_grounded": false,
+        "latency_ms": 450.83570000133477,
+        "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0042",
+        "top1_doc_id": "DOC-PMC-RENAL-0014"
+      }
+    },
+    "V4-HELD-066": {
+      "query_id": "V4-HELD-066",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -1.3125,
+        "is_grounded": false,
+        "latency_ms": 609.5739000011235,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0005"
+      },
+      "v4": {
+        "top1_score": -1.3125,
+        "sufficiency_prob": 0.836328387260437,
+        "is_grounded": true,
+        "latency_ms": 614.6375000025728,
+        "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0005"
+      }
+    },
+    "V4-HELD-067": {
+      "query_id": "V4-HELD-067",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 4.0625,
+        "is_grounded": true,
+        "latency_ms": 503.4779999987222,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0132",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": 4.0625,
+        "sufficiency_prob": 0.9480751752853394,
+        "is_grounded": true,
+        "latency_ms": 506.8316999968374,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0132",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-068": {
+      "query_id": "V4-HELD-068",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -4.125,
+        "is_grounded": false,
+        "latency_ms": 391.7968999958248,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0015"
+      },
+      "v4": {
+        "top1_score": -4.125,
+        "sufficiency_prob": 0.8235539197921753,
+        "is_grounded": true,
+        "latency_ms": 495.1574999940931,
+        "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0032",
+        "top1_doc_id": "DOC-PMC-RENAL-0015"
+      }
+    },
+    "V4-HELD-069": {
+      "query_id": "V4-HELD-069",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": -0.625,
+        "is_grounded": false,
+        "latency_ms": 519.9246999909519,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0067",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      },
+      "v4": {
+        "top1_score": -0.625,
+        "sufficiency_prob": 0.7025718092918396,
+        "is_grounded": true,
+        "latency_ms": 521.5447999944445,
+        "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0067",
+        "top1_doc_id": "DOC-PMC-RENAL-0019"
+      }
+    },
+    "V4-HELD-070": {
+      "query_id": "V4-HELD-070",
+      "is_answerable": false,
+      "curriculum_stratum": "coverage_gap",
+      "v3": {
+        "top1_score": 2.125,
+        "is_grounded": true,
+        "latency_ms": 508.53709999501007,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0274",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": 2.125,
+        "sufficiency_prob": 0.9124236106872559,
+        "is_grounded": true,
+        "latency_ms": 526.0397999954876,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0274",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-071": {
+      "query_id": "V4-HELD-071",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": 2.0625,
+        "is_grounded": true,
+        "latency_ms": 516.9636999926297,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0089",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      },
+      "v4": {
+        "top1_score": 2.0625,
+        "sufficiency_prob": 0.7525774836540222,
+        "is_grounded": true,
+        "latency_ms": 456.0773999983212,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0089",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      }
+    },
+    "V4-HELD-072": {
+      "query_id": "V4-HELD-072",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -5.1875,
+        "is_grounded": false,
+        "latency_ms": 423.42019999341574,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0207",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      },
+      "v4": {
+        "top1_score": -5.1875,
+        "sufficiency_prob": 0.6301850080490112,
+        "is_grounded": false,
+        "latency_ms": 524.5358000029228,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0207",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      }
+    },
+    "V4-HELD-073": {
+      "query_id": "V4-HELD-073",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -8.5,
+        "is_grounded": false,
+        "latency_ms": 481.0131000049296,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0055",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -8.5,
+        "sufficiency_prob": 0.724657416343689,
+        "is_grounded": true,
+        "latency_ms": 480.88560000178404,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0055",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-074": {
+      "query_id": "V4-HELD-074",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -1.875,
+        "is_grounded": false,
+        "latency_ms": 553.9853000082076,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0123",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      },
+      "v4": {
+        "top1_score": -2.0,
+        "sufficiency_prob": 0.8641881942749023,
+        "is_grounded": true,
+        "latency_ms": 668.3623000062653,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0123",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      }
+    },
+    "V4-HELD-075": {
+      "query_id": "V4-HELD-075",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -6.1875,
+        "is_grounded": false,
+        "latency_ms": 392.1291999940877,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0264",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -5.9375,
+        "sufficiency_prob": 0.6030021905899048,
+        "is_grounded": false,
+        "latency_ms": 393.2065999979386,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0264",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-076": {
+      "query_id": "V4-HELD-076",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -2.0625,
+        "is_grounded": false,
+        "latency_ms": 528.8755000001402,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0274",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -1.9375,
+        "sufficiency_prob": 0.8511234521865845,
+        "is_grounded": true,
+        "latency_ms": 528.6706999977469,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0274",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-077": {
+      "query_id": "V4-HELD-077",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -8.25,
+        "is_grounded": false,
+        "latency_ms": 511.7836999997962,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0033",
+        "top1_doc_id": "DOC-PMC-RENAL-0025"
+      },
+      "v4": {
+        "top1_score": -8.25,
+        "sufficiency_prob": 0.42954787611961365,
+        "is_grounded": false,
+        "latency_ms": 510.7432000004337,
+        "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0033",
+        "top1_doc_id": "DOC-PMC-RENAL-0025"
+      }
+    },
+    "V4-HELD-078": {
+      "query_id": "V4-HELD-078",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -1.3125,
+        "is_grounded": false,
+        "latency_ms": 434.9623000016436,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0236",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -1.375,
+        "sufficiency_prob": 0.7985084652900696,
+        "is_grounded": true,
+        "latency_ms": 434.5538999987184,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0236",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-079": {
+      "query_id": "V4-HELD-079",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -4.8125,
+        "is_grounded": false,
+        "latency_ms": 495.5619999964256,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0020",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      },
+      "v4": {
+        "top1_score": -4.8125,
+        "sufficiency_prob": 0.8259857296943665,
+        "is_grounded": true,
+        "latency_ms": 498.7143999969703,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0020",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      }
+    },
+    "V4-HELD-080": {
+      "query_id": "V4-HELD-080",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -5.875,
+        "is_grounded": false,
+        "latency_ms": 575.0464999946416,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0299",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -5.875,
+        "sufficiency_prob": 0.8275874257087708,
+        "is_grounded": true,
+        "latency_ms": 576.4576000001398,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0299",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    },
+    "V4-HELD-081": {
+      "query_id": "V4-HELD-081",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -7.5625,
+        "is_grounded": false,
+        "latency_ms": 478.8660999984131,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0327",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -7.5625,
+        "sufficiency_prob": 0.6459624767303467,
+        "is_grounded": false,
+        "latency_ms": 477.8539999970235,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0327",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-082": {
+      "query_id": "V4-HELD-082",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -5.0625,
+        "is_grounded": false,
+        "latency_ms": 527.1326000001864,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0189",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -5.0,
+        "sufficiency_prob": 0.7687228322029114,
+        "is_grounded": true,
+        "latency_ms": 492.2100000039791,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0189",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-083": {
+      "query_id": "V4-HELD-083",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -10.375,
+        "is_grounded": false,
+        "latency_ms": 546.1871000006795,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": -10.375,
+        "sufficiency_prob": 0.742603600025177,
+        "is_grounded": true,
+        "latency_ms": 546.4661000005435,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-084": {
+      "query_id": "V4-HELD-084",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -7.0625,
+        "is_grounded": false,
+        "latency_ms": 469.5986000006087,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0065",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      },
+      "v4": {
+        "top1_score": -7.0625,
+        "sufficiency_prob": 0.6748340725898743,
+        "is_grounded": false,
+        "latency_ms": 481.6678999995929,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0065",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      }
+    },
+    "V4-HELD-085": {
+      "query_id": "V4-HELD-085",
+      "is_answerable": false,
+      "curriculum_stratum": "out_of_domain",
+      "v3": {
+        "top1_score": -9.6875,
+        "is_grounded": false,
+        "latency_ms": 542.2857999947155,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0012"
+      },
+      "v4": {
+        "top1_score": -9.6875,
+        "sufficiency_prob": 0.6949951648712158,
+        "is_grounded": true,
+        "latency_ms": 544.5529999924474,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0012"
+      }
+    },
+    "V4-HELD-086": {
+      "query_id": "V4-HELD-086",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 3.125,
+        "is_grounded": true,
+        "latency_ms": 656.3910000040778,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": 3.125,
+        "sufficiency_prob": 0.7281970977783203,
+        "is_grounded": true,
+        "latency_ms": 683.2348000025377,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-087": {
+      "query_id": "V4-HELD-087",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 7.9375,
+        "is_grounded": true,
+        "latency_ms": 597.7321000027587,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0194",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      },
+      "v4": {
+        "top1_score": 7.9375,
+        "sufficiency_prob": 0.7685643434524536,
+        "is_grounded": true,
+        "latency_ms": 562.4548999985564,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0194",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      }
+    },
+    "V4-HELD-088": {
+      "query_id": "V4-HELD-088",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 6.4375,
+        "is_grounded": true,
+        "latency_ms": 674.3418999976711,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      },
+      "v4": {
+        "top1_score": 6.4375,
+        "sufficiency_prob": 0.937380313873291,
+        "is_grounded": true,
+        "latency_ms": 671.1970999967889,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0071",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      }
+    },
+    "V4-HELD-089": {
+      "query_id": "V4-HELD-089",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 8.625,
+        "is_grounded": true,
+        "latency_ms": 790.0776000024052,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      },
+      "v4": {
+        "top1_score": 8.625,
+        "sufficiency_prob": 0.9530004262924194,
+        "is_grounded": true,
+        "latency_ms": 790.9857999984524,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      }
+    },
+    "V4-HELD-090": {
+      "query_id": "V4-HELD-090",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 4.6875,
+        "is_grounded": true,
+        "latency_ms": 795.9049999990384,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      },
+      "v4": {
+        "top1_score": 4.6875,
+        "sufficiency_prob": 0.944086492061615,
+        "is_grounded": true,
+        "latency_ms": 790.840699992259,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      }
+    },
+    "V4-HELD-091": {
+      "query_id": "V4-HELD-091",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 2.625,
+        "is_grounded": true,
+        "latency_ms": 958.2427999994252,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0021",
+        "top1_doc_id": "DOC-PMC-RENAL-0001"
+      },
+      "v4": {
+        "top1_score": 2.625,
+        "sufficiency_prob": 0.7608236074447632,
+        "is_grounded": true,
+        "latency_ms": 960.8479000016814,
+        "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0021",
+        "top1_doc_id": "DOC-PMC-RENAL-0001"
+      }
+    },
+    "V4-HELD-092": {
+      "query_id": "V4-HELD-092",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 6.5,
+        "is_grounded": true,
+        "latency_ms": 763.883599996916,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      },
+      "v4": {
+        "top1_score": 6.5,
+        "sufficiency_prob": 0.8917867541313171,
+        "is_grounded": true,
+        "latency_ms": 767.8032999974675,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0048",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      }
+    },
+    "V4-HELD-093": {
+      "query_id": "V4-HELD-093",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 3.1875,
+        "is_grounded": true,
+        "latency_ms": 676.0438999990583,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      },
+      "v4": {
+        "top1_score": 3.1875,
+        "sufficiency_prob": 0.9022436738014221,
+        "is_grounded": true,
+        "latency_ms": 670.8358000032604,
+        "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+        "top1_doc_id": "DOC-PMC-RENAL-0002"
+      }
+    },
+    "V4-HELD-094": {
+      "query_id": "V4-HELD-094",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 6.0625,
+        "is_grounded": true,
+        "latency_ms": 529.3709999968996,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0070",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      },
+      "v4": {
+        "top1_score": 6.0625,
+        "sufficiency_prob": 0.7053099870681763,
+        "is_grounded": true,
+        "latency_ms": 532.0872999946005,
+        "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0070",
+        "top1_doc_id": "DOC-PMC-RENAL-0010"
+      }
+    },
+    "V4-HELD-095": {
+      "query_id": "V4-HELD-095",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 5.4375,
+        "is_grounded": true,
+        "latency_ms": 696.2233999947784,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0016",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      },
+      "v4": {
+        "top1_score": 5.4375,
+        "sufficiency_prob": 0.8806762099266052,
+        "is_grounded": true,
+        "latency_ms": 698.5768000013195,
+        "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0016",
+        "top1_doc_id": "DOC-PMC-RENAL-0018"
+      }
+    },
+    "V4-HELD-096": {
+      "query_id": "V4-HELD-096",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 2.6875,
+        "is_grounded": true,
+        "latency_ms": 734.1598999992129,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0180",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      },
+      "v4": {
+        "top1_score": 2.5,
+        "sufficiency_prob": 0.8712367415428162,
+        "is_grounded": true,
+        "latency_ms": 767.8679000018747,
+        "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0180",
+        "top1_doc_id": "DOC-PMC-RENAL-0006"
+      }
+    },
+    "V4-HELD-097": {
+      "query_id": "V4-HELD-097",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 5.125,
+        "is_grounded": true,
+        "latency_ms": 714.2628999936278,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0035",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      },
+      "v4": {
+        "top1_score": 5.375,
+        "sufficiency_prob": 0.9294512271881104,
+        "is_grounded": true,
+        "latency_ms": 721.0402999917278,
+        "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0035",
+        "top1_doc_id": "DOC-PMC-RENAL-0009"
+      }
+    },
+    "V4-HELD-098": {
+      "query_id": "V4-HELD-098",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 5.3125,
+        "is_grounded": true,
+        "latency_ms": 463.6698000031174,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0045",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      },
+      "v4": {
+        "top1_score": 5.1875,
+        "sufficiency_prob": 0.9067133069038391,
+        "is_grounded": true,
+        "latency_ms": 570.8513999998104,
+        "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0045",
+        "top1_doc_id": "DOC-PMC-RENAL-0007"
+      }
+    },
+    "V4-HELD-099": {
+      "query_id": "V4-HELD-099",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": 3.3125,
+        "is_grounded": true,
+        "latency_ms": 493.9096000016434,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0013",
+        "top1_doc_id": "DOC-PMC-RENAL-0012"
+      },
+      "v4": {
+        "top1_score": 3.3125,
+        "sufficiency_prob": 0.7942394614219666,
+        "is_grounded": true,
+        "latency_ms": 493.9782999936142,
+        "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0013",
+        "top1_doc_id": "DOC-PMC-RENAL-0012"
+      }
+    },
+    "V4-HELD-100": {
+      "query_id": "V4-HELD-100",
+      "is_answerable": false,
+      "curriculum_stratum": "difficult_negative",
+      "v3": {
+        "top1_score": -1.125,
+        "is_grounded": false,
+        "latency_ms": 533.5896999968099,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0186",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      },
+      "v4": {
+        "top1_score": -1.125,
+        "sufficiency_prob": 0.7785593271255493,
+        "is_grounded": true,
+        "latency_ms": 533.1124999938766,
+        "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0186",
+        "top1_doc_id": "DOC-PMC-RENAL-0008"
+      }
+    }
+  }
+}
