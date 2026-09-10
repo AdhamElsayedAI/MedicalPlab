@@ -1,0 +1,292 @@
+{
+  "architecture": "B_400_overlap x content_only -> direct reranker (no hybrid)",
+  "best_pool_size": 20,
+  "best_reranker_metrics": {
+    "authority_sensitive_at_5": {
+      "denominator": 17,
+      "numerator": 16,
+      "value": 0.9411764705882353
+    },
+    "gold_source_recall_at_10": {
+      "denominator": 69,
+      "numerator": 69,
+      "value": 1.0
+    },
+    "hit_at_1": {
+      "denominator": 69,
+      "numerator": 13,
+      "value": 0.18840579710144928
+    },
+    "hit_at_10": {
+      "denominator": 69,
+      "numerator": 37,
+      "value": 0.5362318840579711
+    },
+    "hit_at_3": {
+      "denominator": 69,
+      "numerator": 22,
+      "value": 0.3188405797101449
+    },
+    "hit_at_5": {
+      "denominator": 69,
+      "numerator": 29,
+      "value": 0.42028985507246375
+    },
+    "mrr": 0.2797676558546124,
+    "n": 69,
+    "ndcg_at_10": 0.3347801170922531
+  },
+  "candidate_recalls": [
+    {
+      "denominator": 69,
+      "k": 10,
+      "numerator": 41,
+      "value": 0.5942028985507246
+    },
+    {
+      "denominator": 69,
+      "k": 20,
+      "numerator": 49,
+      "value": 0.7101449275362319
+    },
+    {
+      "denominator": 69,
+      "k": 30,
+      "numerator": 51,
+      "value": 0.7391304347826086
+    },
+    {
+      "denominator": 69,
+      "k": 50,
+      "numerator": 57,
+      "value": 0.8260869565217391
+    }
+  ],
+  "created_at": "2026-09-10T06:29:46Z",
+  "dataset": "RENAL-DEV-v2",
+  "dataset_sha256": "05d9ba3ae8ff27b3e364ed58737f4b06d61d20f2ab673b88bb913d879a9ddc72",
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "embedding_model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "n_answerable": 69,
+  "pre_reranker_metrics": {
+    "authority_sensitive_at_5": {
+      "denominator": 17,
+      "numerator": 16,
+      "value": 0.9411764705882353
+    },
+    "gold_source_recall_at_10": {
+      "denominator": 69,
+      "numerator": 69,
+      "value": 1.0
+    },
+    "hit_at_1": {
+      "denominator": 69,
+      "numerator": 13,
+      "value": 0.18840579710144928
+    },
+    "hit_at_10": {
+      "denominator": 69,
+      "numerator": 41,
+      "value": 0.5942028985507246
+    },
+    "hit_at_3": {
+      "denominator": 69,
+      "numerator": 24,
+      "value": 0.34782608695652173
+    },
+    "hit_at_5": {
+      "denominator": 69,
+      "numerator": 35,
+      "value": 0.5072463768115942
+    },
+    "mrr": 0.2968196457326891,
+    "n": 69,
+    "ndcg_at_10": 0.3563483328102678
+  },
+  "report_id": "RENAL-V2-RERANKER-DIAGNOSTIC",
+  "reranker_model": "Qwen/Qwen3-Reranker-0.6B",
+  "reranker_results": [
+    {
+      "candidate_recall_ceiling": {
+        "denominator": 69,
+        "k": 10,
+        "numerator": 41,
+        "value": 0.5942028985507246
+      },
+      "elapsed_seconds": 17.35,
+      "metrics": {
+        "authority_sensitive_at_5": {
+          "denominator": 17,
+          "numerator": 16,
+          "value": 0.9411764705882353
+        },
+        "gold_source_recall_at_10": {
+          "denominator": 69,
+          "numerator": 69,
+          "value": 1.0
+        },
+        "hit_at_1": {
+          "denominator": 69,
+          "numerator": 12,
+          "value": 0.17391304347826086
+        },
+        "hit_at_10": {
+          "denominator": 69,
+          "numerator": 41,
+          "value": 0.5942028985507246
+        },
+        "hit_at_3": {
+          "denominator": 69,
+          "numerator": 21,
+          "value": 0.30434782608695654
+        },
+        "hit_at_5": {
+          "denominator": 69,
+          "numerator": 31,
+          "value": 0.4492753623188406
+        },
+        "mrr": 0.2778295376121463,
+        "n": 69,
+        "ndcg_at_10": 0.34386310459811514
+      },
+      "pool_size": 10
+    },
+    {
+      "candidate_recall_ceiling": {
+        "denominator": 69,
+        "k": 20,
+        "numerator": 49,
+        "value": 0.7101449275362319
+      },
+      "elapsed_seconds": 32.82,
+      "metrics": {
+        "authority_sensitive_at_5": {
+          "denominator": 17,
+          "numerator": 16,
+          "value": 0.9411764705882353
+        },
+        "gold_source_recall_at_10": {
+          "denominator": 69,
+          "numerator": 69,
+          "value": 1.0
+        },
+        "hit_at_1": {
+          "denominator": 69,
+          "numerator": 13,
+          "value": 0.18840579710144928
+        },
+        "hit_at_10": {
+          "denominator": 69,
+          "numerator": 37,
+          "value": 0.5362318840579711
+        },
+        "hit_at_3": {
+          "denominator": 69,
+          "numerator": 22,
+          "value": 0.3188405797101449
+        },
+        "hit_at_5": {
+          "denominator": 69,
+          "numerator": 29,
+          "value": 0.42028985507246375
+        },
+        "mrr": 0.2797676558546124,
+        "n": 69,
+        "ndcg_at_10": 0.3347801170922531
+      },
+      "pool_size": 20
+    },
+    {
+      "candidate_recall_ceiling": {
+        "denominator": 69,
+        "k": 30,
+        "numerator": 51,
+        "value": 0.7391304347826086
+      },
+      "elapsed_seconds": 49.47,
+      "metrics": {
+        "authority_sensitive_at_5": {
+          "denominator": 17,
+          "numerator": 16,
+          "value": 0.9411764705882353
+        },
+        "gold_source_recall_at_10": {
+          "denominator": 69,
+          "numerator": 69,
+          "value": 1.0
+        },
+        "hit_at_1": {
+          "denominator": 69,
+          "numerator": 13,
+          "value": 0.18840579710144928
+        },
+        "hit_at_10": {
+          "denominator": 69,
+          "numerator": 37,
+          "value": 0.5362318840579711
+        },
+        "hit_at_3": {
+          "denominator": 69,
+          "numerator": 21,
+          "value": 0.30434782608695654
+        },
+        "hit_at_5": {
+          "denominator": 69,
+          "numerator": 30,
+          "value": 0.43478260869565216
+        },
+        "mrr": 0.2791982976765585,
+        "n": 69,
+        "ndcg_at_10": 0.3344849778302837
+      },
+      "pool_size": 30
+    },
+    {
+      "candidate_recall_ceiling": {
+        "denominator": 69,
+        "k": 50,
+        "numerator": 57,
+        "value": 0.8260869565217391
+      },
+      "elapsed_seconds": 83.57,
+      "metrics": {
+        "authority_sensitive_at_5": {
+          "denominator": 17,
+          "numerator": 16,
+          "value": 0.9411764705882353
+        },
+        "gold_source_recall_at_10": {
+          "denominator": 69,
+          "numerator": 69,
+          "value": 1.0
+        },
+        "hit_at_1": {
+          "denominator": 69,
+          "numerator": 13,
+          "value": 0.18840579710144928
+        },
+        "hit_at_10": {
+          "denominator": 69,
+          "numerator": 37,
+          "value": 0.5362318840579711
+        },
+        "hit_at_3": {
+          "denominator": 69,
+          "numerator": 20,
+          "value": 0.2898550724637681
+        },
+        "hit_at_5": {
+          "denominator": 69,
+          "numerator": 29,
+          "value": 0.42028985507246375
+        },
+        "mrr": 0.2755578559926386,
+        "n": 69,
+        "ndcg_at_10": 0.33116898318927324
+      },
+      "pool_size": 50
+    }
+  ],
+  "reranker_revision": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+  "status": "PRE-GOLD-AUDIT / PRE-CORPUS-REPAIR DIAGNOSTIC"
+}

@@ -1,0 +1,1174 @@
+{
+  "report_id": "RENAL-V2-PASSAGE-FAILURE-ANALYSIS",
+  "architecture": "B_400_overlap x content_only (best dense from matrix)",
+  "n_total_answerable": 69,
+  "n_top10_hits": 36,
+  "n_top10_misses": 33,
+  "hit_rate_at_10": 0.5217,
+  "category_counts": {
+    "SECTION_HEADING_AMBIGUITY": 26,
+    "METHODS_RESULTS_NOISE": 7
+  },
+  "summary_buckets": {
+    "benchmark_relevance_issues": {
+      "n": 0,
+      "pct_of_failures": 0.0
+    },
+    "chunking_issues": {
+      "n": 26,
+      "pct_of_failures": 78.8
+    },
+    "methods_results_noise": {
+      "n": 7,
+      "pct_of_failures": 21.2
+    },
+    "true_retrieval_failures": {
+      "n": 0,
+      "pct_of_failures": 0.0
+    },
+    "coverage_gaps": {
+      "n": 0,
+      "pct_of_failures": 0.0
+    }
+  },
+  "failures": [
+    {
+      "query_id": "RENAL-V2-DEV-01-4",
+      "query": "What does the RAAS pathway regulate in terms of systemic blood pressure and tubular sodium handling?",
+      "topic": "RAAS",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0021"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0021-C01"
+      ],
+      "gold_evidence_quote_snippet": "Decreasing aldosterone synthesis at its enzyme step, aldosterone synthase (AS), CYP11B2, is the novel alternative approach to MRA to limit aldosterone effects [ 105 ]. Aldosterone synthase inhibitors (ASI) represent the latest therapeutic strategy to decrease aldosterone production [ 110 ]. Fadrozol",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0020",
+        "DOC-PMC-RENAL-0001"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0001-P0001",
+        "DOC-PMC-RENAL-0001-P0012",
+        "DOC-PMC-RENAL-0001-P0013",
+        "DOC-PMC-RENAL-0004-P0010",
+        "DOC-PMC-RENAL-0020-P0002",
+        "DOC-PMC-RENAL-0001-P0003",
+        "DOC-PMC-RENAL-0001-P0002",
+        "DOC-PMC-RENAL-0006-P0100",
+        "DOC-PMC-RENAL-0006-P0103",
+        "DOC-PMC-RENAL-0001-P0014"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-1",
+      "query": "What are the three cellular and extracellular layers that constitute the glomerular filtration barrier?",
+      "topic": "filtration_barrier",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0028"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B0028-C01"
+      ],
+      "gold_evidence_quote_snippet": "Studies using metabolic labeling (experimental argyrosis) have demonstrated that GBM synthesis requires contributions from podocytes and endothelial cells, with mesangial cells playing a role in turnover [ 41 ]. The structure of the GBM has been well-characterized both morphologically and from a mol",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0002",
+        "DOC-PMC-RENAL-0018"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0002-P0007",
+        "DOC-PMC-RENAL-0002-P0002",
+        "DOC-PMC-RENAL-0018-P0003",
+        "DOC-PMC-RENAL-0002-P0004",
+        "DOC-PMC-RENAL-0018-P0001",
+        "DOC-PMC-RENAL-0002-P0042",
+        "DOC-PMC-RENAL-0002-P0040",
+        "DOC-PMC-RENAL-0018-P0031",
+        "DOC-PMC-RENAL-0018-P0024",
+        "DOC-PMC-RENAL-0002-P0001"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-1",
+      "query": "Where along the nephron is the majority of filtered potassium reabsorbed before reaching the distal tubule?",
+      "topic": "potassium_handling",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0005-C02"
+      ],
+      "gold_evidence_quote_snippet": "Co-expression of these Kir5.1 mutations with Kir4.2 in oocytes also resulted in reduced currents. Depolarization of the basolateral plasma membrane in the proximal tubule could impair bicarbonate exit through the sodium-bicarbonate cotransporter NBCe1 [ 28 ]. In patients with these KCNJ16 mutations,",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0023"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0016",
+        "DOC-PMC-RENAL-0009-P0017",
+        "DOC-PMC-RENAL-0005-P0035",
+        "DOC-PMC-RENAL-0005-P0042",
+        "DOC-PMC-RENAL-0003-P0001",
+        "DOC-PMC-RENAL-0009-P0073",
+        "DOC-PMC-RENAL-0009-P0019",
+        "DOC-PMC-RENAL-0023-P0013",
+        "DOC-PMC-RENAL-0009-P0018",
+        "DOC-PMC-RENAL-0005-P0007"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-2",
+      "query": "How does the distal nephron regulate potassium excretion in response to dietary potassium intake?",
+      "topic": "potassium_handling",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Abstract By controlling urinary potassium excretion, the kidneys play a key role in maintaining whole-body potassium homeostasis. Conversely, low urinary potassium excretion (as a proxy for insufficient dietary intake) is increasingly recognized as a risk factor for the progression of kidney disease",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0009"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0016",
+        "DOC-PMC-RENAL-0009-P0017",
+        "DOC-PMC-RENAL-0003-P0002",
+        "DOC-PMC-RENAL-0009-P0021",
+        "DOC-PMC-RENAL-0009-P0008",
+        "DOC-PMC-RENAL-0009-P0019",
+        "DOC-PMC-RENAL-0009-P0027",
+        "DOC-PMC-RENAL-0009-P0073",
+        "DOC-PMC-RENAL-0009-P0018",
+        "DOC-PMC-RENAL-0009-P0022"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-4",
+      "query": "What is the function of the ROMK channel in potassium secretion in principal cells?",
+      "topic": "potassium_handling",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0005-C03"
+      ],
+      "gold_evidence_quote_snippet": "Indeed, both genetic and pharmacological NCC inhibitions reduce the activity of the transient receptor potential melastatin 6 (TRPM6) channel, which mediates transcellular magnesium reabsorption in the DCT. Furthermore, hypomagnesemia can contribute to renal potassium loss either by NCC inhibition (",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0020",
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0009"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0016",
+        "DOC-PMC-RENAL-0009-P0017",
+        "DOC-PMC-RENAL-0005-P0037",
+        "DOC-PMC-RENAL-0005-P0041",
+        "DOC-PMC-RENAL-0009-P0008",
+        "DOC-PMC-RENAL-0009-P0018",
+        "DOC-PMC-RENAL-0020-P0026",
+        "DOC-PMC-RENAL-0003-P0003",
+        "DOC-PMC-RENAL-0020-P0001",
+        "DOC-PMC-RENAL-0020-P0022"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-4",
+      "query": "What is the role of apical Na+/H+ exchanger NHE3 in proximal tubular solute transport?",
+      "topic": "proximal_transport",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0010"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0010-C01"
+      ],
+      "gold_evidence_quote_snippet": "Certain risk factors such as abdominal adiposity, glucose intolerance, dyslipidemia, and hypertension tend to cluster within individuals. Insulin resistance with obesity is thought to be a key factor for this association, which is now termed as metabolic syndrome [ 28 ]. Several different mechanisms",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0020",
+        "DOC-PMC-RENAL-0005"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0020-P0011",
+        "DOC-PMC-RENAL-0020-P0015",
+        "DOC-PMC-RENAL-0004-P0004",
+        "DOC-PMC-RENAL-0005-P0039",
+        "DOC-PMC-RENAL-0005-P0024",
+        "DOC-PMC-RENAL-0005-P0032",
+        "DOC-PMC-RENAL-0005-P0041",
+        "DOC-PMC-RENAL-0004-P0009",
+        "DOC-PMC-RENAL-0005-P0025",
+        "DOC-PMC-RENAL-0020-P0001"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-3",
+      "query": "How does the kidney compensate for chronic respiratory acidosis?",
+      "topic": "acid_base",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0062"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0062-C01"
+      ],
+      "gold_evidence_quote_snippet": "COVID-19 posed a grave challenge to healthcare at the global level and pathophysiological aspects of COVID-19 remain a close focus. Altered electrolyte metabolism in patients with COVID-19 has been associate with the severity and mortality of the disease ( Lippi, South & Henry, 2020 ; Tezcan et al.,",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0021"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0005-P0006",
+        "DOC-PMC-RENAL-0005-P0027",
+        "DOC-PMC-RENAL-0005-P0063",
+        "DOC-PMC-RENAL-0005-P0017",
+        "DOC-PMC-RENAL-0021-P0002",
+        "DOC-PMC-RENAL-0021-P0003",
+        "DOC-PMC-RENAL-0005-P0001",
+        "DOC-PMC-RENAL-0005-P0004",
+        "DOC-PMC-RENAL-0005-P0005",
+        "DOC-PMC-RENAL-0021-P0001"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-4",
+      "query": "What cellular mechanisms in type A intercalated cells secrete protons into the tubular lumen?",
+      "topic": "acid_base",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0044"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0044-C01"
+      ],
+      "gold_evidence_quote_snippet": "The epithelial collecting system of the kidney connects nephrons to the urinary tract. This system substantively contributes to the water-electrolyte balance by means of aldosterone/ADH-dependent reabsorption and secretion ( Olde Engberink et al., 2023 ). The walls of collecting tubules comprise two",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0021"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0005-P0053",
+        "DOC-PMC-RENAL-0005-P0047",
+        "DOC-PMC-RENAL-0021-P0004",
+        "DOC-PMC-RENAL-0005-P0024",
+        "DOC-PMC-RENAL-0003-P0006",
+        "DOC-PMC-RENAL-0005-P0046",
+        "DOC-PMC-RENAL-0005-P0048",
+        "DOC-PMC-RENAL-0005-P0045",
+        "DOC-PMC-RENAL-0021-P0001",
+        "DOC-PMC-RENAL-0005-P0049"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-2",
+      "query": "Why is an abrupt rise in serum creatinine or drop in urine output used as the diagnostic hallmark of AKI?",
+      "topic": "aki_definition",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0230"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0230-C01"
+      ],
+      "gold_evidence_quote_snippet": "In the previously-cited sub-analysis of the BEST study, the serum creatinine (sCr) was also reported to be a significant predictor of weaning (OR 0.996, 95% CI 0.994–0.998). Creatinine is produced from creatine in the muscle tissue and is released into the blood. Both blood purification and the kidn",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0016"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0006-P0231",
+        "DOC-PMC-RENAL-0006-P0134",
+        "DOC-PMC-RENAL-0006-P0013",
+        "DOC-PMC-RENAL-0006-P0051",
+        "DOC-PMC-RENAL-0006-P0005",
+        "DOC-PMC-RENAL-0006-P0009",
+        "DOC-PMC-RENAL-0006-P0165",
+        "DOC-PMC-RENAL-0006-P0019",
+        "DOC-PMC-RENAL-0016-P0140",
+        "DOC-PMC-RENAL-0006-P0048"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-4",
+      "query": "What is the KDIGO urine output criterion for Stage 1 AKI?",
+      "topic": "aki_definition",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0228"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0228-C01"
+      ],
+      "gold_evidence_quote_snippet": "The blood purification for acute kidney injury (AKI) is stopped when the renal function sufficiently recovers. However, very few studies have examined the criteria for discontinuation of the blood purification for AKI. Our literature search found three observational studies that identified predictor",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0006-P0026",
+        "DOC-PMC-RENAL-0006-P0025",
+        "DOC-PMC-RENAL-0006-P0049",
+        "DOC-PMC-RENAL-0006-P0027",
+        "DOC-PMC-RENAL-0006-P0017",
+        "DOC-PMC-RENAL-0006-P0272",
+        "DOC-PMC-RENAL-0006-P0003",
+        "DOC-PMC-RENAL-0006-P0021",
+        "DOC-PMC-RENAL-0006-P0011",
+        "DOC-PMC-RENAL-0006-P0048"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-2",
+      "query": "When should nephrotoxic medications be stopped or dose-adjusted in acute kidney injury?",
+      "topic": "aki_management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0303"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0303-C01"
+      ],
+      "gold_evidence_quote_snippet": "Koralkar et al. used the neonatal modified KDIGO criteria to examine AKI and mortality in 229 very low-birth-weight infants both at 36 weeks of gestational age and with a birth weight of 500–1500 kg [ 331 ]; the very low-birth-weight infants diagnosed with AKI had a significantly higher mortality th",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0008",
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0006-P0234",
+        "DOC-PMC-RENAL-0008-P0212",
+        "DOC-PMC-RENAL-0008-P0216",
+        "DOC-PMC-RENAL-0008-P0215",
+        "DOC-PMC-RENAL-0007-P0070",
+        "DOC-PMC-RENAL-0006-P0107",
+        "DOC-PMC-RENAL-0008-P0188",
+        "DOC-PMC-RENAL-0007-P0180",
+        "DOC-PMC-RENAL-0007-P0179",
+        "DOC-PMC-RENAL-0008-P0182"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-3",
+      "query": "What are the absolute urgent indications for initiating renal replacement therapy in acute kidney injury?",
+      "topic": "aki_management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0316"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0316-C01"
+      ],
+      "gold_evidence_quote_snippet": "In 2001, Goldstein et al. conducted a single-center study [ 349 ], followed by a large-scale multi-center study of continuous renal replacement therapy (CRRT) for pediatric AKI whose results were reported in 2005 [ 350 ]. This study examined the predictors of survival and death in 116 children regis",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007",
+        "DOC-PMC-RENAL-0015"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0006-P0218",
+        "DOC-PMC-RENAL-0006-P0314",
+        "DOC-PMC-RENAL-0007-P0270",
+        "DOC-PMC-RENAL-0006-P0234",
+        "DOC-PMC-RENAL-0006-P0217",
+        "DOC-PMC-RENAL-0015-P0045",
+        "DOC-PMC-RENAL-0006-P0216",
+        "DOC-PMC-RENAL-0006-P0214",
+        "DOC-PMC-RENAL-0006-P0215",
+        "DOC-PMC-RENAL-0006-P0219"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-1",
+      "query": "How is chronic kidney disease defined and classified into GFR and albuminuria categories?",
+      "topic": "ckd",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0234"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0234-C01"
+      ],
+      "gold_evidence_quote_snippet": "Hypertension is the most common complication in 50–80% of ADPKD patients. Antihypertensive therapy with ACE inhibitors or ARBs is expected to suppress proteinuria and prevent progression to end-stage kidney disease. Conducting strict antihypertensive therapy for a blood pressure of less than 110/75 ",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0007-P0030",
+        "DOC-PMC-RENAL-0007-P0288",
+        "DOC-PMC-RENAL-0007-P0050",
+        "DOC-PMC-RENAL-0006-P0279",
+        "DOC-PMC-RENAL-0010-P0032",
+        "DOC-PMC-RENAL-0007-P0035",
+        "DOC-PMC-RENAL-0007-P0048",
+        "DOC-PMC-RENAL-0007-P0016",
+        "DOC-PMC-RENAL-0006-P0043",
+        "DOC-PMC-RENAL-0006-P0012"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-3",
+      "query": "What are the major complications associated with advancing chronic kidney disease stages G3b to G5?",
+      "topic": "ckd",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0089"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0089-C01"
+      ],
+      "gold_evidence_quote_snippet": "A uniform recommendation for patients with DKD and macroalbuminuria is difficult; glycemic control to HbA1c < 7.0% is suggested as a target value to suppress the onset and progression of microvascular complications. However, the goal of blood glucose levels in patient should be individualized accord",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0007",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0007-P0206",
+        "DOC-PMC-RENAL-0007-P0050",
+        "DOC-PMC-RENAL-0010-P0010",
+        "DOC-PMC-RENAL-0009-P0027",
+        "DOC-PMC-RENAL-0007-P0161",
+        "DOC-PMC-RENAL-0007-P0037",
+        "DOC-PMC-RENAL-0007-P0049",
+        "DOC-PMC-RENAL-0007-P0151",
+        "DOC-PMC-RENAL-0007-P0156",
+        "DOC-PMC-RENAL-0007-P0059"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-1",
+      "query": "What classic triad of findings defines nephrotic syndrome in children and adults?",
+      "topic": "nephrotic",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Abstract Idiopathic nephrotic syndrome newly affects 1–3 per 100,000 children per year. Approximately 85% of cases show complete remission of proteinuria following glucocorticoid treatment. Patients who do not achieve complete remission within 4–6 weeks of glucocorticoid treatment have steroid-resis",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0008-P0022",
+        "DOC-PMC-RENAL-0008-P0024",
+        "DOC-PMC-RENAL-0008-P0020",
+        "DOC-PMC-RENAL-0008-P0018",
+        "DOC-PMC-RENAL-0008-P0017",
+        "DOC-PMC-RENAL-0008-P0021",
+        "DOC-PMC-RENAL-0008-P0026",
+        "DOC-PMC-RENAL-0008-P0016",
+        "DOC-PMC-RENAL-0008-P0023",
+        "DOC-PMC-RENAL-0008-P0027"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-1",
+      "query": "Why does a decline in GFR and tubular secretion lead to hyperkalaemia in kidney disease?",
+      "topic": "hyperkalaemia_mechanism",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0076"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0076-C01"
+      ],
+      "gold_evidence_quote_snippet": "Table 2 Clinical ‘pearls’ — Column 1: Oral potassium loads induce a lesser increase in plasma [K + ] when administered along with a complex meal (in healthy volunteers) Intravenous 0.9% NaCl is more likely than plasmalyte to cause an acute increase in plasma [K + ] Renal potassium excretion can be i",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0001",
+        "DOC-PMC-RENAL-0010-P0027",
+        "DOC-PMC-RENAL-0010-P0026",
+        "DOC-PMC-RENAL-0009-P0021",
+        "DOC-PMC-RENAL-0009-P0073",
+        "DOC-PMC-RENAL-0009-P0027",
+        "DOC-PMC-RENAL-0009-P0028",
+        "DOC-PMC-RENAL-0009-P0022",
+        "DOC-PMC-RENAL-0009-P0023",
+        "DOC-PMC-RENAL-0010-P0090"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-2",
+      "query": "How do medications blocking the renin-angiotensin-aldosterone system induce hyperkalaemia?",
+      "topic": "hyperkalaemia_mechanism",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0076"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0076-C01"
+      ],
+      "gold_evidence_quote_snippet": "Table 2 Clinical ‘pearls’ — Column 1: Oral potassium loads induce a lesser increase in plasma [K + ] when administered along with a complex meal (in healthy volunteers) Intravenous 0.9% NaCl is more likely than plasmalyte to cause an acute increase in plasma [K + ] Renal potassium excretion can be i",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0001",
+        "DOC-PMC-RENAL-0010-P0025",
+        "DOC-PMC-RENAL-0009-P0032",
+        "DOC-PMC-RENAL-0009-P0034",
+        "DOC-PMC-RENAL-0009-P0031",
+        "DOC-PMC-RENAL-0009-P0033",
+        "DOC-PMC-RENAL-0009-P0047",
+        "DOC-PMC-RENAL-0009-P0023",
+        "DOC-PMC-RENAL-0010-P0001",
+        "DOC-PMC-RENAL-0010-P0090"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-1",
+      "query": "What is the immediate priority when managing severe hyperkalaemia with ECG changes?",
+      "topic": "hyperkalaemia_management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0111"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0111-C01"
+      ],
+      "gold_evidence_quote_snippet": "When electrocardiographic signs of HK are detected, the first treatment step is directed at stabilizing cell membrane potential. Immediate slow intravenous administration of calcium salts, either calcium gluconate or calcium chloride, must be performed to contrast the ongoing cell membrane depolariz",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0010-P0104",
+        "DOC-PMC-RENAL-0010-P0105",
+        "DOC-PMC-RENAL-0010-P0120",
+        "DOC-PMC-RENAL-0010-P0115",
+        "DOC-PMC-RENAL-0010-P0113",
+        "DOC-PMC-RENAL-0009-P0058",
+        "DOC-PMC-RENAL-0010-P0114",
+        "DOC-PMC-RENAL-0010-P0057",
+        "DOC-PMC-RENAL-0010-P0129",
+        "DOC-PMC-RENAL-0010-P0117"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-3",
+      "query": "Which acute therapies shift potassium intracellularly in emergent hyperkalaemia?",
+      "topic": "hyperkalaemia_management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0045"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0045-C01"
+      ],
+      "gold_evidence_quote_snippet": "K clearance in PD is about 15 ml/min. In patients undergoing 10 L of drainage per day, approximately 35–46 mmol of K is removed. Peritoneal fluids are potassium-free, and K balance is maintained by the continuous nature of the treatment, preserved residual kidney excretion, increased colonic secreti",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0010-P0118",
+        "DOC-PMC-RENAL-0009-P0013",
+        "DOC-PMC-RENAL-0010-P0120",
+        "DOC-PMC-RENAL-0006-P0217",
+        "DOC-PMC-RENAL-0010-P0115",
+        "DOC-PMC-RENAL-0010-P0130",
+        "DOC-PMC-RENAL-0010-P0113",
+        "DOC-PMC-RENAL-0010-P0112",
+        "DOC-PMC-RENAL-0010-P0129",
+        "DOC-PMC-RENAL-0010-P0117"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-4",
+      "query": "What are the indications and mechanisms of potassium binders in managing chronic hyperkalaemia?",
+      "topic": "hyperkalaemia_management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Abstract Hyperkalemia (HK) is the most common electrolyte disturbance observed in patients with kidney disease, particularly in those in whom diabetes and heart failure are present or are on treatment with renin–angiotensin–aldosterone system inhibitors (RAASIs). HK is recognised as a major risk of ",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0009-P0001",
+        "DOC-PMC-RENAL-0010-P0139",
+        "DOC-PMC-RENAL-0010-P0041",
+        "DOC-PMC-RENAL-0009-P0002",
+        "DOC-PMC-RENAL-0010-P0140",
+        "DOC-PMC-RENAL-0009-P0070",
+        "DOC-PMC-RENAL-0010-P0042",
+        "DOC-PMC-RENAL-0009-P0074",
+        "DOC-PMC-RENAL-0009-P0071",
+        "DOC-PMC-RENAL-0010-P0060"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-1",
+      "query": "Why do urinary tract infections recur frequently and what bacterial virulence factors contribute?",
+      "topic": "uti",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Abstract Urinary tract infections (UTIs) are among the most common infectious diseases worldwide but are significantly understudied. Uropathogenic E. coli (UPEC) accounts for a significant proportion of UTI, but a large number of other species can infect the urinary tract, each of which will have un",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0011-P0007",
+        "DOC-PMC-RENAL-0011-P0064",
+        "DOC-PMC-RENAL-0011-P0011",
+        "DOC-PMC-RENAL-0011-P0016",
+        "DOC-PMC-RENAL-0011-P0020",
+        "DOC-PMC-RENAL-0011-P0018",
+        "DOC-PMC-RENAL-0011-P0012",
+        "DOC-PMC-RENAL-0011-P0003",
+        "DOC-PMC-RENAL-0011-P0015",
+        "DOC-PMC-RENAL-0011-P0006"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-1",
+      "query": "What is the initial imaging modality of choice for suspected acute renal colic and nephrolithiasis?",
+      "topic": "stones",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0016"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0016-C01"
+      ],
+      "gold_evidence_quote_snippet": "PCNL is the first-line procedure for most large renal calculi, as it offers the advantage of a higher SFR since the effectiveness of this method is not limited by the stone burden or composition [ 17 , 18 ]. Before the procedure, essential imaging should be available to delineate the anatomy of the ",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0007"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0012-P0027",
+        "DOC-PMC-RENAL-0012-P0009",
+        "DOC-PMC-RENAL-0012-P0007",
+        "DOC-PMC-RENAL-0012-P0011",
+        "DOC-PMC-RENAL-0012-P0018",
+        "DOC-PMC-RENAL-0012-P0008",
+        "DOC-PMC-RENAL-0007-P0017",
+        "DOC-PMC-RENAL-0012-P0035",
+        "DOC-PMC-RENAL-0012-P0056",
+        "DOC-PMC-RENAL-0012-P0049"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-2",
+      "query": "What are the initial emergency management steps for acute ureteric colic pain?",
+      "topic": "stones",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0014"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0014-C01"
+      ],
+      "gold_evidence_quote_snippet": "SWL, although having a lower stone-free rate (SFR), is associated with fewer overall complications than other endourology procedures, like ureteroscopy (URS) and PCNL [ 12 , 13 ]. Factors determining the efficacy of SWL include the patient’s habitus; the size, location, and composition of the stone;",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0010"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0012-P0003",
+        "DOC-PMC-RENAL-0012-P0053",
+        "DOC-PMC-RENAL-0012-P0021",
+        "DOC-PMC-RENAL-0012-P0018",
+        "DOC-PMC-RENAL-0012-P0050",
+        "DOC-PMC-RENAL-0012-P0022",
+        "DOC-PMC-RENAL-0012-P0033",
+        "DOC-PMC-RENAL-0010-P0127",
+        "DOC-PMC-RENAL-0006-P0107",
+        "DOC-PMC-RENAL-0012-P0028"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-4",
+      "query": "What are the most common chemical compositions of kidney stones?",
+      "topic": "stones",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0014"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0014-C01"
+      ],
+      "gold_evidence_quote_snippet": "SWL, although having a lower stone-free rate (SFR), is associated with fewer overall complications than other endourology procedures, like ureteroscopy (URS) and PCNL [ 12 , 13 ]. Factors determining the efficacy of SWL include the patient’s habitus; the size, location, and composition of the stone;",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0013"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0012-P0060",
+        "DOC-PMC-RENAL-0013-P0002",
+        "DOC-PMC-RENAL-0012-P0068",
+        "DOC-PMC-RENAL-0013-P0053",
+        "DOC-PMC-RENAL-0013-P0048",
+        "DOC-PMC-RENAL-0013-P0042",
+        "DOC-PMC-RENAL-0013-P0001",
+        "DOC-PMC-RENAL-0013-P0027",
+        "DOC-PMC-RENAL-0013-P0049",
+        "DOC-PMC-RENAL-0013-P0025"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-2",
+      "query": "How does urinary tract obstruction lead to postrenal acute kidney injury and parenchymal thinning?",
+      "topic": "obstruction",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0001-C02"
+      ],
+      "gold_evidence_quote_snippet": "SFU-4 and UTD-P3 represent a considerable range of severity of hydronephrosis. Both represent minimal thinning of the medullary parenchyma and severe thinning of the cortical parenchyma (cyst-like hydronephrotic kidneys) at the same grade. The wide definition of SFU-4 and UTD-P3 fails to indicate ac",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0014",
+        "DOC-PMC-RENAL-0007",
+        "DOC-PMC-RENAL-0013"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0013-P0030",
+        "DOC-PMC-RENAL-0006-P0183",
+        "DOC-PMC-RENAL-0006-P0178",
+        "DOC-PMC-RENAL-0006-P0126",
+        "DOC-PMC-RENAL-0014-P0061",
+        "DOC-PMC-RENAL-0012-P0026",
+        "DOC-PMC-RENAL-0013-P0023",
+        "DOC-PMC-RENAL-0007-P0275",
+        "DOC-PMC-RENAL-0012-P0024",
+        "DOC-PMC-RENAL-0006-P0129"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-3",
+      "query": "What are common anatomical and luminal causes of bilateral urinary tract obstruction?",
+      "topic": "obstruction",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0082"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0082-C01"
+      ],
+      "gold_evidence_quote_snippet": "DRF and SFU grade of hydronephrosis do not correctly reflect renal injury in bilateral UPJO; however, Onen hydronephrosis grade shows a significant relationship with renal histopathologic grade and can be an indicator for renal injury in UPJO ( 45 ). The Onen grading system is more relevant to post-",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0014",
+        "DOC-PMC-RENAL-0013"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0013-P0030",
+        "DOC-PMC-RENAL-0013-P0002",
+        "DOC-PMC-RENAL-0012-P0026",
+        "DOC-PMC-RENAL-0014-P0084",
+        "DOC-PMC-RENAL-0013-P0010",
+        "DOC-PMC-RENAL-0013-P0042",
+        "DOC-PMC-RENAL-0012-P0047",
+        "DOC-PMC-RENAL-0014-P0041",
+        "DOC-PMC-RENAL-0012-P0024",
+        "DOC-PMC-RENAL-0014-P0006"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-3",
+      "query": "How does muscle mass and dietary protein intake influence serum creatinine and eGFR calculation?",
+      "topic": "gfr_measurement",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Introduction Estimation of kidney function in critically ill patients with acute kidney injury (AKI), is important for appropriate dosing of drugs and adjustment of therapeutic strategies, but challenging due to fluctuations in kidney function, creatinine metabolism and fluid balance. Data on the ag",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007",
+        "DOC-PMC-RENAL-0016"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0016-P0130",
+        "DOC-PMC-RENAL-0016-P0113",
+        "DOC-PMC-RENAL-0006-P0279",
+        "DOC-PMC-RENAL-0016-P0002",
+        "DOC-PMC-RENAL-0016-P0139",
+        "DOC-PMC-RENAL-0007-P0286",
+        "DOC-PMC-RENAL-0016-P0006",
+        "DOC-PMC-RENAL-0016-P0140",
+        "DOC-PMC-RENAL-0006-P0043",
+        "DOC-PMC-RENAL-0006-P0012"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-4",
+      "query": "What are the relative advantages of measured 24-hour creatinine clearance versus estimated GFR?",
+      "topic": "gfr_measurement",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0001-C01"
+      ],
+      "gold_evidence_quote_snippet": "Introduction Estimation of kidney function in critically ill patients with acute kidney injury (AKI), is important for appropriate dosing of drugs and adjustment of therapeutic strategies, but challenging due to fluctuations in kidney function, creatinine metabolism and fluid balance. Data on the ag",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0016"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0016-P0130",
+        "DOC-PMC-RENAL-0006-P0231",
+        "DOC-PMC-RENAL-0016-P0113",
+        "DOC-PMC-RENAL-0016-P0103",
+        "DOC-PMC-RENAL-0016-P0129",
+        "DOC-PMC-RENAL-0016-P0136",
+        "DOC-PMC-RENAL-0016-P0005",
+        "DOC-PMC-RENAL-0016-P0132",
+        "DOC-PMC-RENAL-0016-P0127",
+        "DOC-PMC-RENAL-0006-P0012"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-20-1",
+      "query": "What is the specialized function of type A versus type B intercalated cells in the cortical collecting duct?",
+      "topic": "intercalated_cells",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0006"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B0006-C01"
+      ],
+      "gold_evidence_quote_snippet": "Fig. 1 Basolateral AE4 of β-intercalated cells is not required for systemic sodium balance but for acid-base homeostasis. a Representative confocal images of AE4 (light blue), AQP2 (red), and pendrin (green) in murine, porcine and human kidney demonstrating basal and lateral localization of AE4 in c",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0021",
+        "DOC-PMC-RENAL-0023"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0005-P0053",
+        "DOC-PMC-RENAL-0021-P0035",
+        "DOC-PMC-RENAL-0005-P0055",
+        "DOC-PMC-RENAL-0005-P0047",
+        "DOC-PMC-RENAL-0021-P0004",
+        "DOC-PMC-RENAL-0005-P0046",
+        "DOC-PMC-RENAL-0023-P0056",
+        "DOC-PMC-RENAL-0005-P0048",
+        "DOC-PMC-RENAL-0005-P0044",
+        "DOC-PMC-RENAL-0005-P0049"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-20-2",
+      "query": "How do intercalated cells sense extracellular pH and bicarbonate fluctuations via transporters like AE4 and pendrin?",
+      "topic": "intercalated_cells",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0011"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B0011-C01"
+      ],
+      "gold_evidence_quote_snippet": "As Ae4 −/− mice failed to adequately sense and respond to alkali-loading, we next asked whether AE4-deficiency also impairs acid sensing. Acid-loading causes a reduction of pendrin expression and a shift of pendrin from the apical membrane to the subapical region 10 , 12 . To mirror the alkali-loadi",
+      "ablation_category": "METHODS_RESULTS_NOISE",
+      "refined_category": "METHODS_RESULTS_NOISE",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0021"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0021-P0002",
+        "DOC-PMC-RENAL-0021-P0004",
+        "DOC-PMC-RENAL-0021-P0036",
+        "DOC-PMC-RENAL-0005-P0048",
+        "DOC-PMC-RENAL-0005-P0045",
+        "DOC-PMC-RENAL-0021-P0012",
+        "DOC-PMC-RENAL-0021-P0014",
+        "DOC-PMC-RENAL-0021-P0015",
+        "DOC-PMC-RENAL-0021-P0001",
+        "DOC-PMC-RENAL-0005-P0049"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-2",
+      "query": "What are the distinct permeability characteristics of the descending versus thick ascending limbs of Henle?",
+      "topic": "countercurrent",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0004"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0004-C01"
+      ],
+      "gold_evidence_quote_snippet": "From a structural point of view, the prerequisites for CCM are not apparent in the medulla. At no place in the outer medulla (OM) is the majority of descending thin limbs (DTLs) juxtaposed to thick ascending limbs (TALs), furthermore their functional abilities gradually change along the descent. Mor",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0023"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0023-P0136",
+        "DOC-PMC-RENAL-0023-P0051",
+        "DOC-PMC-RENAL-0005-P0036",
+        "DOC-PMC-RENAL-0023-P0053",
+        "DOC-PMC-RENAL-0005-P0035",
+        "DOC-PMC-RENAL-0023-P0042",
+        "DOC-PMC-RENAL-0023-P0040",
+        "DOC-PMC-RENAL-0023-P0013",
+        "DOC-PMC-RENAL-0023-P0015",
+        "DOC-PMC-RENAL-0023-P0039"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-3",
+      "query": "What role does the countercurrent exchanger in the vasa recta play in preserving the medullary gradient?",
+      "topic": "countercurrent",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0014"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0014-C01"
+      ],
+      "gold_evidence_quote_snippet": "Fig. 1 Schematics showing the relevant components of the rat kidney. presented in longitudinal sections through the cortex (C), outer stripe (OS), inner stripe (IS) and inner medulla (IM). a Nephrons and collecting ducts A short-looped nephron starting in the mid-cortex, a long-looped nephron starti",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0023-P0139",
+        "DOC-PMC-RENAL-0023-P0141",
+        "DOC-PMC-RENAL-0023-P0134",
+        "DOC-PMC-RENAL-0023-P0038",
+        "DOC-PMC-RENAL-0023-P0114",
+        "DOC-PMC-RENAL-0023-P0118",
+        "DOC-PMC-RENAL-0023-P0008",
+        "DOC-PMC-RENAL-0023-P0075",
+        "DOC-PMC-RENAL-0023-P0001",
+        "DOC-PMC-RENAL-0023-P0002"
+      ],
+      "has_right_doc_in_top10": true
+    },
+    {
+      "query_id": "RENAL-V2-DEV-22-1",
+      "query": "How does antidiuretic hormone (ADH / vasopressin) induce aquaporin-2 translocation to increase collecting duct water permeability?",
+      "topic": "nephron_water",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0115"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0115-C01"
+      ],
+      "gold_evidence_quote_snippet": "Medullary perfusion is regulated and adapts to the states of diuresis. As described above blood supply of the medulla starts with juxtamedullary EAs. They are sensitive to several mediators including angiotensin II, vasopressin (ADH), endothelin and prostaglandin E2 among others [ 91 ] produced in p",
+      "ablation_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "refined_category": "SECTION_HEADING_AMBIGUITY",
+      "top10_doc_ids": [
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0023"
+      ],
+      "top10_parent_ids": [
+        "DOC-PMC-RENAL-0005-P0036",
+        "DOC-PMC-RENAL-0023-P0057",
+        "DOC-PMC-RENAL-0023-P0142",
+        "DOC-PMC-RENAL-0023-P0098",
+        "DOC-PMC-RENAL-0023-P0088",
+        "DOC-PMC-RENAL-0023-P0058",
+        "DOC-PMC-RENAL-0023-P0073",
+        "DOC-PMC-RENAL-0005-P0044",
+        "DOC-PMC-RENAL-0023-P0046",
+        "DOC-PMC-RENAL-0023-P0070"
+      ],
+      "has_right_doc_in_top10": true
+    }
+  ]
+}

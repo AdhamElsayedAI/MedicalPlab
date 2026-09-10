@@ -1,0 +1,3685 @@
+{
+  "report_id": "RENAL-V2-GOLD-AUDIT",
+  "dev": {
+    "dataset": "RENAL-DEV-v2",
+    "n_queries": 88,
+    "n_answerable": 69,
+    "category_counts": {
+      "CORRECT_SUPPORTED": 69
+    },
+    "false_negative_count": 0,
+    "false_negative_rate": 0.0,
+    "false_positive_count": 0,
+    "false_positive_rate": 0.0
+  },
+  "calibration": {
+    "dataset": "RENAL-CALIBRATION-v2",
+    "n_queries": 66,
+    "n_answerable": 40,
+    "category_counts": {
+      "CORRECT_SUPPORTED": 40
+    },
+    "false_negative_count": 0,
+    "false_negative_rate": 0.0,
+    "false_positive_count": 0,
+    "false_positive_rate": 0.0
+  },
+  "calibration_label_summary": {
+    "UNSUPPORTED": 26,
+    "SUPPORTED": 20,
+    "PARTIALLY_SUPPORTED": 20
+  },
+  "dev_items": [
+    {
+      "query_id": "RENAL-V2-DEV-01-2",
+      "topic": "RAAS",
+      "query": "What role does renin play in activating angiotensinogen, and what physiological factors stimulate its release?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "renin",
+        "juxtaglomerular",
+        "angiotensinogen"
+      ],
+      "matched": [
+        "renin",
+        "angiotensinogen"
+      ],
+      "anchors_in_quote": [
+        "renin",
+        "angiotensinogen"
+      ],
+      "anchors_not_in_quote": [
+        "juxtaglomerular"
+      ],
+      "matched_in_quote": [
+        "renin",
+        "angiotensinogen"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-01-4",
+      "topic": "RAAS",
+      "query": "What does the RAAS pathway regulate in terms of systemic blood pressure and tubular sodium handling?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "RAAS",
+        "aldosterone",
+        "sodium"
+      ],
+      "matched": [
+        "RAAS",
+        "aldosterone",
+        "sodium"
+      ],
+      "anchors_in_quote": [
+        "RAAS",
+        "aldosterone",
+        "sodium"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "RAAS",
+        "aldosterone",
+        "sodium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-1",
+      "topic": "filtration_barrier",
+      "query": "What are the three cellular and extracellular layers that constitute the glomerular filtration barrier?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-2",
+      "topic": "filtration_barrier",
+      "query": "How do podocyte foot processes and the slit diaphragm prevent large plasma proteins from entering the urinary space?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "slit diaphragm",
+        "podocyte",
+        "proteinuria"
+      ],
+      "matched": [
+        "slit diaphragm",
+        "podocyte",
+        "proteinuria"
+      ],
+      "anchors_in_quote": [
+        "slit diaphragm",
+        "podocyte",
+        "proteinuria"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "slit diaphragm",
+        "podocyte",
+        "proteinuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-3",
+      "topic": "filtration_barrier",
+      "query": "Why is the glomerular basement membrane negatively charged and how does this affect albumin filtration?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "charge",
+        "barrier",
+        "albumin"
+      ],
+      "matched": [
+        "charge",
+        "barrier",
+        "albumin"
+      ],
+      "anchors_in_quote": [
+        "charge",
+        "barrier",
+        "albumin"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "charge",
+        "barrier",
+        "albumin"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-4",
+      "topic": "filtration_barrier",
+      "query": "What happens to the filtration barrier when podocyte effacement occurs in minimal change disease?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "podocyte",
+        "effacement",
+        "nephrotic"
+      ],
+      "matched": [
+        "podocyte",
+        "effacement",
+        "nephrotic"
+      ],
+      "anchors_in_quote": [
+        "podocyte",
+        "effacement",
+        "nephrotic"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "podocyte",
+        "effacement",
+        "nephrotic"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-1",
+      "topic": "potassium_handling",
+      "query": "Where along the nephron is the majority of filtered potassium reabsorbed before reaching the distal tubule?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-2",
+      "topic": "potassium_handling",
+      "query": "How does the distal nephron regulate potassium excretion in response to dietary potassium intake?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "distal",
+        "secretion",
+        "potassium"
+      ],
+      "matched": [
+        "distal",
+        "secretion",
+        "potassium"
+      ],
+      "anchors_in_quote": [
+        "distal",
+        "secretion",
+        "potassium"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "distal",
+        "secretion",
+        "potassium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-4",
+      "topic": "potassium_handling",
+      "query": "What is the function of the ROMK channel in potassium secretion in principal cells?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "ROMK",
+        "potassium",
+        "channel"
+      ],
+      "matched": [
+        "ROMK",
+        "potassium",
+        "channel"
+      ],
+      "anchors_in_quote": [
+        "ROMK",
+        "potassium",
+        "channel"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "ROMK",
+        "potassium",
+        "channel"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-1",
+      "topic": "proximal_transport",
+      "query": "How is sodium reabsorption coupled to bicarbonate reclamation in the proximal convoluted tubule?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-3",
+      "topic": "proximal_transport",
+      "query": "How does proximal tubular sodium transport affect systemic blood pressure regulation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "blood pressure",
+        "sodium",
+        "transport"
+      ],
+      "matched": [
+        "blood pressure",
+        "sodium",
+        "transport"
+      ],
+      "anchors_in_quote": [
+        "blood pressure",
+        "sodium",
+        "transport"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "blood pressure",
+        "sodium",
+        "transport"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-4",
+      "topic": "proximal_transport",
+      "query": "What is the role of apical Na+/H+ exchanger NHE3 in proximal tubular solute transport?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "NHE3",
+        "transporter",
+        "sodium"
+      ],
+      "matched": [
+        "NHE3",
+        "transporter",
+        "sodium"
+      ],
+      "anchors_in_quote": [
+        "NHE3",
+        "transporter",
+        "sodium"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "NHE3",
+        "transporter",
+        "sodium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-1",
+      "topic": "acid_base",
+      "query": "How do the kidneys maintain systemic acid-base balance through bicarbonate reclamation and new bicarbonate generation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-3",
+      "topic": "acid_base",
+      "query": "How does the kidney compensate for chronic respiratory acidosis?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "compensation",
+        "respiratory acidosis",
+        "kidney"
+      ],
+      "matched": [
+        "compensation",
+        "respiratory acidosis"
+      ],
+      "anchors_in_quote": [
+        "compensation",
+        "respiratory acidosis"
+      ],
+      "anchors_not_in_quote": [
+        "kidney"
+      ],
+      "matched_in_quote": [
+        "compensation",
+        "respiratory acidosis"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-4",
+      "topic": "acid_base",
+      "query": "What cellular mechanisms in type A intercalated cells secrete protons into the tubular lumen?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "intercalated",
+        "proton",
+        "secretion"
+      ],
+      "matched": [
+        "intercalated",
+        "proton",
+        "secretion"
+      ],
+      "anchors_in_quote": [
+        "intercalated",
+        "proton",
+        "secretion"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "intercalated",
+        "proton",
+        "secretion"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-1",
+      "topic": "aki_definition",
+      "query": "How is acute kidney injury defined and staged according to KDIGO clinical criteria?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-2",
+      "topic": "aki_definition",
+      "query": "Why is an abrupt rise in serum creatinine or drop in urine output used as the diagnostic hallmark of AKI?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "creatinine",
+        "urine output",
+        "hallmark"
+      ],
+      "matched": [
+        "creatinine",
+        "urine output"
+      ],
+      "anchors_in_quote": [
+        "creatinine",
+        "urine output"
+      ],
+      "anchors_not_in_quote": [
+        "hallmark"
+      ],
+      "matched_in_quote": [
+        "creatinine",
+        "urine output"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-4",
+      "topic": "aki_definition",
+      "query": "What is the KDIGO urine output criterion for Stage 1 AKI?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "urine output",
+        "Stage 1",
+        "AKI"
+      ],
+      "matched": [
+        "urine output",
+        "AKI"
+      ],
+      "anchors_in_quote": [
+        "urine output",
+        "AKI"
+      ],
+      "anchors_not_in_quote": [
+        "Stage 1"
+      ],
+      "matched_in_quote": [
+        "urine output",
+        "AKI"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-1",
+      "topic": "aki_management",
+      "query": "What are the primary initial management steps when a patient is diagnosed with acute kidney injury?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "management",
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [
+        "management"
+      ],
+      "matched_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-2",
+      "topic": "aki_management",
+      "query": "When should nephrotoxic medications be stopped or dose-adjusted in acute kidney injury?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "nephrotoxic",
+        "medications",
+        "AKI"
+      ],
+      "matched": [
+        "nephrotoxic",
+        "medications",
+        "AKI"
+      ],
+      "anchors_in_quote": [
+        "nephrotoxic",
+        "medications",
+        "AKI"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "nephrotoxic",
+        "medications",
+        "AKI"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-3",
+      "topic": "aki_management",
+      "query": "What are the absolute urgent indications for initiating renal replacement therapy in acute kidney injury?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "renal replacement",
+        "indications",
+        "urgent"
+      ],
+      "matched": [
+        "renal replacement",
+        "indications"
+      ],
+      "anchors_in_quote": [
+        "renal replacement",
+        "indications"
+      ],
+      "anchors_not_in_quote": [
+        "urgent"
+      ],
+      "matched_in_quote": [
+        "renal replacement",
+        "indications"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-4",
+      "topic": "aki_management",
+      "query": "How should fluid resuscitation be guided in pre-renal AKI to avoid volume overload?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "fluid",
+        "resuscitation",
+        "pre-renal"
+      ],
+      "matched": [
+        "fluid",
+        "resuscitation",
+        "pre-renal"
+      ],
+      "anchors_in_quote": [
+        "fluid",
+        "resuscitation",
+        "pre-renal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "fluid",
+        "resuscitation",
+        "pre-renal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-1",
+      "topic": "ckd",
+      "query": "How is chronic kidney disease defined and classified into GFR and albuminuria categories?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "chronic kidney disease",
+        "GFR",
+        "albuminuria"
+      ],
+      "matched": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_not_in_quote": [
+        "chronic kidney disease"
+      ],
+      "matched_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-3",
+      "topic": "ckd",
+      "query": "What are the major complications associated with advancing chronic kidney disease stages G3b to G5?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "complications",
+        "stages",
+        "progression"
+      ],
+      "matched": [
+        "complications",
+        "progression"
+      ],
+      "anchors_in_quote": [
+        "complications",
+        "progression"
+      ],
+      "anchors_not_in_quote": [
+        "stages"
+      ],
+      "matched_in_quote": [
+        "complications",
+        "progression"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-4",
+      "topic": "ckd",
+      "query": "What blood pressure targets and pharmacological agents are recommended for CKD patients with significant proteinuria?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "blood pressure",
+        "proteinuria",
+        "ACE inhibitor"
+      ],
+      "matched": [
+        "blood pressure",
+        "proteinuria",
+        "ACE inhibitor"
+      ],
+      "anchors_in_quote": [
+        "blood pressure",
+        "proteinuria",
+        "ACE inhibitor"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "blood pressure",
+        "proteinuria",
+        "ACE inhibitor"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-1",
+      "topic": "nephrotic",
+      "query": "What classic triad of findings defines nephrotic syndrome in children and adults?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "nephrotic",
+        "triad",
+        "proteinuria"
+      ],
+      "matched": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_not_in_quote": [
+        "triad"
+      ],
+      "matched_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-2",
+      "topic": "nephrotic",
+      "query": "What are the primary complications of nephrotic syndrome including infection risk and thromboembolism?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "complications",
+        "infection",
+        "thromboembolism"
+      ],
+      "matched": [
+        "complications",
+        "infection",
+        "thromboembolism"
+      ],
+      "anchors_in_quote": [
+        "complications",
+        "infection",
+        "thromboembolism"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "complications",
+        "infection",
+        "thromboembolism"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-4",
+      "topic": "nephrotic",
+      "query": "How is steroid responsiveness defined in pediatric nephrotic syndrome?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "steroid",
+        "responsiveness",
+        "pediatric"
+      ],
+      "matched": [
+        "steroid",
+        "pediatric"
+      ],
+      "anchors_in_quote": [
+        "steroid",
+        "pediatric"
+      ],
+      "anchors_not_in_quote": [
+        "responsiveness"
+      ],
+      "matched_in_quote": [
+        "steroid",
+        "pediatric"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-1",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "Why does a decline in GFR and tubular secretion lead to hyperkalaemia in kidney disease?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "hyperkalemia",
+        "secretion",
+        "GFR"
+      ],
+      "matched": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_not_in_quote": [
+        "secretion"
+      ],
+      "matched_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-2",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "How do medications blocking the renin-angiotensin-aldosterone system induce hyperkalaemia?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "RAAS",
+        "blockade",
+        "potassium"
+      ],
+      "matched": [
+        "blockade",
+        "potassium"
+      ],
+      "anchors_in_quote": [
+        "blockade",
+        "potassium"
+      ],
+      "anchors_not_in_quote": [
+        "RAAS"
+      ],
+      "matched_in_quote": [
+        "blockade",
+        "potassium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-3",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "What are the cardiac electrophysiological manifestations of progressively worsening hyperkalaemia on ECG?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "ECG",
+        "cardiac",
+        "conduction"
+      ],
+      "matched": [
+        "ECG",
+        "cardiac",
+        "conduction"
+      ],
+      "anchors_in_quote": [
+        "ECG",
+        "cardiac",
+        "conduction"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "ECG",
+        "cardiac",
+        "conduction"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-4",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "How does metabolic acidosis cause an extracellular shift of potassium ions?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "acidosis",
+        "shift",
+        "extracellular"
+      ],
+      "matched": [
+        "acidosis",
+        "shift",
+        "extracellular"
+      ],
+      "anchors_in_quote": [
+        "acidosis",
+        "shift",
+        "extracellular"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "acidosis",
+        "shift",
+        "extracellular"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-1",
+      "topic": "hyperkalaemia_management",
+      "query": "What is the immediate priority when managing severe hyperkalaemia with ECG changes?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "immediate",
+        "hyperkalaemia",
+        "ECG"
+      ],
+      "matched": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_not_in_quote": [
+        "hyperkalaemia"
+      ],
+      "matched_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-2",
+      "topic": "hyperkalaemia_management",
+      "query": "How do calcium gluconate or calcium chloride protect the myocardium without lowering serum potassium?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "calcium gluconate",
+        "myocardium",
+        "membrane"
+      ],
+      "matched": [
+        "calcium gluconate",
+        "membrane"
+      ],
+      "anchors_in_quote": [
+        "calcium gluconate",
+        "membrane"
+      ],
+      "anchors_not_in_quote": [
+        "myocardium"
+      ],
+      "matched_in_quote": [
+        "calcium gluconate",
+        "membrane"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-3",
+      "topic": "hyperkalaemia_management",
+      "query": "Which acute therapies shift potassium intracellularly in emergent hyperkalaemia?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "shift",
+        "acute",
+        "insulin"
+      ],
+      "matched": [
+        "shift",
+        "insulin"
+      ],
+      "anchors_in_quote": [
+        "shift",
+        "insulin"
+      ],
+      "anchors_not_in_quote": [
+        "acute"
+      ],
+      "matched_in_quote": [
+        "shift",
+        "insulin"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-4",
+      "topic": "hyperkalaemia_management",
+      "query": "What are the indications and mechanisms of potassium binders in managing chronic hyperkalaemia?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "binders",
+        "chronic",
+        "potassium"
+      ],
+      "matched": [
+        "chronic",
+        "potassium"
+      ],
+      "anchors_in_quote": [
+        "chronic",
+        "potassium"
+      ],
+      "anchors_not_in_quote": [
+        "binders"
+      ],
+      "matched_in_quote": [
+        "chronic",
+        "potassium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-1",
+      "topic": "uti",
+      "query": "Why do urinary tract infections recur frequently and what bacterial virulence factors contribute?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "recurrent",
+        "urinary tract infection",
+        "virulence"
+      ],
+      "matched": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_not_in_quote": [
+        "virulence"
+      ],
+      "matched_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-3",
+      "topic": "uti",
+      "query": "What host defense mechanisms normally maintain sterility in the urinary tract?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "host defense",
+        "sterility",
+        "urothelium"
+      ],
+      "matched": [
+        "host defense",
+        "urothelium"
+      ],
+      "anchors_in_quote": [
+        "host defense",
+        "urothelium"
+      ],
+      "anchors_not_in_quote": [
+        "sterility"
+      ],
+      "matched_in_quote": [
+        "host defense",
+        "urothelium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-4",
+      "topic": "uti",
+      "query": "What role do bacterial biofilms and intracellular bacterial communities play in recurrent UTI persistence?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "biofilms",
+        "persistence",
+        "intracellular"
+      ],
+      "matched": [
+        "biofilms",
+        "persistence"
+      ],
+      "anchors_in_quote": [
+        "biofilms",
+        "persistence"
+      ],
+      "anchors_not_in_quote": [
+        "intracellular"
+      ],
+      "matched_in_quote": [
+        "biofilms",
+        "persistence"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-1",
+      "topic": "stones",
+      "query": "What is the initial imaging modality of choice for suspected acute renal colic and nephrolithiasis?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "imaging",
+        "renal colic",
+        "CT"
+      ],
+      "matched": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_not_in_quote": [
+        "renal colic"
+      ],
+      "matched_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-2",
+      "topic": "stones",
+      "query": "What are the initial emergency management steps for acute ureteric colic pain?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "pain",
+        "analgesia",
+        "acute colic"
+      ],
+      "matched": [
+        "pain",
+        "analgesia"
+      ],
+      "anchors_in_quote": [
+        "pain",
+        "analgesia"
+      ],
+      "anchors_not_in_quote": [
+        "acute colic"
+      ],
+      "matched_in_quote": [
+        "pain",
+        "analgesia"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-13-4",
+      "topic": "stones",
+      "query": "What are the most common chemical compositions of kidney stones?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "composition",
+        "calcium oxalate",
+        "stones"
+      ],
+      "matched": [
+        "composition",
+        "stones"
+      ],
+      "anchors_in_quote": [
+        "composition",
+        "stones"
+      ],
+      "anchors_not_in_quote": [
+        "calcium oxalate"
+      ],
+      "matched_in_quote": [
+        "composition",
+        "stones"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-14-1",
+      "topic": "stone_infection",
+      "query": "How do urease-producing bacteria promote the formation of struvite infection stones?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-14-2",
+      "topic": "stone_infection",
+      "query": "Why do infection stones and recurrent urinary tract infections create a reinforcing vicious cycle?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "cycle",
+        "stones",
+        "infection"
+      ],
+      "matched": [
+        "stones",
+        "infection"
+      ],
+      "anchors_in_quote": [
+        "stones",
+        "infection"
+      ],
+      "anchors_not_in_quote": [
+        "cycle"
+      ],
+      "matched_in_quote": [
+        "stones",
+        "infection"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-14-3",
+      "topic": "stone_infection",
+      "query": "Which bacterial pathogens produce urease that hydrolyzes urea into ammonium?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "urease",
+        "Proteus",
+        "pathogens"
+      ],
+      "matched": [
+        "urease",
+        "Proteus"
+      ],
+      "anchors_in_quote": [
+        "urease",
+        "Proteus"
+      ],
+      "anchors_not_in_quote": [
+        "pathogens"
+      ],
+      "matched_in_quote": [
+        "urease",
+        "Proteus"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-14-4",
+      "topic": "stone_infection",
+      "query": "What principles govern the eradication of infected staghorn calculi?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "staghorn",
+        "calculi",
+        "clearance"
+      ],
+      "matched": [
+        "staghorn",
+        "calculi",
+        "clearance"
+      ],
+      "anchors_in_quote": [
+        "staghorn",
+        "calculi",
+        "clearance"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "staghorn",
+        "calculi",
+        "clearance"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-1",
+      "topic": "obstruction",
+      "query": "What is hydronephrosis and how is its severity graded on ultrasound imaging?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-2",
+      "topic": "obstruction",
+      "query": "How does urinary tract obstruction lead to postrenal acute kidney injury and parenchymal thinning?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "obstruction",
+        "postrenal",
+        "thinning"
+      ],
+      "matched": [
+        "obstruction",
+        "thinning"
+      ],
+      "anchors_in_quote": [
+        "obstruction",
+        "thinning"
+      ],
+      "anchors_not_in_quote": [
+        "postrenal"
+      ],
+      "matched_in_quote": [
+        "obstruction",
+        "thinning"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-3",
+      "topic": "obstruction",
+      "query": "What are common anatomical and luminal causes of bilateral urinary tract obstruction?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "bilateral",
+        "causes",
+        "obstruction"
+      ],
+      "matched": [
+        "bilateral",
+        "obstruction"
+      ],
+      "anchors_in_quote": [
+        "bilateral",
+        "obstruction"
+      ],
+      "anchors_not_in_quote": [
+        "causes"
+      ],
+      "matched_in_quote": [
+        "bilateral",
+        "obstruction"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-16-1",
+      "topic": "rhabdomyolysis_aki",
+      "query": "What are the main mechanisms by which myoglobin causes acute kidney injury in rhabdomyolysis?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "myoglobin",
+        "rhabdomyolysis",
+        "mechanisms"
+      ],
+      "matched": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_not_in_quote": [
+        "mechanisms"
+      ],
+      "matched_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-16-3",
+      "topic": "rhabdomyolysis_aki",
+      "query": "What is the primary initial medical treatment to prevent acute kidney injury in severe rhabdomyolysis?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "hydration",
+        "prevention",
+        "treatment"
+      ],
+      "matched": [
+        "hydration",
+        "treatment"
+      ],
+      "anchors_in_quote": [
+        "hydration",
+        "treatment"
+      ],
+      "anchors_not_in_quote": [
+        "prevention"
+      ],
+      "matched_in_quote": [
+        "hydration",
+        "treatment"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-1",
+      "topic": "gfr_measurement",
+      "query": "Why is inulin considered the ideal gold standard marker for measuring true glomerular filtration rate?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-2",
+      "topic": "gfr_measurement",
+      "query": "Why can creatinine-based estimating equations like CKD-EPI be inaccurate in critically ill patients?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "critically ill",
+        "equations",
+        "inaccuracy"
+      ],
+      "matched": [
+        "critically ill",
+        "equations"
+      ],
+      "anchors_in_quote": [
+        "critically ill",
+        "equations"
+      ],
+      "anchors_not_in_quote": [
+        "inaccuracy"
+      ],
+      "matched_in_quote": [
+        "critically ill",
+        "equations"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-3",
+      "topic": "gfr_measurement",
+      "query": "How does muscle mass and dietary protein intake influence serum creatinine and eGFR calculation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "creatinine",
+        "muscle mass",
+        "estimation"
+      ],
+      "matched": [
+        "creatinine",
+        "estimation"
+      ],
+      "anchors_in_quote": [
+        "creatinine",
+        "estimation"
+      ],
+      "anchors_not_in_quote": [
+        "muscle mass"
+      ],
+      "matched_in_quote": [
+        "creatinine",
+        "estimation"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-4",
+      "topic": "gfr_measurement",
+      "query": "What are the relative advantages of measured 24-hour creatinine clearance versus estimated GFR?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "clearance",
+        "eGFR",
+        "measured"
+      ],
+      "matched": [
+        "clearance",
+        "eGFR",
+        "measured"
+      ],
+      "anchors_in_quote": [
+        "clearance",
+        "eGFR",
+        "measured"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "clearance",
+        "eGFR",
+        "measured"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-18-1",
+      "topic": "renal_glucose",
+      "query": "How does the proximal tubule reabsorb virtually all filtered glucose under normal physiological conditions?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-18-2",
+      "topic": "renal_glucose",
+      "query": "What is the difference between SGLT2 in the early segments and SGLT1 in the late segment of the proximal tubule?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "SGLT2",
+        "SGLT1",
+        "segments"
+      ],
+      "matched": [
+        "SGLT2",
+        "SGLT1",
+        "segments"
+      ],
+      "anchors_in_quote": [
+        "SGLT2",
+        "SGLT1",
+        "segments"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "SGLT2",
+        "SGLT1",
+        "segments"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-18-3",
+      "topic": "renal_glucose",
+      "query": "What is the renal glucose threshold (TmG) and what happens when plasma glucose exceeds this limit?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "threshold",
+        "glucosuria",
+        "TmG"
+      ],
+      "matched": [
+        "glucosuria",
+        "TmG"
+      ],
+      "anchors_in_quote": [
+        "glucosuria",
+        "TmG"
+      ],
+      "anchors_not_in_quote": [
+        "threshold"
+      ],
+      "matched_in_quote": [
+        "glucosuria",
+        "TmG"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-18-4",
+      "topic": "renal_glucose",
+      "query": "How do basolateral GLUT2 transporters facilitate glucose exit from proximal tubule cells into peritubular capillaries?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "GLUT2",
+        "basolateral",
+        "facilitated"
+      ],
+      "matched": [
+        "GLUT2",
+        "basolateral"
+      ],
+      "anchors_in_quote": [
+        "GLUT2",
+        "basolateral"
+      ],
+      "anchors_not_in_quote": [
+        "facilitated"
+      ],
+      "matched_in_quote": [
+        "GLUT2",
+        "basolateral"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-1",
+      "topic": "tubular_signaling",
+      "query": "How does serum and glucocorticoid-regulated kinase 1 (SGK1) stimulate tubular sodium transport?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-2",
+      "topic": "tubular_signaling",
+      "query": "What role does the Akt signaling pathway play in tubular epithelial cell survival and transport regulation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "Akt",
+        "survival",
+        "signaling"
+      ],
+      "matched": [
+        "Akt",
+        "survival",
+        "signaling"
+      ],
+      "anchors_in_quote": [
+        "Akt",
+        "survival",
+        "signaling"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "Akt",
+        "survival",
+        "signaling"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-3",
+      "topic": "tubular_signaling",
+      "query": "How does aldosterone activate SGK1 to increase the abundance of epithelial sodium channels (ENaC) on the apical membrane?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "aldosterone",
+        "ENaC",
+        "apical"
+      ],
+      "matched": [
+        "aldosterone",
+        "ENaC"
+      ],
+      "anchors_in_quote": [
+        "aldosterone",
+        "ENaC"
+      ],
+      "anchors_not_in_quote": [
+        "apical"
+      ],
+      "matched_in_quote": [
+        "aldosterone",
+        "ENaC"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-4",
+      "topic": "tubular_signaling",
+      "query": "What are the downstream consequences of hyperactivated tubular SGK1 on blood pressure and sodium retention?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "hypertension",
+        "retention",
+        "sodium"
+      ],
+      "matched": [
+        "hypertension",
+        "retention",
+        "sodium"
+      ],
+      "anchors_in_quote": [
+        "hypertension",
+        "retention",
+        "sodium"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "hypertension",
+        "retention",
+        "sodium"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-20-1",
+      "topic": "intercalated_cells",
+      "query": "What is the specialized function of type A versus type B intercalated cells in the cortical collecting duct?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "type A",
+        "type B",
+        "intercalated"
+      ],
+      "matched": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_not_in_quote": [
+        "type B"
+      ],
+      "matched_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-20-2",
+      "topic": "intercalated_cells",
+      "query": "How do intercalated cells sense extracellular pH and bicarbonate fluctuations via transporters like AE4 and pendrin?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "AE4",
+        "sensing",
+        "pH"
+      ],
+      "matched": [
+        "AE4",
+        "sensing",
+        "pH"
+      ],
+      "anchors_in_quote": [
+        "AE4",
+        "sensing",
+        "pH"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "AE4",
+        "sensing",
+        "pH"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-2",
+      "topic": "countercurrent",
+      "query": "What are the distinct permeability characteristics of the descending versus thick ascending limbs of Henle?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "descending",
+        "thick ascending",
+        "permeability"
+      ],
+      "matched": [
+        "descending",
+        "thick ascending"
+      ],
+      "anchors_in_quote": [
+        "descending",
+        "thick ascending"
+      ],
+      "anchors_not_in_quote": [
+        "permeability"
+      ],
+      "matched_in_quote": [
+        "descending",
+        "thick ascending"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-3",
+      "topic": "countercurrent",
+      "query": "What role does the countercurrent exchanger in the vasa recta play in preserving the medullary gradient?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "vasa recta",
+        "exchanger",
+        "medulla"
+      ],
+      "matched": [
+        "vasa recta",
+        "medulla"
+      ],
+      "anchors_in_quote": [
+        "vasa recta",
+        "medulla"
+      ],
+      "anchors_not_in_quote": [
+        "exchanger"
+      ],
+      "matched_in_quote": [
+        "vasa recta",
+        "medulla"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-22-1",
+      "topic": "nephron_water",
+      "query": "How does antidiuretic hormone (ADH / vasopressin) induce aquaporin-2 translocation to increase collecting duct water permeability?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "aquaporin-2",
+        "ADH",
+        "vasopressin"
+      ],
+      "matched": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_not_in_quote": [
+        "aquaporin-2"
+      ],
+      "matched_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-DEV-22-2",
+      "topic": "nephron_water",
+      "query": "Why is the corticomedullary osmotic gradient indispensable for the collecting duct to concentrate urine?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "osmotic gradient",
+        "concentration",
+        "water"
+      ],
+      "matched": [
+        "osmotic gradient",
+        "concentration",
+        "water"
+      ],
+      "anchors_in_quote": [
+        "osmotic gradient",
+        "concentration",
+        "water"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "osmotic gradient",
+        "concentration",
+        "water"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    }
+  ],
+  "calibration_items": [
+    {
+      "query_id": "RENAL-V2-CAL-S-02",
+      "topic": "filtration_barrier",
+      "query": "What structures form the glomerular filtration barrier, and what does each layer contribute to selective permeability?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-02",
+      "topic": "filtration_barrier",
+      "query": "What structures form the glomerular filtration barrier, and what does each layer contribute to selective permeability? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "podocyte",
+        "endothelial",
+        "basement membrane"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-03",
+      "topic": "potassium_handling",
+      "query": "How does the nephron regulate potassium reabsorption and distal secretion?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-03",
+      "topic": "potassium_handling",
+      "query": "How does the nephron regulate potassium reabsorption and distal secretion? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "proximal",
+        "potassium",
+        "reabsorption"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-04",
+      "topic": "proximal_transport",
+      "query": "Which major solutes are reabsorbed in the proximal tubule and by what general mechanisms?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-04",
+      "topic": "proximal_transport",
+      "query": "Which major solutes are reabsorbed in the proximal tubule and by what general mechanisms? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "sodium",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-05",
+      "topic": "acid_base",
+      "query": "How does the kidney maintain systemic acid-base balance?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-05",
+      "topic": "acid_base",
+      "query": "How does the kidney maintain systemic acid-base balance? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "bicarbonate",
+        "acid-base",
+        "balance"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-06",
+      "topic": "aki_definition",
+      "query": "How is acute kidney injury recognized and staged in clinical practice?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-06",
+      "topic": "aki_definition",
+      "query": "How is acute kidney injury recognized and staged in clinical practice? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "KDIGO",
+        "creatinine",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-07",
+      "topic": "aki_management",
+      "query": "What are the main principles of managing acute kidney injury?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "management",
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [
+        "management"
+      ],
+      "matched_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-07",
+      "topic": "aki_management",
+      "query": "What are the main principles of managing acute kidney injury? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "management",
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "anchors_not_in_quote": [
+        "management"
+      ],
+      "matched_in_quote": [
+        "initial",
+        "acute kidney injury"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-08",
+      "topic": "ckd",
+      "query": "How are GFR and albuminuria used when assessing chronic kidney disease?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "chronic kidney disease",
+        "GFR",
+        "albuminuria"
+      ],
+      "matched": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_not_in_quote": [
+        "chronic kidney disease"
+      ],
+      "matched_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-08",
+      "topic": "ckd",
+      "query": "How are GFR and albuminuria used when assessing chronic kidney disease? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "chronic kidney disease",
+        "GFR",
+        "albuminuria"
+      ],
+      "matched": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "anchors_not_in_quote": [
+        "chronic kidney disease"
+      ],
+      "matched_in_quote": [
+        "GFR",
+        "albuminuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-09",
+      "topic": "nephrotic",
+      "query": "What clinical and laboratory features characterize nephrotic syndrome?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "nephrotic",
+        "triad",
+        "proteinuria"
+      ],
+      "matched": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_not_in_quote": [
+        "triad"
+      ],
+      "matched_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-09",
+      "topic": "nephrotic",
+      "query": "What clinical and laboratory features characterize nephrotic syndrome? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "nephrotic",
+        "triad",
+        "proteinuria"
+      ],
+      "matched": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "anchors_not_in_quote": [
+        "triad"
+      ],
+      "matched_in_quote": [
+        "nephrotic",
+        "proteinuria"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-10",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "Why does reduced kidney function predispose a patient to hyperkalaemia?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "hyperkalemia",
+        "secretion",
+        "GFR"
+      ],
+      "matched": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_not_in_quote": [
+        "secretion"
+      ],
+      "matched_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-10",
+      "topic": "hyperkalaemia_mechanism",
+      "query": "Why does reduced kidney function predispose a patient to hyperkalaemia? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "hyperkalemia",
+        "secretion",
+        "GFR"
+      ],
+      "matched": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "anchors_not_in_quote": [
+        "secretion"
+      ],
+      "matched_in_quote": [
+        "hyperkalemia",
+        "GFR"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-11",
+      "topic": "hyperkalaemia_management",
+      "query": "What principles guide the emergency and long-term management of hyperkalaemia in kidney disease?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "immediate",
+        "hyperkalaemia",
+        "ECG"
+      ],
+      "matched": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_not_in_quote": [
+        "hyperkalaemia"
+      ],
+      "matched_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-11",
+      "topic": "hyperkalaemia_management",
+      "query": "What principles guide the emergency and long-term management of hyperkalaemia in kidney disease? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "immediate",
+        "hyperkalaemia",
+        "ECG"
+      ],
+      "matched": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "anchors_not_in_quote": [
+        "hyperkalaemia"
+      ],
+      "matched_in_quote": [
+        "immediate",
+        "ECG"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-12",
+      "topic": "uti",
+      "query": "Why can urinary tract infections recur despite apparently adequate treatment?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "recurrent",
+        "urinary tract infection",
+        "virulence"
+      ],
+      "matched": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_not_in_quote": [
+        "virulence"
+      ],
+      "matched_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-12",
+      "topic": "uti",
+      "query": "Why can urinary tract infections recur despite apparently adequate treatment? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "recurrent",
+        "urinary tract infection",
+        "virulence"
+      ],
+      "matched": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "anchors_not_in_quote": [
+        "virulence"
+      ],
+      "matched_in_quote": [
+        "recurrent",
+        "urinary tract infection"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-13",
+      "topic": "stones",
+      "query": "How are suspected kidney stones investigated and managed initially?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "imaging",
+        "renal colic",
+        "CT"
+      ],
+      "matched": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_not_in_quote": [
+        "renal colic"
+      ],
+      "matched_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-13",
+      "topic": "stones",
+      "query": "How are suspected kidney stones investigated and managed initially? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "imaging",
+        "renal colic",
+        "CT"
+      ],
+      "matched": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "anchors_not_in_quote": [
+        "renal colic"
+      ],
+      "matched_in_quote": [
+        "imaging",
+        "CT"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-14",
+      "topic": "stone_infection",
+      "query": "How can kidney stones and recurrent urinary infection reinforce each other?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-14",
+      "topic": "stone_infection",
+      "query": "How can kidney stones and recurrent urinary infection reinforce each other? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "urease",
+        "struvite",
+        "formation"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-15",
+      "topic": "obstruction",
+      "query": "What does hydronephrosis indicate and how is its severity described?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-15",
+      "topic": "obstruction",
+      "query": "What does hydronephrosis indicate and how is its severity described? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "hydronephrosis",
+        "grading",
+        "severity"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-16",
+      "topic": "rhabdomyolysis_aki",
+      "query": "How does rhabdomyolysis cause acute kidney injury?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "myoglobin",
+        "rhabdomyolysis",
+        "mechanisms"
+      ],
+      "matched": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_not_in_quote": [
+        "mechanisms"
+      ],
+      "matched_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-16",
+      "topic": "rhabdomyolysis_aki",
+      "query": "How does rhabdomyolysis cause acute kidney injury? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "myoglobin",
+        "rhabdomyolysis",
+        "mechanisms"
+      ],
+      "matched": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "anchors_not_in_quote": [
+        "mechanisms"
+      ],
+      "matched_in_quote": [
+        "myoglobin",
+        "rhabdomyolysis"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-17",
+      "topic": "gfr_measurement",
+      "query": "Why can estimated GFR be unreliable during rapidly changing kidney function?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-17",
+      "topic": "gfr_measurement",
+      "query": "Why can estimated GFR be unreliable during rapidly changing kidney function? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "inulin",
+        "gold standard",
+        "filtration"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-18",
+      "topic": "renal_glucose",
+      "query": "How is filtered glucose normally reclaimed by the kidney?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-18",
+      "topic": "renal_glucose",
+      "query": "How is filtered glucose normally reclaimed by the kidney? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "glucose",
+        "reabsorption",
+        "proximal"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-19",
+      "topic": "tubular_signaling",
+      "query": "How do intracellular signalling pathways regulate renal tubular transport?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-19",
+      "topic": "tubular_signaling",
+      "query": "How do intracellular signalling pathways regulate renal tubular transport? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "n_anchors": 3,
+      "n_matched": 3,
+      "min_hits": 2,
+      "anchors": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "anchors_not_in_quote": [],
+      "matched_in_quote": [
+        "SGK1",
+        "sodium",
+        "transport"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-20",
+      "topic": "intercalated_cells",
+      "query": "What role do intercalated cells play in renal acid-base regulation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "type A",
+        "type B",
+        "intercalated"
+      ],
+      "matched": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_not_in_quote": [
+        "type B"
+      ],
+      "matched_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-20",
+      "topic": "intercalated_cells",
+      "query": "What role do intercalated cells play in renal acid-base regulation? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "type A",
+        "type B",
+        "intercalated"
+      ],
+      "matched": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "anchors_not_in_quote": [
+        "type B"
+      ],
+      "matched_in_quote": [
+        "type A",
+        "intercalated"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-S-22",
+      "topic": "nephron_water",
+      "query": "How do the loop of Henle and collecting duct cooperate in water conservation?",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "aquaporin-2",
+        "ADH",
+        "vasopressin"
+      ],
+      "matched": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_not_in_quote": [
+        "aquaporin-2"
+      ],
+      "matched_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    },
+    {
+      "query_id": "RENAL-V2-CAL-P-22",
+      "topic": "nephron_water",
+      "query": "How do the loop of Henle and collecting duct cooperate in water conservation? Also provide the exact 2026 Egyptian national prevalence.",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "n_anchors": 3,
+      "n_matched": 2,
+      "min_hits": 2,
+      "anchors": [
+        "aquaporin-2",
+        "ADH",
+        "vasopressin"
+      ],
+      "matched": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "anchors_not_in_quote": [
+        "aquaporin-2"
+      ],
+      "matched_in_quote": [
+        "ADH",
+        "vasopressin"
+      ],
+      "matched_not_in_quote": [],
+      "category": "CORRECT_SUPPORTED"
+    }
+  ]
+}

@@ -1,0 +1,2935 @@
+{
+  "dataset_id": "RENAL-HELDOUT-V2",
+  "created_at": "2026-09-10T04:56:07.532839+00:00",
+  "queries": [
+    {
+      "query_id": "RENAL-V2-HO-01-1",
+      "query": "How does aldosterone increase sodium reabsorption in the principal cells of the collecting duct?",
+      "topic": "RAAS",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0021"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0021-C01"
+      ],
+      "gold_evidence_quote": "Decreasing aldosterone synthesis at its enzyme step, aldosterone synthase (AS), CYP11B2, is the novel alternative approach to MRA to limit aldosterone effects [ 105 ]. Aldosterone synthase inhibitors (ASI) represent the latest therapeutic strategy to decrease aldosterone production [ 110 ]. Fadrozole 286A (FAD 286A) has been shown to dose-dependently inhibit Ang II-induced aldosterone synthesis in human adrenocortical carcinoma cells, whereas in animal models it decreased plasma renin activity, cardiac hypertrophy, and cardiac remodeling [ 111 \u2013 113 ]. Based on FAD 286A, a new AS inhibitor, LCI699, has been developed and is the first generation ASI that has been tested in clinical trials. In clinical trials, administration of LCI699 has been shown to reduce plasma and urine aldosterone level in participants with sodium-depleted levels, to lower blood pressure in patients with essential hypertension and to balance hypokalemia in patients with aldosteronism [ 110 , 114 , 115 ]. Moreover, LCI699 has been recently shown to modestly reduce blood pressure (BP) in patients with resistant hypertension [ 116 ]. However, in a study by Karns et al. [ 116 ], pharmacological effect of LCI699 was tested on primary aldosteronism, resistant and uncontrolled hypertension, and essential hypertension [ 106 ]. In this study, the first generation of ASI, LCI699, has been found to exhibit some limitations, that is, to interfere with major endocrine feedback loops: the RAAS and hypothalamic-pituitary-adrenal (HPA). LCI699 potentiated a higher than accepted physiological level of 11-deoxycorticosterone and adrenocorticotropic hormone (ACTH). The increased levels of 11-deoxycorticosterone and ACTH are components of two different endocrine feedback loops which indeed converge at one point: a potent mineralocorticoid receptor, data which supports a modest LCI699 effect on lowering blood pressure. This data also suggests the need for more in vivo studies to fully understand the physiological effect of LCI699.",
+      "gold_verification_anchors": [
+        "aldosterone",
+        "principal",
+        "sodium"
+      ],
+      "gold_matched_anchors": [
+        "aldosterone",
+        "sodium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-01-2",
+      "query": "What hemodynamic changes occur in the renal microcirculation when angiotensin II levels rise?",
+      "topic": "RAAS",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "hemodynamic",
+        "perfusion",
+        "filtration"
+      ],
+      "gold_matched_anchors": [
+        "filtration"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-01-3",
+      "query": "In congestive heart failure, how does chronic activation of RAAS contribute to fluid retention?",
+      "topic": "RAAS",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0002-C01"
+      ],
+      "gold_evidence_quote": "The rennin-angiotensin-aldosterone system (RAAS), one of the most important hormonal systems, oversees the functions of cardiovascular, renal, and adrenal glands by regulating blood pressure, fluid volume, and sodium and potassium balance [ 1 ]. The classical RAAS system was discovered more than a century ago, and in 1934 Goldblatt et al. showed a Renin link between kidney function and blood pressure [ 2 ]. Since then, extensive experimental studies have been undertaken to identify the components of the RAAS and its role in regulating blood pressure. Abnormal activity of the RAAS leads to the development of an array of cardiovascular diseases (CVD; hypertension, atherosclerosis, and left ventricular hypertrophy), cardiovascular events (myocardial infarction, stroke, and congestive heart failure), and renal disease [ 1 ]. As early as in 1956, Leonald T. Skeggs suggested the development of drugs to regulate renin-angiotensin-system (RAS), and since then an array of inhibitors have been developed. Due to RAAS signaling pathways complexity than previously thought, half-century later, new RAAS inhibitors are still being developed [ 3 ]. Indeed, numerous experimental and clinical evidences indicate that pharmacological inhibition of RAAS with angiotensin-converting enzyme inhibitors (ACEIs), angiotensin receptor blockers (ARBs), direct rennin inhibitors (DRIs), and mineralocorticoid receptor antagonists (MRAs) is effective in treating hypertension and diabetic renal injury, and the results show a reduction in CVD and heart-related events worldwide [ 1 ]. This review discusses recent findings in our understanding of the role of RAAS components and their inhibition effects on vascular inflammation, vascular remodeling, and CVD.",
+      "gold_verification_anchors": [
+        "heart failure",
+        "fluid",
+        "retention"
+      ],
+      "gold_matched_anchors": [
+        "heart failure",
+        "fluid"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-01-4",
+      "query": "What is the difference between afferent and efferent arteriolar resistance changes mediated by angiotensin II?",
+      "topic": "RAAS",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "efferent",
+        "afferent",
+        "resistance"
+      ],
+      "gold_matched_anchors": [
+        "resistance"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-02-1",
+      "query": "What role do endothelial fenestrations play in determining the permeability of the glomerular capillary wall?",
+      "topic": "filtration_barrier",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0029"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B0029-C01"
+      ],
+      "gold_evidence_quote": "Studies using variedly cationic ferritin first demonstrated the anionic nature of the GBM [ 47 ]. The anionic charge is mostly conferred by a lattice-like network formed by the sulfated glycosaminoglycan moieties of constituent proteoglycans [ 48 ]. Based on the increased permeability of the GFB to ferritin after heparanase treatment, the GBM was initially thought to be the source of charge selectivity in the GFB [ 49 ]. This hypothesis has been called into question more recently. Spherical Ficoll/Ficoll sulfate particles of differing negative charge did not show any charge-dependent variation in filtration fraction in isolated GBM preparations [ 50 ]. The authors preferred Ficoll as its shape and structure are less alterable with changes in charge, which contrasted with previous studies which had used radio-labelled peptides (albumin) or dextran [ 51 , 52 ]. Since podocytes are the site of synthesis of heparan sulfate (HS), Chen and colleagues used a Cre-loxP strategy to target the podocyte enzyme, HS polymerase (EXT1) [ 53 ]. Mice in whom Cre recombinase expression driven by a podocyte-specific, podocin promoter were crossbred with animals in whom exon 1 of EXT1 was floxed. The resultant mice had dramatically reduced (though not absent) HS staining in their GBM. However, in spite of a demonstrable loss of GBM charge by polyethyleneimine staining, they developed only mild albuminuria and glomerulomegaly at 8 months. There was also no statistically significant difference in body weights compared to controls [ 53 ]. Though this model does not take into account endothelial or mesangial synthesis of HS, it does suggest that GBM charge may not be central to GFB permselectivity.",
+      "gold_verification_anchors": [
+        "endothelial",
+        "fenestrations",
+        "permeability"
+      ],
+      "gold_matched_anchors": [
+        "endothelial",
+        "permeability"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-02-2",
+      "query": "How do size and charge selectivity collaborate in the renal filtration barrier?",
+      "topic": "filtration_barrier",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B0003-C01"
+      ],
+      "gold_evidence_quote": "The filtration apparatus is complex; its integrity is maintained by an interplay of all participating cell types and constituents [ 9 ]. The glomerular filtration barrier (GFB) is freely permeable to water, small- and midsized solutes in plasma, yet maintains considerable size and charge selectivity for proteins and larger molecules. This barrier has three major components: the fenestrated endothelial cell, the glomerular basement membrane (GBM), and the podocyte with their \u201cslit diaphragms\u201d. In all pathologic glomerular proteinuria, there is increased filtration of macromolecules (typified by albumin) across this barrier. Injury to this apparatus can be pathogenetically classified as resulting from inherited and acquired causes ( Table 1 ). Inherited human diseases presenting with defects in the GFB have been shown to involve abnormalities of proteins important for the maintenance of podocyte cytoskeleton [ 10 ], glomerular basement membrane integrity [ 11 ], and glomerular endothelial function [ 12 ]. Possibly owing to its specialized structure and abundant blood flow, the glomerulus is uniquely susceptible to both immunological and hemodynamic injury [ 13 ]. In addition to discussing the roles individual components in the GFB play in glomerular function in health and disease, we will attempt to highlight the accumulating evidence for significant interdependence and cross-talk within this unit ( Figure 1 ).",
+      "gold_verification_anchors": [
+        "size",
+        "charge",
+        "selectivity"
+      ],
+      "gold_matched_anchors": [
+        "size",
+        "charge",
+        "selectivity"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-02-3",
+      "query": "Why does damage to the glomerular slit diaphragm result in severe selective proteinuria?",
+      "topic": "filtration_barrier",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0026"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B0026-C01"
+      ],
+      "gold_evidence_quote": "The podocyte slit diaphragm is the final barrier in the GFB to filtration of macromolecules. Distortion of foot process architecture resulting in foot process effacement (FPE) or flattening is observed in the majority of instances where glomerular proteinuria is present with a few notable exceptions. These exceptions [ 23 , 24 ] argue that foot process effacement is neither necessary nor sufficient to induce proteinuria. The best example is preecclampsia where nephrotic proteinuria is unaccompanied or variably accompanied by effacement [ 25 ]. The reported evidence for FPE without proteinuria is less profuse. Glomerular epithelial protein 1 (GLEPP1) is a receptor tyrosine kinase located on the apical surface of podocytes. Homozygous GLEPP1-knockout mice developed abnormally shaped podocytes with FPE but did not develop proteinuria [ 26 ]. Additionally, even in diseases where effacement is classically encountered, its quantification by morphometry does not seem to correlate with the degree of proteinuria [ 27 ]. FPE as a reversible event, induced by infusion of polycations and reversed by polyanions was classically demonstrated in rats [ 28 ]. This concept of FPE as an ongoing process reversibly initiated by podocytes in response to injurious stimuli is reemerging from multiple observations [ 29 , 30 ]. The best evidence for near complete reversibility of FPE comes from minimal change disease (MCD) nephrotic syndrome in children and adults upon treatment [ 31 ]. FPE in FSGS on the other hand seems to represent a more irreversible event [ 10 ].",
+      "gold_verification_anchors": [
+        "slit diaphragm",
+        "proteinuria",
+        "damage"
+      ],
+      "gold_matched_anchors": [
+        "slit diaphragm",
+        "proteinuria"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-02-4",
+      "query": "What ultrastructural changes are seen in the glomerular filtration barrier in nephrotic syndrome?",
+      "topic": "filtration_barrier",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B0003-C01"
+      ],
+      "gold_evidence_quote": "The filtration apparatus is complex; its integrity is maintained by an interplay of all participating cell types and constituents [ 9 ]. The glomerular filtration barrier (GFB) is freely permeable to water, small- and midsized solutes in plasma, yet maintains considerable size and charge selectivity for proteins and larger molecules. This barrier has three major components: the fenestrated endothelial cell, the glomerular basement membrane (GBM), and the podocyte with their \u201cslit diaphragms\u201d. In all pathologic glomerular proteinuria, there is increased filtration of macromolecules (typified by albumin) across this barrier. Injury to this apparatus can be pathogenetically classified as resulting from inherited and acquired causes ( Table 1 ). Inherited human diseases presenting with defects in the GFB have been shown to involve abnormalities of proteins important for the maintenance of podocyte cytoskeleton [ 10 ], glomerular basement membrane integrity [ 11 ], and glomerular endothelial function [ 12 ]. Possibly owing to its specialized structure and abundant blood flow, the glomerulus is uniquely susceptible to both immunological and hemodynamic injury [ 13 ]. In addition to discussing the roles individual components in the GFB play in glomerular function in health and disease, we will attempt to highlight the accumulating evidence for significant interdependence and cross-talk within this unit ( Figure 1 ).",
+      "gold_verification_anchors": [
+        "ultrastructure",
+        "barrier",
+        "glomerulus"
+      ],
+      "gold_matched_anchors": [
+        "barrier",
+        "glomerulus"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-03-1",
+      "query": "How does aldosterone stimulate potassium excretion via the apical membrane of principal cells?",
+      "topic": "potassium_handling",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0016"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0016-C01"
+      ],
+      "gold_evidence_quote": "Because most experimental studies on hypokalemic nephropathy were performed in male animals only, it is unclear if there is sexual dimorphism in the development of hypokalemic nephropathy. It is clear, however, that there are sex differences in kidney potassium handling. Female rats and mice have a lower plasma potassium set point which coincides with higher NCC activity, depends on estrogen, and is maintained after a potassium challenge [ 62 ]. This lower plasma potassium set point may protect from hyperkalemia during pregnancy when high potassium loads are consumed [ 62 ]. Increased NCC activity in female mice is not accompanied by a larger DCT but rather a shorter DCT with higher cellular density of NCC [ 63 ]. Female mice also respond more strongly to thiazide diuretics with greater sodium and potassium excretion than males [ 64 ]. In female mice, plasma potassium decreases more after exposure to a potassium-deficient diet. This makes female mice more prone to develop nephrogenic diabetes insipidus when reducing dietary potassium [ 44 ]. In agreement with these animal data, the prevalence of hypokalemia is higher in females than in males [ 65 ]. However, no studies in human subjects have looked into sex differences in hypokalemic complications (Table 1 ). It is known that females with Gitelman syndrome require significantly more potassium supplementation than males [ 66 ]. This sex difference was explained by progesterone which can cause functional aldosterone antagonism with compensatory NCC upregulation. The inability to upregulate NCC in females with Gitelman syndrome could explain the more severe phenotype compared to males. This could also explain why females with Gitelman syndrome typically require even higher doses of potassium supplementation during pregnancy. In contrast, one study found a more severe phenotype in men with Gitelman syndrome [ 67 ]. Another study reported same sex siblings with differences in disease severity [ 68 ]. Therefore, the role of sex in the disease severity of Gitelman syndrome remains incompletely understood.",
+      "gold_verification_anchors": [
+        "aldosterone",
+        "principal",
+        "potassium"
+      ],
+      "gold_matched_anchors": [
+        "aldosterone",
+        "potassium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-03-2",
+      "query": "Why does metabolic alkalosis enhance urinary potassium excretion?",
+      "topic": "potassium_handling",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0017"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0017-C03"
+      ],
+      "gold_evidence_quote": "In public health, another potassium-based strategy to positively affect blood pressure is gaining ground, namely salt substitution. Salt substitution refers to the approach to replace ~ 25% of sodium chloride with potassium chloride in discretionary salt use [ 76 ]. Two large salt substitution studies in the community were recently completed. The first study (including 2,376 participants) showed that salt substitution reduced the incidence of hypertension by 51% [ 77 ]. Of note, in this study, urinary potassium excretion increased, but urinary sodium excretion was unchanged, suggesting that the effect was primarily attributable to increased potassium intake. The second study (including 20,995 participants) observed a similar reduction not only in blood pressure but also in the risk of stroke, major cardiovascular events, and death [ 78 ]. In this study, urinary potassium excretion increased and urinary sodium excretion decreased. The effect on cardiovascular outcomes could therefore be attributable to the decrease in sodium intake, the increase in potassium intake, or both. Irrespectively, salt substitution represents a relatively simple intervention that might also benefit patients with CKD. Indeed, modelling studies suggest that the prevention of cardiovascular deaths outweighs excess hyperkalemia deaths, even in patients with CKD [ 79 ]. Similar to increasing dietary potassium intake, salt substitution would also be a logical topic for a future clinical trial in patients with CKD. These studies will be necessary to further determine the contribution of dietary potassium to outcomes. In practice, this evidence should be translated to dietary recommendations which fits with the increased focus on plant-based diets in patients with kidney disease [ 80 ]. In summary, there is still a lot to learn on the role of potassium in kidney disease (Table 1 ). Awaiting future studies, it is becoming clear that potassium should not only be considered a potentially lethal cation but may be part of a non-pharmacological approach to improve cardiovascular and kidney outcomes in patients with kidney disease.",
+      "gold_verification_anchors": [
+        "alkalosis",
+        "excretion",
+        "potassium"
+      ],
+      "gold_matched_anchors": [
+        "excretion",
+        "potassium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-03-3",
+      "query": "Which transport mechanisms reabsorb potassium in the thick ascending limb of the loop of Henle?",
+      "topic": "potassium_handling",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "thick ascending",
+        "Henle",
+        "potassium"
+      ],
+      "gold_matched_anchors": [
+        "potassium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-03-4",
+      "query": "How does potassium handling in the proximal tubule differ from that in the late distal tubule and collecting duct?",
+      "topic": "potassium_handling",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0007"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0007-C01"
+      ],
+      "gold_evidence_quote": "Fig. 2 Characteristics of hypokalemic nephropathy. Hypokalemic nephropathy can cause histological or functional changes throughout the nephron. Depicted are the changes reported in previous studies either from kidney biopsies in patients ( panels 1 and 3) or observations in animals placed on a potassium-deficient diet ( panels 2, 4\u20138) . Hypokalemic nephropathy is characterized by vacuolar degeneration ( panel 1 ), which may be observed not only in proximal and distal tubules but also in podocytes and arterial myocytes [ 39 ]. More recently, so-called WNK bodies have been described occurring as punctate structures in the distal convoluted tubule ( panel 3) and consisting of WNKs and SPAK, kinases that are affected by hypokalemia (Fig. 1 ) [ 40 ]. In vivo potassium deficiency has been shown to result in intracellular acidosis and ammoniagenesis with complement activation in cortical tubules ( panel 2) [ 41 ]. The characteristic increase in kidney weight during hypokalemic nephropathy has been explained by local trapping of IGF-I by IGFBP-1, which was mainly observed in the outer medulla ( panel 4 ) [ 42 ]. Changes in intrarenal and excreted vasoactive peptides and metabolites include an increase in angiotensin II (Ang II) and endothelin-1, and decrease in kallikrein, nitrite/nitrate, and prostaglandin E2 ( panels 5 and 8 ) [ 43 ]. Hypokalemic nephropathy is also accompanied by loss of peritubular capillaries with macrophage infiltration and a decrease in vascular endothelial growth factor (VEGF) and endothelial nitric oxide synthase (eNOS) ( panel 6 ) [ 47 ]. Finally, hypokalemic nephropathy causes nephrogenic diabetes insipidus possibly due to autophagy of aquaporin-2 (AQP2) and/or cellular conversion of principal cells to intercalated cells ( panel 7 ) [ 45 , 46 ]",
+      "gold_verification_anchors": [
+        "proximal",
+        "distal",
+        "potassium"
+      ],
+      "gold_matched_anchors": [
+        "proximal",
+        "distal",
+        "potassium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-04-1",
+      "query": "How does basolateral Na+/K+-ATPase generate the electrochemical gradient for proximal tubular reabsorption?",
+      "topic": "proximal_transport",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0010"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0010-C01"
+      ],
+      "gold_evidence_quote": "Certain risk factors such as abdominal adiposity, glucose intolerance, dyslipidemia, and hypertension tend to cluster within individuals. Insulin resistance with obesity is thought to be a key factor for this association, which is now termed as metabolic syndrome [ 28 ]. Several different mechanisms such as activation of renin-angiotensin-aldosterone system (RAAS), enhancement of sympathetic nervous system, or hyperinsulinemia may be involved in the occurrence of hypertension associated with insulin resistance [ 29 , 30 ]. Among these factors, hyperinsulinemia-induced hypertension seems to be an attractive hypothesis in view of the antinatriuretic action of insulin [ 3 , 4 ]. Indeed, insulin is known to stimulate sodium absorption from several nephron segments. For example, insulin may stimulate sodium absorption from distal convoluted tubules by phosphorylating the Na + -Cl \u2212 cotransporter NCC through the with-no-lysine kinase 4 (WNK4)/STE20/SPS1-related proline-alanine-rich kinase (SPAK) pathway [ 31 ]. In cortical collecting duct (CCD) cells insulin is thought to stimulate sodium absorption by activating the activity of epithelial Na + channel ENaC [ 32 \u2013 34 ], though a recent study failed to confirm the stimulatory effect of insulin on the ENaC activity in isolated mammalian CCD [ 35 ]. In PTs, insulin enhances sodium absorption by stimulating the luminal NHE3, the basolateral Na + /K + -ATPase, and the basolateral NBCe1 [ 36 \u2013 39 ].",
+      "gold_verification_anchors": [
+        "ATPase",
+        "gradient",
+        "basolateral"
+      ],
+      "gold_matched_anchors": [
+        "ATPase",
+        "basolateral"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-04-2",
+      "query": "Why is fluid reabsorption in the proximal tubule isosmotic with plasma?",
+      "topic": "proximal_transport",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "isosmotic",
+        "reabsorption",
+        "plasma"
+      ],
+      "gold_matched_anchors": [
+        "plasma"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-04-3",
+      "query": "What consequence does impaired proximal tubular proton secretion have on systemic acid-base balance?",
+      "topic": "proximal_transport",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "proton",
+        "acid-base",
+        "impaired"
+      ],
+      "gold_matched_anchors": [
+        "acid-base"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-04-4",
+      "query": "Which apical transporters mediate solute uptake in the early proximal tubule?",
+      "topic": "proximal_transport",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "solute",
+        "uptake",
+        "proximal"
+      ],
+      "gold_matched_anchors": [
+        "proximal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-05-1",
+      "query": "How does carbonic anhydrase contribute to proximal bicarbonate reabsorption?",
+      "topic": "acid_base",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0039"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0039-C01"
+      ],
+      "gold_evidence_quote": "The loop of Henle contributes to AB homeostasis by reabsorbing bicarbonate (up to 15% of the initial content in the glomerular filtrate). In rats, the descending limb is fairly permeable to bicarbonate; nevertheless, its concentration inside the loop decreases toward the U-turn, reflecting the high-rate water reabsorption ( Capasso et al., 1991 ). In TAL, bicarbonate is reabsorbed transcellularly; the mechanisms (NHE-mediated exchange) are similar to those in PCT. Of NHE2 and NHE3 isoforms found in the membranes, NHE3 is essential to AB homeostasis as indicated by targeted inactivation of corresponding genes in mice ( Watts & Good, 1994 ; Ledoussal et al., 2001 ). In vivo and ex vivo perfusion experiments show that bicarbonate reabsorption requires carbonic anhydrase and can be stimulated by bumetanide. The bicarbonate efflux from cells is mediated by Cl \u2212 /HCO 3 \u2212 exchanger 2 (AE2). A similar exchanger, AE1, is expressed at the apical (luminal) surface and coupled to Na + /H + activity thereby particiapting in Na + reabsorption ( Eladari et al., 1998 ; Houillier & Bourgeois, 2012 ). The major contribution of NHE3 is complemented by several accessory transporters. Functional and immunohistochemical tests reveal H + ATPase expression along TAL. Its role in bicarbonate reabsorption is considered secondary, under physiological conditions often superfluous, but still significant for AB homeostasis. Shifts in AB balance modulate the rates of bicarbonate reabsorption along TAL: the process is stimulated in metabolic acidosis and suppressed in alkalosis, independently of the acute or chronic nature of the condition. According to functional studies, both NHE and H + -ATPase activities adapt to changes in AB status, apparently under hormonal stimulation (glucocorticoids, aldosterone) ( Capasso et al., 1994 ). Another phosphate transporter, sodium-dependent SLC34A2 co-localized with uromodulin in TAL, is also active in distal renal tubules ( Burns & Werner, 2020 ).",
+      "gold_verification_anchors": [
+        "carbonic anhydrase",
+        "bicarbonate",
+        "reabsorption"
+      ],
+      "gold_matched_anchors": [
+        "carbonic anhydrase",
+        "bicarbonate",
+        "reabsorption"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-05-2",
+      "query": "Under what circumstances do type B intercalated cells secrete bicarbonate into urine?",
+      "topic": "acid_base",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0044"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0044-C01"
+      ],
+      "gold_evidence_quote": "The epithelial collecting system of the kidney connects nephrons to the urinary tract. This system substantively contributes to the water-electrolyte balance by means of aldosterone/ADH-dependent reabsorption and secretion ( Olde Engberink et al., 2023 ). The walls of collecting tubules comprise two types of epithelial cells, principal cells (PC) and intercalated cells (IC) distinguished morphologically and expressing specific sets of ion channels and transporters ( Fig. 5 ). PC express the epithelial Na + channel ENaC and aquaporin AQP2 at the apical membrane, and AQP3/AQP4 at the basolateral membrane. AQP2 marks the entire length of the epithelial collecting system, from connecting tubules through cortical and outer medullary collecting tubules to inner medullary collecting tubules and ducts. IC, which express H + -ATPase V and carbonic anhydrase CAII, are engaged in the acid/bicarbonate transport: V-ATPases acidify certain cytoplasmic compartments and pump protons across plasma membranes, while carbonic anhydrases catalyze the production of H + and HCO 3 \u2212 from carbon dioxide and water. Intercalated cells of the collecting system can be further subdivided into IC-\u03b1 and IC-\u03b2 based on molecular markers and functional differences specified in Table 1 .",
+      "gold_verification_anchors": [
+        "type B",
+        "intercalated",
+        "bicarbonate"
+      ],
+      "gold_matched_anchors": [
+        "intercalated",
+        "bicarbonate"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-05-3",
+      "query": "Why does severe hypovolaemia lead to contraction alkalosis in the kidney?",
+      "topic": "acid_base",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "hypovolaemia",
+        "contraction alkalosis",
+        "kidney"
+      ],
+      "gold_matched_anchors": [
+        "kidney"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-05-4",
+      "query": "How does proximal bicarbonate reabsorption differ from distal proton secretion?",
+      "topic": "acid_base",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0061"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0061-C01"
+      ],
+      "gold_evidence_quote": "It is important to consider genetic basis of particular failures in AB homeostasis, notably mutations that affect bicarbonate transport in the kidney. Mutations in SLC26A1 and SLC26A6 have been associated with defective bicarbonate reabsorption in PCT, distal renal tubular acidosis and urinary bicarbonate wasting, though the mechanism remains unknown ( Wang et al., 2021 ; Li et al., 2023 ). Cystic fibrosis is an inherited condition resulting from mutations in CFTR affect bicarbonate secretion in the cortical collecting system as a part of cystic fibrosis phenotype. The dysregulated bicarbonate excretion by the kidneys may result in systemic metabolic alkalosis ( Kunzelmann et al., 2023 ). The Ca 2+ -activated Cl \u2212 channel TMEM16A and aquaporin 2 play central roles in the autosomal dominant polycystic kidney disease (ADPKD) ( Talbi et al., 2021 ; Olesen & Fenton, 2021 ). SLC4A1 dysregulation has been linked to distal renal tubular acidosis and mutant SLC4A2, SLC4A4 and SLC4A5 have been implicated in impaired proximal bicarbonate reabsorption ( Du et al., 2021 ; Zhong et al., 2023 ). Mutations in SLC34A1 have been associated with nephrocalcinosis, nephrolithiasis, hyperoxaluria and hypercalciuria ( Howles & Thakker, 2020 ). Mutated proton pumps ATP6V1B1 and ATP6V0A4 have been associated with distal renal tubular acidosis (RTA) in nephrocalcinosis and nephrolithiasis. Mutations in carbonic anhydrase II (CAII) lead to mixed proximal and distal RTA (type III RTA) of varying severity, often associated with nephrocalcinosis and nephrolithiasis ( Eaton, Merkulova & Brown, 2021 ; Alexander & Bockenhauer, 2023 ).",
+      "gold_verification_anchors": [
+        "proximal",
+        "distal",
+        "secretion"
+      ],
+      "gold_matched_anchors": [
+        "proximal",
+        "distal",
+        "secretion"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-06-1",
+      "query": "What are the common clinical risk factors for developing hospital-acquired acute kidney injury?",
+      "topic": "aki_definition",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0341"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0341-C01"
+      ],
+      "gold_evidence_quote": "Pre-AKI renal impairment is a risk factor for AKI; chronic kidney disease (CKD) patients are at a high risk of developing AKI. With the base of hypertensive nephrosclerosis, aging is associated with a reduced glomerular filtration rate (GFR); therefore, aging is conceivably an underlying factor of CKD, which in turn can be considered a universal risk factor for AKI [ 402 , 403 ]. In the present guideline\u2019s examination of the risk factors for individual AKI, age was considered to be an independent risk factor for the onset of AKI in cardiac surgery (CQ3-1), acute heart failure (CQ3-3), and sepsis (CQ3-4). Although it is not covered by any CQ in the present guideline, dehydration-induced pre-renal AKI, which is an important aspect of community-acquired AKI, restricts the renal blood flow in elderly people due to their already low fluid volume and to arteriosclerosis; therefore, elderly people are at a high risk of developing dehydration-induced AKI [ 404 ]. Drugs such as renin\u2013angiotensin\u2013aldosterone system inhibitors, diuretics, non-steroidal anti-inflammatory drugs (NSAIDs), and vitamin D preparations (which cause hypercalcemia)\u2014the latter two of which are often used by elderly people\u2014are involved in the increase in AKI among the elderly [ 405 ]. Elderly people are also known to be at a high risk of drug-induced AKI (contrast agents, aminoglycosides, etc.) [ 406 , 407 ]. Therefore, in order to prevent AKI, elderly people\u2019s exposure to these drugs must be minimized. Urinary tract obstructive kidney injury and ANCA-associated, vasculitis-induced rapidly progressive glomerulonephritis (RPGN) are also common causes of AKI in the elderly.",
+      "gold_verification_anchors": [
+        "risk factors",
+        "hospital-acquired",
+        "AKI"
+      ],
+      "gold_matched_anchors": [
+        "risk factors",
+        "AKI"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-06-2",
+      "query": "What time window is specified in the KDIGO guidelines for an increase in serum creatinine of 0.3 mg/dL?",
+      "topic": "aki_definition",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0180"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0180-C01"
+      ],
+      "gold_evidence_quote": "Although one study found that the urinary NGAL levels of pre-renal AKI patients were not elevated [ 156 ], other studies have reported that the urinary biomarker levels were mildly but significantly higher in pre-renal AKI patients than in patients without AKI. In a study by Doi et al. in which 129 out of 337 patients who were admitted to the intensive care unit (ICU) were diagnosed with AKI and in which transient AKI (pre-renal AKI) was defined as the recovery of the serum creatinine (sCr) to within 0.3 mg/dl above baseline within 48 h, 51 patients were diagnosed with transient AKI [ 109 ]. Upon ICU admission, transient AKI patients\u2019 levels of urinary NGAL, urinary L-FABP, NAG, and urinary albumin were mildly but significantly higher than those of non-AKI patients. Nejat et al. compared the urinary biomarkers upon ICU admission of 285 non-AKI patients, 61 pre-renal AKI patients (with pre-renal AKI defined as a FENa < 1.0% and recovery of the sCr levels within 48 h), and 114 renal AKI patients [ 157 ]. The median urinary NGAL levels of non-AKI patients and of pre-renal AKI patients were 7.7 \u00b5g/mmolCr (3.3\u201335 \u00b5g/mmolCr) and 14 \u00b5g/mmolCr (6.5\u201356 \u00b5g/mmolCr), respectively; thus, pre-renal AKI patients showed a tendency to have a mildly higher urinary NGAL level (p = 0.052). In addition, the median urinary NGAL level of renal AKI patients was 44 \u00b5g/mmolCr (16\u2013345 \u00b5g/mmolCr), which was significantly higher than that of pre-renal AKI patients. The median urinary cystatin C levels of non-AKI patients and pre-renal AKI patients were 0.026 mg/mmolCr (0.010\u20130.12 mg/mmolCr) and 0.054 mg/mmolCr (0.017\u20130.53 mg/mmolCr), respectively; thus, the urinary cystatin C was significantly higher in pre-renal AKI patients than in non-AKI patients. The median urinary cystatin C level of renal AKI patients was 0.21 mg/mmolCr (0.05\u20131.9 mg/mmolCr), which was significantly higher than that of pre-renal AKI patients.",
+      "gold_verification_anchors": [
+        "time window",
+        "creatinine",
+        "0.3"
+      ],
+      "gold_matched_anchors": [
+        "creatinine",
+        "0.3"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-06-3",
+      "query": "How does urine output monitoring assist in identifying developing AKI before serum creatinine rises?",
+      "topic": "aki_definition",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "urine output",
+        "monitoring",
+        "detection"
+      ],
+      "gold_matched_anchors": [
+        "urine output"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-06-4",
+      "query": "Why is early recognition of acute kidney injury critical for preventing progression to renal failure?",
+      "topic": "aki_definition",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0348"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0348-C01"
+      ],
+      "gold_evidence_quote": "The prevalence of CKD in adults is estimated to be \u2265 10%. As the renal function declines with age, the prevalence of CKD is higher in the elderly; CKD affects 30\u201340% of people aged \u2265 65 years. Aging has been identified as a risk factor for post-AKI progression to CKD, along with diabetes, hypertension, heart failure, renal impairment, and hypoalbuminemia. The differences in the AKI incidence and the renal function outcomes of elderly and non-elderly people have not been examined in sufficient detail. However, in light of the high prevalence of CKD in the elderly and of the involvement of aging itself in the risk of progression from AKI to CKD, it is rather unlikely that the post-AKI renal function outcomes would be more favorable in elderly people than in non-elderly people. It is necessary to pay attention for the prevention and early detection of AKI, and its progression to a severe state.",
+      "gold_verification_anchors": [
+        "early recognition",
+        "prevention",
+        "progression"
+      ],
+      "gold_matched_anchors": [
+        "prevention",
+        "progression"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-07-1",
+      "query": "What is the role of loop diuretics in the routine management of acute kidney injury without fluid overload?",
+      "topic": "aki_management",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0341"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0341-C01"
+      ],
+      "gold_evidence_quote": "Pre-AKI renal impairment is a risk factor for AKI; chronic kidney disease (CKD) patients are at a high risk of developing AKI. With the base of hypertensive nephrosclerosis, aging is associated with a reduced glomerular filtration rate (GFR); therefore, aging is conceivably an underlying factor of CKD, which in turn can be considered a universal risk factor for AKI [ 402 , 403 ]. In the present guideline\u2019s examination of the risk factors for individual AKI, age was considered to be an independent risk factor for the onset of AKI in cardiac surgery (CQ3-1), acute heart failure (CQ3-3), and sepsis (CQ3-4). Although it is not covered by any CQ in the present guideline, dehydration-induced pre-renal AKI, which is an important aspect of community-acquired AKI, restricts the renal blood flow in elderly people due to their already low fluid volume and to arteriosclerosis; therefore, elderly people are at a high risk of developing dehydration-induced AKI [ 404 ]. Drugs such as renin\u2013angiotensin\u2013aldosterone system inhibitors, diuretics, non-steroidal anti-inflammatory drugs (NSAIDs), and vitamin D preparations (which cause hypercalcemia)\u2014the latter two of which are often used by elderly people\u2014are involved in the increase in AKI among the elderly [ 405 ]. Elderly people are also known to be at a high risk of drug-induced AKI (contrast agents, aminoglycosides, etc.) [ 406 , 407 ]. Therefore, in order to prevent AKI, elderly people\u2019s exposure to these drugs must be minimized. Urinary tract obstructive kidney injury and ANCA-associated, vasculitis-induced rapidly progressive glomerulonephritis (RPGN) are also common causes of AKI in the elderly.",
+      "gold_verification_anchors": [
+        "diuretics",
+        "loop",
+        "volume"
+      ],
+      "gold_matched_anchors": [
+        "diuretics",
+        "volume"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-07-2",
+      "query": "How is hyperkalaemia managed urgently when it complicates acute kidney injury?",
+      "topic": "aki_management",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0050"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0050-C01"
+      ],
+      "gold_evidence_quote": "In an analysis of 155,624 patients hospitalized in ICUs on an emergency admission, Harris et al. reported that the urine output was a more powerful predictor of the survival outcomes than the sCr [ 26 ]. In a study of 32,045 adult ICU patients classified according to the KDIGO sCr and urine output criteria, Kellum et al. demonstrated that patients who fulfilled both the sCr and urine output criteria were at the highest risk of death and the initiation of permanent renal replacement therapy (RRT), while isolated oliguria was associated with a long-term risk of death even when the sCr criterion was not fulfilled [ 27 ]. Similarly, in an analysis of 390 septic shock patients, Leedahl et al. reported that persistent oliguria was a risk factor for death by day 28 [ 28 ]. In a study of 260 ICU patients, Wlodzimirow et al. compared the combined use of the RIFLE\u2019s sCr and urine output criteria (RIFLEsCr + urine output) with the use of the sCr criterion (RIFLEsCr) alone; they reported that the RIFLEsCr was associated with a delayed AKI diagnosis and higher mortality [ 29 ]. Furthermore, Han et al. [ 30 ] and Macedo et al. [ 31 ] also reported that the addition of the urine output criterion enabled a more accurate AKI diagnosis than the use of the sCr criterion alone. Although some studies have featured different urine output criterion values, overall, the assessment of the urine output has been shown to improve the accuracy of the AKI diagnosis. However, in a comparison of the sCr criterion alone with the urine output criterion alone for the diagnosis of AKI in patients after cardiac surgery, Lagny et al. indicated that the use of the urine output criterion alone could lead to overdiagnosis [ 32 ].",
+      "gold_verification_anchors": [
+        "hyperkalaemia",
+        "emergency",
+        "AKI"
+      ],
+      "gold_matched_anchors": [
+        "emergency",
+        "AKI"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-07-3",
+      "query": "What monitoring is recommended after an episode of acute kidney injury to evaluate renal recovery?",
+      "topic": "aki_management",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "monitoring",
+        "recovery",
+        "follow-up"
+      ],
+      "gold_matched_anchors": [
+        "recovery"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-07-4",
+      "query": "Which clinical and laboratory signs indicate that pre-renal AKI has progressed to intrinsic acute tubular necrosis?",
+      "topic": "aki_management",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0183"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0183-C01"
+      ],
+      "gold_evidence_quote": "Search query: (\u201cacute kidney injury\u201d[MeSH Terms] OR acute kidney failure[tw] OR acute renal failure[tw] OR acute kidney injury[tw] OR acute kidney injuries[tw] OR acute kidney injury[tw] OR acute kidney injury[tw] OR acute renal injuries[tw] OR acute renal injury[tw] OR acute kidney insufficiencies[tw] OR acute kidney insufficiency[tw] OR acute renal insufficiencies[tw] OR acute renal insufficiency[tw] OR acute tubular necrosis[tw] OR ARI[tw] OR AKI[tw] OR ARF[tw] OR AKF[tw] OR ATN[tw] AND NGAL[tw] OR neutrophil gelatinase-associated lipocalin[tw] OR l -FABP[tw] OR liver-type fatty acid-binding protein[tw] OR NAG[tw] OR N-acetyl-\u03b2- d -glucosaminidase[tw]) AND (\u201cpre-renal\u201d[tw] OR \u201cpre-renal azotaemia\u201d[tw] OR prerenal[tw]) NOT (child[tw] OR children[tw] OR infant[tw] OR pediatrics[tw]).",
+      "gold_verification_anchors": [
+        "tubular necrosis",
+        "pre-renal",
+        "progression"
+      ],
+      "gold_matched_anchors": [
+        "tubular necrosis",
+        "pre-renal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-08-1",
+      "query": "What minimum duration of kidney damage or reduced GFR is required to establish a diagnosis of CKD?",
+      "topic": "ckd",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "duration",
+        "damage",
+        "months"
+      ],
+      "gold_matched_anchors": [
+        "duration"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-08-2",
+      "query": "How does renal anaemia develop in chronic kidney disease and what is the role of erythropoietin deficiency?",
+      "topic": "ckd",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "anaemia",
+        "erythropoietin",
+        "deficiency"
+      ],
+      "gold_matched_anchors": [
+        "deficiency"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-08-3",
+      "query": "Why are SGLT2 inhibitors and ACE inhibitors or ARBs used to slow progression of CKD?",
+      "topic": "ckd",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0204"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0204-C01"
+      ],
+      "gold_evidence_quote": "It has been reported that multidisciplinary explanations and education about RRT are associated with slowing the progression of kidney injury, delaying the initiation of RRT, avoiding emergency dialysis, and selection of RRT.",
+      "gold_verification_anchors": [
+        "SGLT2",
+        "progression",
+        "slow"
+      ],
+      "gold_matched_anchors": [
+        "progression",
+        "slow"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-08-4",
+      "query": "How do GFR category G3a and G3b differ in terms of cardiovascular and progression risk?",
+      "topic": "ckd",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0149"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0149-C01"
+      ],
+      "gold_evidence_quote": "In pre-dialysis CKD patients with osteoporosis (CKD stage G3a or G3b), pharmacotherapy for osteoporosis may reduce the risk of fracture compared with no treatment. Therefore, it is suggested that treatment be carefully implemented with attention to drug-specific side effects. [2C, 2D]",
+      "gold_verification_anchors": [
+        "G3a",
+        "G3b",
+        "risk"
+      ],
+      "gold_matched_anchors": [
+        "G3a",
+        "G3b",
+        "risk"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-09-1",
+      "query": "What level of 24-hour proteinuria or protein-to-creatinine ratio indicates nephrotic-range proteinuria?",
+      "topic": "nephrotic",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0027"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0027-C01"
+      ],
+      "gold_evidence_quote": "Table 1 Definitions relating to nephrotic syndrome in children \u2014 Term: Recurrent nephrotic syndrome post-renal transplantation; Definition: A child with SRNS presenting post-renal transplantation with a relapse of nephrotic-range proteinuria in the absence of other apparent causes and/or podocyte foot process effacement on kidney biopsy. This diagnosis should also be considered in case of persistent proteinuria (UPCR \u2265 100 mg/mmol (1 mg/mg) in a previously anuric patient, or an increase of UPCR \u2265 100 mg/mmol (1 mg/mg) in a patient with prevalent proteinuria at the time of transplant in the absence of other apparent causes.",
+      "gold_verification_anchors": [
+        "24-hour",
+        "proteinuria",
+        "range"
+      ],
+      "gold_matched_anchors": [
+        "proteinuria",
+        "range"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-09-2",
+      "query": "Why are patients with nephrotic syndrome predisposed to encapsulated bacterial infections?",
+      "topic": "nephrotic",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0265"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0265-C01"
+      ],
+      "gold_evidence_quote": "Arguments against routine IgG substitution in patients with low IgG include (a) the rapid urinary loss following infusion, (b) commercial immunoglobulin preparations contain low IgG titers against bacteria mainly responsible for the septic episodes (staphylococci, streptococci, gram-negative bacteria) [ 135 ], and (c) the high costs. We thus suggest considering prophylactic IgG substitution as in other cases of secondary hypogammaglobulinemia in patients presenting with recurrent and/or severe infections [ 136 ].",
+      "gold_verification_anchors": [
+        "encapsulated",
+        "infection",
+        "immunoglobulin"
+      ],
+      "gold_matched_anchors": [
+        "infection",
+        "immunoglobulin"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-09-3",
+      "query": "What are the principles of first-line corticosteroid therapy in steroid-sensitive nephrotic syndrome?",
+      "topic": "nephrotic",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0203"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0203-C01"
+      ],
+      "gold_evidence_quote": "The use of CNI as first-line therapy in children with SRNS was assessed in 8 RCTs comparing the efficacy of cyclosporine (CsA) with either placebo [ 48 ], no treatment [ 49 , 50 ], intravenous MPDN [ 51 ], MMF with dexamethasone [ 52 ], or tacrolimus (TAC) [ 53 , 54 ], and CsA or TAC with intravenous CPH [ 55 , 56 ], on the outcome of \u201cnumber with complete or partial remission\u201d (Supplementary Table S2 ). CsA compared with placebo, no treatment, or intravenous MPDN showed superior outcome (~ 75% vs. 22%) irrespective of histopathology (risk ratio 3.50 (95% CI 1.04\u20139.57) [ 14 ]. There was no difference in outcome when TAC was compared with CsA (risk ratio 1.05 [95% CI 0.87\u20131.25]) [ 14 , 53 , 54 ]. CsA or TAC was more effective than intravenous CPH (78% vs. 40%; risk ratio 1.98 [95% CI 1.25\u20133.13]) [ 55 , 56 ]. CsA compared with MMF in combination with dexamethasone was similarly effective (46% vs. 33%; risk ratio 1.38 [95% CI 0.9\u20132.10] [ 52 ]. TAC was more effective when compared with MMF in order to maintain remission (90% vs. 45%; risk ratio 2.01 [95% CI 1.32\u20133.07) [ 57 ]. When CsA was compared with placebo, no treatment, or MPDN, no differences were detected in the number of patients developing ESKD but event numbers were very small [ 48 , 51 , 58 ]. When CNIs were compared with intravenous CPH, there was an increase in serious adverse effects with CPH, but there were no differences in persistent nephrotoxicity or death [ 55 ]. No differences were detected in comparisons of CsA, MMF + dexamethasone, or TAC in terms of outcomes of ESKD, or 50% decline in eGFR [ 52 , 53 , 55 , 57 ].",
+      "gold_verification_anchors": [
+        "corticosteroid",
+        "first-line",
+        "therapy"
+      ],
+      "gold_matched_anchors": [
+        "first-line",
+        "therapy"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-09-4",
+      "query": "How does nephrotic syndrome differ clinically and urinalysis-wise from nephritic syndrome?",
+      "topic": "nephrotic",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "nephrotic",
+        "nephritic",
+        "difference"
+      ],
+      "gold_matched_anchors": [
+        "nephrotic"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-10-1",
+      "query": "What role does aldosterone deficiency or tubular aldosterone resistance play in hyperkalaemia?",
+      "topic": "hyperkalaemia_mechanism",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "aldosterone",
+        "resistance",
+        "hyperkalaemia"
+      ],
+      "gold_matched_anchors": [
+        "aldosterone"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-10-2",
+      "query": "Why do tall tented T waves and QRS widening occur in severe hyperkalaemia?",
+      "topic": "hyperkalaemia_mechanism",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "tented T",
+        "QRS",
+        "widening"
+      ],
+      "gold_matched_anchors": [
+        "QRS"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-10-3",
+      "query": "How does reduced distal sodium delivery impair potassium excretion in advanced CKD?",
+      "topic": "hyperkalaemia_mechanism",
+      "difficulty": "medium",
+      "question_type": "pathophysiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0001-C01"
+      ],
+      "gold_evidence_quote": "Abstract There have been significant recent advances in our understanding of the mechanisms that maintain potassium homoeostasis and the clinical consequences of hyperkalemia. In this article we discuss these advances within a concise review of the pathophysiology, risk factors and consequences of hyperkalemia. We highlight aspects that are of particular relevance for clinical practice. Hyperkalemia occurs when renal potassium excretion is limited by reductions in glomerular filtration rate, tubular flow, distal sodium delivery or the expression of aldosterone-sensitive ion transporters in the distal nephron. Accordingly, the major risk factors for hyperkalemia are renal failure, diabetes mellitus, adrenal disease and the use of angiotensin-converting enzyme inhibitors, angiotensin receptor blockers or potassium-sparing diuretics. Hyperkalemia is associated with an increased risk of death, and this is only in part explicable by hyperkalemia-induced cardiac arrhythmia. In addition to its well-established effects on cardiac excitability, hyperkalemia could also contribute to peripheral neuropathy and cause renal tubular acidosis. Hyperkalemia\u2014or the fear of hyperkalemia\u2014contributes to the underprescription of potentially beneficial medications, particularly in heart failure. The newer potassium binders could play a role in attempts to minimize reduced prescribing of renin\u2013angiotensin inhibitors and mineraolocorticoid antagonists in this context.",
+      "gold_verification_anchors": [
+        "sodium delivery",
+        "distal",
+        "potassium excretion"
+      ],
+      "gold_matched_anchors": [
+        "sodium delivery",
+        "distal",
+        "potassium excretion"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-10-4",
+      "query": "What is the difference between pseudohyperkalaemia caused by haemolysis and true hyperkalaemia?",
+      "topic": "hyperkalaemia_mechanism",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "pseudohyperkalaemia",
+        "haemolysis",
+        "true"
+      ],
+      "gold_matched_anchors": [
+        "true"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-11-1",
+      "query": "How does intravenous insulin with glucose lower plasma potassium concentration?",
+      "topic": "hyperkalaemia_management",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0045"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0045-C01"
+      ],
+      "gold_evidence_quote": "K clearance in PD is about 15 ml/min. In patients undergoing 10 L of drainage per day, approximately 35\u201346 mmol of K is removed. Peritoneal fluids are potassium-free, and K balance is maintained by the continuous nature of the treatment, preserved residual kidney excretion, increased colonic secretion of K, decreased intake of K-rich foods, and transcellular shift driven by insulin release in response to the obligatory glucose absorption from the PD fluids.",
+      "gold_verification_anchors": [
+        "insulin",
+        "glucose",
+        "shift"
+      ],
+      "gold_matched_anchors": [
+        "insulin",
+        "glucose",
+        "shift"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-11-2",
+      "query": "When is emergent hemodialysis indicated for refractory hyperkalaemia?",
+      "topic": "hyperkalaemia_management",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "hemodialysis",
+        "refractory",
+        "emergency"
+      ],
+      "gold_matched_anchors": [
+        "hemodialysis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-11-3",
+      "query": "What role do nebulized beta-2 agonists like salbutamol play in acute potassium lowering?",
+      "topic": "hyperkalaemia_management",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "salbutamol",
+        "beta-2",
+        "agonist"
+      ],
+      "gold_matched_anchors": [
+        "salbutamol"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-11-4",
+      "query": "How quickly should repeat serum potassium and ECG be checked following emergent treatment?",
+      "topic": "hyperkalaemia_management",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "repeat",
+        "monitoring",
+        "post-treatment"
+      ],
+      "gold_matched_anchors": [
+        "monitoring"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-12-1",
+      "query": "What are the key risk factors predisposing patients to recurrent bacterial cystitis?",
+      "topic": "uti",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "risk factors",
+        "cystitis",
+        "predisposing"
+      ],
+      "gold_matched_anchors": [
+        "cystitis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-12-2",
+      "query": "What non-antimicrobial and antimicrobial strategies are used for recurrent UTI prevention?",
+      "topic": "uti",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "prevention",
+        "non-antimicrobial",
+        "prophylaxis"
+      ],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-12-3",
+      "query": "How does uncomplicated lower UTI differ clinically from acute pyelonephritis?",
+      "topic": "uti",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0067"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0067-C01"
+      ],
+      "gold_evidence_quote": "Porcine models have recently been mooted as an attractive species to model pathogenesis of UTI. They have more conserved homology and structural motifs to humans compared with mice, which may make it a more accurate model particularly for immunological studies ( Dawson et al., 2017 ). Thus far pigs have been mainly used for research into pyelonephritis and renal damage, especially vesicoureteric reflux and renal scarring in infants and establishment of upper UTI ( Coulthard et al., 2002 ). However, until recently pigs had not been used to model cystitis. In 2019, Nielsen et al. reported a UPEC model of infection using a clinical isolate UTI89 to sustain an infection for up to 23 days in female pigs ( Nielsen et al., 2019 ). Interestingly, as mentioned above, no intracellular UPEC were seen as has been widely reported for UTI89 in mice. The porcine model, as a large mammal, shares similarities in urine density and anatomy with humans ( Nielsen et al., 2019 ). However, large animal models are particularly expensive. What\u2019s more, the scope for genetic manipulation in pigs has yet to match that of mice ( Barber et al., 2016 ).",
+      "gold_verification_anchors": [
+        "pyelonephritis",
+        "cystitis",
+        "difference"
+      ],
+      "gold_matched_anchors": [
+        "pyelonephritis",
+        "cystitis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-12-4",
+      "query": "When is imaging indicated in patients presenting with recurrent urinary tract infections?",
+      "topic": "uti",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "imaging",
+        "indication",
+        "recurrent"
+      ],
+      "gold_matched_anchors": [
+        "recurrent"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-13-1",
+      "query": "Why is low-dose non-contrast CT the gold standard for diagnosing renal and ureteral stones?",
+      "topic": "stones",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "low-dose CT",
+        "gold standard",
+        "stones"
+      ],
+      "gold_matched_anchors": [
+        "stones"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-13-2",
+      "query": "What are the red flag symptoms of an infected obstructed urinary stone requiring emergent drainage?",
+      "topic": "stones",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "infected",
+        "fever",
+        "emergency"
+      ],
+      "gold_matched_anchors": [
+        "infected"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-13-3",
+      "query": "Which stone sizes have a high probability of spontaneous passage with medical expulsive therapy?",
+      "topic": "stones",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0020"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0020-C01"
+      ],
+      "gold_evidence_quote": "A policy of wait and watch/observation with regular evaluation can be applied to patients without complications due to stone disease [ 24 ]. The EAU does not specify any stone size and refers to the stone size as small, but it highlights that stone expulsion spontaneously is inversely proportional to the stone size and is different for every patient [ 25 ] (EAU: strong recommendation). In contrast, the AUA specifies a stone size of \u226410 mm for this policy (AUA: strong recommendation).",
+      "gold_verification_anchors": [
+        "expulsive",
+        "spontaneous",
+        "size"
+      ],
+      "gold_matched_anchors": [
+        "spontaneous",
+        "size"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-13-4",
+      "query": "How do calcium oxalate stones differ from uric acid stones in terms of radiographic visibility?",
+      "topic": "stones",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "calcium oxalate",
+        "uric acid",
+        "radiopaque"
+      ],
+      "gold_matched_anchors": [
+        "calcium oxalate"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": true,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-14-1",
+      "query": "How does bacterial urease cause urinary alkalinization to precipitate magnesium ammonium phosphate?",
+      "topic": "stone_infection",
+      "difficulty": "medium",
+      "question_type": "pathophysiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "alkalinization",
+        "ammonium",
+        "precipitation"
+      ],
+      "gold_matched_anchors": [
+        "ammonium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-14-2",
+      "query": "Why can antibiotic therapy alone fail to cure a urinary tract infection in the presence of a stone?",
+      "topic": "stone_infection",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "antibiotic failure",
+        "biofilm",
+        "stone nidus"
+      ],
+      "gold_matched_anchors": [
+        "stone nidus"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-14-3",
+      "query": "Why is complete stone clearance essential to prevent recurrent infections from retained nidus?",
+      "topic": "stone_infection",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "complete removal",
+        "recurrence",
+        "nidus"
+      ],
+      "gold_matched_anchors": [
+        "recurrence"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-14-4",
+      "query": "What urinalysis and culture findings suggest the presence of an infected urinary calculus?",
+      "topic": "stone_infection",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0013-P0053"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0053-C01"
+      ],
+      "gold_evidence_quote": "With regard to UTI in patients presenting with KSD, the concomitant presence of these conditions has been widely assessed [ 8 , 17 , 19 \u2022, 20 ], even though percentages vary from 18,7% [ 19 \u2022] to 36% [ 8 ]. This might be explained mainly by the different sample cultures and techniques (bladder urine [ 8 , 17 , 47 ] vs. renal pelvis urine from ureteric catheterization [ 16 , 47 ] vs. stone matrices cultures [ 8 ]) and by the different definitions of UTI considered (bacteriuria/positive UC vs. concomitant urinary symptoms or fever [ 26 \u2022]). Moreover, inconsistent results appeared when comparing the risk of UTI according to different stone composition, showing unexpectedly higher risk in calcium oxalate and uric acid stones [ 19 \u2022] or calcium oxalate mixed with phosphate, magnesium ammonium phosphate, and uric acid stones [ 8 ], once again proving that colonized urine or stone samples are not exclusively related to struvite and infection stones but may involve almost all chemical stone composition.",
+      "gold_verification_anchors": [
+        "urinalysis",
+        "pH",
+        "struvite"
+      ],
+      "gold_matched_anchors": [
+        "pH",
+        "struvite"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-15-1",
+      "query": "What characterizes Grade 3 and Grade 4 hydronephrosis according to standard grading systems?",
+      "topic": "obstruction",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0001-C01"
+      ],
+      "gold_evidence_quote": "Abstract The crucial point for prompt diagnostics, ideal therapeutic approach, and follow-up of hydronephrosis associated with UPJ anomalies in children is the severity of hydronephrosis. Such many hydronephrosis grading systems as AP diameter, SFU, radiology, UTD, and Onen have been developed to evaluate hydronephrosis severity in infants. Unfortunately, it is still an ongoing challenge and there is no consensus between different disciplines. AP diameter is a very dynamic parameter and is affected by many factors (hydration, bladder filling, position, respiration). More importantly, its measurement is very variable and misleading due to different renal pelvic configurations. The radiology grading system has the same grades 1, 2, and 3 as the SFU grading system with addition of the AP diameter for the first 3 grades. This grading system divides parenchymal loss into two different grades. Grade 4 represents mild parenchymal loss while grade 5 suggests severe parenchymal loss. However, it is operator dependent, is not decisive, and does not differentiate grades 4 and 5 clearly. All grades of SFU are very variable between operators and clinicians. UTD classification aims to put all significant abnormal urinary findings together including the kidney, ureter, and bladder and thus determines the risk level for infants with any urinary disease. Different renal deterioration risks occur depending on the mechanism of hydronephrosis. Therefore, SFU and UTD classification may result in significant confusion and misleading in determining the severity of hydronephrosis.",
+      "gold_verification_anchors": [
+        "Grade 3",
+        "Grade 4",
+        "parenchymal"
+      ],
+      "gold_matched_anchors": [
+        "Grade 4",
+        "parenchymal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-15-2",
+      "query": "Why can complete bilateral ureteral obstruction present with sudden anuria?",
+      "topic": "obstruction",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "anuria",
+        "bilateral",
+        "complete obstruction"
+      ],
+      "gold_matched_anchors": [
+        "bilateral"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-15-3",
+      "query": "What emergency procedures relieve severe upper urinary tract obstruction?",
+      "topic": "obstruction",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "nephrostomy",
+        "stent",
+        "relief"
+      ],
+      "gold_matched_anchors": [
+        "stent"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-15-4",
+      "query": "What is post-obstructive diuresis and what fluid and electrolyte monitoring is required after decompression?",
+      "topic": "obstruction",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "post-obstructive",
+        "diuresis",
+        "monitoring"
+      ],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-16-1",
+      "query": "How does intrarenal vasoconstriction exacerbate myoglobin cast nephropathy?",
+      "topic": "rhabdomyolysis_aki",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "vasoconstriction",
+        "intrarenal",
+        "ischemia"
+      ],
+      "gold_matched_anchors": [
+        "intrarenal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-16-2",
+      "query": "Why does acidic tubular fluid promote the precipitation of Tamm-Horsfall protein with myoglobin?",
+      "topic": "rhabdomyolysis_aki",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "acidic urine",
+        "precipitation",
+        "Tamm-Horsfall"
+      ],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-16-3",
+      "query": "What role does vigorous aggressive intravenous volume expansion play in rhabdomyolysis-induced AKI?",
+      "topic": "rhabdomyolysis_aki",
+      "difficulty": "medium",
+      "question_type": "management",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "intravenous fluids",
+        "expansion",
+        "volume"
+      ],
+      "gold_matched_anchors": [
+        "volume"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-16-4",
+      "query": "What electrolyte derangements typically accompany massive muscle breakdown in rhabdomyolysis?",
+      "topic": "rhabdomyolysis_aki",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "hyperkalaemia",
+        "breakdown",
+        "electrolytes"
+      ],
+      "gold_matched_anchors": [
+        "breakdown"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-17-1",
+      "query": "Why does tubular secretion of creatinine cause creatinine clearance to systematically overestimate true GFR?",
+      "topic": "gfr_measurement",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0136"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0136-C01"
+      ],
+      "gold_evidence_quote": "Urinary CrCl may grossly overestimate GFR due to creatinine secretion at the tubular level. The magnitude of this overestimation increases as GFR declines, and may be as great as 141% for patients with GFR of <40 mL/min/1.73m 2 [ 25 ]. Robert et al. [ 22 ] compared urinary CrCl to inulin clearance and showed that urinary CrCl overpredicted GFR when GFR was <40 ml/min, but underpredicted GFR when GFR was >40 ml/min. In the present study, the mean GFR, assessed by 51 Cr-EDTA clearance, was approximately 45 to 50 ml/min, which could explain the low bias (2.6 ml/min) comparing urinary CrCl to 51 Cr-EDTA clearance.",
+      "gold_verification_anchors": [
+        "secretion",
+        "tubular",
+        "overestimation"
+      ],
+      "gold_matched_anchors": [
+        "secretion",
+        "tubular",
+        "overestimation"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-17-2",
+      "query": "Why is kinetic eGFR or dynamic monitoring required when kidney function changes rapidly in unstable patients?",
+      "topic": "gfr_measurement",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "kinetic",
+        "fluctuating",
+        "unstable"
+      ],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-17-3",
+      "query": "What role does serum cystatin C play as an alternative filtration marker to creatinine?",
+      "topic": "gfr_measurement",
+      "difficulty": "medium",
+      "question_type": "investigation",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "cystatin C",
+        "alternative",
+        "filtration marker"
+      ],
+      "gold_matched_anchors": [
+        "filtration marker"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-17-4",
+      "query": "What physiological criteria define an ideal endogenous or exogenous substance for GFR measurement?",
+      "topic": "gfr_measurement",
+      "difficulty": "medium",
+      "question_type": "definition",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0137"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0137-C01"
+      ],
+      "gold_evidence_quote": "Disparities between measured GFR and urinary CrCl in critically ill patients may result from several factors. Clearance methods require a steady state situation, a criteria not always met in critically ill patients. Variations in urine output values, due to changes in hormonal regulation of renal perfusion, changes in systemic hemodynamics, and alterations in creatinine production, secretion and metabolism, secondary to rapidly evolving underlying disease states, influence the accuracy of urinary CrCl in critically ill patients [ 22 ]. Inaccurate 24-hour urine collection is also a major pitfall in the determination of CrCl. A majority of comparative studies conducted in critically ill patients have used 24-hour CrCl as a reference method [ 22 , 26 - 30 ]. Shorter timed urine collection for calculating urinary CrCl is now proposed to improve clinical utility and diminish procedural error. Instead of 24-hour urine collection period, we used two 30-minute urine collection periods. Previous studies on critically ill patients have demonstrated that urinary CrCl calculated from shorter urine collection periods show good correlation with those values calculated from longer urine collection periods [ 22 , 26 , 31 - 33 ].",
+      "gold_verification_anchors": [
+        "ideal marker",
+        "criteria",
+        "clearance"
+      ],
+      "gold_matched_anchors": [
+        "criteria",
+        "clearance"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-18-1",
+      "query": "What percentage of filtered glucose is reclaimed by SGLT2 versus SGLT1 along the proximal tubule?",
+      "topic": "renal_glucose",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0094"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B0094-C01"
+      ],
+      "gold_evidence_quote": "In Sprague Dawley rats, metabolic syndrome was induced by a high fructose diet (60%) for three months (FR-3) and five months (FR-5) [ 115 ]. At the end of the study, significantly increased GLUT2 and SGLT2 were observed in kidney tissue, and the extent correlated with the length of diet. SGLT1 was increased significantly in both FR-3 (413.5 \u00b1 88.3% of control) and FR-5 (677.6 \u00b1 26.5% of control), as well as for SGLT2 in FR-3 (643.1 \u00b1 41.3% of control), and FR-5 (563.21 \u00b1 21.7%) of control values. The FR-3 group demonstrated comparable GLUT1 expression to the control group, whereas FR-5 animals demonstrated significantly lower expression (55 \u00b1 6.5% of control). Considerable differences in the metabolism and renal handling were also observed between glucose and fructose [ 116 ]. In the renal tubule, the filtration rate of fructose is higher than that of glucose. Filtered glucose is reabsorbed via SGLT1 and SGLT2, while fructose reuptake is mainly through GLUT2 and GLUT5 [ 117 ]. These results suggest that the chronic consumption of fructose upregulates GLUT2, GLUT9, SGLT1, and SGLT9, implying that consumption may simultaneously enhance the reabsorption of glucose. Studies have noted an association between MetS and increased glucose transport that precedes the full manifestation of diabetes, and that changes in renal epithelial transport develop earlier than diabetes mellitus [ 115 ].",
+      "gold_verification_anchors": [
+        "percentage",
+        "SGLT2",
+        "filtered"
+      ],
+      "gold_matched_anchors": [
+        "SGLT2",
+        "filtered"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-18-2",
+      "query": "How is sodium-dependent secondary active transport utilized by SGLT cotransporters for glucose uptake?",
+      "topic": "renal_glucose",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0011"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B0011-C01"
+      ],
+      "gold_evidence_quote": "In humans, glucose transporters are encoded by three distinct families of genes: SLC2A, SLC5A, and SLC50A [ 3 ], which code for three different classes of glucose transporters: sodium-independent glucose transporters (facilitated transport, GLUT proteins, and SLC2A genes), sodium-dependent glucose symporters (secondary active transport, SGLT proteins, and SLC5A genes), and a new class of glucose uniporters (SWEET proteins, SLC50A genes). Most cells express more than one glucose transporter, and their expression depends on the specific metabolic requirements.",
+      "gold_verification_anchors": [
+        "secondary active",
+        "sodium",
+        "gradient"
+      ],
+      "gold_matched_anchors": [
+        "secondary active",
+        "sodium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-18-3",
+      "query": "Why do SGLT2 inhibitor medications promote glucosuria and lower blood glucose without causing hypoglycemia?",
+      "topic": "renal_glucose",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "SGLT2 inhibitors",
+        "glucosuria",
+        "hypoglycemia"
+      ],
+      "gold_matched_anchors": [
+        "glucosuria"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-18-4",
+      "query": "How do SGLT cotransporters differ from GLUT facilitated uniporters in renal tubular cells?",
+      "topic": "renal_glucose",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0011"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B0011-C01"
+      ],
+      "gold_evidence_quote": "In humans, glucose transporters are encoded by three distinct families of genes: SLC2A, SLC5A, and SLC50A [ 3 ], which code for three different classes of glucose transporters: sodium-independent glucose transporters (facilitated transport, GLUT proteins, and SLC2A genes), sodium-dependent glucose symporters (secondary active transport, SGLT proteins, and SLC5A genes), and a new class of glucose uniporters (SWEET proteins, SLC50A genes). Most cells express more than one glucose transporter, and their expression depends on the specific metabolic requirements.",
+      "gold_verification_anchors": [
+        "cotransporter",
+        "uniporter",
+        "facilitated"
+      ],
+      "gold_matched_anchors": [
+        "uniporter",
+        "facilitated"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-19-1",
+      "query": "How does SGK1 phosphorylate and inhibit Nedd4-2 to prevent ENaC degradation?",
+      "topic": "tubular_signaling",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0024"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B0024-C01"
+      ],
+      "gold_evidence_quote": "Nedd4-2 binds to and ubiquitinates ENaC at the cell surface, triggering its internalization and degradation [ 34 ]. SGK1 phosphorylates and inhibits Nedd4-2, resulting in increased expression level of ENaC. In fact, kidney tubule-specific SGK1 knockout mice [ 35 ] exhibit decreased phosphorylation of Nedd4-2 and decreased expression of all ENaC subunits. Moreover, expression of NCC in the kidney was decreased. These findings suggest that NCC is also regulated by SGK1 [ 36 , 37 ]. Ronzaud and colleagues showed that nephron-specific Nedd4-2-deficient mice exhibit salt-dependent hypertension due to the upregulation of NCC [ 38 ]. Therefore, Nedd4-2 may be involved in inhibition of both ENaC and NCC. On the other hand, WNK4, which is phosphorylated by SGK1 at serine 1169, is also involved in the regulation of ENaC. [ 39 ].",
+      "gold_verification_anchors": [
+        "Nedd4-2",
+        "ubiquitination",
+        "ENaC"
+      ],
+      "gold_matched_anchors": [
+        "Nedd4-2",
+        "ENaC"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-19-2",
+      "query": "What intracellular second messengers mediate insulin and growth factor activation of renal tubular transport?",
+      "topic": "tubular_signaling",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0019"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B0019-C01"
+      ],
+      "gold_evidence_quote": "Recently, Akt has been suggested to mediate insulin-induced WNK-OSR1/SPAK-NCC phosphorylation cascade. In db/db diabetic mice that show hyperinsulinemia and high thiazide sensitivity, the phosphorylation of renal Akt as well as NCC is increased. Furthermore, this increased phosphorylation of NCC is corrected by specific inhibitors for PI3K or Akt, suggesting that the insulin/PI3K/Akt pathway regulates WNK-OSR1/SPAK-NCC phosphorylation cascade [ 29 ]. Insulin also induces strong renal Akt phosphorylation in another model of metabolic syndrome Zucker obese rats, resulting in NCC phosphorylation [ 30 ]. The stimulation of NCC may be also involved in hyperinsulinemia-induced hypertension observed in metabolic syndrome.",
+      "gold_verification_anchors": [
+        "insulin",
+        "growth factors",
+        "stimulation"
+      ],
+      "gold_matched_anchors": [
+        "insulin",
+        "stimulation"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-19-3",
+      "query": "How does dysregulated tubular signaling contribute to salt-sensitive hypertension?",
+      "topic": "tubular_signaling",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "salt-sensitive",
+        "hypertension",
+        "pathology"
+      ],
+      "gold_matched_anchors": [
+        "hypertension"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-19-4",
+      "query": "How do SGK1 and Akt differ in their specific targets within renal tubular transport regulation?",
+      "topic": "tubular_signaling",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0032"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B0032-C01"
+      ],
+      "gold_evidence_quote": "Figure 5 Roles of Akt and SGK1 in transport regulation at each nephron segment: Akt and SGK1 modify renal tubular transport by activating or inhibiting several transporters at each nephron segment. Targets and functions of the kinases in proximal tubules, distal convoluted tubules, and cortical collecting ducts are shown in (a), (b), and (c), respectively.",
+      "gold_verification_anchors": [
+        "SGK1",
+        "Akt",
+        "targets"
+      ],
+      "gold_matched_anchors": [
+        "SGK1",
+        "Akt",
+        "targets"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-20-1",
+      "query": "How does the pendrin anion exchanger in type B intercalated cells secrete bicarbonate into tubular fluid?",
+      "topic": "intercalated_cells",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0009"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B0009-C01"
+      ],
+      "gold_evidence_quote": "As the Cl \ufeff\u2212 /HCO 3 \u2212 exchanger pendrin ( Slc26a4 ) represents the exclusive apical route for renal HCO 3 \u2212 secretion and Cl \ufeff\u2212 retention, we questioned whether a loss of pendrin activation represents the cellular mechanism leading to the life-threatening condition with hypochloremic alkalosis, massive hypokalemia, and volume loss in alkali-loaded and salt-depleted Ae4 \u2212/\u2212 mice. Normally, the protein abundance of pendrin is upregulated in metabolic alkalosis to increase HCO 3 \u2212 secretion into urine and Cl \ufeff\u2212 reabsorption into blood 10 , 22 . Since pendrin is also activated by aldosterone independent of concurrent alkalosis 23 \u2013 25 , we analyzed pendrin regulation on day 1 of alkali-loading when aldosterone levels were identical between genotypes, and on day 7 of alkali-loading when aldosterone levels were suppressed in Ae4 \u2212/\u2212 mice (Fig. 1f ). Our analysis demonstrated that independently of aldosterone levels, Ae4 \u2212/\u2212 mice fail to activate pendrin. Specifically, wild-type mice showed the expected physiological upregulation of pendrin mRNA and protein abundance compared to unloaded wild-type mice after 1 and 7 days of alkali-loading, whereas Ae4 \u2212/\u2212 mice failed to adapt pendrin mRNA or protein expression (Fig. 2a, b ). In line with previous reports 10 , 26 , alkali-loading induced a pendrin redistribution from the subapical cytosolic region to the apical membrane in wild-type mice, which was absent in Ae4 \u2212/\u2212 mice (Fig. 2c ). Strikingly, after 7 days of loading, Ae4 \u2212/\u2212 mice not only exhibit a reduced pendrin abundance but also a reduced relative number of pendrin positive cells despite severe alkalosis (Fig.",
+      "gold_verification_anchors": [
+        "pendrin",
+        "bicarbonate",
+        "secretion"
+      ],
+      "gold_matched_anchors": [
+        "pendrin",
+        "secretion"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-20-2",
+      "query": "What role does the AE4 bicarbonate transporter play in renal sensing and systemic acid-base homeostasis?",
+      "topic": "intercalated_cells",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0006"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B0006-C01"
+      ],
+      "gold_evidence_quote": "Fig. 1 Basolateral AE4 of \u03b2-intercalated cells is not required for systemic sodium balance but for acid-base homeostasis. a Representative confocal images of AE4 (light blue), AQP2 (red), and pendrin (green) in murine, porcine and human kidney demonstrating basal and lateral localization of AE4 in cortical pendrin-positive cells. b \u2013 d Ae4 \u2212/\u2212 and wild-type littermates ( Ae4 +/+ ) were challenged for 10 days with a salt-depleted diet. b Plasma volume measured by Evans blue dilution method, plasma renin activity and aldosterone concentration measured by ELISA ( n = 8-11 animals per genotype, two-tailed Student\u2019s t -test). c Representative immunoblots of total renal sodium chloride cotransporter NCC and phosphorylated (p)NCC protein levels, ponceau red staining indicates equal loading. Graphs exhibit densitometric quantification of protein levels normalized to ponceau red staining, relative levels to Ae4 +/+ are plotted ( n = 7 animals per genotype, two-tailed Student\u2019s t-test). The effect of the NCC blocker hydrochlorothiazide (HCTZ, 10 mg/kg) on urinary Na + was not different between both genotypes ( n = 7\u201310 animals per genotype, ns: not significant p > 0.05, two-way ANOVA followed by Bonferroni\u2019s multiple comparisons test). d AE4 deletion induces hypochloremic alkalosis during salt-depletion. Graphs exhibit blood pH, blood pCO 2 , plasma [HCO 3 \u2212 ], and plasma [Cl \u2212 ] ( n = 18\u201326 animals per parameter and genotype, two-tailed Student\u2019s t -test). e , f Ae4 +/+ and Ae4 \u2212/\u2212 mice were alkali-loaded for 7 days under salt-depletion (low salt diet with 230 mM NaHCO 3 added to the drinking water). Before the alkali-loading (day 0) mice received normal diet. Graphs show e blood pH, plasma [HCO 3 \u2212 ], blood pCO 2 , and plasma [Cl \u2212 ] and f plasma [K + ] and [aldosterone] of Ae4 +/+ and Ae4 \u2212/\u2212 littermates without and after 1, 2, and 7 days of alkali-loading ( n = 6\u201317 animals per genotype and day of alkali-loading, two-way ANOVA followed by Bonferroni\u2019s multiple comparisons test for Ae4 +/+ vs Ae4 \u2212/\u2212 ). All data are presented as mean \u00b1 SEM. In b \u2013 d each point or square denotes one animal. Source data are provided as a Source Data file.",
+      "gold_verification_anchors": [
+        "AE4",
+        "homeostasis",
+        "sensing"
+      ],
+      "gold_matched_anchors": [
+        "AE4",
+        "homeostasis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-20-3",
+      "query": "Why does failure of distal intercalated cell proton secretion lead to nephrocalcinosis and alkaline urine?",
+      "topic": "intercalated_cells",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "nephrocalcinosis",
+        "alkaline",
+        "urine"
+      ],
+      "gold_matched_anchors": [
+        "urine"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-20-4",
+      "query": "How do type A and type B intercalated cells coordinate opposite acid-base fluxes during acidosis versus alkalosis?",
+      "topic": "intercalated_cells",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "opposite",
+        "fluxes",
+        "acidosis"
+      ],
+      "gold_matched_anchors": [
+        "acidosis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-21-1",
+      "query": "Why is the descending limb of Henle permeable to water but impermeable to NaCl?",
+      "topic": "countercurrent",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0042"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0042-C01"
+      ],
+      "gold_evidence_quote": "Thin descending limbs of long loops (LDTLs) (Fig. 7 ). Originally, two segments were separated, an upper segment outlined by type 2 epithelium and a lower segment outlined by type 3 epithelium [ 45 , 63 , 110 ]. Here we subdivide the upper segment into an upper portion outlined by type 2 epithelium and a lower portion outlined by epithelium type 2a. The LDTL is water permeable down to the transition to the Type 3 epithelium [ 99 ].",
+      "gold_verification_anchors": [
+        "descending limb",
+        "water permeable",
+        "impermeable"
+      ],
+      "gold_matched_anchors": [
+        "descending limb",
+        "water permeable"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-21-2",
+      "query": "How does urea recycling contribute to the hypertonicity of the deep inner medulla?",
+      "topic": "countercurrent",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0102"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0102-C01"
+      ],
+      "gold_evidence_quote": "Fig. 12 Urea recycling and trapping. A short-looped nephron, a CD, a VB with DVRs and AVRs are shown. Blue arrows indicate water transports, yellow arrows urea transports, thin diffusion, black-rimmed facilitated, hatched with flow. a Urea recycling in rat and high concentrators: In the terminal CD a portion of urea is diverted and released by facilitated transport into the VIC of the papilla and taken up by AVRs. Within AVRs urea travels into the VB of the IS where it is transferred by CCE via urea transporter UTA-2 into the SDTL, which descends within the VB. By flow along the nephron route, it reaches the CD in the cortex becoming concentrated by water extraction from the CNT and the entire CD down to the terminal portion and offered for repeated release. b Urea recycling in man and low concentrators. The difference to A consists that in B urea is not directly transferred from AVRs into the SDTL, but within the VB urea is first transferred via urea transporter UT-B1 to DVRs that supply the capillary plexus of the IS. From there, in a second step, it is taken up by the SDTL via urea transporter UTA-2. The recycling of urea to the terminal CD is identical. a and b Urea trapping: There is no difference in the trapping of urea between high and low concentrators. After uptake of urea into AVRs within the papillary part of the IM urea undergoes CCE with DVRs facilitated by the urea transporter UT-B1 first within the small VBs of the IM, most effective within the large VBs of the IS, decreasing in the OS. A short-circuiting of water from DVRs (via the water channel AQP1) into AVRs increases the effect. This mechanism decreases the loss of urea in the arcuate vein",
+      "gold_verification_anchors": [
+        "urea",
+        "recycling",
+        "inner medulla"
+      ],
+      "gold_matched_anchors": [
+        "urea",
+        "recycling"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-21-3",
+      "query": "What happens to the urinary concentrating ability when loop diuretics inhibit the thick ascending limb NKCC2 transporter?",
+      "topic": "countercurrent",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "loop diuretics",
+        "NKCC2",
+        "concentration"
+      ],
+      "gold_matched_anchors": [
+        "concentration"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-21-4",
+      "query": "How does countercurrent multiplication differ functionally from countercurrent exchange?",
+      "topic": "countercurrent",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "multiplier",
+        "exchanger",
+        "difference"
+      ],
+      "gold_matched_anchors": [
+        "difference"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-22-1",
+      "query": "Which aquaporin channels are constitutively expressed on the basolateral membrane of principal cells?",
+      "topic": "nephron_water",
+      "difficulty": "medium",
+      "question_type": "mechanism",
+      "support_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0057"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B0057-C01"
+      ],
+      "gold_evidence_quote": "In the present context the machinery regulating the reabsorption of water through principal cells is of utmost importance [ 80 ]. The transporters are aquaporins differently distributed in both membranes [ 15 , 48 , 52 , 103 , 119 ]. The basolateral membranes contain the constitutive aquaporins AQP3 and AQP4. AQP2 channels are stored in the apical cytoplasm in longitudinal vesicles called aggrephores. In the presence of ADH these vesicles fuse with the luminal membrane, converting the luminal membrane from water-impermeable to water-permeable [ 85 ].",
+      "gold_verification_anchors": [
+        "basolateral",
+        "aquaporin",
+        "principal"
+      ],
+      "gold_matched_anchors": [
+        "basolateral",
+        "aquaporin",
+        "principal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-22-2",
+      "query": "How does plasma osmolality sensed by hypothalamic osmoreceptors control renal water reabsorption?",
+      "topic": "nephron_water",
+      "difficulty": "medium",
+      "question_type": "physiology",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "osmoreceptors",
+        "hypothalamus",
+        "osmolality"
+      ],
+      "gold_matched_anchors": [
+        "osmolality"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-22-3",
+      "query": "Why do patients with impaired medullary hypertonicity produce large volumes of dilute urine even with high ADH levels?",
+      "topic": "nephron_water",
+      "difficulty": "medium",
+      "question_type": "clinical_reasoning",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "dilute urine",
+        "loss of gradient",
+        "hyposthenuria"
+      ],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-22-4",
+      "query": "What is the difference between obligatory proximal water reabsorption and facultative collecting duct water reabsorption?",
+      "topic": "nephron_water",
+      "difficulty": "medium",
+      "question_type": "comparison",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [
+        "obligatory",
+        "facultative",
+        "water"
+      ],
+      "gold_matched_anchors": [
+        "water"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "SUPPORTED",
+      "coverage_gap": true,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-01",
+      "query": "How is acute appendicitis treated surgically and medically?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-02",
+      "query": "What are the diagnostic criteria and initial emergency management for a tension pneumothorax?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-03",
+      "query": "How is plaque psoriasis differentiated from other chronic papulosquamous skin diseases?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-04",
+      "query": "What is the first-line abortive and prophylactic therapy for acute migraine headaches?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-05",
+      "query": "Explain the steps of thyroid hormone synthesis from iodine trapping to peripheral deiodination.",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-06",
+      "query": "What empiric antimicrobial therapy is recommended for acute bacterial meningitis in adults?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-07",
+      "query": "What are the active phases and stages of normal labour?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-08",
+      "query": "How is an unstable femoral shaft fracture temporarily immobilized and managed surgically?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-09",
+      "query": "How is insulin secretion by pancreatic beta cells regulated by ATP-sensitive potassium channels?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-10",
+      "query": "What are the common etiologies and diagnostic iron studies for microcytic iron deficiency anaemia?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-11",
+      "query": "How is primary open-angle glaucoma screened and treated with topical ocular hypotensive agents?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    },
+    {
+      "query_id": "RENAL-V2-HO-U-12",
+      "query": "What clinical criteria define a major depressive episode and what are first-line pharmacotherapies?",
+      "topic": "out_of_domain",
+      "difficulty": "medium",
+      "question_type": "unsupported",
+      "support_label": "UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "gold_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_matched_anchors": [],
+      "gold_minimum_anchor_hits": 2,
+      "requested_support_label": "UNSUPPORTED",
+      "coverage_gap": false,
+      "authority_sensitive": false,
+      "authoring_method": "realistic undergraduate curriculum question with verifiable source grounding",
+      "verification_method": "pre-retrieval exact-span verification against the intended source child; at least two predefined semantic anchors must occur in the cited passage"
+    }
+  ]
+}

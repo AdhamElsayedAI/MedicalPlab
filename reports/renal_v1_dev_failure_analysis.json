@@ -1,0 +1,5593 @@
+{
+  "report_id": "RENAL-V1-DEV-FAILURE-ANALYSIS",
+  "dataset": "RENAL-DEV-v1",
+  "n": 48,
+  "architecture": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "chunking": "C_section_aware",
+    "representation": "metadata_aware",
+    "max_sequence_length": 512
+  },
+  "failure_definition": "no gold-document plus gold-section match in top 10",
+  "failure_count": 9,
+  "failure_categories": {
+    "METHODS_RESULTS_NOISE": {
+      "count": 1,
+      "percentage_of_failures": 0.1111111111111111
+    },
+    "QUERY_TEMPLATE_ARTIFACT": {
+      "count": 2,
+      "percentage_of_failures": 0.2222222222222222
+    },
+    "RIGHT_DOCUMENT_WRONG_SECTION": {
+      "count": 6,
+      "percentage_of_failures": 0.6666666666666666
+    }
+  },
+  "queries": [
+    {
+      "query_id": "RENAL-DEV-01-1",
+      "query": "Explain RAAS with emphasis on 1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease.",
+      "topic": "RAAS",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_section_ids": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0002-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8538044691085815,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7631791830062866,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "6. Perspective on RAAS Inhibition"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7530890703201294,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7396083474159241,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "4. RAAS Blockers and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7345806360244751,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "2. Inflammation and Cardiovascular Disease"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7335398197174072,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7299492359161377,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7216781377792358,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0003-C02",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7175334095954895,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0011-C04",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7029546499252319,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-01-2",
+      "query": "What evidence describes 1.1. RAAS in relation to aldosterone?",
+      "topic": "aldosterone",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_section_ids": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+        "1.1. RAAS"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0003-C01"
+      ],
+      "first_gold_rank": 4,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.747352123260498,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "6. Perspective on RAAS Inhibition"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7138400077819824,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0012-C02",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7127051949501038,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7087405323982239,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0003-C02",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7017993330955505,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6819812059402466,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6602602005004883,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6552159786224365,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "4. RAAS Blockers and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.643905520439148,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0015-C02",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "4. RAAS Blockers and Vascular Inflammation",
+            "4.2. (Pro)renin Receptor and Potential Inhibitors"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6404966711997986,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "Abstract"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-01-3",
+      "query": "For a medical student, summarize the renal principles of renal endocrine function covered under 2. Inflammation and Cardiovascular Disease.",
+      "topic": "renal endocrine function",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_section_ids": [
+        "2. Inflammation and Cardiovascular Disease"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B0005-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7333866357803345,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "2. Inflammation and Cardiovascular Disease"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6371508836746216,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6054831743240356,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "2. Inflammation and Cardiovascular Disease",
+            "2.1. Markers of Inflammation"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6033592224121094,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.595744252204895,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0003-C02",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+            "1.1. RAAS"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5927526950836182,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5857608318328857,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "3. RAAS and Vascular Inflammation"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5825096368789673,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "4. RAAS Blockers and Vascular Inflammation",
+            "4.6. Mineralocorticoid Receptor Antagonists (MRA)"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5798806548118591,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "2. Inflammation and Cardiovascular Disease",
+            "2.2. Intercellular Adhesion Molecules"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5795039534568787,
+          "chunk_id": "DOC-PMC-RENAL-0001-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0001",
+          "section_path": [
+            "6. Perspective on RAAS Inhibition"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-02-1",
+      "query": "Explain glomerulus with emphasis on Introduction.",
+      "topic": "glomerulus",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B0003-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6637656092643738,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.609603762626648,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0105-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6088810563087463,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0103-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6087156534194946,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.606652021408081,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0097-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Supplementary information",
+            "[UNTITLED SECTION]"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6043498516082764,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0104-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.604124903678894,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0110-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Supplementary information"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6016495227813721,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0095-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Supplementary information",
+            "[UNTITLED SECTION]"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6013227701187134,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0096-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Supplementary information",
+            "[UNTITLED SECTION]"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5993142127990723,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0052-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Methods",
+            "Cells: isolation and culture"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-02-2",
+      "query": "What evidence describes Characterization of human podocytes and hGEC in relation to filtration barrier?",
+      "topic": "filtration barrier",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_section_ids": [
+        "Results",
+        "Characterization of human podocytes and hGEC"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B0009-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8091704845428467,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7900756001472473,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7861475348472595,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7766894698143005,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7759341597557068,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7681753039360046,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0014-C02",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.736153244972229,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7116004228591919,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Structural characterization of GOAC"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7082372307777405,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Structural characterization of GOAC"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7044511437416077,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-02-3",
+      "query": "For a medical student, summarize the renal principles of GFR covered under Culturing human podocytes and hGEC on the chip.",
+      "topic": "GFR",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_section_ids": [
+        "Results",
+        "Culturing human podocytes and hGEC on the chip"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B0013-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8006448745727539,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.774046778678894,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7715023756027222,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.764072597026825,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7484537363052368,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7464664578437805,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0014-C02",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Culturing human podocytes and hGEC on the chip"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7386146783828735,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7318392992019653,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Structural characterization of GOAC"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7309238314628601,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Results",
+            "Characterization of human podocytes and hGEC"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7227258682250977,
+          "chunk_id": "DOC-PMC-RENAL-0002-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section_path": [
+            "Introduction"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-03-1",
+      "query": "Explain potassium handling with emphasis on Introduction.",
+      "topic": "potassium handling",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0002-C01"
+      ],
+      "first_gold_rank": 6,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7731797695159912,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Acknowledgements"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7651538848876953,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0020-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Declarations",
+            "Conflict of interest"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7645719051361084,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7482246160507202,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7163334488868713,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7140543460845947,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6984924674034119,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Effects of dietary potassium in children"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6934678554534912,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Funding"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6846930980682373,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0002-C03",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6790965795516968,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-03-2",
+      "query": "What evidence describes New insights from tubulopathies in relation to tubular transport?",
+      "topic": "tubular transport",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_section_ids": [
+        "New insights from tubulopathies"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0004-C01"
+      ],
+      "first_gold_rank": 5,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.5669758915901184,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "5. Conclusion"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.5555937886238098,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5525678396224976,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5462163090705872,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5325895547866821,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "New insights from tubulopathies"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.529792308807373,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "1. Introduction"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5276491045951843,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5245277881622314,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5230489373207092,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "4. Effects of Ang II on PT Transport"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5210131406784058,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0005-C04",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "New insights from tubulopathies"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-03-3",
+      "query": "For a medical student, summarize the renal principles of hyperkalaemia covered under Hypokalemic nephropathy.",
+      "topic": "hyperkalaemia",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_section_ids": [
+        "Hypokalemic nephropathy"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B0006-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7499011754989624,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Hypokalemic nephropathy"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7285386323928833,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7282373309135437,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7182255983352661,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Hypokalemic nephropathy"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7160893082618713,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7029520273208618,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0147-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7022143602371216,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0149-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Contributor Information"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6989492774009705,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6967629790306091,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0150-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Contributor Information"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6957393884658813,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Abstract"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-04-1",
+      "query": "Explain proximal tubule with emphasis on Abstract.",
+      "topic": "proximal tubule",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_section_ids": [
+        "Abstract"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0001-C01"
+      ],
+      "first_gold_rank": 8,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6468032002449036,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Proximal convoluted tubule"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6404394507408142,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "1. Introduction"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6110775470733643,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "1. Introduction"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.608161211013794,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Proximal convoluted tubule"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5993040204048157,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.597868025302887,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0035-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Loop of Henle"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5972277522087097,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5762282013893127,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5742275714874268,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0025-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Proximal convoluted tubule"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5708634853363037,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "5. Conclusion"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-04-2",
+      "query": "What evidence describes 1. Introduction in relation to tubular reabsorption?",
+      "topic": "tubular reabsorption",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_section_ids": [
+        "1. Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0002-C01"
+      ],
+      "first_gold_rank": 2,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.579023003578186,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Proximal convoluted tubule"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.5686826705932617,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "1. Introduction"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5631431341171265,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "1. Introduction"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5574556589126587,
+          "chunk_id": "DOC-PMC-RENAL-0004-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section_path": [
+            "2. Roles of PT Transport in Acid/Base Balance"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5546149015426636,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0036-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Loop of Henle"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5519007444381714,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5500690937042236,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Proximal convoluted tubule"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5492168068885803,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5474034547805786,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5457848310470581,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0046-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Collecting tubules and collecting ducts"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-04-3",
+      "query": "For a medical student, summarize the renal principles of acid-base covered under 1. Introduction.",
+      "topic": "acid-base",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_section_ids": [
+        "1. Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B0003-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "QUERY_TEMPLATE_ARTIFACT",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6962662935256958,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6923089027404785,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0063-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Conclusion"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6882943511009216,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6808921694755554,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6774226427078247,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6723695993423462,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.672143816947937,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6720753312110901,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6718310713768005,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0064-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Conclusion"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6715701818466187,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-05-1",
+      "query": "Explain acid-base physiology with emphasis on Introduction.",
+      "topic": "acid-base physiology",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0002-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7560228109359741,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.742448091506958,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7407865524291992,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7326414585113525,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7213706970214844,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7205166816711426,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0063-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Conclusion"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7160688638687134,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7040655016899109,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7026194334030151,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.700664758682251,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0064-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Conclusion"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-05-2",
+      "query": "What evidence describes Survey methodology in relation to tubular secretion?",
+      "topic": "tubular secretion",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_section_ids": [
+        "Survey methodology"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0012-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.5516521334648132,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.5461340546607971,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5128651261329651,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5128243565559387,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5121331214904785,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0074-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5105321407318115,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0046-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Collecting tubules and collecting ducts"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5101560354232788,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0073-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5091639757156372,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0069-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5067812204360962,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0076-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5039629936218262,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0070-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-05-3",
+      "query": "For a medical student, summarize the renal principles of functional nephron units covered under Mechanistic topography of acid-base exchange in the kidney.",
+      "topic": "functional nephron units",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_section_ids": [
+        "Survey methodology",
+        "Mechanistic topography of acid-base exchange in the kidney"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B0015-C01"
+      ],
+      "first_gold_rank": 6,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8466065526008606,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0067-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Competing Interests"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.8288382291793823,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0076-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.8283635377883911,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0074-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.8248130679130554,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.8246463537216187,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Data Availability"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.8230264186859131,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.8223778605461121,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0072-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.8165667057037354,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0070-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.8110029697418213,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0046-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Survey methodology",
+            "Mechanistic topography of acid-base exchange in the kidney",
+            "Collecting tubules and collecting ducts"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.8108172416687012,
+          "chunk_id": "DOC-PMC-RENAL-0005-B0069-C01",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section_path": [
+            "Additional Information and Declarations",
+            "Author Contributions"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-06-1",
+      "query": "Explain AKI with emphasis on Commentary.",
+      "topic": "AKI",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_section_ids": [
+        "Commentary"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0002-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7191050052642822,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0126-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7136157155036926,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7014037370681763,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0183-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Literature review"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7011849880218506,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6984809637069702,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6977018713951111,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0155-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6966030597686768,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6964654922485352,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0050-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Abbreviations"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6963006854057312,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0129-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6957905888557434,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-06-2",
+      "query": "What evidence describes Summary of evidence in relation to diagnosis?",
+      "topic": "diagnosis",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_section_ids": [
+        "Summary of evidence"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0004-C01"
+      ],
+      "first_gold_rank": 3,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6023151874542236,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-1. CKD diagnosis (Table 1)"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6016854047775269,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0179-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5984925031661987,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0133-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Summary of evidence"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5963740348815918,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5933585166931152,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0132-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Summary of evidence"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5929766297340393,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0240-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 16-4 Intractable diseases: rapidly progressive glomerulonephritis (RPGN)",
+            "16-4-3 Kidney biopsy in RPGN"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5913381576538086,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0270-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Summary of evidence"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5892887115478516,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5882171392440796,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0035-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5856483578681946,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "1. Introduction"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-06-3",
+      "query": "For a medical student, summarize the renal principles of management principles covered under Background.",
+      "topic": "management principles",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_section_ids": [
+        "Commentary",
+        "Background"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B0054-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "QUERY_TEMPLATE_ARTIFACT",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6220433712005615,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0203-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 14. Initiation of dialysis",
+            "14-2 Significance of explanation and education about RRT by multiple disciplines"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.611742377281189,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0357-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6036698818206787,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0356-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5915749669075012,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0269-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-14 Initiation of renal replacement therapy"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5897131562232971,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0355-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5896515846252441,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5870615243911743,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0265-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-12 Management of CKD-MBD in pediatric CKD"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5836721062660217,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0243-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-2 Epidemiology of pediatric CKD"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5823991298675537,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0249-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-5 Pediatric CKD and hypertension/CVD"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5823018550872803,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-07-1",
+      "query": "Explain CKD with emphasis on History of creation of this guideline.",
+      "topic": "CKD",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_section_ids": [
+        "Introduction",
+        "History of creation of this guideline"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0001-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7620303630828857,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7596332430839539,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.758725643157959,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.749140739440918,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7341203689575195,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7305495738983154,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7217415571212769,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7192062139511108,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7180085182189941,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7178428769111633,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-07-2",
+      "query": "What evidence describes 1-2-1 CKD severity evaluation method: evaluation of kidney function in relation to evaluation?",
+      "topic": "evaluation",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_section_ids": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0020-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7834410667419434,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7642104625701904,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0025-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7629495859146118,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0026-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7624072432518005,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7611399292945862,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.747348427772522,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7402554750442505,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-3 CKD severity evaluation method: evaluation of cause"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7362871170043945,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0028-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7360609769821167,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0027-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7282392382621765,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0020-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-07-3",
+      "query": "For a medical student, summarize the renal principles of management principles covered under 1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria.",
+      "topic": "management principles",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_section_ids": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B0033-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8768198490142822,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0029-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.8488179445266724,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.8288254737854004,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0030-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.8023049235343933,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.759565532207489,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0033-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7389299869537354,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7315129041671753,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-3 CKD severity evaluation method: evaluation of cause"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7297749519348145,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-1. CKD diagnosis (Table 1)"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7158150672912598,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0025-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7115615010261536,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-08-1",
+      "query": "Explain nephrotic syndrome with emphasis on Introduction.",
+      "topic": "nephrotic syndrome",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0002-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "METHODS_RESULTS_NOISE",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6235427856445312,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0334-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.617789626121521,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0164-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Evidence and rationale"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6175286769866943,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6133624315261841,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6109797358512878,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0335-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Associated Data",
+            "Supplementary Materials"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6097092032432556,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6092406511306763,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0329-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Electronic supplementary material",
+            "[UNTITLED SECTION]"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.607893168926239,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Methods",
+            "Grading system"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6055169105529785,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0027-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6050093173980713,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-08-2",
+      "query": "What evidence describes Overview of the guideline project in relation to glomerular disease?",
+      "topic": "glomerular disease",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Overview of the guideline project"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0005-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.5959030985832214,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.5930505394935608,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5919632911682129,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5875729322433472,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5819777250289917,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0355-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5819648504257202,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5804575681686401,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0237-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 16-4 Intractable diseases: rapidly progressive glomerulonephritis (RPGN)",
+            "16-4-2 Anti-glomerular basement membrane (GBM) antibody measurement in RPGN"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5737996697425842,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0331-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Funding information"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.572851836681366,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0239-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 16-4 Intractable diseases: rapidly progressive glomerulonephritis (RPGN)",
+            "16-4-3 Kidney biopsy in RPGN"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5692850947380066,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Introduction",
+            "History of creation of this guideline"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-08-3",
+      "query": "For a medical student, summarize the renal principles of proteinuria covered under Developing the PICO questions.",
+      "topic": "proteinuria",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Developing the PICO questions"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B0006-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6514602303504944,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6130268573760986,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0029-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6054614186286926,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-1. CKD diagnosis (Table 1)"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5940730571746826,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0033-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5922669172286987,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0029-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Evidence and rationale",
+            "Assessment of proteinuria"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5907891392707825,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0030-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5824617147445679,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5823584794998169,
+          "chunk_id": "DOC-PMC-RENAL-0008-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0008",
+          "section_path": [
+            "Clinical practice recommendations",
+            "Definitions and diagnostic work-up",
+            "Definitions"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5817004442214966,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0043-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-4-1 CKD patient referral criteria for recommending medical examination recipients to visit medical institutions"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5808447599411011,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 1. CKD diagnosis and its clinical significance",
+            "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-09-1",
+      "query": "Explain hyperkalaemia with emphasis on INTRODUCTION.",
+      "topic": "hyperkalaemia",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_section_ids": [
+        "INTRODUCTION"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0002-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7123818397521973,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "CONCLUSIONS"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.693510115146637,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6901549100875854,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6895756721496582,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0103-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "The treatment of severe hyperkalemia",
+            "Relevance of the problem"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6883740425109863,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6879720091819763,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6862115859985352,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6858172416687012,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0056-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "CONSEQUENCES OF HYPERKALEMIA",
+            "Cardiac dysrhythmia: mechanism"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6856081485748291,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0033-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6822046041488647,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-09-2",
+      "query": "What evidence describes The three-pronged response to an acute potassium load in relation to electrolyte disturbance?",
+      "topic": "electrolyte disturbance",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_section_ids": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "The three-pronged response to an acute potassium load"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0003-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7775359153747559,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7207867503166199,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7045066356658936,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7035869359970093,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6706279516220093,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6498066782951355,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6087303757667542,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from transcellular potassium shifts"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5997997522354126,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from transcellular potassium shifts"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5954247713088989,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5864123106002808,
+          "chunk_id": "DOC-PMC-RENAL-0003-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section_path": [
+            "Introduction"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-09-3",
+      "query": "For a medical student, summarize the renal principles of potassium covered under Chronic potassium homoeostasis: not just aldosterone.",
+      "topic": "potassium",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_section_ids": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Principles of potassium homoeostasis: a battle waged on two fronts",
+        "Chronic potassium homoeostasis: not just aldosterone"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B0008-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7760103940963745,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "Chronic potassium homoeostasis: not just aldosterone"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7639106512069702,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "Chronic potassium homoeostasis: not just aldosterone"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7592015266418457,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "Chronic potassium homoeostasis: not just aldosterone"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7269946932792664,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0072-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "CONCLUSIONS"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6889975070953369,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "It\u2019s complicated!"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6875958442687988,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.669501006603241,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6594773530960083,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6508122682571411,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6406371593475342,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Principles of potassium homoeostasis: a battle waged on two fronts",
+            "The three-pronged response to an acute potassium load"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-10-1",
+      "query": "Explain hyperkalaemia with emphasis on Introduction.",
+      "topic": "hyperkalaemia",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0003-C01"
+      ],
+      "first_gold_rank": 7,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7297126650810242,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0075-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "CONCLUSIONS"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7112201452255249,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7111937403678894,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7066869735717773,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.706119954586029,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+            "Hyperkalemia from defective potassium excretion in the distal nephron",
+            "Clinical implications"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6997917294502258,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6979100704193115,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6922855377197266,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0103-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "The treatment of severe hyperkalemia",
+            "Relevance of the problem"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.69227135181427,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0033-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "RISK FACTORS FOR HYPERKALEMIA",
+            "Drug therapies as risk factors for hyperkalemia"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6921877861022949,
+          "chunk_id": "DOC-PMC-RENAL-0009-B0056-C01",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section_path": [
+            "CONSEQUENCES OF HYPERKALEMIA",
+            "Cardiac dysrhythmia: mechanism"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-10-2",
+      "query": "What evidence describes Evaluation of the patient with chronic HK in relation to kidney disease?",
+      "topic": "kidney disease",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_section_ids": [
+        "Hyperkalemia in non-dialytic chronic kidney disease",
+        "Evaluation of the patient with chronic HK"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0018-C01"
+      ],
+      "first_gold_rank": 5,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7103931903839111,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0065-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in patients with heart failure, diabetes and resistant hypertension on treatment with RAAS inhibitors",
+            "Hyperkalemia in patients with diabetes"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7051487565040588,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.700048565864563,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.690857470035553,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0066-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in patients with heart failure, diabetes and resistant hypertension on treatment with RAAS inhibitors",
+            "Hyperkalemia in patients with diabetes"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6903138756752014,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Evaluation of the patient with chronic HK"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6862443685531616,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6820859909057617,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6814727783203125,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6782310009002686,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Evaluation of the patient with chronic HK"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6746779680252075,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0138-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Conclusion"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-10-3",
+      "query": "For a medical student, summarize the renal principles of management covered under Target levels of sK.",
+      "topic": "management",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_section_ids": [
+        "Hyperkalemia in non-dialytic chronic kidney disease",
+        "Target levels of sK"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B0035-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6395384073257446,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0035-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Target levels of sK"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.622728168964386,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0036-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Target levels of sK"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6078935861587524,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0127-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 8. Nutrition",
+            "8-3 [CQ] Is the management of serum K levels recommended in patients with CKD?"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6058917045593262,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0126-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 8. Nutrition",
+            "8-3 [CQ] Is the management of serum K levels recommended in patients with CKD?"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6020876169204712,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0301-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5967847108840942,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0135-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 9. Renal anemia",
+            "9-1 [CQ] What is the appropriate target hemoglobin (Hb) level for erythropoiesis stimulating agent (ESA) therapy in CKD patients with renal anemia?"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5955773591995239,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0037-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Position statement 1.2"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5933545231819153,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.577652096748352,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0133-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 9. Renal anemia",
+            "9-1 [CQ] What is the appropriate target hemoglobin (Hb) level for erythropoiesis stimulating agent (ESA) therapy in CKD patients with renal anemia?"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.575945258140564,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in non-dialytic chronic kidney disease",
+            "Evaluation of the patient with chronic HK"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-11-1",
+      "query": "Explain UTI with emphasis on Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems.",
+      "topic": "UTI",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_section_ids": [
+        "Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0002-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.819928765296936,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.762067437171936,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7503330707550049,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0070-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Animal Models for Studying UTI",
+            "Other Animal Models for UTI"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7397856712341309,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0161-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Future directions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7358932495117188,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7321772575378418,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0099-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "In Vitro Human Cell-Based Models"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7319470643997192,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7250139713287354,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0160-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Key Features of the Human Bladder That Should Be Recapitulated in Advanced Human-Cell Models, and Models That Attempt Them",
+            "Urothelial Stretch",
+            "Platforms/Strategies to Study the Effects of Stretch"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7230744361877441,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7217137217521667,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0163-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Future directions"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-11-2",
+      "query": "What evidence describes The Mechanisms of Recurrent UTI: A Multi-Faceted Problem in relation to recurrent UTI?",
+      "topic": "recurrent UTI",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_section_ids": [
+        "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0006-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7915538549423218,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7795820236206055,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7643821239471436,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0167-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Conflict of Interest"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7604081630706787,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0164-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.748012363910675,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0168-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Acknowledgments"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7362311482429504,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.734805703163147,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0003-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Introduction: Urinary Tract Infection \u2013 A Globally Important Disease in Need of Better Human-Based Model Systems"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7330037355422974,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Host Factors"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7303422093391418,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0165-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Funding"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7281398773193359,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Bacterial Resistance and Resilience"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-11-3",
+      "query": "For a medical student, summarize the renal principles of urinary tract covered under Microbiota, Dysbiosis, and Distal Reservoirs.",
+      "topic": "urinary tract",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_section_ids": [
+        "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+        "Microbiota, Dysbiosis, and Distal Reservoirs"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B0007-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6820999383926392,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6753741502761841,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6369736790657043,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6316717863082886,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Microbiota, Dysbiosis, and Distal Reservoirs"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5759717226028442,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Bacterial Virulence and Bladder Reservoirs"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.569162905216217,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Bacterial Virulence and Bladder Reservoirs"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5605586171150208,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5321434736251831,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0122-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "In Vitro Human Cell-Based Models"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5309885144233704,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0055-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Limitations and Future Research"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5271722078323364,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+            "Bacterial Virulence and Bladder Reservoirs"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-12-1",
+      "query": "Explain nephrolithiasis with emphasis on 1. Introduction.",
+      "topic": "nephrolithiasis",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_section_ids": [
+        "1. Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0002-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6618903875350952,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0092-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Funding Statement"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6587556004524231,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0088-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Institutional Review Board Statement"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6550114750862122,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0051-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.2. Pregnancy"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6513962745666504,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0087-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6491277813911438,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0082-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.10. Struvite Stones"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6475759744644165,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0091-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Conflicts of Interest"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6421259641647339,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "2. Initial Assessment",
+            "2.1. Presentation and Evaluation"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6396229267120361,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0089-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Informed Consent Statement"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6394709944725037,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0093-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6353737115859985,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0078-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.9. Calcium Phosphate Stones"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-12-2",
+      "query": "What evidence describes 2.1. Presentation and Evaluation in relation to renal colic?",
+      "topic": "renal colic",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_section_ids": [
+        "2. Initial Assessment",
+        "2.1. Presentation and Evaluation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0007-C01"
+      ],
+      "first_gold_rank": 2,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.665224015712738,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "4. Management",
+            "4.1. Renal Colic"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6637848615646362,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "2. Initial Assessment",
+            "2.1. Presentation and Evaluation"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.648412823677063,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0088-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Institutional Review Board Statement"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6478813886642456,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0089-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Informed Consent Statement"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6364870071411133,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0087-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6304330825805664,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0092-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Funding Statement"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6283023357391357,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0091-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Conflicts of Interest"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6270397901535034,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0093-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6242826581001282,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0025-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "4. Management",
+            "4.3. Ureteric Stones",
+            "4.3.2. Active Treatment"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6187589168548584,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0094-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Associated Data",
+            "Data Availability Statement"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-12-3",
+      "query": "For a medical student, summarize the renal principles of urinary obstruction covered under 2.2.1. Renal and Ureteric Stones.",
+      "topic": "urinary obstruction",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_section_ids": [
+        "2. Initial Assessment",
+        "2.2. Investigations",
+        "2.2.1. Renal and Ureteric Stones"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B0008-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.716633141040802,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0088-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Institutional Review Board Statement"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7162936925888062,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0087-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7143199443817139,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0091-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Conflicts of Interest"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7132529020309448,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0093-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Footnotes"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7122622728347778,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0092-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Funding Statement"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7099529504776001,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0074-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.8. Cystine Stones"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7089031338691711,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0082-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.10. Struvite Stones"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7082306742668152,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "4. Management",
+            "4.3. Ureteric Stones",
+            "4.3.2. Active Treatment"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7066798210144043,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0026-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "4. Management",
+            "4.3. Ureteric Stones",
+            "4.3.2. Active Treatment"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7022979855537415,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0089-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Informed Consent Statement"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-13-1",
+      "query": "Explain kidney stones with emphasis on Introduction.",
+      "topic": "kidney stones",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0002-C01"
+      ],
+      "first_gold_rank": 2,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6347305774688721,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0042-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "Bacterial Role in Stone Formation and Growth"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6341156959533691,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0002-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6309887170791626,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0082-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.10. Struvite Stones"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6230937838554382,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0074-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.8. Cystine Stones"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6204497814178467,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0088-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Institutional Review Board Statement"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6157922744750977,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0089-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Informed Consent Statement"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6128357648849487,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0052-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Discussion",
+            "Clinical Relevance of the Study"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6109327077865601,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0092-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "Funding Statement"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.609182596206665,
+          "chunk_id": "DOC-PMC-RENAL-0012-B0078-C01",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section_path": [
+            "5. Specific Patient Groups",
+            "5.9. Calcium Phosphate Stones"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.60890793800354,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0048-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "Bacterial Role in Stone Formation and Growth"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-13-2",
+      "query": "What evidence describes Search Strategy in relation to recurrent UTI?",
+      "topic": "recurrent UTI",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Search Strategy"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0005-C01"
+      ],
+      "first_gold_rank": 3,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.683928906917572,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0009-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "Study Selection and Characteristics"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6745607256889343,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0167-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Conflict of Interest"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6737741231918335,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0005-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6620994806289673,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0164-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.655241847038269,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0165-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Funding"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6544656157493591,
+          "chunk_id": "DOC-PMC-RENAL-0011-B0168-C01",
+          "document_id": "DOC-PMC-RENAL-0011",
+          "section_path": [
+            "Acknowledgments"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6501892805099487,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6497294306755066,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6481907367706299,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6443003416061401,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0034-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "Eradication of Stones Might Lead to UTI Resolution"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-13-3",
+      "query": "For a medical student, summarize the renal principles of infected obstruction covered under The Association of UTI and KSD.",
+      "topic": "infected obstruction",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_section_ids": [
+        "Results",
+        "The Association of UTI and KSD"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B0010-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.7237657904624939,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7233468294143677,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0020-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7204338312149048,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7144496440887451,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7123750448226929,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7047194242477417,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7030720710754395,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7024223804473877,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Results",
+            "The Association of UTI and KSD"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7020764350891113,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7011321187019348,
+          "chunk_id": "DOC-PMC-RENAL-0013-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0013",
+          "section_path": [
+            "Methods",
+            "Search Strategy"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-14-1",
+      "query": "Explain hydronephrosis with emphasis on Introduction.",
+      "topic": "hydronephrosis",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0002-C01"
+      ],
+      "first_gold_rank": 3,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.704436719417572,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6968214511871338,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0084-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Discussion"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6915677785873413,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6896518468856812,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.688048243522644,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0088-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Acknowledgments"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6803443431854248,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0086-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Author Contributions"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6785978078842163,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0069-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Our Surgical Indications for UPJHN Based on the Onen Grading System"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6722016334533691,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0041-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "UTD Classification"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.67073655128479,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0015-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6705002784729004,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0064-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Our Surgical Indications for UPJHN Based on the Onen Grading System"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-14-2",
+      "query": "What evidence describes Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn) in relation to urinary obstruction?",
+      "topic": "urinary obstruction",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_section_ids": [
+        "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0005-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8242173790931702,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.8207868933677673,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0006-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.7378560304641724,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7286772727966309,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0069-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Our Surgical Indications for UPJHN Based on the Onen Grading System"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7280233502388,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7278710603713989,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0012-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7271733283996582,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0056-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Surgical Indications for UPJHN Based on EAU and ESPU 2019 Guideline"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7209604978561401,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0065-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Our Surgical Indications for UPJHN Based on the Onen Grading System"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.720734715461731,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0014-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7181640863418579,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0066-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Surgical Indications for Severe Hydronephrosis Associated With Upj Anomalies Based on Grading Systems",
+            "Our Surgical Indications for UPJHN Based on the Onen Grading System"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-14-3",
+      "query": "For a medical student, summarize the renal principles of grading covered under Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP).",
+      "topic": "grading",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_section_ids": [
+        "Hydronephrosis Grading Systems",
+        "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B0016-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.807081937789917,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7996402382850647,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0025-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.796320915222168,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0017-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.7903022766113281,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0024-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.7820619344711304,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0023-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.7796081304550171,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0019-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.7660996317863464,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0022-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.7453323602676392,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0021-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.7384563088417053,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0020-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.7200634479522705,
+          "chunk_id": "DOC-PMC-RENAL-0014-B0018-C01",
+          "document_id": "DOC-PMC-RENAL-0014",
+          "section_path": [
+            "Hydronephrosis Grading Systems",
+            "Anterior\u2013Posterior (AP) Diameter of Renal Pelvis (APDRP)"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-15-1",
+      "query": "Explain renal replacement therapy with emphasis on Brief history.",
+      "topic": "renal replacement therapy",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_section_ids": [
+        "Brief history"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B0003-C01"
+      ],
+      "first_gold_rank": null,
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6768687963485718,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0053-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Contributor Information"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6758344173431396,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0051-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Competing interests"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6678025722503662,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0269-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-14 Initiation of renal replacement therapy"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6594253778457642,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0052-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Contributor Information"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6465450525283813,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0270-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 17. Pediatric CKD",
+            "17-14 Initiation of renal replacement therapy"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6408711671829224,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0045-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Renal replacement therapy"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6315511465072632,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0049-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Conclusions"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6268540620803833,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0050-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Abbreviations"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6180240511894226,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6146025657653809,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0234-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-15-2",
+      "query": "What evidence describes Clinical symptoms in relation to dialysis basics?",
+      "topic": "dialysis basics",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_section_ids": [
+        "Clinical symptoms"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B0004-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6125957369804382,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Clinical symptoms"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.5842021703720093,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0057-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in dialysis patients",
+            "When to treat hyperkalemia in dialysis"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.5841591954231262,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0052-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in dialysis patients",
+            "Position statement 2.2"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.5770880579948425,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0027-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.5745816230773926,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0054-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Hyperkalemia in dialysis patients",
+            "When to treat hyperkalemia in dialysis"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.5725188255310059,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0030-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.5716284513473511,
+          "chunk_id": "DOC-PMC-RENAL-0007-B0203-C01",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section_path": [
+            "Summary of CQs and statements",
+            "Chapter 14. Initiation of dialysis",
+            "14-2 Significance of explanation and education about RRT by multiple disciplines"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.5681617856025696,
+          "chunk_id": "DOC-PMC-RENAL-0010-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0010",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.5640332698822021,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.5620227456092834,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0053-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Contributor Information"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-15-3",
+      "query": "For a medical student, summarize the renal principles of AKI covered under Pathophysiology of rhabdomyolysis and following acute kidney injury.",
+      "topic": "AKI",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_section_ids": [
+        "Etiology",
+        "Pathophysiology of rhabdomyolysis and following acute kidney injury"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B0014-C01"
+      ],
+      "first_gold_rank": 2,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.8588508367538452,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0001-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Abstract"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.8566818237304688,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0020-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology",
+            "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.8476569056510925,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0026-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology",
+            "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.8203006386756897,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0007-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.8200570940971375,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0016-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology",
+            "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.8168767690658569,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0032-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.8167463541030884,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0028-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.8163827657699585,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0031-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.8140526413917542,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0033-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Diagnosis"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.8129661083221436,
+          "chunk_id": "DOC-PMC-RENAL-0015-B0011-C01",
+          "document_id": "DOC-PMC-RENAL-0015",
+          "section_path": [
+            "Etiology"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-16-1",
+      "query": "Explain GFR with emphasis on Introduction.",
+      "topic": "GFR",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_section_ids": [
+        "Introduction"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0002-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6596271991729736,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0004-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Introduction"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6544640064239502,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0013-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Methods",
+            "Assessment of glomerular filtration rate",
+            "51 Cr-EDTA clearance and urinary creatinine clearance"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6539323329925537,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0151-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Supplementary Material"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6526033282279968,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0149-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Authors' contributions"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6499952673912048,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0148-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Competing interests"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6497128009796143,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0144-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Key messages"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6493123769760132,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0136-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Discussion"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.648374080657959,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0150-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Supplementary Material"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6465833783149719,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0123-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6448813080787659,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0047-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-16-2",
+      "query": "What evidence describes Study population in relation to creatinine clearance?",
+      "topic": "creatinine clearance",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Study population"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0008-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.6562672257423401,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0008-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Methods",
+            "Study population"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.6242498755455017,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0230-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6144747734069824,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0072-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6143263578414917,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0074-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6138602495193481,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0062-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6132518649101257,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0073-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6125059127807617,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0139-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Discussion"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6123995780944824,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0078-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6117222309112549,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0076-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6115332841873169,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0077-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        }
+      ]
+    },
+    {
+      "query_id": "RENAL-DEV-16-3",
+      "query": "For a medical student, summarize the renal principles of AKI assessment covered under Systemic hemodynamics.",
+      "topic": "AKI assessment",
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_section_ids": [
+        "Methods",
+        "Systemic hemodynamics"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B0010-C01"
+      ],
+      "first_gold_rank": 1,
+      "failure_category": null,
+      "top_10": [
+        {
+          "rank": 1,
+          "score": 0.723997175693512,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0010-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Methods",
+            "Systemic hemodynamics"
+          ]
+        },
+        {
+          "rank": 2,
+          "score": 0.7138851284980774,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0119-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 3,
+          "score": 0.6879532337188721,
+          "chunk_id": "DOC-PMC-RENAL-0006-B0126-C01",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section_path": [
+            "Commentary"
+          ]
+        },
+        {
+          "rank": 4,
+          "score": 0.6846764087677002,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0115-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 5,
+          "score": 0.6794363260269165,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0114-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 6,
+          "score": 0.6781636476516724,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0118-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 7,
+          "score": 0.6704610586166382,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0120-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 8,
+          "score": 0.6643630862236023,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0117-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 9,
+          "score": 0.6620092391967773,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0121-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        },
+        {
+          "rank": 10,
+          "score": 0.6594162583351135,
+          "chunk_id": "DOC-PMC-RENAL-0016-B0116-C01",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section_path": [
+            "Results"
+          ]
+        }
+      ]
+    }
+  ]
+}

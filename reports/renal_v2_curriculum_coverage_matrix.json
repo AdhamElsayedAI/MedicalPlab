@@ -1,0 +1,657 @@
+{
+  "report_id": "RENAL-V2-CURRICULUM-COVERAGE-MATRIX",
+  "n_topics": 43,
+  "coverage_summary": {
+    "STRONG": 11,
+    "ADEQUATE": 17,
+    "THIN": 13,
+    "MISSING": 2
+  },
+  "missing_topics": [
+    {
+      "id": "renal_endocrine",
+      "name": "Renal endocrine functions (EPO, calcitriol)",
+      "type": "FOUNDATIONAL"
+    },
+    {
+      "id": "haematuria",
+      "name": "Haematuria",
+      "type": "CLINICAL"
+    }
+  ],
+  "thin_topics": [
+    {
+      "id": "kidney_anatomy",
+      "name": "Kidney anatomy",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "id": "urinary_tract_anatomy",
+      "name": "Urinary tract anatomy",
+      "type": "FOUNDATIONAL",
+      "partial_sources": []
+    },
+    {
+      "id": "nephron_anatomy",
+      "name": "Nephron anatomy",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "id": "renal_blood_supply",
+      "name": "Renal blood supply",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "id": "renal_circulation",
+      "name": "Renal circulation",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "id": "water_handling",
+      "name": "Water handling / AQP",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "id": "adh_vasopressin",
+      "name": "ADH / vasopressin mechanism",
+      "type": "FOUNDATIONAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "id": "aki_postrenal",
+      "name": "Post-renal AKI",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0006"
+      ]
+    },
+    {
+      "id": "ckd",
+      "name": "CKD — definition, staging",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0007"
+      ]
+    },
+    {
+      "id": "nephritic_syndrome",
+      "name": "Nephritic syndrome / GN",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0008"
+      ]
+    },
+    {
+      "id": "glomerulonephritis",
+      "name": "Glomerulonephritis",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0008"
+      ]
+    },
+    {
+      "id": "metabolic_alkalosis",
+      "name": "Metabolic alkalosis (renal)",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0004"
+      ]
+    },
+    {
+      "id": "pyelonephritis",
+      "name": "Pyelonephritis / upper UTI",
+      "type": "CLINICAL",
+      "partial_sources": [
+        "DOC-PMC-RENAL-0011"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "topic_id": "kidney_anatomy",
+      "topic_name": "Kidney anatomy",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "urinary_tract_anatomy",
+      "topic_name": "Urinary tract anatomy",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": []
+    },
+    {
+      "topic_id": "nephron_anatomy",
+      "topic_name": "Nephron anatomy",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "renal_blood_supply",
+      "topic_name": "Renal blood supply",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "renal_circulation",
+      "topic_name": "Renal circulation",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "filtration_barrier",
+      "topic_name": "Filtration barrier (glomerular)",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018",
+        "DOC-PMC-RENAL-0002"
+      ]
+    },
+    {
+      "topic_id": "glomerular_filtration",
+      "topic_name": "Glomerular filtration",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "gfr",
+      "topic_name": "GFR concept and determinants",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0016",
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "gfr_regulation",
+      "topic_name": "GFR regulation (autoregulation)",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0016",
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "afferent_arteriole",
+      "topic_name": "Afferent arteriole effects on GFR",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ]
+    },
+    {
+      "topic_id": "efferent_arteriole",
+      "topic_name": "Efferent arteriole effects on GFR",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ]
+    },
+    {
+      "topic_id": "renal_autoregulation",
+      "topic_name": "Renal autoregulation",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ]
+    },
+    {
+      "topic_id": "proximal_tubular_transport",
+      "topic_name": "Proximal tubular transport",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0020",
+        "DOC-PMC-RENAL-0019"
+      ]
+    },
+    {
+      "topic_id": "sodium_handling",
+      "topic_name": "Sodium handling (tubular)",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0020"
+      ]
+    },
+    {
+      "topic_id": "potassium_handling",
+      "topic_name": "Potassium handling",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0009"
+      ]
+    },
+    {
+      "topic_id": "glucose_handling",
+      "topic_name": "Glucose handling / SGLT",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ]
+    },
+    {
+      "topic_id": "water_handling",
+      "topic_name": "Water handling / AQP",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "topic_id": "adh_vasopressin",
+      "topic_name": "ADH / vasopressin mechanism",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "topic_id": "countercurrent_multiplier",
+      "topic_name": "Countercurrent multiplier",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "topic_id": "medullary_gradient",
+      "topic_name": "Medullary concentration gradient",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ]
+    },
+    {
+      "topic_id": "raas",
+      "topic_name": "RAAS physiology",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0001",
+        "DOC-PMC-RENAL-0020"
+      ]
+    },
+    {
+      "topic_id": "acid_base_physiology",
+      "topic_name": "Acid-base physiology (renal)",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0005",
+        "DOC-PMC-RENAL-0021"
+      ]
+    },
+    {
+      "topic_id": "renal_endocrine",
+      "topic_name": "Renal endocrine functions (EPO, calcitriol)",
+      "topic_type": "FOUNDATIONAL",
+      "coverage": "MISSING",
+      "primary_document_ids": []
+    },
+    {
+      "topic_id": "aki",
+      "topic_name": "AKI — overview",
+      "topic_type": "CLINICAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007"
+      ]
+    },
+    {
+      "topic_id": "aki_prerenal",
+      "topic_name": "Pre-renal AKI",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007"
+      ]
+    },
+    {
+      "topic_id": "aki_intrinsic",
+      "topic_name": "Intrinsic renal AKI",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0006",
+        "DOC-PMC-RENAL-0007"
+      ]
+    },
+    {
+      "topic_id": "aki_postrenal",
+      "topic_name": "Post-renal AKI",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ]
+    },
+    {
+      "topic_id": "aki_rhabdomyolysis",
+      "topic_name": "AKI due to rhabdomyolysis",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ]
+    },
+    {
+      "topic_id": "ckd",
+      "topic_name": "CKD — definition, staging",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ]
+    },
+    {
+      "topic_id": "nephrotic_syndrome",
+      "topic_name": "Nephrotic syndrome",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ]
+    },
+    {
+      "topic_id": "nephritic_syndrome",
+      "topic_name": "Nephritic syndrome / GN",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ]
+    },
+    {
+      "topic_id": "glomerulonephritis",
+      "topic_name": "Glomerulonephritis",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ]
+    },
+    {
+      "topic_id": "proteinuria",
+      "topic_name": "Proteinuria",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0008",
+        "DOC-PMC-RENAL-0018"
+      ]
+    },
+    {
+      "topic_id": "haematuria",
+      "topic_name": "Haematuria",
+      "topic_type": "CLINICAL",
+      "coverage": "MISSING",
+      "primary_document_ids": []
+    },
+    {
+      "topic_id": "electrolyte_hyperkalaemia",
+      "topic_name": "Hyperkalaemia — mechanism & mgt",
+      "topic_type": "CLINICAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0003",
+        "DOC-PMC-RENAL-0009",
+        "DOC-PMC-RENAL-0010"
+      ]
+    },
+    {
+      "topic_id": "metabolic_acidosis",
+      "topic_name": "Metabolic acidosis (renal contribution)",
+      "topic_type": "CLINICAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0004",
+        "DOC-PMC-RENAL-0005"
+      ]
+    },
+    {
+      "topic_id": "metabolic_alkalosis",
+      "topic_name": "Metabolic alkalosis (renal)",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ]
+    },
+    {
+      "topic_id": "uti",
+      "topic_name": "UTI (lower tract)",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0011",
+        "DOC-PMC-RENAL-0013"
+      ]
+    },
+    {
+      "topic_id": "pyelonephritis",
+      "topic_name": "Pyelonephritis / upper UTI",
+      "topic_type": "CLINICAL",
+      "coverage": "THIN",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ]
+    },
+    {
+      "topic_id": "renal_stones",
+      "topic_name": "Renal stones / nephrolithiasis",
+      "topic_type": "CLINICAL",
+      "coverage": "STRONG",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0012",
+        "DOC-PMC-RENAL-0013"
+      ]
+    },
+    {
+      "topic_id": "obstruction_hydronephrosis",
+      "topic_name": "Urinary obstruction / hydronephrosis",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ]
+    },
+    {
+      "topic_id": "dialysis_basics",
+      "topic_name": "Dialysis basics",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ]
+    },
+    {
+      "topic_id": "rrt_basics",
+      "topic_name": "Renal replacement therapy basics",
+      "topic_type": "CLINICAL",
+      "coverage": "ADEQUATE",
+      "primary_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ]
+    }
+  ],
+  "source_roles": [
+    {
+      "document_id": "DOC-PMC-RENAL-0001",
+      "title": "The Renin-Angiotensin-aldosterone system in vascular inflammation and remodeling.",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0002",
+      "title": "A glomerulus-on-a-chip to recapitulate the human glomerular filtration barrier.",
+      "educational_classification": "SPECIALIST",
+      "curriculum_role_assessment": "SPECIALIST_SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0003",
+      "title": "Potassium and the kidney: a reciprocal relationship with clinical relevance.",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0004",
+      "title": "Roles of renal proximal tubule transport in acid/base balance and blood pressure regulation.",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0005",
+      "title": "Mechanisms and physiological relevance of acid-base exchange in functional units of the kidney.",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0006",
+      "title": "The Japanese clinical practice guideline for acute kidney injury 2016.",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0007",
+      "title": "Essential points from evidence-based clinical practice guideline for chronic kidney disease 2023.",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0008",
+      "title": "IPNA clinical practice recommendations for the diagnosis and management of children with steroid-resistant nephrotic syndrome.",
+      "educational_classification": "SPECIALIST",
+      "curriculum_role_assessment": "SPECIALIST_SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0009",
+      "title": "Hyperkalemia: pathophysiology, risk factors and consequences.",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0010",
+      "title": "Management of hyperkalemia in patients with kidney disease: a position paper endorsed by the Italian Society of Nephrology.",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0011",
+      "title": "Recurrent Urinary Tract Infection: A Mystery in Search of Better Model Systems.",
+      "educational_classification": "LOW_MARGINAL_VALUE",
+      "curriculum_role_assessment": "LOW_MARGINAL_VALUE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0012",
+      "title": "Urological Guidelines for Kidney Stones: Overview and Comprehensive Update.",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0013",
+      "title": "Association of Kidney Stones and Recurrent UTIs: the Chicken and Egg Situation. A Systematic Review of Literature.",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0014",
+      "title": "Grading of Hydronephrosis: An Ongoing Challenge.",
+      "educational_classification": "SPECIALIST",
+      "curriculum_role_assessment": "SPECIALIST_SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0015",
+      "title": "Acute kidney injury due to rhabdomyolysis and renal replacement therapy: a critical review.",
+      "educational_classification": "SPECIALIST",
+      "curriculum_role_assessment": "SPECIALIST_SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0016",
+      "title": "Assessing glomerular filtration rate (GFR) in critically ill patients with acute kidney injury--true GFR versus urinary creatinine clearance and estimating equations.",
+      "educational_classification": "SPECIALIST",
+      "curriculum_role_assessment": "SPECIALIST_SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0018",
+      "title": "The Glomerular Filtration Barrier: Components and Crosstalk",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0019",
+      "title": "Human Glucose Transporters in Renal Glucose Homeostasis",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0020",
+      "title": "Roles of Akt and SGK1 in the Regulation of Renal Tubular Transport",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0021",
+      "title": "The AE4 transporter mediates kidney acid-base sensing",
+      "educational_classification": "SUPPORTING",
+      "curriculum_role_assessment": "SUPPORTING"
+    },
+    {
+      "document_id": "DOC-PMC-RENAL-0023",
+      "title": "Active salt transport and countercurrent exchange as the basis of urine concentration: a proposal grounded on the microanatomy of the renal medulla",
+      "educational_classification": "CORE_EDUCATIONAL",
+      "curriculum_role_assessment": "UNDERGRADUATE_CORE"
+    }
+  ],
+  "acquisition_justification": "MISSING topics require new open-access PMC sources. THIN topics may benefit from broader review articles. Corpus repair is curriculum-driven, NOT benchmark-failure-driven."
+}
