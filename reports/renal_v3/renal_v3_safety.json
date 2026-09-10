@@ -1,0 +1,42 @@
+{
+  "report_id": "RENAL-V3-SAFETY-EVALUATION",
+  "description": "V3 Evidence Safety Classifier single evaluation on SAFETY_TEST",
+  "test_dataset": "renal-safety-test-v2.json",
+  "test_dataset_sha256": "fea35c02deadc5244ce69cc33a965786912622ebbd79913caaf4644af2b17b95",
+  "calibration_dataset": "renal-calibration-v2.json",
+  "calibrated_threshold": 0.91,
+  "n_samples": 66,
+  "n_positive": 32,
+  "n_negative": 34,
+  "confusion_matrix": {
+    "tp": 14,
+    "fp": 4,
+    "tn": 30,
+    "fn": 18
+  },
+  "metrics": {
+    "precision": 0.7777777777777778,
+    "recall": 0.4375,
+    "specificity": 0.8823529411764706,
+    "f1": 0.56,
+    "auroc": 0.854779411764706,
+    "auprc": 0.7139019200452994,
+    "brier_score": 0.14744311571121216,
+    "unsafe_accept_rate": 0.11764705882352941,
+    "false_refusal_rate": 0.5625
+  },
+  "gate_status": "FAILED",
+  "features": [
+    "reranker_top1",
+    "reranker_top2",
+    "reranker_margin",
+    "reranker_top3_mean",
+    "dense_top1",
+    "dense_margin",
+    "doc_top1",
+    "doc_margin",
+    "doc_agreement",
+    "entropy"
+  ],
+  "model_file": "models/renal_v3_evidence_classifier.pkl"
+}

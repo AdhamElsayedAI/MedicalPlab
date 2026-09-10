@@ -1,0 +1,90 @@
+{
+  "report_id": "RENAL-V3-STRUCTURAL-FUSION-SELECTION",
+  "description": "Controlled evaluation of structural priors and soft fusion trained on TRAIN",
+  "dataset_name": "RENAL-DEV-V3-QRELS",
+  "n_queries": 69,
+  "results": {
+    "flat_dense_baseline": {
+      "hit_at_1": 0.36231884057971014,
+      "hit_at_3": 0.6231884057971014,
+      "hit_at_5": 0.7681159420289855,
+      "hit_at_10": 0.8405797101449275,
+      "parent_hit_at_1": 0.2898550724637681,
+      "parent_hit_at_5": 0.7246376811594203,
+      "doc_hit_at_1": 0.8695652173913043,
+      "doc_hit_at_10": 0.9855072463768116,
+      "candidate_hit_at_50": 0.927536231884058,
+      "mrr": 0.5200655624568669,
+      "ndcg_at_10": 0.5977092596994207
+    },
+    "hard_hierarchical_cascade": {
+      "hit_at_1": 0.36231884057971014,
+      "hit_at_3": 0.6376811594202898,
+      "hit_at_5": 0.7681159420289855,
+      "hit_at_10": 0.8115942028985508,
+      "parent_hit_at_1": 0.2898550724637681,
+      "parent_hit_at_5": 0.7246376811594203,
+      "doc_hit_at_1": 0.8695652173913043,
+      "doc_hit_at_10": 0.9565217391304348,
+      "candidate_hit_at_50": 0.9130434782608695,
+      "mrr": 0.5145330112721418,
+      "ndcg_at_10": 0.5869964819785495
+    },
+    "dense_plus_document_prior": {
+      "hit_at_1": 0.4057971014492754,
+      "hit_at_3": 0.6521739130434783,
+      "hit_at_5": 0.782608695652174,
+      "hit_at_10": 0.8405797101449275,
+      "parent_hit_at_1": 0.3333333333333333,
+      "parent_hit_at_5": 0.7391304347826086,
+      "doc_hit_at_1": 0.8985507246376812,
+      "doc_hit_at_10": 0.9855072463768116,
+      "candidate_hit_at_50": 0.9420289855072463,
+      "mrr": 0.5433574879227053,
+      "ndcg_at_10": 0.6152784059937314
+    },
+    "dense_plus_section_prior": {
+      "hit_at_1": 0.37681159420289856,
+      "hit_at_3": 0.6086956521739131,
+      "hit_at_5": 0.7971014492753623,
+      "hit_at_10": 0.8260869565217391,
+      "parent_hit_at_1": 0.3333333333333333,
+      "parent_hit_at_5": 0.7536231884057971,
+      "doc_hit_at_1": 0.8985507246376812,
+      "doc_hit_at_10": 0.9855072463768116,
+      "candidate_hit_at_50": 0.9130434782608695,
+      "mrr": 0.5291062801932367,
+      "ndcg_at_10": 0.6016165144330741
+    },
+    "dense_plus_soft_fusion": {
+      "hit_at_1": 0.21739130434782608,
+      "hit_at_3": 0.2753623188405797,
+      "hit_at_5": 0.3188405797101449,
+      "hit_at_10": 0.37681159420289856,
+      "parent_hit_at_1": 0.21739130434782608,
+      "parent_hit_at_5": 0.3333333333333333,
+      "doc_hit_at_1": 0.782608695652174,
+      "doc_hit_at_10": 0.8695652173913043,
+      "candidate_hit_at_50": 0.927536231884058,
+      "mrr": 0.25959857372900846,
+      "ndcg_at_10": 0.28718986700601895
+    }
+  },
+  "soft_fusion_model": {
+    "model_type": "LogisticRegression (L2)",
+    "trained_on": "RENAL-TRAIN-V3",
+    "n_train_samples": 1200,
+    "feature_weights": {
+      "passage_sim": -0.9796463847160339,
+      "doc_sim": -0.553114652633667,
+      "sec_sim": 0.006586827803403139,
+      "passage_rank_inv": 0.07467842847108841,
+      "doc_rank_inv": 2.989192008972168,
+      "sec_rank_inv": 0.5461178421974182,
+      "passage_margin": -1.0063931941986084,
+      "doc_margin": 1.9732035398483276,
+      "sec_margin": -0.059914760291576385
+    },
+    "intercept": -1.3607999086380005
+  }
+}

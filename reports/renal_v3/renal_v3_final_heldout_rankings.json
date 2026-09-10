@@ -1,0 +1,351 @@
+{
+  "report_id": "RENAL-V3-FINAL-HELDOUT-RANKINGS",
+  "description": "Locked fair final evaluation comparing Frozen V2 vs Frozen V3 on V3 Heldout",
+  "timestamp": "2026-09-10T11:30:00Z",
+  "evaluation_dataset": {
+    "name": "renal-heldout-v3-final.json",
+    "sha256": "40c96f46be1c6547f2ffbdc29f90fb3444d48e66dfcfaae769cd3b8413082d32",
+    "n_total": 100,
+    "n_answerable": 52,
+    "n_unsupported": 48
+  },
+  "system_a_v2_baseline": {
+    "name": "Frozen V2 Dense Retriever",
+    "chunking": "B_400_overlap",
+    "representation": "content_only",
+    "retriever": "single_stage_dense",
+    "retrieval_metrics": {
+      "n_eval": 52,
+      "DocumentHit@1": 0.5769230769230769,
+      "DocumentHit@5": 0.8846153846153846,
+      "DocumentHit@10": 0.9423076923076923,
+      "ParentSectionHit@1": 0.1346153846153846,
+      "ParentSectionHit@5": 0.46153846153846156,
+      "ParentSectionHit@10": 0.5192307692307693,
+      "PassageHit@1": 0.34615384615384615,
+      "PassageHit@5": 0.6153846153846154,
+      "PassageHit@10": 0.7115384615384616,
+      "CandidateHit@10": 0.7115384615384616,
+      "CandidateHit@20": 0.8269230769230769,
+      "CandidateHit@30": 0.8653846153846154,
+      "CandidateHit@50": 0.9038461538461539,
+      "CandidateHit@100": 0.9615384615384616,
+      "MRR": 0.4742864929807486,
+      "nDCG@10": 0.49798886271579335
+    },
+    "safety_metrics": {
+      "TP": 51,
+      "FP": 24,
+      "TN": 24,
+      "FN": 1,
+      "precision": 0.68,
+      "recall": 0.9807692307692307,
+      "specificity": 0.5,
+      "unsafe_accept": 0.5,
+      "false_refusal": 0.019230769230769232,
+      "auroc": 0.9022435897435898
+    }
+  },
+  "system_b_v3_final": {
+    "name": "Frozen V3 Hybrid Two-Stage Retriever",
+    "chunking": "B_400_overlap",
+    "representation": "content_only",
+    "retriever": "dense_plus_document_prior_alpha_0.18_plus_qwen3_reranker_0.6B_top20",
+    "retrieval_metrics": {
+      "n_eval": 52,
+      "DocumentHit@1": 0.8269230769230769,
+      "DocumentHit@5": 0.9807692307692307,
+      "DocumentHit@10": 1.0,
+      "ParentSectionHit@1": 0.28846153846153844,
+      "ParentSectionHit@5": 0.5384615384615384,
+      "ParentSectionHit@10": 0.6730769230769231,
+      "PassageHit@1": 0.6153846153846154,
+      "PassageHit@5": 0.8076923076923077,
+      "PassageHit@10": 0.8461538461538461,
+      "CandidateHit@10": 0.75,
+      "CandidateHit@20": 0.8461538461538461,
+      "CandidateHit@30": 0.8653846153846154,
+      "CandidateHit@50": 0.9038461538461539,
+      "CandidateHit@100": 0.9423076923076923,
+      "MRR": 0.6946590227839438,
+      "nDCG@10": 0.7114346815430965
+    },
+    "safety_metrics": {
+      "TP": 17,
+      "FP": 0,
+      "TN": 48,
+      "FN": 35,
+      "precision": 1.0,
+      "recall": 0.3269230769230769,
+      "specificity": 1.0,
+      "unsafe_accept": 0.0,
+      "false_refusal": 0.6730769230769231,
+      "auroc": 0.9959935897435898
+    },
+    "improvements_over_v2": {
+      "PassageHit@1_absolute": 0.2692307692307693,
+      "PassageHit@5_absolute": 0.1923076923076923,
+      "MRR_absolute": 0.22037252980319516,
+      "nDCG@10_absolute": 0.21344581882730318,
+      "safety_recall_absolute": -0.6538461538461537,
+      "safety_precision_absolute": 0.31999999999999995,
+      "safety_false_refusal_reduction": -0.6538461538461539
+    }
+  },
+  "latency_profile": {
+    "n_queries": 100,
+    "query_encode_ms": {
+      "mean": 5.835440000009839,
+      "p50": 5.835440000009839,
+      "p95": 5.835440000009839,
+      "max": 5.835440000009839
+    },
+    "stage1_dense_prior_ms": {
+      "mean": 1.2270220003847498,
+      "p50": 1.0285999996995088,
+      "p95": 2.353179996134713,
+      "max": 2.8414999978849664
+    },
+    "stage2_crossencoder_ms": {
+      "mean": 555.0356930003181,
+      "p50": 534.9095499987016,
+      "p95": 733.6798599993926,
+      "max": 858.4743999963393
+    },
+    "total_end_to_end_ms": {
+      "mean": 562.0981550007127,
+      "p50": 541.6196399975888,
+      "p95": 740.9932900045533,
+      "max": 865.179839992561
+    }
+  },
+  "failure_analysis": {
+    "n_misses_at_hit1": 20,
+    "distribution": {
+      "DOCUMENT_ROUTING_FAILURE": 9,
+      "RIGHT_DOCUMENT_WRONG_SECTION": 11
+    },
+    "cases": [
+      {
+        "query_id": "RENAL-V3-HELDOUT-03",
+        "query": "What common early pathologic hallmark characterizes chronic kidney disease across various etiologies?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0002",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0007-P0035",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-04",
+        "query": "Which human cell types line the opposing compartments of the glomerular filtration barrier to prevent protein loss?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0002",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0018",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0018-P0003",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-05",
+        "query": "How do the kidneys maintain whole-body potassium homeostasis, and what does low urinary potassium excretion reflect?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0003",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0009-P0015",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-06",
+        "query": "What two principal mechanisms lead to clinical disorders of plasma potassium concentration?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0003",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0009-P0007",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.2
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-09",
+        "query": "How do collecting duct intercalated cells regulate final urinary acidification and bicarbonate elimination?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0005",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0005",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0005-P0044",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-13",
+        "query": "What initial intervention is recommended to reverse prerenal acute kidney injury in hypovolemic patients?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0006",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0015",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0015-P0041",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.25
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-14",
+        "query": "What duration of kidney damage or reduced glomerular filtration rate defines chronic kidney disease?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0002",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0002-P0004",
+        "passage_hit_5": false,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.16666666666666666
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-15",
+        "query": "Why does the KDIGO CKD classification evaluate both GFR categories and albuminuria stages together?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0007-P0035",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.0
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-16",
+        "query": "What pharmacological agents are preferred to control hypertension and reduce proteinuria in chronic kidney disease?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0007",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0007-P0033",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.027777777777777776
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-18",
+        "query": "Why is early genetic testing recommended in children presenting with steroid-resistant nephrotic syndrome?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0008",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0008",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0008-P0168",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-21",
+        "query": "How does increased tubular flow rate stimulate potassium secretion in collecting duct principal cells?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0009-P0021",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.014925373134328358
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-22",
+        "query": "Which common pharmacological agents impair renal potassium excretion and precipitate hyperkalemia?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0010",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0009-P0027",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.016129032258064516
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-24",
+        "query": "How do kaliuretic diuretics promote urinary potassium clearance in hyperkalemic patients with preserved GFR?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0010",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0009",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0009-P0073",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.02631578947368421
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-25",
+        "query": "What frequency of culture-confirmed episodes defines recurrent urinary tract infection (rUTI)?",
+        "failure_mode": "DOCUMENT_ROUTING_FAILURE",
+        "gold_document": "DOC-PMC-RENAL-0011",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0013",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0013-P0024",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-30",
+        "query": "What pharmacological class facilitates spontaneous passage of distal ureteral stones measuring 5 to 10 mm?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0012",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0012",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0012-P0021",
+        "passage_hit_5": false,
+        "candidate_hit_20": false,
+        "reciprocal_rank": 0.045454545454545456
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-33",
+        "query": "What anatomical features on renal ultrasonography distinguish mild from severe obstructive hydronephrosis?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0014",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0014",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0014-P0007",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-34",
+        "query": "What key prognostic parameter does the Onen hydronephrosis grading system emphasize to detect significant renal injury?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0014",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0014",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0014-P0047",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.5
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-36",
+        "query": "What three pathophysiological mechanisms cause acute kidney injury during severe rhabdomyolysis?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0015",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0015",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0015-P0005",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.25
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-38",
+        "query": "Why are measured 2-to-8 hour creatinine clearances preferred over standard CKD-EPI equations in unstable ICU patients?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0016",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0016",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0016-P0139",
+        "passage_hit_5": false,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.125
+      },
+      {
+        "query_id": "RENAL-V3-HELDOUT-44",
+        "query": "How does SGK1 activation mediate aldosterone-induced sodium reabsorption in principal cells?",
+        "failure_mode": "RIGHT_DOCUMENT_WRONG_SECTION",
+        "gold_document": "DOC-PMC-RENAL-0020",
+        "retrieved_top1_doc": "DOC-PMC-RENAL-0020",
+        "retrieved_top1_sec": "DOC-PMC-RENAL-0020-P0031",
+        "passage_hit_5": true,
+        "candidate_hit_20": true,
+        "reciprocal_rank": 0.5
+      }
+    ]
+  }
+}

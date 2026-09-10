@@ -1,0 +1,9 @@
+{
+  "report_id": "RENAL-V3-INDEX-AUDIT",
+  "search_implementation": "EXACT_BRUTE_FORCE",
+  "ann_index_used": false,
+  "ann_library": null,
+  "scoring_method": "np.dot(corpus_embeddings, query_embedding) with np.argsort",
+  "ann_recall_loss": 0.0,
+  "audit_conclusion": "Search is strictly exact brute-force linear scan using BLAS dot product over normalized embeddings. There is zero approximation error or ANN recall loss. Tuning HNSW/IVF is not applicable."
+}

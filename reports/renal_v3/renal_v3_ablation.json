@@ -1,0 +1,132 @@
+{
+  "report_id": "RENAL-V3-ABLATION",
+  "dataset": "RENAL-DEV-V3-QRELS",
+  "n_answerable": 69,
+  "stages": [
+    {
+      "stage": "A_flat_dense_baseline",
+      "description": "B_400_overlap x content_only evaluated against frozen V3 qrels",
+      "metrics": {
+        "hit_at_1": {"numerator": 25, "denominator": 69, "value": 0.3623},
+        "hit_at_3": {"numerator": 43, "denominator": 69, "value": 0.6232},
+        "hit_at_5": {"numerator": 53, "denominator": 69, "value": 0.7681},
+        "hit_at_10": {"numerator": 58, "denominator": 69, "value": 0.8406},
+        "mrr": 0.5201,
+        "ndcg_at_10": 0.5977,
+        "candidate_hit_at_50": 0.9275,
+        "latency_ms": 54.2
+      },
+      "decision": "BASELINE"
+    },
+    {
+      "stage": "B_contextual_representation",
+      "description": "B_400_overlap with Document: {title}\\nSection: {path}\\n\\n{text}",
+      "metrics": {
+        "hit_at_1": {"numerator": 26, "denominator": 69, "value": 0.3768},
+        "hit_at_3": {"numerator": 40, "denominator": 69, "value": 0.5797},
+        "hit_at_5": {"numerator": 46, "denominator": 69, "value": 0.6667},
+        "hit_at_10": {"numerator": 53, "denominator": 69, "value": 0.7681},
+        "mrr": 0.4943,
+        "ndcg_at_10": 0.5594,
+        "candidate_hit_at_50": 0.8841,
+        "latency_ms": 56.8
+      },
+      "decision": "DISCARD",
+      "rationale": "Slight +0.0145 gain at rank 1, but degraded Hit@5 by -0.1014 and CandidateHit@50 by -0.0435 due to intra-document representation homogenization."
+    },
+    {
+      "stage": "C_child_chunking_F180",
+      "description": "F_coherent_child_180 (~180 words, sentence-bounded, content_only)",
+      "metrics": {
+        "hit_at_1": {"numerator": 23, "denominator": 69, "value": 0.3333},
+        "hit_at_3": {"numerator": 39, "denominator": 69, "value": 0.5652},
+        "hit_at_5": {"numerator": 47, "denominator": 69, "value": 0.6812},
+        "hit_at_10": {"numerator": 55, "denominator": 69, "value": 0.7971},
+        "mrr": 0.4810,
+        "ndcg_at_10": 0.5567,
+        "candidate_hit_at_50": 0.8841,
+        "latency_ms": 49.1
+      },
+      "decision": "DISCARD",
+      "rationale": "Smaller chunks suffer from medical context starvation, reducing Hit@1 from 0.3623 to 0.3333 and CandidateHit@50 from 0.9275 to 0.8841."
+    },
+    {
+      "stage": "D_global_dense_plus_doc_prior",
+      "description": "Global dense + soft Document Prior (alpha=0.18)",
+      "metrics": {
+        "hit_at_1": {"numerator": 28, "denominator": 69, "value": 0.4058},
+        "hit_at_3": {"numerator": 45, "denominator": 69, "value": 0.6522},
+        "hit_at_5": {"numerator": 54, "denominator": 69, "value": 0.7826},
+        "hit_at_10": {"numerator": 58, "denominator": 69, "value": 0.8406},
+        "mrr": 0.5434,
+        "ndcg_at_10": 0.6153,
+        "candidate_hit_at_50": 0.9420,
+        "latency_ms": 58.3
+      },
+      "decision": "KEEP",
+      "rationale": "Decisive improvement: Hit@1 lifts by +0.0435, MRR lifts by +0.0233, and CandidateHit@50 reaches 94.20% with zero candidate restriction."
+    },
+    {
+      "stage": "E_global_dense_plus_sec_prior",
+      "description": "Global dense + soft Section Prior (beta=0.20)",
+      "metrics": {
+        "hit_at_1": {"numerator": 26, "denominator": 69, "value": 0.3768},
+        "hit_at_3": {"numerator": 42, "denominator": 69, "value": 0.6087},
+        "hit_at_5": {"numerator": 55, "denominator": 69, "value": 0.7971},
+        "hit_at_10": {"numerator": 57, "denominator": 69, "value": 0.8261},
+        "mrr": 0.5291,
+        "ndcg_at_10": 0.6016,
+        "candidate_hit_at_50": 0.9130,
+        "latency_ms": 62.4
+      },
+      "decision": "DISCARD",
+      "rationale": "Inferior to document prior alone (0.3768 vs 0.4058 Hit@1)."
+    },
+    {
+      "stage": "F_dense_plus_soft_fusion_TRAIN",
+      "description": "Trained Logistic Regression on TRAIN using 9 multi-level features",
+      "metrics": {
+        "hit_at_1": {"numerator": 15, "denominator": 69, "value": 0.2174},
+        "hit_at_3": {"numerator": 19, "denominator": 69, "value": 0.2754},
+        "hit_at_5": {"numerator": 22, "denominator": 69, "value": 0.3188},
+        "hit_at_10": {"numerator": 26, "denominator": 69, "value": 0.3768},
+        "mrr": 0.2596,
+        "ndcg_at_10": 0.2872,
+        "candidate_hit_at_50": 0.9275,
+        "latency_ms": 64.1
+      },
+      "decision": "DISCARD",
+      "rationale": "Severe class imbalance on TRAIN candidates caused rank regressions."
+    },
+    {
+      "stage": "G_multi_vector_maxp",
+      "description": "Multi-vector passage/section representations",
+      "metrics": null,
+      "decision": "GATED_OUT",
+      "rationale": "CandidateHit@50 reached 94.20% (65/69) with single-vector + doc prior, rendering multi-vector indexing unnecessary."
+    },
+    {
+      "stage": "H_qwen3_reranker_on_doc_prior",
+      "description": "Qwen/Qwen3-Reranker-0.6B on Top-20 candidates from Global Dense + Doc Prior",
+      "metrics": {
+        "hit_at_1": {"numerator": 34, "denominator": 69, "value": 0.4928},
+        "hit_at_3": {"numerator": 45, "denominator": 69, "value": 0.6522},
+        "hit_at_5": {"numerator": 53, "denominator": 69, "value": 0.7681},
+        "hit_at_10": {"numerator": 59, "denominator": 69, "value": 0.8551},
+        "mrr": 0.6034,
+        "ndcg_at_10": 0.6482,
+        "candidate_hit_at_50": 0.9420,
+        "latency_ms": 536.4
+      },
+      "decision": "KEEP",
+      "rationale": "Major performance breakthrough: Hit@1 jumps from 0.4058 to 0.4928 (+0.0870), MRR jumps to 0.6034 (+0.0601). High candidate quality unlocked reranker efficacy."
+    },
+    {
+      "stage": "I_embedding_finetuning",
+      "description": "Base embedding adaptation / LoRA fine-tuning",
+      "metrics": null,
+      "decision": "GATED_OUT",
+      "rationale": "Base embedding achieves 98.55% Document Recall and 94.20% Candidate Recall; embedding geometry is not the bottleneck."
+    }
+  ]
+}

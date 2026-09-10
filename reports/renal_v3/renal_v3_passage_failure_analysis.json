@@ -1,0 +1,638 @@
+{
+  "report_id": "RENAL-V3-PASSAGE-FAILURE-ANALYSIS",
+  "description": "Re-audit of passage retrieval failure causes under frozen V3 qrels",
+  "n_misses": 44,
+  "total_queries": 69,
+  "failure_distribution": {
+    "SECTION_AMBIGUITY": {
+      "count": 29,
+      "percentage": 65.9090909090909
+    },
+    "DOCUMENT_ROUTING_FAILURE": {
+      "count": 9,
+      "percentage": 20.454545454545457
+    },
+    "RIGHT_DOCUMENT_WRONG_SECTION": {
+      "count": 6,
+      "percentage": 13.636363636363635
+    }
+  },
+  "failures": [
+    {
+      "query_id": "RENAL-V2-DEV-01-2",
+      "medical_claim": "Factual answer regarding RAAS: What role does renin play in activating angiotensinogen, and what physiological factors stimulate its release?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0001-P0003) in same document.",
+      "first_relevant_rank": 4,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0001-B-C0003",
+        "document_id": "DOC-PMC-RENAL-0001",
+        "parent_section_id": "DOC-PMC-RENAL-0001-P0003",
+        "heading": "1.1. RAAS",
+        "score": 0.708412230014801
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-02-2",
+      "medical_claim": "Factual answer regarding filtration_barrier: How do podocyte foot processes and the slit diaphragm prevent large plasma proteins from entering the urinary space?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0018-P0025) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0018-B-C0025",
+        "document_id": "DOC-PMC-RENAL-0018",
+        "parent_section_id": "DOC-PMC-RENAL-0018-P0025",
+        "heading": "3. Roles of the Podocyte",
+        "score": 0.749453604221344
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-1",
+      "medical_claim": "Factual answer regarding potassium_handling: Where along the nephron is the majority of filtered potassium reabsorbed before reaching the distal tubule?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0009-P0017) in same document.",
+      "first_relevant_rank": 5,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0009-B-C0017",
+        "document_id": "DOC-PMC-RENAL-0009",
+        "parent_section_id": "DOC-PMC-RENAL-0009-P0017",
+        "heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+        "score": 0.6692531704902649
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-03-2",
+      "medical_claim": "Factual answer regarding potassium_handling: How does the distal nephron regulate potassium excretion in response to dietary potassium intake?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0009-P0019) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0009-B-C0019",
+        "document_id": "DOC-PMC-RENAL-0009",
+        "parent_section_id": "DOC-PMC-RENAL-0009-P0019",
+        "heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+        "score": 0.7590874433517456
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-1",
+      "medical_claim": "Factual answer regarding proximal_transport: How is sodium reabsorption coupled to bicarbonate reclamation in the proximal convoluted tubule?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0005 vs {'DOC-PMC-RENAL-0004'}), but correct doc present in Top-10.",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0026",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0025",
+        "heading": "Proximal convoluted tubule",
+        "score": 0.7622685432434082
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-04-4",
+      "medical_claim": "Factual answer regarding proximal_transport: What is the role of apical Na+/H+ exchanger NHE3 in proximal tubular solute transport?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0020 vs {'DOC-PMC-RENAL-0004'}), but correct doc present in Top-10.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0020-B-C0011",
+        "document_id": "DOC-PMC-RENAL-0020",
+        "parent_section_id": "DOC-PMC-RENAL-0020-P0011",
+        "heading": "2.4. Akt and Tubular Transport",
+        "score": 0.7369071245193481
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-1",
+      "medical_claim": "Factual answer regarding acid_base: How do the kidneys maintain systemic acid-base balance through bicarbonate reclamation and new bicarbonate generation?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0005-P0006) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0006",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0006",
+        "heading": "Introduction",
+        "score": 0.7518706321716309
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-3",
+      "medical_claim": "Factual answer regarding acid_base: How does the kidney compensate for chronic respiratory acidosis?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0005-P0005) of correct document (DOC-PMC-RENAL-0005).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0005",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0005",
+        "heading": "Introduction",
+        "score": 0.7022696137428284
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-05-4",
+      "medical_claim": "Factual answer regarding acid_base: What cellular mechanisms in type A intercalated cells secrete protons into the tubular lumen?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0005-P0049) in same document.",
+      "first_relevant_rank": 4,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0050",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0049",
+        "heading": "Table 1",
+        "score": 0.7474555969238281
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-1",
+      "medical_claim": "Factual answer regarding aki_definition: How is acute kidney injury defined and staged according to KDIGO clinical criteria?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0006-P0005) in same document.",
+      "first_relevant_rank": 8,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0006-B-C0005",
+        "document_id": "DOC-PMC-RENAL-0006",
+        "parent_section_id": "DOC-PMC-RENAL-0006-P0005",
+        "heading": "Commentary",
+        "score": 0.72599858045578
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-2",
+      "medical_claim": "Factual answer regarding aki_definition: Why is an abrupt rise in serum creatinine or drop in urine output used as the diagnostic hallmark of AKI?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0016 vs {'DOC-PMC-RENAL-0006'}), but correct doc present in Top-10.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0016-B-C0003",
+        "document_id": "DOC-PMC-RENAL-0016",
+        "parent_section_id": "DOC-PMC-RENAL-0016-P0003",
+        "heading": "Introduction",
+        "score": 0.7385297417640686
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-06-4",
+      "medical_claim": "Factual answer regarding aki_definition: What is the KDIGO urine output criterion for Stage 1 AKI?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0006-P0051) of correct document (DOC-PMC-RENAL-0006).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0006-B-C0052",
+        "document_id": "DOC-PMC-RENAL-0006",
+        "parent_section_id": "DOC-PMC-RENAL-0006-P0051",
+        "heading": "Commentary",
+        "score": 0.7795752882957458
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-1",
+      "medical_claim": "Factual answer regarding aki_management: What are the primary initial management steps when a patient is diagnosed with acute kidney injury?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0006-P0107) in same document.",
+      "first_relevant_rank": 7,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0006-B-C0109",
+        "document_id": "DOC-PMC-RENAL-0006",
+        "parent_section_id": "DOC-PMC-RENAL-0006-P0107",
+        "heading": "Commentary",
+        "score": 0.6806883811950684
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-2",
+      "medical_claim": "Factual answer regarding aki_management: When should nephrotoxic medications be stopped or dose-adjusted in acute kidney injury?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0007 vs {'DOC-PMC-RENAL-0006'}), but correct doc present in Top-10.",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0007-B-C0070",
+        "document_id": "DOC-PMC-RENAL-0007",
+        "parent_section_id": "DOC-PMC-RENAL-0007-P0070",
+        "heading": "3-1 [CQ] Are renin\u2013angiotensin\u2013aldosterone system (RAAS) inhibitors recommended more than other antihypertensive drugs for CKD with renal artery stenosis?",
+        "score": 0.6606680750846863
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-07-4",
+      "medical_claim": "Factual answer regarding aki_management: How should fluid resuscitation be guided in pre-renal AKI to avoid volume overload?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0015 vs {'DOC-PMC-RENAL-0006'}), but correct doc present in Top-10.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0015-B-C0041",
+        "document_id": "DOC-PMC-RENAL-0015",
+        "parent_section_id": "DOC-PMC-RENAL-0015-P0041",
+        "heading": "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "score": 0.7772904634475708
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-1",
+      "medical_claim": "Factual answer regarding ckd: How is chronic kidney disease defined and classified into GFR and albuminuria categories?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0007-P0080) in same document.",
+      "first_relevant_rank": 5,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0007-B-C0080",
+        "document_id": "DOC-PMC-RENAL-0007",
+        "parent_section_id": "DOC-PMC-RENAL-0007-P0080",
+        "heading": "Chapter 4. Diabetic kidney disease (Fig. 1 )",
+        "score": 0.6620754599571228
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-3",
+      "medical_claim": "Factual answer regarding ckd: What are the major complications associated with advancing chronic kidney disease stages G3b to G5?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0007-P0050) of correct document (DOC-PMC-RENAL-0007).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0007-B-C0050",
+        "document_id": "DOC-PMC-RENAL-0007",
+        "parent_section_id": "DOC-PMC-RENAL-0007-P0050",
+        "heading": "1-4-2 CKD patient referral criteria for referral from primary care physician to nephrologist/specialized medical institution",
+        "score": 0.7658836841583252
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-08-4",
+      "medical_claim": "Factual answer regarding ckd: What blood pressure targets and pharmacological agents are recommended for CKD patients with significant proteinuria?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0007-P0129) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0007-B-C0129",
+        "document_id": "DOC-PMC-RENAL-0007",
+        "parent_section_id": "DOC-PMC-RENAL-0007-P0129",
+        "heading": "8-4 [CQ] Is salt restriction recommended for patients with CKD?",
+        "score": 0.7298023700714111
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-1",
+      "medical_claim": "Factual answer regarding nephrotic: What classic triad of findings defines nephrotic syndrome in children and adults?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0008-P0015) in same document.",
+      "first_relevant_rank": 10,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0008-B-C0015",
+        "document_id": "DOC-PMC-RENAL-0008",
+        "parent_section_id": "DOC-PMC-RENAL-0008-P0015",
+        "heading": "Definitions",
+        "score": 0.7411605715751648
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-2",
+      "medical_claim": "Factual answer regarding nephrotic: What are the primary complications of nephrotic syndrome including infection risk and thromboembolism?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0008-P0280) in same document.",
+      "first_relevant_rank": 6,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0008-B-C0280",
+        "document_id": "DOC-PMC-RENAL-0008",
+        "parent_section_id": "DOC-PMC-RENAL-0008-P0280",
+        "heading": "Prevention of thrombosis",
+        "score": 0.5524275898933411
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-09-4",
+      "medical_claim": "Factual answer regarding nephrotic: How is steroid responsiveness defined in pediatric nephrotic syndrome?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0008-P0038) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0008-B-C0038",
+        "document_id": "DOC-PMC-RENAL-0008",
+        "parent_section_id": "DOC-PMC-RENAL-0008-P0038",
+        "heading": "Initial diagnostic workup of a child with SRNS",
+        "score": 0.7391259074211121
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-2",
+      "medical_claim": "Factual answer regarding hyperkalaemia_mechanism: How do medications blocking the renin-angiotensin-aldosterone system induce hyperkalaemia?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0009-P0032) of correct document (DOC-PMC-RENAL-0009).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0009-B-C0032",
+        "document_id": "DOC-PMC-RENAL-0009",
+        "parent_section_id": "DOC-PMC-RENAL-0009-P0032",
+        "heading": "Table 1",
+        "score": 0.7687592506408691
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-10-3",
+      "medical_claim": "Factual answer regarding hyperkalaemia_mechanism: What are the cardiac electrophysiological manifestations of progressively worsening hyperkalaemia on ECG?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0009-P0058) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0009-B-C0058",
+        "document_id": "DOC-PMC-RENAL-0009",
+        "parent_section_id": "DOC-PMC-RENAL-0009-P0058",
+        "heading": "Cardiac dysrhythmia: mechanism",
+        "score": 0.7946265935897827
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-3",
+      "medical_claim": "Factual answer regarding hyperkalaemia_management: Which acute therapies shift potassium intracellularly in emergent hyperkalaemia?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0010-P0112) of correct document (DOC-PMC-RENAL-0010).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0010-B-C0112",
+        "document_id": "DOC-PMC-RENAL-0010",
+        "parent_section_id": "DOC-PMC-RENAL-0010-P0112",
+        "heading": "Position statement 4.1",
+        "score": 0.7563227415084839
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-11-4",
+      "medical_claim": "Factual answer regarding hyperkalaemia_management: What are the indications and mechanisms of potassium binders in managing chronic hyperkalaemia?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0009 vs {'DOC-PMC-RENAL-0010'}), but correct doc present in Top-10.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0009-B-C0002",
+        "document_id": "DOC-PMC-RENAL-0009",
+        "parent_section_id": "DOC-PMC-RENAL-0009-P0002",
+        "heading": "INTRODUCTION",
+        "score": 0.7353192567825317
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-1",
+      "medical_claim": "Factual answer regarding uti: Why do urinary tract infections recur frequently and what bacterial virulence factors contribute?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0011-P0011) in same document.",
+      "first_relevant_rank": 5,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0011-B-C0011",
+        "document_id": "DOC-PMC-RENAL-0011",
+        "parent_section_id": "DOC-PMC-RENAL-0011-P0011",
+        "heading": "Bacterial Virulence and Bladder Reservoirs",
+        "score": 0.7628874182701111
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-3",
+      "medical_claim": "Factual answer regarding uti: What host defense mechanisms normally maintain sterility in the urinary tract?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0011-P0146) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0011-B-C0147",
+        "document_id": "DOC-PMC-RENAL-0011",
+        "parent_section_id": "DOC-PMC-RENAL-0011-P0146",
+        "heading": "Biological Effects of Stretch",
+        "score": 0.5884780883789062
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-12-4",
+      "medical_claim": "Factual answer regarding uti: What role do bacterial biofilms and intracellular bacterial communities play in recurrent UTI persistence?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0011-P0012) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0011-B-C0013",
+        "document_id": "DOC-PMC-RENAL-0011",
+        "parent_section_id": "DOC-PMC-RENAL-0011-P0012",
+        "heading": "Bacterial Virulence and Bladder Reservoirs",
+        "score": 0.7995508313179016
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-14-3",
+      "medical_claim": "Factual answer regarding stone_infection: Which bacterial pathogens produce urease that hydrolyzes urea into ammonium?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0013-P0043) in same document.",
+      "first_relevant_rank": 4,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0013-B-C0043",
+        "document_id": "DOC-PMC-RENAL-0013",
+        "parent_section_id": "DOC-PMC-RENAL-0013-P0043",
+        "heading": "Bacterial Role in Stone Formation and Growth",
+        "score": 0.7541966438293457
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-2",
+      "medical_claim": "Factual answer regarding obstruction: How does urinary tract obstruction lead to postrenal acute kidney injury and parenchymal thinning?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Target document completely missing from Top-10.",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0006-B-C0185",
+        "document_id": "DOC-PMC-RENAL-0006",
+        "parent_section_id": "DOC-PMC-RENAL-0006-P0183",
+        "heading": "Literature review",
+        "score": 0.6455857157707214
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-15-3",
+      "medical_claim": "Factual answer regarding obstruction: What are common anatomical and luminal causes of bilateral urinary tract obstruction?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0012-P0024) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0012-B-C0024",
+        "document_id": "DOC-PMC-RENAL-0012",
+        "parent_section_id": "DOC-PMC-RENAL-0012-P0024",
+        "heading": "4.3.2. Active Treatment",
+        "score": 0.6951963901519775
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-16-1",
+      "medical_claim": "Factual answer regarding rhabdomyolysis_aki: What are the main mechanisms by which myoglobin causes acute kidney injury in rhabdomyolysis?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0015-P0001) in same document.",
+      "first_relevant_rank": 5,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0015-B-C0001",
+        "document_id": "DOC-PMC-RENAL-0015",
+        "parent_section_id": "DOC-PMC-RENAL-0015-P0001",
+        "heading": "Abstract",
+        "score": 0.849372148513794
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-16-3",
+      "medical_claim": "Factual answer regarding rhabdomyolysis_aki: What is the primary initial medical treatment to prevent acute kidney injury in severe rhabdomyolysis?",
+      "failure_category": "RIGHT_DOCUMENT_WRONG_SECTION",
+      "justification": "Top-1 placed in different section (DOC-PMC-RENAL-0015-P0040) of correct document (DOC-PMC-RENAL-0015).",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0015-B-C0040",
+        "document_id": "DOC-PMC-RENAL-0015",
+        "parent_section_id": "DOC-PMC-RENAL-0015-P0040",
+        "heading": "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "score": 0.8131764531135559
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-2",
+      "medical_claim": "Factual answer regarding gfr_measurement: Why can creatinine-based estimating equations like CKD-EPI be inaccurate in critically ill patients?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0016-P0138) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0016-B-C0138",
+        "document_id": "DOC-PMC-RENAL-0016",
+        "parent_section_id": "DOC-PMC-RENAL-0016-P0138",
+        "heading": "Discussion",
+        "score": 0.8022555112838745
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-3",
+      "medical_claim": "Factual answer regarding gfr_measurement: How does muscle mass and dietary protein intake influence serum creatinine and eGFR calculation?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0016-P0002) in same document.",
+      "first_relevant_rank": 4,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0016-B-C0002",
+        "document_id": "DOC-PMC-RENAL-0016",
+        "parent_section_id": "DOC-PMC-RENAL-0016-P0002",
+        "heading": "Introduction",
+        "score": 0.6251460313796997
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-17-4",
+      "medical_claim": "Factual answer regarding gfr_measurement: What are the relative advantages of measured 24-hour creatinine clearance versus estimated GFR?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0016-P0005) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0016-B-C0005",
+        "document_id": "DOC-PMC-RENAL-0016",
+        "parent_section_id": "DOC-PMC-RENAL-0016-P0005",
+        "heading": "Introduction",
+        "score": 0.7528653740882874
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-2",
+      "medical_claim": "Factual answer regarding tubular_signaling: What role does the Akt signaling pathway play in tubular epithelial cell survival and transport regulation?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0020-P0031) in same document.",
+      "first_relevant_rank": 5,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0020-B-C0031",
+        "document_id": "DOC-PMC-RENAL-0020",
+        "parent_section_id": "DOC-PMC-RENAL-0020-P0031",
+        "heading": "6. Conclusion",
+        "score": 0.752910852432251
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-3",
+      "medical_claim": "Factual answer regarding tubular_signaling: How does aldosterone activate SGK1 to increase the abundance of epithelial sodium channels (ENaC) on the apical membrane?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0020-P0022) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0020-B-C0022",
+        "document_id": "DOC-PMC-RENAL-0020",
+        "parent_section_id": "DOC-PMC-RENAL-0020-P0022",
+        "heading": "3.2. SGK1 in Insulin Signaling Pathway",
+        "score": 0.7765754461288452
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-19-4",
+      "medical_claim": "Factual answer regarding tubular_signaling: What are the downstream consequences of hyperactivated tubular SGK1 on blood pressure and sodium retention?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0020-P0031) in same document.",
+      "first_relevant_rank": 3,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0020-B-C0031",
+        "document_id": "DOC-PMC-RENAL-0020",
+        "parent_section_id": "DOC-PMC-RENAL-0020-P0031",
+        "heading": "6. Conclusion",
+        "score": 0.7448195815086365
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-20-1",
+      "medical_claim": "Factual answer regarding intercalated_cells: What is the specialized function of type A versus type B intercalated cells in the cortical collecting duct?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0005 vs {'DOC-PMC-RENAL-0021'}), but correct doc present in Top-10.",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0049",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0048",
+        "heading": "Table 1",
+        "score": 0.7317864894866943
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-2",
+      "medical_claim": "Factual answer regarding countercurrent: What are the distinct permeability characteristics of the descending versus thick ascending limbs of Henle?",
+      "failure_category": "DOCUMENT_ROUTING_FAILURE",
+      "justification": "Top-1 from wrong document (DOC-PMC-RENAL-0005 vs {'DOC-PMC-RENAL-0023'}), but correct doc present in Top-10.",
+      "first_relevant_rank": null,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0005-B-C0036",
+        "document_id": "DOC-PMC-RENAL-0005",
+        "parent_section_id": "DOC-PMC-RENAL-0005-P0035",
+        "heading": "Loop of Henle",
+        "score": 0.7447245717048645
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-21-3",
+      "medical_claim": "Factual answer regarding countercurrent: What role does the countercurrent exchanger in the vasa recta play in preserving the medullary gradient?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0023-P0001) in same document.",
+      "first_relevant_rank": 2,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0023-B-C0001",
+        "document_id": "DOC-PMC-RENAL-0023",
+        "parent_section_id": "DOC-PMC-RENAL-0023-P0001",
+        "heading": "Abstract",
+        "score": 0.7576001882553101
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-22-1",
+      "medical_claim": "Factual answer regarding nephron_water: How does antidiuretic hormone (ADH / vasopressin) induce aquaporin-2 translocation to increase collecting duct water permeability?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0023-P0046) in same document.",
+      "first_relevant_rank": 10,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0023-B-C0047",
+        "document_id": "DOC-PMC-RENAL-0023",
+        "parent_section_id": "DOC-PMC-RENAL-0023-P0046",
+        "heading": "Loops of Henle",
+        "score": 0.6483907699584961
+      }
+    },
+    {
+      "query_id": "RENAL-V2-DEV-22-2",
+      "medical_claim": "Factual answer regarding nephron_water: Why is the corticomedullary osmotic gradient indispensable for the collecting duct to concentrate urine?",
+      "failure_category": "SECTION_AMBIGUITY",
+      "justification": "Gold chunk retrieved in Top-10, but preceded by another section (DOC-PMC-RENAL-0023-P0112) in same document.",
+      "first_relevant_rank": 4,
+      "top1_retrieved": {
+        "chunk_id": "DOC-PMC-RENAL-0023-B-C0113",
+        "document_id": "DOC-PMC-RENAL-0023",
+        "parent_section_id": "DOC-PMC-RENAL-0023-P0112",
+        "heading": "Summary of urine concentrating mechanisms in the rat medulla",
+        "score": 0.7302470207214355
+      }
+    }
+  ]
+}

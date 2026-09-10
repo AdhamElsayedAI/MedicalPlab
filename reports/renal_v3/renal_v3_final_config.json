@@ -1,0 +1,42 @@
+{
+  "config_id": "RENAL-V3-FROZEN-RETRIEVAL-CONFIG",
+  "version": "3.0",
+  "freeze_timestamp": "2026-09-10T11:20:00Z",
+  "status": "FROZEN_FOR_PRODUCTION",
+  "corpus": {
+    "snapshot_file": "Data/metadata/corpus_renal_snapshot_v2.json",
+    "snapshot_sha256": "7b29423c910b96ef68f056d682ddb03d6d54fb4a45a336fc3f31920efecdd9bb",
+    "active_documents": 23,
+    "license_verification": "100% CC BY (commercially approved)"
+  },
+  "chunking": {
+    "strategy": "B_400_overlap",
+    "target_words": 400,
+    "overlap_words": 40,
+    "total_chunks_corpus": 2691
+  },
+  "representation": {
+    "strategy": "content_only",
+    "document_representation": "Title: {title}\\nTopics: {topics}\\nOverview: {overview}"
+  },
+  "first_stage_retriever": {
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "dtype": "float16",
+    "search_method": "exact_brute_force_dot_product",
+    "structural_prior": "soft_document_prior",
+    "alpha_document_prior": 0.18,
+    "candidate_pool_size": 20
+  },
+  "second_stage_reranker": {
+    "enabled": true,
+    "model_id": "Qwen/Qwen3-Reranker-0.6B",
+    "dtype": "float16",
+    "candidate_depth": 20,
+    "batch_size": 8
+  },
+  "output": {
+    "top_k": 10,
+    "expand_parent_sections": true
+  }
+}

@@ -1,0 +1,2804 @@
+{
+  "dataset_name": "RENAL-V3-FINAL-FROZEN-UNSEEN",
+  "version": "3.0",
+  "freeze_timestamp": "2026-09-10T11:45:00Z",
+  "status": "FINAL_FROZEN_UNSEEN",
+  "n_queries": 100,
+  "n_answerable": 52,
+  "n_unsupported": 48,
+  "leakage_audited_against": [
+    "renal-dev-v3-qrels.json",
+    "renal-train-v3.json",
+    "renal-heldout-v2-final.json"
+  ],
+  "queries": [
+    {
+      "query_id": "RENAL-V3-HELDOUT-01",
+      "query": "What key physiological parameters and organs are regulated by the renin-angiotensin-aldosterone system (RAAS)?",
+      "topic": "raas",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: physiological roles of the renin-angiotensin-aldosterone system",
+      "medical_claim": "The RAAS oversees cardiovascular, renal, and adrenal function by regulating blood pressure, fluid volume, and sodium and potassium balance.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0001",
+          "parent_section_id": "DOC-PMC-RENAL-0001-P0002",
+          "evidence_text": "The rennin-angiotensin-aldosterone system (RAAS), one of the most important hormonal systems, oversees the functions of cardiovascular, renal, and adrenal glands by regulating blood pressure, fluid volume, and sodium and potassium balance [ 1 ]. The classical RAAS system was discovered more than a century ago, and in 1934 Goldblatt et al. showed a ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for raas"
+        }
+      ],
+      "primary_evidence_quote": "The rennin-angiotensin-aldosterone system (RAAS), one of the most important hormonal systems, oversees the functions of cardiovascular, renal, and adrenal glands by regulating blood pressure, fluid volume, and sodium and potassium balance [ 1 ]. The classical RAAS system was discovered more than a century ago, and in 1934 Goldblatt et al. showed a Renin link between kidney function and blood pressure [ 2 ]. Since then, extensive experimental studies have been undertaken to identify the components of the RAAS and its role in regulating blood pressure. Abnormal activity of the RAAS leads to the development of an array of cardiovascular diseases (CVD; hypertension, atherosclerosis, and left ventricular hypertrophy), cardiovascular events (myocardial infarction, stroke, and congestive heart fa",
+      "gold_verification_anchors": [
+        "cardiovascular",
+        "blood pressure",
+        "potassium balance"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-02",
+      "query": "How is renin synthesized in the renal glomerulus and what enzymatic reaction does it catalyze in the circulation?",
+      "topic": "raas",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: renin synthesis and cleavage of angiotensinogen",
+      "medical_claim": "Renin is synthesized as prorenin in afferent arterioles and cleaves circulating angiotensinogen into angiotensin I.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0001-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0001",
+          "parent_section_id": "DOC-PMC-RENAL-0001-P0003",
+          "evidence_text": "Renin, an active proteolytic enzyme, is first synthesized as an inactive preprohormone (prorenin), undergoes subsequent proteolytic changes in the afferent arterioles of renal glomerulus, and then is released into circulation [ 4 ]. In the circulation, proteolytic and nonproteolytic mechanisms cleave prorenin to the active renin. Active renin acts ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for raas"
+        }
+      ],
+      "primary_evidence_quote": "Renin, an active proteolytic enzyme, is first synthesized as an inactive preprohormone (prorenin), undergoes subsequent proteolytic changes in the afferent arterioles of renal glomerulus, and then is released into circulation [ 4 ]. In the circulation, proteolytic and nonproteolytic mechanisms cleave prorenin to the active renin. Active renin acts upon its substrate, angiotensinogen, to generate angiotensin I (Ang I). Ang I is cleaved by angiotensin-converting enzyme (ACE) resulting in physiologically active angiotensin II (Ang II). Ang II, the main effector of the RAAS, mediates its effects via type 1 Ang II receptor (AT1R). However, few studies suggest the existence of additional receptors for prorenin and renin in the heart, kidney, liver, and placenta [ 5 ]. Other studies suggest the p",
+      "gold_verification_anchors": [
+        "prorenin",
+        "afferent arterioles",
+        "angiotensinogen"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-03",
+      "query": "What common early pathologic hallmark characterizes chronic kidney disease across various etiologies?",
+      "topic": "filtration_barrier",
+      "question_type": "pathology",
+      "learning_objective": "Undergraduate renal: early hallmark of chronic kidney disease in glomeruli",
+      "medical_claim": "A common early pathologic hallmark of chronic kidney disease is decreased glomerular filtration and loss of functional glomeruli.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0002-P0004"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0002",
+          "parent_section_id": "DOC-PMC-RENAL-0002-P0004",
+          "evidence_text": "Despite a wide variety of causes including metabolic abnormalities, hypertension, autoimmunity, and genetic background, a common early pathologic hallmark of chronic kidney disease (CKD) is decreased glomerular filtration and loss of functional glomeruli 2 . The main function of the glomeruli is to filter fluids and electrolytes from the blood, whi",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for filtration_barrier"
+        }
+      ],
+      "primary_evidence_quote": "Despite a wide variety of causes including metabolic abnormalities, hypertension, autoimmunity, and genetic background, a common early pathologic hallmark of chronic kidney disease (CKD) is decreased glomerular filtration and loss of functional glomeruli 2 . The main function of the glomeruli is to filter fluids and electrolytes from the blood, while retaining plasma proteins 3 . This activity happens at the level of the glomerular filtration barrier (GFB) and is coordinated by the interaction of two highly specialized glomerular cells (the fenestrated endothelium and the podocytes), which are separated by a thin layer of glomerular basement membrane (GBM 4 ).",
+      "gold_verification_anchors": [
+        "chronic kidney disease",
+        "glomerular filtration",
+        "hallmark"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-04",
+      "query": "Which human cell types line the opposing compartments of the glomerular filtration barrier to prevent protein loss?",
+      "topic": "filtration_barrier",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: cellular components of human glomerular filtration barrier",
+      "medical_claim": "Human podocytes and glomerular endothelial cells form the filtration barrier that filters blood and prevents protein loss.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0002-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0002",
+          "parent_section_id": "DOC-PMC-RENAL-0002-P0001",
+          "evidence_text": "Abstract In this work we model the glomerular filtration barrier, the structure responsible for filtering the blood and preventing the loss of proteins, using human podocytes and glomerular endothelial cells seeded into microfluidic chips. In long-term cultures, cells maintain their morphology, form capillary-like structures and express slit diaphr",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for filtration_barrier"
+        }
+      ],
+      "primary_evidence_quote": "Abstract In this work we model the glomerular filtration barrier, the structure responsible for filtering the blood and preventing the loss of proteins, using human podocytes and glomerular endothelial cells seeded into microfluidic chips. In long-term cultures, cells maintain their morphology, form capillary-like structures and express slit diaphragm proteins. This system recapitulates functions and structure of the glomerulus, including permselectivity. When exposed to sera from patients with anti-podocyte autoantibodies, the chips show albuminuria proportional to patients’ proteinuria, phenomenon not observed with sera from healthy controls or individuals with primary podocyte defects. We also show its applicability for renal disease modeling and drug testing. A total of 2000 independen",
+      "gold_verification_anchors": [
+        "podocytes",
+        "endothelial cells",
+        "filtration barrier"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-05",
+      "query": "How do the kidneys maintain whole-body potassium homeostasis, and what does low urinary potassium excretion reflect?",
+      "topic": "potassium_handling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: renal regulation of total body potassium balance",
+      "medical_claim": "The kidneys maintain whole-body potassium balance by controlling urinary excretion; low urinary potassium reflects insufficient dietary intake.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0003",
+          "parent_section_id": "DOC-PMC-RENAL-0003-P0001",
+          "evidence_text": "Abstract By controlling urinary potassium excretion, the kidneys play a key role in maintaining whole-body potassium homeostasis. Conversely, low urinary potassium excretion (as a proxy for insufficient dietary intake) is increasingly recognized as a risk factor for the progression of kidney disease. Thus, there is a reciprocal relationship between",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for potassium_handling"
+        }
+      ],
+      "primary_evidence_quote": "Abstract By controlling urinary potassium excretion, the kidneys play a key role in maintaining whole-body potassium homeostasis. Conversely, low urinary potassium excretion (as a proxy for insufficient dietary intake) is increasingly recognized as a risk factor for the progression of kidney disease. Thus, there is a reciprocal relationship between potassium and the kidney: the kidney regulates potassium balance but potassium also affects kidney function. This review explores this relationship by discussing new insights into kidney potassium handling derived from recently characterized tubulopathies and studies on sexual dimorphism. These insights reveal a central but non-exclusive role for the distal convoluted tubule in sensing potassium and subsequently modifying the activity of the sod",
+      "gold_verification_anchors": [
+        "urinary potassium",
+        "excretion",
+        "homeostasis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-06",
+      "query": "What two principal mechanisms lead to clinical disorders of plasma potassium concentration?",
+      "topic": "potassium_handling",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: external vs internal potassium balance disorders",
+      "medical_claim": "Disorders of plasma potassium develop from abnormal external potassium excretion or abnormal internal exchange between intracellular and extracellular fluid.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0003-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0003",
+          "parent_section_id": "DOC-PMC-RENAL-0003-P0002",
+          "evidence_text": "Physicians are trained to deal with disorders of plasma potassium including hypokalemia and hyperkalemia [ 1 , 2 ]. Disorders of plasma potassium develop when the excretion of potassium (external potassium balance) or the exchange of potassium between the intracellular and extracellular compartments (internal potassium balance) is disturbed [ 3 ]. ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for potassium_handling"
+        }
+      ],
+      "primary_evidence_quote": "Physicians are trained to deal with disorders of plasma potassium including hypokalemia and hyperkalemia [ 1 , 2 ]. Disorders of plasma potassium develop when the excretion of potassium (external potassium balance) or the exchange of potassium between the intracellular and extracellular compartments (internal potassium balance) is disturbed [ 3 ]. Because the potassium concentration in the extracellular fluid controls the resting membrane potential of excitable cells, disorders of plasma potassium can lead to muscle weakness, paralysis, and cardiac arrhythmias. Several homeostatic hormones such as insulin, catecholamines, and aldosterone maintain extracellular fluid potassium concentration by regulating potassium distribution, excretion, or both [ 4 , 5 ]. Furthermore, during hypokalemia, ",
+      "gold_verification_anchors": [
+        "external potassium",
+        "plasma potassium",
+        "intracellular"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-07",
+      "query": "What two essential proximal tubular transport functions prevent metabolic acidosis?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: proximal tubule bicarbonate reabsorption and ammonium excretion",
+      "medical_claim": "The renal proximal tubule preserves systemic acid-base balance by reabsorbing the bulk of filtered bicarbonate and producing and secreting ammonium.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0004",
+          "parent_section_id": "DOC-PMC-RENAL-0004-P0001",
+          "evidence_text": "Sodium-coupled bicarbonate absorption from renal proximal tubules (PTs) plays a pivotal role in the maintenance of systemic acid/base balance. Indeed, mutations in the Na + -HCO 3 − cotransporter NBCe1, which mediates a majority of bicarbonate exit from PTs, cause severe proximal renal tubular acidosis associated with ocular and other extrarenal ab",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "Sodium-coupled bicarbonate absorption from renal proximal tubules (PTs) plays a pivotal role in the maintenance of systemic acid/base balance. Indeed, mutations in the Na + -HCO 3 − cotransporter NBCe1, which mediates a majority of bicarbonate exit from PTs, cause severe proximal renal tubular acidosis associated with ocular and other extrarenal abnormalities. Sodium transport in PTs also plays an important role in the regulation of blood pressure. For example, PT transport stimulation by insulin may be involved in the pathogenesis of hypertension associated with insulin resistance. Type 1 angiotensin (Ang) II receptors in PT are critical for blood pressure homeostasis. Paradoxically, the effects of Ang II on PT transport are known to be biphasic. Unlike in other species, however, Ang II i",
+      "gold_verification_anchors": [
+        "proximal tubule",
+        "bicarbonate",
+        "acid-base"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-08",
+      "query": "Which luminal and basolateral transporters mediate the majority of sodium-coupled bicarbonate absorption in proximal tubules?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: luminal NHE3 and basolateral NBCe1 in proximal bicarbonate absorption",
+      "medical_claim": "In proximal tubules, luminal NHE3 together with basolateral NBCe1 mediates the majority of sodium-coupled bicarbonate absorption.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0004-P0004"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0004",
+          "parent_section_id": "DOC-PMC-RENAL-0004-P0004",
+          "evidence_text": "In PTs, the luminal Na + /H + exchanger type 3 (NHE3) together with the basolateral Na + -HCO 3 − cotransporter NBCe1 is thought to mediate a majority of sodium-coupled bicarbonate absorption from this segment [ 1 , 7 ]. Although the basolateral membrane of PTs contains Na + -dependent and Na + -independent Cl − /HCO 3 − exchangers [ 7 ], these tra",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "In PTs, the luminal Na + /H + exchanger type 3 (NHE3) together with the basolateral Na + -HCO 3 − cotransporter NBCe1 is thought to mediate a majority of sodium-coupled bicarbonate absorption from this segment [ 1 , 7 ]. Although the basolateral membrane of PTs contains Na + -dependent and Na + -independent Cl − /HCO 3 − exchangers [ 7 ], these transporters cannot effectively compensate for the loss of NBCe1 function. By contrast, the loss of NHE3 function may be at least partially compensated by the other luminal transporters such as NHE8 [ 8 ].",
+      "gold_verification_anchors": [
+        "nhe3",
+        "nbce1",
+        "bicarbonate"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-09",
+      "query": "How do collecting duct intercalated cells regulate final urinary acidification and bicarbonate elimination?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: intercalated cell bicarbonate transport in collecting duct",
+      "medical_claim": "Alpha-intercalated cells secrete protons via H+-ATPase and reabsorb bicarbonate via AE1, whereas beta-intercalated cells secrete bicarbonate via pendrin.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0055"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0056"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0005",
+          "parent_section_id": "DOC-PMC-RENAL-0005-P0055",
+          "evidence_text": "The epithelial collecting system also implements NH 3 /NH 4 + transport regulated by a complex process that involves at least two Rhesus glycoproteins: RhB (SLC42A2) and RhC (SLC42A3) ( Harris et al., 2023 ; Takvam et al., 2023 ). Rhbg expressed in IC-α and non-α, non-β intercalated cells, principal cells in the basolateral plasma membrane. Rhbd is",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "The epithelial collecting system also implements NH 3 /NH 4 + transport regulated by a complex process that involves at least two Rhesus glycoproteins: RhB (SLC42A2) and RhC (SLC42A3) ( Harris et al., 2023 ; Takvam et al., 2023 ). Rhbg expressed in IC-α and non-α, non-β intercalated cells, principal cells in the basolateral plasma membrane. Rhbd is not found in IC-β. Rhcg is found in the apical and basolateral membrane in type IC-α and principal cells, but also it is expressed in the apical plasma membrane in non-α, non-β intercalated cells. Recent reports show that RhC is specifically involved in transport of the molecular form (NH 3 ), whereas RhB participates in transport of both NH 3 and NH 4 + ( Weiner & Verlander, 2014 ). Collecting duct-specific double knockout of these proteins con",
+      "gold_verification_anchors": [
+        "intercalated cells",
+        "acidification",
+        "collecting duct"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-10",
+      "query": "What is the function of the apical pendrin (SLC26A4) exchanger in renal bicarbonate handling?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: pendrin anion exchanger in systemic base elimination",
+      "medical_claim": "Pendrin in beta-intercalated cells secretes bicarbonate into the lumen in exchange for chloride, facilitating base excretion during metabolic alkalosis.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0005-P0025"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0026"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0005",
+          "parent_section_id": "DOC-PMC-RENAL-0005-P0025",
+          "evidence_text": "Figure 2 Routes of acid-base exchange in the proximal convoluted tubule (PCT), which reabsorbs the major portion of bicarbonate (HCO 3 − ) from the glomerular filtrate. The process involves chloride-bicarbonate exchange via sodium-dependent bicarbonate cotransporter at the luminal membrane of PCT cells. Protons (H + ) are actively secreted into the",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "Figure 2 Routes of acid-base exchange in the proximal convoluted tubule (PCT), which reabsorbs the major portion of bicarbonate (HCO 3 − ) from the glomerular filtrate. The process involves chloride-bicarbonate exchange via sodium-dependent bicarbonate cotransporter at the luminal membrane of PCT cells. Protons (H + ) are actively secreted into the lumen in exchange for sodium ions (Na + ) via sodium-hydrogen exchanger NHE3 at the luminal membrane. PCT also reabsorbs filtered buffers such as phosphate (HPO 4 2− ) and ammonia (NH 3 ) from the glomerular filtrate and participates in reabsorption and production of ammonium (NH4 + ). NHE3, Na + /H + exchanger 3; AQP1, aquaporin 1; CA II and CA IV, carbonic anhydrases II and IV; NBCe1-A, Na + /HCO 3 − electrogenic cotransporter 1, splice varian",
+      "gold_verification_anchors": [
+        "pendrin",
+        "bicarbonate",
+        "chloride"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-11",
+      "query": "What clinical syndrome is characterized by a rapid decline in renal function over hours to days?",
+      "topic": "aki",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: definition of acute kidney injury syndrome",
+      "medical_claim": "Acute kidney injury is a clinical syndrome characterized by a rapid decline in renal excretory function, accumulation of metabolic waste products, and volume dysregulation.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0001",
+          "evidence_text": "Acute kidney injury (AKI) is a syndrome which has a broad range of etiologic factors depending on different clinical settings. Because AKI has significant impacts on prognosis in any clinical settings, early detection and intervention is necessary to improve the outcomes of AKI patients. This clinical guideline for AKI was developed by a multidisci",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for aki"
+        }
+      ],
+      "primary_evidence_quote": "Acute kidney injury (AKI) is a syndrome which has a broad range of etiologic factors depending on different clinical settings. Because AKI has significant impacts on prognosis in any clinical settings, early detection and intervention is necessary to improve the outcomes of AKI patients. This clinical guideline for AKI was developed by a multidisciplinary approach with nephrology, intensive care medicine, blood purification, and pediatrics. Of note, clinical practice for AKI management which was widely performed in Japan was also evaluated with comprehensive literature search.",
+      "gold_verification_anchors": [
+        "acute kidney injury",
+        "syndrome",
+        "decline"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-12",
+      "query": "How did international consensus criteria (RIFLE, AKIN, KDIGO) standardize the diagnosis and staging of AKI?",
+      "topic": "aki",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: evolution of RIFLE criteria to AKIN and KDIGO",
+      "medical_claim": "The RIFLE, AKIN, and KDIGO criteria standardized AKI staging based on graded increments in serum creatinine and reductions in hourly urine output.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0005",
+          "evidence_text": "In the past, acute renal failure (ARF) was diagnosed and classified according to several different criteria. In response to the growing call for unified international diagnostic criteria, the acute dialysis quality initiative (ADQI) published the RIFLE (risk, injury, failure, loss, end-stage kidney disease) criteria in 2004 (Table 1 ) [ 1 , 4 ]. Th",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for aki"
+        }
+      ],
+      "primary_evidence_quote": "In the past, acute renal failure (ARF) was diagnosed and classified according to several different criteria. In response to the growing call for unified international diagnostic criteria, the acute dialysis quality initiative (ADQI) published the RIFLE (risk, injury, failure, loss, end-stage kidney disease) criteria in 2004 (Table 1 ) [ 1 , 4 ]. The RIFLE criteria distinguished three degrees of severity (risk, injury, and failure), with the latter defined as an increase in the serum creatinine (sCr), a decline in the glomerular filtration rate (GFR), and a reduction in the urine output; and two types of clinical outcomes (Loss and End-Stage Kidney Disease). In 2004, members of the International Society of Nephrology, the American Society of Nephrology, the National Kidney Foundation (in th",
+      "gold_verification_anchors": [
+        "rifle",
+        "creatinine",
+        "urine output"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-13",
+      "query": "What initial intervention is recommended to reverse prerenal acute kidney injury in hypovolemic patients?",
+      "topic": "aki",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: fluid resuscitation in prerenal hypoperfusion",
+      "medical_claim": "Initial management of prerenal AKI requires prompt isotonic fluid resuscitation to restore effective renal perfusion pressure and prevent progression to ischemic ATN.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0126"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0128"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0126",
+          "evidence_text": "Acute kidney injury (AKI) is classified as either pre-renal, renal (intrinsic), or post-renal. Pre-renal AKI is considered as azotemia resulting from a decreased renal perfusion pressure; conceptually, it is a form of renal impairment with no renal tissue damage, in which the renal function can recover rapidly with early treatment. There are two co",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for aki"
+        }
+      ],
+      "primary_evidence_quote": "Acute kidney injury (AKI) is classified as either pre-renal, renal (intrinsic), or post-renal. Pre-renal AKI is considered as azotemia resulting from a decreased renal perfusion pressure; conceptually, it is a form of renal impairment with no renal tissue damage, in which the renal function can recover rapidly with early treatment. There are two conceivable approaches to the differentiation of pre-renal AKI from renal AKI. The first approach is to comprehensively assess whether the AKI is pre-renal or renal based on an assessment of the cause of the AKI, hemodynamics, and urinalyses with measuring factors such as the body weight change, vital signs, urine osmality, fractional excretion of sodium (FENa), fractional excretion of urea nitrogen (FEUN), and urinary sediment. The second approach",
+      "gold_verification_anchors": [
+        "fluid",
+        "perfusion",
+        "resuscitation"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-14",
+      "query": "What duration of kidney damage or reduced glomerular filtration rate defines chronic kidney disease?",
+      "topic": "ckd",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: definition of chronic kidney disease",
+      "medical_claim": "Chronic kidney disease is defined by evidence of kidney damage (such as albuminuria) or GFR <60 mL/min/1.73m2 persisting for at least 3 months.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0035"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0035"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0035",
+          "evidence_text": "CKD is a condition that encompasses various kidney diseases; treatment, kidney function, and vital prognosis differ depending on the cause. In particular, nephritis is a pathological condition that requires specialized diagnosis and treatment; the histological diagnosis determines the treatment modality to be followed. The clinical course is also d",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for ckd"
+        }
+      ],
+      "primary_evidence_quote": "CKD is a condition that encompasses various kidney diseases; treatment, kidney function, and vital prognosis differ depending on the cause. In particular, nephritis is a pathological condition that requires specialized diagnosis and treatment; the histological diagnosis determines the treatment modality to be followed. The clinical course is also different for diabetes mellitus (DM) and hypertension-related kidney disease. The cause, GFR, and albuminuria (CGA) classification severity, which is GFR- and urinary albumin-based severity combined with the cause of kidney disease, better reflects the prognosis. Based on the above, the cause of CKD should be investigated with its diagnosis, and the severity should be recorded.",
+      "gold_verification_anchors": [
+        "chronic kidney disease",
+        "gfr",
+        "albuminuria"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-15",
+      "query": "Why does the KDIGO CKD classification evaluate both GFR categories and albuminuria stages together?",
+      "topic": "ckd",
+      "question_type": "staging",
+      "learning_objective": "Undergraduate renal: combined GFR and albuminuria risk assessment",
+      "medical_claim": "Combining GFR categories (G1-G5) with albuminuria categories (A1-A3) provides a more accurate assessment of risk for CKD progression, cardiovascular events, and mortality.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0089"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0089"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0089",
+          "evidence_text": "A uniform recommendation for patients with DKD and macroalbuminuria is difficult; glycemic control to HbA1c < 7.0% is suggested as a target value to suppress the onset and progression of microvascular complications. However, the goal of blood glucose levels in patient should be individualized according to their clinical background. [2C]",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for ckd"
+        }
+      ],
+      "primary_evidence_quote": "A uniform recommendation for patients with DKD and macroalbuminuria is difficult; glycemic control to HbA1c < 7.0% is suggested as a target value to suppress the onset and progression of microvascular complications. However, the goal of blood glucose levels in patient should be individualized according to their clinical background. [2C]",
+      "gold_verification_anchors": [
+        "kdigo",
+        "albuminuria",
+        "progression"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-16",
+      "query": "What pharmacological agents are preferred to control hypertension and reduce proteinuria in chronic kidney disease?",
+      "topic": "ckd",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: blood pressure management and proteinuria reduction in CKD",
+      "medical_claim": "ACE inhibitors or ARBs are first-line agents in proteinuric CKD to lower intraglomerular pressure, reduce proteinuria, and retard renal disease progression.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0234"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0234"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0234",
+          "evidence_text": "Hypertension is the most common complication in 50–80% of ADPKD patients. Antihypertensive therapy with ACE inhibitors or ARBs is expected to suppress proteinuria and prevent progression to end-stage kidney disease. Conducting strict antihypertensive therapy for a blood pressure of less than 110/75 mmHg in ADPKD patients aged < 50 years, having an ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for ckd"
+        }
+      ],
+      "primary_evidence_quote": "Hypertension is the most common complication in 50–80% of ADPKD patients. Antihypertensive therapy with ACE inhibitors or ARBs is expected to suppress proteinuria and prevent progression to end-stage kidney disease. Conducting strict antihypertensive therapy for a blood pressure of less than 110/75 mmHg in ADPKD patients aged < 50 years, having an eGFR > 60 mL/min/1.73 m 2 requires caution against side effects such as dizziness and lightheadedness. However, such treatment has been shown to improve albuminuria, left heart hypertrophy, and increase the growth rate of total kidney volume. In particular, it can be expected to have a suppressive effect on eGFR decrease in Mayo Classification Class ID–IE patients who are expected to have rapid progression to kidney failure. Based on the above, a",
+      "gold_verification_anchors": [
+        "hypertension",
+        "proteinuria",
+        "progression"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-17",
+      "query": "How is steroid-resistant nephrotic syndrome (SRNS) clinically defined in pediatric patients?",
+      "topic": "nephrotic_syndrome",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: definition of steroid-resistant nephrotic syndrome",
+      "medical_claim": "Steroid-resistant nephrotic syndrome is defined by failure to achieve complete remission despite 4 to 6 weeks of daily high-dose oral corticosteroid therapy.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0008",
+          "parent_section_id": "DOC-PMC-RENAL-0008-P0001",
+          "evidence_text": "Abstract Idiopathic nephrotic syndrome newly affects 1–3 per 100,000 children per year. Approximately 85% of cases show complete remission of proteinuria following glucocorticoid treatment. Patients who do not achieve complete remission within 4–6 weeks of glucocorticoid treatment have steroid-resistant nephrotic syndrome (SRNS). In 10–30% of stero",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for nephrotic_syndrome"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Idiopathic nephrotic syndrome newly affects 1–3 per 100,000 children per year. Approximately 85% of cases show complete remission of proteinuria following glucocorticoid treatment. Patients who do not achieve complete remission within 4–6 weeks of glucocorticoid treatment have steroid-resistant nephrotic syndrome (SRNS). In 10–30% of steroid-resistant patients, mutations in podocyte-associated genes can be detected, whereas an undefined circulating factor of immune origin is assumed in the remaining ones. Diagnosis and management of SRNS is a great challenge due to its heterogeneous etiology, frequent lack of remission by further immunosuppressive treatment, and severe complications including the development of end-stage kidney disease and recurrence after renal transplantation. A",
+      "gold_verification_anchors": [
+        "nephrotic syndrome",
+        "steroid-resistant",
+        "remission"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-18",
+      "query": "Why is early genetic testing recommended in children presenting with steroid-resistant nephrotic syndrome?",
+      "topic": "nephrotic_syndrome",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: genetic testing indication in pediatric SRNS",
+      "medical_claim": "Genetic testing identifies pathogenic mutations in podocyte genes (such as NPHS1, NPHS2, WT1), which predicts poor response to immunosuppression and guides transplantation risk.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0008",
+          "parent_section_id": "DOC-PMC-RENAL-0008-P0003",
+          "evidence_text": "In 10–30% of patients with non-familial SRNS, mutations in podocyte-associated genes can be detected, whereas an undefined circulating factor(s) is assumed in the remaining cases [ 8 – 10 ]. The principal histopathological entities encountered in SRNS are focal and segmental glomerulosclerosis (FSGS), minimal change disease (MCD), and diffuse mesan",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for nephrotic_syndrome"
+        }
+      ],
+      "primary_evidence_quote": "In 10–30% of patients with non-familial SRNS, mutations in podocyte-associated genes can be detected, whereas an undefined circulating factor(s) is assumed in the remaining cases [ 8 – 10 ]. The principal histopathological entities encountered in SRNS are focal and segmental glomerulosclerosis (FSGS), minimal change disease (MCD), and diffuse mesangial sclerosis. Treatment usually includes inhibitors of the renin-angiotensin-aldosterone system (RAASi) and calcineurin inhibitors (CNI) in patients with non-genetic forms of SRNS. With this approach, complete or partial remission can be achieved in 50–70% of cases [ 6 , 7 ].",
+      "gold_verification_anchors": [
+        "genetic",
+        "podocyte",
+        "mutations"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-19",
+      "query": "Which immunosuppressive drug class is standard first-line therapy for non-genetic steroid-resistant nephrotic syndrome?",
+      "topic": "nephrotic_syndrome",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: calcineurin inhibitor therapy in idiopathic SRNS",
+      "medical_claim": "Calcineurin inhibitors (cyclosporine or tacrolimus) are the standard first-line therapy to induce remission in non-genetic steroid-resistant nephrotic syndrome.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0008"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0008-P0082"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0082"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0008",
+          "parent_section_id": "DOC-PMC-RENAL-0008-P0082",
+          "evidence_text": "Table 2 ALP alkaline phosphatase, PTH parathyroid hormone, CNI calcineurin inhibitor, CsA cyclosporine A, BP blood pressure, MMF mycophenolate mofetil a Anthropometric data should be compared with updated national or international (WHO charts [ 20 ]) standards b eGFR (ml/min/1.73 m 2 ) = k height (cm)/plasma creatinine (mg/dl); where k is a constan",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for nephrotic_syndrome"
+        }
+      ],
+      "primary_evidence_quote": "Table 2 ALP alkaline phosphatase, PTH parathyroid hormone, CNI calcineurin inhibitor, CsA cyclosporine A, BP blood pressure, MMF mycophenolate mofetil a Anthropometric data should be compared with updated national or international (WHO charts [ 20 ]) standards b eGFR (ml/min/1.73 m 2 ) = k height (cm)/plasma creatinine (mg/dl); where k is a constant = 0.413. In malnourished or obese patients cystatin-based equations should be used [ 21 ] c According to Gellerman et al. [ 22 ]",
+      "gold_verification_anchors": [
+        "calcineurin",
+        "cyclosporine",
+        "tacrolimus"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-20",
+      "query": "How does severe hyperkalemia alter cardiac resting membrane potential and conduction velocity?",
+      "topic": "hyperkalaemia",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: cellular distribution and resting membrane potential in hyperkalemia",
+      "medical_claim": "Elevated extracellular potassium partially depolarizes the resting membrane potential, inactives sodium channels, and slows cardiac conduction velocity.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0009",
+          "parent_section_id": "DOC-PMC-RENAL-0009-P0001",
+          "evidence_text": "Abstract There have been significant recent advances in our understanding of the mechanisms that maintain potassium homoeostasis and the clinical consequences of hyperkalemia. In this article we discuss these advances within a concise review of the pathophysiology, risk factors and consequences of hyperkalemia. We highlight aspects that are of part",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for hyperkalaemia"
+        }
+      ],
+      "primary_evidence_quote": "Abstract There have been significant recent advances in our understanding of the mechanisms that maintain potassium homoeostasis and the clinical consequences of hyperkalemia. In this article we discuss these advances within a concise review of the pathophysiology, risk factors and consequences of hyperkalemia. We highlight aspects that are of particular relevance for clinical practice. Hyperkalemia occurs when renal potassium excretion is limited by reductions in glomerular filtration rate, tubular flow, distal sodium delivery or the expression of aldosterone-sensitive ion transporters in the distal nephron. Accordingly, the major risk factors for hyperkalemia are renal failure, diabetes mellitus, adrenal disease and the use of angiotensin-converting enzyme inhibitors, angiotensin recepto",
+      "gold_verification_anchors": [
+        "potassium",
+        "membrane potential",
+        "cardiac"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-21",
+      "query": "How does increased tubular flow rate stimulate potassium secretion in collecting duct principal cells?",
+      "topic": "hyperkalaemia",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: flow-induced potassium secretion via BK channels",
+      "medical_claim": "Bending of the primary cilium opens TRPV4 channels causing calcium influx, which activates apical BK channels to mediate flow-induced potassium secretion.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0009-P0020"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0020"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0009",
+          "parent_section_id": "DOC-PMC-RENAL-0009-P0020",
+          "evidence_text": "BK channels are expressed in principal and intercalated cells. These are activated by high tubular flow rates and thus mediate flow-induced potassium secretion. The ‘flow sensor’ has recently been determined: bending of the primary cilium on the principle cell opens transient receptor potential vanilloid type 4 channels, causing an influx of calciu",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for hyperkalaemia"
+        }
+      ],
+      "primary_evidence_quote": "BK channels are expressed in principal and intercalated cells. These are activated by high tubular flow rates and thus mediate flow-induced potassium secretion. The ‘flow sensor’ has recently been determined: bending of the primary cilium on the principle cell opens transient receptor potential vanilloid type 4 channels, causing an influx of calcium that in turn activates BK channels [ 28 ]. BK channels are also upregulated in response to potassium loading. The mechanism here is fascinating. BK channels are formed from two subunits, both of which are required for channel activity. Aldosterone upregulates the expression of the α-subunit and bicarbonate upregulates expression of the β-subunit. Therefore it has been argued that regulation of BK channel activity is critical in the response to ",
+      "gold_verification_anchors": [
+        "bk channels",
+        "potassium",
+        "calcium"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-22",
+      "query": "Which common pharmacological agents impair renal potassium excretion and precipitate hyperkalemia?",
+      "topic": "hyperkalaemia_management",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: dietary potassium restriction and drug causes of hyperkalemia",
+      "medical_claim": "Medications impairing potassium excretion include ACE inhibitors, ARBs, mineralocorticoid receptor antagonists, NSAIDs, and potassium-sparing diuretics.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0026"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0026"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0010",
+          "parent_section_id": "DOC-PMC-RENAL-0010-P0026",
+          "evidence_text": "Table 1 Co-determinants of hyperkalemia in CKD — Column 1: Reduced urinary K excretion",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for hyperkalaemia_management"
+        }
+      ],
+      "primary_evidence_quote": "Table 1 Co-determinants of hyperkalemia in CKD — Column 1: Reduced urinary K excretion",
+      "gold_verification_anchors": [
+        "hyperkalemia",
+        "medications",
+        "excretion"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-23",
+      "query": "How do novel oral potassium binders facilitate continuation of guideline-directed RAAS inhibitors?",
+      "topic": "hyperkalaemia_management",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: gastrointestinal potassium binders patiromer and SZC",
+      "medical_claim": "Novel binders (patiromer and sodium zirconium cyclosilicate) bind potassium in the intestine to increase fecal elimination, managing serum potassium while maintaining RAASi therapy.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0076"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0076"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0010",
+          "parent_section_id": "DOC-PMC-RENAL-0010-P0076",
+          "evidence_text": "Recently, new available agents, such as patiromer and sodium-zirconium cyclosilicate have shown to be effective in controlling HK in DKD patients, with good dose–response and safety profiles [ 55 , 56 ]. Moreover, in HF patients with reduced renal function and DM, patiromer was effective in steadily maintaining normal sK values, avoiding RAASIs dow",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for hyperkalaemia_management"
+        }
+      ],
+      "primary_evidence_quote": "Recently, new available agents, such as patiromer and sodium-zirconium cyclosilicate have shown to be effective in controlling HK in DKD patients, with good dose–response and safety profiles [ 55 , 56 ]. Moreover, in HF patients with reduced renal function and DM, patiromer was effective in steadily maintaining normal sK values, avoiding RAASIs downtitrating and thus allowing full dose administration of spironolactone, aimed at achieving full cardioprotection [ 57 ]. Last, new non-steroidal MRAs were shown to be effective in lowering albuminuria in DKD, with a lower incidence of HK, and can be considered a promising therapeutical tool for systematic use in DKD at risk of chronic HK [ 58 ].",
+      "gold_verification_anchors": [
+        "patiromer",
+        "zirconium",
+        "binders"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-24",
+      "query": "How do kaliuretic diuretics promote urinary potassium clearance in hyperkalemic patients with preserved GFR?",
+      "topic": "hyperkalaemia_management",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: loop and thiazide diuretics in potassium excretion",
+      "medical_claim": "Loop and thiazide diuretics enhance distal nephron delivery of sodium and water, stimulating apical ROMK potassium secretion in principal cells.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0010"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0010-P0038"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0038"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0010",
+          "parent_section_id": "DOC-PMC-RENAL-0010-P0038",
+          "evidence_text": "WHO recommends a daily potassium intake of at least 90 mmol or 3.5 g because a lower intake is associated with an increased risk of hypertension and cardiovascular events [ 20 , 21 ]. These recommendations aimed for the general population may not hold true in CKD patients, due to the intrinsically higher risk of HK. Some studies, including patients",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for hyperkalaemia_management"
+        }
+      ],
+      "primary_evidence_quote": "WHO recommends a daily potassium intake of at least 90 mmol or 3.5 g because a lower intake is associated with an increased risk of hypertension and cardiovascular events [ 20 , 21 ]. These recommendations aimed for the general population may not hold true in CKD patients, due to the intrinsically higher risk of HK. Some studies, including patients with normal or only moderately reduced GFR, have shown a cardio-nephroprotective effect of higher levels of 24-h urine K excretion, that is proxy of daily K intake [ 22 , 23 ]. Furthermore, fruit and vegetables, that contain higher amounts of K, also represent the major source of fiber that help in limiting the risk of constipation [ 22 ]. This aspect is particularly important in CKD, where fecal loss of K increases with a decline in GFR, as a m",
+      "gold_verification_anchors": [
+        "diuretics",
+        "potassium",
+        "excretion"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-25",
+      "query": "What frequency of culture-confirmed episodes defines recurrent urinary tract infection (rUTI)?",
+      "topic": "uti",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: clinical definition of recurrent urinary tract infection",
+      "medical_claim": "Recurrent UTI is defined by at least two symptomatic, culture-proven episodes within six months or three or more episodes within twelve months.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0011",
+          "parent_section_id": "DOC-PMC-RENAL-0011-P0001",
+          "evidence_text": "Abstract Urinary tract infections (UTIs) are among the most common infectious diseases worldwide but are significantly understudied. Uropathogenic E. coli (UPEC) accounts for a significant proportion of UTI, but a large number of other species can infect the urinary tract, each of which will have unique host-pathogen interactions with the bladder e",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for uti"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Urinary tract infections (UTIs) are among the most common infectious diseases worldwide but are significantly understudied. Uropathogenic E. coli (UPEC) accounts for a significant proportion of UTI, but a large number of other species can infect the urinary tract, each of which will have unique host-pathogen interactions with the bladder environment. Given the substantial economic burden of UTI and its increasing antibiotic resistance, there is an urgent need to better understand UTI pathophysiology – especially its tendency to relapse and recur. Most models developed to date use murine infection; few human-relevant models exist. Of these, the majority of in vitro UTI models have utilized cells in static culture, but UTI needs to be studied in the context of the unique aspects of ",
+      "gold_verification_anchors": [
+        "urinary tract infection",
+        "recurrent",
+        "episodes"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-26",
+      "query": "What virulence factor allows uropathogenic Escherichia coli (UPEC) to adhere to and invade bladder umbrella cells?",
+      "topic": "uti",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: uropathogenic E. coli colonization and urothelial invasion",
+      "medical_claim": "UPEC utilize FimH adhesins on type 1 pili to bind mannosylated uroplakin receptors, facilitating invasion into bladder epithelial umbrella cells.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0011"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0011"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0011",
+          "parent_section_id": "DOC-PMC-RENAL-0011-P0011",
+          "evidence_text": "Many strain-specific bacterial virulence factors may contribute to the recurrence of UTI, such as flagella/pili, adhesins, extracellular polysaccharides, lipopolysaccharides, toxins, ureases, proteases and iron-scavenging siderophores. These factors allow uropathogens to survive during long periods in a nutrient-limited habitat, helping them to adh",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for uti"
+        }
+      ],
+      "primary_evidence_quote": "Many strain-specific bacterial virulence factors may contribute to the recurrence of UTI, such as flagella/pili, adhesins, extracellular polysaccharides, lipopolysaccharides, toxins, ureases, proteases and iron-scavenging siderophores. These factors allow uropathogens to survive during long periods in a nutrient-limited habitat, helping them to adhere, colonize, damage and invade host cells, as well as to evade host defenses, ultimately increasing their persistence in the urinary tract. For instance, a common uropathogenic strategy is the formation of biofilms, either directly on the urothelial surface or on indwelling devices such as catheters ( Jansen et al., 2004 ; Jacobsen and Shirtliff, 2011 ). This behavior has been reported in Klebsiella pneumoniae ( Reid et al., 1992 ; Stahlhut et ",
+      "gold_verification_anchors": [
+        "upec",
+        "adhesin",
+        "urothelial"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-27",
+      "query": "What anatomical reservoir is implicated in recurrent urinary tract infections according to long-standing pathogenesis theories?",
+      "topic": "uti",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: gastrointestinal reservoir for uropathogens",
+      "medical_claim": "The gastrointestinal tract functions as a persistent reservoir for uropathogens that repeatedly colonize the periurethral area and bladder.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0011-P0007"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0007"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0011",
+          "parent_section_id": "DOC-PMC-RENAL-0011-P0007",
+          "evidence_text": "One of the most long-standing theories for recurrence of UTI is that the gastrointestinal tract functions as a reservoir for uropathogens, which are repeatedly reintroduced into the urinary tract via contamination of the periurethral surface and subsequent retrograde ascension. Indeed, common uropathogens are abundant as gut commensals, and there a",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for uti"
+        }
+      ],
+      "primary_evidence_quote": "One of the most long-standing theories for recurrence of UTI is that the gastrointestinal tract functions as a reservoir for uropathogens, which are repeatedly reintroduced into the urinary tract via contamination of the periurethral surface and subsequent retrograde ascension. Indeed, common uropathogens are abundant as gut commensals, and there are many papers supporting this mechanism (reviewed recently in ( Jones-Freeman et al., 2021 ). In agreement, recent studies with patients experiencing rUTI revealed that re-infection was usually preceded by a bloom of uropathogens in the intestine ( Thänert et al., 2019 ), and that gut abundance of Escherichia and Enterococcus served as an independent risk factor for late problematic urine colonization in kidney transplant recipients, with genomi",
+      "gold_verification_anchors": [
+        "gastrointestinal",
+        "reservoir",
+        "uropathogens"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-28",
+      "query": "What environmental and metabolic factors contribute to the rising prevalence of urolithiasis?",
+      "topic": "stones",
+      "question_type": "epidemiology",
+      "learning_objective": "Undergraduate renal: global epidemiology and risk factors of urolithiasis",
+      "medical_claim": "Urolithiasis prevalence is driven by dietary sodium and animal protein intake, obesity, low fluid intake, warm climates, and metabolic syndrome.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0002",
+          "evidence_text": "Urolithiasis is a significantly common disease globally, despite the notable difference in the rate of occurrence based on various factors like gender, climate, diet, and other risk factors. There has been a yearly increase in the prevalence of stone occurrence in people above the age of 30 for all genders [ 1 ]. This rise in incidence, along with ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for stones"
+        }
+      ],
+      "primary_evidence_quote": "Urolithiasis is a significantly common disease globally, despite the notable difference in the rate of occurrence based on various factors like gender, climate, diet, and other risk factors. There has been a yearly increase in the prevalence of stone occurrence in people above the age of 30 for all genders [ 1 ]. This rise in incidence, along with advances in modern technology, places a significant financial burden on healthcare facilities for the treatment of kidney stone disease (KSD), accounting for an estimated USD 5.3 billion spent on the disease globally in 2014, making it the second most costly urological ailment [ 2 ].",
+      "gold_verification_anchors": [
+        "urolithiasis",
+        "prevalence",
+        "dietary"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-29",
+      "query": "Why is non-contrast computed tomography (NCCT) the gold-standard imaging modality for acute flank pain?",
+      "topic": "stones",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: non-contrast computed tomography in suspected renal colic",
+      "medical_claim": "Non-contrast CT KUB provides nearly 100% sensitivity and specificity, accurately identifying stone size, location, skin-to-stone distance, and Hounsfield unit density.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0008"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0008"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0008",
+          "evidence_text": "The EAU recommends ultrasound (US) as the initial investigation in asymptomatic patients as it is safe, less costly, and can identify hydronephrosis and calculi in the renal calyces, pelvis, and pelvic-ureteric and vesico-ureteric junctions. Non-contrast-enhanced computed tomography (NCCT) is the investigation of choice in symptomatic patients as i",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for stones"
+        }
+      ],
+      "primary_evidence_quote": "The EAU recommends ultrasound (US) as the initial investigation in asymptomatic patients as it is safe, less costly, and can identify hydronephrosis and calculi in the renal calyces, pelvis, and pelvic-ureteric and vesico-ureteric junctions. Non-contrast-enhanced computed tomography (NCCT) is the investigation of choice in symptomatic patients as it can classify the stone density, diameter, volume, distance from the skin, and the adjacent anatomy, all of which can help in selecting from the treatment options available (EAU: strong recommendation). It is appreciably more precise than US or an intravenous urogram (IVU) [ 9 ]. If the assessment of the anatomy of the collecting system is required before stone removal, contrast-enhanced imaging should be performed (EAU: strong recommendation). ",
+      "gold_verification_anchors": [
+        "computed tomography",
+        "stone",
+        "sensitivity"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-30",
+      "query": "What pharmacological class facilitates spontaneous passage of distal ureteral stones measuring 5 to 10 mm?",
+      "topic": "stones",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal: medical expulsive therapy for distal ureteral calculi",
+      "medical_claim": "Alpha-1 adrenergic blockers (such as tamsulosin) relax ureteral smooth muscle, reducing pain and accelerating spontaneous passage of distal stones.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0012"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0012"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0012",
+          "evidence_text": "Several drugs are available to be used as medical expulsive therapy (MET) for urolithiasis [ 3 , 4 , 5 ]. These include α-blockers, calcium channel inhibitors, and phosphodiesterase type 5 (PDE5) inhibitors, and, although an off-label indication, a class effect of α-blockers has been demonstrated as MET through various meta-analyses [ 5 ]. α-blocke",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for stones"
+        }
+      ],
+      "primary_evidence_quote": "Several drugs are available to be used as medical expulsive therapy (MET) for urolithiasis [ 3 , 4 , 5 ]. These include α-blockers, calcium channel inhibitors, and phosphodiesterase type 5 (PDE5) inhibitors, and, although an off-label indication, a class effect of α-blockers has been demonstrated as MET through various meta-analyses [ 5 ]. α-blockers should be considered for distal ureteral stones >5 mm (EAU: strong recommendation), and distal ureteral stones ≤10 mm should be offered α-blockers (AUA: strong recommendation).",
+      "gold_verification_anchors": [
+        "expulsive therapy",
+        "tamsulosin",
+        "ureteral"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-31",
+      "query": "What clinical relationship exists between kidney stone disease (KSD) and recurrent urinary tract infections (rUTI)?",
+      "topic": "stones",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: relationship between nephrolithiasis and recurrent urinary tract infections",
+      "medical_claim": "Kidney stone disease and recurrent urinary tract infections are frequently concomitant clinical conditions that mutually exacerbate each other.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0013-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0013",
+          "parent_section_id": "DOC-PMC-RENAL-0013-P0001",
+          "evidence_text": "Abstract Purpose of Review Kidney stone disease (KSD) and recurrent urinary tract infections (rUTI) are frequently concomitant conditions. We conducted a systematic review to determine the association of UTI in patients with KSD and to assess the outcomes of kidney stone treatment in the resolution of rUTI. Recent Findings Our systematic review inc",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for stones"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Purpose of Review Kidney stone disease (KSD) and recurrent urinary tract infections (rUTI) are frequently concomitant conditions. We conducted a systematic review to determine the association of UTI in patients with KSD and to assess the outcomes of kidney stone treatment in the resolution of rUTI. Recent Findings Our systematic review included 17 papers and a strong association between KSD and rUTI was demonstrated by numerous studies. Surgical clearance of kidney stones usually resulted in the resolution of UTI, but discordant data persist regarding recurrence rates after surgery. In vitro studies might unveil the causative role of bacteria in the formation of “metabolic” stones. Summary Our SR clearly shows that UTI and KSD are mutually coexisting, and reciprocally causal and s",
+      "gold_verification_anchors": [
+        "kidney stone",
+        "recurrent",
+        "urinary tract infections"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-32",
+      "query": "Which bacterial species produce urease to generate alkaline urine and magnesium ammonium phosphate calculi?",
+      "topic": "stones",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: urease-producing organisms and struvite infection stones",
+      "medical_claim": "Urease-producing bacteria (most commonly Proteus mirabilis, Klebsiella, and Pseudomonas) hydrolyze urea into ammonia and CO2, driving struvite stone precipitation.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0013-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0013",
+          "parent_section_id": "DOC-PMC-RENAL-0013-P0002",
+          "evidence_text": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for stones"
+        }
+      ],
+      "primary_evidence_quote": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established etiopathogenetic role in the formation of infection stones (magnesium ammonium phosphate or “struvite” stones, frequently combined with calcium phosphate or calcium carbonate apatite) [ 2 ], through the urea-splitting mechanism of urease-producing gram-positive and gram-negative bacterial species such as Proteus [ 3 ], Staphylococcus , Pseudomonas , Providencia , Ureaplasma [ 4 ], and Klebsiella [ 5 ]. However, they comprise 10–15% of urinary sto",
+      "gold_verification_anchors": [
+        "urease",
+        "proteus",
+        "struvite"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": true
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-33",
+      "query": "What anatomical features on renal ultrasonography distinguish mild from severe obstructive hydronephrosis?",
+      "topic": "obstruction",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: ultrasound evaluation and grading of hydronephrosis",
+      "medical_claim": "Ultrasound grading evaluates pelvic dilation, caliceal blunting, and parenchymal thinning, with severe obstruction characterized by diffuse medullary and cortical thinning.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0014",
+          "parent_section_id": "DOC-PMC-RENAL-0014-P0001",
+          "evidence_text": "Abstract The crucial point for prompt diagnostics, ideal therapeutic approach, and follow-up of hydronephrosis associated with UPJ anomalies in children is the severity of hydronephrosis. Such many hydronephrosis grading systems as AP diameter, SFU, radiology, UTD, and Onen have been developed to evaluate hydronephrosis severity in infants. Unfortu",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for obstruction"
+        }
+      ],
+      "primary_evidence_quote": "Abstract The crucial point for prompt diagnostics, ideal therapeutic approach, and follow-up of hydronephrosis associated with UPJ anomalies in children is the severity of hydronephrosis. Such many hydronephrosis grading systems as AP diameter, SFU, radiology, UTD, and Onen have been developed to evaluate hydronephrosis severity in infants. Unfortunately, it is still an ongoing challenge and there is no consensus between different disciplines. AP diameter is a very dynamic parameter and is affected by many factors (hydration, bladder filling, position, respiration). More importantly, its measurement is very variable and misleading due to different renal pelvic configurations. The radiology grading system has the same grades 1, 2, and 3 as the SFU grading system with addition of the AP diam",
+      "gold_verification_anchors": [
+        "hydronephrosis",
+        "ultrasound",
+        "parenchymal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-34",
+      "query": "What key prognostic parameter does the Onen hydronephrosis grading system emphasize to detect significant renal injury?",
+      "topic": "obstruction",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: Onen grading system for ureteropelvic junction obstruction",
+      "medical_claim": "The Onen system emphasizes longitudinal and transverse renal parenchymal thickness and caliceal splitting to identify true obstructive risk requiring surgical repair.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0014",
+          "parent_section_id": "DOC-PMC-RENAL-0014-P0001",
+          "evidence_text": "this basic evidence both for prenatal and post-natal periods. The Onen grading system determines specific detailed findings of significant renal damage, which clearly show and suggest who can safely be followed conservatively from who will need surgical intervention for UPJHN. Neither AP diameter nor radiology, SFU, or UTD classification is the gol",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for obstruction"
+        }
+      ],
+      "primary_evidence_quote": "this basic evidence both for prenatal and post-natal periods. The Onen grading system determines specific detailed findings of significant renal damage, which clearly show and suggest who can safely be followed conservatively from who will need surgical intervention for UPJHN. Neither AP diameter nor radiology, SFU, or UTD classification is the gold standard in determining the severity of hydronephrosis. All these grading systems are based on subjective parameters and are affected by many factors. They do not determine the exact severity of UPJHN and thus cause permanent renal damage due to a delay in surgical decision in some infants while they may cause an unnecessary surgery in others. The Onen grading system has resolved all disadvantages of other grading systems and promises a safer f",
+      "gold_verification_anchors": [
+        "onen",
+        "parenchymal",
+        "obstruction"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-35",
+      "query": "What is rhabdomyolysis and what classic triad of clinical symptoms suggests skeletal muscle breakdown?",
+      "topic": "rhabdomyolysis",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: definition and classic triad of rhabdomyolysis",
+      "medical_claim": "Rhabdomyolysis is skeletal muscle necrosis with intracellular content release, classically presenting with myalgia, muscle weakness, and dark tea-colored urine.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0001",
+          "evidence_text": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophys",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophysiology of rhabdomyolysis and following AKI could widen treatment options, leading to preservation of the kidney: the decision to initiate renal replacement therapy in clinical practice should not be made on the basis of the myoglobin or creatine phosphokinase serum concentrations.",
+      "gold_verification_anchors": [
+        "rhabdomyolysis",
+        "muscle",
+        "myoglobinuria"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-36",
+      "query": "What three pathophysiological mechanisms cause acute kidney injury during severe rhabdomyolysis?",
+      "topic": "rhabdomyolysis",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal: mechanisms of myoglobin-induced acute tubular necrosis",
+      "medical_claim": "Myoglobin causes AKI through renal vasoconstriction, direct oxidative proximal tubular injury via ferrihemate generation, and intratubular cast obstruction with Tamm-Horsfall protein.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0016"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0016"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0016",
+          "evidence_text": "The pathophysiology of RM-induced AKI is believed to be triggered by myoglobin as the toxin causing renal dysfunction [ 14 ]. This claim is given substance from studies in animal models of glycerol-induced AKI. Intramuscular injection of glycerol in the rabbit induces a model of AKI at a dose of 10 mg/kg that resembles the AKI caused by massive rel",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "The pathophysiology of RM-induced AKI is believed to be triggered by myoglobin as the toxin causing renal dysfunction [ 14 ]. This claim is given substance from studies in animal models of glycerol-induced AKI. Intramuscular injection of glycerol in the rabbit induces a model of AKI at a dose of 10 mg/kg that resembles the AKI caused by massive release of myoglobin in crush syndrome in humans [ 15 ]. Glycerol-induced AKI is characterized by myoglobinuria, tubular necrosis and renal vasoconstriction [ 16 ]. The most important role in glycerol-induced nephrotoxicity has been attributed to reactive oxygen metabolites (reactive oxygen species), in particular the hydroxyl radical (OH . ), the same cause as for myoglobin-induced AKI [ 17 ].",
+      "gold_verification_anchors": [
+        "myoglobin",
+        "vasoconstriction",
+        "tubular"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-37",
+      "query": "Why does serum creatinine frequently overestimate GFR in critically ill ICU patients?",
+      "topic": "gfr",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: limitations of serum creatinine in critically ill patients",
+      "medical_claim": "Creatinine overestimates GFR due to reduced muscle mass, decreased hepatic synthesis, fluid overload dilution, and time lag before reaching steady-state concentration.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0001",
+          "evidence_text": "Introduction Estimation of kidney function in critically ill patients with acute kidney injury (AKI), is important for appropriate dosing of drugs and adjustment of therapeutic strategies, but challenging due to fluctuations in kidney function, creatinine metabolism and fluid balance. Data on the agreement between estimating and gold standard metho",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for gfr"
+        }
+      ],
+      "primary_evidence_quote": "Introduction Estimation of kidney function in critically ill patients with acute kidney injury (AKI), is important for appropriate dosing of drugs and adjustment of therapeutic strategies, but challenging due to fluctuations in kidney function, creatinine metabolism and fluid balance. Data on the agreement between estimating and gold standard methods to assess glomerular filtration rate (GFR) in early AKI are lacking. We evaluated the agreement of urinary creatinine clearance (CrCl) and three commonly used estimating equations, the Cockcroft Gault (CG), the Modification of Diet in Renal Disease (MDRD) and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI) equations, in comparison to GFR measured by the infusion clearance of chromium-ethylenediaminetetraacetic acid ( 51 Cr-EDTA",
+      "gold_verification_anchors": [
+        "creatinine",
+        "critically ill",
+        "overestimate"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-38",
+      "query": "Why are measured 2-to-8 hour creatinine clearances preferred over standard CKD-EPI equations in unstable ICU patients?",
+      "topic": "gfr",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: measured creatinine clearance versus steady-state equations in ICU",
+      "medical_claim": "Standard equations assume stable creatinine production; timed urinary creatinine clearances provide real-time assessment during rapidly fluctuating acute kidney injury.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0005",
+          "evidence_text": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patient",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for gfr"
+        }
+      ],
+      "primary_evidence_quote": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patients, where changes in the hemodynamic status can result in dramatic changes in renal function over a 24-hour urine collection period. Furthermore, accurate timed collection of urine is cumbersome, and the main source of error [ 12 ]. Finally, urinary CrCl may considerably overestimate GFR because of tubular secretion of creatinine [ 1 , 5 ].",
+      "gold_verification_anchors": [
+        "creatinine clearance",
+        "unstable",
+        "timed"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-39",
+      "query": "What three distinct anatomical layers comprise the human glomerular filtration barrier?",
+      "topic": "filtration_barrier",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: structural layers of the glomerular filtration barrier",
+      "medical_claim": "The glomerular filtration barrier comprises fenestrated endothelial cells, the glomerular basement membrane (GBM), and podocyte foot processes with slit diaphragms.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0018",
+          "parent_section_id": "DOC-PMC-RENAL-0018-P0001",
+          "evidence_text": "Abstract The glomerular filtration barrier is a highly specialized blood filtration interface that displays a high conductance to small and midsized solutes in plasma but retains relative impermeability to macromolecules. Its integrity is maintained by physicochemical and signalling interplay among its three core constituents—the glomerular endothe",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for filtration_barrier"
+        }
+      ],
+      "primary_evidence_quote": "Abstract The glomerular filtration barrier is a highly specialized blood filtration interface that displays a high conductance to small and midsized solutes in plasma but retains relative impermeability to macromolecules. Its integrity is maintained by physicochemical and signalling interplay among its three core constituents—the glomerular endothelial cell, the basement membrane and visceral epithelial cell (podocyte). Understanding the pathomechanisms of inherited and acquired human diseases as well as experimental injury models of this barrier have helped to unravel this interdependence. Key among the consequences of interference with the integrity of the glomerular filtration barrier is the appearance of significant amounts of proteins in the urine. Proteinuria correlates with kidney d",
+      "gold_verification_anchors": [
+        "glomerular",
+        "endothelial",
+        "basement membrane"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-40",
+      "query": "What threshold defines abnormal daily urinary protein excretion in healthy adult humans?",
+      "topic": "filtration_barrier",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: normal daily urinary protein excretion threshold",
+      "medical_claim": "Normal urinary protein excretion is less than 150 mg/day in adults; persistent protein excretion exceeding this value merits clinical investigation.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0018"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0018-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0018",
+          "parent_section_id": "DOC-PMC-RENAL-0018-P0002",
+          "evidence_text": "Urinary protein excretion in the normal adult humans is less than 150 mg/day. Persistent protein excretion greater than this merits further evaluation. Proteinuria is strongly associated with progression of kidney disease [ 1 ]. Furthermore, proteinuria has proven to be an independent risk factor for all-cause and cardiovascular mortality [ 2 ]. Pr",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for filtration_barrier"
+        }
+      ],
+      "primary_evidence_quote": "Urinary protein excretion in the normal adult humans is less than 150 mg/day. Persistent protein excretion greater than this merits further evaluation. Proteinuria is strongly associated with progression of kidney disease [ 1 ]. Furthermore, proteinuria has proven to be an independent risk factor for all-cause and cardiovascular mortality [ 2 ]. Proteinuria can be glomerular resulting from an impairment of the glomerular filtration apparatus, tubular from diminished tubular resorption of low-molecular-weight proteins, and overflow—where the resorptive capacity is overwhelmed by large loads of filtered proteins [ 3 , 4 ]. Although some studies have suggested that the filtration barrier is more permeable to albumin than previously reported [ 5 , 6 ] thus attributing a more significant role f",
+      "gold_verification_anchors": [
+        "protein excretion",
+        "150 mg",
+        "adults"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-41",
+      "query": "What two principal mechanisms enable the kidney to participate in systemic glucose homeostasis?",
+      "topic": "glucose_handling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: kidney role in systemic glucose homeostasis",
+      "medical_claim": "The kidney maintains glucose homeostasis via gluconeogenesis in the renal cortex and tubular reabsorption of filtered glucose in the proximal tubule.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0001",
+          "evidence_text": "Abstract The kidney plays an important role in glucose homeostasis by releasing glucose into the blood stream to prevent hypoglycemia. It is also responsible for the filtration and subsequent reabsorption or excretion of glucose. As glucose is hydrophilic and soluble in water, it is unable to pass through the lipid bilayer on its own; therefore, tr",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "Abstract The kidney plays an important role in glucose homeostasis by releasing glucose into the blood stream to prevent hypoglycemia. It is also responsible for the filtration and subsequent reabsorption or excretion of glucose. As glucose is hydrophilic and soluble in water, it is unable to pass through the lipid bilayer on its own; therefore, transport takes place using carrier proteins localized to the plasma membrane. Both sodium-independent glucose transporters (GLUT proteins) and sodium-dependent glucose transporters (SGLT proteins) are expressed in kidney tissue, and mutations of the genes coding for these glucose transporters lead to renal disorders and diseases, including renal cancers. In addition, several diseases may disturb the expression and/or function of renal glucose tran",
+      "gold_verification_anchors": [
+        "glucose",
+        "homeostasis",
+        "gluconeogenesis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-42",
+      "query": "Where are SGLT2 and SGLT1 localized along the nephron and what fraction of filtered glucose does each reabsorb?",
+      "topic": "glucose_handling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: anatomical localization of SGLT2 versus SGLT1 along proximal tubule",
+      "medical_claim": "SGLT2 in the early proximal tubule (S1/S2 segments) reabsorbs approximately 90% of filtered glucose, while SGLT1 in the late segment (S3) reabsorbs the remaining 10%.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0050"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0050"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0050",
+          "evidence_text": "SGLT2 is highly expressed in the kidney cortex and has been identified as a kidney-specific transporter. It is localized on the apical domain of the epithelial cells of the proximal tubule (S1/S2 segments) [ 3 , 21 ]. SGLT2 is responsible for 90% of glucose filtered at the glomeruli [ 40 ], i.e., about 160 g/24 h [ 44 , 45 ]. Together with SGLT1, i",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "SGLT2 is highly expressed in the kidney cortex and has been identified as a kidney-specific transporter. It is localized on the apical domain of the epithelial cells of the proximal tubule (S1/S2 segments) [ 3 , 21 ]. SGLT2 is responsible for 90% of glucose filtered at the glomeruli [ 40 ], i.e., about 160 g/24 h [ 44 , 45 ]. Together with SGLT1, it controls the initial step of renal glucose reabsorption. The stoichiometry of SGLT2 is 1 Na + : 1 sugar [ 46 ].",
+      "gold_verification_anchors": [
+        "sglt2",
+        "sglt1",
+        "proximal tubule"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-43",
+      "query": "How does the serine-threonine kinase Akt regulate transport proteins in renal tubular epithelial cells?",
+      "topic": "tubular_signaling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: role of Akt serine-threonine kinase in tubular transport",
+      "medical_claim": "Akt phosphorylates downstream regulatory proteins in proximal and distal tubules to modulate sodium, potassium, and proton transport and promote epithelial survival.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0020",
+          "parent_section_id": "DOC-PMC-RENAL-0020-P0001",
+          "evidence_text": "Abstract A serine/threonine kinase Akt is a key mediator in various signaling pathways including regulation of renal tubular transport. In proximal tubules, Akt mediates insulin signaling via insulin receptor substrate 2 (IRS2) and stimulates sodium-bicarbonate cotransporter (NBCe1), resulting in increased sodium reabsorption. In insulin resistance",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for tubular_signaling"
+        }
+      ],
+      "primary_evidence_quote": "Abstract A serine/threonine kinase Akt is a key mediator in various signaling pathways including regulation of renal tubular transport. In proximal tubules, Akt mediates insulin signaling via insulin receptor substrate 2 (IRS2) and stimulates sodium-bicarbonate cotransporter (NBCe1), resulting in increased sodium reabsorption. In insulin resistance, the IRS2 in kidney cortex is exceptionally preserved and may mediate the stimulatory effect of insulin on NBCe1 to cause hypertension in diabetes via sodium retention. Likewise, in distal convoluted tubules and cortical collecting ducts, insulin-induced Akt phosphorylation mediates several hormonal signals to enhance sodium-chloride cotransporter (NCC) and epithelial sodium channel (ENaC) activities, resulting in increased sodium reabsorption. ",
+      "gold_verification_anchors": [
+        "akt",
+        "tubular transport",
+        "kinase"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-44",
+      "query": "How does SGK1 activation mediate aldosterone-induced sodium reabsorption in principal cells?",
+      "topic": "tubular_signaling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: serum and glucocorticoid-regulated kinase 1 in aldosterone signaling",
+      "medical_claim": "SGK1 phosphorylates the ubiquitin ligase Nedd4-2, preventing ubiquitin-mediated internalization and degradation of apical ENaC channels.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0020"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0020-P0004"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0004"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0020",
+          "parent_section_id": "DOC-PMC-RENAL-0020-P0004",
+          "evidence_text": "SGK1 was initially discovered as a serum- and glucocorticoid-inducible serine/threonine kinase in rat mammary tumor cells [ 4 , 5 ]. It is ubiquitously expressed in most tissues under the control of hormones such as glucocorticoids and mineral corticoids and regulated at the transcriptional level by osmotic changes [ 6 ]. Similar to Akt, SGK1 is al",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for tubular_signaling"
+        }
+      ],
+      "primary_evidence_quote": "SGK1 was initially discovered as a serum- and glucocorticoid-inducible serine/threonine kinase in rat mammary tumor cells [ 4 , 5 ]. It is ubiquitously expressed in most tissues under the control of hormones such as glucocorticoids and mineral corticoids and regulated at the transcriptional level by osmotic changes [ 6 ]. Similar to Akt, SGK1 is also known to be a powerful regulator of metabolism, transcription, enzyme activity, and renal transport [ 7 ]. Furthermore, insulin also has stimulatory effects on SGK1 and activated SGK1 acts upon renal tubular transport independently or sometimes cooperatively with Akt [ 8 ]. In particular, SGK1 has a key role in NaCl homeostasis through regulating the epithelial sodium channel (ENaC) [ 9 ] in cortical collecting ducts (CCDs). Other than that, i",
+      "gold_verification_anchors": [
+        "sgk1",
+        "aldosterone",
+        "enac"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-45",
+      "query": "Which specialized cell type in the collecting duct senses and corrects systemic pH disturbances?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: role of intercalated cells in systemic acid-base correction",
+      "medical_claim": "Intercalated cells in the connecting tubule and collecting duct mediate active acid-base transport to restore systemic blood pH.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0021",
+          "parent_section_id": "DOC-PMC-RENAL-0021-P0001",
+          "evidence_text": "Abstract The kidney plays a key role in the correction of systemic acid-base imbalances. Central for this regulation are the intercalated cells in the distal nephron, which secrete acid or base into the urine. How these cells sense acid-base disturbances is a long-standing question. Intercalated cells exclusively express the Na + -dependent Cl ﻿− /",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "Abstract The kidney plays a key role in the correction of systemic acid-base imbalances. Central for this regulation are the intercalated cells in the distal nephron, which secrete acid or base into the urine. How these cells sense acid-base disturbances is a long-standing question. Intercalated cells exclusively express the Na + -dependent Cl ﻿− /HCO 3 ﻿− exchanger AE4 ( Slc4a9 ). Here we show that AE4-deficient mice exhibit a major dysregulation of acid-base balance. By combining molecular, imaging, biochemical and integrative approaches, we demonstrate that AE4-deficient mice are unable to sense and appropriately correct metabolic alkalosis and acidosis. Mechanistically, a lack of adaptive base secretion via the Cl ﻿− /HCO 3 ﻿− exchanger pendrin ( Slc26a4 ) is the key cellular cause of ",
+      "gold_verification_anchors": [
+        "intercalated cells",
+        "acid-base",
+        "collecting duct"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-46",
+      "query": "Which organs collaborate with the kidneys to maintain arterial blood pH within the narrow physiological range?",
+      "topic": "acid_base",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: collaborative organ systems in maintaining arterial blood pH",
+      "medical_claim": "Arterial blood pH (7.35-7.45) is maintained through rapid chemical buffer systems, pulmonary excretion of CO2, and sustained renal regulation of bicarbonate and proton excretion.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0021"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0021-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0021",
+          "parent_section_id": "DOC-PMC-RENAL-0021-P0003",
+          "evidence_text": "Maintenance of blood pH in its narrow physiological range is essential for cellular and organismal health. This is achieved by a collaborative effort of the kidney and respiratory system. Here, kidney tubular epithelial cells balance systemic acid-base status by regulating the recovery, de novo synthesis, and secretion of bicarbonate (HCO 3 ﻿− ), t",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for acid_base"
+        }
+      ],
+      "primary_evidence_quote": "Maintenance of blood pH in its narrow physiological range is essential for cellular and organismal health. This is achieved by a collaborative effort of the kidney and respiratory system. Here, kidney tubular epithelial cells balance systemic acid-base status by regulating the recovery, de novo synthesis, and secretion of bicarbonate (HCO 3 ﻿− ), the most important base in the extracellular compartment on the one hand, and on the other hand by regulating the secretion of acid in the form of hydrogen ions (H + ) 1 . Failure to maintain systemic pH within limits compatible with normal cell and organ function causes disease and constitutes a major complication of other underlying diseases 2 . Acid-base disturbances are an independent risk factor for morbidity and mortality in the setting of v",
+      "gold_verification_anchors": [
+        "blood ph",
+        "physiological",
+        "regulation"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-47",
+      "query": "What anatomical organization of medullary nephron segments enables countercurrent multiplication and exchange?",
+      "topic": "countercurrent",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: anatomical arrangement of medullary tubules and vasa recta in countercurrent exchange",
+      "medical_claim": "The parallel hairpin loop arrangement of the loops of Henle and vasa recta creates a countercurrent flow system that generates and maintains hypertonicity in the renal medulla.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0001",
+          "evidence_text": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for countercurrent"
+        }
+      ],
+      "primary_evidence_quote": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the microanatomy of the renal medulla and the transport capacities of the involved tubules and vessels, we propose a mechanism, in which countercurrent exchange (CCE) operates at different levels in the outer and inner medulla to create gradients of salt and urea and to impede their dissipation. Salt release by ascending thick and thin loop limbs (TALs and ATLs) including the bend segments and urea release by terminal collecting ducts (CDs) increase",
+      "gold_verification_anchors": [
+        "medulla",
+        "countercurrent",
+        "hairpin"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-48",
+      "query": "Why did the renal medulla evolve during mammalian phylogenesis?",
+      "topic": "countercurrent",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: mammalian evolutionary necessity of concentrated urine",
+      "medical_claim": "The renal medulla evolved in terrestrial mammals to conserve water by producing urine hyperosmotic to plasma in response to dehydration.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0002",
+          "evidence_text": "During phylogenesis in mammals and birds a renal medulla has developed in response to the necessity to conserve water by excreting a concentrated urine. Loops of Henle, collecting ducts, and a specific blood supply through vascular bundles have been combined into a complex structural system that accounts for this function. In this system the counte",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for countercurrent"
+        }
+      ],
+      "primary_evidence_quote": "During phylogenesis in mammals and birds a renal medulla has developed in response to the necessity to conserve water by excreting a concentrated urine. Loops of Henle, collecting ducts, and a specific blood supply through vascular bundles have been combined into a complex structural system that accounts for this function. In this system the counter-current arrangement of the descending and ascending limbs of Henle’s loops as well as of the descending and ascending vasa recta within the vascular bundles is eye-catching and has prompted researchers to consider the counter-current organization of the medulla as essential feature underlying the urine concentrating function. Two mechanisms have been considered: countercurrent exchange (CCE) and countercurrent multiplication (CCM).",
+      "gold_verification_anchors": [
+        "medulla",
+        "mammals",
+        "concentrated urine"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-49",
+      "query": "What classical physiological functions are governed by the kidney-derived hormones calcitriol and erythropoietin?",
+      "topic": "renal_endocrine",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: classical endocrine roles of vitamin D and erythropoietin",
+      "medical_claim": "Vitamin D (calcitriol) regulates calcium and phosphate mineral metabolism, while erythropoietin stimulates bone marrow erythropoiesis to maintain circulating red cell mass.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0001",
+          "evidence_text": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D rece",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D receptor shapes dendritic cell maturation, promotes regulatory T-cell induction, and suppresses pro-inflammatory T helper cell responses. Similarly, EPO acts as a pleiotropic cytokine capable of modulating macrophage activation, T-cell proliferation, and inflammatory signalling pathways through EPO receptor-dependent mechanisms. In chronic kidney disease (CKD), reduced renal synthesis of active vitamin D and impaired endogenous EPO production frequen",
+      "gold_verification_anchors": [
+        "vitamin d",
+        "erythropoietin",
+        "erythropoiesis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-50",
+      "query": "What broad immunomodulatory effects do vitamin D and erythropoietin exert in addition to their classic endocrine roles?",
+      "topic": "renal_endocrine",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal: extra-renal immunomodulatory actions of vitamin D and EPO",
+      "medical_claim": "Vitamin D and EPO modulate innate and adaptive immunity, suppressing pro-inflammatory cytokine cascades and promoting tissue repair.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0003",
+          "evidence_text": "Beyond their classical roles in mineral and bone metabolism and erythropoiesis, respectively, vitamin D and EPO exert broad immunomodulatory effects on both innate and adaptive immune cells. Vitamin D shapes dendritic cell (DC) maturation, promotes regulatory T-cell (Treg) induction, and restrains pro-inflammatory cytokine production [ 2 ]. EPO is ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "Beyond their classical roles in mineral and bone metabolism and erythropoiesis, respectively, vitamin D and EPO exert broad immunomodulatory effects on both innate and adaptive immune cells. Vitamin D shapes dendritic cell (DC) maturation, promotes regulatory T-cell (Treg) induction, and restrains pro-inflammatory cytokine production [ 2 ]. EPO is now recognized as a pleiotropic cytokine capable of modulating macrophage activation, T-cell responses, and inflammatory signalling pathways [ 3 ]. Together, these pathways may contribute to the kidney’s distinctive immunological profile.",
+      "gold_verification_anchors": [
+        "immunomodulatory",
+        "vitamin d",
+        "erythropoietin"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-51",
+      "query": "Why does hematuria require structured clinical evaluation regardless of whether it is macroscopic or microscopic?",
+      "topic": "haematuria",
+      "question_type": "definition",
+      "learning_objective": "Undergraduate renal: clinical significance of macroscopic versus microscopic hematuria",
+      "medical_claim": "Hematuria can indicate conditions ranging from benign self-limiting infections to aggressive malignancies of the urinary tract or severe proliferative glomerulonephritides.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0001",
+          "evidence_text": "Hematuria is a common clinical symptom that may reflect a wide spectrum of underlying conditions, ranging from benign etiologies to potentially life-threatening diseases such as urothelial carcinoma or renal trauma. It is generally classified as either gross (visible) or microscopic (detected only through urinalysis), and particularly in emergency ",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Hematuria is a common clinical symptom that may reflect a wide spectrum of underlying conditions, ranging from benign etiologies to potentially life-threatening diseases such as urothelial carcinoma or renal trauma. It is generally classified as either gross (visible) or microscopic (detected only through urinalysis), and particularly in emergency settings, it requires prompt and structured evaluation to guide further diagnostic and therapeutic decisions. Delayed recognition may result in missed malignancies or avoidable complications, underscoring the importance of early and accurate assessment at the initial point of medical contact. This review offers a comprehensive overview of the early management of hematuria, with particular emphasis on emergency and outpatient care settings. It hig",
+      "gold_verification_anchors": [
+        "hematuria",
+        "clinical",
+        "etiologies"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-52",
+      "query": "What is the reported prevalence of microscopic versus gross hematuria during adult population screening?",
+      "topic": "haematuria",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal: prevalence of microscopic versus gross hematuria in adult populations",
+      "medical_claim": "Microscopic hematuria is observed in 2% to 4% of asymptomatic adults, whereas gross (macroscopic) hematuria occurs in approximately 0.2% to 0.3%.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0003",
+          "evidence_text": "Microscopic hematuria is observed in approximately 2-4% of the adult population during routine screening, while gross hematuria accounts for 0.2-0.3% of emergency department presentations [ 4 , 5 ]. Although sometimes self-limited, hematuria is clinically significant because it may be the first sign of malignancy, glomerular disease, or urolithiasi",
+          "is_primary": true,
+          "verification_method": "source_verified_curriculum_text",
+          "justification": "Verified factual claim for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Microscopic hematuria is observed in approximately 2-4% of the adult population during routine screening, while gross hematuria accounts for 0.2-0.3% of emergency department presentations [ 4 , 5 ]. Although sometimes self-limited, hematuria is clinically significant because it may be the first sign of malignancy, glomerular disease, or urolithiasis. In older adults and smokers, visible hematuria is associated with a 10-20% risk of underlying urothelial carcinoma [ 3 , 6 ]. Delayed recognition increases the likelihood of missed cancer diagnoses, progression of obstructive uropathy, and avoidable complications [ 7 ].",
+      "gold_verification_anchors": [
+        "microscopic hematuria",
+        "prevalence",
+        "population"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-53",
+      "query": "Which specific COL4A5 missense mutation causes adult-onset microscopic hematuria without hearing loss in atypical Alport families?",
+      "topic": "alport_genetics",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: alport_genetics",
+      "medical_claim": "Unsupported or out-of-domain query: Which specific COL4A5 missense mutation causes adult-onset microscopic hematuria without hearing loss in atypical Alport families?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-54",
+      "query": "What is the optimal infusion rate and premedication protocol for agalsidase beta enzyme replacement in Fabry nephropathy?",
+      "topic": "fabry_therapy",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: fabry_therapy",
+      "medical_claim": "Unsupported or out-of-domain query: What is the optimal infusion rate and premedication protocol for agalsidase beta enzyme replacement in Fabry nephropathy?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-55",
+      "query": "What surgical margin status defines Stage I versus Stage II nephroblastoma in the International Society of Paediatric Oncology (SIOP) protocol?",
+      "topic": "wilms_staging",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: wilms_staging",
+      "medical_claim": "Unsupported or out-of-domain query: What surgical margin status defines Stage I versus Stage II nephroblastoma in the International Society of Paediatric Oncology (SIOP) protocol?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-56",
+      "query": "What hazard ratio for renal endpoint deterioration was reported in the ASTRAL randomized trial of renal artery revascularization?",
+      "topic": "astral_trial",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: astral_trial",
+      "medical_claim": "Unsupported or out-of-domain query: What hazard ratio for renal endpoint deterioration was reported in the ASTRAL randomized trial of renal artery revascularization?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-57",
+      "query": "What specific alanine aminotransferase elevation threshold mandates permanent discontinuation of tolvaptan in ADPKD?",
+      "topic": "tolvaptan_rems",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: tolvaptan_rems",
+      "medical_claim": "Unsupported or out-of-domain query: What specific alanine aminotransferase elevation threshold mandates permanent discontinuation of tolvaptan in ADPKD?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-58",
+      "query": "What diagnostic sensitivity does GeneXpert MTB/RIF exhibit on early morning urine specimens for genitourinary tuberculosis?",
+      "topic": "renal_tb_pcr",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: renal_tb_pcr",
+      "medical_claim": "Unsupported or out-of-domain query: What diagnostic sensitivity does GeneXpert MTB/RIF exhibit on early morning urine specimens for genitourinary tuberculosis?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-59",
+      "query": "How does mass spectrometry-based proteomic typing differentiate leukocyte chemotactic factor 2 (LECT2) from AL amyloidosis in renal biopsy?",
+      "topic": "amyloid_fibrils",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: amyloid_fibrils",
+      "medical_claim": "Unsupported or out-of-domain query: How does mass spectrometry-based proteomic typing differentiate leukocyte chemotactic factor 2 (LECT2) from AL amyloidosis in renal biopsy?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-60",
+      "query": "Which vascular injury grade on the AAST renal trauma scale designates main renal artery occlusion with a devitalized kidney?",
+      "topic": "renal_trauma_grading",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: renal_trauma_grading",
+      "medical_claim": "Unsupported or out-of-domain query: Which vascular injury grade on the AAST renal trauma scale designates main renal artery occlusion with a devitalized kidney?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-61",
+      "query": "What differential renal uptake percentage on 99mTc-DMSA scintigraphy is considered an indication for ureteric reimplantation in bilateral VUR?",
+      "topic": "dmsa_reflux",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: dmsa_reflux",
+      "medical_claim": "Unsupported or out-of-domain query: What differential renal uptake percentage on 99mTc-DMSA scintigraphy is considered an indication for ureteric reimplantation in bilateral VUR?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-62",
+      "query": "What genetic mutation in the GDNF or RET proto-oncogene pathway has been linked to developmental medullary sponge kidney?",
+      "topic": "medullary_sponge",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: medullary_sponge",
+      "medical_claim": "Unsupported or out-of-domain query: What genetic mutation in the GDNF or RET proto-oncogene pathway has been linked to developmental medullary sponge kidney?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-63",
+      "query": "Which specific inactivating mutation in the SLC12A3 gene encoding the thiazide-sensitive NCCT causes Gitelman syndrome?",
+      "topic": "gitleman_mutation",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: gitleman_mutation",
+      "medical_claim": "Unsupported or out-of-domain query: Which specific inactivating mutation in the SLC12A3 gene encoding the thiazide-sensitive NCCT causes Gitelman syndrome?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-64",
+      "query": "How does antenatal Bartter syndrome Type I (SLC12A1 mutation) differ clinically from classic Bartter syndrome Type III (CLCNKB mutation)?",
+      "topic": "bartter_type",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: bartter_type",
+      "medical_claim": "Unsupported or out-of-domain query: How does antenatal Bartter syndrome Type I (SLC12A1 mutation) differ clinically from classic Bartter syndrome Type III (CLCNKB mutation)?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-65",
+      "query": "What proline-rich PY motif deletion in the beta or gamma subunit of ENaC prevents Nedd4-2 binding in Liddle syndrome?",
+      "topic": "liddle_syndrome",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: liddle_syndrome",
+      "medical_claim": "Unsupported or out-of-domain query: What proline-rich PY motif deletion in the beta or gamma subunit of ENaC prevents Nedd4-2 binding in Liddle syndrome?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-66",
+      "query": "Which autoantibody stabilizing C3 convertase (C3 nephritic factor) causes dense intramembranous ribbon-like transformation in DDD?",
+      "topic": "dense_deposit",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: dense_deposit",
+      "medical_claim": "Unsupported or out-of-domain query: Which autoantibody stabilizing C3 convertase (C3 nephritic factor) causes dense intramembranous ribbon-like transformation in DDD?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-67",
+      "query": "What is the targeted clinical trial efficacy of oral factor B inhibitor iptacopan in C3 glomerulopathy?",
+      "topic": "c3_glomerulopathy",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: c3_glomerulopathy",
+      "medical_claim": "Unsupported or out-of-domain query: What is the targeted clinical trial efficacy of oral factor B inhibitor iptacopan in C3 glomerulopathy?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-68",
+      "query": "Which specific non-collagenous domain 1 (NC1) epitope of alpha-3 type IV collagen is targeted by autoantibodies in Goodpasture disease?",
+      "topic": "anti_gbm_epitope",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: anti_gbm_epitope",
+      "medical_claim": "Unsupported or out-of-domain query: Which specific non-collagenous domain 1 (NC1) epitope of alpha-3 type IV collagen is targeted by autoantibodies in Goodpasture disease?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-69",
+      "query": "What is the revised Five-Factor Score (FFS) threshold indicating cyclophosphamide requirement in eosinophilic granulomatosis with polyangiitis?",
+      "topic": "churg_strauss",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: churg_strauss",
+      "medical_claim": "Unsupported or out-of-domain query: What is the revised Five-Factor Score (FFS) threshold indicating cyclophosphamide requirement in eosinophilic granulomatosis with polyangiitis?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-70",
+      "query": "What monoclonal IgG and polyclonal IgM rheumatoid factor component ratio characterizes Type II essential mixed cryoglobulinemia with membranoproliferative GN?",
+      "topic": "cryo_gn",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: cryo_gn",
+      "medical_claim": "Unsupported or out-of-domain query: What monoclonal IgG and polyclonal IgM rheumatoid factor component ratio characterizes Type II essential mixed cryoglobulinemia with membranoproliferative GN?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-71",
+      "query": "What characteristic 'ring sign' on retrograde pyelography indicates sloughed necrotic renal papillae in chronic phenacetin abuse?",
+      "topic": "analgesic_nephropathy",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: analgesic_nephropathy",
+      "medical_claim": "Unsupported or out-of-domain query: What characteristic 'ring sign' on retrograde pyelography indicates sloughed necrotic renal papillae in chronic phenacetin abuse?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-72",
+      "query": "Which specific DNA adduct formed by aristolochic acid I in proximal tubular cells induces upper urothelial tract carcinoma in Balkan endemic nephropathy?",
+      "topic": "balkan_endemic",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: balkan_endemic",
+      "medical_claim": "Unsupported or out-of-domain query: Which specific DNA adduct formed by aristolochic acid I in proximal tubular cells induces upper urothelial tract carcinoma in Balkan endemic nephropathy?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-73",
+      "query": "What percentage of ether clearance of turbidity confirms lymphatic-urinary fistula in Wuchereria bancrofti filarial chyluria?",
+      "topic": "chyluria",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: chyluria",
+      "medical_claim": "Unsupported or out-of-domain query: What percentage of ether clearance of turbidity confirms lymphatic-urinary fistula in Wuchereria bancrofti filarial chyluria?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-74",
+      "query": "What duration of subcapsular hematoma compression causes persistent renin-mediated systemic hypertension in Page kidney phenomenon?",
+      "topic": "page_kidney",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: page_kidney",
+      "medical_claim": "Unsupported or out-of-domain query: What duration of subcapsular hematoma compression causes persistent renin-mediated systemic hypertension in Page kidney phenomenon?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-75",
+      "query": "What aortomesenteric angle measurement on sagittal CT angiography confirms anterior nutcracker phenomenon with left renal vein entrapment?",
+      "topic": "nutcracker_syndrome",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: nutcracker_syndrome",
+      "medical_claim": "Unsupported or out-of-domain query: What aortomesenteric angle measurement on sagittal CT angiography confirms anterior nutcracker phenomenon with left renal vein entrapment?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-76",
+      "query": "What initial oral corticosteroid taper regimen is standard for idiopathic retroperitoneal fibrosis (Ormond disease) with ureteric encasement?",
+      "topic": "retroperitoneal_fibrosis",
+      "question_type": "coverage_gap",
+      "learning_objective": "Curriculum evaluation non-retrievable question: retroperitoneal_fibrosis",
+      "medical_claim": "Unsupported or out-of-domain query: What initial oral corticosteroid taper regimen is standard for idiopathic retroperitoneal fibrosis (Ormond disease) with ureteric encasement?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-77",
+      "query": "What required 36-hour washout period prevents angioedema when transitioning from an ACE inhibitor to sacubitril/valsartan?",
+      "topic": "cardiology_entresto",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: cardiology_entresto",
+      "medical_claim": "Unsupported or out-of-domain query: What required 36-hour washout period prevents angioedema when transitioning from an ACE inhibitor to sacubitril/valsartan?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-78",
+      "query": "What door-to-balloon time is mandated as the primary quality metric for primary percutaneous coronary intervention in STEMI?",
+      "topic": "cardiology_stemi",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: cardiology_stemi",
+      "medical_claim": "Unsupported or out-of-domain query: What door-to-balloon time is mandated as the primary quality metric for primary percutaneous coronary intervention in STEMI?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-79",
+      "query": "What blood pressure ceiling (185/110 mmHg) must be maintained prior to intravenous alteplase administration in acute ischemic stroke?",
+      "topic": "neurology_tpa",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: neurology_tpa",
+      "medical_claim": "Unsupported or out-of-domain query: What blood pressure ceiling (185/110 mmHg) must be maintained prior to intravenous alteplase administration in acute ischemic stroke?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-80",
+      "query": "What tensilon test alternative using ice pack application to the ptotic eyelid is utilized to screen for myasthenia gravis?",
+      "topic": "neurology_mg",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: neurology_mg",
+      "medical_claim": "Unsupported or out-of-domain query: What tensilon test alternative using ice pack application to the ptotic eyelid is utilized to screen for myasthenia gravis?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-81",
+      "query": "What arterial blood gas pH and PaCO2 criteria indicate non-invasive positive pressure ventilation (NIV) in acute hypercapnic respiratory failure?",
+      "topic": "respiratory_copd",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: respiratory_copd",
+      "medical_claim": "Unsupported or out-of-domain query: What arterial blood gas pH and PaCO2 criteria indicate non-invasive positive pressure ventilation (NIV) in acute hypercapnic respiratory failure?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-82",
+      "query": "What Wells score threshold categorizes pulmonary embolism probability as likely, mandating immediate CT pulmonary angiography?",
+      "topic": "respiratory_pe",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: respiratory_pe",
+      "medical_claim": "Unsupported or out-of-domain query: What Wells score threshold categorizes pulmonary embolism probability as likely, mandating immediate CT pulmonary angiography?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-83",
+      "query": "What diagnostic peak cortisol value on a 250 mcg short Synacthen (cosyntropin) stimulation test excludes primary adrenal insufficiency?",
+      "topic": "endocrinology_addison",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: endocrinology_addison",
+      "medical_claim": "Unsupported or out-of-domain query: What diagnostic peak cortisol value on a 250 mcg short Synacthen (cosyntropin) stimulation test excludes primary adrenal insufficiency?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-84",
+      "query": "What diagnostic HbA1c threshold of 48 mmol/mol (6.5%) establishes the formal diagnosis of type 2 diabetes mellitus?",
+      "topic": "endocrinology_hba1c",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: endocrinology_hba1c",
+      "medical_claim": "Unsupported or out-of-domain query: What diagnostic HbA1c threshold of 48 mmol/mol (6.5%) establishes the formal diagnosis of type 2 diabetes mellitus?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-85",
+      "query": "What prophylactic non-selective beta-blocker (propranolol or carvedilol) dose is titrated to a resting heart rate of 55-60 bpm in cirrhosis?",
+      "topic": "gastro_varices",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: gastro_varices",
+      "medical_claim": "Unsupported or out-of-domain query: What prophylactic non-selective beta-blocker (propranolol or carvedilol) dose is titrated to a resting heart rate of 55-60 bpm in cirrhosis?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-86",
+      "query": "What is the recommended oral fidaxomicin regimen for a first episode of non-severe Clostridioides difficile infection?",
+      "topic": "gastro_cdiff",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: gastro_cdiff",
+      "medical_claim": "Unsupported or out-of-domain query: What is the recommended oral fidaxomicin regimen for a first episode of non-severe Clostridioides difficile infection?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-87",
+      "query": "What platelet count threshold below 30,000/microL with active mucocutaneous bleeding warrants high-dose oral dexamethasone in primary immune thrombocytopenia?",
+      "topic": "hematology_itp",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: hematology_itp",
+      "medical_claim": "Unsupported or out-of-domain query: What platelet count threshold below 30,000/microL with active mucocutaneous bleeding warrants high-dose oral dexamethasone in primary immune thrombocytopenia?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-88",
+      "query": "What hemoglobin S percentage reduction is targeted during automated red cell exchange transfusion for acute chest syndrome in sickle cell anemia?",
+      "topic": "hematology_sickle",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: hematology_sickle",
+      "medical_claim": "Unsupported or out-of-domain query: What hemoglobin S percentage reduction is targeted during automated red cell exchange transfusion for acute chest syndrome in sickle cell anemia?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-89",
+      "query": "What SLICC classification criteria combination of ANA positivity with renal histology confirms systemic lupus erythematosus?",
+      "topic": "rheumatology_lupus",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: rheumatology_lupus",
+      "medical_claim": "Unsupported or out-of-domain query: What SLICC classification criteria combination of ANA positivity with renal histology confirms systemic lupus erythematosus?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-90",
+      "query": "What modified New York criteria grade of bilateral sacroiliitis on pelvic radiograph establishes ankylosing spondylitis?",
+      "topic": "rheumatology_ank_spond",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: rheumatology_ank_spond",
+      "medical_claim": "Unsupported or out-of-domain query: What modified New York criteria grade of bilateral sacroiliitis on pelvic radiograph establishes ankylosing spondylitis?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-91",
+      "query": "What modified Duke criteria combination of two major blood culture criteria confirms infective endocarditis?",
+      "topic": "infectious_endocarditis",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: infectious_endocarditis",
+      "medical_claim": "Unsupported or out-of-domain query: What modified Duke criteria combination of two major blood culture criteria confirms infective endocarditis?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-92",
+      "query": "What viral load suppression threshold (<50 copies/mL) defines undetectable status preventing sexual transmission of HIV (U=U)?",
+      "topic": "infectious_hiv",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: infectious_hiv",
+      "medical_claim": "Unsupported or out-of-domain query: What viral load suppression threshold (<50 copies/mL) defines undetectable status preventing sexual transmission of HIV (U=U)?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-93",
+      "query": "What direct immunofluorescence pattern of linear IgG and C3 deposition along the epidermal basement membrane confirms bullous pemphigoid?",
+      "topic": "dermatology_bullous",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: dermatology_bullous",
+      "medical_claim": "Unsupported or out-of-domain query: What direct immunofluorescence pattern of linear IgG and C3 deposition along the epidermal basement membrane confirms bullous pemphigoid?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-94",
+      "query": "What Psoriasis Area and Severity Index (PASI) score >10 qualifies a patient for biologic anti-IL-17 therapy under NICE guidance?",
+      "topic": "dermatology_psoriasis",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: dermatology_psoriasis",
+      "medical_claim": "Unsupported or out-of-domain query: What Psoriasis Area and Severity Index (PASI) score >10 qualifies a patient for biologic anti-IL-17 therapy under NICE guidance?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-95",
+      "query": "What delta pressure (diastolic blood pressure minus intracompartmental pressure) <=30 mmHg mandates emergent fasciotomy?",
+      "topic": "orthopedics_compartment",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: orthopedics_compartment",
+      "medical_claim": "Unsupported or out-of-domain query: What delta pressure (diastolic blood pressure minus intracompartmental pressure) <=30 mmHg mandates emergent fasciotomy?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-96",
+      "query": "What clinical red flag signs of saddle anesthesia and urinary retention mandate emergency lumbar spine MRI for suspected cauda equina syndrome?",
+      "topic": "orthopedics_cauda",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: orthopedics_cauda",
+      "medical_claim": "Unsupported or out-of-domain query: What clinical red flag signs of saddle anesthesia and urinary retention mandate emergency lumbar spine MRI for suspected cauda equina syndrome?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-97",
+      "query": "What minimum one-month duration of active psychotic symptoms (delusions, hallucinations, disorganized speech) is required for DSM-5 schizophrenia diagnosis?",
+      "topic": "psychiatry_schizo",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: psychiatry_schizo",
+      "medical_claim": "Unsupported or out-of-domain query: What minimum one-month duration of active psychotic symptoms (delusions, hallucinations, disorganized speech) is required for DSM-5 schizophrenia diagnosis?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-98",
+      "query": "What is the minimum recommended duration of continued antidepressant therapy following remission of a first major depressive episode?",
+      "topic": "psychiatry_ssri",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: psychiatry_ssri",
+      "medical_claim": "Unsupported or out-of-domain query: What is the minimum recommended duration of continued antidepressant therapy following remission of a first major depressive episode?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-99",
+      "query": "What single-dose oral dexamethasone (0.15 mg/kg) therapy is indicated for mild-to-moderate laryngotracheobronchitis (croup)?",
+      "topic": "pediatrics_croup",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: pediatrics_croup",
+      "medical_claim": "Unsupported or out-of-domain query: What single-dose oral dexamethasone (0.15 mg/kg) therapy is indicated for mild-to-moderate laryngotracheobronchitis (croup)?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-HELDOUT-100",
+      "query": "What high-dose intravenous immunoglobulin (2 g/kg) regimen administered within the first 10 days prevents coronary artery aneurysms in Kawasaki disease?",
+      "topic": "pediatrics_kd",
+      "question_type": "out_of_domain",
+      "learning_objective": "Curriculum evaluation non-retrievable question: pediatrics_kd",
+      "medical_claim": "Unsupported or out-of-domain query: What high-dose intravenous immunoglobulin (2 g/kg) regimen administered within the first 10 days prevents coronary artery aneurysms in Kawasaki disease?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "report_id": "RENAL-V3-REPRESENTATION-AUDIT",
+  "audit_date": "2026-09-10",
+  "existing_v2_representations": {
+    "content_only": {
+      "template": "{text}",
+      "metrics_under_v2_dev": {"hit_at_1": 0.1884, "hit_at_5": 0.5072, "mrr": 0.2968},
+      "characteristics": "Raw chunk text without context. Performed best in V2."
+    },
+    "source_aware": {
+      "template": "Source: {title} [{document_id}]\\n{text}",
+      "metrics_under_v2_dev": {"hit_at_1": 0.1739, "hit_at_5": 0.4348, "mrr": 0.2786},
+      "characteristics": "Adds document title and PMC document identifier prefix."
+    },
+    "metadata_aware": {
+      "template": "Topics: {topic_tags}\\nSection: {section_path}\\nSource: {title} [{document_id}]\\n{text}",
+      "metrics_under_v2_dev": {"hit_at_1": 0.1594, "hit_at_5": 0.4058, "mrr": 0.2664},
+      "characteristics": "Contains full section path, but injected long comma-separated topic tags and document ID boilerplate."
+    },
+    "metadata_aware_v2": {
+      "template": "Specialty: Renal Medicine\\nEducational Role: {role}\\nTopics: {topic_tags}\\nSection: {section_path}\\nSource: {title} [{document_id}]\\n{text}",
+      "metrics_under_v2_dev": {"hit_at_1": 0.1594, "hit_at_5": 0.3913, "mrr": 0.2661},
+      "characteristics": "Added constant specialty and role headers. Degraded passage retrieval by homogenizing chunk representations."
+    }
+  },
+  "proposed_v3_contextual_representation": {
+    "name": "contextual_path_prefix",
+    "template": "Document: {title}\\nSection: {section_path}\\n\\n{text}",
+    "is_materially_different": true,
+    "justification": "Unlike metadata_aware, it strips the synthetic 'Topics: ...' keyword list that caused semantic dilution and homogenization across intra-document chunks. It tests clean hierarchical natural context without repetitive metadata tags."
+  },
+  "decision": "PROCEED_WITH_CONTROLLED_EXPERIMENT"
+}

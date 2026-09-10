@@ -1,0 +1,1850 @@
+{
+  "dataset_name": "RENAL-TRAIN-V3",
+  "version": "3.0",
+  "n_queries": 60,
+  "n_answerable": 40,
+  "n_unsupported": 20,
+  "leakage_audited_against": "renal-dev-evidence-spans-v2.json",
+  "queries": [
+    {
+      "query_id": "RENAL-V3-TRAIN-01-1",
+      "query": "What physiological stimulus induces renal erythropoietin secretion, and what is its systemic target?",
+      "topic": "renal_endocrine",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: EPO production in response to hypoxia",
+      "medical_claim": "Tissue hypoxia stimulates renal erythropoietin secretion, which acts on bone marrow erythroid progenitor cells to accelerate red blood cell production.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0001",
+          "evidence_text": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D rece",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D receptor shapes dendritic cell maturation, promotes regulatory T-cell induction, and suppresses pro-inflammatory T helper cell responses. Similarly, EPO acts as a pleiotropic cytokine capable of modulating macrophage activation, T-cell proliferation, and inflammatory signalling pathways through EPO receptor-dependent mechanisms. In chronic kidney disease (CKD), reduced renal synthesis of active vitamin D and impaired endogenous EPO production frequently coexist, contributing not only to disturbances in mineral metabolism and anaemia, but possibly also to immune dysregulation. Besides CKD, immune dysregulation is common across diverse nephrological conditions, including immune-mediated nephropathies and transplantation, where inflammatory and alloimmune responses critically influence disease progression and graft outcomes. Increasing experimental and clinical evidence suggests that vitamin D and EPO may modulate these processes and represent potential therapeutic targets. This narrative review summarizes current knowledge on the immunomodulatory properties of vitamin D and EPO, their mechanisms of action on immune cells, and their relevance in kidney disease and transplantation.",
+      "gold_verification_anchors": [
+        "erythropoietin",
+        "hypoxia",
+        "kidney"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-01-2",
+      "query": "How is 25-hydroxyvitamin D converted to biologically active 1,25-dihydroxyvitamin D in renal proximal tubules?",
+      "topic": "renal_endocrine",
+      "question_type": "mechanism",
+      "learning_objective": "Undergraduate renal medicine: 1-alpha-hydroxylase activation of vitamin D",
+      "medical_claim": "Proximal tubule 1-alpha-hydroxylase enzyme hydroxylates calcidiol to generate bioactive 1,25-dihydroxyvitamin D (calcitriol).",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0005",
+          "evidence_text": "This review does not focus on the well-known endocrine roles of vitamin D and EPO. In contrast, we examine current knowledge regarding the immunomodulatory effects of vitamin D and EPO in physiological conditions and in kidney disease, with particular emphasis on their implications for transplantation and immune-mediated pathology. Literature was i",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "This review does not focus on the well-known endocrine roles of vitamin D and EPO. In contrast, we examine current knowledge regarding the immunomodulatory effects of vitamin D and EPO in physiological conditions and in kidney disease, with particular emphasis on their implications for transplantation and immune-mediated pathology. Literature was identified through searches of PubMed and Scopus reports published from 2000 to 31 January 2026 using combinations of the terms ‘vitamin D/cholecalciferol/ergocalciferol/calcifediol/calcitriol’, ‘erythropoietin/EPO’, ‘kidney/renal disease’, ‘immune/immunity’, and ‘transplant/transplantation’. We included mechanistic, preclinical, and clinical studies, prioritizing recent and high-impact publications. Given the narrative nature of this review, no formal systematic selection process or quality assessment was performed, and the potential for selection bias should be acknowledged.",
+      "gold_verification_anchors": [
+        "calcitriol",
+        "vitamin d",
+        "mineral"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-01-3",
+      "query": "What non-classical immunomodulatory roles do vitamin D and erythropoietin exert beyond mineral metabolism and erythropoiesis?",
+      "topic": "renal_endocrine",
+      "question_type": "clinical_reasoning",
+      "learning_objective": "Undergraduate renal medicine: non-classical immunological roles of EPO",
+      "medical_claim": "Vitamin D and erythropoietin exert broad immunomodulatory and tissue-protective effects across organ systems beyond their classical hematopoietic and bone metabolic functions.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0001",
+          "evidence_text": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D rece",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "ABSTRACT Vitamin D and erythropoietin (EPO) are kidney-derived hormones classically known for their roles in mineral metabolism and erythropoiesis, respectively. Beyond these functions, growing evidence indicates that both molecules exert broad immunomodulatory effects on innate and adaptive immunity. Vitamin D signalling through the vitamin D receptor shapes dendritic cell maturation, promotes regulatory T-cell induction, and suppresses pro-inflammatory T helper cell responses. Similarly, EPO acts as a pleiotropic cytokine capable of modulating macrophage activation, T-cell proliferation, and inflammatory signalling pathways through EPO receptor-dependent mechanisms. In chronic kidney disease (CKD), reduced renal synthesis of active vitamin D and impaired endogenous EPO production frequently coexist, contributing not only to disturbances in mineral metabolism and anaemia, but possibly also to immune dysregulation. Besides CKD, immune dysregulation is common across diverse nephrological conditions, including immune-mediated nephropathies and transplantation, where inflammatory and alloimmune responses critically influence disease progression and graft outcomes. Increasing experimental and clinical evidence suggests that vitamin D and EPO may modulate these processes and represent potential therapeutic targets. This narrative review summarizes current knowledge on the immunomodulatory properties of vitamin D and EPO, their mechanisms of action on immune cells, and their relevance in kidney disease and transplantation.",
+      "gold_verification_anchors": [
+        "erythropoiesis",
+        "immune",
+        "vitamin d"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-01-4",
+      "query": "How does loss of renal calcitriol synthesis promote parathyroid hormone hypersecretion in kidney failure?",
+      "topic": "renal_endocrine",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: secondary hyperparathyroidism due to calcitriol deficiency",
+      "medical_claim": "Impaired calcitriol synthesis decreases intestinal calcium absorption, leading to hypocalcemia and reciprocal elevation of parathyroid hormone.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0024"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0024-P0007"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0007"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0024",
+          "parent_section_id": "DOC-PMC-RENAL-0024-P0007",
+          "evidence_text": "This active molecule exerts its biological effects primarily through binding to the intracellular vitamin D receptor (VDR), a transcription factor belonging to the nuclear receptor superfamily [ 6 ]. The VDR is expressed in a wide range of tissues, including organs directly involved in calcium–phosphate homeostasis (e.g. intestine, bone, and kidney",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_endocrine"
+        }
+      ],
+      "primary_evidence_quote": "This active molecule exerts its biological effects primarily through binding to the intracellular vitamin D receptor (VDR), a transcription factor belonging to the nuclear receptor superfamily [ 6 ]. The VDR is expressed in a wide range of tissues, including organs directly involved in calcium–phosphate homeostasis (e.g. intestine, bone, and kidney) as well as other sites that are not primarily engaged in mineral metabolism. Upon ligand binding, the VDR heterodimerizes with the retinoid X receptor and translocates into the nucleus, where it interacts with vitamin D response elements in target genes promoters to regulate transcription of hundreds of genes involved in mineral metabolism, as well as cellular proliferation, differentiation, and immune function. In addition to these genomic effects, rapid nongenomic actions mediated by membrane-expressed VDR have also been described [ 7 ]. These involve activation of second-messenger systems and kinase cascades, including phospholipase C, protein kinase C, mitogen-activated protein kinases (MAPKs), and phosphatidylinositol 3-kinase (PI3K)/Akt signalling, enabling rapid modulation of cellular responses independently of gene transcription. In chronic kidney disease (CKD), the renal activation of vitamin D is impaired, as the progressive loss of functioning nephron mass reduces the number of proximal tubular cells expressing 1α-hydroxylase. Elevated fibroblast growth factor 23, a hallmark of CKD, further suppresses 1α-hydroxylase while simultaneously inducing 24-hydroxylase, the enzyme responsible for catabolizing both 25(OH)D and 1,25(OH) 2 D [ 8 ]. Systemic inflammation—commonly observed in CKD fuels persistently high levels of tumour necrosis factor alpha (TNF-α) and interleukin-6 (IL-6), which also downregulate renal 1α-hydroxylase expression [ 9 ].",
+      "gold_verification_anchors": [
+        "calcium",
+        "vitamin d",
+        "kidney"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-02-1",
+      "query": "How is microscopic hematuria defined clinically, and what benign conditions can cause transient hematuria?",
+      "topic": "haematuria",
+      "question_type": "diagnosis",
+      "learning_objective": "Undergraduate renal medicine: microscopic hematuria definition and prevalence",
+      "medical_claim": "Microscopic hematuria is detected by urine dipstick or microscopy; transient causes include vigorous exercise, sexual intercourse, menstruation, and mild trauma.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0001",
+          "evidence_text": "Hematuria is a common clinical symptom that may reflect a wide spectrum of underlying conditions, ranging from benign etiologies to potentially life-threatening diseases such as urothelial carcinoma or renal trauma. It is generally classified as either gross (visible) or microscopic (detected only through urinalysis), and particularly in emergency ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Hematuria is a common clinical symptom that may reflect a wide spectrum of underlying conditions, ranging from benign etiologies to potentially life-threatening diseases such as urothelial carcinoma or renal trauma. It is generally classified as either gross (visible) or microscopic (detected only through urinalysis), and particularly in emergency settings, it requires prompt and structured evaluation to guide further diagnostic and therapeutic decisions. Delayed recognition may result in missed malignancies or avoidable complications, underscoring the importance of early and accurate assessment at the initial point of medical contact. This review offers a comprehensive overview of the early management of hematuria, with particular emphasis on emergency and outpatient care settings. It highlights practical strategies for triage, differential diagnosis, and identification of high-risk patients, while providing evidence-based guidance on indications for referral and hospitalization. The analysis is grounded in a broad review of the current literature from 2016 to 2025, incorporating international guidelines and expert recommendations to ensure relevance and clinical applicability. Ultimately, hematuria should never be underestimated during the initial clinical encounter. A systematic approach that integrates risk stratification and adherence to current guidelines allows for timely detection of serious underlying pathologies, such as malignancy or obstructive uropathy. Recognizing alarm features, such as gross hematuria, anemia, persistent symptoms, or impaired renal function, is essential for initiating appropriate diagnostic pathways, expediting specialist referral, and improving overall patient outcomes.",
+      "gold_verification_anchors": [
+        "hematuria",
+        "microscopic",
+        "urine"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-02-2",
+      "query": "When is urgent cystoscopy and upper tract imaging required for adult patients presenting with hematuria?",
+      "topic": "haematuria",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: urological malignancy evaluation in hematuria",
+      "medical_claim": "Adults with visible hematuria or persistent non-visible hematuria with risk factors mandate cystoscopy and upper urinary tract imaging to exclude malignancy.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0020"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0020"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0020",
+          "evidence_text": "Risk stratification is crucial in determining the urgency and modality of further work-up. High-risk features include painless gross hematuria, age over 40, male sex, history of tobacco use, occupational exposure to chemical carcinogens (e.g., benzidine, aniline dyes), personal or family history of urinary tract malignancy, chronic indwelling cathe",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Risk stratification is crucial in determining the urgency and modality of further work-up. High-risk features include painless gross hematuria, age over 40, male sex, history of tobacco use, occupational exposure to chemical carcinogens (e.g., benzidine, aniline dyes), personal or family history of urinary tract malignancy, chronic indwelling catheterization, exposure to pelvic radiation, use of anticoagulants or antiplatelets, abnormal imaging, or positive urine cytology [ 3 , 6 , 11 , 20 , 22 ]. According to updated guidelines from the AUA and EAU, these patients should undergo prompt cystoscopy and upper tract imaging, preferably with CT urography, as part of comprehensive evaluation, regardless of whether hematuria is gross or microscopic [ 1 , 4 , 10 ].",
+      "gold_verification_anchors": [
+        "hematuria",
+        "cystoscopy",
+        "imaging"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-02-3",
+      "query": "What clinical and laboratory findings point to a glomerular origin of hematuria?",
+      "topic": "haematuria",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: glomerular causes of red blood cells in urine",
+      "medical_claim": "Dysmorphic erythrocytes, acanthocytes, red cell casts, and significant concomitant proteinuria indicate glomerular capillary wall disruption.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0003",
+          "evidence_text": "Microscopic hematuria is observed in approximately 2-4% of the adult population during routine screening, while gross hematuria accounts for 0.2-0.3% of emergency department presentations [ 4 , 5 ]. Although sometimes self-limited, hematuria is clinically significant because it may be the first sign of malignancy, glomerular disease, or urolithiasi",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Microscopic hematuria is observed in approximately 2-4% of the adult population during routine screening, while gross hematuria accounts for 0.2-0.3% of emergency department presentations [ 4 , 5 ]. Although sometimes self-limited, hematuria is clinically significant because it may be the first sign of malignancy, glomerular disease, or urolithiasis. In older adults and smokers, visible hematuria is associated with a 10-20% risk of underlying urothelial carcinoma [ 3 , 6 ]. Delayed recognition increases the likelihood of missed cancer diagnoses, progression of obstructive uropathy, and avoidable complications [ 7 ].",
+      "gold_verification_anchors": [
+        "glomerular",
+        "hematuria",
+        "nephritis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-02-4",
+      "query": "How does concomitant significant proteinuria influence the differential diagnosis of non-visible hematuria?",
+      "topic": "haematuria",
+      "question_type": "clinical_reasoning",
+      "learning_objective": "Undergraduate renal medicine: proteinuria co-occurrence with hematuria",
+      "medical_claim": "The combination of hematuria with proteinuria strongly increases the likelihood of primary or secondary glomerular parenchymal disease rather than isolated lower tract bleeding.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0025"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0025-P0009"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0009"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0025",
+          "parent_section_id": "DOC-PMC-RENAL-0025-P0009",
+          "evidence_text": "Table 1 Classification and Common Causes of Hematuria GN: Glomerulonephritis; UTI: Urinary tract infection; BPH: Benign prostatic hyperplasia; RCC: Renal cell carcinoma; RBCs: Red blood cells; RBC casts: Red blood cell casts; Proteinuria: Presence of protein in urine; Dysmorphic RBCs: Morphologically abnormal red blood cells, suggestive of glomerul",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for haematuria"
+        }
+      ],
+      "primary_evidence_quote": "Table 1 Classification and Common Causes of Hematuria GN: Glomerulonephritis; UTI: Urinary tract infection; BPH: Benign prostatic hyperplasia; RCC: Renal cell carcinoma; RBCs: Red blood cells; RBC casts: Red blood cell casts; Proteinuria: Presence of protein in urine; Dysmorphic RBCs: Morphologically abnormal red blood cells, suggestive of glomerular origin",
+      "gold_verification_anchors": [
+        "proteinuria",
+        "hematuria",
+        "disease"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-03-1",
+      "query": "What serum creatinine and urine output thresholds define KDIGO stage 1 acute kidney injury?",
+      "topic": "aki",
+      "question_type": "diagnosis",
+      "learning_objective": "Undergraduate renal medicine: KDIGO staging criteria for acute kidney injury",
+      "medical_claim": "KDIGO Stage 1 AKI is defined by an increase in serum creatinine by >=0.3 mg/dL within 48 hours or a 1.5-1.9 times baseline increase, or urine output <0.5 mL/kg/h for 6-12 hours.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0212"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0214"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0212",
+          "evidence_text": "PubMed was searched for relevant studies published between January 2012 and April 2016, and papers related to the present CQ were abstracted from the search results. The literature published before January 2012 was referenced from the KDIGO Clinical Practice Guideline for Acute Kidney Injury.",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for aki"
+        }
+      ],
+      "primary_evidence_quote": "PubMed was searched for relevant studies published between January 2012 and April 2016, and papers related to the present CQ were abstracted from the search results. The literature published before January 2012 was referenced from the KDIGO Clinical Practice Guideline for Acute Kidney Injury.",
+      "gold_verification_anchors": [
+        "kdigo",
+        "creatinine",
+        "injury"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-03-2",
+      "query": "Why is hourly urine output monitoring critical for detecting early acute kidney injury?",
+      "topic": "aki",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: oliguria monitoring in acute kidney injury",
+      "medical_claim": "Urine output decline often precedes serum creatinine elevation by 24-48 hours during acute renal hypoperfusion and early nephron injury.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0003",
+          "evidence_text": "Meanwhile, the RIFLE [ 1 ], AKIN [ 2 ], and KDIGO [ 3 ] diagnostic criteria were introduced in an effort to establish unified international diagnostic criteria. The present guideline recommends the use of the KDIGO diagnostic criteria (see CQ2-1). However, these criteria are based solely on the serum creatinine (sCr) and urine output; they do not t",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for aki"
+        }
+      ],
+      "primary_evidence_quote": "Meanwhile, the RIFLE [ 1 ], AKIN [ 2 ], and KDIGO [ 3 ] diagnostic criteria were introduced in an effort to establish unified international diagnostic criteria. The present guideline recommends the use of the KDIGO diagnostic criteria (see CQ2-1). However, these criteria are based solely on the serum creatinine (sCr) and urine output; they do not take into account the cause or site of the kidney injury, or location and mode of onset of AKI. Thus, as AKI refers to a syndrome with a broad spectrum of diseases and a variety of pathophysiologies, it calls for constant differentiation of the causes and elimination of the reversible factors. The KDIGO Clinical Practice Guideline for AKI [ 3 ] also recommends searching for and assessing the cause of the syndrome whenever possible, particularly in regard to reversible causes (recommendations 2.1.3 and 2.3.1).",
+      "gold_verification_anchors": [
+        "creatinine",
+        "urine",
+        "output"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-03-3",
+      "query": "What tubular biomarkers (such as NGAL and L-FABP) indicate early structural tubular injury before creatinine rise?",
+      "topic": "aki",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: novel biomarkers of renal tubular damage",
+      "medical_claim": "Novel structural biomarkers including neutrophil gelatinase-associated lipocalin (NGAL) and liver-type fatty acid-binding protein (L-FABP) elevate rapidly following tubular epithelial damage.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0134"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0136"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0134",
+          "evidence_text": "The pathological condition previously recognized as acute renal failure (ARF) is now broadly understood to pose a risk of death at an earlier or milder stage than failure. This has prompted a paradigm shift from ARF to acute kidney injury (AKI). However, with the present method of diagnosis, which is based on the identification of an increased leve",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for aki"
+        }
+      ],
+      "primary_evidence_quote": "The pathological condition previously recognized as acute renal failure (ARF) is now broadly understood to pose a risk of death at an earlier or milder stage than failure. This has prompted a paradigm shift from ARF to acute kidney injury (AKI). However, with the present method of diagnosis, which is based on the identification of an increased level of serum creatinine (sCr) and a reduced urine output, interventions are often mistimed; therefore, there is an urgent need for the clinical application of more sensitive biomarkers. The early diagnosis of AKI enables earlier consultation with a nephrologist, appropriate management of the renal hemodynamics, and the avoidance of exposure to nephrotoxins. Therefore, we examined whether urinary biomarkers should be used for the early diagnosis of AKI based on a relatively large number of studies on AKI in adult patients having received cardiovascular surgery and those in intensive care units (ICUs).",
+      "gold_verification_anchors": [
+        "biomarker",
+        "injury",
+        "tubular"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-03-4",
+      "query": "What indications mandate prompt renal replacement therapy initiation in patients with severe AKI?",
+      "topic": "aki",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: renal replacement therapy timing in acute kidney injury",
+      "medical_claim": "Severe hyperkalemia, profound metabolic acidosis, refractory fluid overload, and uremic organ involvement constitute unequivocal indications for acute renal replacement therapy.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0006-P0221"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0223"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0006",
+          "parent_section_id": "DOC-PMC-RENAL-0006-P0221",
+          "evidence_text": "The effect of the early initiation of blood purification on death has been examined in nine RCTs to date—including some that were not covered in Bagshaw et al.’s meta-analysis. Bouman et al. randomly assigned intensive care unit (ICU) patients presenting with oliguria to early high-volume, early low-volume, and late low-volume hemofiltration, with ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for aki"
+        }
+      ],
+      "primary_evidence_quote": "The effect of the early initiation of blood purification on death has been examined in nine RCTs to date—including some that were not covered in Bagshaw et al.’s meta-analysis. Bouman et al. randomly assigned intensive care unit (ICU) patients presenting with oliguria to early high-volume, early low-volume, and late low-volume hemofiltration, with the survival at day 28 and the recovery of the renal function as primary endpoints; however, the three groups did not demonstrate any differences in their survival at day 28 or their recovery of the renal function [ 216 ]. An Indian RCT involving patients who developed AKI in the hospital divided the subjects into two groups: a group in which dialysis was initiated early, when the BUN was ≥ 70 mg/dl or the serum creatinine (sCr) was ≥ 7 mg/dl (n = 102), and a control group in which dialysis was initiated upon fluid overload, hyperkalemia, or any other indication for emergent dialysis (ultimately, BUN: 100.9 ± 32.6 mg/dl, sCr: 10.41 ± 3.3 mg/dl; n = 106). The comparisons of these two groups revealed no significant differences in the mortality or the recovery of the renal function [ 217 ]. In a Canadian open-label pilot trial [ 218 ] reported in 2015, patients with volume-replete AKI were randomly assigned to an early treatment group (n = 48) or a standard treatment group (n = 52); the mortality and the recovery of the renal function did not show any significant differences between the two groups. In two single-center RCTs involving post-cardiac surgery patients [ 219 , 220 ], the early initiation of blood purification was associated with a reduced mortality. In a multicenter RCT (the HEROICS study) [ 221 ], patients experiencing shock requiring catecholamine support following cardiac surgery were randomly assigned to one of two groups: an early hemofiltration group (80 ml/kg/hr for 48 h) or a standard therapy group that included continuous hemodiafiltration (CHDF) if necessary (n = 112 for both groups). The two groups did not demonstrate a significant difference in their mortality or recovery of the renal function.",
+      "gold_verification_anchors": [
+        "dialysis",
+        "indication",
+        "therapy"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-04-1",
+      "query": "What criteria of GFR and kidney damage lasting at least 3 months define chronic kidney disease?",
+      "topic": "ckd",
+      "question_type": "diagnosis",
+      "learning_objective": "Undergraduate renal medicine: definition and duration criteria for chronic kidney disease",
+      "medical_claim": "CKD is defined as persistent abnormalities of kidney structure or function present for greater than 3 months, with implications for health, notably GFR <60 mL/min/1.73m2 or evidence of kidney damage.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0037"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0037"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0037",
+          "evidence_text": "We evaluate risk according to stage of the CGA classification of CKD and other comorbidities and risk factors for end-stage kidney disease. Furthermore, significant predictors of end-stage kidney disease are a doubling of the serum Cr level (equivalent to 57% decrease in estimated glomerular filtration rate (eGFR)), and a 40% or 30% decrease in eGF",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for ckd"
+        }
+      ],
+      "primary_evidence_quote": "We evaluate risk according to stage of the CGA classification of CKD and other comorbidities and risk factors for end-stage kidney disease. Furthermore, significant predictors of end-stage kidney disease are a doubling of the serum Cr level (equivalent to 57% decrease in estimated glomerular filtration rate (eGFR)), and a 40% or 30% decrease in eGFR over a 1–3-year period. These factors can also be indicators for CKD progression.",
+      "gold_verification_anchors": [
+        "ckd",
+        "gfr",
+        "damage"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-04-2",
+      "query": "How is albuminuria categorized into stages A1, A2, and A3 using the urine albumin-to-creatinine ratio?",
+      "topic": "ckd",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: urine albumin-to-creatinine ratio staging (A1-A3)",
+      "medical_claim": "Albuminuria categories are defined as A1 (<30 mg/g, normal to mildly increased), A2 (30-299 mg/g, moderately increased), and A3 (>=300 mg/g, severely increased).",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0017"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0017"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0017",
+          "evidence_text": "Abnormal urinalysis, diagnostic imaging, blood tests, or pathological diagnosis clearly indicative of kidney injury; presence of proteinuria of 0.15 g/gCr or more (albuminuria of 30 mg/gCr or more) is particularly important.",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for ckd"
+        }
+      ],
+      "primary_evidence_quote": "Abnormal urinalysis, diagnostic imaging, blood tests, or pathological diagnosis clearly indicative of kidney injury; presence of proteinuria of 0.15 g/gCr or more (albuminuria of 30 mg/gCr or more) is particularly important.",
+      "gold_verification_anchors": [
+        "albuminuria",
+        "proteinuria",
+        "ratio"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-04-3",
+      "query": "Why do patients with chronic kidney disease face significantly elevated cardiovascular morbidity and mortality?",
+      "topic": "ckd",
+      "question_type": "clinical_reasoning",
+      "learning_objective": "Undergraduate renal medicine: cardiovascular risk multiplication in CKD",
+      "medical_claim": "CKD accelerates vascular calcification, arterial stiffness, left ventricular hypertrophy, and coronary heart disease, making cardiovascular events the leading cause of mortality.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0001",
+          "evidence_text": "It has been clarified that chronic kidney disease (CKD) not only causes end-stage kidney disease but also increases the risk of developing cardiovascular disease (CVD) and death. There has been an increase in the number of chronic dialysis patients in Japan compared to that in other countries. As the population ages, an increase in CKD patients is ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for ckd"
+        }
+      ],
+      "primary_evidence_quote": "It has been clarified that chronic kidney disease (CKD) not only causes end-stage kidney disease but also increases the risk of developing cardiovascular disease (CVD) and death. There has been an increase in the number of chronic dialysis patients in Japan compared to that in other countries. As the population ages, an increase in CKD patients is expected; therefore, this is a particularly important issue.",
+      "gold_verification_anchors": [
+        "cardiovascular",
+        "risk",
+        "mortality"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-04-4",
+      "query": "How do ACE inhibitors or ARBs slow CKD progression in proteinuric patients?",
+      "topic": "ckd",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: renoprotective blood pressure targets and RAAS blockade",
+      "medical_claim": "ACE inhibitors reduce efferent arteriolar resistance, decreasing intraglomerular hydraulic pressure and proteinuria, thereby retarding progressive glomerulosclerosis and tubular fibrosis.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0007-P0074"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0074"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0007",
+          "parent_section_id": "DOC-PMC-RENAL-0007-P0074",
+          "evidence_text": "Blood pressure management is important for treatment. In addition to the retarding kidney function deterioration, subsequent onset of CVD is often observed; therefore, treatment should be considered from the perspective of suppressing CVD progression. Antihypertensive goals and first-line drugs are based on Chapter 2 of this guideline.",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for ckd"
+        }
+      ],
+      "primary_evidence_quote": "Blood pressure management is important for treatment. In addition to the retarding kidney function deterioration, subsequent onset of CVD is often observed; therefore, treatment should be considered from the perspective of suppressing CVD progression. Antihypertensive goals and first-line drugs are based on Chapter 2 of this guideline.",
+      "gold_verification_anchors": [
+        "progression",
+        "pressure",
+        "hypertension"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-05-1",
+      "query": "What are the core consensus recommendations in urological guidelines for evaluating acute urolithiasis?",
+      "topic": "renal_stones",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: international guidelines on urinary stone management",
+      "medical_claim": "Urological guidelines recommend prompt analgesia with NSAIDs, low-dose non-contrast CT KUB imaging, and evaluation of stone size and location to determine spontaneous passage probability.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0001",
+          "evidence_text": "Abstract Background: Evidence-based guidelines are published by urological organisations for various conditions, including urolithiasis. In this paper, we provide guidance on the management of kidney stone disease (KSD) and compare the American Urological Association (AUA) and European Association of Urologists (EAU) guidelines. Methods: We evaluat",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Background: Evidence-based guidelines are published by urological organisations for various conditions, including urolithiasis. In this paper, we provide guidance on the management of kidney stone disease (KSD) and compare the American Urological Association (AUA) and European Association of Urologists (EAU) guidelines. Methods: We evaluate and appraise the evidence and grade of recommendation provided by the AUA and EAU guidelines on urolithiasis (both surgical and medical management). Results: Both the AUA and EAU guidelines provide guidance on the type of imaging, treatment options, and medical therapies and advice on specific patient groups, such as in paediatrics and pregnancy. While the guidelines are generally aligned and based on evidence, some subtle differences exist in the recommendations, but both are generally unanimous for the majority of the principles of management. Conclusions: We recommend that the guidelines should undergo regular updates based on recently published material, and while these guidelines provide a framework, treatment plans should still be personalised, respecting patient preferences, surgical expertise, and various other individual factors, to offer the best outcome for kidney stone patients. Keywords: kidney calculi, ureteroscopy, PCNL, bladder calculi, laser",
+      "gold_verification_anchors": [
+        "stone",
+        "guideline",
+        "urolithiasis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-05-2",
+      "query": "When is shock wave lithotripsy (SWL) indicated for renal and upper ureteric stones?",
+      "topic": "renal_stones",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: extracorporeal shock wave lithotripsy (ESWL) indications",
+      "medical_claim": "Extracorporeal shock wave lithotripsy is a first-line non-invasive intervention for renal pelvis and upper caliceal stones smaller than 20 mm with favorable stone density.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0047"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0047"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0047",
+          "evidence_text": "Migratory bladder stones (those that have passed from the upper urinary tract) can be treated conservatively, especially if asymptomatic. However, primary (i.e., forming in absence of any other urinary tract abnormality) and secondary (i.e., occurring in the presence of other urinary tract pathologies) ones are less likely to pass spontaneously and",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "Migratory bladder stones (those that have passed from the upper urinary tract) can be treated conservatively, especially if asymptomatic. However, primary (i.e., forming in absence of any other urinary tract abnormality) and secondary (i.e., occurring in the presence of other urinary tract pathologies) ones are less likely to pass spontaneously and require active management [ 5 ]. Several treatment options for bladder calculi are available. Of these, transurethral, endoscopic, and percutaneous treatments have similar SFRs but offer the advantage of a shorter duration of surgery, hospital stay, and catheterisation when compared to open cystolithotomy [ 27 ]. Transurethral cystolithotripsy should therefore be offered to adults as a first line and, where not possible, a percutaneous cystolithotripsy should be considered (EAU: strong recommendation). Open cystolithotomy can be used as a first line for very large bladder stones (EAU: weak recommendation). When endoscopic techniques are not preferable, laparoscopic, SWL, or open cystolithotomy approaches can be used as alternative options (EAU: weak recommendation), although the guidelines highlight the fact that SWL is associated with a lower SFR for bladder calculi compared to open or endoscopic procedures.",
+      "gold_verification_anchors": [
+        "lithotripsy",
+        "shock",
+        "stone"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-05-3",
+      "query": "What advantages does flexible ureteroscopy with laser lithotripsy provide for ureteric calculi?",
+      "topic": "renal_stones",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: ureteroscopy (URS) for ureteric calculus extraction",
+      "medical_claim": "Ureteroscopy provides high primary stone-free rates, direct endoscopic visualization, and immediate stone fragmentation or basket retrieval throughout the ureter and renal collecting system.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0001",
+          "evidence_text": "Abstract Background: Evidence-based guidelines are published by urological organisations for various conditions, including urolithiasis. In this paper, we provide guidance on the management of kidney stone disease (KSD) and compare the American Urological Association (AUA) and European Association of Urologists (EAU) guidelines. Methods: We evaluat",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Background: Evidence-based guidelines are published by urological organisations for various conditions, including urolithiasis. In this paper, we provide guidance on the management of kidney stone disease (KSD) and compare the American Urological Association (AUA) and European Association of Urologists (EAU) guidelines. Methods: We evaluate and appraise the evidence and grade of recommendation provided by the AUA and EAU guidelines on urolithiasis (both surgical and medical management). Results: Both the AUA and EAU guidelines provide guidance on the type of imaging, treatment options, and medical therapies and advice on specific patient groups, such as in paediatrics and pregnancy. While the guidelines are generally aligned and based on evidence, some subtle differences exist in the recommendations, but both are generally unanimous for the majority of the principles of management. Conclusions: We recommend that the guidelines should undergo regular updates based on recently published material, and while these guidelines provide a framework, treatment plans should still be personalised, respecting patient preferences, surgical expertise, and various other individual factors, to offer the best outcome for kidney stone patients. Keywords: kidney calculi, ureteroscopy, PCNL, bladder calculi, laser",
+      "gold_verification_anchors": [
+        "ureteroscopy",
+        "stone",
+        "laser"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-05-4",
+      "query": "How does urinary citrate inhibit calcium stone formation, and when is potassium citrate indicated?",
+      "topic": "renal_stones",
+      "question_type": "prevention",
+      "learning_objective": "Undergraduate renal medicine: urinary citrate inhibition of calcium crystallization",
+      "medical_claim": "Citrate chelates ionic calcium in urine, forming a soluble complex that reduces calcium oxalate and calcium phosphate supersaturation and inhibits crystal agglomeration.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0012-P0058"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0059"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0012",
+          "parent_section_id": "DOC-PMC-RENAL-0012-P0058",
+          "evidence_text": "One or two 24-h urinary samples should be collected for metabolic assessment, with the AUA panel preferring two samples. When the patient is on a random diet, this should be assessed at least for pH, volume, calcium, uric acid, sodium, citrate, oxalate, potassium, and creatinine (AUA: expert opinion). The EAU also favours the collection of two cons",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "One or two 24-h urinary samples should be collected for metabolic assessment, with the AUA panel preferring two samples. When the patient is on a random diet, this should be assessed at least for pH, volume, calcium, uric acid, sodium, citrate, oxalate, potassium, and creatinine (AUA: expert opinion). The EAU also favours the collection of two consecutive 24-h urinary samples. It also mentions spot urine samples, although of limited use, but they can be an alternative when 24-h collection is not possible (for example, in children) [ 5 ]. Ideally, the patient should be stone-free for at least 20 days and on their normal regular diet before the initial metabolic assessment [ 39 ].",
+      "gold_verification_anchors": [
+        "citrate",
+        "calcium",
+        "oxalate"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-06-1",
+      "query": "What pathological sequence leads from myocyte injury to myoglobin cast formation in renal tubules?",
+      "topic": "rhabdomyolysis",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: myoglobin-induced acute tubular necrosis",
+      "medical_claim": "Skeletal muscle disruption releases massive myoglobin into circulation, which is filtered at the glomerulus and precipitates with Tamm-Horsfall protein in distal tubules, causing luminal obstruction.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0001",
+          "evidence_text": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophys",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophysiology of rhabdomyolysis and following AKI could widen treatment options, leading to preservation of the kidney: the decision to initiate renal replacement therapy in clinical practice should not be made on the basis of the myoglobin or creatine phosphokinase serum concentrations.",
+      "gold_verification_anchors": [
+        "rhabdomyolysis",
+        "myoglobin",
+        "tubular"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-06-2",
+      "query": "How does serum creatine kinase elevation reflect skeletal muscle injury severity in rhabdomyolysis?",
+      "topic": "rhabdomyolysis",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: serum creatine kinase elevation in rhabdomyolysis",
+      "medical_claim": "Serum creatine kinase levels rise within 2-12 hours of skeletal muscle breakdown, peaking at 24-72 hours, with marked elevations (>5,000 U/L) correlating with AKI risk.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0001",
+          "evidence_text": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophys",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophysiology of rhabdomyolysis and following AKI could widen treatment options, leading to preservation of the kidney: the decision to initiate renal replacement therapy in clinical practice should not be made on the basis of the myoglobin or creatine phosphokinase serum concentrations.",
+      "gold_verification_anchors": [
+        "creatine",
+        "muscle",
+        "rhabdomyolysis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-06-3",
+      "query": "When is renal replacement therapy indicated in patients with rhabdomyolysis-induced acute kidney failure?",
+      "topic": "rhabdomyolysis",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: renal replacement therapy in severe rhabdomyolysis",
+      "medical_claim": "Renal replacement therapy is indicated when conservative volume resuscitation fails to resolve life-threatening hyperkalemia, severe refractory metabolic acidosis, or hypervolemic pulmonary edema.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0001",
+          "evidence_text": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophys",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "Abstract Rhabdomyolysis, a clinical syndrome caused by damage to skeletal muscle and release of its breakdown products into the circulation, can be followed by acute kidney injury (AKI) as a severe complication. The belief that the AKI is triggered by myoglobin as the toxin responsible appears to be oversimplified. Better knowledge of the pathophysiology of rhabdomyolysis and following AKI could widen treatment options, leading to preservation of the kidney: the decision to initiate renal replacement therapy in clinical practice should not be made on the basis of the myoglobin or creatine phosphokinase serum concentrations.",
+      "gold_verification_anchors": [
+        "replacement therapy",
+        "dialysis",
+        "rhabdomyolysis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-06-4",
+      "query": "What fluid administration regimen is recommended in acute crush syndrome to prevent acute tubular necrosis?",
+      "topic": "rhabdomyolysis",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: fluid resuscitation goals in crush injury",
+      "medical_claim": "Immediate intravenous volume resuscitation with isotonic crystalloids targeting a high urine output (200-300 mL/h) is vital to dilute tubular myoglobin and wash out obstructive casts.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0015"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0015-P0021"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0021"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0015",
+          "parent_section_id": "DOC-PMC-RENAL-0015-P0021",
+          "evidence_text": "Renal vasoconstriction is caused by reduced renal blood flow due to excessive leakage of extracellular fluid into the damaged muscle cells and by secondary activation of the renin–angiotensin–aldosterone system. However, a second theory favors the effect of the nitric oxide scavenging characteristics of myoglobin and release of cytokines [ 25 , 26 ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for rhabdomyolysis"
+        }
+      ],
+      "primary_evidence_quote": "Renal vasoconstriction is caused by reduced renal blood flow due to excessive leakage of extracellular fluid into the damaged muscle cells and by secondary activation of the renin–angiotensin–aldosterone system. However, a second theory favors the effect of the nitric oxide scavenging characteristics of myoglobin and release of cytokines [ 25 , 26 ]. The formation of intratubular casts explains the urine concentration and the following reaction of myoglobin with Tamm–Horsfall tubular protein. Further, renal vasoconstriction, the decrease in renal blood flow due to volume depletion and the low pH of urine promote this pathological process by formation of stronger and more rapid bonds between Tamm–Horsfall protein and myoglobin [ 12 , 20 ].",
+      "gold_verification_anchors": [
+        "fluid",
+        "volume",
+        "resuscitation"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-07-1",
+      "query": "Why does serum creatinine underestimate kidney dysfunction in critically ill intensive care patients?",
+      "topic": "gfr",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: limitations of serum creatinine in critically ill patients",
+      "medical_claim": "Critically ill patients suffer reduced muscle mass, decreased hepatic creatine production, and aggressive fluid resuscitation dilution, causing serum creatinine to substantially lag behind true GFR decline.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0082"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0082"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0082",
+          "evidence_text": "Table 3 Individual data on measured and estimated glomerular filtration rates (mL/min/1.73m 2 ) in 30 critically ill patients — Patient: 1; 51 Cr-EDTA: 39; CrCl: 39; MDRD: 34; CKD-EPI: 35; CG: 37; Column 7: 37; Column 8: 34",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for gfr"
+        }
+      ],
+      "primary_evidence_quote": "Table 3 Individual data on measured and estimated glomerular filtration rates (mL/min/1.73m 2 ) in 30 critically ill patients — Patient: 1; 51 Cr-EDTA: 39; CrCl: 39; MDRD: 34; CKD-EPI: 35; CG: 37; Column 7: 37; Column 8: 34",
+      "gold_verification_anchors": [
+        "critically ill",
+        "creatinine",
+        "filtration"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-07-2",
+      "query": "How does measured timed urinary creatinine clearance overcome limitations of static serum creatinine in ICU patients?",
+      "topic": "gfr",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: timed urinary creatinine clearance in non-steady state GFR",
+      "medical_claim": "Measured 2- to 8-hour timed urinary creatinine clearance provides a direct estimate of current filtration rate that does not assume steady-state serum creatinine concentrations.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0005",
+          "evidence_text": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patient",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for gfr"
+        }
+      ],
+      "primary_evidence_quote": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patients, where changes in the hemodynamic status can result in dramatic changes in renal function over a 24-hour urine collection period. Furthermore, accurate timed collection of urine is cumbersome, and the main source of error [ 12 ]. Finally, urinary CrCl may considerably overestimate GFR because of tubular secretion of creatinine [ 1 , 5 ].",
+      "gold_verification_anchors": [
+        "creatinine",
+        "clearance",
+        "urine"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-07-3",
+      "query": "What is augmented renal clearance (ARC), and why does it lead to subtherapeutic antimicrobial dosing?",
+      "topic": "gfr",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: augmented renal clearance in sepsis and polytrauma",
+      "medical_claim": "Augmented renal clearance (CrCl >130 mL/min/1.73m2) occurs in hyperdynamic states like sepsis and burns, resulting in rapid elimination and under-dosing of renally excreted antibiotics.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0005"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0005"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0005",
+          "evidence_text": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patient",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for gfr"
+        }
+      ],
+      "primary_evidence_quote": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]. However, clearance methods require a steady state situation, a criteria not always met in critically ill patients, where changes in the hemodynamic status can result in dramatic changes in renal function over a 24-hour urine collection period. Furthermore, accurate timed collection of urine is cumbersome, and the main source of error [ 12 ]. Finally, urinary CrCl may considerably overestimate GFR because of tubular secretion of creatinine [ 1 , 5 ].",
+      "gold_verification_anchors": [
+        "clearance",
+        "renal",
+        "filtration"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-07-4",
+      "query": "Why is serum cystatin C less affected by muscle mass variations than serum creatinine when estimating GFR?",
+      "topic": "gfr",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: cystatin C as an alternative filtration marker",
+      "medical_claim": "Cystatin C is produced by all nucleated cells at a constant rate and eliminated solely by glomerular filtration, making it largely independent of muscle mass, age, and dietary protein intake.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0016"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0016-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0016",
+          "parent_section_id": "DOC-PMC-RENAL-0016-P0002",
+          "evidence_text": "Accurate assessment of kidney function in the critically ill patient plays an important role in diagnosing acute kidney injury (AKI); in the appropriate prescription and dosing of drugs, whose elimination depends on renal function; and in timely application of therapeutic strategies. In clinical medicine, the concentration of creatinine in serum is",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for gfr"
+        }
+      ],
+      "primary_evidence_quote": "Accurate assessment of kidney function in the critically ill patient plays an important role in diagnosing acute kidney injury (AKI); in the appropriate prescription and dosing of drugs, whose elimination depends on renal function; and in timely application of therapeutic strategies. In clinical medicine, the concentration of creatinine in serum is used daily as a marker for kidney function. However, serum creatinine concentration may not be suitable for this purpose as it is affected by factors other than kidney function. Creatinine is metabolized from creatine, which is released by the muscles, therefore muscle mass and metabolic transformation of creatine have an impact on serum creatinine concentration [ 1 ]. In addition, age, gender and race all affect muscle mass and, in turn, serum creatinine concentrations [ 2 , 3 ].",
+      "gold_verification_anchors": [
+        "creatinine",
+        "filtration",
+        "marker"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-08-1",
+      "query": "Where in the nephron is SGLT2 located, and what percentage of filtered glucose does it reabsorb?",
+      "topic": "glucose_handling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: SGLT2 location and sodium-glucose cotransport stoichiometry",
+      "medical_claim": "SGLT2 is located on the luminal brush border of the S1/S2 segments of the proximal convoluted tubule, mediating high-capacity 1:1 sodium-glucose cotransport responsible for ~90% of glucose reabsorption.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0018"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0018"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0018",
+          "evidence_text": "Table 1 Characteristics of sodium-independent glucose transporters (GLUT proteins) in the healthy human kidneys. — Glucose Transporter: GLUT2; Gene: SLC2A2; Characteristics: Expressed at the basolateral membrane of the epithelial renal tubules. GLUT2 releases glucose, reabsorbed earlier by SGLT2, and fructose, reabsorbed by GLUT5, into the bloodstr",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "Table 1 Characteristics of sodium-independent glucose transporters (GLUT proteins) in the healthy human kidneys. — Glucose Transporter: GLUT2; Gene: SLC2A2; Characteristics: Expressed at the basolateral membrane of the epithelial renal tubules. GLUT2 releases glucose, reabsorbed earlier by SGLT2, and fructose, reabsorbed by GLUT5, into the bloodstream.; References: [ 13 , 21 , 22 , 23 , 26 ]",
+      "gold_verification_anchors": [
+        "sglt2",
+        "glucose",
+        "proximal"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-08-2",
+      "query": "How does reabsorbed glucose exit proximal tubular epithelial cells across the basolateral membrane into peritubular capillaries?",
+      "topic": "glucose_handling",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: basolateral glucose exit via GLUT2 transporters",
+      "medical_claim": "Glucose exits proximal tubular cells into the interstitial space and peritubular capillaries by facilitated diffusion mediated by basolateral GLUT2 transporters.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0017"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0017"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0017",
+          "evidence_text": "Table 1 Characteristics of sodium-independent glucose transporters (GLUT proteins) in the healthy human kidneys. — Glucose Transporter: GLUT1; Gene: SLC2A1; Characteristics: Expressed at the basolateral membrane of the epithelial cells in the S3 segment of the proximal tubule. GLUT1 releases glucose reabsorbed earlier by SGLT1 into the bloodstream.",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "Table 1 Characteristics of sodium-independent glucose transporters (GLUT proteins) in the healthy human kidneys. — Glucose Transporter: GLUT1; Gene: SLC2A1; Characteristics: Expressed at the basolateral membrane of the epithelial cells in the S3 segment of the proximal tubule. GLUT1 releases glucose reabsorbed earlier by SGLT1 into the bloodstream.; References: [ 7 , 8 , 13 , 21 , 27 ]",
+      "gold_verification_anchors": [
+        "proximal tubule",
+        "transporter",
+        "glucose"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-08-3",
+      "query": "What is the physiological renal threshold for glucose excretion, and what happens when it is exceeded?",
+      "topic": "glucose_handling",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: renal threshold for glucose and osmotic diuresis",
+      "medical_claim": "When plasma glucose exceeds the renal threshold of ~10-11 mmol/L (180-200 mg/dL), tubular transport maximum (TmG) is saturated, resulting in glucosuria and solute-induced osmotic diuresis.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0001",
+          "evidence_text": "Abstract The kidney plays an important role in glucose homeostasis by releasing glucose into the blood stream to prevent hypoglycemia. It is also responsible for the filtration and subsequent reabsorption or excretion of glucose. As glucose is hydrophilic and soluble in water, it is unable to pass through the lipid bilayer on its own; therefore, tr",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "Abstract The kidney plays an important role in glucose homeostasis by releasing glucose into the blood stream to prevent hypoglycemia. It is also responsible for the filtration and subsequent reabsorption or excretion of glucose. As glucose is hydrophilic and soluble in water, it is unable to pass through the lipid bilayer on its own; therefore, transport takes place using carrier proteins localized to the plasma membrane. Both sodium-independent glucose transporters (GLUT proteins) and sodium-dependent glucose transporters (SGLT proteins) are expressed in kidney tissue, and mutations of the genes coding for these glucose transporters lead to renal disorders and diseases, including renal cancers. In addition, several diseases may disturb the expression and/or function of renal glucose transporters. The aim of this review is to describe the role of the kidney in glucose homeostasis and the contribution of glucose transporters in renal physiology and renal diseases. Keywords: kidney, glucose transporters, glucose homeostasis, physiology, diseases",
+      "gold_verification_anchors": [
+        "sglt",
+        "reabsorption",
+        "glucose"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-08-4",
+      "query": "How do pharmacological SGLT2 inhibitors restore tubuloglomerular feedback to protect glomerular capillary pressure in diabetic nephropathy?",
+      "topic": "glucose_handling",
+      "question_type": "mechanism",
+      "learning_objective": "Undergraduate renal medicine: renoprotection by SGLT2 inhibitors",
+      "medical_claim": "SGLT2 inhibitors increase distal luminal NaCl delivery to the macula densa, triggering tubuloglomerular feedback and afferent arteriolar vasoconstriction, thereby reducing intraglomerular hypertension.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0019"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0019-P0098"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0098"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0019",
+          "parent_section_id": "DOC-PMC-RENAL-0019-P0098",
+          "evidence_text": "In the late 1980s, it was found that the administration of phlorizin, first isolated in 1863 from apple tree bark [ 119 ], induces glucosuria and normalizes fasting and fed plasma glucose levels [ 120 , 121 ]. It was suggested that phlorizin blocks both SGLT1 and SGLT2 activity [ 45 ]. Unfortunately, it was also found that phlorizin lacks any thera",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for glucose_handling"
+        }
+      ],
+      "primary_evidence_quote": "In the late 1980s, it was found that the administration of phlorizin, first isolated in 1863 from apple tree bark [ 119 ], induces glucosuria and normalizes fasting and fed plasma glucose levels [ 120 , 121 ]. It was suggested that phlorizin blocks both SGLT1 and SGLT2 activity [ 45 ]. Unfortunately, it was also found that phlorizin lacks any therapeutic potential as a treatment for patients with diabetes due to its poor oral absorption and the fact that SGLT1 is an intestinal sodium-dependent glucose co-transporter, and, as such, its blockage causes diarrhea [ 122 ]. Therefore, phlorizin derivatives acting as selective inhibitors of SGLT2 have been designed. However, although these inhibitors have been approved as glucose lowering agents for patients with T2DM, they also reduce the single-nephron glomerular filtration rate (SNGFR) in chronically diseased kidneys [ 123 ]. As mentioned earlier, diabetic nephropathy is the leading cause of end-stage renal failure. When given chronically, the inhibitors markedly slow the progress of chronic kidney disease in patients with T2DM [ 122 ]. Several inhibitors have become available, such as Canagliflozin, Dapagliflozin, and Empagliflozin [ 124 ].",
+      "gold_verification_anchors": [
+        "inhibitor",
+        "diabetes",
+        "sglt2"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-09-1",
+      "query": "How does differential permeability between descending and ascending limbs of Henle create a hypertonic medullary gradient?",
+      "topic": "countercurrent_multiplier",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: countercurrent multiplier in loops of Henle",
+      "medical_claim": "The descending limb is water-permeable and solute-impermeable, while the thick ascending limb actively pumps sodium and chloride without water, creating a horizontal osmotic gradient multiplied vertically.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0001",
+          "evidence_text": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for countercurrent_multiplier"
+        }
+      ],
+      "primary_evidence_quote": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the microanatomy of the renal medulla and the transport capacities of the involved tubules and vessels, we propose a mechanism, in which countercurrent exchange (CCE) operates at different levels in the outer and inner medulla to create gradients of salt and urea and to impede their dissipation. Salt release by ascending thick and thin loop limbs (TALs and ATLs) including the bend segments and urea release by terminal collecting ducts (CDs) increase at any medullary level solute concentrations in ascending vasa recta (AVRs) above those in descending loop limbs (DLs) and CDs leading to water extraction from both resulting in final urine concentration. Solute loss by washout is minimized by counter-current exchange between AVRs and descending vasa recta (DVRs), continuously balanced through addition of salt by ATLs and urea by terminal CDs.",
+      "gold_verification_anchors": [
+        "countercurrent",
+        "medullary",
+        "gradient"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-09-2",
+      "query": "What active transporter in the thick ascending limb generates the 'single effect' of medullary hypertonicity?",
+      "topic": "countercurrent_multiplier",
+      "question_type": "mechanism",
+      "learning_objective": "Undergraduate renal medicine: NKCC2 transport in thick ascending limb",
+      "medical_claim": "The apical NKCC2 cotransporter actively transports 1 Na+, 1 K+, and 2 Cl- ions into thick ascending limb cells, establishing interstitial hypertonicity driven by basolateral Na+/K+-ATPase.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0003"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0003",
+          "evidence_text": "The CCM-hypothesis, was first published in two papers in the early fifties of the past century by Wirz, Hargitay and Kuhn [ 36 , 123 ], and republished in 2001 [ 35 ]. Its schematic representation is found in most publications on renal physiology for students and medical doctors. It relies on an active transport of some substance (in the present co",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for countercurrent_multiplier"
+        }
+      ],
+      "primary_evidence_quote": "The CCM-hypothesis, was first published in two papers in the early fifties of the past century by Wirz, Hargitay and Kuhn [ 36 , 123 ], and republished in 2001 [ 35 ]. Its schematic representation is found in most publications on renal physiology for students and medical doctors. It relies on an active transport of some substance (in the present context: salt) from the ascending limb along its entire length into the descending limb creating a longitudinal salt gradient with the highest salt concentration at the loop bend. At any level of the loop the up-hill transport from the ascending limb into the descending limb, the so-called “single concentrating effect”, has to overcome just a small gradient. This mechanism was first experimentally established in artificial tubes [ 123 ] and has been subsequently applied to the renal medulla, albeit with significant deviations from the original conditions [ 122 ].",
+      "gold_verification_anchors": [
+        "active transport",
+        "concentration",
+        "medulla"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-09-3",
+      "query": "Why do the hairpin loops of the vasa recta function as countercurrent exchangers rather than multipliers?",
+      "topic": "countercurrent_multiplier",
+      "question_type": "physiology",
+      "learning_objective": "Undergraduate renal medicine: vasa recta countercurrent exchange",
+      "medical_claim": "The highly permeable vasa recta act as passive countercurrent exchangers, maintaining the medullary osmotic gradient by allowing water and solutes to equilibrate slowly without washing out the hypertonic interstitium.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0001",
+          "evidence_text": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for countercurrent_multiplier"
+        }
+      ],
+      "primary_evidence_quote": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the microanatomy of the renal medulla and the transport capacities of the involved tubules and vessels, we propose a mechanism, in which countercurrent exchange (CCE) operates at different levels in the outer and inner medulla to create gradients of salt and urea and to impede their dissipation. Salt release by ascending thick and thin loop limbs (TALs and ATLs) including the bend segments and urea release by terminal collecting ducts (CDs) increase at any medullary level solute concentrations in ascending vasa recta (AVRs) above those in descending loop limbs (DLs) and CDs leading to water extraction from both resulting in final urine concentration. Solute loss by washout is minimized by counter-current exchange between AVRs and descending vasa recta (DVRs), continuously balanced through addition of salt by ATLs and urea by terminal CDs.",
+      "gold_verification_anchors": [
+        "vasa recta",
+        "exchange",
+        "blood flow"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-09-4",
+      "query": "How do loop diuretics (like furosemide) impair both urinary concentration and urinary dilution?",
+      "topic": "countercurrent_multiplier",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: loop diuretic disruption of medullary concentration gradient",
+      "medical_claim": "Loop diuretics inhibit NKCC2 in the thick ascending limb, preventing active solute pumping into the medulla which abolishes the medullary osmotic gradient required for water reabsorption.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0023-P0001"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0001"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0023",
+          "parent_section_id": "DOC-PMC-RENAL-0023-P0001",
+          "evidence_text": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for countercurrent_multiplier"
+        }
+      ],
+      "primary_evidence_quote": "The longitudinal arrangement of tubules and vessels in the renal medulla has in the early fifties of the last century given birth to the concept of countercurrent multiplication (CCM). Since then, enormous research has been expended, but a consent on a common concept of the urinary concentrating mechanism has not been reached. Strictly based on the microanatomy of the renal medulla and the transport capacities of the involved tubules and vessels, we propose a mechanism, in which countercurrent exchange (CCE) operates at different levels in the outer and inner medulla to create gradients of salt and urea and to impede their dissipation. Salt release by ascending thick and thin loop limbs (TALs and ATLs) including the bend segments and urea release by terminal collecting ducts (CDs) increase at any medullary level solute concentrations in ascending vasa recta (AVRs) above those in descending loop limbs (DLs) and CDs leading to water extraction from both resulting in final urine concentration. Solute loss by washout is minimized by counter-current exchange between AVRs and descending vasa recta (DVRs), continuously balanced through addition of salt by ATLs and urea by terminal CDs.",
+      "gold_verification_anchors": [
+        "countercurrent",
+        "gradient",
+        "loop"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-10-1",
+      "query": "What are the characteristic renal ultrasound findings in acute obstructive uropathy?",
+      "topic": "obstruction_hydronephrosis",
+      "question_type": "investigation",
+      "learning_objective": "Undergraduate renal medicine: ultrasound detection of pelvicalyceal dilatation",
+      "medical_claim": "Renal ultrasonography in urinary tract obstruction demonstrates separation and dilatation of the central renal sinus echoes, reflecting pelvicalyceal fluid accumulation (hydronephrosis).",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0003"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0014",
+          "parent_section_id": "DOC-PMC-RENAL-0014-P0002",
+          "evidence_text": "Urinary ultrasound (US) is the best we have for the diagnosis and follow-up of both prenatal and post-natal hydronephrosis as a similar modality ( 1 – 11 ). It is non-invasive, easily available, fast, and low-cost; can be performed directly in bedside manner; and does not involve radiation. It shows the size of kidneys, thickness, and appearance of",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for obstruction_hydronephrosis"
+        }
+      ],
+      "primary_evidence_quote": "Urinary ultrasound (US) is the best we have for the diagnosis and follow-up of both prenatal and post-natal hydronephrosis as a similar modality ( 1 – 11 ). It is non-invasive, easily available, fast, and low-cost; can be performed directly in bedside manner; and does not involve radiation. It shows the size of kidneys, thickness, and appearance of parenchyma (echogenicity, corticomedullary differentiation, cortical cysts), severity of hydronephrosis, ureteral dilation, and bladder anatomy ( 1 , 2 , 4 – 6 , 9 – 11 ).",
+      "gold_verification_anchors": [
+        "hydronephrosis",
+        "ultrasound",
+        "pelvis"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-10-2",
+      "query": "How does Society for Fetal Urology (SFU) grading classify hydronephrosis severity based on caliceal dilatation and parenchymal thinning?",
+      "topic": "obstruction_hydronephrosis",
+      "question_type": "diagnosis",
+      "learning_objective": "Undergraduate renal medicine: grading hydronephrosis from mild to severe",
+      "medical_claim": "SFU grading progresses from Grade 1 (pelvic dilatation only) to Grade 2 (major calyces), Grade 3 (all calyces dilated with preserved cortex), and Grade 4 (caliceal dilatation with renal parenchymal thinning).",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0014"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0014-P0039"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0040"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0014",
+          "parent_section_id": "DOC-PMC-RENAL-0014-P0039",
+          "evidence_text": "UTD has been created retrospectively based on reviewing, combining, and summarizing the current literature ( 2 ) ( Figure 3 ). It, therefore, is not an evidence-based grading system. Actually, it most likely has been modified from SFU and Onen grading systems ( 4 , 9 ). It aims to put all significant abnormal urinary findings together including the",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for obstruction_hydronephrosis"
+        }
+      ],
+      "primary_evidence_quote": "UTD has been created retrospectively based on reviewing, combining, and summarizing the current literature ( 2 ) ( Figure 3 ). It, therefore, is not an evidence-based grading system. Actually, it most likely has been modified from SFU and Onen grading systems ( 4 , 9 ). It aims to put all significant abnormal urinary findings together including the kidney, ureter, and bladder and thus determines the risk level for a hydronephrotic infant with any kind urinary diseases. It includes such parameters as AP diameter of renal pelvis, central and peripheral calyceal dilation, renal parenchyma, ureteral abnormalities, and bladder abnormalities ( 2 ). All these findings are very important by themselves. However, the natural history, diagnosis, follow-up, treatment, and prognosis of urinary diseases are significantly different from each other depending on the etiopathology of hydronephrosis.",
+      "gold_verification_anchors": [
+        "grading",
+        "dilation",
+        "calyx"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-10-3",
+      "query": "How do urease-positive bacteria (such as Proteus mirabilis) precipitate magnesium ammonium phosphate (struvite) stones?",
+      "topic": "renal_stones",
+      "question_type": "pathophysiology",
+      "learning_objective": "Undergraduate renal medicine: urease-producing bacteria and struvite calculus formation",
+      "medical_claim": "Bacterial urease hydrolyzes urinary urea into carbon dioxide and ammonia, markedly raising urine pH (>7.2) and generating ammonium ions that precipitate magnesium and phosphate into struvite staghorn calculi.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0013-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0013",
+          "parent_section_id": "DOC-PMC-RENAL-0013-P0002",
+          "evidence_text": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established etiopathogenetic role in the formation of infection stones (magnesium ammonium phosphate or “struvite” stones, frequently combined with calcium phosphate or calcium carbonate apatite) [ 2 ], through the urea-splitting mechanism of urease-producing gram-positive and gram-negative bacterial species such as Proteus [ 3 ], Staphylococcus , Pseudomonas , Providencia , Ureaplasma [ 4 ], and Klebsiella [ 5 ]. However, they comprise 10–15% of urinary stones overall.",
+      "gold_verification_anchors": [
+        "struvite",
+        "stone",
+        "infection"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-10-4",
+      "query": "Why is complete surgical clearance mandatory for struvite staghorn calculi?",
+      "topic": "renal_stones",
+      "question_type": "management",
+      "learning_objective": "Undergraduate renal medicine: definitive surgical eradication of staghorn infection stones",
+      "medical_claim": "Complete surgical extraction (typically via percutaneous nephrolithotomy) is mandatory because residual stone fragments harbor persistent bacterial biofilms that inevitably cause recurrent severe UTIs and rapid stone recurrence.",
+      "evaluation_label": "SUPPORTED",
+      "answerable": true,
+      "gold_document_ids": [
+        "DOC-PMC-RENAL-0013"
+      ],
+      "gold_parent_section_ids": [
+        "DOC-PMC-RENAL-0013-P0002"
+      ],
+      "gold_child_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0002"
+      ],
+      "evidence_spans": [
+        {
+          "document_id": "DOC-PMC-RENAL-0013",
+          "parent_section_id": "DOC-PMC-RENAL-0013-P0002",
+          "evidence_text": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established ",
+          "is_primary": true,
+          "verification_method": "source_curriculum_text_match",
+          "justification": "Verified supporting text for renal_stones"
+        }
+      ],
+      "primary_evidence_quote": "Kidney stones affect approximately 1 in 11 people in the USA, especially obese and diabetic patients [ 1 ]. The relationship between kidney stone disease (KSD) and urinary tract infections (UTI) is yet to be clarified where in a chicken and egg dilemma exists as to which is the aetiological factor and which the consequence. UTI have an established etiopathogenetic role in the formation of infection stones (magnesium ammonium phosphate or “struvite” stones, frequently combined with calcium phosphate or calcium carbonate apatite) [ 2 ], through the urea-splitting mechanism of urease-producing gram-positive and gram-negative bacterial species such as Proteus [ 3 ], Staphylococcus , Pseudomonas , Providencia , Ureaplasma [ 4 ], and Klebsiella [ 5 ]. However, they comprise 10–15% of urinary stones overall.",
+      "gold_verification_anchors": [
+        "proteus",
+        "urease",
+        "stone"
+      ],
+      "gold_minimum_anchor_hits": 2,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-01",
+      "query": "What is the exact target trough whole blood concentration of tacrolimus during the first month following deceased donor kidney transplantation?",
+      "topic": "renal_transplant",
+      "question_type": "immunosuppression",
+      "learning_objective": "Curriculum training non-retrievable query: renal_transplant",
+      "medical_claim": "Unsupported or out-of-domain query: What is the exact target trough whole blood concentration of tacrolimus during the first month following deceased donor kidney transplantation?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-02",
+      "query": "Which specific collagen alpha-chain mutation causes X-linked Alport syndrome with progressive sensorineural hearing loss and anterior lenticonus?",
+      "topic": "renal_genetics",
+      "question_type": "alport_syndrome",
+      "learning_objective": "Curriculum training non-retrievable query: renal_genetics",
+      "medical_claim": "Unsupported or out-of-domain query: Which specific collagen alpha-chain mutation causes X-linked Alport syndrome with progressive sensorineural hearing loss and anterior lenticonus?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-03",
+      "query": "How does alpha-galactosidase A enzyme deficiency cause globotriaosylceramide accumulation in glomerular podocytes in Fabry nephropathy?",
+      "topic": "fabry_disease",
+      "question_type": "renal_accumulation",
+      "learning_objective": "Curriculum training non-retrievable query: fabry_disease",
+      "medical_claim": "Unsupported or out-of-domain query: How does alpha-galactosidase A enzyme deficiency cause globotriaosylceramide accumulation in glomerular podocytes in Fabry nephropathy?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-04",
+      "query": "What is the primary chemotherapeutic regimen for Stage II favorable-histology Wilms tumor in pediatric patients?",
+      "topic": "renal_oncology",
+      "question_type": "wilms_tumor",
+      "learning_objective": "Curriculum training non-retrievable query: renal_oncology",
+      "medical_claim": "Unsupported or out-of-domain query: What is the primary chemotherapeutic regimen for Stage II favorable-histology Wilms tumor in pediatric patients?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-05",
+      "query": "What did the ASTRAL trial conclude regarding the mortality benefit of renal artery stenting versus medical therapy in atherosclerotic renovascular disease?",
+      "topic": "renal_artery_stenosis",
+      "question_type": "stenting",
+      "learning_objective": "Curriculum training non-retrievable query: renal_artery_stenosis",
+      "medical_claim": "Unsupported or out-of-domain query: What did the ASTRAL trial conclude regarding the mortality benefit of renal artery stenting versus medical therapy in atherosclerotic renovascular disease?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-06",
+      "query": "What specific liver function monitoring schedule is mandatory when prescribing tolvaptan for rapidly progressive autosomal dominant polycystic kidney disease?",
+      "topic": "cystic_kidney",
+      "question_type": "tolvaptan_dosing",
+      "learning_objective": "Curriculum training non-retrievable query: cystic_kidney",
+      "medical_claim": "Unsupported or out-of-domain query: What specific liver function monitoring schedule is mandatory when prescribing tolvaptan for rapidly progressive autosomal dominant polycystic kidney disease?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-07",
+      "query": "What is the standard six-month antimicrobial regimen for renal tuberculosis presenting with sterile acid-fast pyuria?",
+      "topic": "renal_tuberculosis",
+      "question_type": "sterile_pyuria",
+      "learning_objective": "Curriculum training non-retrievable query: renal_tuberculosis",
+      "medical_claim": "Unsupported or out-of-domain query: What is the standard six-month antimicrobial regimen for renal tuberculosis presenting with sterile acid-fast pyuria?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-08",
+      "query": "How does serum amyloid A (AA) nephropathy differ from AL amyloidosis in bone marrow plasma cell clonal expansion?",
+      "topic": "renal_amyloidosis",
+      "question_type": "congo_red",
+      "learning_objective": "Curriculum training non-retrievable query: renal_amyloidosis",
+      "medical_claim": "Unsupported or out-of-domain query: How does serum amyloid A (AA) nephropathy differ from AL amyloidosis in bone marrow plasma cell clonal expansion?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-09",
+      "query": "What are the indications for immediate surgical exploration versus conservative embolization in Grade IV blunt renal laceration?",
+      "topic": "urological_trauma",
+      "question_type": "renal_shatter",
+      "learning_objective": "Curriculum training non-retrievable query: urological_trauma",
+      "medical_claim": "Unsupported or out-of-domain query: What are the indications for immediate surgical exploration versus conservative embolization in Grade IV blunt renal laceration?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-10",
+      "query": "What percentage of cortical renal scarring on dimercaptosuccinic acid (DMSA) scintigraphy warrants surgical ureteric reimplantation in children?",
+      "topic": "reflux_nephropathy",
+      "question_type": "dmsa_scan",
+      "learning_objective": "Curriculum training non-retrievable query: reflux_nephropathy",
+      "medical_claim": "Unsupported or out-of-domain query: What percentage of cortical renal scarring on dimercaptosuccinic acid (DMSA) scintigraphy warrants surgical ureteric reimplantation in children?",
+      "evaluation_label": "IN_DOMAIN_CORPUS_COVERAGE_GAP",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-11",
+      "query": "What is the recommended dose titration of sacubitril/valsartan in heart failure with reduced ejection fraction NYHA Class II?",
+      "topic": "cardiology",
+      "question_type": "heart_failure",
+      "learning_objective": "Curriculum training non-retrievable query: cardiology",
+      "medical_claim": "Unsupported or out-of-domain query: What is the recommended dose titration of sacubitril/valsartan in heart failure with reduced ejection fraction NYHA Class II?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-12",
+      "query": "How does carbidopa prevent the peripheral conversion of levodopa to dopamine by dopa decarboxylase?",
+      "topic": "neurology",
+      "question_type": "parkinsons",
+      "learning_objective": "Curriculum training non-retrievable query: neurology",
+      "medical_claim": "Unsupported or out-of-domain query: How does carbidopa prevent the peripheral conversion of levodopa to dopamine by dopa decarboxylase?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-13",
+      "query": "What is the initial dosing and administration sequence of propylthiouracil, iodine, and beta-blockers in thyroid storm?",
+      "topic": "endocrinology",
+      "question_type": "thyroid_storm",
+      "learning_objective": "Curriculum training non-retrievable query: endocrinology",
+      "medical_claim": "Unsupported or out-of-domain query: What is the initial dosing and administration sequence of propylthiouracil, iodine, and beta-blockers in thyroid storm?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-14",
+      "query": "What is the threshold peak expiratory flow rate defining a life-threatening acute asthma exacerbation in adults?",
+      "topic": "respiratory",
+      "question_type": "asthma",
+      "learning_objective": "Curriculum training non-retrievable query: respiratory",
+      "medical_claim": "Unsupported or out-of-domain query: What is the threshold peak expiratory flow rate defining a life-threatening acute asthma exacerbation in adults?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-15",
+      "query": "Which biologic agent targeting alpha-4 beta-7 integrin is indicated in moderate-to-severe Crohn disease refractory to anti-TNF?",
+      "topic": "gastroenterology",
+      "question_type": "crohns",
+      "learning_objective": "Curriculum training non-retrievable query: gastroenterology",
+      "medical_claim": "Unsupported or out-of-domain query: Which biologic agent targeting alpha-4 beta-7 integrin is indicated in moderate-to-severe Crohn disease refractory to anti-TNF?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-16",
+      "query": "What BCR-ABL transcript level at 3 months indicates an optimal molecular response to first-line imatinib in chronic myeloid leukemia?",
+      "topic": "hematology",
+      "question_type": "cml",
+      "learning_objective": "Curriculum training non-retrievable query: hematology",
+      "medical_claim": "Unsupported or out-of-domain query: What BCR-ABL transcript level at 3 months indicates an optimal molecular response to first-line imatinib in chronic myeloid leukemia?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-17",
+      "query": "What high-dose oral prednisolone regimen is recommended for giant cell arteritis without visual symptoms?",
+      "topic": "rheumatology",
+      "question_type": "temporal_arteritis",
+      "learning_objective": "Curriculum training non-retrievable query: rheumatology",
+      "medical_claim": "Unsupported or out-of-domain query: What high-dose oral prednisolone regimen is recommended for giant cell arteritis without visual symptoms?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-18",
+      "query": "What excision margin is recommended for a primary cutaneous melanoma with a Breslow thickness of 1.5 mm?",
+      "topic": "dermatology",
+      "question_type": "melanoma",
+      "learning_objective": "Curriculum training non-retrievable query: dermatology",
+      "medical_claim": "Unsupported or out-of-domain query: What excision margin is recommended for a primary cutaneous melanoma with a Breslow thickness of 1.5 mm?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-19",
+      "query": "What duration of thumb spica casting is standard for an undisplaced fracture of the scaphoid waist?",
+      "topic": "orthopedics",
+      "question_type": "scaphoid_fracture",
+      "learning_objective": "Curriculum training non-retrievable query: orthopedics",
+      "medical_claim": "Unsupported or out-of-domain query: What duration of thumb spica casting is standard for an undisplaced fracture of the scaphoid waist?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    },
+    {
+      "query_id": "RENAL-V3-TRAIN-UNSUP-20",
+      "query": "What therapeutic serum lithium concentration range is targeted during acute manic episodes?",
+      "topic": "psychiatry",
+      "question_type": "bipolar_lithium",
+      "learning_objective": "Curriculum training non-retrievable query: psychiatry",
+      "medical_claim": "Unsupported or out-of-domain query: What therapeutic serum lithium concentration range is targeted during acute manic episodes?",
+      "evaluation_label": "OUT_OF_DOMAIN_UNSUPPORTED",
+      "answerable": false,
+      "gold_document_ids": [],
+      "gold_parent_section_ids": [],
+      "gold_child_chunk_ids": [],
+      "evidence_spans": [],
+      "primary_evidence_quote": null,
+      "gold_verification_anchors": [],
+      "gold_minimum_anchor_hits": 0,
+      "authority_sensitive": false
+    }
+  ]
+}

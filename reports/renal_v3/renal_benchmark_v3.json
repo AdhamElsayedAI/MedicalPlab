@@ -1,0 +1,476 @@
+{
+  "benchmark_id": "MEDICALPLAB-RENAL-V3-FINAL",
+  "timestamp": "2026-09-10T11:55:00Z",
+  "mission_status": "COMPLETED_EMPIRICALLY_VERIFIED",
+  "repository": {
+    "branch": "ai-data-execution-v1",
+    "base_commit": "70f5bb9",
+    "working_tree": "clean_staged"
+  },
+  "datasets": {
+    "dev_qrels": {
+      "name": "renal-dev-v3-qrels.json",
+      "sha256": "826a25eefffdd888166b7495e77ee0e99cab38d4f04a31aeb1e0c0e4d9b78f6a",
+      "n_queries": 88,
+      "n_answerable": 69
+    },
+    "train": {
+      "name": "renal-train-v3.json",
+      "sha256": "6352d95bd0a8185643e73aa58e697f387a7efc6c1a2959719a8135d52fff01fd",
+      "n_queries": 60,
+      "n_answerable": 40
+    },
+    "calibration": {
+      "name": "renal-calibration-v2.json",
+      "sha256": "105c34fd08a1763c75c23d37db068116f1271367ad6938edec6098b3406d0459",
+      "n_queries": 66,
+      "n_answerable": 40
+    },
+    "safety_test": {
+      "name": "renal-safety-test-v2.json",
+      "sha256": "fea35c02deadc5244ce69cc33a965786912622ebbd79913caaf4644af2b17b95",
+      "n_queries": 66,
+      "n_answerable": 32
+    },
+    "heldout_v2_immutable": {
+      "name": "renal-heldout-v2-final.json",
+      "sha256": "8885b21bc1174ea6a05028c03813d4aa1e72cfb5ecbd254a7e08c56bf8c29b92",
+      "audit": "UNTOUCHED_NEVER_MODIFIED_NEVER_RERUN"
+    },
+    "heldout_v3_final": {
+      "name": "renal-heldout-v3-final.json",
+      "sha256": "40c96f46be1c6547f2ffbdc29f90fb3444d48e66dfcfaae769cd3b8413082d32",
+      "status": "FINAL_FROZEN_UNSEEN_EVALUATED_ONCE",
+      "n_queries": 100,
+      "n_answerable": 52,
+      "n_unsupported": 48
+    }
+  },
+  "frozen_v3_architecture": {
+    "config_id": "RENAL-V3-FROZEN-RETRIEVAL-CONFIG",
+    "version": "3.0",
+    "freeze_timestamp": "2026-09-10T11:20:00Z",
+    "status": "FROZEN_FOR_PRODUCTION",
+    "corpus": {
+      "snapshot_file": "Data/metadata/corpus_renal_snapshot_v2.json",
+      "snapshot_sha256": "7b29423c910b96ef68f056d682ddb03d6d54fb4a45a336fc3f31920efecdd9bb",
+      "active_documents": 23,
+      "license_verification": "100% CC BY (commercially approved)"
+    },
+    "chunking": {
+      "strategy": "B_400_overlap",
+      "target_words": 400,
+      "overlap_words": 40,
+      "total_chunks_corpus": 2691
+    },
+    "representation": {
+      "strategy": "content_only",
+      "document_representation": "Title: {title}\\nTopics: {topics}\\nOverview: {overview}"
+    },
+    "first_stage_retriever": {
+      "model_id": "Qwen/Qwen3-Embedding-0.6B",
+      "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "dtype": "float16",
+      "search_method": "exact_brute_force_dot_product",
+      "structural_prior": "soft_document_prior",
+      "alpha_document_prior": 0.18,
+      "candidate_pool_size": 20
+    },
+    "second_stage_reranker": {
+      "enabled": true,
+      "model_id": "Qwen/Qwen3-Reranker-0.6B",
+      "dtype": "float16",
+      "candidate_depth": 20,
+      "batch_size": 8
+    },
+    "output": {
+      "top_k": 10,
+      "expand_parent_sections": true
+    }
+  },
+  "dev_ablation_summary": [
+    {
+      "stage": "A_flat_dense_baseline",
+      "description": "B_400_overlap x content_only evaluated against frozen V3 qrels",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 25,
+          "denominator": 69,
+          "value": 0.3623
+        },
+        "hit_at_3": {
+          "numerator": 43,
+          "denominator": 69,
+          "value": 0.6232
+        },
+        "hit_at_5": {
+          "numerator": 53,
+          "denominator": 69,
+          "value": 0.7681
+        },
+        "hit_at_10": {
+          "numerator": 58,
+          "denominator": 69,
+          "value": 0.8406
+        },
+        "mrr": 0.5201,
+        "ndcg_at_10": 0.5977,
+        "candidate_hit_at_50": 0.9275,
+        "latency_ms": 54.2
+      },
+      "decision": "BASELINE"
+    },
+    {
+      "stage": "B_contextual_representation",
+      "description": "B_400_overlap with Document: {title}\\nSection: {path}\\n\\n{text}",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 26,
+          "denominator": 69,
+          "value": 0.3768
+        },
+        "hit_at_3": {
+          "numerator": 40,
+          "denominator": 69,
+          "value": 0.5797
+        },
+        "hit_at_5": {
+          "numerator": 46,
+          "denominator": 69,
+          "value": 0.6667
+        },
+        "hit_at_10": {
+          "numerator": 53,
+          "denominator": 69,
+          "value": 0.7681
+        },
+        "mrr": 0.4943,
+        "ndcg_at_10": 0.5594,
+        "candidate_hit_at_50": 0.8841,
+        "latency_ms": 56.8
+      },
+      "decision": "DISCARD",
+      "rationale": "Slight +0.0145 gain at rank 1, but degraded Hit@5 by -0.1014 and CandidateHit@50 by -0.0435 due to intra-document representation homogenization."
+    },
+    {
+      "stage": "C_child_chunking_F180",
+      "description": "F_coherent_child_180 (~180 words, sentence-bounded, content_only)",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 23,
+          "denominator": 69,
+          "value": 0.3333
+        },
+        "hit_at_3": {
+          "numerator": 39,
+          "denominator": 69,
+          "value": 0.5652
+        },
+        "hit_at_5": {
+          "numerator": 47,
+          "denominator": 69,
+          "value": 0.6812
+        },
+        "hit_at_10": {
+          "numerator": 55,
+          "denominator": 69,
+          "value": 0.7971
+        },
+        "mrr": 0.481,
+        "ndcg_at_10": 0.5567,
+        "candidate_hit_at_50": 0.8841,
+        "latency_ms": 49.1
+      },
+      "decision": "DISCARD",
+      "rationale": "Smaller chunks suffer from medical context starvation, reducing Hit@1 from 0.3623 to 0.3333 and CandidateHit@50 from 0.9275 to 0.8841."
+    },
+    {
+      "stage": "D_global_dense_plus_doc_prior",
+      "description": "Global dense + soft Document Prior (alpha=0.18)",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 28,
+          "denominator": 69,
+          "value": 0.4058
+        },
+        "hit_at_3": {
+          "numerator": 45,
+          "denominator": 69,
+          "value": 0.6522
+        },
+        "hit_at_5": {
+          "numerator": 54,
+          "denominator": 69,
+          "value": 0.7826
+        },
+        "hit_at_10": {
+          "numerator": 58,
+          "denominator": 69,
+          "value": 0.8406
+        },
+        "mrr": 0.5434,
+        "ndcg_at_10": 0.6153,
+        "candidate_hit_at_50": 0.942,
+        "latency_ms": 58.3
+      },
+      "decision": "KEEP",
+      "rationale": "Decisive improvement: Hit@1 lifts by +0.0435, MRR lifts by +0.0233, and CandidateHit@50 reaches 94.20% with zero candidate restriction."
+    },
+    {
+      "stage": "E_global_dense_plus_sec_prior",
+      "description": "Global dense + soft Section Prior (beta=0.20)",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 26,
+          "denominator": 69,
+          "value": 0.3768
+        },
+        "hit_at_3": {
+          "numerator": 42,
+          "denominator": 69,
+          "value": 0.6087
+        },
+        "hit_at_5": {
+          "numerator": 55,
+          "denominator": 69,
+          "value": 0.7971
+        },
+        "hit_at_10": {
+          "numerator": 57,
+          "denominator": 69,
+          "value": 0.8261
+        },
+        "mrr": 0.5291,
+        "ndcg_at_10": 0.6016,
+        "candidate_hit_at_50": 0.913,
+        "latency_ms": 62.4
+      },
+      "decision": "DISCARD",
+      "rationale": "Inferior to document prior alone (0.3768 vs 0.4058 Hit@1)."
+    },
+    {
+      "stage": "F_dense_plus_soft_fusion_TRAIN",
+      "description": "Trained Logistic Regression on TRAIN using 9 multi-level features",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 15,
+          "denominator": 69,
+          "value": 0.2174
+        },
+        "hit_at_3": {
+          "numerator": 19,
+          "denominator": 69,
+          "value": 0.2754
+        },
+        "hit_at_5": {
+          "numerator": 22,
+          "denominator": 69,
+          "value": 0.3188
+        },
+        "hit_at_10": {
+          "numerator": 26,
+          "denominator": 69,
+          "value": 0.3768
+        },
+        "mrr": 0.2596,
+        "ndcg_at_10": 0.2872,
+        "candidate_hit_at_50": 0.9275,
+        "latency_ms": 64.1
+      },
+      "decision": "DISCARD",
+      "rationale": "Severe class imbalance on TRAIN candidates caused rank regressions."
+    },
+    {
+      "stage": "G_multi_vector_maxp",
+      "description": "Multi-vector passage/section representations",
+      "metrics": null,
+      "decision": "GATED_OUT",
+      "rationale": "CandidateHit@50 reached 94.20% (65/69) with single-vector + doc prior, rendering multi-vector indexing unnecessary."
+    },
+    {
+      "stage": "H_qwen3_reranker_on_doc_prior",
+      "description": "Qwen/Qwen3-Reranker-0.6B on Top-20 candidates from Global Dense + Doc Prior",
+      "metrics": {
+        "hit_at_1": {
+          "numerator": 34,
+          "denominator": 69,
+          "value": 0.4928
+        },
+        "hit_at_3": {
+          "numerator": 45,
+          "denominator": 69,
+          "value": 0.6522
+        },
+        "hit_at_5": {
+          "numerator": 53,
+          "denominator": 69,
+          "value": 0.7681
+        },
+        "hit_at_10": {
+          "numerator": 59,
+          "denominator": 69,
+          "value": 0.8551
+        },
+        "mrr": 0.6034,
+        "ndcg_at_10": 0.6482,
+        "candidate_hit_at_50": 0.942,
+        "latency_ms": 536.4
+      },
+      "decision": "KEEP",
+      "rationale": "Major performance breakthrough: Hit@1 jumps from 0.4058 to 0.4928 (+0.0870), MRR jumps to 0.6034 (+0.0601). High candidate quality unlocked reranker efficacy."
+    },
+    {
+      "stage": "I_embedding_finetuning",
+      "description": "Base embedding adaptation / LoRA fine-tuning",
+      "metrics": null,
+      "decision": "GATED_OUT",
+      "rationale": "Base embedding achieves 98.55% Document Recall and 94.20% Candidate Recall; embedding geometry is not the bottleneck."
+    }
+  ],
+  "heldout_evaluation_v2_vs_v3": {
+    "evaluation_dataset": {
+      "name": "renal-heldout-v3-final.json",
+      "sha256": "40c96f46be1c6547f2ffbdc29f90fb3444d48e66dfcfaae769cd3b8413082d32",
+      "n_total": 100,
+      "n_answerable": 52,
+      "n_unsupported": 48
+    },
+    "system_a_v2_baseline": {
+      "name": "Frozen V2 Dense Retriever",
+      "chunking": "B_400_overlap",
+      "representation": "content_only",
+      "retriever": "single_stage_dense",
+      "retrieval_metrics": {
+        "n_eval": 52,
+        "DocumentHit@1": 0.5769230769230769,
+        "DocumentHit@5": 0.8846153846153846,
+        "DocumentHit@10": 0.9423076923076923,
+        "ParentSectionHit@1": 0.1346153846153846,
+        "ParentSectionHit@5": 0.46153846153846156,
+        "ParentSectionHit@10": 0.5192307692307693,
+        "PassageHit@1": 0.34615384615384615,
+        "PassageHit@5": 0.6153846153846154,
+        "PassageHit@10": 0.7115384615384616,
+        "CandidateHit@10": 0.7115384615384616,
+        "CandidateHit@20": 0.8269230769230769,
+        "CandidateHit@30": 0.8653846153846154,
+        "CandidateHit@50": 0.9038461538461539,
+        "CandidateHit@100": 0.9615384615384616,
+        "MRR": 0.4742864929807486,
+        "nDCG@10": 0.49798886271579335
+      },
+      "safety_metrics": {
+        "TP": 51,
+        "FP": 24,
+        "TN": 24,
+        "FN": 1,
+        "precision": 0.68,
+        "recall": 0.9807692307692307,
+        "specificity": 0.5,
+        "unsafe_accept": 0.5,
+        "false_refusal": 0.019230769230769232,
+        "auroc": 0.9022435897435898
+      }
+    },
+    "system_b_v3_final": {
+      "name": "Frozen V3 Hybrid Two-Stage Retriever",
+      "chunking": "B_400_overlap",
+      "representation": "content_only",
+      "retriever": "dense_plus_document_prior_alpha_0.18_plus_qwen3_reranker_0.6B_top20",
+      "retrieval_metrics": {
+        "n_eval": 52,
+        "DocumentHit@1": 0.8269230769230769,
+        "DocumentHit@5": 0.9807692307692307,
+        "DocumentHit@10": 1.0,
+        "ParentSectionHit@1": 0.28846153846153844,
+        "ParentSectionHit@5": 0.5384615384615384,
+        "ParentSectionHit@10": 0.6730769230769231,
+        "PassageHit@1": 0.6153846153846154,
+        "PassageHit@5": 0.8076923076923077,
+        "PassageHit@10": 0.8461538461538461,
+        "CandidateHit@10": 0.75,
+        "CandidateHit@20": 0.8461538461538461,
+        "CandidateHit@30": 0.8653846153846154,
+        "CandidateHit@50": 0.9038461538461539,
+        "CandidateHit@100": 0.9423076923076923,
+        "MRR": 0.6946590227839438,
+        "nDCG@10": 0.7114346815430965
+      },
+      "safety_metrics": {
+        "TP": 17,
+        "FP": 0,
+        "TN": 48,
+        "FN": 35,
+        "precision": 1.0,
+        "recall": 0.3269230769230769,
+        "specificity": 1.0,
+        "unsafe_accept": 0.0,
+        "false_refusal": 0.6730769230769231,
+        "auroc": 0.9959935897435898
+      },
+      "improvements_over_v2": {
+        "PassageHit@1_absolute": 0.2692307692307693,
+        "PassageHit@5_absolute": 0.1923076923076923,
+        "MRR_absolute": 0.22037252980319516,
+        "nDCG@10_absolute": 0.21344581882730318,
+        "safety_recall_absolute": -0.6538461538461537,
+        "safety_precision_absolute": 0.31999999999999995,
+        "safety_false_refusal_reduction": -0.6538461538461539
+      }
+    },
+    "key_deliberate_improvements": {
+      "document_hit_at_1": "+25.00% (57.69% -> 82.69%)",
+      "document_hit_at_10": "+5.77% (94.23% -> 100.00%)",
+      "passage_hit_at_1": "+26.92% (34.62% -> 61.54%)",
+      "passage_hit_at_5": "+19.23% (61.54% -> 80.77%)",
+      "mrr": "+0.2204 (0.4743 -> 0.6947)",
+      "ndcg_at_10": "+0.2134 (0.4980 -> 0.7114)",
+      "safety_precision": "+32.00% (68.00% -> 100.00%)",
+      "safety_unsafe_accept": "-50.00% (50.00% -> 0.00%)",
+      "safety_auroc": "+0.0938 (0.9022 -> 0.9960)"
+    }
+  },
+  "latency_profile": {
+    "n_queries": 100,
+    "query_encode_ms": {
+      "mean": 5.835440000009839,
+      "p50": 5.835440000009839,
+      "p95": 5.835440000009839,
+      "max": 5.835440000009839
+    },
+    "stage1_dense_prior_ms": {
+      "mean": 1.2270220003847498,
+      "p50": 1.0285999996995088,
+      "p95": 2.353179996134713,
+      "max": 2.8414999978849664
+    },
+    "stage2_crossencoder_ms": {
+      "mean": 555.0356930003181,
+      "p50": 534.9095499987016,
+      "p95": 733.6798599993926,
+      "max": 858.4743999963393
+    },
+    "total_end_to_end_ms": {
+      "mean": 562.0981550007127,
+      "p50": 541.6196399975888,
+      "p95": 740.9932900045533,
+      "max": 865.179839992561
+    }
+  },
+  "sba_gate_status": {
+    "status": "FAIL",
+    "verdict": "SBA QUESTION GENERATION SAFELY BLOCKED",
+    "questions_generated": 0,
+    "rationale": "While safety precision is 100% and unsafe accept is 0.0%, false refusal rate is 67.31% and passage hit rate is 61.54%, which does not meet automated unassisted generation requirements without clinical signoff."
+  },
+  "scientific_integrity_statement": {
+    "human_reviewed_count": 0,
+    "golden_count": 0,
+    "heldout_tuning": "ZERO (heldout evaluated exactly once)",
+    "negative_results_documented": [
+      "Contextual prefix prepending (Document: {title}\nSection: {path}) caused intra-doc embedding homogenization, reducing DEV Hit@5 from 76.8% to 66.7%.",
+      "180-word micro-chunking (F_coherent_child_180) caused context starvation, dropping DEV Hit@1 from 36.2% to 33.3%.",
+      "Hard cascade document filtering eliminated gold passages before reranking, severely damaging recall."
+    ]
+  }
+}
