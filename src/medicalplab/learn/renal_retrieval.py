@@ -104,3 +104,62 @@ class QwenRenalRetriever:
         scores = self._embeddings @ query_embedding
         ranked = scores.argsort()[::-1][:top_k]
         return [RenalRetrievalHit(self._chunks[int(index)], float(scores[int(index)])) for index in ranked]
+
+
+class QwenRenalRetrieverV2:
+    """Frozen Renal V2 dense retriever (B_400_overlap x content_only).
+
+    Empirically validated offline dense retriever using Qwen3-Embedding-0.6B
+    over the 23-source undergraduate renal corpus.
+    """
+
+    def __init__(self, data_root: Path | str, *, model_name: str = RENAL_MODEL) -> None:
+        self.data_root = Path(data_root)
+        self.model_name = model_name
+        self._model: Any | None = None
+        self._chunks: list[dict[str, Any]] | None = None
+        self._embeddings: Any | None = None
+
+    def _load(self) -> None:
+        if self._embeddings is not None:
+            return
+        try:
+            from sentence_transformers import SentenceTransformer
+        except ImportError as exc:
+            raise RenalRetrieverUnavailable(
+                "Renal dense retrieval requires the optional 'renal-ml' dependencies."
+            ) from exc
+
+        registry_path = self.data_root / "metadata" / "renal_source_registry_v2.json"
+        chunks_dir = self.data_root / "experiments" / "renal_v2" / "chunking" / "B_400_overlap"
+        if not registry_path.exists() or not chunks_dir.exists():
+            raise RenalRetrieverUnavailable("Frozen Renal v2 registry or chunks are unavailable.")
+
+        chunks: list[dict[str, Any]] = []
+        for path in sorted(chunks_dir.glob("*.chunks.json")):
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            chunks.extend(payload.get("chunks", []))
+        if not chunks:
+            raise RenalRetrieverUnavailable("Frozen Renal v2 contains no chunks.")
+
+        rendered = [chunk.get("text", "") for chunk in chunks]
+
+        try:
+            model = SentenceTransformer(self.model_name, local_files_only=True)
+            model.max_seq_length = RENAL_MAX_SEQUENCE_LENGTH
+            embeddings = model.encode(rendered, batch_size=16, normalize_embeddings=True, show_progress_bar=False)
+        except Exception as exc:
+            raise RenalRetrieverUnavailable(f"Frozen renal v2 model could not be loaded offline: {exc}") from exc
+        self._model = model
+        self._chunks = chunks
+        self._embeddings = embeddings
+
+    def retrieve(self, query: str, top_k: int = 5) -> list[RenalRetrievalHit]:
+        self._load()
+        assert self._model is not None and self._chunks is not None and self._embeddings is not None
+        query_embedding = self._model.encode(
+            [RENAL_QUERY_INSTRUCTION + query], normalize_embeddings=True, show_progress_bar=False
+        )[0]
+        scores = self._embeddings @ query_embedding
+        ranked = scores.argsort()[::-1][:top_k]
+        return [RenalRetrievalHit(self._chunks[int(index)], float(scores[int(index)])) for index in ranked]
