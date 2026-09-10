@@ -1,0 +1,55 @@
+{
+  "mission": "MEDICALPLAB RENAL V4",
+  "stage": "Phase 13 & 17 Reranker Depth Experiment",
+  "dataset_name": "RETRIEVAL_DEV_V4",
+  "results": [
+    {
+      "rerank_depth": 20,
+      "RerankerInputHit": "42/50 (0.8400)",
+      "PassageHit@1": "30/50 (0.6000)",
+      "PassageHit@3": "38/50 (0.7600)",
+      "PassageHit@5": "40/50 (0.8000)",
+      "PassageHit@10": "42/50 (0.8400)",
+      "DocumentHit@1": "44/50 (0.8800)",
+      "ParentSectionHit@1": "30/50 (0.6000)",
+      "MRR": 0.6949,
+      "nDCG@10": 0.7061,
+      "rerank_p50_ms": 667.74,
+      "rerank_p95_ms": 802.46,
+      "total_p50_ms": 675.24,
+      "total_p95_ms": 809.96
+    },
+    {
+      "rerank_depth": 30,
+      "RerankerInputHit": "45/50 (0.9000)",
+      "PassageHit@1": "29/50 (0.5800)",
+      "PassageHit@3": "41/50 (0.8200)",
+      "PassageHit@5": "43/50 (0.8600)",
+      "PassageHit@10": "44/50 (0.8800)",
+      "DocumentHit@1": "44/50 (0.8800)",
+      "ParentSectionHit@1": "29/50 (0.5800)",
+      "MRR": 0.7129,
+      "nDCG@10": 0.7396,
+      "rerank_p50_ms": 884.89,
+      "rerank_p95_ms": 1080.95,
+      "total_p50_ms": 892.39,
+      "total_p95_ms": 1088.45
+    },
+    {
+      "rerank_depth": 40,
+      "RerankerInputHit": "46/50 (0.9200)",
+      "PassageHit@1": "30/50 (0.6000)",
+      "PassageHit@3": "42/50 (0.8400)",
+      "PassageHit@5": "44/50 (0.8800)",
+      "PassageHit@10": "45/50 (0.9000)",
+      "DocumentHit@1": "44/50 (0.8800)",
+      "ParentSectionHit@1": "30/50 (0.6000)",
+      "MRR": 0.7322,
+      "nDCG@10": 0.7567,
+      "rerank_p50_ms": 1116.37,
+      "rerank_p95_ms": 1369.75,
+      "total_p50_ms": 1123.87,
+      "total_p95_ms": 1377.25
+    }
+  ]
+}

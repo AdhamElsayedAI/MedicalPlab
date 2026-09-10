@@ -1,0 +1,52 @@
+{
+  "architecture_version": "RENAL_V4_RETRIEVAL_FROZEN",
+  "mission": "MEDICALPLAB RENAL V4",
+  "corpus_registry": "Data/metadata/renal_source_registry_v2.json",
+  "corpus_registry_sha256": "4b684cb8d3aa93bb8d27376c8c9371ffae7b5d1e4431e21703db5d249f3e4e9f",
+  "chunking_strategy": "B_400_overlap",
+  "chunk_representation": "content_only",
+  "total_chunks": 2691,
+  "total_documents": 23,
+  "total_sections": 629,
+  "embedding_model": {
+    "model_id": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "pooling": "mean_masked",
+    "normalize": true,
+    "dim": 1024
+  },
+  "query_instruction": "Instruct: Retrieve the medical evidence passage that directly supports this renal education query.\nQuery: ",
+  "first_stage_scoring": {
+    "dense_passage_weight": 1.0,
+    "soft_document_prior_alpha": 0.18,
+    "document_prior_cache": "Data/experiments/renal_v3/cache/all23_doc_embeddings.npy",
+    "section_structural_weight_beta": 0.12,
+    "section_structural_cache": "Data/experiments/renal_v4/cache/all629_section_structural_embeddings.npy",
+    "section_metadata": "Data/experiments/renal_v4/cache/sections_metadata.json",
+    "formula": "score(p) = dot(q, p) + 0.18 * dot(q, doc(p)) + 0.12 * dot(q, sec_struct(p))"
+  },
+  "candidate_selection": {
+    "superset_budget_B": 50,
+    "reranker_input_budget_R": 20,
+    "selection_policy": "top_20_stage1_combined"
+  },
+  "reranker": {
+    "model_id": "Qwen/Qwen3-Reranker-0.6B",
+    "revision": "default",
+    "input_depth": 20,
+    "device": "cuda:0",
+    "batch_size": 8
+  },
+  "search_implementation": "exact_brute_force_matrix_dot_product",
+  "frozen_at": "Phase 14 Retrieval Freeze",
+  "dev_evaluation": {
+    "dataset": "RETRIEVAL_DEV_V4",
+    "passage_hit_1": 0.60,
+    "passage_hit_5": 0.80,
+    "document_hit_1": 0.88,
+    "parent_section_hit_1": 0.60,
+    "mrr": 0.6949,
+    "ndcg_10": 0.7165,
+    "p50_latency_ms": 675.2
+  }
+}
