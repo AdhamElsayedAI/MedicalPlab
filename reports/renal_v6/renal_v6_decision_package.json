@@ -1,0 +1,423 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_DECISION_PACKAGE",
+  "timestamp_utc": "2026-09-11T06:50:49.560733+00:00",
+  "mission": "RENAL_V6_PERFORMANCE_FEASIBILITY_AND_RECOVERY_MISSION",
+  "governance": {
+    "v5_status": "IMMUTABLE_AND_CLOSED",
+    "production_runtime_retriever": "QwenRenalRetrieverV3",
+    "production_runtime_version": "v3",
+    "dev_b_status": "UNEXECUTED_PRESERVED",
+    "final_heldout_status": "UNEXECUTED_PRESERVED",
+    "production_promotion": false
+  },
+  "item_1_max_clean_train_size": {
+    "maximum_clean_training_size": 80,
+    "clean_benchmark_artifact": "renal-rerank-train-v5-clean-v1.json",
+    "clean_train_n": 80,
+    "target_120_160_feasible": false,
+    "depleted_strata_count": 6,
+    "depleted_strata": [
+      "STR-02",
+      "STR-03",
+      "STR-04",
+      "STR-05",
+      "STR-06",
+      "STR-07",
+      "STR-11",
+      "STR-12"
+    ],
+    "conclusion": "EXPANSION_TO_120_160_BLOCKED_BY_CURRICULUM_DEPLETION_AND_SKEW: 6 of 12 curriculum strata (STR-02, STR-03, STR-04, STR-05, STR-06, STR-07, STR-11, STR-12) cannot be expanded because their anchor documents have 0 to 8 safe chunks remaining. Attempting to force N=120-160 would require concentrating >70% of new queries into DOC-0008 (dialysis access / AV fistula) and DOC-0007, creating severe curriculum skew, or manufacturing weak/semantic duplicate qrels in violation of Phase 1 governance. Therefore, the maximum genuinely clean, curriculum-balanced, zero-leakage training size is exactly N=80."
+  },
+  "item_2_leakage_firewall_results": {
+    "validation_benchmark": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v6\\renal-selector-validation-v6-clean.json",
+    "validation_sha256": "a0463cd276854abbfaab421aa12e4f8ad15485c685c15d2104e434a956a7b2d2",
+    "n_validation_items": 40,
+    "exact_gold_chunk_overlap": 0,
+    "window_chunk_overlap": 0,
+    "section_overlap_with_dev_a": 0,
+    "section_overlap_with_dev_b": 0,
+    "section_overlap_with_v5_select_val": 0,
+    "section_overlap_with_v5_train": 0,
+    "historical_heldout_overlap": 0,
+    "verbatim_span_verification_pct": 100.0,
+    "firewall_gate_verdict": "PASS_ZERO_LEAKAGE_FIREWALL_CONFIRMED"
+  },
+  "item_3_failure_taxonomy": {
+    "A. VOCABULARY_SYNONYM_MISMATCH": {
+      "count": 6,
+      "percentage_of_failures": 25.0,
+      "median_dense_rank": 107.5,
+      "median_bm25_rank": 2.0,
+      "median_current_p3_rank": 11.0,
+      "best_available_runtime_signal": "BM25_BODY_SPARSE",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0004",
+        "V5-RNK-TRAIN-0026",
+        "V5-RNK-TRAIN-0039"
+      ]
+    },
+    "B. ABBREVIATION_MISMATCH": {
+      "count": 1,
+      "percentage_of_failures": 4.2,
+      "median_dense_rank": 43.0,
+      "median_bm25_rank": 9.0,
+      "median_current_p3_rank": 13.0,
+      "best_available_runtime_signal": "ABBREVIATION_EXPANSION_OVERLAP",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0056"
+      ]
+    },
+    "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 27.0,
+      "median_bm25_rank": 128.5,
+      "median_current_p3_rank": 51.5,
+      "best_available_runtime_signal": "MEDICAL_ENTITY_OVERLAP_AND_SECTION_PRIOR",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0021",
+        "V5-RNK-TRAIN-0045"
+      ]
+    },
+    "E. SAME_DOC_WRONG_SECTION_DISTRACTOR": {
+      "count": 8,
+      "percentage_of_failures": 33.3,
+      "median_dense_rank": 46.0,
+      "median_bm25_rank": 3.0,
+      "median_current_p3_rank": 11.0,
+      "best_available_runtime_signal": "SECTION_CENTROID_SIMILARITY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0007",
+        "V5-RNK-TRAIN-0013",
+        "V5-RNK-TRAIN-0019"
+      ]
+    },
+    "H. DOCUMENT_CROWDING": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 32.0,
+      "median_bm25_rank": 100.5,
+      "median_current_p3_rank": 39.0,
+      "best_available_runtime_signal": "DOCUMENT_DIVERSITY_PENALTY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0006",
+        "V5-RNK-TRAIN-0046"
+      ]
+    },
+    "I. SECTION_CROWDING": {
+      "count": 3,
+      "percentage_of_failures": 12.5,
+      "median_dense_rank": 5.0,
+      "median_bm25_rank": 110.0,
+      "median_current_p3_rank": 29.0,
+      "best_available_runtime_signal": "SECTION_DIVERSITY_PENALTY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0034",
+        "V5-RNK-TRAIN-0057",
+        "V5-RNK-TRAIN-0075"
+      ]
+    },
+    "J. OTHER_REPRODUCIBLE_CATEGORY": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 55.0,
+      "median_bm25_rank": 14.0,
+      "median_current_p3_rank": 14.0,
+      "best_available_runtime_signal": "RRF_MULTI_SIGNAL_COMBINATION",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0042",
+        "V5-RNK-TRAIN-0043"
+      ]
+    }
+  },
+  "item_4_feature_oracle_v2_table": {
+    "F01_Dense_Only": {
+      "Coverage@20": "73.75%",
+      "Coverage@50": "86.25%",
+      "MRR": 0.426,
+      "median_gold_rank": 3.5,
+      "p75_gold_rank": 22.0,
+      "worst_fold": "62.5%",
+      "std": 8.67,
+      "latency_ms": 0.29
+    },
+    "F02_BM25_Body_Only": {
+      "Coverage@20": "91.25%",
+      "Coverage@50": "95.0%",
+      "MRR": 0.6138,
+      "median_gold_rank": 2.0,
+      "p75_gold_rank": 4.25,
+      "worst_fold": "81.25%",
+      "std": 6.51,
+      "latency_ms": 0.2
+    },
+    "F03_BM25_Title_Only": {
+      "Coverage@20": "46.25%",
+      "Coverage@50": "68.75%",
+      "MRR": 0.2291,
+      "median_gold_rank": 23.5,
+      "p75_gold_rank": 68.0,
+      "worst_fold": "31.58%",
+      "std": 16.85,
+      "latency_ms": 0.2
+    },
+    "F04_BM25_Heading_Only": {
+      "Coverage@20": "48.75%",
+      "Coverage@50": "65.0%",
+      "MRR": 0.2695,
+      "median_gold_rank": 23.0,
+      "p75_gold_rank": 70.75,
+      "worst_fold": "36.84%",
+      "std": 8.68,
+      "latency_ms": 0.2
+    },
+    "F05_Doc_Score_Only": {
+      "Coverage@20": "42.5%",
+      "Coverage@50": "53.75%",
+      "MRR": 0.2398,
+      "median_gold_rank": 37.5,
+      "p75_gold_rank": 148.5,
+      "worst_fold": "28.57%",
+      "std": 7.94,
+      "latency_ms": 0.2
+    },
+    "F06_Section_Centroid_Only": {
+      "Coverage@20": "73.75%",
+      "Coverage@50": "86.25%",
+      "MRR": 0.4112,
+      "median_gold_rank": 4.0,
+      "p75_gold_rank": 21.5,
+      "worst_fold": "56.25%",
+      "std": 10.05,
+      "latency_ms": 0.0
+    },
+    "F07_Lexical_Containment_Only": {
+      "Coverage@20": "88.75%",
+      "Coverage@50": "93.75%",
+      "MRR": 0.5343,
+      "median_gold_rank": 2.0,
+      "p75_gold_rank": 8.25,
+      "worst_fold": "81.25%",
+      "std": 6.83,
+      "latency_ms": 0.31
+    },
+    "F08_Lexical_Jaccard_Only": {
+      "Coverage@20": "70.0%",
+      "Coverage@50": "83.75%",
+      "MRR": 0.2782,
+      "median_gold_rank": 7.0,
+      "p75_gold_rank": 25.75,
+      "worst_fold": "50.0%",
+      "std": 10.52,
+      "latency_ms": 0.06
+    },
+    "F09_Abbrev_Expansion_Only": {
+      "Coverage@20": "66.25%",
+      "Coverage@50": "77.5%",
+      "MRR": 0.3712,
+      "median_gold_rank": 5.0,
+      "p75_gold_rank": 34.75,
+      "worst_fold": "56.25%",
+      "std": 8.68,
+      "latency_ms": 0.22
+    },
+    "F10_Medical_Term_Only": {
+      "Coverage@20": "70.0%",
+      "Coverage@50": "76.25%",
+      "MRR": 0.3836,
+      "median_gold_rank": 5.5,
+      "p75_gold_rank": 36.0,
+      "worst_fold": "56.25%",
+      "std": 10.41,
+      "latency_ms": 0.0
+    },
+    "F11_Numeric_Overlap_Only": {
+      "Coverage@20": "75.0%",
+      "Coverage@50": "86.25%",
+      "MRR": 0.4288,
+      "median_gold_rank": 3.5,
+      "p75_gold_rank": 17.5,
+      "worst_fold": "62.5%",
+      "std": 7.93,
+      "latency_ms": 0.18
+    },
+    "F12_Unit_Overlap_Only": {
+      "Coverage@20": "73.75%",
+      "Coverage@50": "86.25%",
+      "MRR": 0.426,
+      "median_gold_rank": 3.5,
+      "p75_gold_rank": 22.0,
+      "worst_fold": "62.5%",
+      "std": 8.67,
+      "latency_ms": 0.2
+    },
+    "F13_Cutoff_Overlap_Only": {
+      "Coverage@20": "73.75%",
+      "Coverage@50": "86.25%",
+      "MRR": 0.426,
+      "median_gold_rank": 3.5,
+      "p75_gold_rank": 22.0,
+      "worst_fold": "62.5%",
+      "std": 8.67,
+      "latency_ms": 0.0
+    },
+    "F14_Redundancy_Crowding_Only": {
+      "Coverage@20": "43.75%",
+      "Coverage@50": "61.25%",
+      "MRR": 0.3493,
+      "median_gold_rank": 23.0,
+      "p75_gold_rank": 90.5,
+      "worst_fold": "31.25%",
+      "std": 9.51,
+      "latency_ms": 0.2
+    },
+    "C01_TwoWay_RRF_Dense_BM25Body": {
+      "Coverage@20": "88.75%",
+      "Coverage@50": "98.75%",
+      "MRR": 0.5962,
+      "median_gold_rank": 1.5,
+      "p75_gold_rank": 8.25,
+      "worst_fold": "75.0%",
+      "std": 9.43,
+      "latency_ms": 0.2
+    },
+    "C02_P3_Baseline_RRF": {
+      "Coverage@20": "91.25%",
+      "Coverage@50": "97.5%",
+      "MRR": 0.6035,
+      "median_gold_rank": 1.5,
+      "p75_gold_rank": 7.25,
+      "worst_fold": "81.25%",
+      "std": 6.51,
+      "latency_ms": 0.2
+    },
+    "C03_ThreeWay_RRF_Dense_BM25_Section": {
+      "Coverage@20": "88.75%",
+      "Coverage@50": "98.75%",
+      "MRR": 0.5888,
+      "median_gold_rank": 2.0,
+      "p75_gold_rank": 8.25,
+      "worst_fold": "75.0%",
+      "std": 9.43,
+      "latency_ms": 0.34
+    },
+    "C04_FourWay_RRF_Dense_BM25_Sec_Head": {
+      "Coverage@20": "88.75%",
+      "Coverage@50": "98.75%",
+      "MRR": 0.6012,
+      "median_gold_rank": 1.5,
+      "p75_gold_rank": 8.25,
+      "worst_fold": "75.0%",
+      "std": 7.36,
+      "latency_ms": 0.25
+    },
+    "C05_Hybrid_Dense_BM25_Crowding": {
+      "Coverage@20": "78.75%",
+      "Coverage@50": "90.0%",
+      "MRR": 0.502,
+      "median_gold_rank": 2.5,
+      "p75_gold_rank": 16.5,
+      "worst_fold": "62.5%",
+      "std": 8.37,
+      "latency_ms": 0.19
+    },
+    "C06_Feature_Oracle_V2_Full_Bounded": {
+      "Coverage@20": "66.25%",
+      "Coverage@50": "81.25%",
+      "MRR": 0.39,
+      "median_gold_rank": 4.5,
+      "p75_gold_rank": 30.5,
+      "worst_fold": "50.0%",
+      "std": 12.41,
+      "latency_ms": 0.23
+    }
+  },
+  "item_5_selector_model_comparison": {
+    "class_a_regularized_logistic": {
+      "name": "Class A: Regularized Logistic P3 Baseline",
+      "Coverage@20": "93.75%",
+      "mean_across_folds": "93.78%",
+      "worst_fold": "86.67%",
+      "std": 5.8,
+      "naive_preservation": "98.31%",
+      "rescues": 17,
+      "lost": 1,
+      "mrr": 0.6345,
+      "latency_ms": 4.57
+    },
+    "class_b_deterministic_hybrid_rrf": {
+      "name": "Class B: Strong Deterministic Hybrid / RRF Baseline",
+      "Coverage@20": "90.0%",
+      "mean_across_folds": "89.85%",
+      "worst_fold": "75.0%",
+      "std": 8.56,
+      "naive_preservation": "94.92%",
+      "rescues": 16,
+      "lost": 3,
+      "mrr": 0.5886,
+      "latency_ms": 0.24
+    },
+    "class_c_regularized_nonlinear_histgb": {
+      "name": "Class C: Regularized Grouped Non-Linear Ranker",
+      "Coverage@20": "93.75%",
+      "mean_across_folds": "93.58%",
+      "worst_fold": "86.67%",
+      "std": 5.78,
+      "naive_preservation": "100.0%",
+      "rescues": 16,
+      "lost": 0,
+      "mrr": 0.6127,
+      "latency_ms": 4.95
+    }
+  },
+  "item_6_fold_stability": {
+    "class_a_fold_by_fold": [
+      87.5,
+      100.0,
+      86.67,
+      100.0,
+      94.74
+    ],
+    "class_a_mean": 93.78,
+    "class_a_std": 5.8,
+    "class_a_worst_fold": 86.67
+  },
+  "item_7_estimated_achievable_selector_ceiling": {
+    "train_oof_ceiling": "93.75%",
+    "bm25_sparse_ceiling": "91.25%",
+    "dense_retrieval_ceiling": "73.75%",
+    "fresh_validation_ceiling": "45.0%"
+  },
+  "item_8_fresh_selector_confirmation": {
+    "validation_n": 40,
+    "dense_baseline_coverage_at_20": "37.5%",
+    "class_a_coverage_at_20": "45.0% (18/40)",
+    "class_b_coverage_at_20": "45.0%",
+    "naive_preservation": "93.33%",
+    "rank21_plus_rescues": 4,
+    "lost_cases": 1,
+    "gate_threshold_minimum": ">= 92.0%",
+    "gate_threshold_preferred": ">= 95.0%",
+    "fresh_gate_verdict": "FAIL"
+  },
+  "item_9_mathematical_reranker_requirement": {
+    "production_passage_hit_at_1_target": ">= 85.0%",
+    "fresh_validation_selector_coverage": "45.0%",
+    "formula": "required_conditional_reranker_acc = 0.85 / selector_coverage",
+    "required_conditional_reranker_accuracy": "188.89%",
+    "is_mathematically_achievable": false,
+    "frozen_base_reranker_conditional_accuracy": "88.24%",
+    "frozen_base_reranker_95_ci": [
+      "65.66%",
+      "96.71%"
+    ],
+    "reranker_gap": "MATHEMATICALLY_IMPOSSIBLE_ABOVE_100_PERCENT"
+  },
+  "item_10_recommendation": {
+    "final_recommendation": "STOP_RENAL_AND_PRESERVE_V3",
+    "lora_status": "BLOCKED_COVERAGE_BELOW_92_PERCENT",
+    "gate_decision": "FAIL_COVERAGE_BELOW_92_LORA_BLOCKED",
+    "production_default": "QwenRenalRetrieverV3",
+    "executive_verdict": "Fresh selector confirmation OutputCoverage@20 reached 45.0% (18/40) on the unspent N=40 validation benchmark, failing the mandatory >=92.0% feasibility gate (predeclared FAIL). To reach the overall production PassageHit@1 target of >=85.0%, a downstream reranker would require a conditional accuracy of 188.89%, which is mathematically impossible (>100%). Even under a theoretically perfect 100% reranker, PassageHit@1 would be capped at 45.0%. In strict accordance with V6 feasibility governance, LoRA remains definitively BLOCKED. No LoRA, no DEV-B execution, no heldout execution, and no production promotion are authorized. Renal retrieval R&D is terminated and QwenRenalRetrieverV3 remains the frozen production default."
+  }
+}

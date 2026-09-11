@@ -1,0 +1,280 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_PHASE1_EXPANSION_FEASIBILITY",
+  "timestamp_utc": "2026-09-11T06:36:13.866305+00:00",
+  "mission": "RENAL_V6_PERFORMANCE_FEASIBILITY",
+  "corpus_inventory": {
+    "total_documents": 23,
+    "total_chunks": 2691,
+    "total_excluded_gold_chunks": 1187,
+    "total_excluded_window_chunks": 1869,
+    "total_excluded_sections": 163,
+    "total_safe_unspent_chunks": 885,
+    "safe_unspent_pct": 32.89
+  },
+  "curriculum_strata_audit": {
+    "STR-01": {
+      "stratum_name": "Glomerular Biology & Podocytes",
+      "anchor_doc": "DOC-PMC-RENAL-0002",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 57,
+      "expansion_feasible": true,
+      "bottleneck_reason": "FEASIBLE_WITH_CAUTION"
+    },
+    "STR-02": {
+      "stratum_name": "Proximal Tubule & Acid-Base Physiology",
+      "anchor_doc": "DOC-PMC-RENAL-0004",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 0,
+      "expansion_feasible": false,
+      "bottleneck_reason": "ZERO_SAFE_CHUNKS"
+    },
+    "STR-03": {
+      "stratum_name": "Distal Tubule & Potassium Handling",
+      "anchor_doc": "DOC-PMC-RENAL-0003",
+      "v5_item_count": 6,
+      "safe_unspent_chunks_in_doc": 4,
+      "expansion_feasible": false,
+      "bottleneck_reason": "SEVERE_CHUNK_DEPLETION_UNDER_10"
+    },
+    "STR-04": {
+      "stratum_name": "Vascular Endothelium & Renal Hemodynamics",
+      "anchor_doc": "DOC-PMC-RENAL-0001",
+      "v5_item_count": 6,
+      "safe_unspent_chunks_in_doc": 0,
+      "expansion_feasible": false,
+      "bottleneck_reason": "ZERO_SAFE_CHUNKS"
+    },
+    "STR-05": {
+      "stratum_name": "Hyperkalemia & Transcellular Shifting",
+      "anchor_doc": "DOC-PMC-RENAL-0009",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 1,
+      "expansion_feasible": false,
+      "bottleneck_reason": "SEVERE_CHUNK_DEPLETION_UNDER_10"
+    },
+    "STR-06": {
+      "stratum_name": "NBCe1 Transporter & Renal Tubular Acidosis",
+      "anchor_doc": "DOC-PMC-RENAL-0004",
+      "v5_item_count": 6,
+      "safe_unspent_chunks_in_doc": 0,
+      "expansion_feasible": false,
+      "bottleneck_reason": "ZERO_SAFE_CHUNKS"
+    },
+    "STR-07": {
+      "stratum_name": "Acute Kidney Injury (AKI) Biomarkers & Staging",
+      "anchor_doc": "DOC-PMC-RENAL-0006",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 6,
+      "expansion_feasible": false,
+      "bottleneck_reason": "SEVERE_CHUNK_DEPLETION_UNDER_10"
+    },
+    "STR-08": {
+      "stratum_name": "Diabetic Nephropathy & RAAS Inhibition",
+      "anchor_doc": "DOC-PMC-RENAL-0007",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 123,
+      "expansion_feasible": true,
+      "bottleneck_reason": "FEASIBLE_WITH_CAUTION"
+    },
+    "STR-09": {
+      "stratum_name": "Membranous Nephropathy & PLA2R Pathogenesis",
+      "anchor_doc": "DOC-PMC-RENAL-0002",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 57,
+      "expansion_feasible": true,
+      "bottleneck_reason": "FEASIBLE_WITH_CAUTION"
+    },
+    "STR-10": {
+      "stratum_name": "Recurrent UTI & Commensal Bladder Flora",
+      "anchor_doc": "DOC-PMC-RENAL-0011",
+      "v5_item_count": 6,
+      "safe_unspent_chunks_in_doc": 94,
+      "expansion_feasible": true,
+      "bottleneck_reason": "FEASIBLE_WITH_CAUTION"
+    },
+    "STR-11": {
+      "stratum_name": "Urolithiasis & Evidence-Based Guidelines",
+      "anchor_doc": "DOC-PMC-RENAL-0012",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 8,
+      "expansion_feasible": false,
+      "bottleneck_reason": "SEVERE_CHUNK_DEPLETION_UNDER_10"
+    },
+    "STR-12": {
+      "stratum_name": "KDIGO Staging: Creatinine vs Urine Output",
+      "anchor_doc": "DOC-PMC-RENAL-0006",
+      "v5_item_count": 7,
+      "safe_unspent_chunks_in_doc": 6,
+      "expansion_feasible": false,
+      "bottleneck_reason": "SEVERE_CHUNK_DEPLETION_UNDER_10"
+    }
+  },
+  "document_inventory_audit": {
+    "DOC-PMC-RENAL-0001": {
+      "total_chunks": 26,
+      "safe_unspent": 0,
+      "spent_pct": 100.0,
+      "status": "EXHAUSTED"
+    },
+    "DOC-PMC-RENAL-0002": {
+      "total_chunks": 117,
+      "safe_unspent": 57,
+      "spent_pct": 51.3,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0003": {
+      "total_chunks": 30,
+      "safe_unspent": 4,
+      "spent_pct": 86.7,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0004": {
+      "total_chunks": 21,
+      "safe_unspent": 0,
+      "spent_pct": 100.0,
+      "status": "EXHAUSTED"
+    },
+    "DOC-PMC-RENAL-0005": {
+      "total_chunks": 78,
+      "safe_unspent": 28,
+      "spent_pct": 64.1,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0006": {
+      "total_chunks": 356,
+      "safe_unspent": 6,
+      "spent_pct": 98.3,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0007": {
+      "total_chunks": 357,
+      "safe_unspent": 123,
+      "spent_pct": 65.5,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0008": {
+      "total_chunks": 335,
+      "safe_unspent": 225,
+      "spent_pct": 32.8,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0009": {
+      "total_chunks": 77,
+      "safe_unspent": 1,
+      "spent_pct": 98.7,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0010": {
+      "total_chunks": 153,
+      "safe_unspent": 100,
+      "spent_pct": 34.6,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0011": {
+      "total_chunks": 169,
+      "safe_unspent": 94,
+      "spent_pct": 44.4,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0012": {
+      "total_chunks": 95,
+      "safe_unspent": 8,
+      "spent_pct": 91.6,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0013": {
+      "total_chunks": 68,
+      "safe_unspent": 18,
+      "spent_pct": 73.5,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0014": {
+      "total_chunks": 89,
+      "safe_unspent": 14,
+      "spent_pct": 84.3,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0015": {
+      "total_chunks": 53,
+      "safe_unspent": 2,
+      "spent_pct": 96.2,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0016": {
+      "total_chunks": 151,
+      "safe_unspent": 61,
+      "spent_pct": 59.6,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0018": {
+      "total_chunks": 38,
+      "safe_unspent": 3,
+      "spent_pct": 92.1,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0019": {
+      "total_chunks": 110,
+      "safe_unspent": 35,
+      "spent_pct": 68.2,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0020": {
+      "total_chunks": 36,
+      "safe_unspent": 1,
+      "spent_pct": 97.2,
+      "status": "DEPLETED"
+    },
+    "DOC-PMC-RENAL-0021": {
+      "total_chunks": 55,
+      "safe_unspent": 21,
+      "spent_pct": 61.8,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0023": {
+      "total_chunks": 144,
+      "safe_unspent": 70,
+      "spent_pct": 51.4,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0024": {
+      "total_chunks": 57,
+      "safe_unspent": 14,
+      "spent_pct": 75.4,
+      "status": "AVAILABLE"
+    },
+    "DOC-PMC-RENAL-0025": {
+      "total_chunks": 76,
+      "safe_unspent": 0,
+      "spent_pct": 100.0,
+      "status": "EXHAUSTED"
+    }
+  },
+  "exhausted_docs": [
+    "DOC-PMC-RENAL-0001",
+    "DOC-PMC-RENAL-0004",
+    "DOC-PMC-RENAL-0025"
+  ],
+  "depleted_docs": [
+    "DOC-PMC-RENAL-0003",
+    "DOC-PMC-RENAL-0006",
+    "DOC-PMC-RENAL-0009",
+    "DOC-PMC-RENAL-0012",
+    "DOC-PMC-RENAL-0015",
+    "DOC-PMC-RENAL-0018",
+    "DOC-PMC-RENAL-0020"
+  ],
+  "target_120_160_feasibility": {
+    "target_n_range": "120-160",
+    "is_supported_without_manufacturing_n": false,
+    "is_supported_without_curriculum_skew": false,
+    "is_supported_without_semantic_duplicates": false,
+    "maximum_clean_training_size": 80,
+    "recommended_clean_train_benchmark": "renal-rerank-train-v5-clean-v1.json",
+    "clean_train_n": 80,
+    "clean_train_core_n": 60,
+    "clean_train_val_n": 20
+  },
+  "governance_rule_applied": "STOP if expansion would require semantic duplicates or weak qrels. Do not manufacture N.",
+  "phase1_decision": "EXPANSION_AUDIT_COMPLETE_MAX_CLEAN_N80_PRESERVED",
+  "verdict_details": "EXPANSION_TO_120_160_BLOCKED_BY_CURRICULUM_DEPLETION_AND_SKEW: 6 of 12 curriculum strata (STR-02, STR-03, STR-04, STR-05, STR-06, STR-07, STR-11, STR-12) cannot be expanded because their anchor documents have 0 to 8 safe chunks remaining. Attempting to force N=120-160 would require concentrating >70% of new queries into DOC-0008 (dialysis access / AV fistula) and DOC-0007, creating severe curriculum skew, or manufacturing weak/semantic duplicate qrels in violation of Phase 1 governance. Therefore, the maximum genuinely clean, curriculum-balanced, zero-leakage training size is exactly N=80."
+}

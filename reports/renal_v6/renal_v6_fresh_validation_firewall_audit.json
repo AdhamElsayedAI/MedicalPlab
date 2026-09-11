@@ -1,0 +1,33 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_FRESH_VALIDATION_FIREWALL_AUDIT",
+  "benchmark_file": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v6\\renal-selector-validation-v6-clean.json",
+  "benchmark_sha256": "a0463cd276854abbfaab421aa12e4f8ad15485c685c15d2104e434a956a7b2d2",
+  "n_items": 40,
+  "document_distribution": {
+    "DOC-PMC-RENAL-0002": 3,
+    "DOC-PMC-RENAL-0005": 3,
+    "DOC-PMC-RENAL-0006": 2,
+    "DOC-PMC-RENAL-0007": 3,
+    "DOC-PMC-RENAL-0008": 4,
+    "DOC-PMC-RENAL-0010": 4,
+    "DOC-PMC-RENAL-0011": 4,
+    "DOC-PMC-RENAL-0013": 2,
+    "DOC-PMC-RENAL-0014": 2,
+    "DOC-PMC-RENAL-0018": 1,
+    "DOC-PMC-RENAL-0019": 3,
+    "DOC-PMC-RENAL-0021": 2,
+    "DOC-PMC-RENAL-0023": 4,
+    "DOC-PMC-RENAL-0024": 3
+  },
+  "firewall_summary": {
+    "exact_gold_chunk_overlap": 0,
+    "window_chunk_overlap": 0,
+    "section_overlap_with_dev_a": 0,
+    "section_overlap_with_dev_b": 0,
+    "section_overlap_with_v5_select_val": 0,
+    "section_overlap_with_v5_train": 0,
+    "historical_heldout_overlap": 0,
+    "verbatim_span_verification_pct": 100.0
+  },
+  "gate_status": "PASS_ZERO_LEAKAGE_FIREWALL_CONFIRMED"
+}

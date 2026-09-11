@@ -1,0 +1,68 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_PHASE5_GATING_DECISION",
+  "timestamp_utc": "2026-09-11T06:40:51.582099+00:00",
+  "mission": "RENAL_V6_PERFORMANCE_FEASIBILITY",
+  "gates_evaluated": {
+    "gate_1_oof_coverage_ge_93": {
+      "required": ">= 93.0%",
+      "achieved": "93.75%",
+      "passed": true
+    },
+    "gate_2_worst_fold_ge_85": {
+      "required": ">= 85.0%",
+      "achieved": "86.67%",
+      "passed": true
+    },
+    "gate_3_naive_preservation_ge_95": {
+      "required": ">= 95.0%",
+      "achieved": "98.31%",
+      "passed": true
+    },
+    "gate_4_strata_and_doc_diversity": {
+      "required": "Improvement not dependent on single stratum or document",
+      "passed": true,
+      "details": {
+        "num_strata_covered": 12,
+        "strata_distribution": {
+          "STR-01": 7,
+          "STR-02": 7,
+          "STR-03": 6,
+          "STR-04": 6,
+          "STR-05": 7,
+          "STR-06": 6,
+          "STR-07": 7,
+          "STR-08": 7,
+          "STR-09": 7,
+          "STR-10": 6,
+          "STR-11": 7,
+          "STR-12": 7
+        },
+        "max_doc_concentration": 14,
+        "doc_distribution": {
+          "DOC-PMC-RENAL-0002": 14,
+          "DOC-PMC-RENAL-0004": 8,
+          "DOC-PMC-RENAL-0003": 5,
+          "DOC-PMC-RENAL-0001": 6,
+          "DOC-PMC-RENAL-0009": 7,
+          "DOC-PMC-RENAL-0005": 5,
+          "DOC-PMC-RENAL-0006": 14,
+          "DOC-PMC-RENAL-0007": 7,
+          "DOC-PMC-RENAL-0011": 6,
+          "DOC-PMC-RENAL-0012": 7,
+          "DOC-PMC-RENAL-0023": 1
+        },
+        "is_single_stratum_dependent": false,
+        "is_single_doc_dependent": false
+      }
+    },
+    "preferred_target_ge_95": {
+      "preferred": ">= 95.0%",
+      "achieved": "93.75%",
+      "passed": false,
+      "notes": "93.75% exceeds mandatory 93% gate, but falls short of preferred 95% threshold."
+    }
+  },
+  "gate_status": "PASS_MANDATORY_GATES_QUALIFIED_FOR_CONFIRMATION",
+  "phase5_decision": "GO_PROCEED_TO_PHASE_6_FRESH_CONFIRMATION",
+  "rationale": "Class A (Regularized Logistic) achieved OOF Coverage@20 of 93.75% (75/80), worst-fold coverage of 86.67%, and naive preservation of 98.31%. All 4 mandatory TRAIN-only gates passed. However, because coverage is 93.75% (below the preferred 95.0% threshold), Phase 6 confirmation is authorized under CONDITIONAL validation rules."
+}

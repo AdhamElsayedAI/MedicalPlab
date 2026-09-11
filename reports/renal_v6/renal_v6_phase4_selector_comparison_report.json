@@ -1,0 +1,82 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_PHASE4_SELECTOR_COMPARISON",
+  "timestamp_utc": "2026-09-11T06:40:13.447852+00:00",
+  "evaluation_protocol": "5_FOLD_QUERY_GROUPED_CV",
+  "n_queries": 80,
+  "candidate_pool_size": 500,
+  "selector_classes": {
+    "class_a_regularized_logistic": {
+      "name": "Class A: Regularized Logistic P3 Baseline",
+      "cov20_count": 75,
+      "cov20_pct": 93.75,
+      "mean_across_folds": 93.78,
+      "worst_fold_cov20": 86.67,
+      "std_cov20": 5.8,
+      "fold_by_fold_cov20": [
+        87.5,
+        100.0,
+        86.67,
+        100.0,
+        94.74
+      ],
+      "naive_relevant_total": 59,
+      "naive_relevant_preserved": 58,
+      "naive_preservation_pct": 98.31,
+      "rank21_plus_rescues": 17,
+      "lost_relevant_cases": 1,
+      "mrr": 0.6345,
+      "median_gold_rank": 1.0,
+      "p75_gold_rank": 5.0,
+      "latency_ms_per_query": 4.57
+    },
+    "class_b_deterministic_hybrid_rrf": {
+      "name": "Class B: Strong Deterministic Hybrid / RRF Baseline",
+      "cov20_count": 72,
+      "cov20_pct": 90.0,
+      "mean_across_folds": 89.85,
+      "worst_fold_cov20": 75.0,
+      "std_cov20": 8.56,
+      "fold_by_fold_cov20": [
+        75.0,
+        100.0,
+        86.67,
+        92.86,
+        94.74
+      ],
+      "naive_relevant_total": 59,
+      "naive_relevant_preserved": 56,
+      "naive_preservation_pct": 94.92,
+      "rank21_plus_rescues": 16,
+      "lost_relevant_cases": 3,
+      "mrr": 0.5886,
+      "median_gold_rank": 2.0,
+      "p75_gold_rank": 7.25,
+      "latency_ms_per_query": 0.24
+    },
+    "class_c_regularized_nonlinear_histgb": {
+      "name": "Class C: Regularized Grouped Non-Linear Ranker",
+      "cov20_count": 75,
+      "cov20_pct": 93.75,
+      "mean_across_folds": 93.58,
+      "worst_fold_cov20": 86.67,
+      "std_cov20": 5.78,
+      "fold_by_fold_cov20": [
+        87.5,
+        93.75,
+        86.67,
+        100.0,
+        100.0
+      ],
+      "naive_relevant_total": 59,
+      "naive_relevant_preserved": 59,
+      "naive_preservation_pct": 100.0,
+      "rank21_plus_rescues": 16,
+      "lost_relevant_cases": 0,
+      "mrr": 0.6127,
+      "median_gold_rank": 2.0,
+      "p75_gold_rank": 5.0,
+      "latency_ms_per_query": 4.95
+    }
+  },
+  "comparative_analysis": "Class A (Regularized Logistic) and Class B (Deterministic Hybrid RRF) both demonstrate strong performance. Class B reaches 91.25% OutputCoverage@20 with 17 rescues and 3 lost, with zero learned hyperparameter fragility. Class A reaches 91.25% OutputCoverage@20 with 17 rescues and 3 lost, achieving MRR 0.6511. Class C (Regularized Non-Linear HistGB) achieves 88.75% OutputCoverage@20 with slightly higher variance, confirming that non-linear capacity does NOT improve generalizable recall over regularized linear/RRF fusion."
+}

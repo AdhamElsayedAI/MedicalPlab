@@ -1,0 +1,567 @@
+{
+  "section_2_first_stage_depth": {
+    "coverage_at_20": "15/40 (37.5%)",
+    "coverage_at_50": "24/40 (60.0%)",
+    "coverage_at_100": "26/40 (65.0%)",
+    "coverage_at_200": "30/40 (75.0%)",
+    "coverage_at_500": "36/40 (90.0%)",
+    "ranked_gt_500": "4/40 (10.0%)",
+    "not_retrieved": "0/40 (0.0%)",
+    "median_gold_rank": 34.5,
+    "p75_gold_rank": 171.25,
+    "p90_gold_rank": 434.0000000000004,
+    "max_gold_rank": 1893,
+    "ranks_gt_500_details": [
+      708,
+      1893,
+      1298,
+      686
+    ]
+  },
+  "section_4_distribution_comparison": {
+    "train_n80": {
+      "n_items": 80,
+      "unique_source_docs": 11,
+      "doc_distribution": {
+        "DOC-PMC-RENAL-0002": 14,
+        "DOC-PMC-RENAL-0004": 8,
+        "DOC-PMC-RENAL-0003": 5,
+        "DOC-PMC-RENAL-0001": 6,
+        "DOC-PMC-RENAL-0009": 7,
+        "DOC-PMC-RENAL-0005": 5,
+        "DOC-PMC-RENAL-0006": 14,
+        "DOC-PMC-RENAL-0007": 7,
+        "DOC-PMC-RENAL-0011": 6,
+        "DOC-PMC-RENAL-0012": 7,
+        "DOC-PMC-RENAL-0023": 1
+      },
+      "unique_strata": 12,
+      "mean_query_len_tokens": 12.1,
+      "mean_span_len_tokens": 17.0,
+      "mean_chunk_len_tokens": 94.9,
+      "mean_section_depth": 1.8,
+      "mean_query_chunk_jaccard": 0.078,
+      "numeric_query_count": 4,
+      "numeric_query_pct": 5.0,
+      "unit_query_count": 3,
+      "unit_query_pct": 3.8
+    },
+    "select_val_n40": {
+      "n_items": 40,
+      "unique_source_docs": 14,
+      "doc_distribution": {
+        "DOC-PMC-RENAL-0002": 3,
+        "DOC-PMC-RENAL-0005": 3,
+        "DOC-PMC-RENAL-0006": 2,
+        "DOC-PMC-RENAL-0007": 3,
+        "DOC-PMC-RENAL-0008": 4,
+        "DOC-PMC-RENAL-0010": 4,
+        "DOC-PMC-RENAL-0011": 4,
+        "DOC-PMC-RENAL-0013": 2,
+        "DOC-PMC-RENAL-0014": 2,
+        "DOC-PMC-RENAL-0018": 1,
+        "DOC-PMC-RENAL-0019": 3,
+        "DOC-PMC-RENAL-0021": 2,
+        "DOC-PMC-RENAL-0023": 4,
+        "DOC-PMC-RENAL-0024": 3
+      },
+      "unique_strata": 14,
+      "mean_query_len_tokens": 17.3,
+      "mean_span_len_tokens": 15.9,
+      "mean_chunk_len_tokens": 69.6,
+      "mean_section_depth": 2.1,
+      "mean_query_chunk_jaccard": 0.049,
+      "numeric_query_count": 8,
+      "numeric_query_pct": 20.0,
+      "unit_query_count": 0,
+      "unit_query_pct": 0.0
+    }
+  },
+  "section_6_failure_audit": {
+    "total_misses_count": 22,
+    "category_breakdown": {
+      "E. SAME_DOC_WRONG_SECTION_DISTRACTOR": {
+        "count": 9,
+        "percentage": 40.9
+      },
+      "A. VOCABULARY_SYNONYM_MISMATCH": {
+        "count": 6,
+        "percentage": 27.3
+      },
+      "G. DENSE_SEMANTIC_FALSE_FRIEND": {
+        "count": 3,
+        "percentage": 13.6
+      },
+      "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR": {
+        "count": 3,
+        "percentage": 13.6
+      },
+      "L. OTHER_REPRODUCIBLE_CAUSE": {
+        "count": 1,
+        "percentage": 4.5
+      }
+    },
+    "misses_details": [
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0003",
+        "gold_document_id": "DOC-PMC-RENAL-0002",
+        "gold_section": "Methods > Ethics statement and acquisition of human samples",
+        "gold_dense_rank": 38,
+        "gold_bm25_rank": 201,
+        "gold_selector_rank": 29,
+        "gold_doc_rank": 13,
+        "gold_rank_at_b500": 38,
+        "lexical_jaccard": 0.024,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0004",
+        "gold_document_id": "DOC-PMC-RENAL-0005",
+        "gold_section": "Survey methodology",
+        "gold_dense_rank": 708,
+        "gold_bm25_rank": 370,
+        "gold_selector_rank": 999,
+        "gold_doc_rank": 10,
+        "gold_rank_at_b500": ">500",
+        "lexical_jaccard": 0.0,
+        "failure_category": "G. DENSE_SEMANTIC_FALSE_FRIEND",
+        "diagnostic_notes": "Dense embedding completely failed to identify the source document (doc rank > 5, dense rank > 500)."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0006",
+        "gold_document_id": "DOC-PMC-RENAL-0005",
+        "gold_section": "Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Distal convoluted tubule",
+        "gold_dense_rank": 161,
+        "gold_bm25_rank": 20,
+        "gold_selector_rank": 33,
+        "gold_doc_rank": 4,
+        "gold_rank_at_b500": 161,
+        "lexical_jaccard": 0.033,
+        "failure_category": "L. OTHER_REPRODUCIBLE_CAUSE",
+        "diagnostic_notes": "Sparse candidate acquisition and cross-document competition."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0013",
+        "gold_document_id": "DOC-PMC-RENAL-0008",
+        "gold_section": "Clinical practice recommendations > Definitions and diagnostic work-up > Definitions",
+        "gold_dense_rank": 406,
+        "gold_bm25_rank": 453,
+        "gold_selector_rank": 435,
+        "gold_doc_rank": 14,
+        "gold_rank_at_b500": 406,
+        "lexical_jaccard": 0.0,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0014",
+        "gold_document_id": "DOC-PMC-RENAL-0008",
+        "gold_section": "Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS",
+        "gold_dense_rank": 133,
+        "gold_bm25_rank": 685,
+        "gold_selector_rank": 166,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 133,
+        "lexical_jaccard": 0.0,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0015",
+        "gold_document_id": "DOC-PMC-RENAL-0008",
+        "gold_section": "Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS",
+        "gold_dense_rank": 37,
+        "gold_bm25_rank": 38,
+        "gold_selector_rank": 24,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 37,
+        "lexical_jaccard": 0.118,
+        "failure_category": "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR",
+        "diagnostic_notes": "Retrieved candidate pool dominated by topically similar distractors with wrong claim."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0018",
+        "gold_document_id": "DOC-PMC-RENAL-0010",
+        "gold_section": "Hyperkalemia in non-dialytic chronic kidney disease > Nutritional approach to chronic HK",
+        "gold_dense_rank": 46,
+        "gold_bm25_rank": 252,
+        "gold_selector_rank": 60,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 46,
+        "lexical_jaccard": 0.012,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0019",
+        "gold_document_id": "DOC-PMC-RENAL-0010",
+        "gold_section": "Hyperkalemia in non-dialytic chronic kidney disease > Position statement 1.4",
+        "gold_dense_rank": 35,
+        "gold_bm25_rank": 358,
+        "gold_selector_rank": 43,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 35,
+        "lexical_jaccard": 0.02,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0020",
+        "gold_document_id": "DOC-PMC-RENAL-0011",
+        "gold_section": "Animal Models for Studying UTI > Differences Between Mouse and Human Models",
+        "gold_dense_rank": 74,
+        "gold_bm25_rank": 97,
+        "gold_selector_rank": 72,
+        "gold_doc_rank": 2,
+        "gold_rank_at_b500": 74,
+        "lexical_jaccard": 0.073,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0021",
+        "gold_document_id": "DOC-PMC-RENAL-0011",
+        "gold_section": "Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences",
+        "gold_dense_rank": 211,
+        "gold_bm25_rank": 736,
+        "gold_selector_rank": 283,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 211,
+        "lexical_jaccard": 0.0,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0022",
+        "gold_document_id": "DOC-PMC-RENAL-0011",
+        "gold_section": "Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences",
+        "gold_dense_rank": 146,
+        "gold_bm25_rank": 277,
+        "gold_selector_rank": 162,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 146,
+        "lexical_jaccard": 0.017,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0025",
+        "gold_document_id": "DOC-PMC-RENAL-0013",
+        "gold_section": "Results > Eradication of Stones Might Lead to UTI Resolution",
+        "gold_dense_rank": 25,
+        "gold_bm25_rank": 52,
+        "gold_selector_rank": 27,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 25,
+        "lexical_jaccard": 0.02,
+        "failure_category": "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR",
+        "diagnostic_notes": "Retrieved candidate pool dominated by topically similar distractors with wrong claim."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0026",
+        "gold_document_id": "DOC-PMC-RENAL-0014",
+        "gold_section": "Hydronephrosis Grading Systems > SFU Grading System",
+        "gold_dense_rank": 34,
+        "gold_bm25_rank": 536,
+        "gold_selector_rank": 46,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 34,
+        "lexical_jaccard": 0.0,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0027",
+        "gold_document_id": "DOC-PMC-RENAL-0014",
+        "gold_section": "Hydronephrosis Grading Systems > Radiology Grading System",
+        "gold_dense_rank": 16,
+        "gold_bm25_rank": 39,
+        "gold_selector_rank": 21,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 16,
+        "lexical_jaccard": 0.026,
+        "failure_category": "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR",
+        "diagnostic_notes": "Retrieved candidate pool dominated by topically similar distractors with wrong claim."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0029",
+        "gold_document_id": "DOC-PMC-RENAL-0019",
+        "gold_section": "1. Introduction",
+        "gold_dense_rank": 1893,
+        "gold_bm25_rank": 587,
+        "gold_selector_rank": 999,
+        "gold_doc_rank": 18,
+        "gold_rank_at_b500": ">500",
+        "lexical_jaccard": 0.02,
+        "failure_category": "G. DENSE_SEMANTIC_FALSE_FRIEND",
+        "diagnostic_notes": "Dense embedding completely failed to identify the source document (doc rank > 5, dense rank > 500)."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0030",
+        "gold_document_id": "DOC-PMC-RENAL-0019",
+        "gold_section": "3. Glucose Transporters in Healthy Human Kidneys",
+        "gold_dense_rank": 232,
+        "gold_bm25_rank": 31,
+        "gold_selector_rank": 61,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 232,
+        "lexical_jaccard": 0.041,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0031",
+        "gold_document_id": "DOC-PMC-RENAL-0019",
+        "gold_section": "3. Glucose Transporters in Healthy Human Kidneys > 3.1. Characteristics of Human Glucose Transporters",
+        "gold_dense_rank": 202,
+        "gold_bm25_rank": 108,
+        "gold_selector_rank": 123,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 202,
+        "lexical_jaccard": 0.021,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0032",
+        "gold_document_id": "DOC-PMC-RENAL-0021",
+        "gold_section": "Methods > Animals and experimental design",
+        "gold_dense_rank": 400,
+        "gold_bm25_rank": 431,
+        "gold_selector_rank": 427,
+        "gold_doc_rank": 14,
+        "gold_rank_at_b500": 400,
+        "lexical_jaccard": 0.0,
+        "failure_category": "A. VOCABULARY_SYNONYM_MISMATCH",
+        "diagnostic_notes": "Extremely low lexical overlap with gold evidence; terms differ between query and evidence."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0033",
+        "gold_document_id": "DOC-PMC-RENAL-0021",
+        "gold_section": "Methods > Plasma volume",
+        "gold_dense_rank": 1298,
+        "gold_bm25_rank": 1,
+        "gold_selector_rank": 999,
+        "gold_doc_rank": 12,
+        "gold_rank_at_b500": ">500",
+        "lexical_jaccard": 0.039,
+        "failure_category": "G. DENSE_SEMANTIC_FALSE_FRIEND",
+        "diagnostic_notes": "Dense embedding completely failed to identify the source document (doc rank > 5, dense rank > 500)."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0035",
+        "gold_document_id": "DOC-PMC-RENAL-0023",
+        "gold_section": "The vasculature of the renal medulla",
+        "gold_dense_rank": 280,
+        "gold_bm25_rank": 794,
+        "gold_selector_rank": 382,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 280,
+        "lexical_jaccard": 0.0,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0036",
+        "gold_document_id": "DOC-PMC-RENAL-0023",
+        "gold_section": "The regions of the medulla > Inner stripe",
+        "gold_dense_rank": 686,
+        "gold_bm25_rank": 128,
+        "gold_selector_rank": 999,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": ">500",
+        "lexical_jaccard": 0.013,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      },
+      {
+        "query_id": "V6-RNK-SELECT-VAL-0040",
+        "gold_document_id": "DOC-PMC-RENAL-0024",
+        "gold_section": "ERYTHROPOIETIN > Effects of EPO on adaptive immunity",
+        "gold_dense_rank": 121,
+        "gold_bm25_rank": 38,
+        "gold_selector_rank": 35,
+        "gold_doc_rank": 1,
+        "gold_rank_at_b500": 121,
+        "lexical_jaccard": 0.022,
+        "failure_category": "E. SAME_DOC_WRONG_SECTION_DISTRACTOR",
+        "diagnostic_notes": "Source document correctly identified in top 2, but wrong section ranked far ahead."
+      }
+    ]
+  },
+  "section_7_hierarchical_depth": {
+    "DocumentHit": {
+      "@1": "28/40 (70.0%)",
+      "@3": "32/40 (80.0%)",
+      "@5": "33/40 (82.5%)",
+      "@10": "35/40 (87.5%)"
+    },
+    "ParentSectionHit": {
+      "@1": "7/40 (17.5%)",
+      "@3": "15/40 (37.5%)",
+      "@5": "16/40 (40.0%)",
+      "@10": "24/40 (60.0%)"
+    },
+    "PassageHit": {
+      "@1": "5/40 (12.5%)",
+      "@5": "8/40 (20.0%)",
+      "@10": "11/40 (27.5%)",
+      "@20": "15/40 (37.5%)",
+      "@50": "24/40 (60.0%)",
+      "@100": "26/40 (65.0%)",
+      "@200": "30/40 (75.0%)",
+      "@500": "36/40 (90.0%)"
+    },
+    "invariant_check": {
+      "invariant": "PassageHit@K <= ParentSectionHit@K <= DocumentHit@K",
+      "passed": true,
+      "violations": []
+    }
+  },
+  "section_9_generalization_gap": {
+    "train_oof_coverage_at_20": "75/80 (93.75%) [95% CI: 86.19% \u2013 97.3%]",
+    "val_coverage_at_20": "18/40 (45.0%) [95% CI: 30.71% \u2013 60.17%]",
+    "absolute_generalization_gap": "48.75 percentage points",
+    "relative_generalization_gap": "52.0% performance drop",
+    "ci_overlap": false,
+    "is_statistically_significant": true,
+    "consistency_evaluation": {
+      "first_stage_retrieval_failure": true,
+      "benchmark_distribution_shift": true,
+      "selector_generalization_failure": true,
+      "engineering_index_inconsistency": false,
+      "overfitting": true
+    },
+    "raw_dense_train_coverage_at_20": "59/80 (73.75%)",
+    "selector_train_oof_coverage_at_20": "75/80 (93.75%) [95% CI: 86.19% \u2013 97.30%]",
+    "raw_dense_val_coverage_at_20": "15/40 (37.50%)",
+    "selector_val_coverage_at_20": "18/40 (45.00%) [95% CI: 30.71% \u2013 60.17%]",
+    "absolute_selector_gap": "48.75 percentage points",
+    "relative_selector_gap": "52.00% performance drop"
+  },
+  "canonical_metrics": {
+    "train_n80": {
+      "raw_dense_baseline_coverage_at_20": "59 / 80 = 73.75%",
+      "selected_class_a_selector_oof_coverage_at_20": "75 / 80 = 93.75%",
+      "selected_class_a_worst_fold": "86.67%",
+      "selected_class_a_naive_preservation": "98.31%"
+    },
+    "frozen_select_val_n40": {
+      "raw_dense_coverage_at_20": "15 / 40 = 37.50%",
+      "raw_dense_coverage_at_50": "24 / 40 = 60.00%",
+      "raw_dense_coverage_at_100": "26 / 40 = 65.00%",
+      "raw_dense_coverage_at_200": "30 / 40 = 75.00%",
+      "raw_dense_coverage_at_500": "36 / 40 = 90.00%",
+      "frozen_class_a_selector_coverage_at_20": "18 / 40 = 45.00%"
+    },
+    "explicit_distinction": {
+      "raw_dense_train_coverage_at_20": "73.75% (59/80)",
+      "selector_train_oof_coverage_at_20": "93.75% (75/80)",
+      "raw_dense_select_val_coverage_at_20": "37.50% (15/40)",
+      "selector_select_val_coverage_at_20": "45.00% (18/40)"
+    }
+  },
+  "v6_gate_language": {
+    "predeclared_gates": {
+      "strong_pass": "Coverage@20 >= 95.0%",
+      "conditional_pass": "Coverage@20 >= 92.0%",
+      "fail": "Coverage@20 < 92.0%"
+    },
+    "achieved_selector_coverage_at_20": "45.00% (18/40)",
+    "gate_verdict": "FAIL_COVERAGE_BELOW_92",
+    "gate_clarification": "The operative V6 fresh-selector authorization gate was >=92.0% (conditional) and >=95.0% (strong). The achieved 45.0% is classified as FAIL_COVERAGE_BELOW_92. The >=85.0% figure represents the downstream end-to-end PassageHit@1 production target (which would require an impossible 188.89% conditional reranker accuracy), not the selector authorization gate."
+  },
+  "benchmark_interpretation": {
+    "benchmark_classifications": [
+      "VALID_AS_DIAGNOSTIC_STRESS_TEST",
+      "NOT_VALID_AS_A_LIKE_FOR_LIKE_ESTIMATE_OF_THE_ORIGINAL_CLINICAL_QUERY_DISTRIBUTION"
+    ],
+    "task_distribution_mismatch_reason": "TRAIN queries were clinical/entity/claim driven with specific medical terms, whereas SELECT_VAL queries were synthesized via section/heading/template patterns. The forensic audit established a material task-distribution mismatch.",
+    "prohibited_descriptions_of_45_pct_result": [
+      "MedicalPlab Renal accuracy",
+      "production accuracy",
+      "expected real-user clinical performance",
+      "a like-for-like estimate of the original intended query task"
+    ],
+    "four_point_interpretation": [
+      "1. The benchmark exposed a genuine robustness weakness for section-anchored, low-entity-specific queries.",
+      "2. It revealed first-stage intra-document discrimination weakness under that stress-test distribution.",
+      "3. It is NOT an equivalent replacement for the intended clinical/mechanistic query benchmark.",
+      "4. It remains valid for governance purposes and correctly blocks V6 promotion."
+    ]
+  },
+  "section_1_index_integrity": {
+    "corpus_manifest": "Data/metadata/corpus_renal_snapshot_v2.json",
+    "corpus_manifest_sha256": "7b29423c910b96ef523c469315f8366b9989d776723e667cdf0b4d5f447bd57a",
+    "total_indexed_documents": 23,
+    "total_indexed_chunks": 2691,
+    "embedding_model_name": "Qwen/Qwen3-Embedding-0.6B",
+    "embedding_model_revision": "main",
+    "embedding_dimension": 1024,
+    "normalization_method": "L2-normalized mean pooling",
+    "index_build_artifact": "Data/indices/dense/all23_corpus_embeddings.npy",
+    "index_build_artifact_sha256": "3d48cea24334b82dae0d452dc5b6ecd7107a33bb3faa53a6e9730ef662eedc70",
+    "chunking_version": "B_400_overlap",
+    "chunk_id_mapping_version": "chunk_mapping_v2.json",
+    "document_id_mapping_integrity": "VERIFIED_100_PERCENT",
+    "section_mapping_integrity": "VERIFIED_100_PERCENT",
+    "select_val_gold_chunks_missing_from_index": 0,
+    "select_val_gold_documents_missing_from_index": 0,
+    "mapping_mismatches": 0,
+    "duplicate_chunk_ids": 0,
+    "orphan_chunk_ids": 0,
+    "classification": "INFRASTRUCTURE_VERIFIED_SOUND_NO_ENGINEERING_FAILURE"
+  },
+  "section_3_gold_qrel_quality": {
+    "total_items_audited": 40,
+    "counts": {
+      "DIRECTLY_ANSWERABLE": 40,
+      "ANSWERABLE_ACROSS_ADJACENT_CONTEXT": 0,
+      "PARTIALLY_SUPPORTED": 0,
+      "UNANSWERABLE_OR_QREL_DEFECT": 0
+    },
+    "percentages": {
+      "DIRECTLY_ANSWERABLE": 100.0,
+      "ANSWERABLE_ACROSS_ADJACENT_CONTEXT": 0.0,
+      "PARTIALLY_SUPPORTED": 0.0,
+      "UNANSWERABLE_OR_QREL_DEFECT": 0.0
+    },
+    "qrel_defects_found": 0,
+    "audit_finding": "All 40 items contain verbatim evidence spans within gold chunk boundaries."
+  },
+  "section_5_query_authoring_consistency": {
+    "train_methodology": "Source-first clinical proposition and mechanism-focused entity extraction.",
+    "select_val_methodology": "Section-first template-driven questions inquiring about heading content.",
+    "lexical_overlap_difference": "TRAIN Jaccard 0.141 vs SELECT_VAL Jaccard 0.108 (-23.4%)",
+    "numeric_cutoff_difference": "TRAIN 18.8% vs SELECT_VAL 0.0%",
+    "abbreviation_difference": "TRAIN 22.5% vs SELECT_VAL 12.5%",
+    "methodological_consistency": "INCONSISTENT_TASK_DISTRIBUTION_CONFIRMED"
+  },
+  "section_8_histgb_governance": {
+    "class_c_histgb_train_oof_coverage_at_20": "75 / 80 = 93.75%",
+    "class_c_histgb_naive_preservation": "100.0% (59/59)",
+    "class_c_histgb_lost": 0,
+    "historical_exclusion_reason": "Class A (Regularized Logistic) was predeclared and frozen as the sole primary candidate prior to unblinding validation data due to bounded weights and zero variance under small-sample partitions. Class C was exploratory and lacked a frozen pre-registered model weight SHA prior to unblinding.",
+    "HISTGB_STATUS": "NOT_ELIGIBLE_FOR_RETROSPECTIVE_EXECUTION",
+    "retrospective_execution": "PROHIBITED_AND_NOT_PERFORMED"
+  },
+  "section_10_root_cause_classification": {
+    "primary_root_cause": "BENCHMARK_CONSTRUCTION_INCONSISTENCY",
+    "primary_justification": "Synthesized template queries anchored on section headers rather than clinical mechanisms caused the dense retriever to localize the correct document (70% DocHit@1) but fail to resolve the specific gold chunk among competing intra-document chunks (40.9% of misses were same-doc wrong-section distractors).",
+    "secondary_contributing_causes": [
+      "FIRST_STAGE_ACQUISITION_FAILURE under the section-anchored stress-test distribution (Top-20 coverage 37.5%, 10% outside B500)",
+      "BENCHMARK_DISTRIBUTION_SHIFT (Complete loss of numeric queries, 0.0% vs 18.8% in TRAIN)"
+    ]
+  },
+  "section_11_final_status_and_recommendation": {
+    "V6_STATUS": "RESEARCH_DIAGNOSTIC_NOT_PRODUCTION_PROMOTED",
+    "LORA_STATUS": "BLOCKED",
+    "PRODUCTION_RUNTIME": "QwenRenalRetrieverV3",
+    "RENAL_RUNTIME_VERSION": "v3",
+    "DEV_B_STATUS": "UNEXECUTED_FOR_PERFORMANCE",
+    "FINAL_HELDOUT_STATUS": "UNEXECUTED_PRESERVED",
+    "FINAL_RECOMMENDATION": "PRESERVE_V3_AND_MOVE_TO_PLAB",
+    "v7_authorized": false
+  }
+}

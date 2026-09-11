@@ -1,0 +1,110 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V6_PHASE2_FAILURE_DECOMPOSITION",
+  "timestamp_utc": "2026-09-11T06:37:53.109100+00:00",
+  "total_train_queries": 80,
+  "dense_baseline": {
+    "cov20_count": 59,
+    "cov20_pct": 73.75,
+    "median_rank": 3.5
+  },
+  "bm25_baseline": {
+    "cov20_count": 73,
+    "cov20_pct": 91.25,
+    "median_rank": 2.0
+  },
+  "p3_oof_baseline": {
+    "cov20_count": 73,
+    "cov20_pct": 91.25,
+    "median_rank": 1.5
+  },
+  "total_failures_analyzed": 24,
+  "failure_taxonomy": {
+    "A. VOCABULARY_SYNONYM_MISMATCH": {
+      "count": 6,
+      "percentage_of_failures": 25.0,
+      "median_dense_rank": 107.5,
+      "median_bm25_rank": 2.0,
+      "median_current_p3_rank": 11.0,
+      "best_available_runtime_signal": "BM25_BODY_SPARSE",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0004",
+        "V5-RNK-TRAIN-0026",
+        "V5-RNK-TRAIN-0039"
+      ]
+    },
+    "B. ABBREVIATION_MISMATCH": {
+      "count": 1,
+      "percentage_of_failures": 4.2,
+      "median_dense_rank": 43.0,
+      "median_bm25_rank": 9.0,
+      "median_current_p3_rank": 13.0,
+      "best_available_runtime_signal": "ABBREVIATION_EXPANSION_OVERLAP",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0056"
+      ]
+    },
+    "D. SAME_TOPIC_WRONG_CLAIM_DISTRACTOR": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 27.0,
+      "median_bm25_rank": 128.5,
+      "median_current_p3_rank": 51.5,
+      "best_available_runtime_signal": "MEDICAL_ENTITY_OVERLAP_AND_SECTION_PRIOR",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0021",
+        "V5-RNK-TRAIN-0045"
+      ]
+    },
+    "E. SAME_DOC_WRONG_SECTION_DISTRACTOR": {
+      "count": 8,
+      "percentage_of_failures": 33.3,
+      "median_dense_rank": 46.0,
+      "median_bm25_rank": 3.0,
+      "median_current_p3_rank": 11.0,
+      "best_available_runtime_signal": "SECTION_CENTROID_SIMILARITY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0007",
+        "V5-RNK-TRAIN-0013",
+        "V5-RNK-TRAIN-0019"
+      ]
+    },
+    "H. DOCUMENT_CROWDING": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 32.0,
+      "median_bm25_rank": 100.5,
+      "median_current_p3_rank": 39.0,
+      "best_available_runtime_signal": "DOCUMENT_DIVERSITY_PENALTY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0006",
+        "V5-RNK-TRAIN-0046"
+      ]
+    },
+    "I. SECTION_CROWDING": {
+      "count": 3,
+      "percentage_of_failures": 12.5,
+      "median_dense_rank": 5.0,
+      "median_bm25_rank": 110.0,
+      "median_current_p3_rank": 29.0,
+      "best_available_runtime_signal": "SECTION_DIVERSITY_PENALTY",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0034",
+        "V5-RNK-TRAIN-0057",
+        "V5-RNK-TRAIN-0075"
+      ]
+    },
+    "J. OTHER_REPRODUCIBLE_CATEGORY": {
+      "count": 2,
+      "percentage_of_failures": 8.3,
+      "median_dense_rank": 55.0,
+      "median_bm25_rank": 14.0,
+      "median_current_p3_rank": 14.0,
+      "best_available_runtime_signal": "RRF_MULTI_SIGNAL_COMBINATION",
+      "sample_query_ids": [
+        "V5-RNK-TRAIN-0042",
+        "V5-RNK-TRAIN-0043"
+      ]
+    }
+  },
+  "primary_bottleneck_diagnosis": "The failure decomposition demonstrates that the dominant remaining failure modes are: (1) Same-topic wrong-claim distractors and same-document wrong-section distractors (high semantic similarity but wrong factual assertion), (2) Document/section crowding where dense representations concentrate heavily on high-frequency documents, and (3) Numeric/threshold/abbreviation mismatches where dense similarity alone misses precise clinical cutoffs. BM25 sparse relevance, section centroid structural similarity, and exact numeric/term overlap provide complementary orthogonal signals to resolve these failures."
+}

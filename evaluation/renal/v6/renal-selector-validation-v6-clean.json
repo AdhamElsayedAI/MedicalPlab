@@ -1,0 +1,1172 @@
+[
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0001",
+    "query": "What clinical or physiological evidence regarding Culturing human podocytes and hGEC on the chip is documented in Results > Culturing human podocytes and hGEC on the chip?",
+    "curriculum_stratum": "V6-STR-0002",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Culturing human podocytes and hGEC on the chip in DOC-PMC-RENAL-0002.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0002 (Results > Culturing human podocytes and hGEC on the chip), 2 Seeding of endothelial cells and podocytes in Organoplates TM and generation of the GOAC.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Culturing human podocytes and hGEC on the chip"
+    ],
+    "evidence_span_text": "2 Seeding of endothelial cells and podocytes in Organoplates TM and generation of the GOAC",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0014"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Culturing human podocytes and hGEC on the chip"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0002-B-C0014 under Results > Culturing human podocytes and hGEC on the chip",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0002-DOC-PMC-RENAL-0002-B-C0014",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0002-0001",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0002",
+    "query": "What clinical or physiological evidence regarding Culturing human podocytes and hGEC on the chip is documented in Results > Culturing human podocytes and hGEC on the chip?",
+    "curriculum_stratum": "V6-STR-0002",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Culturing human podocytes and hGEC on the chip in DOC-PMC-RENAL-0002.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0002 (Results > Culturing human podocytes and hGEC on the chip), hAKPC-P, hiPOD, or hpPOD were seeded in channel C (Fig.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Culturing human podocytes and hGEC on the chip"
+    ],
+    "evidence_span_text": "hAKPC-P, hiPOD, or hpPOD were seeded in channel C (Fig",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0016"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Culturing human podocytes and hGEC on the chip"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0002-B-C0016 under Results > Culturing human podocytes and hGEC on the chip",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0002-DOC-PMC-RENAL-0002-B-C0016",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0002-0002",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0003",
+    "query": "What clinical or physiological evidence regarding Ethics statement and acquisition of human samples is documented in Methods > Ethics statement and acquisition of human samples?",
+    "curriculum_stratum": "V6-STR-0002",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Ethics statement and acquisition of human samples in DOC-PMC-RENAL-0002.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0002 (Methods > Ethics statement and acquisition of human samples), primary glomerular cells : kidneys deemed non-suitable for transplantation were used for isolation of human primary podocytes and glomerular endothelial cells.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Methods",
+      "Ethics statement and acquisition of human samples"
+    ],
+    "evidence_span_text": "Primary glomerular cells : Kidneys deemed non-suitable for transplantation were used for isolation of human primary podocytes and glomerular endothelial cells",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0050"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Methods",
+      "Ethics statement and acquisition of human samples"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0002-B-C0050 under Methods > Ethics statement and acquisition of human samples",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0002-DOC-PMC-RENAL-0002-B-C0050",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0002-0003",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0004",
+    "query": "What clinical or physiological evidence regarding Survey methodology is documented in Survey methodology?",
+    "curriculum_stratum": "V6-STR-0005",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Survey methodology in DOC-PMC-RENAL-0005.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0005 (Survey methodology), next, the selected articles and papers were critically reviewed to assess their relevance and quality.",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "parent_section_path": [
+      "Survey methodology"
+    ],
+    "evidence_span_text": "Next, the selected articles and papers were critically reviewed to assess their relevance and quality",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0013"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Survey methodology"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0005-B-C0013 under Survey methodology",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0005-DOC-PMC-RENAL-0005-B-C0013",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0005-0004",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0005",
+    "query": "What clinical or physiological evidence regarding Loop of Henle is documented in Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Loop of Henle?",
+    "curriculum_stratum": "V6-STR-0005",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Loop of Henle in DOC-PMC-RENAL-0005.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0005 (Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Loop of Henle), the proximal convoluted tubule continues into the loop of henle, a u-shaped epithelial tubule running into the medulla and returning to the cortex where it continues into the distal convoluted tubule of the nephron.",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "parent_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Loop of Henle"
+    ],
+    "evidence_span_text": "The proximal convoluted tubule continues into the loop of Henle, a U-shaped epithelial tubule running into the medulla and returning to the cortex where it continues into the distal convoluted tubule of the nephron",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0036"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Loop of Henle"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0005-B-C0036 under Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Loop of Henle",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0005-DOC-PMC-RENAL-0005-B-C0036",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0005-0005",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0006",
+    "query": "What clinical or physiological evidence regarding Distal convoluted tubule is documented in Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Distal convoluted tubule?",
+    "curriculum_stratum": "V6-STR-0005",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Distal convoluted tubule in DOC-PMC-RENAL-0005.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0005 (Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Distal convoluted tubule), the loop of henle continues into the distal convoluted tubule\u2014a relatively short portion of the nephron critically important for sodium, potassium and divalent cation homeostasis.",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "parent_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Distal convoluted tubule"
+    ],
+    "evidence_span_text": "The loop of Henle continues into the distal convoluted tubule\u2014a relatively short portion of the nephron critically important for sodium, potassium and divalent cation homeostasis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0043"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Distal convoluted tubule"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0005-B-C0043 under Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Distal convoluted tubule",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0005-DOC-PMC-RENAL-0005-B-C0043",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0005-0006",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0007",
+    "query": "What clinical or physiological evidence regarding Explanation to the patient\u2019s family is documented in Commentary > Explanation to the patient\u2019s family?",
+    "curriculum_stratum": "V6-STR-0006",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Explanation to the patient\u2019s family in DOC-PMC-RENAL-0006.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0006 (Commentary > Explanation to the patient\u2019s family), when explaining therapeutic strategies to the patient\u2019s family, the parents must always be present; other individuals may attend the explanation if requested by the parents (grandparents, etc.).",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Explanation to the patient\u2019s family"
+    ],
+    "evidence_span_text": "When explaining therapeutic strategies to the patient\u2019s family, the parents must always be present; other individuals may attend the explanation if requested by the parents (grandparents, etc.)",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0337"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Explanation to the patient\u2019s family"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0006-B-C0337 under Commentary > Explanation to the patient\u2019s family",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0006-DOC-PMC-RENAL-0006-B-C0337",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0006-0007",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0008",
+    "query": "What clinical or physiological evidence regarding Subsequent follow-up and reconsideration of the treatment strategy is documented in Commentary > Subsequent follow-up and reconsideration of the treatment strategy?",
+    "curriculum_stratum": "V6-STR-0006",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Subsequent follow-up and reconsideration of the treatment strategy in DOC-PMC-RENAL-0006.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0006 (Commentary > Subsequent follow-up and reconsideration of the treatment strategy), even after a strategy is decided, the patient\u2019s family will require continuous mental support.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Subsequent follow-up and reconsideration of the treatment strategy"
+    ],
+    "evidence_span_text": "Even after a strategy is decided, the patient\u2019s family will require continuous mental support",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0339"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Subsequent follow-up and reconsideration of the treatment strategy"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0006-B-C0339 under Commentary > Subsequent follow-up and reconsideration of the treatment strategy",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0006-DOC-PMC-RENAL-0006-B-C0339",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0006-0008",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0009",
+    "query": "What clinical or physiological evidence regarding 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d is documented in Summary of CQs and statements > Chapter 9. Renal anemia > 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d?",
+    "curriculum_stratum": "V6-STR-0007",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d in DOC-PMC-RENAL-0007.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0007 (Summary of CQs and statements > Chapter 9. Renal anemia > 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d), the japanese society of nephrology has published the \u201crecommendation for appropriate use of hif-ph inhibitors (september 29, 2020 version)\u201d.",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 9. Renal anemia",
+      "9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d"
+    ],
+    "evidence_span_text": "The Japanese Society of Nephrology has published the \u201cRecommendation for appropriate use of HIF-PH inhibitors (September 29, 2020 version)\u201d",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0139"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 9. Renal anemia",
+      "9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0007-B-C0139 under Summary of CQs and statements > Chapter 9. Renal anemia > 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0007-DOC-PMC-RENAL-0007-B-C0139",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0007-0009",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0010",
+    "query": "What clinical or physiological evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) is documented in Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)?",
+    "curriculum_stratum": "V6-STR-0007",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) in DOC-PMC-RENAL-0007.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0007 (Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)), as a general rule for the patient kidney function estimation formula, the kidney function evaluation method (at the time of the clinical trial) that is used to set drug doses by kidney function in the package insert should be used.",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 11 Pharmacotherapy",
+      "11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)"
+    ],
+    "evidence_span_text": "As a general rule for the patient kidney function estimation formula, the kidney function evaluation method (at the time of the clinical trial) that is used to set drug doses by kidney function in the package insert should be used",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0165"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 11 Pharmacotherapy",
+      "11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0007-B-C0165 under Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0007-DOC-PMC-RENAL-0007-B-C0165",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0007-0010",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0011",
+    "query": "What clinical or physiological evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) is documented in Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)?",
+    "curriculum_stratum": "V6-STR-0007",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) in DOC-PMC-RENAL-0007.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0007 (Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)), the drug dose setting by kidney function should be used as a standard, and avoiding overdose or underdose is important.",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 11 Pharmacotherapy",
+      "11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)"
+    ],
+    "evidence_span_text": "The drug dose setting by kidney function should be used as a standard, and avoiding overdose or underdose is important",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0167"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 11 Pharmacotherapy",
+      "11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0007-B-C0167 under Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0007-DOC-PMC-RENAL-0007-B-C0167",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0007-0011",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0012",
+    "query": "What clinical or physiological evidence regarding Grading system is documented in Methods > Grading system?",
+    "curriculum_stratum": "V6-STR-0008",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Grading system in DOC-PMC-RENAL-0008.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0008 (Methods > Grading system), we followed the grading system of the american academy of pediatrics (fig.",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "parent_section_path": [
+      "Methods",
+      "Grading system"
+    ],
+    "evidence_span_text": "We followed the grading system of the American Academy of Pediatrics (Fig",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Methods",
+      "Grading system"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0008-B-C0008 under Methods > Grading system",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0008-DOC-PMC-RENAL-0008-B-C0008",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0008-0012",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0013",
+    "query": "What clinical or physiological evidence regarding Definitions is documented in Clinical practice recommendations > Definitions and diagnostic work-up > Definitions?",
+    "curriculum_stratum": "V6-STR-0008",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Definitions in DOC-PMC-RENAL-0008.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0008 (Clinical practice recommendations > Definitions and diagnostic work-up > Definitions), we suggest using the \u201cconfirmation period,\u201d which is the time period between 4 and 6 weeks from start of oral pdn at standard doses, to assess the response to further treatment with glucocorticoids and initiate raasi (grade c, weak recommendation).",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "parent_section_path": [
+      "Clinical practice recommendations",
+      "Definitions and diagnostic work-up",
+      "Definitions"
+    ],
+    "evidence_span_text": "We suggest using the \u201cconfirmation period,\u201d which is the time period between 4 and 6 weeks from start of oral PDN at standard doses, to assess the response to further treatment with glucocorticoids and initiate RAASi (grade C, weak recommendation)",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0013"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Clinical practice recommendations",
+      "Definitions and diagnostic work-up",
+      "Definitions"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0008-B-C0013 under Clinical practice recommendations > Definitions and diagnostic work-up > Definitions",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0008-DOC-PMC-RENAL-0008-B-C0013",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0008-0013",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0014",
+    "query": "What clinical or physiological evidence regarding Initial diagnostic workup of a child with SRNS is documented in Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS?",
+    "curriculum_stratum": "V6-STR-0008",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Initial diagnostic workup of a child with SRNS in DOC-PMC-RENAL-0008.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0008 (Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS), we recommend careful physical examination of the patient including a meticulous search for extra-renal manifestations such as skeletal, neurological, eye, ear and urogenital abnormalities, and for secondary causes (mainly infectious) of ns (table 2 ) (grade a, strong recommendation)..",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "parent_section_path": [
+      "Evidence and rationale",
+      "Definition of multi-drug resistant nephrotic syndrome",
+      "Initial diagnostic workup of a child with SRNS"
+    ],
+    "evidence_span_text": "We recommend careful physical examination of the patient including a meticulous search for extra-renal manifestations such as skeletal, neurological, eye, ear and urogenital abnormalities, and for secondary causes (mainly infectious) of NS (Table 2 ) (grade A, strong recommendation).",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0035"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Evidence and rationale",
+      "Definition of multi-drug resistant nephrotic syndrome",
+      "Initial diagnostic workup of a child with SRNS"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0008-B-C0035 under Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0008-DOC-PMC-RENAL-0008-B-C0035",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0008-0014",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0015",
+    "query": "What clinical or physiological evidence regarding Initial diagnostic workup of a child with SRNS is documented in Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS?",
+    "curriculum_stratum": "V6-STR-0008",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Initial diagnostic workup of a child with SRNS in DOC-PMC-RENAL-0008.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0008 (Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS), table 2 initial workup and follow-up for a child with steroid-resistant nephrotic syndrome \u2014 category: clinical evaluation \u2014 investigations: patient history - including results of dipstick assessments at home, physical activity, fever episodes, pain, abdominal discomfort, swelling, fatigue, school attendance, adherence to medication, menstrual cycle in female adolescents; initial workup: \u2713; follow-up monitoring: every 3 months.",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "parent_section_path": [
+      "Evidence and rationale",
+      "Definition of multi-drug resistant nephrotic syndrome",
+      "Initial diagnostic workup of a child with SRNS"
+    ],
+    "evidence_span_text": "Table 2 Initial workup and follow-up for a child with steroid-resistant nephrotic syndrome \u2014 Category: Clinical evaluation \u2014 Investigations: Patient history - Including results of dipstick assessments at home, physical activity, fever episodes, pain, abdominal discomfort, swelling, fatigue, school attendance, adherence to medication, menstrual cycle in female adolescents; Initial workup: \u2713; Follow-up monitoring: Every 3 months",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0039"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Evidence and rationale",
+      "Definition of multi-drug resistant nephrotic syndrome",
+      "Initial diagnostic workup of a child with SRNS"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0008-B-C0039 under Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0008-DOC-PMC-RENAL-0008-B-C0039",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0008-0015",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0016",
+    "query": "What clinical or physiological evidence regarding Evaluation of the patient with chronic HK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Evaluation of the patient with chronic HK?",
+    "curriculum_stratum": "V6-STR-0010",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Evaluation of the patient with chronic HK in DOC-PMC-RENAL-0010.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0010 (Hyperkalemia in non-dialytic chronic kidney disease > Evaluation of the patient with chronic HK), in-depth evaluation of the ckd patients with high sk is the key for graduating intensity of k-lowering treatment.",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Evaluation of the patient with chronic HK"
+    ],
+    "evidence_span_text": "In-depth evaluation of the CKD patients with high sK is the key for graduating intensity of K-lowering treatment",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0018"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Evaluation of the patient with chronic HK"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0010-B-C0018 under Hyperkalemia in non-dialytic chronic kidney disease > Evaluation of the patient with chronic HK",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0010-DOC-PMC-RENAL-0010-B-C0018",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0010-0016",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0017",
+    "query": "What clinical or physiological evidence regarding Target levels of sK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Target levels of sK?",
+    "curriculum_stratum": "V6-STR-0010",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Target levels of sK in DOC-PMC-RENAL-0010.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0010 (Hyperkalemia in non-dialytic chronic kidney disease > Target levels of sK), \u201cClinical normality\u201d of sK can be defined by the range of levels that correspond to the nadir of cardiorenal events attributable to hyper- and hypo-kalemia, thus representing the goal of therapy.",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Target levels of sK"
+    ],
+    "evidence_span_text": "\u201cClinical normality\u201d of sK can be defined by the range of levels that correspond to the nadir of cardiorenal events attributable to hyper- and hypo-kalemia, thus representing the goal of therapy",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0035"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Target levels of sK"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0010-B-C0035 under Hyperkalemia in non-dialytic chronic kidney disease > Target levels of sK",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0010-DOC-PMC-RENAL-0010-B-C0035",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0010-0017",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0018",
+    "query": "What clinical or physiological evidence regarding Nutritional approach to chronic HK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Nutritional approach to chronic HK?",
+    "curriculum_stratum": "V6-STR-0010",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Nutritional approach to chronic HK in DOC-PMC-RENAL-0010.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0010 (Hyperkalemia in non-dialytic chronic kidney disease > Nutritional approach to chronic HK), who recommends a daily potassium intake of at least 90 mmol or 3.5 g because a lower intake is associated with an increased risk of hypertension and cardiovascular events [ 20 , 21 ].",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Nutritional approach to chronic HK"
+    ],
+    "evidence_span_text": "WHO recommends a daily potassium intake of at least 90 mmol or 3.5 g because a lower intake is associated with an increased risk of hypertension and cardiovascular events [ 20 , 21 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0038"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Nutritional approach to chronic HK"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0010-B-C0038 under Hyperkalemia in non-dialytic chronic kidney disease > Nutritional approach to chronic HK",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0010-DOC-PMC-RENAL-0010-B-C0038",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0010-0018",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0019",
+    "query": "What clinical or physiological evidence regarding Position statement 1.4 is documented in Hyperkalemia in non-dialytic chronic kidney disease > Position statement 1.4?",
+    "curriculum_stratum": "V6-STR-0010",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Position statement 1.4 in DOC-PMC-RENAL-0010.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0010 (Hyperkalemia in non-dialytic chronic kidney disease > Position statement 1.4), the pharmacological approach to hk in to mild-moderate chronic ckd is multifactorial and must be based on the specific features of the single patient: (1) sodium bicarbonate in the presence of metabolic acidosis, (2) loop diuretics in the absence of euvolemia-hypovolemia and/or low blood pressure, (3) short therapeutic cycles with the two k binders today available (sps and cps)..",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Position statement 1.4"
+    ],
+    "evidence_span_text": "The pharmacological approach to HK in to mild-moderate chronic CKD is multifactorial and must be based on the specific features of the single patient: (1) Sodium bicarbonate in the presence of metabolic acidosis, (2) Loop diuretics in the absence of euvolemia-hypovolemia and/or low blood pressure, (3) short therapeutic cycles with the two K binders today available (SPS and CPS).",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0043"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia in non-dialytic chronic kidney disease",
+      "Position statement 1.4"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0010-B-C0043 under Hyperkalemia in non-dialytic chronic kidney disease > Position statement 1.4",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0010-DOC-PMC-RENAL-0010-B-C0043",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0010-0019",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0020",
+    "query": "What clinical or physiological evidence regarding Differences Between Mouse and Human Models is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models?",
+    "curriculum_stratum": "V6-STR-0011",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Differences Between Mouse and Human Models in DOC-PMC-RENAL-0011.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0011 (Animal Models for Studying UTI > Differences Between Mouse and Human Models), although murine models remain incredibly valuable for uti, they are expensive and labor-intensive to maintain and breed.",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models"
+    ],
+    "evidence_span_text": "Although murine models remain incredibly valuable for UTI, they are expensive and labor-intensive to maintain and breed",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0054"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0011-B-C0054 under Animal Models for Studying UTI > Differences Between Mouse and Human Models",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0011-DOC-PMC-RENAL-0011-B-C0054",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0011-0020",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0021",
+    "query": "What clinical or physiological evidence regarding Host Pathogen Interactions and Immunological Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences?",
+    "curriculum_stratum": "V6-STR-0011",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Host Pathogen Interactions and Immunological Differences in DOC-PMC-RENAL-0011.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0011 (Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences), there are 13 members of tlrs and between humans and mice; tlr1-9 are present in both, tlr10 is found in only in humans and tlr11-13, only in mice ( behzadi and behzadi, 2016 ).",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Host Pathogen Interactions and Immunological Differences"
+    ],
+    "evidence_span_text": "There are 13 members of TLRs and between humans and mice; TLR1-9 are present in both, TLR10 is found in only in humans and TLR11-13, only in mice ( Behzadi and Behzadi, 2016 )",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0062"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Host Pathogen Interactions and Immunological Differences"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0011-B-C0062 under Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0011-DOC-PMC-RENAL-0011-B-C0062",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0011-0021",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0022",
+    "query": "What clinical or physiological evidence regarding Host Pathogen Interactions and Immunological Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences?",
+    "curriculum_stratum": "V6-STR-0011",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Host Pathogen Interactions and Immunological Differences in DOC-PMC-RENAL-0011.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0011 (Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences), tlr2, expressed in both species, has been shown to be a signaling receptor for bacterial peptidoglycan, important for recognition of gram-positive bacteria ( takeuchi et al., 1999 ), and its ability to form heterodimer complexes with tlr1 and 6 broadens its spectrum to recognize other pamps (reviewed in behzadi and behzadi, 2016 ).",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Host Pathogen Interactions and Immunological Differences"
+    ],
+    "evidence_span_text": "TLR2, expressed in both species, has been shown to be a signaling receptor for bacterial peptidoglycan, important for recognition of Gram-positive bacteria ( Takeuchi et al., 1999 ), and its ability to form heterodimer complexes with TLR1 and 6 broadens its spectrum to recognize other PAMPs (reviewed in Behzadi and Behzadi, 2016 )",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0064"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Host Pathogen Interactions and Immunological Differences"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0011-B-C0064 under Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0011-DOC-PMC-RENAL-0011-B-C0064",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0011-0022",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0023",
+    "query": "What clinical or physiological evidence regarding Bacterial Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Bacterial Differences?",
+    "curriculum_stratum": "V6-STR-0011",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Bacterial Differences in DOC-PMC-RENAL-0011.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0011 (Animal Models for Studying UTI > Differences Between Mouse and Human Models > Bacterial Differences), species differences in urine composition might also contribute to differences in bacterial behavior.",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Bacterial Differences"
+    ],
+    "evidence_span_text": "Species differences in urine composition might also contribute to differences in bacterial behavior",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0066"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Animal Models for Studying UTI",
+      "Differences Between Mouse and Human Models",
+      "Bacterial Differences"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0011-B-C0066 under Animal Models for Studying UTI > Differences Between Mouse and Human Models > Bacterial Differences",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0011-DOC-PMC-RENAL-0011-B-C0066",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0011-0023",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0024",
+    "query": "What clinical or physiological evidence regarding Eradication of Stones Might Lead to UTI Resolution is documented in Results > Eradication of Stones Might Lead to UTI Resolution?",
+    "curriculum_stratum": "V6-STR-0013",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Eradication of Stones Might Lead to UTI Resolution in DOC-PMC-RENAL-0013.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0013 (Results > Eradication of Stones Might Lead to UTI Resolution), the strong association between ksd and uti progressively led authors to consider the clinical implications, with infections harbored either in patients with recurrent and relapsing uti or in patients presenting with urinary tract stones demanding treatment (table 2 ).",
+    "source_document_id": "DOC-PMC-RENAL-0013",
+    "parent_section_path": [
+      "Results",
+      "Eradication of Stones Might Lead to UTI Resolution"
+    ],
+    "evidence_span_text": "The strong association between KSD and UTI progressively led authors to consider the clinical implications, with infections harbored either in patients with recurrent and relapsing UTI or in patients presenting with urinary tract stones demanding treatment (Table 2 )",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0013-B-C0031"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0013",
+    "gold_section_path": [
+      "Results",
+      "Eradication of Stones Might Lead to UTI Resolution"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0013-B-C0031 under Results > Eradication of Stones Might Lead to UTI Resolution",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0013-DOC-PMC-RENAL-0013-B-C0031",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0013-0024",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0025",
+    "query": "What clinical or physiological evidence regarding Eradication of Stones Might Lead to UTI Resolution is documented in Results > Eradication of Stones Might Lead to UTI Resolution?",
+    "curriculum_stratum": "V6-STR-0013",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Eradication of Stones Might Lead to UTI Resolution in DOC-PMC-RENAL-0013.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0013 (Results > Eradication of Stones Might Lead to UTI Resolution), in order to investigate the role of surgical procedures for non-obstructive urolithiasis in the relief from recurrent utis, agarwal et al.",
+    "source_document_id": "DOC-PMC-RENAL-0013",
+    "parent_section_path": [
+      "Results",
+      "Eradication of Stones Might Lead to UTI Resolution"
+    ],
+    "evidence_span_text": "In order to investigate the role of surgical procedures for non-obstructive urolithiasis in the relief from recurrent UTIs, Agarwal et al",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0013-B-C0039"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0013",
+    "gold_section_path": [
+      "Results",
+      "Eradication of Stones Might Lead to UTI Resolution"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0013-B-C0039 under Results > Eradication of Stones Might Lead to UTI Resolution",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0013-DOC-PMC-RENAL-0013-B-C0039",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0013-0025",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0026",
+    "query": "What clinical or physiological evidence regarding SFU Grading System is documented in Hydronephrosis Grading Systems > SFU Grading System?",
+    "curriculum_stratum": "V6-STR-0014",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding SFU Grading System in DOC-PMC-RENAL-0014.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0014 (Hydronephrosis Grading Systems > SFU Grading System), sfu-1 and sfu-2a: both indicate different degrees of renal pelvic dilation.",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "parent_section_path": [
+      "Hydronephrosis Grading Systems",
+      "SFU Grading System"
+    ],
+    "evidence_span_text": "SFU-1 and SFU-2a: Both indicate different degrees of renal pelvic dilation",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0030"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Hydronephrosis Grading Systems",
+      "SFU Grading System"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0014-B-C0030 under Hydronephrosis Grading Systems > SFU Grading System",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0014-DOC-PMC-RENAL-0014-B-C0030",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0014-0026",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0027",
+    "query": "What clinical or physiological evidence regarding Radiology Grading System is documented in Hydronephrosis Grading Systems > Radiology Grading System?",
+    "curriculum_stratum": "V6-STR-0014",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Radiology Grading System in DOC-PMC-RENAL-0014.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0014 (Hydronephrosis Grading Systems > Radiology Grading System), radiology grades 1 and 2 (sfu-1 and sfu-2a): both indicate different degrees of renal pelvic dilation.",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "parent_section_path": [
+      "Hydronephrosis Grading Systems",
+      "Radiology Grading System"
+    ],
+    "evidence_span_text": "Radiology grades 1 and 2 (SFU-1 and SFU-2a): Both indicate different degrees of renal pelvic dilation",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0037"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Hydronephrosis Grading Systems",
+      "Radiology Grading System"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0014-B-C0037 under Hydronephrosis Grading Systems > Radiology Grading System",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0014-DOC-PMC-RENAL-0014-B-C0037",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0014-0027",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0028",
+    "query": "What clinical or physiological evidence regarding 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease is documented in 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease?",
+    "curriculum_stratum": "V6-STR-0018",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease in DOC-PMC-RENAL-0018.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0018 (6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease), mesangial cells are specialized pericytes whose primary functions are to provide structural support, regulate blood flow of the glomerular capillaries by their contractile activity, and control the turnover of mesangial matrix.",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "parent_section_path": [
+      "6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease"
+    ],
+    "evidence_span_text": "Mesangial cells are specialized pericytes whose primary functions are to provide structural support, regulate blood flow of the glomerular capillaries by their contractile activity, and control the turnover of mesangial matrix",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0036"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0018-B-C0036 under 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0018-DOC-PMC-RENAL-0018-B-C0036",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0018-0028",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0029",
+    "query": "What clinical or physiological evidence regarding 1. Introduction is documented in 1. Introduction?",
+    "curriculum_stratum": "V6-STR-0019",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 1. Introduction in DOC-PMC-RENAL-0019.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0019 (1. Introduction), glucose homeostasis is governed by several processes, including glucose absorption in the gastrointestinal tract, its uptake by muscle and adipocytes, gluconeogenesis in the liver and kidneys, and its reabsorption and excretion by the liver and kidneys [ 1 ].",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "parent_section_path": [
+      "1. Introduction"
+    ],
+    "evidence_span_text": "Glucose homeostasis is governed by several processes, including glucose absorption in the gastrointestinal tract, its uptake by muscle and adipocytes, gluconeogenesis in the liver and kidneys, and its reabsorption and excretion by the liver and kidneys [ 1 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "1. Introduction"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0019-B-C0003 under 1. Introduction",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0019-DOC-PMC-RENAL-0019-B-C0003",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0019-0029",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0030",
+    "query": "What clinical or physiological evidence regarding 3. Glucose Transporters in Healthy Human Kidneys is documented in 3. Glucose Transporters in Healthy Human Kidneys?",
+    "curriculum_stratum": "V6-STR-0019",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 3. Glucose Transporters in Healthy Human Kidneys in DOC-PMC-RENAL-0019.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0019 (3. Glucose Transporters in Healthy Human Kidneys), while more than 10,000 membrane transporters have been sequenced, the largest individual group within the mfs is the sugar porter family.",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "parent_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys"
+    ],
+    "evidence_span_text": "While more than 10,000 membrane transporters have been sequenced, the largest individual group within the MFS is the sugar porter family",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0010"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0019-B-C0010 under 3. Glucose Transporters in Healthy Human Kidneys",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0019-DOC-PMC-RENAL-0019-B-C0010",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0019-0030",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0031",
+    "query": "What clinical or physiological evidence regarding 3.1. Characteristics of Human Glucose Transporters is documented in 3. Glucose Transporters in Healthy Human Kidneys > 3.1. Characteristics of Human Glucose Transporters?",
+    "curriculum_stratum": "V6-STR-0019",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding 3.1. Characteristics of Human Glucose Transporters in DOC-PMC-RENAL-0019.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0019 (3. Glucose Transporters in Healthy Human Kidneys > 3.1. Characteristics of Human Glucose Transporters), fourteen gluts, glut1\u2013glut14, have been identified in humans [ 12 ], and these are encoded by the solute-linked carrier family 2, subfamily a genes slc2a1\u2013slc2a14 [ 13 ].",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "parent_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys",
+      "3.1. Characteristics of Human Glucose Transporters"
+    ],
+    "evidence_span_text": "Fourteen GLUTs, GLUT1\u2013GLUT14, have been identified in humans [ 12 ], and these are encoded by the solute-linked carrier family 2, subfamily A genes SLC2A1\u2013SLC2A14 [ 13 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0013"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys",
+      "3.1. Characteristics of Human Glucose Transporters"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0019-B-C0013 under 3. Glucose Transporters in Healthy Human Kidneys > 3.1. Characteristics of Human Glucose Transporters",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0019-DOC-PMC-RENAL-0019-B-C0013",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0019-0031",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0032",
+    "query": "What clinical or physiological evidence regarding Animals and experimental design is documented in Methods > Animals and experimental design?",
+    "curriculum_stratum": "V6-STR-0021",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Animals and experimental design in DOC-PMC-RENAL-0021.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0021 (Methods > Animals and experimental design), urine was collected by housing mice in metabolic cages (techniplast) for 4 h, by puncture of the bladder or as spot urines.",
+    "source_document_id": "DOC-PMC-RENAL-0021",
+    "parent_section_path": [
+      "Methods",
+      "Animals and experimental design"
+    ],
+    "evidence_span_text": "Urine was collected by housing mice in metabolic cages (Techniplast) for 4 h, by puncture of the bladder or as spot urines",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0021-B-C0027"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0021",
+    "gold_section_path": [
+      "Methods",
+      "Animals and experimental design"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0021-B-C0027 under Methods > Animals and experimental design",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0021-DOC-PMC-RENAL-0021-B-C0027",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0021-0032",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0033",
+    "query": "What clinical or physiological evidence regarding Plasma volume is documented in Methods > Plasma volume?",
+    "curriculum_stratum": "V6-STR-0021",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Plasma volume in DOC-PMC-RENAL-0021.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0021 (Methods > Plasma volume), plasma volume was measured in continuously anesthetized mice by means of evans blue dilution.",
+    "source_document_id": "DOC-PMC-RENAL-0021",
+    "parent_section_path": [
+      "Methods",
+      "Plasma volume"
+    ],
+    "evidence_span_text": "Plasma volume was measured in continuously anesthetized mice by means of Evans Blue dilution",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0021-B-C0029"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0021",
+    "gold_section_path": [
+      "Methods",
+      "Plasma volume"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0021-B-C0029 under Methods > Plasma volume",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0021-DOC-PMC-RENAL-0021-B-C0029",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0021-0033",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0034",
+    "query": "What clinical or physiological evidence regarding The structure of the mammalian renal medulla is documented in The structure of the mammalian renal medulla?",
+    "curriculum_stratum": "V6-STR-0023",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding The structure of the mammalian renal medulla in DOC-PMC-RENAL-0023.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0023 (The structure of the mammalian renal medulla), among species the basic common structure of the renal medulla reveals many variations that generally correlate with differences in the urine concentrating ability.",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "parent_section_path": [
+      "The structure of the mammalian renal medulla"
+    ],
+    "evidence_span_text": "Among species the basic common structure of the renal medulla reveals many variations that generally correlate with differences in the urine concentrating ability",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0009"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "The structure of the mammalian renal medulla"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0023-B-C0009 under The structure of the mammalian renal medulla",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0023-DOC-PMC-RENAL-0023-B-C0009",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0023-0034",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0035",
+    "query": "What clinical or physiological evidence regarding The vasculature of the renal medulla is documented in The vasculature of the renal medulla?",
+    "curriculum_stratum": "V6-STR-0023",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding The vasculature of the renal medulla in DOC-PMC-RENAL-0023.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0023 (The vasculature of the renal medulla), avrs draining the im arise at any level, the longest in the papilla.",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "parent_section_path": [
+      "The vasculature of the renal medulla"
+    ],
+    "evidence_span_text": "AVRs draining the IM arise at any level, the longest in the papilla",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0021"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "The vasculature of the renal medulla"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0023-B-C0021 under The vasculature of the renal medulla",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0023-DOC-PMC-RENAL-0023-B-C0021",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0023-0035",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0036",
+    "query": "What clinical or physiological evidence regarding Inner stripe is documented in The regions of the medulla > Inner stripe?",
+    "curriculum_stratum": "V6-STR-0023",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Inner stripe in DOC-PMC-RENAL-0023.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0023 (The regions of the medulla > Inner stripe), the is is subdivided into two regions [ 56 ], vbs and the ibr (figs.",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "parent_section_path": [
+      "The regions of the medulla",
+      "Inner stripe"
+    ],
+    "evidence_span_text": "The IS is subdivided into two regions [ 56 ], VBs and the IBR (Figs",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0028"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "The regions of the medulla",
+      "Inner stripe"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0023-B-C0028 under The regions of the medulla > Inner stripe",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0023-DOC-PMC-RENAL-0023-B-C0028",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0023-0036",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0037",
+    "query": "What clinical or physiological evidence regarding Inner medulla is documented in The regions of the medulla > Inner medulla?",
+    "curriculum_stratum": "V6-STR-0023",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Inner medulla in DOC-PMC-RENAL-0023.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0023 (The regions of the medulla > Inner medulla), the inner medulla tapers from a broad basis to a tiny papilla [ 12 , 41 ].",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "parent_section_path": [
+      "The regions of the medulla",
+      "Inner medulla"
+    ],
+    "evidence_span_text": "The inner medulla tapers from a broad basis to a tiny papilla [ 12 , 41 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0030"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "The regions of the medulla",
+      "Inner medulla"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0023-B-C0030 under The regions of the medulla > Inner medulla",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0023-DOC-PMC-RENAL-0023-B-C0030",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0023-0037",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0038",
+    "query": "What clinical or physiological evidence regarding EPO physiology, receptor signalling, and dysregulation in CKD is documented in ERYTHROPOIETIN > EPO physiology, receptor signalling, and dysregulation in CKD?",
+    "curriculum_stratum": "V6-STR-0024",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding EPO physiology, receptor signalling, and dysregulation in CKD in DOC-PMC-RENAL-0024.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0024 (ERYTHROPOIETIN > EPO physiology, receptor signalling, and dysregulation in CKD), on erythroid progenitor cells, the epo receptor (epor) exists as a preformed homodimer that requires only low (picomolar) epo concentrations for activation [ 68 ].",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "parent_section_path": [
+      "ERYTHROPOIETIN",
+      "EPO physiology, receptor signalling, and dysregulation in CKD"
+    ],
+    "evidence_span_text": "On erythroid progenitor cells, the EPO receptor (EPOR) exists as a preformed homodimer that requires only low (picomolar) EPO concentrations for activation [ 68 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0038"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "ERYTHROPOIETIN",
+      "EPO physiology, receptor signalling, and dysregulation in CKD"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0024-B-C0038 under ERYTHROPOIETIN > EPO physiology, receptor signalling, and dysregulation in CKD",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0024-DOC-PMC-RENAL-0024-B-C0038",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0024-0038",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0039",
+    "query": "What clinical or physiological evidence regarding Effects of EPO on innate immunity is documented in ERYTHROPOIETIN > Effects of EPO on innate immunity?",
+    "curriculum_stratum": "V6-STR-0024",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Effects of EPO on innate immunity in DOC-PMC-RENAL-0024.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0024 (ERYTHROPOIETIN > Effects of EPO on innate immunity), figure 2: immunomodulatory pathways of epo.",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "parent_section_path": [
+      "ERYTHROPOIETIN",
+      "Effects of EPO on innate immunity"
+    ],
+    "evidence_span_text": "Figure 2: Immunomodulatory pathways of EPO",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0041"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "ERYTHROPOIETIN",
+      "Effects of EPO on innate immunity"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0024-B-C0041 under ERYTHROPOIETIN > Effects of EPO on innate immunity",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0024-DOC-PMC-RENAL-0024-B-C0041",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0024-0039",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  },
+  {
+    "query_id": "V6-RNK-SELECT-VAL-0040",
+    "query": "What clinical or physiological evidence regarding Effects of EPO on adaptive immunity is documented in ERYTHROPOIETIN > Effects of EPO on adaptive immunity?",
+    "curriculum_stratum": "V6-STR-0024",
+    "query_style": "QS-CLINICAL-PHYSIOLOGY",
+    "learning_objective": "Understand scientific findings and evidence regarding Effects of EPO on adaptive immunity in DOC-PMC-RENAL-0024.",
+    "canonical_claim": "According to scientific evidence from DOC-PMC-RENAL-0024 (ERYTHROPOIETIN > Effects of EPO on adaptive immunity), resting t cells express low levels of epor, which is rapidly upregulated upon t-cell receptor (tcr) activation [ 3 , 93 ].",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "parent_section_path": [
+      "ERYTHROPOIETIN",
+      "Effects of EPO on adaptive immunity"
+    ],
+    "evidence_span_text": "Resting T cells express low levels of EPOR, which is rapidly upregulated upon T-cell receptor (TCR) activation [ 3 , 93 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0043"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "ERYTHROPOIETIN",
+      "Effects of EPO on adaptive immunity"
+    ],
+    "qrel_support_rationale": "Direct verbatim scientific support in DOC-PMC-RENAL-0024-B-C0043 under ERYTHROPOIETIN > Effects of EPO on adaptive immunity",
+    "qrel_construction_method": "VERBATIM_SPAN_GROUNDED_INDEPENDENT_AUDIT",
+    "verification_status": "VERIFIED_SAFE_UNSPENT_V6_CONFIRMATION",
+    "query_family": "QF-V6-VAL-DOC-PMC-RENAL-0024-DOC-PMC-RENAL-0024-B-C0043",
+    "split_group_key": "SGK-V6-DOC-PMC-RENAL-0024-0040",
+    "source": "RENAL_V6_FRESH_SELECTOR_CONFIRMATION_BENCHMARK",
+    "split": "fresh_validation"
+  }
+]
