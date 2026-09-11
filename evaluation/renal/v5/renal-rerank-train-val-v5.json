@@ -1,0 +1,557 @@
+[
+  {
+    "canonical_claim": "Podocyte-derived VEGF-A signals across the GBM to VEGFR2 on endothelial cells, maintaining their fenestrations.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "VEGF",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0024",
+      "DOC-PMC-RENAL-0018-B-C0033",
+      "DOC-PMC-RENAL-0018-B-C0034"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
+    ],
+    "learning_objective": "Explain VEGF-A paracrine signalling from podocytes to endothelial cells",
+    "parent_section_path": [
+      "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
+    ],
+    "query": "What cellular interactions maintain the fenestrated phenotype of glomerular endothelial cells?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0018-80b92a7f26af",
+    "query_id": "V5-RNK-TRAIN-0025",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "split_group_key": "80b92a7f26af",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Inulin is freely filtered at the glomerulus and undergoes neither tubular reabsorption nor secretion, making its clearance equal to GFR.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "clearance",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0001",
+      "DOC-PMC-RENAL-0016-B-C0005",
+      "DOC-PMC-RENAL-0016-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Evaluate inulin clearance criteria for ideal GFR marker",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "How is inulin clearance used as the gold standard for measuring true GFR?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0016-3e5a42c9cb5d",
+    "query_id": "V5-RNK-TRAIN-0026",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "split_group_key": "3e5a42c9cb5d",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Insulin activates Akt, inhibiting WNK4 degradation and promoting phosphorylation and apical membrane trafficking of NCC.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "WNK",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0016",
+      "DOC-PMC-RENAL-0020-B-C0017",
+      "DOC-PMC-RENAL-0020-B-C0018"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "2. Akt Signaling",
+      "2.5. Akt, With-No-Lysine Kinases (WNKs), and Sodium-Chloride Cotransporter (NCC)"
+    ],
+    "learning_objective": "Explain insulin-Akt-WNK4 pathway activation of NCC in DCT",
+    "parent_section_path": [
+      "2. Akt Signaling",
+      "2.5. Akt, With-No-Lysine Kinases (WNKs), and Sodium-Chloride Cotransporter (NCC)"
+    ],
+    "query": "How does insulin stimulate sodium reabsorption in the distal convoluted tubule?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0020-23603b6a03f6",
+    "query_id": "V5-RNK-TRAIN-0029",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "23603b6a03f6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "URAT1 on the apical membrane mediates urate reabsorption coupled to organic anions, while GLUT9 transports urate across the basolateral membrane into peritubular capillaries.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "urate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0010",
+      "DOC-PMC-RENAL-0019-B-C0066",
+      "DOC-PMC-RENAL-0019-B-C0067"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys"
+    ],
+    "learning_objective": "Explain apical URAT1 uptake and basolateral GLUT9 exit in renal urate transport",
+    "parent_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys"
+    ],
+    "query": "How do URAT1 and GLUT9 coordinate proximal tubular urate reabsorption?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0019-1247c98e35ed",
+    "query_id": "V5-RNK-TRAIN-0030",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "split_group_key": "1247c98e35ed",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Arginine vasopressin binds basolateral V2 receptors, stimulating cAMP generation and PKA phosphorylation of AQP2 tetramers.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "aquaporin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0047",
+      "DOC-PMC-RENAL-0023-B-C0050",
+      "DOC-PMC-RENAL-0023-B-C0052"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Cellular ultrastructure and transport characteristics of the involved tubular segments",
+      "Loops of Henle"
+    ],
+    "learning_objective": "Describe V2R-Gs-cAMP-PKA signalling pathway for AQP2 exocytosis",
+    "parent_section_path": [
+      "Cellular ultrastructure and transport characteristics of the involved tubular segments",
+      "Loops of Henle"
+    ],
+    "query": "What cellular second messenger pathways mediate aquaporin-2 vesicle translocation to apical membranes?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-62ab35ee3117",
+    "query_id": "V5-RNK-TRAIN-0035",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "62ab35ee3117",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Early aldosterone action induces SGK1 to inhibit NEDD4-2-mediated ENaC retrieval; late action stimulates direct ENaC subunit transcription.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "NEDD4-2",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0023",
+      "DOC-PMC-RENAL-0020-B-C0024",
+      "DOC-PMC-RENAL-0020-B-C0033"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "3. SGK Signaling",
+      "3.3. SGK1 and Tubular Transport"
+    ],
+    "learning_objective": "Differentiate early SGK1 phosphorylation from late genomic induction by mineralocorticoid receptor",
+    "parent_section_path": [
+      "3. SGK Signaling",
+      "3.3. SGK1 and Tubular Transport"
+    ],
+    "query": "How does aldosterone stimulate ENaC transcription versus ENaC membrane stabilization?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0020-22801dae4c2b",
+    "query_id": "V5-RNK-TRAIN-0039",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "22801dae4c2b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Locally generated renal Ang II acts on tubular epithelial cells to stimulate TGF-beta1 and CTGF, driving epithelial-mesenchymal transition and fibrosis.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "fibrosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0003",
+      "DOC-PMC-RENAL-0001-B-C0012",
+      "DOC-PMC-RENAL-0001-B-C0014"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+      "1.1. RAAS"
+    ],
+    "learning_objective": "Explain locally produced Ang II inducing TGF-beta and collagen deposition in renal parenchyma",
+    "parent_section_path": [
+      "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+      "1.1. RAAS"
+    ],
+    "query": "What is the role of intrarenal local RAAS in promoting tubulointerstitial fibrosis?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-655b48f91c75",
+    "query_id": "V5-RNK-TRAIN-0040",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "655b48f91c75",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Splanchnic arterial vasodilation reduces effective arterial blood volume, triggering persistent non-osmotic baroreceptor activation of RAAS.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "vasodilation",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0018",
+      "DOC-PMC-RENAL-0001-B-C0019"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "4. RAAS Blockers and Vascular Inflammation",
+      "4.3. Angiotensin Converting Enzyme Inhibitors (ACEIs)"
+    ],
+    "learning_objective": "Explain splanchnic arterial vasodilation triggering baroreceptor-mediated RAAS and sympathetic stimulation",
+    "parent_section_path": [
+      "4. RAAS Blockers and Vascular Inflammation",
+      "4.3. Angiotensin Converting Enzyme Inhibitors (ACEIs)"
+    ],
+    "query": "How does effective circulating volume depletion cause secondary hyperaldosteronism in decompensated cirrhosis?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0001-ed15bfdb914f",
+    "query_id": "V5-RNK-TRAIN-0045",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "ed15bfdb914f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Bartter syndrome involves thick ascending limb NKCC2, ROMK, or CLCNKB defects with hypercalciuria; Gitelman syndrome involves distal tubule NCC defects with hypocalciuria and severe hypomagnesemia.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "sodium",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0001",
+      "DOC-PMC-RENAL-0020-B-C0002",
+      "DOC-PMC-RENAL-0020-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Differentiate loop NKCC2/ROMK dysfunction from distal NCC cotransporter mutations",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "What transport defects distinguish Bartter syndrome from Gitelman syndrome?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0020-527f9f59d4e7",
+    "query_id": "V5-RNK-TRAIN-0046",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "527f9f59d4e7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Negative urinary net charge indicates intact renal NH4+ excretion (diarrhea); positive net charge indicates impaired renal NH4+ excretion (distal RTA).",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "ammonium",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0011",
+      "DOC-PMC-RENAL-0005-B-C0017",
+      "DOC-PMC-RENAL-0005-B-C0026"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "learning_objective": "Calculate urinary net charge (Na + K - Cl) to differentiate renal from gastrointestinal bicarbonate loss",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "query": "What is the urinary net charge and how does it assess renal ammonium excretion in normal anion gap acidosis?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0005-2ea0824657a1",
+    "query_id": "V5-RNK-TRAIN-0050",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "split_group_key": "2ea0824657a1",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Pendrin on apical membrane of beta-intercalated cells secretes bicarbonate into tubular lumen in exchange for chloride during metabolic alkalosis.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "pendrin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0021-B-C0001",
+      "DOC-PMC-RENAL-0021-B-C0004",
+      "DOC-PMC-RENAL-0021-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0021",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Describe apical Cl-/HCO3- exchanger pendrin in cortical collecting duct",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "How does pendrin in beta-intercalated cells mediate renal bicarbonate excretion?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0021-b36c968a67d4",
+    "query_id": "V5-RNK-TRAIN-0051",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0021",
+    "split_group_key": "b36c968a67d4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Creatinine requires steady-state accumulation over 24-48 hours; substantial GFR loss occurs before serum creatinine exceeds reference range.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "steady",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0005",
+      "DOC-PMC-RENAL-0016-B-C0137",
+      "DOC-PMC-RENAL-0016-B-C0140"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "learning_objective": "Explain kinetic lag and non-linear relationship between GFR reduction and creatinine accumulation",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "query": "Why is serum creatinine a delayed biomarker of glomerular filtration decline in early AKI?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0016-cebdbe255f49",
+    "query_id": "V5-RNK-TRAIN-0054",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "split_group_key": "cebdbe255f49",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Increased intra-abdominal pressure compresses renal veins and parenchyma, elevating renal venous pressure and reducing renal perfusion pressure.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "perfusion pressure",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0124",
+      "DOC-PMC-RENAL-0006-B-C0128"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary"
+    ],
+    "learning_objective": "Explain elevated renal vein pressure and reduced renal perfusion pressure in intra-abdominal hypertension",
+    "parent_section_path": [
+      "Commentary"
+    ],
+    "query": "What hemodynamic changes occur in abdominal compartment syndrome that precipitate acute kidney injury?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-76cbb22d76eb",
+    "query_id": "V5-RNK-TRAIN-0055",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "76cbb22d76eb",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Guidelines recommend sodium restriction (<2 g/day / <5 g salt) and moderate protein intake (0.8 g/kg/day) in stage 3-5 non-dialysis CKD.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "protein",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0017",
+      "DOC-PMC-RENAL-0007-B-C0030",
+      "DOC-PMC-RENAL-0007-B-C0031"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 1. CKD diagnosis and its clinical significance",
+      "1-1. CKD diagnosis (Table 1)"
+    ],
+    "learning_objective": "Apply guideline-directed nutritional management in stage 3-5 CKD",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 1. CKD diagnosis and its clinical significance",
+      "1-1. CKD diagnosis (Table 1)"
+    ],
+    "query": "What dietary sodium and protein intake limits are recommended for non-dialysis CKD patients?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-003a2e3788c6",
+    "query_id": "V5-RNK-TRAIN-0060",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "003a2e3788c6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Residual nephrons must produce excessive ammonium per nephron to excrete acid, which activates alternative complement pathway and triggers interstitial fibrosis.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "acidosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0001",
+      "DOC-PMC-RENAL-0004-B-C0002",
+      "DOC-PMC-RENAL-0004-B-C0006"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Explain complement activation and endothelin-1 induction by intrarenal ammoniagenesis in residual nephrons",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "How does chronic metabolic acidosis accelerate chronic kidney disease progression?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0004-521364e86988",
+    "query_id": "V5-RNK-TRAIN-0061",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "split_group_key": "521364e86988",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "RPGN presents with rapid loss of renal function over days to weeks, active urine sediment with red cell casts, and extensive glomerular crescent formation.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "glomerulonephritis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0007",
+      "DOC-PMC-RENAL-0025-B-C0009",
+      "DOC-PMC-RENAL-0025-B-C0010"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Review"
+    ],
+    "learning_objective": "Recognize rapid GFR decline over days to weeks accompanied by active nephritic sediment and cellular crescents",
+    "parent_section_path": [
+      "Review"
+    ],
+    "query": "What clinical presentation characterizes rapidly progressive glomerulonephritis (RPGN)?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0025-66b27ed2a12b",
+    "query_id": "V5-RNK-TRAIN-0065",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "66b27ed2a12b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "IgA nephropathy typically presents as episodic macroscopic hematuria developing 1-2 days after an upper respiratory or gastrointestinal infection.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "nephropathy",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0011",
+      "DOC-PMC-RENAL-0025-B-C0015"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Review"
+    ],
+    "learning_objective": "Identify synpharyngitic macroscopic hematuria developing within 24-48 hours of mucosal infection",
+    "parent_section_path": [
+      "Review"
+    ],
+    "query": "How does IgA nephropathy typically present in young adults following upper respiratory infection?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0025-9946952f499d",
+    "query_id": "V5-RNK-TRAIN-0066",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "9946952f499d",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Uropathogenic E. coli invade superficial umbrella cells via FimH adhesion, forming quiescent intracellular bacterial communities resistant to host clearance.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "urothelial",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0011",
+      "DOC-PMC-RENAL-0011-B-C0013",
+      "DOC-PMC-RENAL-0011-B-C0014"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+      "Bacterial Virulence and Bladder Reservoirs"
+    ],
+    "learning_objective": "Explain periurethral colonization, urothelial intracellular bacterial reservoirs, and bladder umbrella cell invasion",
+    "parent_section_path": [
+      "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+      "Bacterial Virulence and Bladder Reservoirs"
+    ],
+    "query": "What mechanisms trigger recurrent urinary tract infections in women with normal urinary anatomy?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-a3eae520175d",
+    "query_id": "V5-RNK-TRAIN-0071",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "a3eae520175d",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Emergency ureteral stenting or nephrostomy is mandated for an obstructed kidney with signs of systemic infection/pyelonephritis or acute renal failure in a solitary kidney.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "decompression",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0018",
+      "DOC-PMC-RENAL-0012-B-C0019",
+      "DOC-PMC-RENAL-0012-B-C0054"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "4. Management",
+      "4.1. Renal Colic"
+    ],
+    "learning_objective": "Identify infected hydronephrosis (urosepsis with obstruction) and bilateral obstruction in solitary kidney",
+    "parent_section_path": [
+      "4. Management",
+      "4.1. Renal Colic"
+    ],
+    "query": "What are the indications for emergency decompression of an obstructed upper urinary tract?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-a3bd44fdc451",
+    "query_id": "V5-RNK-TRAIN-0075",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "a3bd44fdc451",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Glomerular bleeding is characterized by dysmorphic erythrocytes (>80%), acanthocytes (G1 cells >5%), and red blood cell casts; isomorphic red cells indicate urological bleeding.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "dysmorphic",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0009",
+      "DOC-PMC-RENAL-0025-B-C0010",
+      "DOC-PMC-RENAL-0025-B-C0011"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Review"
+    ],
+    "learning_objective": "Differentiate dysmorphic erythrocytes and acanthocytes from isomorphic red blood cells",
+    "parent_section_path": [
+      "Review"
+    ],
+    "query": "What red cell morphological features on phase-contrast microscopy distinguish glomerular from lower urinary tract hematuria?",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-23c8a3876dd4",
+    "query_id": "V5-RNK-TRAIN-0080",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_TRAIN_EXTENDED",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "23c8a3876dd4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  }
+]

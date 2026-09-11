@@ -1,0 +1,588 @@
+[
+  {
+    "query_id": "V5-RNK-TRAIN-0061",
+    "query": "What physiological marker molecule is freely filtered across the glomerular filtration barrier to evaluate small molecule permselectivity in glomerulus-on-a-chip models?",
+    "curriculum_stratum": "STR-01",
+    "query_style": "QS-A",
+    "learning_objective": "Evaluate small molecule filtration and inulin handling across the glomerular filtration barrier",
+    "canonical_claim": "Inulin is freely filtered across the glomerular filtration barrier and serves as a functional marker of small-molecule permselectivity.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Permselectivity as functional measure of a working GOAC"
+    ],
+    "evidence_span_text": "capacity of filtering molecules that are freely filtered by glomerulus in vivo, such as inulin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0023"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Permselectivity as functional measure of a working GOAC"
+    ],
+    "qrel_support_rationale": "Demonstrates free filtration of inulin across the functional glomerular microfluidic barrier.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0002-bf9c6fda56ef",
+    "split_group_key": "SGK-fe841416fff6",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0062",
+    "query": "Why do static transwell podocyte-endothelial co-cultures fail to establish an effective semi-permeable barrier compared to dynamic microfluidic chips?",
+    "curriculum_stratum": "STR-01",
+    "query_style": "QS-A",
+    "learning_objective": "Compare dynamic versus static culture limitations in modeling glomerular permselectivity",
+    "canonical_claim": "Static transwell podocyte-endothelial co-cultures display significant albumin leakage, failing to replicate physiologic filtration barrier permselectivity.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Permselectivity as functional measure of a working GOAC"
+    ],
+    "evidence_span_text": "all transwells exhibited a significant albumin leakage thus suggesting that, under the same conditions, this platform cannot perform as efficiently",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0024"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Permselectivity as functional measure of a working GOAC"
+    ],
+    "qrel_support_rationale": "Demonstrates albumin leakage across static transwell filters lacking dynamic fluid shear.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0002-e93fd7ac8a3c",
+    "split_group_key": "SGK-fe841416fff6",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0063",
+    "query": "What describes the biphasic concentration-dependent regulatory effect of angiotensin II on proximal tubule sodium and bicarbonate transport?",
+    "curriculum_stratum": "STR-02",
+    "query_style": "QS-A",
+    "learning_objective": "Describe the biphasic concentration response of proximal tubular transport to angiotensin II",
+    "canonical_claim": "Angiotensin II exerts biphasic effects on proximal tubule transport, stimulating at picomolar-to-nanomolar concentrations and inhibiting at higher micromolar concentrations.",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "parent_section_path": [
+      "4. Effects of Ang II on PT Transport"
+    ],
+    "evidence_span_text": "effects of Ang II on PT transport are biphasic: transport is stimulated by picomolar to nanomolar concentrations of Ang II, while it is inhibited by nanomolar to micromolar concentrations of Ang II",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0016"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "4. Effects of Ang II on PT Transport"
+    ],
+    "qrel_support_rationale": "Details concentration-dependent dual action of Ang II on proximal tubular transport systems.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0004-de5a8c8ad8de",
+    "split_group_key": "SGK-d50b57eda85c",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0064",
+    "query": "Which intracellular signaling cascade mediates the high-dose inhibitory effect of angiotensin II on proximal tubule transport?",
+    "curriculum_stratum": "STR-02",
+    "query_style": "QS-A",
+    "learning_objective": "Differentiate intracellular second messenger pathways mediating stimulatory versus inhibitory actions of angiotensin II in the proximal tubule",
+    "canonical_claim": "The inhibitory effect of high-dose angiotensin II on proximal tubular transport is mediated by PLA2, arachidonic acid metabolites (EET), and the NO/cGMP cascade.",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "parent_section_path": [
+      "4. Effects of Ang II on PT Transport"
+    ],
+    "evidence_span_text": "activation of phospholipase A 2 (PLA 2 )/arachidonic acid/5,6-epoxyeicosatrienoic acid (EET) pathway and/or the NO/cGMP pathway is thought to mediate the inhibitory effect of Ang II",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0018"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "4. Effects of Ang II on PT Transport"
+    ],
+    "qrel_support_rationale": "Identifies PLA2, arachidonic acid, and NO/cGMP pathways as mediators of transport inhibition.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0004-45b25406a6c6",
+    "split_group_key": "SGK-d50b57eda85c",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0065",
+    "query": "What physiological mechanism maintains hypertonic medullary solute gradients against continuous washout by blood and tubular fluid?",
+    "curriculum_stratum": "STR-03",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the countercurrent mechanism sustaining medullary osmotic hypertonicity",
+    "canonical_claim": "Medullary hypertonic solute gradients are maintained by active countercurrent multiplication balancing solute washout by blood flow and tubular fluid.",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "evidence_span_text": "if the solute losses along with solute outflow or dilution by water uptake are permanently balanced by solute addition from an external source, a solute gradient can well be established and maintained. Precisely this mechanism stabilizes the solute gradients in the medulla",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0006"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "qrel_support_rationale": "Describes how active solute delivery counterbalances vascular washout in the renal medulla.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-a070a514a999",
+    "split_group_key": "SGK-125cfb8ffdc4",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0066",
+    "query": "How do aldosterone synthase inhibitors (ASIs) reduce aldosterone-mediated organ damage?",
+    "curriculum_stratum": "STR-04",
+    "query_style": "QS-A",
+    "learning_objective": "Understand the enzymatic mechanism and therapeutic role of aldosterone synthase inhibitors (ASIs)",
+    "canonical_claim": "Aldosterone synthase inhibitors target the CYP11B2 enzyme step to decrease systemic aldosterone production directly.",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "parent_section_path": [
+      "4. RAAS Blockers and Vascular Inflammation",
+      "4.7. Aldosterone Synthase Inhibitors"
+    ],
+    "evidence_span_text": "Decreasing aldosterone synthesis at its enzyme step, aldosterone synthase (AS), CYP11B2, is the novel alternative approach to MRA to limit aldosterone effects [ 105 ]. Aldosterone synthase inhibitors (ASI) represent the latest therapeutic strategy to decrease aldosterone production",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0023"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "4. RAAS Blockers and Vascular Inflammation",
+      "4.7. Aldosterone Synthase Inhibitors"
+    ],
+    "qrel_support_rationale": "Describes CYP11B2 inhibition by ASIs as an upstream approach to block aldosterone effects.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-95fe969e4776",
+    "split_group_key": "SGK-c7bf01f46703",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0067",
+    "query": "How does electrogenic sodium reabsorption through ENaC create the electrochemical driving force for potassium secretion via ROMK channels?",
+    "curriculum_stratum": "STR-05",
+    "query_style": "QS-A",
+    "learning_objective": "Describe the coupling between ENaC sodium reabsorption and ROMK potassium secretion in distal principal cells",
+    "canonical_claim": "Electrogenic sodium uptake through apical ENaC channels generates a lumen-negative potential difference driving passive potassium secretion through ROMK.",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "parent_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+    ],
+    "evidence_span_text": "Na + reabsorption through the ENaC generates a lumen-negative potential, favouring K + excretion",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0017"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+    ],
+    "qrel_support_rationale": "Explains electrical coupling between ENaC sodium influx and ROMK potassium secretion.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0009-da69812ab626",
+    "split_group_key": "SGK-fb944baf1de5",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0068",
+    "query": "What sensor role do basolateral Kir4.1 potassium channels play in distal convoluted tubule cells during potassium depletion?",
+    "curriculum_stratum": "STR-05",
+    "query_style": "QS-A",
+    "learning_objective": "Explain how basolateral Kir4.1 channels sense extracellular potassium and modulate NCC cotransporter activity",
+    "canonical_claim": "Basolateral Kir4.1 channels serve as potassium sensors that activate NCC cotransporters during hypokalemia to switch between electroneutral and electrogenic transport.",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "parent_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+    ],
+    "evidence_span_text": "Potassium channels (Kir4.1) in the basolateral membranes of distal convoluted tubule cells act as ‘potassium sensors’, activating NCC in response to potassium depletion",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0019"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+    ],
+    "qrel_support_rationale": "Identifies Kir4.1 as the basolateral potassium sensor activating distal tubule NCC.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0009-1f050a4c11aa",
+    "split_group_key": "SGK-fb944baf1de5",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0069",
+    "query": "How does dietary composition, specifically fruit and vegetable intake versus animal protein, affect systemic base loads and renal acid-base clearance?",
+    "curriculum_stratum": "STR-06",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the dietary determinants of systemic acid-base loads and renal compensatory excretion",
+    "canonical_claim": "Diets rich in fruits and vegetables provide an alkaline bicarbonate load that requires renal base clearance to maintain systemic pH balance.",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "parent_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney"
+    ],
+    "evidence_span_text": "The fruit- and vegetable-rich diets increase the bicarbonate/base loads; the excess is subject to clearance for the sake of proper base balance",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0018"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney"
+    ],
+    "qrel_support_rationale": "Explains dietary base loading from plant foods requiring renal excretion to maintain pH balance.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0005-973ecef7fd0a",
+    "split_group_key": "SGK-8cc46b69189d",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0070",
+    "query": "What is the reported incidence of acute kidney injury following cardiac surgery and its associated in-hospital mortality rate?",
+    "curriculum_stratum": "STR-07",
+    "query_style": "QS-A",
+    "learning_objective": "Quantify epidemiology, dialysis requirements, and mortality outcomes associated with cardiac surgery-induced AKI",
+    "canonical_claim": "Postoperative AKI occurs in approximately 22% of cardiac surgery patients and carries an in-hospital mortality rate of over 10%.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Background"
+    ],
+    "evidence_span_text": "incidence of postoperative AKI was 22.3%, while 2.3% of the patients required renal replacement therapy (RRT). Furthermore, the in-hospital mortality of patients who developed AKI following cardiac surgery was 10.7%",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0055"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Background"
+    ],
+    "qrel_support_rationale": "Provides epidemiological figures: 22.3% AKI incidence and 10.7% in-hospital mortality after cardiac surgery.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-da1ff52a3722",
+    "split_group_key": "SGK-16a5c6349ec9",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0071",
+    "query": "How does advanced patient age independently influence the risk of developing acute kidney injury after cardiac surgery?",
+    "curriculum_stratum": "STR-07",
+    "query_style": "QS-A",
+    "learning_objective": "Identify advanced age as an independent preoperative risk factor for postoperative acute kidney injury",
+    "canonical_claim": "Advanced chronological age is an independent risk factor that significantly increases the odds of developing acute kidney injury after cardiac surgery.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Aging"
+    ],
+    "evidence_span_text": "reported that the risk of development of AKI from cardiac surgery increased with age (odds ratio 1.022, 95% confidence interval: 1.005–1.039)",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0065"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Aging"
+    ],
+    "qrel_support_rationale": "Documents statistically significant odds ratio (1.022 per year) for post-cardiac surgery AKI with aging.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-855830545cc2",
+    "split_group_key": "SGK-9b2b54d73400",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0072",
+    "query": "Why is strict blood pressure control recommended in non-CKD hypertensive patients to prevent incident chronic kidney disease?",
+    "curriculum_stratum": "STR-08",
+    "query_style": "QS-A",
+    "learning_objective": "Explain blood pressure management strategies aimed at preventing incident chronic kidney disease in hypertensive populations",
+    "canonical_claim": "Effective blood pressure control in essential hypertension is recommended to reduce the risk of developing de novo chronic kidney disease.",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 2. Hypertension/CVD (heart failure)",
+      "2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)"
+    ],
+    "evidence_span_text": "preventing CKD onset through blood pressure management is important in terms of improving vital prognosis and reducing medical costs",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0053"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 2. Hypertension/CVD (heart failure)",
+      "2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)"
+    ],
+    "qrel_support_rationale": "Emphasizes blood pressure control to prevent initial CKD onset and preserve vital prognosis.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-897371246015",
+    "split_group_key": "SGK-c5ef03ea6bab",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0073",
+    "query": "Is there sufficient clinical trial evidence to recommend ACE inhibitors or ARBs over other antihypertensives in non-proteinuric CKD patients?",
+    "curriculum_stratum": "STR-08",
+    "query_style": "QS-A",
+    "learning_objective": "Critique the evidence base regarding ACE inhibitor/ARB selection in non-proteinuric hypertensive CKD patients",
+    "canonical_claim": "Evidence is insufficient to demonstrate superior renal or cardiovascular outcomes for ACE inhibitors or ARBs over other antihypertensives in CKD patients lacking proteinuria.",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "parent_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 2. Hypertension/CVD (heart failure)",
+      "2-3 [CQ] Are angiotensin converting enzyme (ACE) inhibitors/angiotensin II receptor blocker (ARBs) recommended for CKD patients without proteinuria and with hypertension?"
+    ],
+    "evidence_span_text": "In CKD patients without proteinuria and with hypertension, there is insufficient evidence that ACE inhibitors/ARBs improve CVD events and renal prognosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0065"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "Summary of CQs and statements",
+      "Chapter 2. Hypertension/CVD (heart failure)",
+      "2-3 [CQ] Are angiotensin converting enzyme (ACE) inhibitors/angiotensin II receptor blocker (ARBs) recommended for CKD patients without proteinuria and with hypertension?"
+    ],
+    "qrel_support_rationale": "Documents lack of evidence that ACE/ARB agents improve prognosis in non-proteinuric hypertensive CKD patients.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-c6aba56b8865",
+    "split_group_key": "SGK-dc906ceb1978",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0074",
+    "query": "Through what cellular mechanism does adrenocorticotropic hormone (ACTH) and alpha-MSH stabilize podocyte actin stress fibers in nephrotic syndrome?",
+    "curriculum_stratum": "STR-09",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the cellular mechanism of ACTH and melanocortin receptor agonists in stabilizing podocyte architecture",
+    "canonical_claim": "Alpha-MSH and ACTH stabilize podocyte actin stress fibers by modulating RhoA signaling via p190RhoGAP inhibition.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Modeling response to therapy in the GOAC exposed to MN sera"
+    ],
+    "evidence_span_text": "α-MSH main mechanism of action is through inhibition of RhoA inhibitor p190RhoGAP activity, which is crucial for the stabilization of podocyte stress fibers",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0039"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Modeling response to therapy in the GOAC exposed to MN sera"
+    ],
+    "qrel_support_rationale": "Details p190RhoGAP and RhoA regulation in stabilizing podocyte actin fibers during ACTH/alpha-MSH treatment.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0002-8d0bbb5271f0",
+    "split_group_key": "SGK-eb9c705d1635",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0075",
+    "query": "Mutations in which type IV collagen alpha-chain genes (COL4A3, COL4A4, COL4A5) cause Alport syndrome and disruption of the glomerular basement membrane?",
+    "curriculum_stratum": "STR-09",
+    "query_style": "QS-A",
+    "learning_objective": "Identify the genetic defects in collagen type IV chains responsible for Alport syndrome",
+    "canonical_claim": "Alport syndrome is caused by mutations in the type IV collagen alpha-chains COL4A3, COL4A4, or COL4A5, resulting in defective glomerular basement membrane assembly.",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "parent_section_path": [
+      "Results",
+      "Primary podocyte mutations promote albumin leakage in GOAC"
+    ],
+    "evidence_span_text": "In AS, a mutation on COL4α3α4α5 genes leads to deposition of a defective GBM, leading to CKD and ESRD",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0042"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Results",
+      "Primary podocyte mutations promote albumin leakage in GOAC"
+    ],
+    "qrel_support_rationale": "Identifies COL4A3/4/5 mutations leading to defective basement membrane and albumin leakage in Alport syndrome.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0002-75c14b688f93",
+    "split_group_key": "SGK-af22c13d096b",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0076",
+    "query": "What role does defects in innate and adaptive mucosal immunity play in host susceptibility to recurrent urinary tract infections?",
+    "curriculum_stratum": "STR-10",
+    "query_style": "QS-A",
+    "learning_objective": "Understand the host immunological defects predisposing to recurrent urinary tract infections",
+    "canonical_claim": "Impaired innate mucosal defenses and insufficient adaptive immune priming underlie individual host susceptibility to recurrent bacterial cystitis.",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+      "Host Factors"
+    ],
+    "evidence_span_text": "recurrence of infection is frequently associated with a disturbed innate immune response and/or insufficient adaptive immunity",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0021"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+      "Host Factors"
+    ],
+    "qrel_support_rationale": "Identifies impaired mucosal immunity and adaptive immune responses as host risk factors.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-1eb81b475a50",
+    "split_group_key": "SGK-c91f1f08d1bd",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0077",
+    "query": "Which pharmacological class is recommended as medical expulsive therapy (MET) for distal ureteric calculi?",
+    "curriculum_stratum": "STR-11",
+    "query_style": "QS-A",
+    "learning_objective": "Identify alpha-blockers as first-line medical expulsive therapy for distal ureteral stones",
+    "canonical_claim": "Alpha-blockers are recommended as medical expulsive therapy to facilitate spontaneous passage of distal ureteral calculi measuring up to 10 mm.",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "parent_section_path": [
+      "4. Management",
+      "4.3. Ureteric Stones",
+      "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+    ],
+    "evidence_span_text": "Both the AUA and EAU recommend the use of an α-blocker as MET for distal ureteric stones; the AUA suggests this for stones of ≤10 mm, whereas the EAU implies this for stones of <5 mm in size",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0021"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "4. Management",
+      "4.3. Ureteric Stones",
+      "4.3.1. Conservative Management/Medical Expulsive Therapy (MET)"
+    ],
+    "qrel_support_rationale": "Recommends alpha-blocker therapy as MET for distal ureteric calculi.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-ac3ce2c9e8b8",
+    "split_group_key": "SGK-b45f8cee16b6",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0078",
+    "query": "How do ureteroscopy (URS) and shockwave lithotripsy (SWL) compare in terms of stone-free rate versus procedural morbidity?",
+    "curriculum_stratum": "STR-11",
+    "query_style": "QS-A",
+    "learning_objective": "Compare trade-offs in stone-free rate and procedural morbidity between URS and SWL",
+    "canonical_claim": "Ureteroscopy achieves higher stone-free rates and fewer secondary retreatments than shockwave lithotripsy, whereas SWL has lower morbidity and complication rates.",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "parent_section_path": [
+      "4. Management",
+      "4.3. Ureteric Stones",
+      "4.3.2. Active Treatment"
+    ],
+    "evidence_span_text": "URS being associated with a higher stone-free rate (SFR) and lesser need to reperform the procedure when compared to SWL [ 26 ]; however, SWL is safer, with fewer complications and lower morbidity, in comparison with URS",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0027"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "4. Management",
+      "4.3. Ureteric Stones",
+      "4.3.2. Active Treatment"
+    ],
+    "qrel_support_rationale": "Contrasts higher stone-free rate of URS against lower morbidity and complication rates of SWL.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-345bfd494a56",
+    "split_group_key": "SGK-f7bac5740dc2",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0079",
+    "query": "Why does the development of acute kidney injury following major non-cardiac surgery carry significant clinical and prognostic importance?",
+    "curriculum_stratum": "STR-12",
+    "query_style": "QS-A",
+    "learning_objective": "Recognize acute kidney injury as a major determinant of mortality in non-cardiac surgical patients",
+    "canonical_claim": "Acute kidney injury following non-cardiac surgery significantly elevates postoperative mortality, highlighting the need for proactive risk identification.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Background"
+    ],
+    "evidence_span_text": "The development of AKI is significantly associated with increased mortality. This lends great clinical significance to the development of AKI following non-cardiac surgery as well as cardiac surgery",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0071"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Background"
+    ],
+    "qrel_support_rationale": "Directly correlates post-surgical AKI with marked increases in patient mortality.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0006-96e2a1bc6df5",
+    "split_group_key": "SGK-16a5c6349ec9",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  },
+  {
+    "query_id": "V5-RNK-TRAIN-0080",
+    "query": "Which preoperative and intraoperative factors, such as MELD score and blood transfusions, increase the risk of AKI following liver surgery?",
+    "curriculum_stratum": "STR-12",
+    "query_style": "QS-A",
+    "learning_objective": "Identify specific preoperative and intraoperative risk factors predisposing to acute kidney injury in hepatic surgery",
+    "canonical_claim": "Pre-existing renal impairment, chronic hypertension, elevated MELD scores, and intraoperative blood transfusions significantly increase AKI risk following hepatic surgery.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Liver transplantation"
+    ],
+    "evidence_span_text": "Preoperative renal impairment, preoperative hypertension, and intraoperative red blood cell transfusion were identified as risk factors for AKI development",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0073"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Liver transplantation"
+    ],
+    "qrel_support_rationale": "Lists pre-existing renal disease, hypertension, and red blood cell transfusion as risk factors for post-liver resection AKI.",
+    "qrel_construction_method": "SOURCE_GROUNDED_SPAN_VERIFICATION",
+    "verification_status": "VERIFIED_SAFE_UNSPENT",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0006-93684c6f97b2",
+    "split_group_key": "SGK-d819df8d20cd",
+    "source": "V5_TRAIN_CLEAN_V1",
+    "split": "val"
+  }
+]

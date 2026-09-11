@@ -1,0 +1,53 @@
+{
+  "protocol_amendment_id": "AMD-V5-DEV-A-0032-ADJUDICATION",
+  "timestamp": "2026-09-11T06:40:00+00:00",
+  "query_id": "V5-RNK-DEV-A-0032",
+  "old_dev_a_file_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
+  "old_item_sha256": "717215b526634725f60acec4d379b5801d39452154d1adb19a0d2f722b4c5a3e",
+  "old_item_content": {
+    "query_id": "V5-RNK-DEV-A-0032",
+    "query": "What is the significance of FENa in distinguishing pre-renal from intrinsic AKI?",
+    "curriculum_stratum": "STR-07",
+    "query_style": "QS-A",
+    "learning_objective": "Apply FENa to AKI aetiology differentiation",
+    "canonical_claim": "FENa <1%: pre-renal (intact tubular function); FENa >2%: intrinsic (tubular dysfunction).",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "evidence_search_keyword": "fractional",
+    "gold_section_path": ["AKI Assessment", "Tubular Function"],
+    "parent_section_path": ["AKI Assessment", "Tubular Function"],
+    "gold_chunk_ids": [],
+    "review_status": "HUMAN_REVIEW_REQUIRED",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0016-75ae41e7fb62",
+    "split_group_key": "75ae41e7fb62",
+    "source": "V5_FRESH"
+  },
+  "evidence_searched": {
+    "declared_source_document": "DOC-PMC-RENAL-0016",
+    "declared_source_title": "Assessing glomerular filtration rate (GFR) in critically ill patients with acute kidney injury--true GFR versus urinary creatinine clearance and estimating equations",
+    "declared_source_audit": "Searched all 151 chunks of DOC-PMC-RENAL-0016 for ['fractional', 'fena', 'fe_na', 'pre-renal', 'prerenal', 'intrinsic', 'tubular function', 'tubular necrosis', 'sodium excretion', '<1%', '>2%']. Result: 0 matches found. DOC-PMC-RENAL-0016 focuses exclusively on GFR estimation equations (iohexol clearance vs MDRD/CKD-EPI) and contains no discussion of FENa or pre-renal vs intrinsic AKI etiology.",
+    "full_corpus_audit": "Searched all 2,691 chunks across all 23 documents in Data/experiments/renal_v2/chunking/B_400_overlap for 'fractional' and 'fena'. Found 6 chunks (DOC-0006: 3, DOC-0008: 1, DOC-0019: 1, DOC-0021: 1). While DOC-PMC-RENAL-0006 discusses AKI differentiation and mentions FENa < 1.0% in observational ICU studies (C0182), NO chunk in the entire 23-document corpus supports the canonical claim cutoff 'FENa >2%: intrinsic (tubular dysfunction)'."
+  },
+  "exact_decision": {
+    "action": "CLASSIFY_UNANSWERABLE_COVERAGE_GAP",
+    "answerability_classification": "UNANSWERABLE_COVERAGE_GAP",
+    "review_status": "ADJUDICATED_UNANSWERABLE_COVERAGE_GAP",
+    "governing_policy": "V5 Data Protocol Section 3.1 & Predeclared Answerability Classification",
+    "rationale": "Item canonical claim is unsupported in declared source and cannot be genuinely mapped to any corpus chunk without inventing unsupported numerical cutoffs (>2% intrinsic). In accordance with instructions, the item is NOT removed from DEV-A to prevent metric distortion; it is formally classified as UNANSWERABLE_COVERAGE_GAP with an explicit audit trail.",
+    "gold_chunk_ids": []
+  },
+  "metrics_impact": {
+    "total_dev_a_queries": 50,
+    "answerable_dev_a_queries": 49,
+    "unanswerable_dev_a_queries": 1,
+    "pass_hit_at_1_denominator_50": "15/50 = 30.00%",
+    "pass_hit_at_1_denominator_49": "15/49 = 30.61%",
+    "reranker_input_hit_at_20_denominator_50": "30/50 = 60.00%",
+    "reranker_input_hit_at_20_denominator_49": "30/49 = 61.22%",
+    "candidate_coverage_at_100_denominator_50": "41/50 = 82.00%",
+    "candidate_coverage_at_100_denominator_49": "41/49 = 83.67%",
+    "candidate_coverage_at_500_denominator_50": "49/50 = 98.00%",
+    "candidate_coverage_at_500_denominator_49": "49/49 = 100.00%"
+  }
+}

@@ -1,0 +1,697 @@
+{
+  "timestamp": "2026-09-11T07:38:00+00:00",
+  "train_core": {
+    "split": "TRAIN_CORE",
+    "n_queries": 60,
+    "gold_present_in_b500_count": 59,
+    "gold_present_in_b500_percent": 98.33333333333333,
+    "empty_unresolved_qrels": [],
+    "multiple_relevant_passages_count": 48,
+    "mean_gold_chunks_per_query": 2.45,
+    "best_gold_dense_rank_summary": {
+      "min": 1,
+      "median": 12.0,
+      "p75": 44.75,
+      "p90": 227.30000000000013,
+      "max": 503
+    },
+    "gold_doc_rank_summary": {
+      "min": 1,
+      "median": 3.0,
+      "p75": 4.25,
+      "max": 20
+    },
+    "queries_with_best_rank_gt_500": [
+      "V5-RNK-TRAIN-0016"
+    ],
+    "per_query_records": [
+      {
+        "query_id": "V5-RNK-TRAIN-0001",
+        "query": "What slit diaphragm proteins are mutated in congenital nephrotic syndrome?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 19,
+        "in_b500": true,
+        "gold_doc_rank": 7
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0021",
+        "query": "What are the key components of the podocyte foot process cytoskeleton?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 5,
+        "in_b500": true,
+        "gold_doc_rank": 7
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0022",
+        "query": "How does the endothelial glycocalyx contribute to glomerular barrier selectivity?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 3,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0023",
+        "query": "What hydrostatic and oncotic pressure changes determine net ultrafiltration pressure in the glomerulus?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 20,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0024",
+        "query": "How does angiotensin II selectively constrict the efferent arteriole to maintain GFR?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 138,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0002",
+        "query": "How does V-type H+-ATPase in alpha-intercalated cells excrete acid?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 9,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0013",
+        "query": "How do SGLT2 inhibitors activate tubuloglomerular feedback?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 15,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0018",
+        "query": "What is the glucosuria threshold and why does it differ from normal glycaemia?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 6,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0027",
+        "query": "How does parathyroid hormone regulate phosphate reabsorption in the proximal tubule?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 498,
+        "in_b500": true,
+        "gold_doc_rank": 20
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0028",
+        "query": "What transporter mediates basolateral bicarbonate extrusion coupled to sodium in the proximal tubule?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 12,
+        "in_b500": true,
+        "gold_doc_rank": 5
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0003",
+        "query": "Why is the descending thin limb highly water-permeable?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0031",
+        "query": "How does the medullary countercurrent multiplier create an osmotic gradient in the loop of Henle?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0032",
+        "query": "What role does urea recycling play in establishing maximum inner medullary hypertonicity?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0033",
+        "query": "Why does high medullary blood flow wash out the renal concentrating gradient?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 8,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0034",
+        "query": "How does furosemide abolish the corticomedullary osmotic gradient?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 37,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0004",
+        "query": "How does aldosterone excess cause hypokalemic metabolic alkalosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 311,
+        "in_b500": true,
+        "gold_doc_rank": 11
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0019",
+        "query": "What is the RAAS mechanism in hypertension pathogenesis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 2,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0036",
+        "query": "How does parathyroid hormone stimulate renal 1-alpha-hydroxylase activity to produce calcitriol?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 169,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0037",
+        "query": "How does angiotensin-converting enzyme 2 (ACE2) counteract classical RAAS vasoconstriction?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0038",
+        "query": "What vascular remodeling changes occur in renal resistance arterioles in chronic hypertension?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 13,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0005",
+        "query": "What distinguishes exogenous K+ load from impaired excretion as hyperkalemia causes?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 3,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0041",
+        "query": "How does atrial natriuretic peptide counteract renal sodium and fluid retention?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 44,
+        "in_b500": true,
+        "gold_doc_rank": 8
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0042",
+        "query": "What clinical features differentiate hypovolemic from hypervolemic hyponatremia?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 218,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0043",
+        "query": "Why does severe hypomagnesemia cause refractory hypocalcemia and hypokalemia?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 5,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0044",
+        "query": "What mechanisms shift potassium intracellularly in response to acute alkalemia?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 28,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0006",
+        "query": "How does the anion gap classify metabolic acidosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0020",
+        "query": "How does the proximal tubule regulate ammonium excretion in acidosis?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 8,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0047",
+        "query": "How does pendrin coordinate with AE4 in collecting duct intercalated cells during alkalemia?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 6,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0048",
+        "query": "What distinguishes type 1 (distal) from type 2 (proximal) renal tubular acidosis?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 73,
+        "in_b500": true,
+        "gold_doc_rank": 13
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0049",
+        "query": "Why does hypokalemia maintain or exacerbate metabolic alkalosis?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 37,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0007",
+        "query": "Why is NGAL a useful early AKI biomarker?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 8,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0014",
+        "query": "What is the rhabdomyolysis-AKI mechanism for myoglobin tubular injury?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0016",
+        "query": "How does hyperphosphatemia injure renal tubules in AKI?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 503,
+        "in_b500": false,
+        "gold_doc_rank": 8
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0052",
+        "query": "What are the KDIGO staging criteria for acute kidney injury based on serum creatinine and urine output?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 3,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0053",
+        "query": "What histopathological features differentiate acute tubular necrosis from acute interstitial nephritis?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 121,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0008",
+        "query": "What is the Kimmelstiel-Wilson lesion and what disease does it indicate?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 122,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0056",
+        "query": "What are the KDIGO heat map risk categories defined by GFR and albuminuria stages?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 28,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0057",
+        "query": "How does secondary hyperparathyroidism develop in progressive chronic kidney disease?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 367,
+        "in_b500": true,
+        "gold_doc_rank": 14
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0058",
+        "query": "What is the pathophysiology of normocytic normochromic anemia in advanced renal insufficiency?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 377,
+        "in_b500": true,
+        "gold_doc_rank": 14
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0059",
+        "query": "Why does strict blood pressure control with RAAS inhibitors slow diabetic kidney disease progression?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 4,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0009",
+        "query": "How does complement system activation differentiate types of glomerulonephritis?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 47,
+        "in_b500": true,
+        "gold_doc_rank": 13
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0017",
+        "query": "What distinguishes focal segmental from diffuse glomerulosclerosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 25,
+        "in_b500": true,
+        "gold_doc_rank": 8
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0062",
+        "query": "What immunofluorescence pattern confirms anti-glomerular basement membrane (anti-GBM) disease?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 12,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0063",
+        "query": "What distinguishes minimal change disease from focal segmental glomerulosclerosis on electron microscopy?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 25,
+        "in_b500": true,
+        "gold_doc_rank": 9
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0064",
+        "query": "What autoantibody is diagnostic for primary membranous nephropathy in >70% of adult cases?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0010",
+        "query": "What is the cranberry proanthocyanidin mechanism of UTI prevention?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 339,
+        "in_b500": true,
+        "gold_doc_rank": 9
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0067",
+        "query": "What gene mutations cause autosomal dominant polycystic kidney disease (ADPKD)?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0068",
+        "query": "What drug classes are most frequently implicated in drug-induced acute interstitial nephritis?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 22,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0069",
+        "query": "How does urinary obstruction produce medullary ischemia and tubular atrophy in hydronephrosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 17,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0070",
+        "query": "What histological feature on renal ultrasound grades severe hydronephrosis according to SFU guidelines?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 4,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0011",
+        "query": "What dietary modifications reduce calcium oxalate stone recurrence?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 6,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0015",
+        "query": "How does struvite stone formation create a cycle of recurrent infection?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 2,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0072",
+        "query": "What 24-hour urine metabolic abnormalities predispose to calcium oxalate nephrolithiasis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 20,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0073",
+        "query": "Why does low urine pH promote uric acid stone formation whereas alkaline urine promotes calcium phosphate stones?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 2,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0074",
+        "query": "How do bacterial biofilms on indwelling urinary catheters perpetuate catheter-associated UTI?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0012",
+        "query": "What hematuria features require urgent urological referral?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 12,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0076",
+        "query": "What absolute clinical indications mandate emergency initiation of renal replacement therapy (AEIOU)?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 2,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0077",
+        "query": "How does continuous venovenous hemofiltration (CVVH) clear solutes by convection rather than diffusion?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 6,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0078",
+        "query": "What calcineurin inhibitor nephrotoxicity mechanisms induce acute afferent arteriolar vasoconstriction?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 104,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0079",
+        "query": "What hemodynamic and metabolic benefits do SGLT2 inhibitors confer in cardiorenal syndrome?",
+        "num_gold_chunks": 1,
+        "best_gold_dense_rank": 68,
+        "in_b500": true,
+        "gold_doc_rank": 7
+      }
+    ]
+  },
+  "train_val": {
+    "split": "TRAIN_VAL",
+    "n_queries": 20,
+    "gold_present_in_b500_count": 19,
+    "gold_present_in_b500_percent": 95.0,
+    "empty_unresolved_qrels": [],
+    "multiple_relevant_passages_count": 20,
+    "mean_gold_chunks_per_query": 2.85,
+    "best_gold_dense_rank_summary": {
+      "min": 1,
+      "median": 14.5,
+      "p75": 73.25,
+      "p90": 385.3000000000001,
+      "max": 689
+    },
+    "gold_doc_rank_summary": {
+      "min": 1,
+      "median": 2.5,
+      "p75": 4.25,
+      "max": 17
+    },
+    "queries_with_best_rank_gt_500": [
+      "V5-RNK-TRAIN-0045"
+    ],
+    "per_query_records": [
+      {
+        "query_id": "V5-RNK-TRAIN-0025",
+        "query": "What cellular interactions maintain the fenestrated phenotype of glomerular endothelial cells?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 13,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0026",
+        "query": "How is inulin clearance used as the gold standard for measuring true GFR?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 3,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0029",
+        "query": "How does insulin stimulate sodium reabsorption in the distal convoluted tubule?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 70,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0030",
+        "query": "How do URAT1 and GLUT9 coordinate proximal tubular urate reabsorption?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0035",
+        "query": "What cellular second messenger pathways mediate aquaporin-2 vesicle translocation to apical membranes?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 2,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0039",
+        "query": "How does aldosterone stimulate ENaC transcription versus ENaC membrane stabilization?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 14,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0040",
+        "query": "What is the role of intrarenal local RAAS in promoting tubulointerstitial fibrosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 83,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0045",
+        "query": "How does effective circulating volume depletion cause secondary hyperaldosteronism in decompensated cirrhosis?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 689,
+        "in_b500": false,
+        "gold_doc_rank": 9
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0046",
+        "query": "What transport defects distinguish Bartter syndrome from Gitelman syndrome?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 376,
+        "in_b500": true,
+        "gold_doc_rank": 17
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0050",
+        "query": "What is the urinary net charge and how does it assess renal ammonium excretion in normal anion gap acidosis?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 4
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0051",
+        "query": "How does pendrin in beta-intercalated cells mediate renal bicarbonate excretion?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 6,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0054",
+        "query": "Why is serum creatinine a delayed biomarker of glomerular filtration decline in early AKI?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0055",
+        "query": "What hemodynamic changes occur in abdominal compartment syndrome that precipitate acute kidney injury?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 9,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0060",
+        "query": "What dietary sodium and protein intake limits are recommended for non-dialysis CKD patients?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 60,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0061",
+        "query": "How does chronic metabolic acidosis accelerate chronic kidney disease progression?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 469,
+        "in_b500": true,
+        "gold_doc_rank": 14
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0065",
+        "query": "What clinical presentation characterizes rapidly progressive glomerulonephritis (RPGN)?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 42,
+        "in_b500": true,
+        "gold_doc_rank": 3
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0066",
+        "query": "How does IgA nephropathy typically present in young adults following upper respiratory infection?",
+        "num_gold_chunks": 2,
+        "best_gold_dense_rank": 18,
+        "in_b500": true,
+        "gold_doc_rank": 5
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0071",
+        "query": "What mechanisms trigger recurrent urinary tract infections in women with normal urinary anatomy?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 113,
+        "in_b500": true,
+        "gold_doc_rank": 2
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0075",
+        "query": "What are the indications for emergency decompression of an obstructed upper urinary tract?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 15,
+        "in_b500": true,
+        "gold_doc_rank": 5
+      },
+      {
+        "query_id": "V5-RNK-TRAIN-0080",
+        "query": "What red cell morphological features on phase-contrast microscopy distinguish glomerular from lower urinary tract hematuria?",
+        "num_gold_chunks": 3,
+        "best_gold_dense_rank": 1,
+        "in_b500": true,
+        "gold_doc_rank": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "timestamp": "2026-09-11T07:35:00+00:00",
+  "benchmark_shas": {
+    "train_extended_sha256": "cdcb9fadd606203a60a9480a39ea9f93b82d25b7f5c8cdb370e806ae4da16ac2",
+    "dev_a_sha256": "ca6320d22d979596c44026abe6da3272b1fd334a0c259b3981813610de628ab5",
+    "dev_b_sha256": "4e1e3fe44a3fed187f7f4e65bfb66b1efc700cd5285fb37e3b292789e14f41f7"
+  },
+  "gate_status": "FAIL_BLOCKING_LEAKAGE_DETECTED",
+  "firewall_dimension_summary": {
+    "1_exact_query": {
+      "vs_dev_a": 0,
+      "vs_dev_b": 0
+    },
+    "2_normalized_query": {
+      "vs_dev_a": 0,
+      "vs_dev_b": 0
+    },
+    "3_canonical_claim": {
+      "vs_dev_a": 0,
+      "vs_dev_b": 0
+    },
+    "4_learning_objective": {
+      "vs_dev_a": 0,
+      "vs_dev_b": 0
+    },
+    "5_query_family": {
+      "vs_dev_a": 4,
+      "vs_dev_b": 4
+    },
+    "6_transformation_family": {
+      "vs_dev_a": 4,
+      "vs_dev_b": 4
+    },
+    "7_evidence_span_chunk_id": {
+      "vs_dev_a_pairs": 126,
+      "vs_dev_a_unique_chunks": 62,
+      "vs_dev_b_pairs": 89,
+      "vs_dev_b_unique_chunks": 50
+    },
+    "7b_adjacent_window_overlap": {
+      "vs_dev_a": 97,
+      "vs_dev_b": 64
+    },
+    "8_source_section_identity": {
+      "vs_dev_a": 11,
+      "vs_dev_b": 2
+    },
+    "9_historical_heldout_overlap": 0,
+    "10_semantic_cosine_ge_0_90": {
+      "vs_dev_a": 5,
+      "vs_dev_b": 5
+    },
+    "10b_true_semantic_duplicates": {
+      "vs_dev_a": 3,
+      "vs_dev_b": 4
+    }
+  },
+  "itemized_leakages": {
+    "overlapping_query_families_dev_a": [
+      [
+        "V5-RNK-TRAIN-0001",
+        "V5-RNK-DEV-A-0002",
+        "QF-STR-01-DOC-PMC-RENAL-0018-154809ae2f88"
+      ],
+      [
+        "V5-RNK-TRAIN-0014",
+        "V5-RNK-DEV-A-0030",
+        "QF-STR-07-DOC-PMC-RENAL-0015-3a260c76150a"
+      ],
+      [
+        "V5-RNK-TRAIN-0016",
+        "V5-RNK-DEV-A-0034",
+        "QF-STR-07-DOC-PMC-RENAL-0006-eacaba0fd8bc"
+      ],
+      [
+        "V5-RNK-TRAIN-0056",
+        "V5-RNK-DEV-A-0035",
+        "QF-STR-08-DOC-PMC-RENAL-0007-761e375662ff"
+      ]
+    ],
+    "overlapping_query_families_dev_b": [
+      [
+        "V5-RNK-TRAIN-0008",
+        "V5-RNK-DEV-B-0032",
+        "QF-STR-08-DOC-PMC-RENAL-0007-80bda43d8125"
+      ],
+      [
+        "V5-RNK-TRAIN-0010",
+        "V5-RNK-DEV-B-0040",
+        "QF-STR-10-DOC-PMC-RENAL-0011-018e2e9d293a"
+      ],
+      [
+        "V5-RNK-TRAIN-0011",
+        "V5-RNK-DEV-B-0031",
+        "QF-STR-11-DOC-PMC-RENAL-0012-c85ad92c3825"
+      ],
+      [
+        "V5-RNK-TRAIN-0012",
+        "V5-RNK-DEV-B-0034",
+        "QF-STR-12-DOC-PMC-RENAL-0025-e4b7a0878dc9"
+      ]
+    ],
+    "overlapping_split_group_keys_dev_a": [
+      [
+        "V5-RNK-TRAIN-0001",
+        "V5-RNK-DEV-A-0002",
+        "154809ae2f88"
+      ],
+      [
+        "V5-RNK-TRAIN-0014",
+        "V5-RNK-DEV-A-0030",
+        "3a260c76150a"
+      ],
+      [
+        "V5-RNK-TRAIN-0016",
+        "V5-RNK-DEV-A-0034",
+        "eacaba0fd8bc"
+      ],
+      [
+        "V5-RNK-TRAIN-0056",
+        "V5-RNK-DEV-A-0035",
+        "761e375662ff"
+      ]
+    ],
+    "overlapping_split_group_keys_dev_b": [
+      [
+        "V5-RNK-TRAIN-0008",
+        "V5-RNK-DEV-B-0032",
+        "80bda43d8125"
+      ],
+      [
+        "V5-RNK-TRAIN-0010",
+        "V5-RNK-DEV-B-0040",
+        "018e2e9d293a"
+      ],
+      [
+        "V5-RNK-TRAIN-0011",
+        "V5-RNK-DEV-B-0031",
+        "c85ad92c3825"
+      ],
+      [
+        "V5-RNK-TRAIN-0012",
+        "V5-RNK-DEV-B-0034",
+        "e4b7a0878dc9"
+      ]
+    ],
+    "overlapping_source_sections_dev_a": [
+      [
+        "V5-RNK-TRAIN-0001",
+        "V5-RNK-DEV-A-0002",
+        "DOC-PMC-RENAL-0018",
+        "2. glomerular filtration slit diaphragm: a multicomponent apparatus"
+      ],
+      [
+        "V5-RNK-TRAIN-0014",
+        "V5-RNK-DEV-A-0030",
+        "DOC-PMC-RENAL-0015",
+        "aki > rhabdomyolysis"
+      ],
+      [
+        "V5-RNK-TRAIN-0016",
+        "V5-RNK-DEV-A-0034",
+        "DOC-PMC-RENAL-0006",
+        "aki > phosphate injury"
+      ],
+      [
+        "V5-RNK-TRAIN-0021",
+        "V5-RNK-DEV-A-0002",
+        "DOC-PMC-RENAL-0018",
+        "2. glomerular filtration slit diaphragm: a multicomponent apparatus"
+      ],
+      [
+        "V5-RNK-TRAIN-0025",
+        "V5-RNK-DEV-A-0002",
+        "DOC-PMC-RENAL-0018",
+        "2. glomerular filtration slit diaphragm: a multicomponent apparatus"
+      ],
+      [
+        "V5-RNK-TRAIN-0028",
+        "V5-RNK-DEV-A-0010",
+        "DOC-PMC-RENAL-0020",
+        "abstract"
+      ],
+      [
+        "V5-RNK-TRAIN-0029",
+        "V5-RNK-DEV-A-0011",
+        "DOC-PMC-RENAL-0020",
+        "2. akt signaling > 2.5. akt, with-no-lysine kinases (wnks), and sodium-chloride cotransporter (ncc)"
+      ],
+      [
+        "V5-RNK-TRAIN-0046",
+        "V5-RNK-DEV-A-0010",
+        "DOC-PMC-RENAL-0020",
+        "abstract"
+      ],
+      [
+        "V5-RNK-TRAIN-0047",
+        "V5-RNK-DEV-A-0009",
+        "DOC-PMC-RENAL-0021",
+        "abstract"
+      ],
+      [
+        "V5-RNK-TRAIN-0051",
+        "V5-RNK-DEV-A-0009",
+        "DOC-PMC-RENAL-0021",
+        "abstract"
+      ],
+      [
+        "V5-RNK-TRAIN-0062",
+        "V5-RNK-DEV-A-0001",
+        "DOC-PMC-RENAL-0018",
+        "abstract"
+      ]
+    ],
+    "overlapping_source_sections_dev_b": [
+      [
+        "V5-RNK-TRAIN-0010",
+        "V5-RNK-DEV-B-0040",
+        "DOC-PMC-RENAL-0011",
+        "recurrent uti > prevention"
+      ],
+      [
+        "V5-RNK-TRAIN-0011",
+        "V5-RNK-DEV-B-0031",
+        "DOC-PMC-RENAL-0012",
+        "nephrolithiasis > dietary prevention"
+      ]
+    ],
+    "semantic_similarity_adjudications_dev_a": [
+      {
+        "train_query_id": "V5-RNK-TRAIN-0003",
+        "dev_query_id": "V5-RNK-DEV-A-0013",
+        "cosine_similarity": 0.9143879413604736,
+        "train_query": "Why is the descending thin limb highly water-permeable?",
+        "dev_query": "Why is the thick ascending limb impermeable to water?",
+        "train_claim": "Descending thin limb expresses AQP1; water moves osmotically into the hypertonic medullary interstitium.",
+        "dev_claim": "TAL lacks aquaporins; active NaCl reabsorption via NKCC2 dilutes tubular fluid.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0023-B-C0001",
+          "DOC-PMC-RENAL-0023-B-C0002",
+          "DOC-PMC-RENAL-0023-B-C0003"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0023-B-C0004",
+          "DOC-PMC-RENAL-0023-B-C0013",
+          "DOC-PMC-RENAL-0023-B-C0016"
+        ],
+        "classification": "SAME_TOPIC_DISTINCT_OBJECTIVE",
+        "rationale": "Opposite nephron segments and physiology: descending thin limb water permeability vs thick ascending limb water impermeability."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0006",
+        "dev_query_id": "V5-RNK-DEV-A-0026",
+        "cosine_similarity": 0.9652376174926758,
+        "train_query": "How does the anion gap classify metabolic acidosis?",
+        "dev_query": "What is the anion gap and how does it classify metabolic acidosis?",
+        "train_claim": "High AG: unmeasured anions (lactate, ketoacids); normal AG: HCO3- loss from gut or kidney.",
+        "dev_claim": "High AG: unmeasured anions (lactate, ketoacids, uraemia); normal AG: HCO3- loss.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0005-B-C0005",
+          "DOC-PMC-RENAL-0005-B-C0030",
+          "DOC-PMC-RENAL-0005-B-C0040"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0005-B-C0005",
+          "DOC-PMC-RENAL-0005-B-C0030",
+          "DOC-PMC-RENAL-0005-B-C0040"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking how anion gap classifies metabolic acidosis."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0014",
+        "dev_query_id": "V5-RNK-DEV-A-0030",
+        "cosine_similarity": 0.9420033097267151,
+        "train_query": "What is the rhabdomyolysis-AKI mechanism for myoglobin tubular injury?",
+        "dev_query": "How does myoglobin cause tubular injury in rhabdomyolysis-induced AKI?",
+        "train_claim": "Myoglobin releases free haem in acidic urine, causing ROS-mediated tubular injury and obstruction.",
+        "dev_claim": "Free haem from myoglobin causes oxidative stress and tubular obstruction in acidic urine.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0015-B-C0001",
+          "DOC-PMC-RENAL-0015-B-C0040",
+          "DOC-PMC-RENAL-0015-B-C0045"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0015-B-C0001",
+          "DOC-PMC-RENAL-0015-B-C0040",
+          "DOC-PMC-RENAL-0015-B-C0045"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking myoglobin tubular injury mechanism in rhabdomyolysis AKI; shared gold chunks C0001, C0040, C0045."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0016",
+        "dev_query_id": "V5-RNK-DEV-A-0034",
+        "cosine_similarity": 0.9529128074645996,
+        "train_query": "How does hyperphosphatemia injure renal tubules in AKI?",
+        "dev_query": "How does hyperphosphatemia contribute to renal injury in AKI?",
+        "train_claim": "Hyperphosphatemia promotes CaPO4 deposition in tubules and interstitium, triggering inflammation and tubular death.",
+        "dev_claim": "Hyperphosphatemia promotes CaPO4 deposition in tubules, triggering inflammation and tubular death.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0006-B-C0212"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0006-B-C0212"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking hyperphosphatemia tubular injury in AKI; shared gold chunk C0212."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0061",
+        "dev_query_id": "V5-RNK-DEV-A-0037",
+        "cosine_similarity": 0.9140893220901489,
+        "train_query": "How does chronic metabolic acidosis accelerate chronic kidney disease progression?",
+        "dev_query": "How does chronic metabolic acidosis affect bone in CKD?",
+        "train_claim": "Residual nephrons must produce excessive ammonium per nephron to excrete acid, which activates alternative complement pathway and triggers interstitial fibrosis.",
+        "dev_claim": "Chronic acidosis dissolves bone mineral (CaCO3/CaPO4) as buffer, contributing to renal osteodystrophy.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0004-B-C0001",
+          "DOC-PMC-RENAL-0004-B-C0002",
+          "DOC-PMC-RENAL-0004-B-C0006"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0007-B-C0132",
+          "DOC-PMC-RENAL-0007-B-C0156"
+        ],
+        "classification": "SAME_DISEASE_DISTINCT_CLAIM",
+        "rationale": "Distinct pathological endpoints: CKD progression acceleration vs metabolic bone disease / bone buffering."
+      }
+    ],
+    "semantic_similarity_adjudications_dev_b": [
+      {
+        "train_query_id": "V5-RNK-TRAIN-0008",
+        "dev_query_id": "V5-RNK-DEV-B-0032",
+        "cosine_similarity": 0.9853890538215637,
+        "train_query": "What is the Kimmelstiel-Wilson lesion and what disease does it indicate?",
+        "dev_query": "What is the Kimmelstiel-Wilson lesion and in what condition is it found?",
+        "train_claim": "Kimmelstiel-Wilson nodules: PAS-positive nodular mesangial deposits specific to diabetic nephropathy.",
+        "dev_claim": "Kimmelstiel-Wilson nodules: PAS-positive nodular mesangial deposits pathognomonic of diabetic nephropathy.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0007-B-C0080",
+          "DOC-PMC-RENAL-0007-B-C0081",
+          "DOC-PMC-RENAL-0007-B-C0284"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0007-B-C0080",
+          "DOC-PMC-RENAL-0007-B-C0081",
+          "DOC-PMC-RENAL-0007-B-C0284"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking Kimmelstiel-Wilson lesion condition/disease; shared gold chunks C0080, C0081, C0284."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0010",
+        "dev_query_id": "V5-RNK-DEV-B-0040",
+        "cosine_similarity": 0.9669827818870544,
+        "train_query": "What is the cranberry proanthocyanidin mechanism of UTI prevention?",
+        "dev_query": "What mechanism do cranberry proanthocyanidins use to reduce recurrent UTI?",
+        "train_claim": "PACs inhibit P-fimbriae-mediated E. coli adhesion to uroepithelium, potentially reducing colonisation.",
+        "dev_claim": "PACs inhibit P-fimbriae adhesion of E. coli to uroepithelial cells, reducing colonisation.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0011-B-C0024",
+          "DOC-PMC-RENAL-0011-B-C0030"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0011-B-C0019",
+          "DOC-PMC-RENAL-0011-B-C0057",
+          "DOC-PMC-RENAL-0011-B-C0060"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking cranberry proanthocyanidin mechanism in UTI prevention."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0011",
+        "dev_query_id": "V5-RNK-DEV-B-0031",
+        "cosine_similarity": 0.9683923721313477,
+        "train_query": "What dietary modifications reduce calcium oxalate stone recurrence?",
+        "dev_query": "List dietary modifications that reduce calcium oxalate stone recurrence.",
+        "train_claim": "High fluid intake, moderate calcium, low sodium/protein/oxalate, citrate supplementation.",
+        "dev_claim": "High fluid intake, moderate calcium, low sodium/protein, low oxalate, citrate supplementation.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0012-B-C0058",
+          "DOC-PMC-RENAL-0012-B-C0060",
+          "DOC-PMC-RENAL-0012-B-C0064"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0012-B-C0058",
+          "DOC-PMC-RENAL-0012-B-C0060",
+          "DOC-PMC-RENAL-0012-B-C0064"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking dietary modifications for calcium oxalate stone recurrence; shared gold chunks C0058, C0060, C0064."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0012",
+        "dev_query_id": "V5-RNK-DEV-B-0034",
+        "cosine_similarity": 0.9557244777679443,
+        "train_query": "What hematuria features require urgent urological referral?",
+        "dev_query": "What haematuria features require urgent urological referral?",
+        "train_claim": "Painless macroscopic hematuria >40 years, clots, weight loss, LUTS, palpable mass require urgent referral.",
+        "dev_claim": "Painless macroscopic haematuria >40 years, clots, weight loss, LUTS, or palpable mass requires urgent referral.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0025-B-C0004",
+          "DOC-PMC-RENAL-0025-B-C0007",
+          "DOC-PMC-RENAL-0025-B-C0008"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0025-B-C0004",
+          "DOC-PMC-RENAL-0025-B-C0007",
+          "DOC-PMC-RENAL-0025-B-C0008"
+        ],
+        "classification": "TRUE_SEMANTIC_DUPLICATE",
+        "rationale": "Direct paraphrase asking hematuria features requiring urgent urological referral; shared gold chunks C0004, C0007, C0008."
+      },
+      {
+        "train_query_id": "V5-RNK-TRAIN-0052",
+        "dev_query_id": "V5-RNK-DEV-B-0036",
+        "cosine_similarity": 0.9032227993011475,
+        "train_query": "What are the KDIGO staging criteria for acute kidney injury based on serum creatinine and urine output?",
+        "dev_query": "What is the creatinine criterion for AKI stage 2 by KDIGO?",
+        "train_claim": "KDIGO stage 1: Cr 1.5-1.9x baseline or rise >=0.3 mg/dL; stage 2: Cr 2.0-2.9x; stage 3: Cr >=3.0x, rise to >=4.0 mg/dL, or anuria >=12 hours.",
+        "dev_claim": "AKI stage 2: creatinine >=2.0 but <3.0x baseline; or UO <0.5 mL/kg/hour for >=12 hours.",
+        "train_chunks": [
+          "DOC-PMC-RENAL-0006-B-C0003",
+          "DOC-PMC-RENAL-0006-B-C0004",
+          "DOC-PMC-RENAL-0006-B-C0021"
+        ],
+        "dev_chunks": [
+          "DOC-PMC-RENAL-0006-B-C0003",
+          "DOC-PMC-RENAL-0006-B-C0005",
+          "DOC-PMC-RENAL-0006-B-C0012"
+        ],
+        "classification": "SAME_TOPIC_DISTINCT_OBJECTIVE",
+        "rationale": "Comprehensive KDIGO 3-stage definition vs specific isolated stage-2 creatinine threshold."
+      }
+    ]
+  }
+}

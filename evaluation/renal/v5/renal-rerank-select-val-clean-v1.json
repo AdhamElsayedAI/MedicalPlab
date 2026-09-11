@@ -1,0 +1,574 @@
+[
+  {
+    "query_id": "V5-RNK-SELVAL-0001",
+    "query": "What clinical factors cause reported acute kidney injury incidence rates to vary widely in acute heart failure studies?",
+    "curriculum_stratum": "STR-06-CARDIORENAL-AKI",
+    "query_style": "QS-A",
+    "learning_objective": "Explain variations in reported AKI incidence across acute heart failure cohorts.",
+    "canonical_claim": "Reported incidence of acute kidney injury in acute heart failure varies across studies primarily due to differing diagnostic definitions of AKI.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Incidence of AKI in acute heart failure"
+    ],
+    "evidence_span_text": "Studies have found an inconsistent incidence of AKI in acute heart failure due to differing definitions of AKI. A retrospective cohort study in 2010 by Amin et al. featured 2,098 enrolled patients",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0080"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Incidence of AKI in acute heart failure"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0001.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-01-DOC-PMC-RENAL-0006",
+    "split_group_key": "28e694bc3ff6",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0002",
+    "query": "What physiologic triad of flow and delivery parameters limits distal potassium excretion during acute hyperkalemic states?",
+    "curriculum_stratum": "STR-02-ELECTROLYTES-POTASSIUM",
+    "query_style": "QS-A",
+    "learning_objective": "Identify distal nephron variables regulating potassium excretion.",
+    "canonical_claim": "Hyperkalemia occurs when physiologic stimuli restrict glomerular filtration rate, tubular flow rate, and distal sodium delivery.",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "parent_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "Clinical implications"
+    ],
+    "evidence_span_text": "These molecular processes explain why hyperkalemia invariably occurs in response to stimuli that limit any of five key parameters ( Figure 1 ): (i) glomerular filtration rate, (ii) tubular flow rate, (iii) sodium delivery to the distal nephron",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0021"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "Clinical implications"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0002.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-02-DOC-PMC-RENAL-0009",
+    "split_group_key": "bd4f031fa678",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0003",
+    "query": "In patients with stage 4 or 5 chronic kidney disease with GFR below 30 mL/min/1.73 m2, what is the reported baseline frequency of severe hyperkalemia in US cohorts?",
+    "curriculum_stratum": "STR-03-CKD-EPIDEMIOLOGY",
+    "query_style": "QS-D",
+    "learning_objective": "State the prevalence of severe hyperkalemia in advanced CKD cohorts.",
+    "canonical_claim": "In patients with GFR under 30 mL/min/1.73 m2, severe hyperkalemia is detected in approximately 1.8% of a large US cohort.",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "evidence_span_text": "In fact, in patients with a GFR < 30 mL/min/1.73 m 2 , severe HK was detected in 1.8% of a large cohort in the US [ 7 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0006"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0003.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-03-DOC-PMC-RENAL-0010",
+    "split_group_key": "d12d04b69511",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0004",
+    "query": "What clinical management is conditionally recommended for patients presenting with non-obstructing, asymptomatic calyceal calculi?",
+    "curriculum_stratum": "STR-04-NEPHROLITHIASIS-MANAGEMENT",
+    "query_style": "QS-A",
+    "learning_objective": "Describe management of non-obstructing calyceal stones.",
+    "canonical_claim": "Patients presenting with non-problematic stones in the calyces that are not causing obstruction can be offered observational treatment under regular surveillance.",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "parent_section_path": [
+      "4. Management",
+      "4.4. Renal Stones",
+      "4.4.1. Conservative Management"
+    ],
+    "evidence_span_text": "Patients presenting with non-problematic stones in the calyces, which are not causing obstruction, can be offered observational treatment (AUA: conditional recommendation)",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0035"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "4. Management",
+      "4.4. Renal Stones",
+      "4.4.1. Conservative Management"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0004.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-04-DOC-PMC-RENAL-0012",
+    "split_group_key": "2dd954097c0c",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0005",
+    "query": "What clinical method provides timed urinary clearance assessment of renal function alongside blood sampling?",
+    "curriculum_stratum": "STR-05-DIAGNOSTICS-EGFR",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the measurement of creatinine clearance from timed urine.",
+    "canonical_claim": "Urinary creatinine clearance computed from a timed 24-hour urine collection and blood sampling provides an alternative assessment of renal function.",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "evidence_span_text": "The second best method for assessment of renal function is urinary creatinine clearance (CrCl), which can be computed from a timed urine collection (for example, a 24-hour urine collection) and blood sampling for serum creatinine [ 11 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0005.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-05-DOC-PMC-RENAL-0016",
+    "split_group_key": "4eaf6ab7cf4e",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0006",
+    "query": "How do the physiological roles of the renal parenchyma and the pelvicaliceal system differ in collecting system dilatation?",
+    "curriculum_stratum": "STR-06-OBSTRUCTION-HYDRONEPHROSIS",
+    "query_style": "QS-A",
+    "learning_objective": "Differentiate functioning parenchyma from collecting pelvicaliceal structures.",
+    "canonical_claim": "The functioning renal parenchyma produces urine, whereas the pelvicaliceal system serves as the collecting reservoir that conveys urine into the ureter.",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "parent_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "evidence_span_text": "The kidney has 2 main parts: The most important part is the renal parenchyma which does function and produce urine. The other is the pelvicaliceal system which collects and sends urine into the ureter",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0006"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0006.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-06-DOC-PMC-RENAL-0014",
+    "split_group_key": "275114832330",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0007",
+    "query": "What dual systemic endocrine and tubular role does the kidney execute in maintaining circulating glucose homeostasis?",
+    "curriculum_stratum": "STR-07-PHARMACOLOGY-SGLT2",
+    "query_style": "QS-A",
+    "learning_objective": "Detail renal glucose release and reabsorption.",
+    "canonical_claim": "The kidney maintains glucose homeostasis by releasing synthesized glucose into the bloodstream to prevent hypoglycemia and filtering and reabsorbing filtered glucose.",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "evidence_span_text": "The kidney plays an important role in glucose homeostasis by releasing glucose into the blood stream to prevent hypoglycemia. It is also responsible for the filtration and subsequent reabsorption or excretion of glucose",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0001"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0007.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-07-DOC-PMC-RENAL-0019",
+    "split_group_key": "6e4e8c9aee44",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0008",
+    "query": "What severe clinical complications contribute to the management challenge of pediatric steroid-resistant nephrotic syndrome?",
+    "curriculum_stratum": "STR-08-GLOMERULAR-SRNS",
+    "query_style": "QS-A",
+    "learning_objective": "Identify clinical complications of steroid-resistant nephrotic syndrome.",
+    "canonical_claim": "Steroid-resistant nephrotic syndrome is complicated by immunosuppressive drug toxicity, severe systemic infections, thrombosis, and progression to end-stage kidney disease.",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "evidence_span_text": "Management of SRNS is a great challenge due to its heterogeneous etiology, frequent lack of remission induced by immunosuppressive treatment, and complications including drug toxicity, infections, thrombosis, the development of end-stage kidney disease (ESKD), and recurrence after renal transplantation [ 11 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0004"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0008.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-08-DOC-PMC-RENAL-0008",
+    "split_group_key": "1d1ae2c45ba5",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0009",
+    "query": "What effect does apical calcium-sensing receptor (CaSR) activation exert on proximal tubular sodium-hydrogen exchange?",
+    "curriculum_stratum": "STR-01-PHYSIOLOGY-ACID-BASE",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the regulatory effect of CaSR on proximal NHE3 activity.",
+    "canonical_claim": "Apical calcium-sensing receptor stimulation increases NHE3 transport activity in the proximal convoluted tubule.",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "parent_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Proximal convoluted tubule"
+    ],
+    "evidence_span_text": "CaSR is a G protein-coupled receptor (GPCR) expressed at the apical membrane. CaSR is sensitive to extracellular pH, with alkali-enhanced response to calcium and magnesium ions. CaSR stimulation increases NHE3 activity in PCT",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0032"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Survey methodology",
+      "Mechanistic topography of acid-base exchange in the kidney",
+      "Proximal convoluted tubule"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0009.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-09-DOC-PMC-RENAL-0005",
+    "split_group_key": "fca46d8ccfe5",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0010",
+    "query": "Which immunosuppressant medication commonly causes an acquired hyperkalemic, hyperchloremic metabolic acidosis phenotype in renal transplant recipients?",
+    "curriculum_stratum": "STR-02-ELECTROLYTES-POTASSIUM",
+    "query_style": "QS-A",
+    "learning_objective": "Identify calcineurin inhibitor-induced pseudohypoaldosteronism type II.",
+    "canonical_claim": "The calcineurin inhibitor tacrolimus can induce an acquired Gordon-like syndrome featuring hypertension, hyperkalemia, and hyperchloremic acidosis.",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "parent_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "Clinical implications"
+    ],
+    "evidence_span_text": "More commonly, this syndrome, characterized by hypertension, hyperkalemia and hyperchloremic acidosis, may be acquired by renal transplant recipients taking the calcineurin inhibitor tacrolimus",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0024"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+      "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "Clinical implications"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0010.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-10-DOC-PMC-RENAL-0009",
+    "split_group_key": "e315179f40e7",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0011",
+    "query": "What reported clinical phenomenon connects surgical weight loss interventions to post-operative renal dysfunction?",
+    "curriculum_stratum": "STR-06-SURGERY-AKI",
+    "query_style": "QS-A",
+    "learning_objective": "Describe clinical investigations into post-bariatric acute kidney injury.",
+    "canonical_claim": "Multiple clinical studies have examined the development of acute kidney injury following bariatric surgery in severely obese patients.",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "parent_section_path": [
+      "Commentary",
+      "Bariatric surgery"
+    ],
+    "evidence_span_text": "Bariatric surgery has recently become a popular surgical intervention for severe obesity, mainly in the West. As obesity itself triggers renal impairment, multiple studies have examined the development of AKI following bariatric surgery",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0075"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "Commentary",
+      "Bariatric surgery"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0011.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-11-DOC-PMC-RENAL-0006",
+    "split_group_key": "0ec1229c4010",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0012",
+    "query": "What stone diameter threshold serves as a strong clinical indication for first-line percutaneous nephrolithotomy (PCNL)?",
+    "curriculum_stratum": "STR-04-NEPHROLITHIASIS-SURGERY",
+    "query_style": "QS-D",
+    "learning_objective": "State stone size threshold indications for PCNL.",
+    "canonical_claim": "Renal calculi measuring greater than 20 mm in diameter warrant percutaneous nephrolithotomy as the first-line treatment recommendation.",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "parent_section_path": [
+      "4. Management",
+      "4.4. Renal Stones",
+      "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+    ],
+    "evidence_span_text": "Stones measuring >20 mm should be treated with PCNL as the first-line treatment (AUA/EAU: strong recommendation) ( Table 2 )",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0037"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "4. Management",
+      "4.4. Renal Stones",
+      "4.4.3. Renal Pelvis or Upper/Middle Calyces Calculi"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0012.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-12-DOC-PMC-RENAL-0012",
+    "split_group_key": "cd1add648123",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0013",
+    "query": "What specific transport exchange mechanism is mediated by AE4 in collecting duct intercalated cells?",
+    "curriculum_stratum": "STR-01-PHYSIOLOGY-ACID-BASE",
+    "query_style": "QS-A",
+    "learning_objective": "Characterize the biophysical transport properties of AE4 in renal intercalated cells.",
+    "canonical_claim": "AE4 is expressed in intercalated cells where it was originally proposed to mediate electroneutral anion exchange in the kidney.",
+    "source_document_id": "DOC-PMC-RENAL-0021",
+    "parent_section_path": [
+      "Results",
+      "AE4 is not involved in maintaining salt-water balance"
+    ],
+    "evidence_span_text": "The physiological function of AE4 in ICs in vivo is unknown, even though its expression was documented more than 20 years ago 16 . AE4 is an electroneutral",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0021-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0021",
+    "gold_section_path": [
+      "Results",
+      "AE4 is not involved in maintaining salt-water balance"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0013.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-13-DOC-PMC-RENAL-0021",
+    "split_group_key": "66dc79fe314b",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0014",
+    "query": "How does high extrarenal pelvic compliance in infants alter the transmission of obstructive pressure to renal parenchyma?",
+    "curriculum_stratum": "STR-06-OBSTRUCTION-HYDRONEPHROSIS",
+    "query_style": "QS-A",
+    "learning_objective": "Explain pelvic compliance buffering against parenchymal damage in infantile hydronephrosis.",
+    "canonical_claim": "High extrarenal pelvic compliance and expandability in infants allows significant pelvic enlargement, buffering elevated pressures and protecting renal parenchyma.",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "parent_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "evidence_span_text": "The compliance of renal pelvis is very high in infants. It is particularly true for those who have extrarenal pelvic configuration due to their high expandability. The renal pelvis enlarges significantly to protect the renal parenchyma",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0009"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0014.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-14-DOC-PMC-RENAL-0014",
+    "split_group_key": "36525cb111dc",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0015",
+    "query": "Which four endogenous circulating biochemical substrates serve as the primary carbon sources for renal gluconeogenesis?",
+    "curriculum_stratum": "STR-07-METABOLISM-GLUCONEOGENESIS",
+    "query_style": "QS-D",
+    "learning_objective": "Enumerate circulating metabolic substrates for renal gluconeogenesis.",
+    "canonical_claim": "Renal gluconeogenesis predominantly utilizes circulating lactate, glutamine, glycerol, and alanine as substrates.",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "parent_section_path": [
+      "2. Glucose Metabolism in the Healthy Kidney",
+      "Overview of Renal Physiology"
+    ],
+    "evidence_span_text": "The primary substrates for renal gluconeogenesis are lactate, glutamine, glycerol, and alanine [ 8 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "2. Glucose Metabolism in the Healthy Kidney",
+      "Overview of Renal Physiology"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0015.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-15-DOC-PMC-RENAL-0019",
+    "split_group_key": "f3a9cc5d683b",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0016",
+    "query": "In historical urological investigations, what initial clinical link was demonstrated between bacteriuria and kidney stone development?",
+    "curriculum_stratum": "STR-04-NEPHROLITHIASIS-UTI",
+    "query_style": "QS-A",
+    "learning_objective": "Explain the pathological association between chronic urinary infection and kidney stones.",
+    "canonical_claim": "Hugosson et al. in 1989 documented a foundational correlation between chronic bacteriuria and kidney stone disease in a clinical cohort.",
+    "source_document_id": "DOC-PMC-RENAL-0013",
+    "parent_section_path": [
+      "Results",
+      "The Association of UTI and KSD"
+    ],
+    "evidence_span_text": "The first correlation between chronic urinary tract infections and renal aggregations was assessed by Hugosson et al. [ 16 ] in 1989 on a cohort of 43 patients with bacteriuria and renal stones.",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0013-B-C0010"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0013",
+    "gold_section_path": [
+      "Results",
+      "The Association of UTI and KSD"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0016.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-16-DOC-PMC-RENAL-0013",
+    "split_group_key": "aa13c8aac58b",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0017",
+    "query": "What experimental rodent inoculation model was historically established to study non-obstructive ascending Escherichia coli urinary infections?",
+    "curriculum_stratum": "STR-04-UTI-PATHOGENESIS",
+    "query_style": "QS-A",
+    "learning_objective": "Describe established murine models of ascending urinary tract infection.",
+    "canonical_claim": "Hagberg et al. pioneered the ascending, unobstructed urinary tract infection instillation model using female CBA mice challenged with E. coli.",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "parent_section_path": [
+      "Animal Models for Studying UTI",
+      "Brief History of Animals in UTI Research"
+    ],
+    "evidence_span_text": "Hagberg et al. described the ascending, unobstructed UTI instillation in female CBA mice with E. coli ( Hagberg et al., 1983 )",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0025"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Animal Models for Studying UTI",
+      "Brief History of Animals in UTI Research"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0017.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-17-DOC-PMC-RENAL-0011",
+    "split_group_key": "ff6b3efea44b",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0018",
+    "query": "Which two resident glomerular cell types contribute synthetically to assembly of the glomerular basement membrane?",
+    "curriculum_stratum": "STR-08-GLOMERULAR-PATHOLOGY",
+    "query_style": "QS-A",
+    "learning_objective": "Detail cellular contributors to glomerular basement membrane synthesis and turnover.",
+    "canonical_claim": "Glomerular basement membrane synthesis requires dual contributions from podocytes and glomerular endothelial cells, with mesangial cells mediating turnover.",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "parent_section_path": [
+      "4. Role of the GBM"
+    ],
+    "evidence_span_text": "Studies using metabolic labeling (experimental argyrosis) have demonstrated that GBM synthesis requires contributions from podocytes and endothelial cells, with mesangial cells playing a role in turnover [ 41 ]",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0028"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "4. Role of the GBM"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0018.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-18-DOC-PMC-RENAL-0018",
+    "split_group_key": "3b075d99a056",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0019",
+    "query": "What clinical comorbidities and pharmacotherapies confer an estimated two to threefold higher risk for hyperkalemia?",
+    "curriculum_stratum": "STR-02-ELECTROLYTES-POTASSIUM",
+    "query_style": "QS-A",
+    "learning_objective": "Identify high-risk clinical populations for hyperkalemia development.",
+    "canonical_claim": "Patients with chronic kidney disease, heart failure, diabetes mellitus, and those treated with RAAS inhibitors possess a two to threefold higher risk of hyperkalemia.",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "parent_section_path": [
+      "Introduction"
+    ],
+    "evidence_span_text": "Individuals with CKD, HF, DM, and those taking RAASIs, as well as more than half of predialysis patients, have an estimated two to threefold higher risk for HK [ 6 ].",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Introduction"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0019.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-19-DOC-PMC-RENAL-0010",
+    "split_group_key": "e2aed1ab66a2",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  },
+  {
+    "query_id": "V5-RNK-SELVAL-0020",
+    "query": "Why do distinct anatomical suborgans of the kidney exhibit differing physiological adaptations during pelvicaliceal obstruction?",
+    "curriculum_stratum": "STR-06-OBSTRUCTION-HYDRONEPHROSIS",
+    "query_style": "QS-A",
+    "learning_objective": "Describe structural suborgan responses to pelvicaliceal dilatation.",
+    "canonical_claim": "Because the anatomy and physiology of the pelvis, calyces, medulla, and cortex are distinct, each suborgan responds differently based on hydronephrosis severity.",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "parent_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "evidence_span_text": "The anatomy and physiology of renal suborgans (renal pelvis, calices, medulla, and cortex) are completely different from each other. Therefore, each part affects and behaves differently as a response to UPJHN depending on the severity of hydronephrosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Anatomo-Physio-Pathology of Ureteropelvic Junction Type Hydronephrosis (Upjhn)"
+    ],
+    "qrel_support_rationale": "Verbatim source sentence directly supports the answer to query V5-RNK-SELVAL-0020.",
+    "qrel_construction_method": "SOURCE_GROUNDED_VERBATIM_EXTRACTIVE",
+    "verification_status": "VERBATIM_VERIFIED",
+    "query_family": "QF-SELVAL-20-DOC-PMC-RENAL-0014",
+    "split_group_key": "cd2f774f0362",
+    "source": "V5_SELECT_VAL_FRESH",
+    "split": "SELECT_VAL"
+  }
+]

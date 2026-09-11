@@ -1,0 +1,150 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V5_TWO_LAYER_FIREWALL_AUDIT",
+  "timestamp_utc": "2026-09-11T07:50:00Z",
+  "gate_status": "PASS_ALL_FIREWALL_GATES_CLEAN",
+  "dev_b_status": "PERFORMANCE_UNEXECUTED_CONTENT_ACCESSED_FOR_FIREWALL_ONLY",
+  "total_hard_leakage": 0,
+  "artifacts": {
+    "clean_train_v1": {
+      "path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v5\\renal-rerank-train-v5-clean-v1.json",
+      "sha256": "e0ed9f071a2be4f56582eaf46d357b7b0f8cde54a3e7aa9a5171262a73b81878",
+      "n_items": 80
+    },
+    "clean_train_core_v1": {
+      "path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v5\\renal-rerank-train-core-v5-clean-v1.json",
+      "sha256": "d3fb8445d1579012357c10393c67261c1452c87429308de163b018cc6b4ca2a2",
+      "n_items": 60
+    },
+    "clean_train_val_v1": {
+      "path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v5\\renal-rerank-train-val-v5-clean-v1.json",
+      "sha256": "a1981d889046fa9ed4d6be5bf8a50e85df38fb0b9eed61a0e998c830fff22bef",
+      "n_items": 20
+    }
+  },
+  "layer_1_external_firewall": {
+    "clean_train_vs_dev_a": {
+      "comparison": "CLEAN_TRAIN_vs_DEV_A",
+      "count_a": 80,
+      "count_b": 50,
+      "exact_query_overlap_count": 0,
+      "normalized_query_overlap_count": 0,
+      "canonical_claim_overlap_count": 0,
+      "learning_objective_overlap_count": 0,
+      "query_family_overlap_count": 0,
+      "exact_chunk_overlap_count": 0,
+      "adjacent_window_chunk_overlap_count": 0,
+      "normalized_source_section_overlap_count": 0,
+      "cosine_ge_90_count": 2,
+      "true_semantic_duplicate_count": 0,
+      "hard_leakage_total": 0,
+      "details": {
+        "exact_query": [],
+        "normalized_query": [],
+        "canonical_claim": [],
+        "learning_objective": [],
+        "query_family": [],
+        "exact_chunk": [],
+        "adjacent_window_chunk": [],
+        "normalized_source_section": [],
+        "cosine_ge_90_pairs": [
+          {
+            "CLEAN_TRAIN_query_id": "V5-RNK-TRAIN-0019",
+            "DEV_A_query_id": "V5-RNK-DEV-A-0017",
+            "cosine_similarity": 0.9128987789154053,
+            "CLEAN_TRAIN_query": "How does angiotensin II-induced oxidative stress cause endothelial dysfunction in the kidney?",
+            "DEV_A_query": "How does angiotensin II promote vascular inflammation?",
+            "CLEAN_TRAIN_claim": "Angiotensin II stimulates NADH/NADPH oxidase to produce superoxide anions, reducing nitric oxide bioavailability and promoting vascular inflammation.",
+            "DEV_A_claim": "Ang II upregulates ICAM-1/VCAM-1, increases ROS, activates NF-kB, promoting vascular inflammation.",
+            "CLEAN_TRAIN_chunks": [
+              "DOC-PMC-RENAL-0001-B-C0012"
+            ],
+            "DEV_A_chunks": [
+              "DOC-PMC-RENAL-0001-B-C0002",
+              "DOC-PMC-RENAL-0001-B-C0003",
+              "DOC-PMC-RENAL-0001-B-C0004"
+            ],
+            "classification": "SAME_TOPIC_DISTINCT_OBJECTIVE"
+          },
+          {
+            "CLEAN_TRAIN_query_id": "V5-RNK-TRAIN-0024",
+            "DEV_A_query_id": "V5-RNK-DEV-A-0022",
+            "cosine_similarity": 0.9119780659675598,
+            "CLEAN_TRAIN_query": "Which clinical conditions and acid-base disturbances cause acute hyperkalemia via transcellular potassium shifting?",
+            "DEV_A_query": "What mechanism causes hyperkalemia in metabolic acidosis?",
+            "CLEAN_TRAIN_claim": "Transcellular hyperkalemic shifts are provoked by acute metabolic acidosis, tumor lysis, and rhabdomyolysis, and opposed by insulin and beta-agonists.",
+            "DEV_A_claim": "Extracellular H+ enters cells exchanging for intracellular K+, raising serum potassium.",
+            "CLEAN_TRAIN_chunks": [
+              "DOC-PMC-RENAL-0009-B-C0013"
+            ],
+            "DEV_A_chunks": [
+              "DOC-PMC-RENAL-0003-B-C0007",
+              "DOC-PMC-RENAL-0003-B-C0008",
+              "DOC-PMC-RENAL-0003-B-C0010"
+            ],
+            "classification": "SAME_DISEASE_DISTINCT_CLAIM"
+          }
+        ]
+      }
+    },
+    "clean_train_vs_dev_b": {
+      "comparison": "CLEAN_TRAIN_vs_DEV_B",
+      "count_a": 80,
+      "count_b": 40,
+      "exact_query_overlap_count": 0,
+      "normalized_query_overlap_count": 0,
+      "canonical_claim_overlap_count": 0,
+      "learning_objective_overlap_count": 0,
+      "query_family_overlap_count": 0,
+      "exact_chunk_overlap_count": 0,
+      "adjacent_window_chunk_overlap_count": 0,
+      "normalized_source_section_overlap_count": 0,
+      "cosine_ge_90_count": 0,
+      "true_semantic_duplicate_count": 0,
+      "hard_leakage_total": 0,
+      "details": {
+        "exact_query": [],
+        "normalized_query": [],
+        "canonical_claim": [],
+        "learning_objective": [],
+        "query_family": [],
+        "exact_chunk": [],
+        "adjacent_window_chunk": [],
+        "normalized_source_section": [],
+        "cosine_ge_90_pairs": []
+      }
+    },
+    "clean_train_vs_historical_heldouts": {
+      "overlap_count": 0,
+      "details": []
+    }
+  },
+  "layer_2_internal_firewall": {
+    "clean_core_vs_clean_val": {
+      "comparison": "CLEAN_CORE_vs_CLEAN_VAL",
+      "count_a": 60,
+      "count_b": 20,
+      "exact_query_overlap_count": 0,
+      "normalized_query_overlap_count": 0,
+      "canonical_claim_overlap_count": 0,
+      "learning_objective_overlap_count": 0,
+      "query_family_overlap_count": 0,
+      "exact_chunk_overlap_count": 0,
+      "adjacent_window_chunk_overlap_count": 0,
+      "normalized_source_section_overlap_count": 0,
+      "cosine_ge_90_count": 0,
+      "true_semantic_duplicate_count": 0,
+      "hard_leakage_total": 0,
+      "details": {
+        "exact_query": [],
+        "normalized_query": [],
+        "canonical_claim": [],
+        "learning_objective": [],
+        "query_family": [],
+        "exact_chunk": [],
+        "adjacent_window_chunk": [],
+        "normalized_source_section": [],
+        "cosine_ge_90_pairs": []
+      }
+    }
+  }
+}

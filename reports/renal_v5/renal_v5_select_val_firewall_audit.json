@@ -1,0 +1,71 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V5_SELECT_VAL_FIREWALL_AUDIT",
+  "timestamp_utc": "2026-09-11T05:51:03Z",
+  "target_dataset": "renal-rerank-select-val-clean-v1.json",
+  "n_items": 20,
+  "overall_gate_status": "PASS_ZERO_HARD_LEAKAGE_SEMANTIC_ADJUDICATION_REQUIRED",
+  "total_hard_leakage_count": 0,
+  "hard_leak_breakdown": {},
+  "semantic_near_duplicates_count": 1,
+  "semantic_near_duplicates": [
+    {
+      "target_split": "TRAIN_CORE",
+      "selval_id": "V5-RNK-SELVAL-0003",
+      "target_id": "V5-RNK-TRAIN-0060",
+      "selval_query": "In patients with stage 4 or 5 chronic kidney disease with GFR below 30 mL/min/1.73 m2, what is the reported baseline frequency of severe hyperkalemia in US cohorts?",
+      "target_query": "How does pre-existing renal dysfunction (eGFR < 60 mL/min/1.73 m2) influence the risk and odds ratio of developing acute kidney injury during sepsis?",
+      "cosine_similarity": 0.9005032777786255,
+      "classification": "REVIEW_REQUIRED"
+    }
+  ],
+  "detailed_audit": {
+    "DEV-A": {
+      "exact_query_overlap": [],
+      "normalized_query_overlap": [],
+      "canonical_claim_overlap": [],
+      "learning_objective_overlap": [],
+      "query_family_overlap": [],
+      "split_group_key_overlap": [],
+      "chunk_id_overlap": [],
+      "adjacent_chunk_overlap": [],
+      "section_path_overlap": [],
+      "historical_heldout_overlap": []
+    },
+    "DEV-B": {
+      "exact_query_overlap": [],
+      "normalized_query_overlap": [],
+      "canonical_claim_overlap": [],
+      "learning_objective_overlap": [],
+      "query_family_overlap": [],
+      "split_group_key_overlap": [],
+      "chunk_id_overlap": [],
+      "adjacent_chunk_overlap": [],
+      "section_path_overlap": [],
+      "historical_heldout_overlap": []
+    },
+    "TRAIN_CORE": {
+      "exact_query_overlap": [],
+      "normalized_query_overlap": [],
+      "canonical_claim_overlap": [],
+      "learning_objective_overlap": [],
+      "query_family_overlap": [],
+      "split_group_key_overlap": [],
+      "chunk_id_overlap": [],
+      "adjacent_chunk_overlap": [],
+      "section_path_overlap": [],
+      "historical_heldout_overlap": []
+    },
+    "TRAIN_VAL": {
+      "exact_query_overlap": [],
+      "normalized_query_overlap": [],
+      "canonical_claim_overlap": [],
+      "learning_objective_overlap": [],
+      "query_family_overlap": [],
+      "split_group_key_overlap": [],
+      "chunk_id_overlap": [],
+      "adjacent_chunk_overlap": [],
+      "section_path_overlap": [],
+      "historical_heldout_overlap": []
+    }
+  }
+}
