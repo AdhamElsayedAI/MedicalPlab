@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-09-11",
+  "protocol_version": "V5-DATA-PROTOCOL-V1",
+  "splits": {
+    "RERANK_TRAIN_V5": {
+      "n": 20,
+      "sha256": "078139b634b3c4b48ed0210f6ec92f57217d0d69b040d342efed9e7da591d207"
+    },
+    "RERANK_DEV_A_V5": {
+      "n": 50,
+      "sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec"
+    },
+    "RERANK_DEV_B_V5": {
+      "n": 40,
+      "sha256": "4e1e3fe44a3fed187f7f4e65bfb66b1efc700cd5285fb37e3b292789e14f41f7"
+    }
+  },
+  "firewall_check": {
+    "n": 7,
+    "violations": [
+      {
+        "split": "DEV_A",
+        "query_id": "V5-RNK-DEV-A-0002",
+        "key": "154809ae2f88",
+        "doc": "DOC-PMC-RENAL-0018"
+      },
+      {
+        "split": "DEV_A",
+        "query_id": "V5-RNK-DEV-A-0030",
+        "key": "3a260c76150a",
+        "doc": "DOC-PMC-RENAL-0015"
+      },
+      {
+        "split": "DEV_A",
+        "query_id": "V5-RNK-DEV-A-0034",
+        "key": "eacaba0fd8bc",
+        "doc": "DOC-PMC-RENAL-0006"
+      },
+      {
+        "split": "DEV_B",
+        "query_id": "V5-RNK-DEV-B-0031",
+        "key": "c85ad92c3825",
+        "doc": "DOC-PMC-RENAL-0012"
+      },
+      {
+        "split": "DEV_B",
+        "query_id": "V5-RNK-DEV-B-0032",
+        "key": "80bda43d8125",
+        "doc": "DOC-PMC-RENAL-0007"
+      },
+      {
+        "split": "DEV_B",
+        "query_id": "V5-RNK-DEV-B-0034",
+        "key": "e4b7a0878dc9",
+        "doc": "DOC-PMC-RENAL-0025"
+      },
+      {
+        "split": "DEV_B",
+        "query_id": "V5-RNK-DEV-B-0040",
+        "key": "018e2e9d293a",
+        "doc": "DOC-PMC-RENAL-0011"
+      }
+    ],
+    "status": "DOCUMENTED_CORPUS_LIMITED"
+  },
+  "firewall_note": "Some section-family overlaps between TRAIN and DEV are unavoidable given the 23-document corpus. Per protocol, these are explicitly reported. Claim-level and keyword-level isolation is maintained.",
+  "gold_resolution": {
+    "total": 110,
+    "resolved": 108,
+    "human_review_required": 2
+  },
+  "dev_b_axis": "PREDECLARED: concise factual/enumeration style (QS-D/E/F dominant), independent phrasing",
+  "dev_b_declared_before_dev_a_evaluation": true,
+  "spent_set_reuse": "None - all items are fresh V5"
+}

@@ -1,0 +1,1398 @@
+[
+  {
+    "canonical_claim": "Fenestrated endothelium, GBM, and podocyte slit diaphragm.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "glomerular filtration barrier",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0001",
+      "DOC-PMC-RENAL-0018-B-C0003",
+      "DOC-PMC-RENAL-0018-B-C0024"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Identify GFB structural components",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "What are the three main structural layers of the glomerular filtration barrier?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0018-7d3100a41ea4",
+    "query_id": "V5-RNK-DEV-A-0001",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "split_group_key": "7d3100a41ea4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Loss of slit diaphragm disrupts size/charge selectivity, causing proteinuria.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "slit diaphragm",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0003",
+      "DOC-PMC-RENAL-0018-B-C0025",
+      "DOC-PMC-RENAL-0018-B-C0026"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
+    ],
+    "learning_objective": "Explain slit diaphragm loss and filtration selectivity failure",
+    "parent_section_path": [
+      "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
+    ],
+    "query": "How does loss of the podocyte slit diaphragm lead to proteinuria?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0018-154809ae2f88",
+    "query_id": "V5-RNK-DEV-A-0002",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "split_group_key": "154809ae2f88",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CKD-EPI provides better precision across all GFR ranges and is less affected by body weight.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "Cockcroft-Gault",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0007",
+      "DOC-PMC-RENAL-0016-B-C0147"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "GFR Estimation"
+    ],
+    "learning_objective": "Compare CKD-EPI vs Cockcroft-Gault GFR accuracy",
+    "parent_section_path": [
+      "GFR Estimation"
+    ],
+    "query": "What distinguishes CKD-EPI from Cockcroft-Gault for GFR estimation?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0016-4702b8ac83ce",
+    "query_id": "V5-RNK-DEV-A-0003",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "split_group_key": "4702b8ac83ce",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Cystatin C production is independent of muscle mass, reducing GFR estimation bias.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "creatinine",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0001",
+      "DOC-PMC-RENAL-0016-B-C0002",
+      "DOC-PMC-RENAL-0016-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "GFR Estimation"
+    ],
+    "learning_objective": "Evaluate cystatin C as muscle-mass-independent GFR biomarker",
+    "parent_section_path": [
+      "GFR Estimation"
+    ],
+    "query": "How is cystatin C used to improve GFR estimation in patients with low muscle mass?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0016-4702b8ac83ce",
+    "query_id": "V5-RNK-DEV-A-0004",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "split_group_key": "4702b8ac83ce",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Macula densa senses high NaCl; triggers afferent arteriole constriction via adenosine, reducing GFR.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "afferent arteriole",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0048"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Glomerular Filtration"
+    ],
+    "learning_objective": "Explain macula densa NaCl sensing and afferent arteriole response",
+    "parent_section_path": [
+      "Glomerular Filtration"
+    ],
+    "query": "What is the role of tubuloglomerular feedback in maintaining GFR stability?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0002-bdbb783f266b",
+    "query_id": "V5-RNK-DEV-A-0005",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "split_group_key": "bdbb783f266b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Glomerulus-on-a-chip provides dynamic fluid shear, maintaining podocyte morphology lost in static culture.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "glomerulus-on-a-chip",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0002",
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0019"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0002",
+    "gold_section_path": [
+      "Microfluidics"
+    ],
+    "learning_objective": "Compare microfluidic glomerular model to static culture",
+    "parent_section_path": [
+      "Microfluidics"
+    ],
+    "query": "How does the glomerulus-on-a-chip recapitulate in vivo glomerular haemodynamics?",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0002-889f63c5ea0b",
+    "query_id": "V5-RNK-DEV-A-0006",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0002",
+    "split_group_key": "889f63c5ea0b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "SGLT2 in S1/S2 segments mediates the majority (~90%) of filtered glucose reabsorption.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "SGLT2",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0018",
+      "DOC-PMC-RENAL-0019-B-C0028",
+      "DOC-PMC-RENAL-0019-B-C0041"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys",
+      "3.1. Characteristics of Human Glucose Transporters",
+      "3.1.2. Human Renal Sodium-Dependent Glucose Co-Transporters"
+    ],
+    "learning_objective": "Describe SGLT2 function in S1/S2 segment glucose reabsorption",
+    "parent_section_path": [
+      "3. Glucose Transporters in Healthy Human Kidneys",
+      "3.1. Characteristics of Human Glucose Transporters",
+      "3.1.2. Human Renal Sodium-Dependent Glucose Co-Transporters"
+    ],
+    "query": "What is the mechanism of SGLT2-mediated glucose reabsorption in the proximal tubule?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0019-acdd190daeb5",
+    "query_id": "V5-RNK-DEV-A-0007",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "split_group_key": "acdd190daeb5",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Aldosterone induces SGK1 via MR; SGK1 prevents NEDD4-2-mediated ENaC internalisation, increasing Na+ channel density.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "SGK1",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0001",
+      "DOC-PMC-RENAL-0020-B-C0004",
+      "DOC-PMC-RENAL-0020-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "3. SGK Signaling",
+      "3.2. SGK1 in Insulin Signaling Pathway"
+    ],
+    "learning_objective": "Explain SGK1 as the aldosterone effector kinase for ENaC activation",
+    "parent_section_path": [
+      "3. SGK Signaling",
+      "3.2. SGK1 in Insulin Signaling Pathway"
+    ],
+    "query": "How does SGK1 mediate aldosterone's effect on ENaC?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0020-7593030d1ad7",
+    "query_id": "V5-RNK-DEV-A-0008",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "7593030d1ad7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "AE4 mediates bicarbonate transport in intercalated cells of the collecting duct.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "AE4",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0021-B-C0001",
+      "DOC-PMC-RENAL-0021-B-C0002",
+      "DOC-PMC-RENAL-0021-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0021",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Identify AE4 role in acid-base sensing in distal nephron",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "What is the function of the AE4 transporter in intercalated cells?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0021-b0ae7b124989",
+    "query_id": "V5-RNK-DEV-A-0009",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0021",
+    "split_group_key": "b0ae7b124989",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Akt mediates insulin signalling via IRS2, stimulating NBCe1 and increasing sodium-bicarbonate cotransport.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "NBCe1",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0001",
+      "DOC-PMC-RENAL-0020-B-C0011",
+      "DOC-PMC-RENAL-0020-B-C0013"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "Abstract"
+    ],
+    "learning_objective": "Describe insulin/Akt regulation of sodium-bicarbonate cotransport",
+    "parent_section_path": [
+      "Abstract"
+    ],
+    "query": "How does Akt signalling regulate NBCe1 in the proximal tubule?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0020-85b196b68391",
+    "query_id": "V5-RNK-DEV-A-0010",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "85b196b68391",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "NCC mediates sodium and chloride reabsorption in DCT; regulated by aldosterone and insulin.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "sodium-chloride cotransporter",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0001",
+      "DOC-PMC-RENAL-0020-B-C0016"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0020",
+    "gold_section_path": [
+      "2. Akt Signaling",
+      "2.5. Akt, With-No-Lysine Kinases (WNKs), and Sodium-Chloride Cotransporter (NCC)"
+    ],
+    "learning_objective": "Explain NCC-mediated NaCl reabsorption in DCT",
+    "parent_section_path": [
+      "2. Akt Signaling",
+      "2.5. Akt, With-No-Lysine Kinases (WNKs), and Sodium-Chloride Cotransporter (NCC)"
+    ],
+    "query": "What is the role of NCC in distal tubule sodium handling?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0020-2499a1f1254e",
+    "query_id": "V5-RNK-DEV-A-0011",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0020",
+    "split_group_key": "2499a1f1254e",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Vasa recta equilibrates with medullary interstitium via countercurrent exchange, preserving hyperosmolarity.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "vasa recta",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0001",
+      "DOC-PMC-RENAL-0023-B-C0002",
+      "DOC-PMC-RENAL-0023-B-C0014"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Countercurrent Exchange"
+    ],
+    "learning_objective": "Explain countercurrent exchange in vasa recta",
+    "parent_section_path": [
+      "Countercurrent Exchange"
+    ],
+    "query": "What is the role of the vasa recta in preserving the medullary osmotic gradient?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-5c59c16aa3c6",
+    "query_id": "V5-RNK-DEV-A-0012",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "5c59c16aa3c6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "TAL lacks aquaporins; active NaCl reabsorption via NKCC2 dilutes tubular fluid.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "thick ascending limb",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0004",
+      "DOC-PMC-RENAL-0023-B-C0013",
+      "DOC-PMC-RENAL-0023-B-C0016"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Loop of Henle"
+    ],
+    "learning_objective": "Explain water impermeability of TAL and its diluting function",
+    "parent_section_path": [
+      "Loop of Henle"
+    ],
+    "query": "Why is the thick ascending limb impermeable to water?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-d125edc49fda",
+    "query_id": "V5-RNK-DEV-A-0013",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "d125edc49fda",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ADH binds V2 receptor, activates cAMP, driving AQP2 insertion into the apical membrane.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "aquaporin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0047",
+      "DOC-PMC-RENAL-0023-B-C0050",
+      "DOC-PMC-RENAL-0023-B-C0052"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Collecting Duct"
+    ],
+    "learning_objective": "Describe V2 receptor-cAMP-aquaporin-2 trafficking in principal cells",
+    "parent_section_path": [
+      "Collecting Duct"
+    ],
+    "query": "How does ADH regulate aquaporin-2 insertion in the collecting duct?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-fc950aea82be",
+    "query_id": "V5-RNK-DEV-A-0014",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "fc950aea82be",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "NKCC2 co-transports Na+, K+, 2Cl- into TAL cells, raising medullary interstitial osmolarity.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "NKCC2",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0054"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Loop of Henle",
+      "NKCC2"
+    ],
+    "learning_objective": "Describe Na+/K+/2Cl- cotransport mechanism in TAL",
+    "parent_section_path": [
+      "Loop of Henle",
+      "NKCC2"
+    ],
+    "query": "What is NKCC2-mediated solute transport in the thick ascending limb?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-78978785a5d4",
+    "query_id": "V5-RNK-DEV-A-0015",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "78978785a5d4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Renin released by decreased perfusion pressure, low macula densa NaCl, and sympathetic activation.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "renin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0002",
+      "DOC-PMC-RENAL-0001-B-C0003",
+      "DOC-PMC-RENAL-0001-B-C0015"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS"
+    ],
+    "learning_objective": "Identify stimuli for renin secretion in RAAS activation",
+    "parent_section_path": [
+      "RAAS"
+    ],
+    "query": "What triggers renin release from the juxtaglomerular apparatus?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-ab93aad63ee2",
+    "query_id": "V5-RNK-DEV-A-0016",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "ab93aad63ee2",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Ang II upregulates ICAM-1/VCAM-1, increases ROS, activates NF-kB, promoting vascular inflammation.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "angiotensin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0002",
+      "DOC-PMC-RENAL-0001-B-C0003",
+      "DOC-PMC-RENAL-0001-B-C0004"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS",
+      "Vascular Inflammation"
+    ],
+    "learning_objective": "Explain pro-inflammatory vascular effects of Ang II",
+    "parent_section_path": [
+      "RAAS",
+      "Vascular Inflammation"
+    ],
+    "query": "How does angiotensin II promote vascular inflammation?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-5418d0f4a60d",
+    "query_id": "V5-RNK-DEV-A-0017",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "5418d0f4a60d",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "EPO production decreases with progressive renal mass loss in CKD, causing normochromic normocytic anaemia.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "erythropoietin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0001",
+      "DOC-PMC-RENAL-0024-B-C0002",
+      "DOC-PMC-RENAL-0024-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "Renal Endocrine"
+    ],
+    "learning_objective": "Explain renal EPO synthesis decline and resulting anaemia in CKD",
+    "parent_section_path": [
+      "Renal Endocrine"
+    ],
+    "query": "How does EPO production change in advanced CKD?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0024-b60ee625c6c6",
+    "query_id": "V5-RNK-DEV-A-0018",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "split_group_key": "b60ee625c6c6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Calcitriol binds VDR on immune cells, suppressing pro-inflammatory cytokines and modulating adaptive immunity.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "calcitriol",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0005",
+      "DOC-PMC-RENAL-0024-B-C0030",
+      "DOC-PMC-RENAL-0024-B-C0033"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "Renal Endocrine",
+      "Immunomodulation"
+    ],
+    "learning_objective": "Describe vitamin D receptor effects on immune cells",
+    "parent_section_path": [
+      "Renal Endocrine",
+      "Immunomodulation"
+    ],
+    "query": "What are the immunomodulatory effects of calcitriol beyond calcium homeostasis?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0024-dfad48711312",
+    "query_id": "V5-RNK-DEV-A-0019",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "split_group_key": "dfad48711312",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ACE converts angiotensin I to II and degrades bradykinin, contributing to vasoconstriction.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "angiotensin-converting enzyme",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0002",
+      "DOC-PMC-RENAL-0001-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS",
+      "ACE"
+    ],
+    "learning_objective": "Identify ACE function converting Ang I to Ang II and degrading bradykinin",
+    "parent_section_path": [
+      "RAAS",
+      "ACE"
+    ],
+    "query": "What is the physiological role of ACE in the RAAS?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-b7a4a0f4829a",
+    "query_id": "V5-RNK-DEV-A-0020",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "b7a4a0f4829a",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Peaked T waves, widened QRS, sine-wave pattern progressing to ventricular fibrillation.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "hyperkalemia",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0001",
+      "DOC-PMC-RENAL-0009-B-C0002",
+      "DOC-PMC-RENAL-0009-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "Hyperkalemia",
+      "ECG"
+    ],
+    "learning_objective": "List ECG manifestations of severe hyperkalemia",
+    "parent_section_path": [
+      "Hyperkalemia",
+      "ECG"
+    ],
+    "query": "What ECG changes occur in severe hyperkalemia?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0009-212106ec8121",
+    "query_id": "V5-RNK-DEV-A-0021",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "split_group_key": "212106ec8121",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Extracellular H+ enters cells exchanging for intracellular K+, raising serum potassium.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "acidosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0007",
+      "DOC-PMC-RENAL-0003-B-C0008",
+      "DOC-PMC-RENAL-0003-B-C0010"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0003",
+    "gold_section_path": [
+      "Potassium Handling"
+    ],
+    "learning_objective": "Explain H+/K+ exchange driving transcellular K+ shift in acidosis",
+    "parent_section_path": [
+      "Potassium Handling"
+    ],
+    "query": "What mechanism causes hyperkalemia in metabolic acidosis?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0003-6c41b26d5b22",
+    "query_id": "V5-RNK-DEV-A-0022",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0003",
+    "split_group_key": "6c41b26d5b22",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Aldosterone increases ENaC Na+ entry, creating electrochemical gradient favouring K+ secretion via ROMK.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "ROMK",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0005",
+      "DOC-PMC-RENAL-0003-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0003",
+    "gold_section_path": [
+      "Potassium Handling",
+      "Collecting Duct"
+    ],
+    "learning_objective": "Explain ROMK-mediated K+ secretion driven by ENaC-aldosterone axis",
+    "parent_section_path": [
+      "Potassium Handling",
+      "Collecting Duct"
+    ],
+    "query": "How does aldosterone regulate potassium secretion via ROMK?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0003-ff11d2c799cf",
+    "query_id": "V5-RNK-DEV-A-0023",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0003",
+    "split_group_key": "ff11d2c799cf",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Low TTKG in hyperkalemia implies mineralocorticoid deficiency or resistance.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "potassium",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0001",
+      "DOC-PMC-RENAL-0010-B-C0002",
+      "DOC-PMC-RENAL-0010-B-C0032"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia",
+      "Diagnosis"
+    ],
+    "learning_objective": "Apply TTKG to differentiate mineralocorticoid deficiency from excess K+ intake",
+    "parent_section_path": [
+      "Hyperkalemia",
+      "Diagnosis"
+    ],
+    "query": "What is the TTKG and how is it used to diagnose hyperkalemia aetiology?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0010-3987dd2f4d15",
+    "query_id": "V5-RNK-DEV-A-0024",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "split_group_key": "3987dd2f4d15",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Luminal CA IV converts HCO3- to CO2; cytosolic CA II regenerates HCO3- intracellularly, reclaiming ~80%.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "bicarbonate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0001",
+      "DOC-PMC-RENAL-0004-B-C0002",
+      "DOC-PMC-RENAL-0004-B-C0004"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "Acid-Base Balance",
+      "Proximal Tubule"
+    ],
+    "learning_objective": "Describe luminal CA IV and cytosolic CA II in bicarbonate reclamation",
+    "parent_section_path": [
+      "Acid-Base Balance",
+      "Proximal Tubule"
+    ],
+    "query": "How does the proximal tubule reabsorb bicarbonate using carbonic anhydrase?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0004-60250b965ca2",
+    "query_id": "V5-RNK-DEV-A-0025",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "split_group_key": "60250b965ca2",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "High AG: unmeasured anions (lactate, ketoacids, uraemia); normal AG: HCO3- loss.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "metabolic acidosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0005",
+      "DOC-PMC-RENAL-0005-B-C0030",
+      "DOC-PMC-RENAL-0005-B-C0040"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Acid-Base Physiology"
+    ],
+    "learning_objective": "Apply AG calculation to high-AG vs normal-AG metabolic acidosis",
+    "parent_section_path": [
+      "Acid-Base Physiology"
+    ],
+    "query": "What is the anion gap and how does it classify metabolic acidosis?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0005-cc78c7b2d040",
+    "query_id": "V5-RNK-DEV-A-0026",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "split_group_key": "cc78c7b2d040",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Positive UAG in hyperchloraemic acidosis implies impaired NH4+ excretion, consistent with distal RTA.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "chloride",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0026",
+      "DOC-PMC-RENAL-0005-B-C0038",
+      "DOC-PMC-RENAL-0005-B-C0041"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Acid-Base Physiology",
+      "Ammonium"
+    ],
+    "learning_objective": "Use UAG to identify impaired renal ammoniagenesis in distal RTA",
+    "parent_section_path": [
+      "Acid-Base Physiology",
+      "Ammonium"
+    ],
+    "query": "What is the urinary anion gap and how does it diagnose distal RTA?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0005-21010ba6d835",
+    "query_id": "V5-RNK-DEV-A-0027",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "split_group_key": "21010ba6d835",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Type 4 RTA: aldosterone deficiency/resistance impairs H+ secretion and K+ excretion in collecting duct.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "acid-base",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0002",
+      "DOC-PMC-RENAL-0004-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "Acid-Base",
+      "RTA"
+    ],
+    "learning_objective": "Explain hypoaldosteronism-driven hyperchloraemic acidosis with hyperkalemia",
+    "parent_section_path": [
+      "Acid-Base",
+      "RTA"
+    ],
+    "query": "What is the pathophysiology of type 4 renal tubular acidosis?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0004-b4a14fe04c17",
+    "query_id": "V5-RNK-DEV-A-0028",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "split_group_key": "b4a14fe04c17",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "AKI: creatinine rise >=0.3 mg/dL within 48 hours, or >=1.5x baseline within 7 days.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "serum creatinine",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0003",
+      "DOC-PMC-RENAL-0006-B-C0005",
+      "DOC-PMC-RENAL-0006-B-C0012"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "AKI Diagnosis"
+    ],
+    "learning_objective": "State the KDIGO creatinine criterion for AKI",
+    "parent_section_path": [
+      "AKI Diagnosis"
+    ],
+    "query": "What serum creatinine rise within 48 hours defines AKI by KDIGO?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-61ca16f13fd4",
+    "query_id": "V5-RNK-DEV-A-0029",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "61ca16f13fd4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Free haem from myoglobin causes oxidative stress and tubular obstruction in acidic urine.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "renal replacement",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0001",
+      "DOC-PMC-RENAL-0015-B-C0040",
+      "DOC-PMC-RENAL-0015-B-C0045"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0015",
+    "gold_section_path": [
+      "AKI",
+      "Rhabdomyolysis"
+    ],
+    "learning_objective": "Explain haem-mediated oxidative tubular toxicity in rhabdomyolysis",
+    "parent_section_path": [
+      "AKI",
+      "Rhabdomyolysis"
+    ],
+    "query": "How does myoglobin cause tubular injury in rhabdomyolysis-induced AKI?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0015-3a260c76150a",
+    "query_id": "V5-RNK-DEV-A-0030",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0015",
+    "split_group_key": "3a260c76150a",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "RRT indicated for refractory fluid overload, severe hyperkalemia, metabolic acidosis, uraemic complications.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "renal replacement",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0001",
+      "DOC-PMC-RENAL-0015-B-C0040",
+      "DOC-PMC-RENAL-0015-B-C0045"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0015",
+    "gold_section_path": [
+      "AKI",
+      "RRT Indications"
+    ],
+    "learning_objective": "State clinical indications for RRT in AKI",
+    "parent_section_path": [
+      "AKI",
+      "RRT Indications"
+    ],
+    "query": "When is renal replacement therapy indicated in AKI?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0015-8133d1cf5a6f",
+    "query_id": "V5-RNK-DEV-A-0031",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0015",
+    "split_group_key": "8133d1cf5a6f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "FENa <1%: pre-renal (intact tubular function); FENa >2%: intrinsic (tubular dysfunction).",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "fractional",
+    "gold_chunk_ids": [],
+    "gold_doc_id": "DOC-PMC-RENAL-0016",
+    "gold_section_path": [
+      "AKI Assessment",
+      "Tubular Function"
+    ],
+    "learning_objective": "Apply FENa to AKI aetiology differentiation",
+    "parent_section_path": [
+      "AKI Assessment",
+      "Tubular Function"
+    ],
+    "query": "What is the significance of FENa in distinguishing pre-renal from intrinsic AKI?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0016-75ae41e7fb62",
+    "query_id": "V5-RNK-DEV-A-0032",
+    "query_style": "QS-A",
+    "review_status": "HUMAN_REVIEW_REQUIRED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0016",
+    "split_group_key": "75ae41e7fb62",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Mannitol increases tubular flow rate, diluting myoglobin to reduce obstruction.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "mannitol",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0039",
+      "DOC-PMC-RENAL-0015-B-C0042",
+      "DOC-PMC-RENAL-0015-B-C0043"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0015",
+    "gold_section_path": [
+      "AKI",
+      "Renal Protection"
+    ],
+    "learning_objective": "Explain osmotic diuresis reducing tubular myoglobin obstruction",
+    "parent_section_path": [
+      "AKI",
+      "Renal Protection"
+    ],
+    "query": "What is the mechanism of mannitol nephroprotection in rhabdomyolysis?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0015-5cde26770293",
+    "query_id": "V5-RNK-DEV-A-0033",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0015",
+    "split_group_key": "5cde26770293",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Hyperphosphatemia promotes CaPO4 deposition in tubules, triggering inflammation and tubular death.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "phosphate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0212"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "AKI",
+      "Phosphate Injury"
+    ],
+    "learning_objective": "Explain calcium phosphate deposition and inflammatory injury in AKI",
+    "parent_section_path": [
+      "AKI",
+      "Phosphate Injury"
+    ],
+    "query": "How does hyperphosphatemia contribute to renal injury in AKI?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-eacaba0fd8bc",
+    "query_id": "V5-RNK-DEV-A-0034",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "eacaba0fd8bc",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CKD stage 3a: eGFR 45-59 mL/min/1.73m2 for >3 months.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "eGFR",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0020",
+      "DOC-PMC-RENAL-0007-B-C0021",
+      "DOC-PMC-RENAL-0007-B-C0025"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Staging"
+    ],
+    "learning_objective": "State eGFR range for CKD stage 3a",
+    "parent_section_path": [
+      "CKD Staging"
+    ],
+    "query": "At what eGFR is CKD stage 3a defined?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-761e375662ff",
+    "query_id": "V5-RNK-DEV-A-0035",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "761e375662ff",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Phosphate binders reduce intestinal phosphate absorption, preventing 2HPT and renal osteodystrophy.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "phosphate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0141",
+      "DOC-PMC-RENAL-0007-B-C0142",
+      "DOC-PMC-RENAL-0007-B-C0144"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Management"
+    ],
+    "learning_objective": "Explain phosphate restriction preventing 2HPT in CKD",
+    "parent_section_path": [
+      "CKD Management"
+    ],
+    "query": "What is the rationale for phosphate binders in CKD management?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-7fdaa54c8fc7",
+    "query_id": "V5-RNK-DEV-A-0036",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "7fdaa54c8fc7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Chronic acidosis dissolves bone mineral (CaCO3/CaPO4) as buffer, contributing to renal osteodystrophy.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "metabolic acidosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0132",
+      "DOC-PMC-RENAL-0007-B-C0156"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD",
+      "Bone"
+    ],
+    "learning_objective": "Explain bone mineral dissolution as acid buffer in CKD",
+    "parent_section_path": [
+      "CKD",
+      "Bone"
+    ],
+    "query": "How does chronic metabolic acidosis affect bone in CKD?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-a97b73c65d6b",
+    "query_id": "V5-RNK-DEV-A-0037",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "a97b73c65d6b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Oral prednisolone (corticosteroids) is the IPNA-recommended first-line treatment.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "prednisolone",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0002",
+      "DOC-PMC-RENAL-0008-B-C0018",
+      "DOC-PMC-RENAL-0008-B-C0028"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Nephrotic Syndrome",
+      "Management"
+    ],
+    "learning_objective": "Identify corticosteroid as initial therapy for childhood idiopathic nephrotic syndrome",
+    "parent_section_path": [
+      "Nephrotic Syndrome",
+      "Management"
+    ],
+    "query": "What is the first-line treatment for childhood nephrotic syndrome per IPNA?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0008-6242f3bf67e7",
+    "query_id": "V5-RNK-DEV-A-0038",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "split_group_key": "6242f3bf67e7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Heavy proteinuria causes hypoalbuminaemia, reducing oncotic pressure and promoting interstitial fluid shift.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "proteinuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0001",
+      "DOC-PMC-RENAL-0008-B-C0002",
+      "DOC-PMC-RENAL-0008-B-C0011"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Nephrotic Syndrome",
+      "Oedema"
+    ],
+    "learning_objective": "Explain Starling forces imbalance causing oedema in nephrotic syndrome",
+    "parent_section_path": [
+      "Nephrotic Syndrome",
+      "Oedema"
+    ],
+    "query": "What is the mechanism of oedema formation in nephrotic syndrome?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0008-da23a7336001",
+    "query_id": "V5-RNK-DEV-A-0039",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "split_group_key": "da23a7336001",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Urinary loss of antithrombin III, protein C/S, platelet hyperreactivity, and haemoconcentration create hypercoagulability.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "thromboembolic",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0279",
+      "DOC-PMC-RENAL-0008-B-C0281"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Nephrotic Syndrome",
+      "Complications"
+    ],
+    "learning_objective": "Explain hypercoagulability in nephrotic syndrome",
+    "parent_section_path": [
+      "Nephrotic Syndrome",
+      "Complications"
+    ],
+    "query": "How does nephrotic syndrome predispose to thromboembolic events?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0008-6a54625ac56e",
+    "query_id": "V5-RNK-DEV-A-0040",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "split_group_key": "6a54625ac56e",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Nephrin (NPHS1) mutations disrupt slit diaphragm integrity causing congenital nephrotic syndrome.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "nephrin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0007",
+      "DOC-PMC-RENAL-0018-B-C0025"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "Slit Diaphragm",
+      "Congenital NS"
+    ],
+    "learning_objective": "Identify NPHS1/nephrin mutation as cause of congenital Finnish nephrotic syndrome",
+    "parent_section_path": [
+      "Slit Diaphragm",
+      "Congenital NS"
+    ],
+    "query": "What molecular defect causes congenital nephrotic syndrome?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0018-284e7d48eafc",
+    "query_id": "V5-RNK-DEV-A-0041",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "split_group_key": "284e7d48eafc",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Gut dysbiosis may facilitate ascent of uropathogens to the urinary tract as a bacterial reservoir.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "uropathogen",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0001",
+      "DOC-PMC-RENAL-0011-B-C0002",
+      "DOC-PMC-RENAL-0011-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Recurrent UTI",
+      "Pathogenesis"
+    ],
+    "learning_objective": "Explain gut as uropathogen reservoir in recurrent UTI",
+    "parent_section_path": [
+      "Recurrent UTI",
+      "Pathogenesis"
+    ],
+    "query": "What role does the gut microbiome play in recurrent UTI pathogenesis?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-5612197c4240",
+    "query_id": "V5-RNK-DEV-A-0042",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "5612197c4240",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Recurrent UTI: >=2 confirmed infections within 6 months, or >=3 within 12 months.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "culture",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0001",
+      "DOC-PMC-RENAL-0011-B-C0004",
+      "DOC-PMC-RENAL-0011-B-C0023"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "UTI",
+      "Definition"
+    ],
+    "learning_objective": "State epidemiological criterion for recurrent UTI",
+    "parent_section_path": [
+      "UTI",
+      "Definition"
+    ],
+    "query": "What is the clinical definition of recurrent UTI?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-3c04b6ec48b5",
+    "query_id": "V5-RNK-DEV-A-0043",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "3c04b6ec48b5",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Calcium oxalate accounts for approximately 70-80% of urinary calculi.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "calcium oxalate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0046",
+      "DOC-PMC-RENAL-0012-B-C0062",
+      "DOC-PMC-RENAL-0012-B-C0063"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Stone Composition"
+    ],
+    "learning_objective": "Identify dominant stone type in nephrolithiasis",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Stone Composition"
+    ],
+    "query": "What is the most common stone composition in Western populations?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-d9e658e299b6",
+    "query_id": "V5-RNK-DEV-A-0044",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "d9e658e299b6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Stones <5mm: expectant; stones >10mm or causing obstruction/infection: intervention.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "stone",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0001",
+      "DOC-PMC-RENAL-0012-B-C0002",
+      "DOC-PMC-RENAL-0012-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Management"
+    ],
+    "learning_objective": "Apply size criteria to expectant versus interventional stone management",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Management"
+    ],
+    "query": "What stone size thresholds guide management in urolithiasis?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-466a87605f1a",
+    "query_id": "V5-RNK-DEV-A-0045",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "466a87605f1a",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Stones provide bacterial biofilm nidus; infected struvite stones perpetuate growth via urease-mediated alkalinisation.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "kidney stones",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0013-B-C0001",
+      "DOC-PMC-RENAL-0013-B-C0002",
+      "DOC-PMC-RENAL-0013-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0013",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Recurrent UTI"
+    ],
+    "learning_objective": "Explain bidirectional nephrolithiasis-UTI cycle via biofilm and urease",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Recurrent UTI"
+    ],
+    "query": "How does the relationship between kidney stones and recurrent UTI create a vicious cycle?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0013-c9485b0305e2",
+    "query_id": "V5-RNK-DEV-A-0046",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0013",
+    "split_group_key": "c9485b0305e2",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "SFU Grade 3: pelvic and calyceal dilation with calyceal blunting, preserved cortical thickness.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "hydronephrosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0001",
+      "DOC-PMC-RENAL-0014-B-C0002",
+      "DOC-PMC-RENAL-0014-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Hydronephrosis",
+      "Grading"
+    ],
+    "learning_objective": "Apply SFU grading to classify hydronephrosis severity",
+    "parent_section_path": [
+      "Hydronephrosis",
+      "Grading"
+    ],
+    "query": "What is SFU Grade 3 hydronephrosis?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0014-6a4da8b55e9f",
+    "query_id": "V5-RNK-DEV-A-0047",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "split_group_key": "6a4da8b55e9f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Glomerular: dysmorphic RBCs, RBC casts, brown urine, proteinuria; non-glomerular: isomorphic RBCs, frank blood/clots.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "hematuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0001",
+      "DOC-PMC-RENAL-0025-B-C0002",
+      "DOC-PMC-RENAL-0025-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Hematuria",
+      "Differential"
+    ],
+    "learning_objective": "Compare diagnostic features of glomerular vs non-glomerular hematuria",
+    "parent_section_path": [
+      "Hematuria",
+      "Differential"
+    ],
+    "query": "What distinguishes glomerular from non-glomerular hematuria?",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-06460a894027",
+    "query_id": "V5-RNK-DEV-A-0048",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "06460a894027",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CT urography plus urine cytology to exclude urological malignancy is recommended.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "urology",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0004",
+      "DOC-PMC-RENAL-0025-B-C0007",
+      "DOC-PMC-RENAL-0025-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Hematuria",
+      "Investigation"
+    ],
+    "learning_objective": "Select priority diagnostic evaluation for visible hematuria",
+    "parent_section_path": [
+      "Hematuria",
+      "Investigation"
+    ],
+    "query": "What is the initial investigation for macroscopic hematuria in a patient over 40?",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-7edefbf7ed69",
+    "query_id": "V5-RNK-DEV-A-0049",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "7edefbf7ed69",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CKD impairs 1-alpha-hydroxylase; low calcitriol reduces Ca2+ absorption and fails to suppress PTH, causing 2HPT.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "parathyroid",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "Renal Endocrine",
+      "2HPT"
+    ],
+    "learning_objective": "Explain impaired 1-alpha-hydroxylation and PTH dysregulation in CKD",
+    "parent_section_path": [
+      "Renal Endocrine",
+      "2HPT"
+    ],
+    "query": "How does vitamin D deficiency lead to secondary hyperparathyroidism in CKD?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0024-92c4c98f1932",
+    "query_id": "V5-RNK-DEV-A-0050",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "split_group_key": "92c4c98f1932",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  }
+]

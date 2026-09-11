@@ -1,0 +1,1148 @@
+[
+  {
+    "canonical_claim": "Serum K+ >6.5 mmol/L or any level with ECG changes constitutes severe hyperkalemia.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "hyperkalemia",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0001",
+      "DOC-PMC-RENAL-0009-B-C0002",
+      "DOC-PMC-RENAL-0009-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0009",
+    "gold_section_path": [
+      "Hyperkalemia",
+      "Emergency"
+    ],
+    "learning_objective": "Identify critical K+ level requiring urgent intervention",
+    "parent_section_path": [
+      "Hyperkalemia",
+      "Emergency"
+    ],
+    "query": "State the serum potassium threshold for severe hyperkalemia requiring emergency treatment.",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0009-4c8b29994ee1",
+    "query_id": "V5-RNK-DEV-B-0001",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0009",
+    "split_group_key": "4c8b29994ee1",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "IV calcium gluconate, insulin-glucose, sodium bicarbonate or nebulised salbutamol.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "insulin",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0023",
+      "DOC-PMC-RENAL-0010-B-C0045",
+      "DOC-PMC-RENAL-0010-B-C0048"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0010",
+    "gold_section_path": [
+      "Hyperkalemia",
+      "Management"
+    ],
+    "learning_objective": "Enumerate emergency pharmacological treatments for hyperkalemia",
+    "parent_section_path": [
+      "Hyperkalemia",
+      "Management"
+    ],
+    "query": "List three first-line pharmacological options for acute hyperkalemia.",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0010-0e770514e137",
+    "query_id": "V5-RNK-DEV-B-0002",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0010",
+    "split_group_key": "0e770514e137",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CKD stage 5: eGFR <15 mL/min/1.73m2; dialysis or transplantation considered.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "end-stage",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0001",
+      "DOC-PMC-RENAL-0007-B-C0030",
+      "DOC-PMC-RENAL-0007-B-C0037"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Staging",
+      "Kidney Failure"
+    ],
+    "learning_objective": "State eGFR threshold for CKD stage 5",
+    "parent_section_path": [
+      "CKD Staging",
+      "Kidney Failure"
+    ],
+    "query": "What eGFR value defines CKD stage 5 (kidney failure)?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-dca943eebcc4",
+    "query_id": "V5-RNK-DEV-B-0003",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "dca943eebcc4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Hypercalciuria, hyperoxaluria, low citrate, low urine volume, high sodium/protein diet, hyperparathyroidism.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "calcium",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0010",
+      "DOC-PMC-RENAL-0012-B-C0012",
+      "DOC-PMC-RENAL-0012-B-C0046"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Risk Factors"
+    ],
+    "learning_objective": "List metabolic and dietary risk factors for calcium oxalate nephrolithiasis",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Risk Factors"
+    ],
+    "query": "List the main risk factors for calcium oxalate stone formation.",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-48163568102f",
+    "query_id": "V5-RNK-DEV-B-0004",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "48163568102f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "RBC casts (red blood cell casts) are most specific for glomerulonephritis.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "RBC cast",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0009",
+      "DOC-PMC-RENAL-0025-B-C0010",
+      "DOC-PMC-RENAL-0025-B-C0011"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Hematuria",
+      "Urine Microscopy"
+    ],
+    "learning_objective": "Identify pathognomonic urine microscopy finding of glomerular disease",
+    "parent_section_path": [
+      "Hematuria",
+      "Urine Microscopy"
+    ],
+    "query": "What urine microscopy finding is most specific for glomerulonephritis?",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-81c62324c6e3",
+    "query_id": "V5-RNK-DEV-B-0005",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "81c62324c6e3",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ADH deficiency prevents AQP2 insertion; large volumes of dilute urine (<300 mOsmol/kg).",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "osmolality",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0072",
+      "DOC-PMC-RENAL-0023-B-C0085",
+      "DOC-PMC-RENAL-0023-B-C0086"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Urine Concentration",
+      "DI"
+    ],
+    "learning_objective": "Predict urine osmolality in central diabetes insipidus",
+    "parent_section_path": [
+      "Urine Concentration",
+      "DI"
+    ],
+    "query": "What happens to urine osmolality when ADH is deficient?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-1b8d3048eef1",
+    "query_id": "V5-RNK-DEV-B-0006",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "1b8d3048eef1",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Nephritic: hematuria + RBC casts + hypertension; nephrotic: proteinuria >3.5g/day + hypoalbuminaemia + oedema.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "hematuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0053",
+      "DOC-PMC-RENAL-0008-B-C0108",
+      "DOC-PMC-RENAL-0008-B-C0117"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Glomerular Disease",
+      "Differential"
+    ],
+    "learning_objective": "Differentiate nephritic and nephrotic syndrome clinically",
+    "parent_section_path": [
+      "Glomerular Disease",
+      "Differential"
+    ],
+    "query": "State two features distinguishing nephritic from nephrotic syndrome.",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0008-e07dea2bbb63",
+    "query_id": "V5-RNK-DEV-B-0007",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "split_group_key": "e07dea2bbb63",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Primary hyperaldosteronism: elevated aldosterone, suppressed renin (elevated ARR).",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "aldosterone",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0002",
+      "DOC-PMC-RENAL-0001-B-C0003",
+      "DOC-PMC-RENAL-0001-B-C0014"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS",
+      "Mineralocorticoid Excess"
+    ],
+    "learning_objective": "Predict aldosterone-to-renin ratio in Conn syndrome",
+    "parent_section_path": [
+      "RAAS",
+      "Mineralocorticoid Excess"
+    ],
+    "query": "What are aldosterone and renin levels in primary hyperaldosteronism?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-74cb1f0fcdb7",
+    "query_id": "V5-RNK-DEV-B-0008",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "74cb1f0fcdb7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "AKI stage 1: urine output <0.5 mL/kg/hour for >6 hours.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "urine output",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0003",
+      "DOC-PMC-RENAL-0006-B-C0005",
+      "DOC-PMC-RENAL-0006-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "AKI Diagnosis",
+      "KDIGO"
+    ],
+    "learning_objective": "State urine output criterion for AKI stage 1",
+    "parent_section_path": [
+      "AKI Diagnosis",
+      "KDIGO"
+    ],
+    "query": "What is the urine output criterion for AKI stage 1 by KDIGO?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-af286211a08b",
+    "query_id": "V5-RNK-DEV-B-0009",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "af286211a08b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Serum creatinine/eGFR, urine ACR, potassium, bicarbonate, haemoglobin, phosphate, PTH.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "ACR",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0089",
+      "DOC-PMC-RENAL-0007-B-C0191"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Management",
+      "Monitoring"
+    ],
+    "learning_objective": "Enumerate CKD monitoring parameters",
+    "parent_section_path": [
+      "CKD Management",
+      "Monitoring"
+    ],
+    "query": "List three routine laboratory parameters monitored in CKD.",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-7420ce1063ee",
+    "query_id": "V5-RNK-DEV-B-0010",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "7420ce1063ee",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Glucosuria occurs at plasma glucose ~10 mmol/L (180 mg/dL) as SGLT2 transport maximum is reached.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "glucosuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0006",
+      "DOC-PMC-RENAL-0019-B-C0061",
+      "DOC-PMC-RENAL-0019-B-C0062"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "Proximal Tubule",
+      "Glucose Threshold"
+    ],
+    "learning_objective": "State plasma glucose at which SGLT2 saturation causes glucosuria",
+    "parent_section_path": [
+      "Proximal Tubule",
+      "Glucose Threshold"
+    ],
+    "query": "What plasma glucose level is the renal threshold for glucosuria?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0019-1e61457bb460",
+    "query_id": "V5-RNK-DEV-B-0011",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "split_group_key": "1e61457bb460",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "UTI, urolithiasis, bladder/renal carcinoma, BPH, trauma, renal cysts, papillary necrosis.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "hematuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0001",
+      "DOC-PMC-RENAL-0025-B-C0002",
+      "DOC-PMC-RENAL-0025-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Hematuria",
+      "Causes"
+    ],
+    "learning_objective": "List common non-glomerular hematuria causes",
+    "parent_section_path": [
+      "Hematuria",
+      "Causes"
+    ],
+    "query": "List the main causes of non-glomerular hematuria.",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-72e3e3085a3d",
+    "query_id": "V5-RNK-DEV-B-0012",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "72e3e3085a3d",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "SGLT2 (S1/S2): high-capacity ~90%; SGLT1 (S3): high-affinity ~10%.",
+    "curriculum_stratum": "STR-02",
+    "evidence_search_keyword": "SGLT1",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0017",
+      "DOC-PMC-RENAL-0019-B-C0027",
+      "DOC-PMC-RENAL-0019-B-C0038"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0019",
+    "gold_section_path": [
+      "Proximal Tubule",
+      "SGLT Transporters"
+    ],
+    "learning_objective": "Distinguish SGLT1 and SGLT2 contributions to proximal glucose reabsorption",
+    "parent_section_path": [
+      "Proximal Tubule",
+      "SGLT Transporters"
+    ],
+    "query": "What distinguishes SGLT1 from SGLT2 in renal glucose handling?",
+    "query_family": "QF-STR-02-DOC-PMC-RENAL-0019-dcabb95572fa",
+    "query_id": "V5-RNK-DEV-B-0013",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0019",
+    "split_group_key": "dcabb95572fa",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": ">=10^5 CFU/mL traditionally; >=10^3 CFU/mL in symptomatic women.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "bacteriuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0030",
+      "DOC-PMC-RENAL-0011-B-C0031",
+      "DOC-PMC-RENAL-0011-B-C0032"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "UTI",
+      "Diagnosis"
+    ],
+    "learning_objective": "State CFU threshold for UTI diagnosis",
+    "parent_section_path": [
+      "UTI",
+      "Diagnosis"
+    ],
+    "query": "What colony count threshold defines a positive urine culture in UTI?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-5f17f41a3193",
+    "query_id": "V5-RNK-DEV-B-0014",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "5f17f41a3193",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CRRT preferred in haemodynamically unstable ICU patients; IHD for stable patients.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "continuous",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0046",
+      "DOC-PMC-RENAL-0015-B-C0047",
+      "DOC-PMC-RENAL-0015-B-C0048"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0015",
+    "gold_section_path": [
+      "RRT",
+      "Dialysis Modalities"
+    ],
+    "learning_objective": "Compare CRRT and IHD in haemodynamic stability and removal kinetics",
+    "parent_section_path": [
+      "RRT",
+      "Dialysis Modalities"
+    ],
+    "query": "How does CRRT differ from IHD in AKI management?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0015-e01226dab20c",
+    "query_id": "V5-RNK-DEV-B-0015",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0015",
+    "split_group_key": "e01226dab20c",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Hypocalcaemia reduces CaSR activation, stimulating PTH secretion; PTH mobilises bone calcium and stimulates calcitriol.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "parathyroid",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0024",
+    "gold_section_path": [
+      "Renal Endocrine",
+      "Calcium Homeostasis"
+    ],
+    "learning_objective": "Predict PTH response to hypocalcaemia",
+    "parent_section_path": [
+      "Renal Endocrine",
+      "Calcium Homeostasis"
+    ],
+    "query": "What happens to PTH secretion when ionised calcium falls?",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0024-725678033f3b",
+    "query_id": "V5-RNK-DEV-B-0016",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0024",
+    "split_group_key": "725678033f3b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "AKI stage 3: <0.3 mL/kg/hour for >=24 hours, or anuria >=12 hours.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "urine output",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0003",
+      "DOC-PMC-RENAL-0006-B-C0005",
+      "DOC-PMC-RENAL-0006-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "AKI Diagnosis",
+      "KDIGO Stage 3"
+    ],
+    "learning_objective": "State urine output criterion for AKI stage 3",
+    "parent_section_path": [
+      "AKI Diagnosis",
+      "KDIGO Stage 3"
+    ],
+    "query": "What is the urine output criterion for AKI stage 3?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-59d53ac057c8",
+    "query_id": "V5-RNK-DEV-B-0017",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "59d53ac057c8",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Type IV collagen, laminin, nidogen, heparan sulphate proteoglycans.",
+    "curriculum_stratum": "STR-01",
+    "evidence_search_keyword": "glomerular basement membrane",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0018-B-C0001",
+      "DOC-PMC-RENAL-0018-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0018",
+    "gold_section_path": [
+      "GBM Structure"
+    ],
+    "learning_objective": "Enumerate GBM structural proteins and their roles",
+    "parent_section_path": [
+      "GBM Structure"
+    ],
+    "query": "List the four structural proteins of the glomerular basement membrane.",
+    "query_family": "QF-STR-01-DOC-PMC-RENAL-0018-c3c42f342916",
+    "query_id": "V5-RNK-DEV-B-0018",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0018",
+    "split_group_key": "c3c42f342916",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "HCl loss from vomiting; kidney retains HCO3- in response to chloride depletion, causing metabolic alkalosis.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "alkalosis",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0005",
+      "DOC-PMC-RENAL-0005-B-C0040"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0005",
+    "gold_section_path": [
+      "Acid-Base",
+      "Metabolic Alkalosis"
+    ],
+    "learning_objective": "Predict acid-base changes from gastric HCl loss",
+    "parent_section_path": [
+      "Acid-Base",
+      "Metabolic Alkalosis"
+    ],
+    "query": "What happens to serum bicarbonate in prolonged vomiting?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0005-83eb3e6106f4",
+    "query_id": "V5-RNK-DEV-B-0019",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0005",
+    "split_group_key": "83eb3e6106f4",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Cardiovascular disease (MI, heart failure, sudden cardiac death) is the dominant mortality cause.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "cardiac",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0005",
+      "DOC-PMC-RENAL-0015-B-C0041",
+      "DOC-PMC-RENAL-0015-B-C0042"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0015",
+    "gold_section_path": [
+      "RRT",
+      "ESRD Outcomes"
+    ],
+    "learning_objective": "Identify leading mortality cause in dialysis-dependent ESRD",
+    "parent_section_path": [
+      "RRT",
+      "ESRD Outcomes"
+    ],
+    "query": "What is the dominant cause of death in ESRD patients on haemodialysis?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0015-6a87244dc96f",
+    "query_id": "V5-RNK-DEV-B-0020",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0015",
+    "split_group_key": "6a87244dc96f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "E. coli causes ~80-85% of uncomplicated UTIs via fimbriae-mediated uroepithelial adhesion.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "E. coli",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0001",
+      "DOC-PMC-RENAL-0011-B-C0003",
+      "DOC-PMC-RENAL-0011-B-C0007"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "UTI",
+      "Uropathogen"
+    ],
+    "learning_objective": "Identify E. coli as dominant UTI organism with virulence factors",
+    "parent_section_path": [
+      "UTI",
+      "Uropathogen"
+    ],
+    "query": "What is the most common uropathogen in uncomplicated UTI?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-0a9df2277075",
+    "query_id": "V5-RNK-DEV-B-0021",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "0a9df2277075",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "After overnight fast, urine osmolality >800 mOsmol/kg; below 600 suggests impaired concentrating ability.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "osmolality",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0072",
+      "DOC-PMC-RENAL-0023-B-C0085",
+      "DOC-PMC-RENAL-0023-B-C0086"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Urine Concentration",
+      "Concentrating Ability"
+    ],
+    "learning_objective": "Use fasting urine osmolality to assess concentrating ability",
+    "parent_section_path": [
+      "Urine Concentration",
+      "Concentrating Ability"
+    ],
+    "query": "State the expected urine osmolality after overnight fasting in a healthy adult.",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-7470c76efbf7",
+    "query_id": "V5-RNK-DEV-B-0022",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "7470c76efbf7",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ACEi: (1) reduce intraglomerular pressure via efferent dilation; (2) reduce proteinuria/TGF-beta fibrosis.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "ACE inhibitor",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0018",
+      "DOC-PMC-RENAL-0001-B-C0019"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS",
+      "Nephroprotection"
+    ],
+    "learning_objective": "Enumerate haemodynamic and anti-fibrotic mechanisms of RAAS blockade",
+    "parent_section_path": [
+      "RAAS",
+      "Nephroprotection"
+    ],
+    "query": "List two renoprotective mechanisms of ACE inhibitors in diabetic nephropathy.",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-a01257d2f329",
+    "query_id": "V5-RNK-DEV-B-0023",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "a01257d2f329",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Bilateral obstruction elevates intratubular pressure, reduces GFR, causes hydronephrosis and renal failure if untreated.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "bilateral",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0054",
+      "DOC-PMC-RENAL-0014-B-C0063",
+      "DOC-PMC-RENAL-0014-B-C0064"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0014",
+    "gold_section_path": [
+      "Hydronephrosis",
+      "Obstruction"
+    ],
+    "learning_objective": "Predict renal outcome of complete bilateral ureteric obstruction",
+    "parent_section_path": [
+      "Hydronephrosis",
+      "Obstruction"
+    ],
+    "query": "What is the consequence of bilateral ureteric obstruction on renal function?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0014-3c8d62c1e848",
+    "query_id": "V5-RNK-DEV-B-0024",
+    "query_style": "QS-F",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0014",
+    "split_group_key": "3c8d62c1e848",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Spot urine PCR correlates with 24-hour protein and quantifies proteinuria for CKD monitoring.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "proteinuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0017",
+      "DOC-PMC-RENAL-0007-B-C0030",
+      "DOC-PMC-RENAL-0007-B-C0031"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Management",
+      "Proteinuria"
+    ],
+    "learning_objective": "Explain clinical use of spot urine protein-to-creatinine ratio in CKD",
+    "parent_section_path": [
+      "CKD Management",
+      "Proteinuria"
+    ],
+    "query": "What is the role of urine PCR in monitoring renal disease?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-598ddb0a2336",
+    "query_id": "V5-RNK-DEV-B-0025",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "598ddb0a2336",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "CaPO4 stones form in alkaline urine (pH >6.5), associated with distal RTA, hyperparathyroidism, infection.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "calcium phosphate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0078",
+      "DOC-PMC-RENAL-0012-B-C0079",
+      "DOC-PMC-RENAL-0012-B-C0080"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "CaPO4 Stones"
+    ],
+    "learning_objective": "Identify urinary pH and metabolic condition favouring calcium phosphate nephrolithiasis",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "CaPO4 Stones"
+    ],
+    "query": "What metabolic abnormality predisposes to calcium phosphate stones?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-be741bee111b",
+    "query_id": "V5-RNK-DEV-B-0026",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "be741bee111b",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Proximal tubule: glutamine converted to NH4+ via phosphate-dependent glutaminase.",
+    "curriculum_stratum": "STR-06",
+    "evidence_search_keyword": "acid-base",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0002",
+      "DOC-PMC-RENAL-0004-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0004",
+    "gold_section_path": [
+      "Proximal Tubule",
+      "Ammonium"
+    ],
+    "learning_objective": "Identify primary site of renal ammoniagenesis for acid excretion",
+    "parent_section_path": [
+      "Proximal Tubule",
+      "Ammonium"
+    ],
+    "query": "In which nephron segment does ammoniagenesis predominantly occur?",
+    "query_family": "QF-STR-06-DOC-PMC-RENAL-0004-ec1868fa7da0",
+    "query_id": "V5-RNK-DEV-B-0027",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0004",
+    "split_group_key": "ec1868fa7da0",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ROMK (Kir1.1) on principal cell apical membrane mediates constitutive K+ secretion in cortical collecting duct.",
+    "curriculum_stratum": "STR-05",
+    "evidence_search_keyword": "ROMK",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0005",
+      "DOC-PMC-RENAL-0003-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0003",
+    "gold_section_path": [
+      "Potassium Handling",
+      "ROMK"
+    ],
+    "learning_objective": "Identify ROMK location and constitutive K+ secretion function",
+    "parent_section_path": [
+      "Potassium Handling",
+      "ROMK"
+    ],
+    "query": "What is the role of ROMK in potassium secretion in the collecting duct?",
+    "query_family": "QF-STR-05-DOC-PMC-RENAL-0003-8f11a293ff2f",
+    "query_id": "V5-RNK-DEV-B-0028",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0003",
+    "split_group_key": "8f11a293ff2f",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "ACR <3 mg/mmol: normal; 3-30 A2; >30 A3; used with eGFR for CKD G-A staging.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "albuminuria",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0017",
+      "DOC-PMC-RENAL-0007-B-C0030",
+      "DOC-PMC-RENAL-0007-B-C0031"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD Management",
+      "Albuminuria"
+    ],
+    "learning_objective": "Apply ACR thresholds to albuminuria classification in CKD",
+    "parent_section_path": [
+      "CKD Management",
+      "Albuminuria"
+    ],
+    "query": "What is the clinical significance of ACR in CKD staging?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-80df4bf5d438",
+    "query_id": "V5-RNK-DEV-B-0029",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "80df4bf5d438",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Large staghorn struvite calculi require PCNL; ESWL insufficient fragmentation leaves bacterial nidus.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "struvite",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0013-B-C0002",
+      "DOC-PMC-RENAL-0013-B-C0004",
+      "DOC-PMC-RENAL-0013-B-C0005"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0013",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Staghorn PCNL"
+    ],
+    "learning_objective": "Apply management to large infected staghorn calculi",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Staghorn PCNL"
+    ],
+    "query": "What complication of staghorn struvite calculi requires PCNL?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0013-1aaeef57b0f6",
+    "query_id": "V5-RNK-DEV-B-0030",
+    "query_style": "QS-G",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0013",
+    "split_group_key": "1aaeef57b0f6",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "High fluid intake, moderate calcium, low sodium/protein, low oxalate, citrate supplementation.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "dietary",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0058",
+      "DOC-PMC-RENAL-0012-B-C0060",
+      "DOC-PMC-RENAL-0012-B-C0064"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Dietary Prevention"
+    ],
+    "learning_objective": "Apply dietary guidance for secondary prevention of calcium oxalate nephrolithiasis",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Dietary Prevention"
+    ],
+    "query": "List dietary modifications that reduce calcium oxalate stone recurrence.",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-c85ad92c3825",
+    "query_id": "V5-RNK-DEV-B-0031",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "c85ad92c3825",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Kimmelstiel-Wilson nodules: PAS-positive nodular mesangial deposits pathognomonic of diabetic nephropathy.",
+    "curriculum_stratum": "STR-08",
+    "evidence_search_keyword": "diabetic",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0080",
+      "DOC-PMC-RENAL-0007-B-C0081",
+      "DOC-PMC-RENAL-0007-B-C0284"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0007",
+    "gold_section_path": [
+      "CKD",
+      "Diabetic Nephropathy"
+    ],
+    "learning_objective": "Identify Kimmelstiel-Wilson nodules as specific to diabetic nephropathy",
+    "parent_section_path": [
+      "CKD",
+      "Diabetic Nephropathy"
+    ],
+    "query": "What is the Kimmelstiel-Wilson lesion and in what condition is it found?",
+    "query_family": "QF-STR-08-DOC-PMC-RENAL-0007-80bda43d8125",
+    "query_id": "V5-RNK-DEV-B-0032",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0007",
+    "split_group_key": "80bda43d8125",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Lithium toxicity, hypercalcaemia, hypokalaemia, sickle cell disease, amyloidosis.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "DI",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0001",
+      "DOC-PMC-RENAL-0023-B-C0002",
+      "DOC-PMC-RENAL-0023-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Urine Concentration",
+      "Nephrogenic DI"
+    ],
+    "learning_objective": "Enumerate acquired causes of ADH resistance in nephrogenic DI",
+    "parent_section_path": [
+      "Urine Concentration",
+      "Nephrogenic DI"
+    ],
+    "query": "List three acquired causes of nephrogenic diabetes insipidus.",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-69b7b9ff9825",
+    "query_id": "V5-RNK-DEV-B-0033",
+    "query_style": "QS-E",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "69b7b9ff9825",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Painless macroscopic haematuria >40 years, clots, weight loss, LUTS, or palpable mass requires urgent referral.",
+    "curriculum_stratum": "STR-12",
+    "evidence_search_keyword": "urology",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0004",
+      "DOC-PMC-RENAL-0025-B-C0007",
+      "DOC-PMC-RENAL-0025-B-C0008"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0025",
+    "gold_section_path": [
+      "Hematuria",
+      "Referral"
+    ],
+    "learning_objective": "Identify red flag haematuria presentations requiring urgent assessment",
+    "parent_section_path": [
+      "Hematuria",
+      "Referral"
+    ],
+    "query": "What haematuria features require urgent urological referral?",
+    "query_family": "QF-STR-12-DOC-PMC-RENAL-0025-e4b7a0878dc9",
+    "query_id": "V5-RNK-DEV-B-0034",
+    "query_style": "QS-B",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0025",
+    "split_group_key": "e4b7a0878dc9",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Citrate chelates Ca2+ and inhibits CaOx/CaPO4 crystal nucleation; hypocitraturia promotes stone formation.",
+    "curriculum_stratum": "STR-11",
+    "evidence_search_keyword": "citrate",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0013",
+      "DOC-PMC-RENAL-0012-B-C0059",
+      "DOC-PMC-RENAL-0012-B-C0061"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0012",
+    "gold_section_path": [
+      "Nephrolithiasis",
+      "Citrate"
+    ],
+    "learning_objective": "Explain citrate as inhibitor of calcium stone crystallisation",
+    "parent_section_path": [
+      "Nephrolithiasis",
+      "Citrate"
+    ],
+    "query": "What is the role of citrate in preventing nephrolithiasis?",
+    "query_family": "QF-STR-11-DOC-PMC-RENAL-0012-c66bd2a22d36",
+    "query_id": "V5-RNK-DEV-B-0035",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0012",
+    "split_group_key": "c66bd2a22d36",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "AKI stage 2: creatinine >=2.0 but <3.0x baseline; or UO <0.5 mL/kg/hour for >=12 hours.",
+    "curriculum_stratum": "STR-07",
+    "evidence_search_keyword": "creatinine",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0003",
+      "DOC-PMC-RENAL-0006-B-C0005",
+      "DOC-PMC-RENAL-0006-B-C0012"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0006",
+    "gold_section_path": [
+      "AKI Diagnosis",
+      "KDIGO Stage 2"
+    ],
+    "learning_objective": "State creatinine criterion for AKI stage 2",
+    "parent_section_path": [
+      "AKI Diagnosis",
+      "KDIGO Stage 2"
+    ],
+    "query": "What is the creatinine criterion for AKI stage 2 by KDIGO?",
+    "query_family": "QF-STR-07-DOC-PMC-RENAL-0006-dd331eb9583c",
+    "query_id": "V5-RNK-DEV-B-0036",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0006",
+    "split_group_key": "dd331eb9583c",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "JGA: macula densa (NaCl sensing), JG granular cells (renin secretion), extraglomerular mesangial cells.",
+    "curriculum_stratum": "STR-04",
+    "evidence_search_keyword": "juxtaglomerular apparatus",
+    "gold_chunk_ids": [],
+    "gold_doc_id": "DOC-PMC-RENAL-0001",
+    "gold_section_path": [
+      "RAAS",
+      "JGA"
+    ],
+    "learning_objective": "Enumerate JGA components for RAAS activation",
+    "parent_section_path": [
+      "RAAS",
+      "JGA"
+    ],
+    "query": "List the three cellular components of the juxtaglomerular apparatus.",
+    "query_family": "QF-STR-04-DOC-PMC-RENAL-0001-a5c9ba1a6f2a",
+    "query_id": "V5-RNK-DEV-B-0037",
+    "query_style": "QS-E",
+    "review_status": "HUMAN_REVIEW_REQUIRED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0001",
+    "split_group_key": "a5c9ba1a6f2a",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Central DI: ADH deficiency; nephrogenic DI: renal V2R or AQP2 resistance. DDAVP corrects central only.",
+    "curriculum_stratum": "STR-03",
+    "evidence_search_keyword": "DI",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0023-B-C0001",
+      "DOC-PMC-RENAL-0023-B-C0002",
+      "DOC-PMC-RENAL-0023-B-C0003"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0023",
+    "gold_section_path": [
+      "Urine Concentration",
+      "DI Types"
+    ],
+    "learning_objective": "Distinguish central (cranial) from nephrogenic diabetes insipidus",
+    "parent_section_path": [
+      "Urine Concentration",
+      "DI Types"
+    ],
+    "query": "How does central differ from nephrogenic diabetes insipidus?",
+    "query_family": "QF-STR-03-DOC-PMC-RENAL-0023-f8255ae21166",
+    "query_id": "V5-RNK-DEV-B-0038",
+    "query_style": "QS-C",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0023",
+    "split_group_key": "f8255ae21166",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "Thromboembolic events (renal vein thrombosis, PE) from urinary anticoagulant protein loss are the main mortality cause.",
+    "curriculum_stratum": "STR-09",
+    "evidence_search_keyword": "membranous",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0083",
+      "DOC-PMC-RENAL-0008-B-C0171"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0008",
+    "gold_section_path": [
+      "Nephrotic Syndrome",
+      "Membranous"
+    ],
+    "learning_objective": "Identify thromboembolic mortality risk in membranous nephropathy",
+    "parent_section_path": [
+      "Nephrotic Syndrome",
+      "Membranous"
+    ],
+    "query": "What is the most common cause of death in untreated membranous nephropathy?",
+    "query_family": "QF-STR-09-DOC-PMC-RENAL-0008-c8e5597a7103",
+    "query_id": "V5-RNK-DEV-B-0039",
+    "query_style": "QS-D",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0008",
+    "split_group_key": "c8e5597a7103",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  },
+  {
+    "canonical_claim": "PACs inhibit P-fimbriae adhesion of E. coli to uroepithelial cells, reducing colonisation.",
+    "curriculum_stratum": "STR-10",
+    "evidence_search_keyword": "PAC",
+    "gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0019",
+      "DOC-PMC-RENAL-0011-B-C0057",
+      "DOC-PMC-RENAL-0011-B-C0060"
+    ],
+    "gold_doc_id": "DOC-PMC-RENAL-0011",
+    "gold_section_path": [
+      "Recurrent UTI",
+      "Prevention"
+    ],
+    "learning_objective": "Explain cranberry PAC anti-adhesion mechanism against P-fimbriated E. coli",
+    "parent_section_path": [
+      "Recurrent UTI",
+      "Prevention"
+    ],
+    "query": "What mechanism do cranberry proanthocyanidins use to reduce recurrent UTI?",
+    "query_family": "QF-STR-10-DOC-PMC-RENAL-0011-018e2e9d293a",
+    "query_id": "V5-RNK-DEV-B-0040",
+    "query_style": "QS-A",
+    "review_status": "AUTO_VERIFIED",
+    "source": "V5_FRESH",
+    "source_document_id": "DOC-PMC-RENAL-0011",
+    "split_group_key": "018e2e9d293a",
+    "verification_method": "SOURCE_GROUNDED_KEYWORD_MATCH"
+  }
+]
