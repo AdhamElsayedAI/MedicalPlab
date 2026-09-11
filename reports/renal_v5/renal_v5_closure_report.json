@@ -1,0 +1,28 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V5_CLOSURE_REPORT",
+  "closure_timestamp_utc": "2026-09-11T06:10:00Z",
+  "p3_status": "RESEARCH_VALIDATED_NOT_PRODUCTION_PROMOTED",
+  "v5_status": "NOT_PRODUCTION_PROMOTED",
+  "production_default_runtime": "v3",
+  "production_default_class": "QwenRenalRetrieverV3",
+  "fresh_select_val_results": {
+    "dataset": "renal-rerank-select-val-clean-v1.json",
+    "sha256": "70424669d0f67c69eda8275f8f6203f752b34bdbe7a5df05cc9fedacb36527b3",
+    "n": 20,
+    "output_coverage_at_20": "17/20 (85.0%)",
+    "naive_preservation": "14/14 (100.0%)",
+    "genuine_rescues": 3,
+    "relevant_lost": 0,
+    "p3_latency_ms": 14.77,
+    "base_reranker_passage_hit1": "15/20 (75.0%)",
+    "naive_base_reranker_passage_hit1": "12/20 (60.0%)"
+  },
+  "workstream_statuses": {
+    "lora_reranker_training": "NOT_RUN",
+    "dev_b_performance_execution": "PERFORMANCE_NOT_RUN",
+    "final_v5_heldout_evaluation": "NOT_RUN",
+    "safety_workstream_promotion": "NOT_FULLY_PROMOTED",
+    "production_promotion": "NOT_PRODUCTION_PROMOTED"
+  },
+  "rationale": "Fresh SELECT_VAL confirmed P3 candidate selector passes research validation (OutputCoverage@20 = 85.0%, PassageHit@1 base reranker = 75.0%), but has insufficient margin for production promotion against the immutable >= 85.0% PassageHit@1 gate, which would require a mathematically perfect downstream reranker on every covered query. To preserve stability for the mentor-facing MVP, Renal V5 is closed as a research milestone, and V3 is preserved as the production default."
+}
