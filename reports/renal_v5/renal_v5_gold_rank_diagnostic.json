@@ -1,0 +1,1531 @@
+{
+  "benchmark": "MEDICALPLAB_RENAL_V5_GOLD_RANK_DIAGNOSTIC",
+  "timestamp": "2026-09-11T00:35:10Z",
+  "dataset_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
+  "n_queries": 50,
+  "theoretical_ceiling_hit1": {
+    "numerator": 30,
+    "denominator": 50,
+    "rate": 0.6
+  },
+  "actual_hit1": {
+    "numerator": 15,
+    "denominator": 50,
+    "rate": 0.3
+  },
+  "reranking_failure_gap": {
+    "queries": 15,
+    "rate": 0.3
+  },
+  "classification_summary": {
+    "HIT_AT_1": 15,
+    "DOCUMENT_ROUTING_FAILURE": 7,
+    "RIGHT_SECTION_WRONG_PASSAGE": 1,
+    "RERANKER_INPUT_MISS": 11,
+    "CANDIDATE_SUPERSET_MISS": 9,
+    "RIGHT_DOCUMENT_WRONG_SECTION": 7
+  },
+  "detailed_query_diagnostics": [
+    {
+      "query_id": "V5-RNK-DEV-A-0001",
+      "query": "What are the three main structural layers of the glomerular filtration barrier?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0018",
+      "gold_section_path": [
+        "Abstract"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0024",
+        "DOC-PMC-RENAL-0018-B-C0003",
+        "DOC-PMC-RENAL-0018-B-C0001"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 1,
+      "rank_movement": 1,
+      "best_relevant_score": 6.5625,
+      "best_non_relevant_score": 4.5,
+      "score_margin": 2.0625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "winning_doc_id": "DOC-PMC-RENAL-0018",
+      "winning_section_path": [
+        "Abstract"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0002",
+      "query": "How does loss of the podocyte slit diaphragm lead to proteinuria?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0018",
+      "gold_section_path": [
+        "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0026",
+        "DOC-PMC-RENAL-0018-B-C0025",
+        "DOC-PMC-RENAL-0018-B-C0003"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 1,
+      "rank_movement": 0,
+      "best_relevant_score": 7.9375,
+      "best_non_relevant_score": 4.1875,
+      "score_margin": 3.75,
+      "winning_chunk_id": "DOC-PMC-RENAL-0018-B-C0026",
+      "winning_doc_id": "DOC-PMC-RENAL-0018",
+      "winning_section_path": [
+        "3. Roles of the Podocyte"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0003",
+      "query": "What distinguishes CKD-EPI from Cockcroft-Gault for GFR estimation?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-C",
+      "gold_doc_id": "DOC-PMC-RENAL-0016",
+      "gold_section_path": [
+        "GFR Estimation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0007",
+        "DOC-PMC-RENAL-0016-B-C0147"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 1,
+      "rank_movement": 0,
+      "best_relevant_score": 7.375,
+      "best_non_relevant_score": 6.875,
+      "score_margin": 0.5,
+      "winning_chunk_id": "DOC-PMC-RENAL-0016-B-C0007",
+      "winning_doc_id": "DOC-PMC-RENAL-0016",
+      "winning_section_path": [
+        "Introduction"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0004",
+      "query": "How is cystatin C used to improve GFR estimation in patients with low muscle mass?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0016",
+      "gold_section_path": [
+        "GFR Estimation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0016-B-C0001",
+        "DOC-PMC-RENAL-0016-B-C0002",
+        "DOC-PMC-RENAL-0016-B-C0003"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 11,
+      "rank_movement": -9,
+      "best_relevant_score": -0.1875,
+      "best_non_relevant_score": 6.1875,
+      "score_margin": -6.375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0020",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-2-1 CKD severity evaluation method: evaluation of kidney function"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0005",
+      "query": "What is the role of tubuloglomerular feedback in maintaining GFR stability?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0002",
+      "gold_section_path": [
+        "Glomerular Filtration"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0048"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 11,
+      "post_reranker_rank": 6,
+      "rank_movement": 5,
+      "best_relevant_score": -5.6875,
+      "best_non_relevant_score": -1.25,
+      "score_margin": -4.4375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0019-B-C0068",
+      "winning_doc_id": "DOC-PMC-RENAL-0019",
+      "winning_section_path": [
+        "4. Renal Diseases Associated with Changes in Expression of Glucose Transporters",
+        "4.5. Severe Inflammation"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0006",
+      "query": "How does the glomerulus-on-a-chip recapitulate in vivo glomerular haemodynamics?",
+      "curriculum_stratum": "STR-01",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0002",
+      "gold_section_path": [
+        "Microfluidics"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0002",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0019"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 1,
+      "rank_movement": 1,
+      "best_relevant_score": 7.625,
+      "best_non_relevant_score": 6.9375,
+      "score_margin": 0.6875,
+      "winning_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "winning_doc_id": "DOC-PMC-RENAL-0002",
+      "winning_section_path": [
+        "Introduction"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0007",
+      "query": "What is the mechanism of SGLT2-mediated glucose reabsorption in the proximal tubule?",
+      "curriculum_stratum": "STR-02",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0019",
+      "gold_section_path": [
+        "3. Glucose Transporters in Healthy Human Kidneys",
+        "3.1. Characteristics of Human Glucose Transporters",
+        "3.1.2. Human Renal Sodium-Dependent Glucose Co-Transporters"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0028",
+        "DOC-PMC-RENAL-0019-B-C0041",
+        "DOC-PMC-RENAL-0019-B-C0018"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 4,
+      "post_reranker_rank": 2,
+      "rank_movement": 2,
+      "best_relevant_score": 7.5625,
+      "best_non_relevant_score": 8.125,
+      "score_margin": -0.5625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0019-B-C0050",
+      "winning_doc_id": "DOC-PMC-RENAL-0019",
+      "winning_section_path": [
+        "3. Glucose Transporters in Healthy Human Kidneys",
+        "3.1. Characteristics of Human Glucose Transporters",
+        "3.1.2. Human Renal Sodium-Dependent Glucose Co-Transporters"
+      ],
+      "wrong_winner_relationship": "SAME_SECTION_NEIGHBOR",
+      "failure_classification": "RIGHT_SECTION_WRONG_PASSAGE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0008",
+      "query": "How does SGK1 mediate aldosterone's effect on ENaC?",
+      "curriculum_stratum": "STR-02",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0020",
+      "gold_section_path": [
+        "3. SGK Signaling",
+        "3.2. SGK1 in Insulin Signaling Pathway"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0001",
+        "DOC-PMC-RENAL-0020-B-C0005",
+        "DOC-PMC-RENAL-0020-B-C0004"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 1,
+      "rank_movement": 0,
+      "best_relevant_score": 7.125,
+      "best_non_relevant_score": 6.6875,
+      "score_margin": 0.4375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0020-B-C0004",
+      "winning_doc_id": "DOC-PMC-RENAL-0020",
+      "winning_section_path": [
+        "1. Introduction"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0009",
+      "query": "What is the function of the AE4 transporter in intercalated cells?",
+      "curriculum_stratum": "STR-02",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0021",
+      "gold_section_path": [
+        "Abstract"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B-C0002",
+        "DOC-PMC-RENAL-0021-B-C0005",
+        "DOC-PMC-RENAL-0021-B-C0001"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 21,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -0.25,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0003-B-C0011",
+      "winning_doc_id": "DOC-PMC-RENAL-0003",
+      "winning_section_path": [
+        "Hypokalemic nephropathy"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0010",
+      "query": "How does Akt signalling regulate NBCe1 in the proximal tubule?",
+      "curriculum_stratum": "STR-02",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0020",
+      "gold_section_path": [
+        "Abstract"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0013",
+        "DOC-PMC-RENAL-0020-B-C0011",
+        "DOC-PMC-RENAL-0020-B-C0001"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 28,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 7.0625,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0020-B-C0032",
+      "winning_doc_id": "DOC-PMC-RENAL-0020",
+      "winning_section_path": [
+        "6. Conclusion"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0011",
+      "query": "What is the role of NCC in distal tubule sodium handling?",
+      "curriculum_stratum": "STR-02",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0020",
+      "gold_section_path": [
+        "2. Akt Signaling",
+        "2.5. Akt, With-No-Lysine Kinases (WNKs), and Sodium-Chloride Cotransporter (NCC)"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0020-B-C0001",
+        "DOC-PMC-RENAL-0020-B-C0016"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 5.4375,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0003-B-C0008",
+      "winning_doc_id": "DOC-PMC-RENAL-0003",
+      "winning_section_path": [
+        "New insights from tubulopathies"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0012",
+      "query": "What is the role of the vasa recta in preserving the medullary osmotic gradient?",
+      "curriculum_stratum": "STR-03",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0023",
+      "gold_section_path": [
+        "Countercurrent Exchange"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0002",
+        "DOC-PMC-RENAL-0023-B-C0014",
+        "DOC-PMC-RENAL-0023-B-C0001"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 1,
+      "rank_movement": 0,
+      "best_relevant_score": 5.625,
+      "best_non_relevant_score": 4.0625,
+      "score_margin": 1.5625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0023-B-C0002",
+      "winning_doc_id": "DOC-PMC-RENAL-0023",
+      "winning_section_path": [
+        "Introduction"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0013",
+      "query": "Why is the thick ascending limb impermeable to water?",
+      "curriculum_stratum": "STR-03",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0023",
+      "gold_section_path": [
+        "Loop of Henle"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0013",
+        "DOC-PMC-RENAL-0023-B-C0016",
+        "DOC-PMC-RENAL-0023-B-C0004"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 37,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 9.0,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0005-B-C0037",
+      "winning_doc_id": "DOC-PMC-RENAL-0005",
+      "winning_section_path": [
+        "Survey methodology",
+        "Mechanistic topography of acid-base exchange in the kidney",
+        "Loop of Henle"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0014",
+      "query": "How does ADH regulate aquaporin-2 insertion in the collecting duct?",
+      "curriculum_stratum": "STR-03",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0023",
+      "gold_section_path": [
+        "Collecting Duct"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0047",
+        "DOC-PMC-RENAL-0023-B-C0050",
+        "DOC-PMC-RENAL-0023-B-C0052"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 11,
+      "post_reranker_rank": 5,
+      "rank_movement": 6,
+      "best_relevant_score": 0.375,
+      "best_non_relevant_score": 6.5,
+      "score_margin": -6.125,
+      "winning_chunk_id": "DOC-PMC-RENAL-0023-B-C0058",
+      "winning_doc_id": "DOC-PMC-RENAL-0023",
+      "winning_section_path": [
+        "Cellular ultrastructure and transport characteristics of the involved tubular segments",
+        "Loops of Henle",
+        "Type 2a epithelium"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0015",
+      "query": "What is NKCC2-mediated solute transport in the thick ascending limb?",
+      "curriculum_stratum": "STR-03",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0023",
+      "gold_section_path": [
+        "Loop of Henle",
+        "NKCC2"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0054"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 23,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 2.8125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0023-B-C0138",
+      "winning_doc_id": "DOC-PMC-RENAL-0023",
+      "winning_section_path": [
+        "Summary"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0016",
+      "query": "What triggers renin release from the juxtaglomerular apparatus?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0001",
+      "gold_section_path": [
+        "RAAS"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0015",
+        "DOC-PMC-RENAL-0001-B-C0002"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 10,
+      "post_reranker_rank": 1,
+      "rank_movement": 9,
+      "best_relevant_score": -0.375,
+      "best_non_relevant_score": -3.625,
+      "score_margin": 3.25,
+      "winning_chunk_id": "DOC-PMC-RENAL-0001-B-C0003",
+      "winning_doc_id": "DOC-PMC-RENAL-0001",
+      "winning_section_path": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+        "1.1. RAAS"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0017",
+      "query": "How does angiotensin II promote vascular inflammation?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0001",
+      "gold_section_path": [
+        "RAAS",
+        "Vascular Inflammation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0004",
+        "DOC-PMC-RENAL-0001-B-C0002"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 1,
+      "rank_movement": 1,
+      "best_relevant_score": 4.25,
+      "best_non_relevant_score": 3.25,
+      "score_margin": 1.0,
+      "winning_chunk_id": "DOC-PMC-RENAL-0001-B-C0003",
+      "winning_doc_id": "DOC-PMC-RENAL-0001",
+      "winning_section_path": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease",
+        "1.1. RAAS"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0018",
+      "query": "How does EPO production change in advanced CKD?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0024",
+      "gold_section_path": [
+        "Renal Endocrine"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0005",
+        "DOC-PMC-RENAL-0024-B-C0002",
+        "DOC-PMC-RENAL-0024-B-C0001"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 1.1875,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0271",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 17. Pediatric CKD",
+        "17-15 [CQ] Is preemptive kidney transplantation (PEKT) recommended in pediatric CKD patients?"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0019",
+      "query": "What are the immunomodulatory effects of calcitriol beyond calcium homeostasis?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0024",
+      "gold_section_path": [
+        "Renal Endocrine",
+        "Immunomodulation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0033",
+        "DOC-PMC-RENAL-0024-B-C0005",
+        "DOC-PMC-RENAL-0024-B-C0030"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 1,
+      "rank_movement": 1,
+      "best_relevant_score": 6.0,
+      "best_non_relevant_score": 0.375,
+      "score_margin": 5.625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0024-B-C0005",
+      "winning_doc_id": "DOC-PMC-RENAL-0024",
+      "winning_section_path": [
+        "INTRODUCTION"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0020",
+      "query": "What is the physiological role of ACE in the RAAS?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0001",
+      "gold_section_path": [
+        "RAAS",
+        "ACE"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0002"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 5,
+      "post_reranker_rank": 1,
+      "rank_movement": 4,
+      "best_relevant_score": 5.4375,
+      "best_non_relevant_score": -2.9375,
+      "score_margin": 8.375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "winning_doc_id": "DOC-PMC-RENAL-0001",
+      "winning_section_path": [
+        "1. Renin-Angiotensin-Aldosterone System (RAAS) and Cardiovascular Disease"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0021",
+      "query": "What ECG changes occur in severe hyperkalemia?",
+      "curriculum_stratum": "STR-05",
+      "query_style": "QS-E",
+      "gold_doc_id": "DOC-PMC-RENAL-0009",
+      "gold_section_path": [
+        "Hyperkalemia",
+        "ECG"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0007",
+        "DOC-PMC-RENAL-0009-B-C0001",
+        "DOC-PMC-RENAL-0009-B-C0002"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 28,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 9.6875,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0009-B-C0058",
+      "winning_doc_id": "DOC-PMC-RENAL-0009",
+      "winning_section_path": [
+        "CONSEQUENCES OF HYPERKALEMIA",
+        "Cardiac dysrhythmia: mechanism"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0022",
+      "query": "What mechanism causes hyperkalemia in metabolic acidosis?",
+      "curriculum_stratum": "STR-05",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0003",
+      "gold_section_path": [
+        "Potassium Handling"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0010",
+        "DOC-PMC-RENAL-0003-B-C0007",
+        "DOC-PMC-RENAL-0003-B-C0008"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 10,
+      "post_reranker_rank": 17,
+      "rank_movement": -7,
+      "best_relevant_score": -4.8125,
+      "best_non_relevant_score": 7.1875,
+      "score_margin": -12.0,
+      "winning_chunk_id": "DOC-PMC-RENAL-0009-B-C0022",
+      "winning_doc_id": "DOC-PMC-RENAL-0009",
+      "winning_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "Clinical implications"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0023",
+      "query": "How does aldosterone regulate potassium secretion via ROMK?",
+      "curriculum_stratum": "STR-05",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0003",
+      "gold_section_path": [
+        "Potassium Handling",
+        "Collecting Duct"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0005",
+        "DOC-PMC-RENAL-0003-B-C0008"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 8,
+      "post_reranker_rank": 6,
+      "rank_movement": 2,
+      "best_relevant_score": 1.4375,
+      "best_non_relevant_score": 8.875,
+      "score_margin": -7.4375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0009-B-C0017",
+      "winning_doc_id": "DOC-PMC-RENAL-0009",
+      "winning_section_path": [
+        "PATHOPHYSIOLOGY OF HYPERKALEMIA",
+        "Hyperkalemia from defective potassium excretion in the distal nephron",
+        "ROMK channels and the coupling of sodium and potassium transport in the distal nephron"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0024",
+      "query": "What is the TTKG and how is it used to diagnose hyperkalemia aetiology?",
+      "curriculum_stratum": "STR-05",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0010",
+      "gold_section_path": [
+        "Hyperkalemia",
+        "Diagnosis"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0002",
+        "DOC-PMC-RENAL-0010-B-C0001",
+        "DOC-PMC-RENAL-0010-B-C0032"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 6,
+      "post_reranker_rank": 2,
+      "rank_movement": 4,
+      "best_relevant_score": 1.8125,
+      "best_non_relevant_score": 4.1875,
+      "score_margin": -2.375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0009-B-C0027",
+      "winning_doc_id": "DOC-PMC-RENAL-0009",
+      "winning_section_path": [
+        "RISK FACTORS FOR HYPERKALEMIA",
+        "Quantitatively important risk factors"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0025",
+      "query": "How does the proximal tubule reabsorb bicarbonate using carbonic anhydrase?",
+      "curriculum_stratum": "STR-06",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0004",
+      "gold_section_path": [
+        "Acid-Base Balance",
+        "Proximal Tubule"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0004",
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0001"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 3,
+      "rank_movement": -2,
+      "best_relevant_score": 5.6875,
+      "best_non_relevant_score": 7.5,
+      "score_margin": -1.8125,
+      "winning_chunk_id": "DOC-PMC-RENAL-0005-B-C0035",
+      "winning_doc_id": "DOC-PMC-RENAL-0005",
+      "winning_section_path": [
+        "Survey methodology",
+        "Mechanistic topography of acid-base exchange in the kidney",
+        "Proximal convoluted tubule"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0026",
+      "query": "What is the anion gap and how does it classify metabolic acidosis?",
+      "curriculum_stratum": "STR-06",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0005",
+      "gold_section_path": [
+        "Acid-Base Physiology"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0030",
+        "DOC-PMC-RENAL-0005-B-C0040"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 1,
+      "post_reranker_rank": 1,
+      "rank_movement": 0,
+      "best_relevant_score": -5.0625,
+      "best_non_relevant_score": -5.125,
+      "score_margin": 0.0625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0005-B-C0005",
+      "winning_doc_id": "DOC-PMC-RENAL-0005",
+      "winning_section_path": [
+        "Introduction"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0027",
+      "query": "What is the urinary anion gap and how does it diagnose distal RTA?",
+      "curriculum_stratum": "STR-06",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0005",
+      "gold_section_path": [
+        "Acid-Base Physiology",
+        "Ammonium"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0026",
+        "DOC-PMC-RENAL-0005-B-C0041",
+        "DOC-PMC-RENAL-0005-B-C0038"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -4.5,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0005-B-C0011",
+      "winning_doc_id": "DOC-PMC-RENAL-0005",
+      "winning_section_path": [
+        "Introduction"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0028",
+      "query": "What is the pathophysiology of type 4 renal tubular acidosis?",
+      "curriculum_stratum": "STR-06",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0004",
+      "gold_section_path": [
+        "Acid-Base",
+        "RTA"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0003"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -2.375,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0003-B-C0008",
+      "winning_doc_id": "DOC-PMC-RENAL-0003",
+      "winning_section_path": [
+        "New insights from tubulopathies"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0029",
+      "query": "What serum creatinine rise within 48 hours defines AKI by KDIGO?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-D",
+      "gold_doc_id": "DOC-PMC-RENAL-0006",
+      "gold_section_path": [
+        "AKI Diagnosis"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0003",
+        "DOC-PMC-RENAL-0006-B-C0012",
+        "DOC-PMC-RENAL-0006-B-C0005"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 6,
+      "post_reranker_rank": 2,
+      "rank_movement": 4,
+      "best_relevant_score": 6.375,
+      "best_non_relevant_score": 8.6875,
+      "score_margin": -2.3125,
+      "winning_chunk_id": "DOC-PMC-RENAL-0006-B-C0021",
+      "winning_doc_id": "DOC-PMC-RENAL-0006",
+      "winning_section_path": [
+        "Commentary"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0030",
+      "query": "How does myoglobin cause tubular injury in rhabdomyolysis-induced AKI?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0015",
+      "gold_section_path": [
+        "AKI",
+        "Rhabdomyolysis"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001",
+        "DOC-PMC-RENAL-0015-B-C0045",
+        "DOC-PMC-RENAL-0015-B-C0040"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 2,
+      "post_reranker_rank": 3,
+      "rank_movement": -1,
+      "best_relevant_score": 8.125,
+      "best_non_relevant_score": 8.625,
+      "score_margin": -0.5,
+      "winning_chunk_id": "DOC-PMC-RENAL-0015-B-C0005",
+      "winning_doc_id": "DOC-PMC-RENAL-0015",
+      "winning_section_path": [
+        "Clinical symptoms"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0031",
+      "query": "When is renal replacement therapy indicated in AKI?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-B",
+      "gold_doc_id": "DOC-PMC-RENAL-0015",
+      "gold_section_path": [
+        "AKI",
+        "RRT Indications"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0001",
+        "DOC-PMC-RENAL-0015-B-C0045",
+        "DOC-PMC-RENAL-0015-B-C0040"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 3,
+      "post_reranker_rank": 2,
+      "rank_movement": 1,
+      "best_relevant_score": 7.0625,
+      "best_non_relevant_score": 8.3125,
+      "score_margin": -1.25,
+      "winning_chunk_id": "DOC-PMC-RENAL-0006-B-C0216",
+      "winning_doc_id": "DOC-PMC-RENAL-0006",
+      "winning_section_path": [
+        "Commentary"
+      ],
+      "wrong_winner_relationship": "DIFF_DOC",
+      "failure_classification": "DOCUMENT_ROUTING_FAILURE"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0032",
+      "query": "What is the significance of FENa in distinguishing pre-renal from intrinsic AKI?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0016",
+      "gold_section_path": [
+        "AKI Assessment",
+        "Tubular Function"
+      ],
+      "gold_chunk_ids": [],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 8.875,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0006-B-C0180",
+      "winning_doc_id": "DOC-PMC-RENAL-0006",
+      "winning_section_path": [
+        "Commentary"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0033",
+      "query": "What is the mechanism of mannitol nephroprotection in rhabdomyolysis?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0015",
+      "gold_section_path": [
+        "AKI",
+        "Renal Protection"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0043",
+        "DOC-PMC-RENAL-0015-B-C0039",
+        "DOC-PMC-RENAL-0015-B-C0042"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 5,
+      "post_reranker_rank": 1,
+      "rank_movement": 4,
+      "best_relevant_score": 7.0625,
+      "best_non_relevant_score": 5.5625,
+      "score_margin": 1.5,
+      "winning_chunk_id": "DOC-PMC-RENAL-0015-B-C0042",
+      "winning_doc_id": "DOC-PMC-RENAL-0015",
+      "winning_section_path": [
+        "Conservative measures in rhabdomyolysis to prevent acute kidney injury",
+        "Diuretic agent – mannitol"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0034",
+      "query": "How does hyperphosphatemia contribute to renal injury in AKI?",
+      "curriculum_stratum": "STR-07",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0006",
+      "gold_section_path": [
+        "AKI",
+        "Phosphate Injury"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0212"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 6.6875,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0141",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 10. CKD-MBD",
+        "10-1 [CQ] Is phosphate-lowering therapy recommended for pre-dialysis patients with CKD?"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0035",
+      "query": "At what eGFR is CKD stage 3a defined?",
+      "curriculum_stratum": "STR-08",
+      "query_style": "QS-D",
+      "gold_doc_id": "DOC-PMC-RENAL-0007",
+      "gold_section_path": [
+        "CKD Staging"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0025",
+        "DOC-PMC-RENAL-0007-B-C0020",
+        "DOC-PMC-RENAL-0007-B-C0021"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 30,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 8.5,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0045",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-4-1 CKD patient referral criteria for recommending medical examination recipients to visit medical institutions"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0036",
+      "query": "What is the rationale for phosphate binders in CKD management?",
+      "curriculum_stratum": "STR-08",
+      "query_style": "QS-B",
+      "gold_doc_id": "DOC-PMC-RENAL-0007",
+      "gold_section_path": [
+        "CKD Management"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0144",
+        "DOC-PMC-RENAL-0007-B-C0141",
+        "DOC-PMC-RENAL-0007-B-C0142"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 3,
+      "post_reranker_rank": 1,
+      "rank_movement": 2,
+      "best_relevant_score": 9.6875,
+      "best_non_relevant_score": 3.8125,
+      "score_margin": 5.875,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0144",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 10. CKD-MBD",
+        "10-2 [CQ] Are calcium (Ca)-free phosphate binders recommended when prescribing phosphate binders to pre-dialysis patients with CKD?"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0037",
+      "query": "How does chronic metabolic acidosis affect bone in CKD?",
+      "curriculum_stratum": "STR-08",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0007",
+      "gold_section_path": [
+        "CKD",
+        "Bone"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0156",
+        "DOC-PMC-RENAL-0007-B-C0132"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 4,
+      "post_reranker_rank": 1,
+      "rank_movement": 3,
+      "best_relevant_score": 4.875,
+      "best_non_relevant_score": 2.8125,
+      "score_margin": 2.0625,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0156",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 11 Pharmacotherapy",
+        "11-2 [CQ] Is sodium bicarbonate administration recommended for CKD patients with metabolic acidosis?"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0038",
+      "query": "What is the first-line treatment for childhood nephrotic syndrome per IPNA?",
+      "curriculum_stratum": "STR-09",
+      "query_style": "QS-B",
+      "gold_doc_id": "DOC-PMC-RENAL-0008",
+      "gold_section_path": [
+        "Nephrotic Syndrome",
+        "Management"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0002",
+        "DOC-PMC-RENAL-0008-B-C0028",
+        "DOC-PMC-RENAL-0008-B-C0018"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 43,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 6.125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0008-B-C0001",
+      "winning_doc_id": "DOC-PMC-RENAL-0008",
+      "winning_section_path": [
+        "Abstract"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0039",
+      "query": "What is the mechanism of oedema formation in nephrotic syndrome?",
+      "curriculum_stratum": "STR-09",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0008",
+      "gold_section_path": [
+        "Nephrotic Syndrome",
+        "Oedema"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0002",
+        "DOC-PMC-RENAL-0008-B-C0011",
+        "DOC-PMC-RENAL-0008-B-C0001"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 65,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -3.125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0015-B-C0021",
+      "winning_doc_id": "DOC-PMC-RENAL-0015",
+      "winning_section_path": [
+        "Etiology",
+        "Acute kidney injury is one of the most severe complications of rhabdomyolysis"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0040",
+      "query": "How does nephrotic syndrome predispose to thromboembolic events?",
+      "curriculum_stratum": "STR-09",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0008",
+      "gold_section_path": [
+        "Nephrotic Syndrome",
+        "Complications"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0281",
+        "DOC-PMC-RENAL-0008-B-C0279"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -1.8125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0007-B-C0030",
+      "winning_doc_id": "DOC-PMC-RENAL-0007",
+      "winning_section_path": [
+        "Summary of CQs and statements",
+        "Chapter 1. CKD diagnosis and its clinical significance",
+        "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0041",
+      "query": "What molecular defect causes congenital nephrotic syndrome?",
+      "curriculum_stratum": "STR-09",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0018",
+      "gold_section_path": [
+        "Slit Diaphragm",
+        "Congenital NS"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0007",
+        "DOC-PMC-RENAL-0018-B-C0025"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 5.125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0008-B-C0164",
+      "winning_doc_id": "DOC-PMC-RENAL-0008",
+      "winning_section_path": [
+        "Evidence and rationale"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0042",
+      "query": "What role does the gut microbiome play in recurrent UTI pathogenesis?",
+      "curriculum_stratum": "STR-10",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0011",
+      "gold_section_path": [
+        "Recurrent UTI",
+        "Pathogenesis"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0001",
+        "DOC-PMC-RENAL-0011-B-C0002",
+        "DOC-PMC-RENAL-0011-B-C0003"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 19,
+      "post_reranker_rank": 4,
+      "rank_movement": 15,
+      "best_relevant_score": 3.75,
+      "best_non_relevant_score": 7.5,
+      "score_margin": -3.75,
+      "winning_chunk_id": "DOC-PMC-RENAL-0011-B-C0007",
+      "winning_doc_id": "DOC-PMC-RENAL-0011",
+      "winning_section_path": [
+        "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem",
+        "Microbiota, Dysbiosis, and Distal Reservoirs"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0043",
+      "query": "What is the clinical definition of recurrent UTI?",
+      "curriculum_stratum": "STR-10",
+      "query_style": "QS-D",
+      "gold_doc_id": "DOC-PMC-RENAL-0011",
+      "gold_section_path": [
+        "UTI",
+        "Definition"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0001",
+        "DOC-PMC-RENAL-0011-B-C0004",
+        "DOC-PMC-RENAL-0011-B-C0023"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 65,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 5.9375,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0013-B-C0031",
+      "winning_doc_id": "DOC-PMC-RENAL-0013",
+      "winning_section_path": [
+        "Results",
+        "Eradication of Stones Might Lead to UTI Resolution"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0044",
+      "query": "What is the most common stone composition in Western populations?",
+      "curriculum_stratum": "STR-11",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0012",
+      "gold_section_path": [
+        "Nephrolithiasis",
+        "Stone Composition"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0062",
+        "DOC-PMC-RENAL-0012-B-C0046",
+        "DOC-PMC-RENAL-0012-B-C0063"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": null,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": -1.125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0013-B-C0048",
+      "winning_doc_id": "DOC-PMC-RENAL-0013",
+      "winning_section_path": [
+        "Results",
+        "Bacterial Role in Stone Formation and Growth"
+      ],
+      "wrong_winner_relationship": "SUPERSET_MISS",
+      "failure_classification": "CANDIDATE_SUPERSET_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0045",
+      "query": "What stone size thresholds guide management in urolithiasis?",
+      "curriculum_stratum": "STR-11",
+      "query_style": "QS-B",
+      "gold_doc_id": "DOC-PMC-RENAL-0012",
+      "gold_section_path": [
+        "Nephrolithiasis",
+        "Management"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0002",
+        "DOC-PMC-RENAL-0012-B-C0001",
+        "DOC-PMC-RENAL-0012-B-C0003"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 5,
+      "post_reranker_rank": 10,
+      "rank_movement": -5,
+      "best_relevant_score": 4.6875,
+      "best_non_relevant_score": 6.8125,
+      "score_margin": -2.125,
+      "winning_chunk_id": "DOC-PMC-RENAL-0012-B-C0086",
+      "winning_doc_id": "DOC-PMC-RENAL-0012",
+      "winning_section_path": [
+        "7. Conclusions"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0046",
+      "query": "How does the relationship between kidney stones and recurrent UTI create a vicious cycle?",
+      "curriculum_stratum": "STR-11",
+      "query_style": "QS-A",
+      "gold_doc_id": "DOC-PMC-RENAL-0013",
+      "gold_section_path": [
+        "Nephrolithiasis",
+        "Recurrent UTI"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0003",
+        "DOC-PMC-RENAL-0013-B-C0002",
+        "DOC-PMC-RENAL-0013-B-C0001"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 3,
+      "post_reranker_rank": 2,
+      "rank_movement": 1,
+      "best_relevant_score": 8.0625,
+      "best_non_relevant_score": 8.5625,
+      "score_margin": -0.5,
+      "winning_chunk_id": "DOC-PMC-RENAL-0013-B-C0031",
+      "winning_doc_id": "DOC-PMC-RENAL-0013",
+      "winning_section_path": [
+        "Results",
+        "Eradication of Stones Might Lead to UTI Resolution"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0047",
+      "query": "What is SFU Grade 3 hydronephrosis?",
+      "curriculum_stratum": "STR-11",
+      "query_style": "QS-D",
+      "gold_doc_id": "DOC-PMC-RENAL-0014",
+      "gold_section_path": [
+        "Hydronephrosis",
+        "Grading"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0003",
+        "DOC-PMC-RENAL-0014-B-C0002",
+        "DOC-PMC-RENAL-0014-B-C0001"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 6,
+      "post_reranker_rank": 2,
+      "rank_movement": 4,
+      "best_relevant_score": 7.9375,
+      "best_non_relevant_score": 8.0625,
+      "score_margin": -0.125,
+      "winning_chunk_id": "DOC-PMC-RENAL-0014-B-C0072",
+      "winning_doc_id": "DOC-PMC-RENAL-0014",
+      "winning_section_path": [
+        "Discussion"
+      ],
+      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
+      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0048",
+      "query": "What distinguishes glomerular from non-glomerular hematuria?",
+      "curriculum_stratum": "STR-12",
+      "query_style": "QS-C",
+      "gold_doc_id": "DOC-PMC-RENAL-0025",
+      "gold_section_path": [
+        "Hematuria",
+        "Differential"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0002",
+        "DOC-PMC-RENAL-0025-B-C0001",
+        "DOC-PMC-RENAL-0025-B-C0003"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 36,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 8.25,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "winning_doc_id": "DOC-PMC-RENAL-0025",
+      "winning_section_path": [
+        "Review"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0049",
+      "query": "What is the initial investigation for macroscopic hematuria in a patient over 40?",
+      "curriculum_stratum": "STR-12",
+      "query_style": "QS-B",
+      "gold_doc_id": "DOC-PMC-RENAL-0025",
+      "gold_section_path": [
+        "Hematuria",
+        "Investigation"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0025-B-C0007",
+        "DOC-PMC-RENAL-0025-B-C0004",
+        "DOC-PMC-RENAL-0025-B-C0008"
+      ],
+      "enters_top20": false,
+      "pre_reranker_rank": 21,
+      "post_reranker_rank": null,
+      "rank_movement": null,
+      "best_relevant_score": null,
+      "best_non_relevant_score": 8.125,
+      "score_margin": null,
+      "winning_chunk_id": "DOC-PMC-RENAL-0025-B-C0060",
+      "winning_doc_id": "DOC-PMC-RENAL-0025",
+      "winning_section_path": [
+        "Review"
+      ],
+      "wrong_winner_relationship": "OUTSIDE_TOP20",
+      "failure_classification": "RERANKER_INPUT_MISS"
+    },
+    {
+      "query_id": "V5-RNK-DEV-A-0050",
+      "query": "How does vitamin D deficiency lead to secondary hyperparathyroidism in CKD?",
+      "curriculum_stratum": "STR-04",
+      "query_style": "QS-F",
+      "gold_doc_id": "DOC-PMC-RENAL-0024",
+      "gold_section_path": [
+        "Renal Endocrine",
+        "2HPT"
+      ],
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0008"
+      ],
+      "enters_top20": true,
+      "pre_reranker_rank": 9,
+      "post_reranker_rank": 1,
+      "rank_movement": 8,
+      "best_relevant_score": 8.6875,
+      "best_non_relevant_score": 5.3125,
+      "score_margin": 3.375,
+      "winning_chunk_id": "DOC-PMC-RENAL-0024-B-C0008",
+      "winning_doc_id": "DOC-PMC-RENAL-0024",
+      "winning_section_path": [
+        "VITAMIN D",
+        "Vitamin D physiology, receptor signalling, and dysregulation in CKD"
+      ],
+      "wrong_winner_relationship": "NONE_HIT",
+      "failure_classification": "HIT_AT_1"
+    }
+  ]
+}

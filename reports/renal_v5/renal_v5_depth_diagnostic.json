@@ -1,0 +1,125 @@
+{
+  "benchmark": "MEDICALPLAB_RENAL_V5_DEPTH_DIAGNOSTIC",
+  "timestamp": "2026-09-11T02:28:44Z",
+  "dataset_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
+  "n_queries": 50,
+  "results_by_depth": {
+    "20": {
+      "depth_k": 20,
+      "reranker_input_hit": {
+        "numerator": 30,
+        "denominator": 50,
+        "rate": 0.6
+      },
+      "passage_hit_at_1": {
+        "numerator": 15,
+        "denominator": 50,
+        "rate": 0.3
+      },
+      "passage_hit_at_5": {
+        "numerator": 25,
+        "denominator": 50,
+        "rate": 0.5
+      },
+      "passage_hit_at_10": {
+        "numerator": 28,
+        "denominator": 50,
+        "rate": 0.56
+      },
+      "mrr": 0.3939946524064171,
+      "ndcg_at_10": 0.42450534051425637,
+      "reranker_latency_p50_ms": 806.2652000007802,
+      "reranker_latency_p95_ms": 6980.838680002488,
+      "peak_vram_mb": 4473.82568359375
+    },
+    "30": {
+      "depth_k": 30,
+      "reranker_input_hit": {
+        "numerator": 36,
+        "denominator": 50,
+        "rate": 0.72
+      },
+      "passage_hit_at_1": {
+        "numerator": 14,
+        "denominator": 50,
+        "rate": 0.28
+      },
+      "passage_hit_at_5": {
+        "numerator": 27,
+        "denominator": 50,
+        "rate": 0.54
+      },
+      "passage_hit_at_10": {
+        "numerator": 34,
+        "denominator": 50,
+        "rate": 0.68
+      },
+      "mrr": 0.4076089086352244,
+      "ndcg_at_10": 0.4656439614253264,
+      "reranker_latency_p50_ms": 27709.785099999863,
+      "reranker_latency_p95_ms": 40477.884084996906,
+      "peak_vram_mb": 5455.99951171875
+    },
+    "50": {
+      "depth_k": 50,
+      "reranker_input_hit": {
+        "numerator": 39,
+        "denominator": 50,
+        "rate": 0.78
+      },
+      "passage_hit_at_1": {
+        "numerator": 13,
+        "denominator": 50,
+        "rate": 0.26
+      },
+      "passage_hit_at_5": {
+        "numerator": 26,
+        "denominator": 50,
+        "rate": 0.52
+      },
+      "passage_hit_at_10": {
+        "numerator": 35,
+        "denominator": 50,
+        "rate": 0.7
+      },
+      "mrr": 0.3872626262626263,
+      "ndcg_at_10": 0.4508866306896177,
+      "reranker_latency_p50_ms": 125145.42459999939,
+      "reranker_latency_p95_ms": 144091.4588999971,
+      "peak_vram_mb": 7556.541015625
+    }
+  },
+  "pairwise_transitions": {
+    "depth_30_vs_20": {
+      "recovered_queries": [
+        "V5-RNK-DEV-A-0009",
+        "V5-RNK-DEV-A-0015",
+        "V5-RNK-DEV-A-0010"
+      ],
+      "lost_queries": [
+        "V5-RNK-DEV-A-0016",
+        "V5-RNK-DEV-A-0017",
+        "V5-RNK-DEV-A-0026",
+        "V5-RNK-DEV-A-0020"
+      ],
+      "net_delta": -1
+    },
+    "depth_50_vs_20": {
+      "recovered_queries": [
+        "V5-RNK-DEV-A-0009",
+        "V5-RNK-DEV-A-0015",
+        "V5-RNK-DEV-A-0010"
+      ],
+      "lost_queries": [
+        "V5-RNK-DEV-A-0026",
+        "V5-RNK-DEV-A-0016",
+        "V5-RNK-DEV-A-0017",
+        "V5-RNK-DEV-A-0020",
+        "V5-RNK-DEV-A-0037"
+      ],
+      "net_delta": -2
+    }
+  },
+  "depth_recommendation": "KEEP_DEPTH_20_DEFAULT",
+  "rationale": "Net delta at depth 30: -1 queries; Net delta at depth 50: -2 queries."
+}

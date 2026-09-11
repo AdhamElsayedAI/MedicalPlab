@@ -1,0 +1,105 @@
+{
+  "benchmark": "MEDICALPLAB_RENAL_V5_BASELINE_DEV_A",
+  "timestamp": "2026-09-11T00:35:10Z",
+  "dataset": "evaluation/renal/v5/renal-rerank-dev-a-v5.json",
+  "dataset_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
+  "n_queries": 50,
+  "model_architecture": "QwenRenalRetrieverV3",
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "reranker_model": "Qwen/Qwen3-Reranker-0.6B",
+  "candidate_depth": 20,
+  "alpha_doc_prior": 0.18,
+  "metrics": {
+    "passage_hit_at_1": {
+      "numerator": 15,
+      "denominator": 50,
+      "rate": 0.3
+    },
+    "passage_hit_at_3": {
+      "numerator": 23,
+      "denominator": 50,
+      "rate": 0.46
+    },
+    "passage_hit_at_5": {
+      "numerator": 25,
+      "denominator": 50,
+      "rate": 0.5
+    },
+    "passage_hit_at_10": {
+      "numerator": 28,
+      "denominator": 50,
+      "rate": 0.56
+    },
+    "document_hit_at_1": {
+      "numerator": 31,
+      "denominator": 50,
+      "rate": 0.62
+    },
+    "document_hit_at_3": {
+      "numerator": 40,
+      "denominator": 50,
+      "rate": 0.8
+    },
+    "document_hit_at_5": {
+      "numerator": 40,
+      "denominator": 50,
+      "rate": 0.8
+    },
+    "document_hit_at_10": {
+      "numerator": 42,
+      "denominator": 50,
+      "rate": 0.84
+    },
+    "parent_section_hit_at_1": {
+      "numerator": 2,
+      "denominator": 50,
+      "rate": 0.04
+    },
+    "parent_section_hit_at_3": {
+      "numerator": 2,
+      "denominator": 50,
+      "rate": 0.04
+    },
+    "parent_section_hit_at_5": {
+      "numerator": 2,
+      "denominator": 50,
+      "rate": 0.04
+    },
+    "parent_section_hit_at_10": {
+      "numerator": 2,
+      "denominator": 50,
+      "rate": 0.04
+    },
+    "reranker_input_hit_at_20": {
+      "numerator": 30,
+      "denominator": 50,
+      "rate": 0.6
+    },
+    "candidate_coverage_at_30": {
+      "numerator": 36,
+      "denominator": 50,
+      "rate": 0.72
+    },
+    "candidate_coverage_at_50": {
+      "numerator": 39,
+      "denominator": 50,
+      "rate": 0.78
+    },
+    "candidate_coverage_at_100": {
+      "numerator": 41,
+      "denominator": 50,
+      "rate": 0.82
+    },
+    "mrr": 0.3939946524064171,
+    "ndcg_at_10": 0.42450534051425637
+  },
+  "latency_ms": {
+    "query_encoding_p50": 29.57451800000854,
+    "first_stage_p50": 1.603550001163967,
+    "first_stage_p95": 2.4596949944680087,
+    "reranker_p50": 800.7577999960631,
+    "reranker_p95": 7021.759629998996,
+    "total_p50": 832.4039679963607,
+    "total_p95": 7053.194382996734
+  }
+}
