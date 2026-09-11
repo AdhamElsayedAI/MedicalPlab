@@ -1,0 +1,22 @@
+{
+  "experiment_id": "SELECTOR_V5_S2_SAFE_RESCUE",
+  "status": "TECHNICALLY_VALID_BUT_INSUFFICIENT",
+  "reclassification_timestamp": "2026-09-11T07:23:00+00:00",
+  "governing_assessment": "The selector is technically valid (0 bytes paging, preserves 96.7% naive evidence, rescues 2 rank-21+ queries), but is mathematically insufficient to support the V5 promotion gate (PassageHit@1 >= 85%).",
+  "reasons": [
+    "DEV-A OutputCoverage@20 improved only from 60.0% (30/50) to 62.0% (31/50).",
+    "TRAIN_VAL OutputCoverage@20 did not improve at all: 12/20 (60.0%) -> 12/20 (60.0%).",
+    "TRAIN_CORE OutputCoverage@20 regressed from 37/60 (61.7%) to 35/60 (58.3%).",
+    "Evidence for generalizable evidence rescue is weak.",
+    "The theoretical downstream reranker ceiling remains 62.0%, leaving no margin to achieve >=85% Hit@1."
+  ],
+  "preserved_artifacts": {
+    "script": "Scripts/run_renal_v5_safe_rescue_dev_a.py",
+    "script_sha256": "45daecee3c9391166db7f70f3c86f2e05a1b365567dd82417e1fbf956e946b6d",
+    "results_json": "reports/renal_v5/renal_v5_safe_rescue_dev_a_results.json",
+    "results_sha256": "9287d4e5ccb4aefb5552ff15365a1e36ab9e1de5ccb6413a2c6df57dc0c0cd10",
+    "mined_train_core_negatives": "Data/experiments/renal_v5/mined_hard_negatives_train_core.json",
+    "mined_train_core_sha256": "7f05b0b92b8aa5595bbbe0d375fe8cd3461b106bcff1518a3adda61c1398f40c"
+  },
+  "current_role": "RETAINED_AS_ENGINEERING_BASELINE_NOT_PROMOTED"
+}

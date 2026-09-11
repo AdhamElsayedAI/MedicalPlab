@@ -1,0 +1,85 @@
+{
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "physical_dedicated_vram_mb": 6143.5,
+  "model_id": "Qwen/Qwen3-Reranker-0.6B",
+  "dtype": "bfloat16",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "target_modules": [
+    "q_proj",
+    "v_proj"
+  ],
+  "timestamp": "2026-09-11T06:55:00+00:00",
+  "results": [
+    {
+      "config_name": "BS=1_GC=OFF_GA=4",
+      "batch_size": 1,
+      "gradient_checkpointing": false,
+      "grad_accum": 4,
+      "seq_len": 452,
+      "trainable_params": 2293760,
+      "total_params": 598070272,
+      "peak_allocated_vram_mb": 2128.03125,
+      "peak_reserved_vram_mb": 2200.0,
+      "mean_iteration_time_ms": 355.5610666668751,
+      "fits_physical_vram": true,
+      "status": "PASS"
+    },
+    {
+      "config_name": "BS=2_GC=OFF_GA=2",
+      "batch_size": 2,
+      "gradient_checkpointing": false,
+      "grad_accum": 2,
+      "seq_len": 452,
+      "trainable_params": 2293760,
+      "total_params": 598070272,
+      "peak_allocated_vram_mb": 3117.1064453125,
+      "peak_reserved_vram_mb": 3266.0,
+      "mean_iteration_time_ms": 257.25459999982075,
+      "fits_physical_vram": true,
+      "status": "PASS"
+    },
+    {
+      "config_name": "BS=2_GC=ON_GA=2",
+      "batch_size": 2,
+      "gradient_checkpointing": true,
+      "grad_accum": 2,
+      "seq_len": 452,
+      "trainable_params": 2293760,
+      "total_params": 598070272,
+      "peak_allocated_vram_mb": 3128.92529296875,
+      "peak_reserved_vram_mb": 3158.0,
+      "mean_iteration_time_ms": 251.91783333320927,
+      "fits_physical_vram": true,
+      "status": "PASS"
+    },
+    {
+      "config_name": "BS=4_GC=ON_GA=1",
+      "batch_size": 4,
+      "gradient_checkpointing": true,
+      "grad_accum": 1,
+      "seq_len": 452,
+      "trainable_params": 2293760,
+      "total_params": 598070272,
+      "peak_allocated_vram_mb": 5018.5185546875,
+      "peak_reserved_vram_mb": 5518.0,
+      "mean_iteration_time_ms": 688.7719666665362,
+      "fits_physical_vram": true,
+      "status": "PASS"
+    }
+  ],
+  "recommended_config": {
+    "config_name": "BS=1_GC=OFF_GA=4",
+    "batch_size": 1,
+    "gradient_checkpointing": false,
+    "grad_accum": 4,
+    "seq_len": 452,
+    "trainable_params": 2293760,
+    "total_params": 598070272,
+    "peak_allocated_vram_mb": 2128.03125,
+    "peak_reserved_vram_mb": 2200.0,
+    "mean_iteration_time_ms": 355.5610666668751,
+    "fits_physical_vram": true,
+    "status": "PASS"
+  }
+}

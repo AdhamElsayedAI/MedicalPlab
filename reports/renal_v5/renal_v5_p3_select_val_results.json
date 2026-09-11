@@ -1,0 +1,291 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V5_P3_SELECT_VAL_RESULTS",
+  "timestamp_utc": "2026-09-11T05:57:01Z",
+  "validation_dataset": "renal-rerank-select-val-clean-v1.json",
+  "n_items": 20,
+  "p3_model_name": "SELECTOR_V5_P3_REGULARIZED_LOGISTIC_SCORER",
+  "gate_verdict": "PASS_PREDECLARED_GATE",
+  "gate_breakdown": {
+    "output_coverage_at_20": {
+      "numerator": 17,
+      "denominator": 20,
+      "percentage": 85.0,
+      "gate_passed": true
+    },
+    "naive_preservation": {
+      "numerator": 14,
+      "denominator": 14,
+      "percentage": 100.0,
+      "gate_passed": true
+    },
+    "genuine_rescues": {
+      "count": 3,
+      "gate_passed": true
+    },
+    "relevant_lost": {
+      "count": 0
+    },
+    "latency_ms": {
+      "value": 14.767905000007886,
+      "gate_passed": true
+    }
+  },
+  "metrics": {
+    "mrr": 0.7071259746588694,
+    "median_rank": 1.0,
+    "p75_rank": 2.0,
+    "p90_rank": 28.100000000000016,
+    "passage_hit1_naive": {
+      "numerator": 12,
+      "denominator": 20,
+      "percentage": 60.0
+    },
+    "passage_hit1_p3": {
+      "numerator": 15,
+      "denominator": 20,
+      "percentage": 75.0
+    }
+  },
+  "per_query_results": [
+    {
+      "query_id": "V5-RNK-SELVAL-0001",
+      "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0080",
+      "dense_rank": 153,
+      "p3_rank": 16,
+      "in_naive": false,
+      "in_p3": true,
+      "is_rescue": true,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0002",
+      "gold_chunk_id": "DOC-PMC-RENAL-0009-B-C0021",
+      "dense_rank": 2,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0003",
+      "gold_chunk_id": "DOC-PMC-RENAL-0010-B-C0006",
+      "dense_rank": 13,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0004",
+      "gold_chunk_id": "DOC-PMC-RENAL-0012-B-C0035",
+      "dense_rank": 2,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0005",
+      "gold_chunk_id": "DOC-PMC-RENAL-0016-B-C0005",
+      "dense_rank": 1,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0006",
+      "gold_chunk_id": "DOC-PMC-RENAL-0014-B-C0006",
+      "dense_rank": 2,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0007",
+      "gold_chunk_id": "DOC-PMC-RENAL-0019-B-C0001",
+      "dense_rank": 7,
+      "p3_rank": 2,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": false
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0008",
+      "gold_chunk_id": "DOC-PMC-RENAL-0008-B-C0004",
+      "dense_rank": 13,
+      "p3_rank": 2,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": false
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0009",
+      "gold_chunk_id": "DOC-PMC-RENAL-0005-B-C0032",
+      "dense_rank": 9,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0010",
+      "gold_chunk_id": "DOC-PMC-RENAL-0009-B-C0024",
+      "dense_rank": 46,
+      "p3_rank": 1,
+      "in_naive": false,
+      "in_p3": true,
+      "is_rescue": true,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0011",
+      "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0075",
+      "dense_rank": 66,
+      "p3_rank": 38,
+      "in_naive": false,
+      "in_p3": false,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": false
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0012",
+      "gold_chunk_id": "DOC-PMC-RENAL-0012-B-C0037",
+      "dense_rank": 5,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0013",
+      "gold_chunk_id": "DOC-PMC-RENAL-0021-B-C0007",
+      "dense_rank": 177,
+      "p3_rank": 60,
+      "in_naive": false,
+      "in_p3": false,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": false
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0014",
+      "gold_chunk_id": "DOC-PMC-RENAL-0014-B-C0009",
+      "dense_rank": 1,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0015",
+      "gold_chunk_id": "DOC-PMC-RENAL-0019-B-C0008",
+      "dense_rank": 1,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0016",
+      "gold_chunk_id": "DOC-PMC-RENAL-0013-B-C0010",
+      "dense_rank": 2,
+      "p3_rank": 1,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0017",
+      "gold_chunk_id": "DOC-PMC-RENAL-0011-B-C0025",
+      "dense_rank": 11,
+      "p3_rank": 2,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0018",
+      "gold_chunk_id": "DOC-PMC-RENAL-0018-B-C0028",
+      "dense_rank": 51,
+      "p3_rank": 27,
+      "in_naive": false,
+      "in_p3": false,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": false
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0019",
+      "gold_chunk_id": "DOC-PMC-RENAL-0010-B-C0005",
+      "dense_rank": 118,
+      "p3_rank": 1,
+      "in_naive": false,
+      "in_p3": true,
+      "is_rescue": true,
+      "is_lost": false,
+      "naive_hit1": false,
+      "p3_hit1": true
+    },
+    {
+      "query_id": "V5-RNK-SELVAL-0020",
+      "gold_chunk_id": "DOC-PMC-RENAL-0014-B-C0008",
+      "dense_rank": 1,
+      "p3_rank": 2,
+      "in_naive": true,
+      "in_p3": true,
+      "is_rescue": false,
+      "is_lost": false,
+      "naive_hit1": true,
+      "p3_hit1": true
+    }
+  ]
+}

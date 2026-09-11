@@ -1,0 +1,20 @@
+{
+  "dataset": "mined_hard_negatives_train_extended.json",
+  "timestamp": "2026-09-11T06:58:00+00:00",
+  "num_queries": 80,
+  "total_positives": 204,
+  "total_negatives": 1537,
+  "mean_negatives_per_query": 19.2125,
+  "negative_type_distribution": {
+    "HIGH_SCORING_TOP5_DISTRACTOR": 254,
+    "SAME_SECTION_NEIGHBORING_PASSAGE": 71,
+    "CLOSE_RENAL_TOPIC_DISTRACTOR": 907,
+    "SAME_DOC_WRONG_SECTION": 305
+  },
+  "sha256": "3901787622cffd78baf98fc84b0beb52f23fc74c5530dc8e91507aa87bfc194d",
+  "firewall_assertions": {
+    "zero_false_negatives": true,
+    "multi_positive_protected": true,
+    "source_distribution_aligned_with_selector": true
+  }
+}

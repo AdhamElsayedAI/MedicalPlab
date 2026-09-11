@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-09-11T07:28:00+00:00",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "physical_vram_mb": 6143.5,
+  "exact_sequence_length": 512,
+  "batch_size": 2,
+  "gradient_accumulation": 2,
+  "gradient_checkpointing": true,
+  "trainable_parameters": 2293760,
+  "peak_allocated_vram_mb": 3344.83837890625,
+  "peak_reserved_vram_mb": 3556.0,
+  "headroom_vram_mb": 2587.5,
+  "mean_iteration_time_ms": 502.7355800002624,
+  "pcie_paging_detected": false,
+  "feasibility_status": "TRAINING_MEMORY_FEASIBLE"
+}

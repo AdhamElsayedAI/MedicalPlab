@@ -1,0 +1,42 @@
+{
+  "audit_title": "RERANKER_TRAINING_OBJECTIVE_SPECIFICATION",
+  "timestamp": "2026-09-11T07:30:00+00:00",
+  "model_architecture": {
+    "model_id": "Qwen/Qwen3-Reranker-0.6B",
+    "underlying_class": "Qwen3ForCausalLM",
+    "scoring_module": "sentence_transformers.cross_encoder.modules.logit_score.LogitScore",
+    "true_token_id": 9693,
+    "true_token_str": "yes",
+    "false_token_id": 2152,
+    "false_token_str": "no"
+  },
+  "inference_scoring_function": "S(q, p) = logit(T, 'yes') - logit(T, 'no')",
+  "loss_formulation": {
+    "primary": "GROUP_PAIRWISE_SOFTMAX",
+    "formula": "L(q, p+, {p-_j}) = -log( exp(s+ / tau) / (exp(s+ / tau) + sum_j exp(s-_j / tau)) )",
+    "temperature_tau": 1.0,
+    "multi_positive_handling": "Each positive chunk p_k+ is trained against the negative pool; loss is averaged across positives (1/K * sum_k L_k). No positive chunk is ever present in the negative denominator.",
+    "multi_positive_masking": "Strict qrel exclusion: all chunks labeled relevant for query q are excluded from {p-_j} across all updates."
+  },
+  "batch_and_memory_safeguards": {
+    "effective_batch_size": 4,
+    "physical_batch_size": 2,
+    "gradient_accumulation_steps": 2,
+    "gradient_checkpointing": true,
+    "precision": "bfloat16",
+    "max_sequence_length": 512,
+    "peak_reserved_vram_mb": 3556.0,
+    "physical_vram_limit_mb": 6143.5,
+    "headroom_mb": 2587.5,
+    "wddm_pcie_paging": "0 bytes (ZERO)"
+  },
+  "data_split_discipline": {
+    "training_set": "TRAIN_CORE (N=60, 147 positives, 1,146 negatives)",
+    "training_set_sha256": "7f05b0b92b8aa5595bbbe0d375fe8cd3461b106bcff1518a3adda61c1398f40c",
+    "validation_set": "TRAIN_VAL (N=20, evaluation candidate pools)",
+    "validation_set_sha256": "ffc4e2685ca73f4ec94f064c3e5525de2eea5c11daa0653a7ca1e8d2d5074043",
+    "checkpoint_selection_metric": "PassageHit@1 on TRAIN_VAL (tie-breaker: MRR)",
+    "early_stopping_patience": 2,
+    "gradient_isolation": "TRAIN_VAL examples are strictly forbidden from entering optimizer updates."
+  }
+}

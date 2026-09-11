@@ -1,0 +1,33 @@
+{
+  "experiment_id": "SELECTOR_V5_S1_DIVERSITY_CAP",
+  "status": "FAILED",
+  "rejection_timestamp": "2026-09-11T07:07:00+00:00",
+  "rejection_reason": "OutputCoverage@20 dropped to 58.0% (29/50), which is below naive Top-20 baseline coverage (60.0%, 30/50). The selector discarded gold evidence for 16 queries out of the 45 present in B=200 (retention = 64.4%), reducing the downstream theoretical reranking ceiling from 90.0% to 58.0%.",
+  "parameters": {
+    "pool_depth_B": 200,
+    "output_depth_R": 20,
+    "max_per_sec": 3,
+    "adj_penalty": 0.03,
+    "first_stage_doc_prior_alpha": 0.18
+  },
+  "provenance": {
+    "origin": "MANUALLY_CHOSEN_HEURISTIC_AFTER_DEV_A_INSPECTION",
+    "description": "Parameters max_per_sec=3 and adj_penalty=0.03 were not fitted or selected on TRAIN_VAL. They were manually chosen heuristics based on inspecting DEV-A crowding failure queries (such as V5-RNK-DEV-A-0049 and 0015) where multiple consecutive review chunks crowded out gold passages. Although the heuristics rescued specific queries (e.g. DEV-A-0009), they aggressively discarded gold chunks for other queries where valid evidence was located deeper within the same section, causing net negative retention."
+  },
+  "metrics_recorded_dev_a": {
+    "input_coverage_b200": "45/50 = 90.0%",
+    "output_coverage_r20": "29/50 = 58.0%",
+    "retention_rate": "64.4% (29/45 retained, 16 lost)",
+    "naive_top20_coverage": "30/50 = 60.0%",
+    "delta_vs_naive_top20": "-1 query (-2.0%)",
+    "passage_hit_at_1": "32.0% (16/50)",
+    "mrr": 0.3988,
+    "ndcg_at_10": 0.4212,
+    "latency_p50_ms": 869.9,
+    "peak_vram_mb": 3321.1
+  },
+  "audit_artifact_shas": {
+    "dev_a_results_json": "dda6ca236adf8e29a4e62812a5ffe36cb7b9c3a59c6ea2248de6ad16d2852aba",
+    "mined_hard_negatives_train_extended_json": "3901787622cffd78baf98fc84b0beb52f23fc74c5530dc8e91507aa87bfc194d"
+  }
+}

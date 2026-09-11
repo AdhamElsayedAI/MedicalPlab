@@ -1,0 +1,92 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V5_P3_DEVELOPMENT_REPORT",
+  "timestamp_utc": "2026-09-11T05:54:50Z",
+  "p3_specification_file": "renal_v5_p3_model_specification.json",
+  "p3_specification_sha256": "46afe469eb2ade0a2070fa574b28a7f13aaa42ed1e57cfcb3cb4c6f58e36cd1a",
+  "p3_spec": {
+    "model_name": "SELECTOR_V5_P3_RANK_FUSION",
+    "model_class": "REGULARIZED_LOW_CAPACITY_QUERY_GROUPED_RANK_FUSION",
+    "b_candidates": 500,
+    "r_selected": 20,
+    "k_rrf": 60,
+    "feature_weights": {
+      "dense_combined_rank_rrf": 1.0,
+      "bm25_sparse_rank_rrf": 1.5,
+      "section_centroid_rank_rrf": 0.0
+    },
+    "zero_parameter_weights": false,
+    "learned_parameters_count": 3,
+    "train_core_oof_results": {
+      "cov20_count": 53,
+      "cov20_pct": 88.33333333333333,
+      "cov50_count": 59,
+      "cov50_pct": 98.33333333333333,
+      "naive_preserved_count": 45,
+      "naive_preserved_pct": 95.74468085106383,
+      "rescues_count": 8,
+      "lost_count": 2,
+      "mrr": 0.6023269607966404,
+      "median_rank": 2.0,
+      "p75_rank": 7.25,
+      "p90_rank": 21.0
+    },
+    "all_cv_results": {
+      "control_rrf": {
+        "cov20_count": 52,
+        "cov20_pct": 86.66666666666667,
+        "cov50_count": 60,
+        "cov50_pct": 100.0,
+        "naive_preserved_count": 45,
+        "naive_preserved_pct": 95.74468085106383,
+        "rescues_count": 7,
+        "lost_count": 2,
+        "mrr": 0.5917401782731908,
+        "median_rank": 2.0,
+        "p75_rank": 7.0,
+        "p90_rank": 21.0
+      },
+      "logistic_scorer": {
+        "cov20_count": 56,
+        "cov20_pct": 93.33333333333333,
+        "cov50_count": 59,
+        "cov50_pct": 98.33333333333333,
+        "naive_preserved_count": 45,
+        "naive_preserved_pct": 95.74468085106383,
+        "rescues_count": 11,
+        "lost_count": 2,
+        "mrr": 0.6610258271988345,
+        "median_rank": 1.0,
+        "p75_rank": 6.0,
+        "p90_rank": 18.0
+      },
+      "ridge_ranker": {
+        "cov20_count": 54,
+        "cov20_pct": 90.0,
+        "cov50_count": 59,
+        "cov50_pct": 98.33333333333333,
+        "naive_preserved_count": 45,
+        "naive_preserved_pct": 95.74468085106383,
+        "rescues_count": 9,
+        "lost_count": 2,
+        "mrr": 0.6422817794454245,
+        "median_rank": 1.0,
+        "p75_rank": 5.25,
+        "p90_rank": 19.400000000000006
+      },
+      "learned_rank_fusion": {
+        "cov20_count": 53,
+        "cov20_pct": 88.33333333333333,
+        "cov50_count": 59,
+        "cov50_pct": 98.33333333333333,
+        "naive_preserved_count": 45,
+        "naive_preserved_pct": 95.74468085106383,
+        "rescues_count": 8,
+        "lost_count": 2,
+        "mrr": 0.6023269607966404,
+        "median_rank": 2.0,
+        "p75_rank": 7.25,
+        "p90_rank": 21.0
+      }
+    }
+  }
+}

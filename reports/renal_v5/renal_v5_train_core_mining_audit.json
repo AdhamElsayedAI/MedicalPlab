@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-09-11T07:25:00+00:00",
+  "selector_used": "SELECTOR_V5_SAFE_RESCUE_CANDIDATE_A",
+  "train_core": {
+    "file": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\Data\\experiments\\renal_v5\\mined_hard_negatives_train_core.json",
+    "sha256": "7f05b0b92b8aa5595bbbe0d375fe8cd3461b106bcff1518a3adda61c1398f40c",
+    "num_queries": 60,
+    "total_positives": 147,
+    "total_negatives": 1146,
+    "negative_type_distribution": {
+      "HIGH_SCORING_TOP5_DISTRACTOR": 184,
+      "SAME_SECTION_NEIGHBORING_PASSAGE": 71,
+      "CLOSE_RENAL_TOPIC_DISTRACTOR": 627,
+      "SAME_DOC_WRONG_SECTION": 264
+    }
+  },
+  "train_val": {
+    "file": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\Data\\experiments\\renal_v5\\eval_candidates_train_val.json",
+    "sha256": "ffc4e2685ca73f4ec94f064c3e5525de2eea5c11daa0653a7ca1e8d2d5074043",
+    "num_queries": 20,
+    "purpose": "MODEL_SELECTION_AND_EARLY_STOPPING_ONLY_NO_GRADIENTS"
+  }
+}

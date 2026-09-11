@@ -1,0 +1,46 @@
+{
+  "audit_title": "TRAIN_DATASET_QUARANTINE_RECORD",
+  "timestamp": "2026-09-11T07:36:00+00:00",
+  "governing_decision": "The existing training artifacts (TRAIN_EXTENDED, TRAIN_CORE, TRAIN_VAL) contain hard cross-split evidence, section, and semantic leakages into DEV-A and DEV-B. They are hereby formally QUARANTINED and permanently barred from feature selection, preselector fitting, hard-negative mining, LoRA training, and checkpoint selection.",
+  "quarantined_artifacts": [
+    {
+      "artifact_id": "TRAIN_EXTENDED_V5_LEAKED_QUARANTINED",
+      "path": "evaluation/renal/v5/renal-rerank-train-v5-extended.json",
+      "sha256": "cdcb9fadd606203a60a9480a39ea9f93b82d25b7f5c8cdb370e806ae4da16ac2",
+      "status": "QUARANTINED_DO_NOT_USE"
+    },
+    {
+      "artifact_id": "TRAIN_CORE_V5_LEAKED_QUARANTINED",
+      "path": "evaluation/renal/v5/renal-rerank-train-core-v5.json",
+      "sha256": "17b5a49364bcf2ae6d722791f15261d0ece85b1027e54de41c56212d9a78ce64",
+      "status": "QUARANTINED_DO_NOT_USE"
+    },
+    {
+      "artifact_id": "TRAIN_VAL_V5_LEAKED_QUARANTINED",
+      "path": "evaluation/renal/v5/renal-rerank-train-val-v5.json",
+      "sha256": "0d41ee139a179239449e90a2ac0fa7e4a89f75d19dea7a85aaf69f312a1aec82",
+      "status": "QUARANTINED_DO_NOT_USE"
+    },
+    {
+      "artifact_id": "MINED_HARD_NEGATIVES_TRAIN_CORE_QUARANTINED",
+      "path": "Data/experiments/renal_v5/mined_hard_negatives_train_core.json",
+      "sha256": "7f05b0b92b8aa5595bbbe0d375fe8cd3461b106bcff1518a3adda61c1398f40c",
+      "status": "QUARANTINED_DO_NOT_USE"
+    },
+    {
+      "artifact_id": "EVAL_CANDIDATES_TRAIN_VAL_QUARANTINED",
+      "path": "Data/experiments/renal_v5/eval_candidates_train_val.json",
+      "sha256": "ffc4e2685ca73f4ec94f064c3e5525de2eea5c11daa0653a7ca1e8d2d5074043",
+      "status": "QUARANTINED_DO_NOT_USE"
+    }
+  ],
+  "dev_b_status_classification": {
+    "status": "DEV_B_STATUS = PERFORMANCE_UNEXECUTED_CONTENT_ACCESSED_FOR_FIREWALL_ONLY",
+    "rationale": "DEV-B remains byte-for-byte unchanged, performance-unexecuted, and retrieval-unexecuted. However, DEV-B content has been accessed for firewall auditing and duplicate pairs have been identified. Henceforth, no selector heuristic, no feature, no threshold, and no metric may use DEV-B."
+  },
+  "clean_replacement_pipeline": {
+    "clean_train_path": "evaluation/renal/v5/renal-rerank-train-v5-clean-v1.json",
+    "clean_train_core_path": "evaluation/renal/v5/renal-rerank-train-core-v5-clean-v1.json",
+    "clean_train_val_path": "evaluation/renal/v5/renal-rerank-train-val-v5-clean-v1.json"
+  }
+}
