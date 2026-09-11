@@ -1,0 +1,89 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V7_AUDIT_AND_REUSE_INVENTORY",
+  "timestamp_utc": "2026-09-11T07:22:30.000000+00:00",
+  "mission": "RENAL_V7_PRODUCT_GRADE_RETRIEVAL_RECOVERY",
+  "modules_audited": {
+    "src/medicalplab/learn/renal_retrieval.py": {
+      "capabilities_implemented": [
+        "QwenRenalRetrieverV3 (production runtime default)",
+        "Cosine similarity over dense 1024-dim embeddings",
+        "Document-level prior (alpha_doc_prior = 0.18)",
+        "Qwen3-Reranker-0.6B cross-encoder prediction"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "Structured passage formatting (Title, Section Path, Heading) - V3 passes raw chunk text only",
+        "Deep candidate pool - V3 truncates candidates at top_k=20 prior to cross-encoding",
+        "Medical evidence instruction for cross-encoder - V3 uses default inference with no explicit instruction",
+        "Multi-channel candidate fusion - V3 is single-channel dense only"
+      ],
+      "v7_reuse_plan": "Reuse Qwen3 dense embedding loading and Qwen3 cross-encoder, but upgrade candidate pool depth to 50-100, format structured passage inputs, and add explicit medical evidence instruction."
+    },
+    "src/medicalplab/learn/renal_bm25.py": {
+      "capabilities_implemented": [
+        "RenalBM25Index (self-contained in-memory Okapi BM25 index)",
+        "Lucene/Robertson smoothed IDF precomputation",
+        "Alphanumeric tokenization with apostrophe preservation",
+        "Fail-closed zero-score suppression"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "The entire module is 100% unused by V3 runtime"
+      ],
+      "v7_reuse_plan": "Directly integrate RenalBM25Index as Channel B in the multi-channel candidate union."
+    },
+    "src/medicalplab/learn/renal_normalization.py": {
+      "capabilities_implemented": [
+        "normalize_renal_query() with RenalNormalizationTrace",
+        "ACRONYM_EXPANSIONS (17 nephrology acronyms with strict word boundaries)",
+        "SPELLING_UNIFICATIONS (British vs American spelling normalization)"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "The entire module is 100% unused by V3 runtime (V3 passes raw queries)"
+      ],
+      "v7_reuse_plan": "Incorporate as the core normalization foundation of RenalQueryCanonicalizer."
+    },
+    "src/medicalplab/stage_r/qwen3_dense_retriever.py": {
+      "capabilities_implemented": [
+        "format_passage() rendering Heading, Section, and Content",
+        "format_query() with configurable retrieval task instruction",
+        "SentenceTransformer lazy-loading with strict mode fail-closed checks"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "format_passage() structural formatting",
+        "Configurable query task instructions"
+      ],
+      "v7_reuse_plan": "Reuse format_passage() pattern for structured reranker and retriever input generation."
+    },
+    "src/medicalplab/stage_r/hybrid_retriever.py": {
+      "capabilities_implemented": [
+        "SparseBM25Retriever implementation",
+        "DenseRetrieverInterface abstract protocol",
+        "EvidenceBlock and RetrievalQuery data models"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "SparseBM25Retriever and hybrid combination interfaces"
+      ],
+      "v7_reuse_plan": "Reuse data structures and scoring interfaces for candidate fusion."
+    },
+    "src/medicalplab/stage_r/query_expansion.py": {
+      "capabilities_implemented": [
+        "CONTROLLED_SYNONYMS dictionary covering renal and systemic clinical concepts",
+        "Controlled query term expansion without generative hallucination"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "The entire query expansion pipeline"
+      ],
+      "v7_reuse_plan": "Integrate controlled synonyms into RenalQueryCanonicalizer for bounded lexical recall expansion."
+    },
+    "src/medicalplab/stage_r/query_analyzer.py": {
+      "capabilities_implemented": [
+        "KNOWN_MEDICAL_ENTITIES clinical term recognition",
+        "INTENT_RULES deterministic intent classifier (DOSAGE, TREATMENT, SYMPTOM, etc.)"
+      ],
+      "exact_code_paths_unused_by_v3": [
+        "Entity extraction and clinical intent classification"
+      ],
+      "v7_reuse_plan": "Reuse entity extraction in query canonicalizer to preserve critical clinical entities during normalization."
+    }
+  },
+  "reuse_summary": "7 existing modules contain production-ready BM25, normalization, expansion, intent extraction, and structured formatting that were dormant in V3. V7 will unify them into a cohesive pipeline without redundant reimplementation."
+}

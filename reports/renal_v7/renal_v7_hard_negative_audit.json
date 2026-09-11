@@ -1,0 +1,2295 @@
+{
+  "dataset": "renal-train-dev-v7.json",
+  "sample_size": 80,
+  "metrics": {
+    "passage_hit_at_1": {
+      "count": 59,
+      "percent": 73.75
+    },
+    "passage_hit_at_5": {
+      "count": 72,
+      "percent": 90.0
+    },
+    "document_hit_at_1": {
+      "count": 75,
+      "percent": 93.75
+    },
+    "document_hit_at_5": {
+      "count": 80,
+      "percent": 100.0
+    },
+    "section_hit_at_1": {
+      "count": 63,
+      "percent": 78.75
+    },
+    "section_hit_at_5": {
+      "count": 75,
+      "percent": 93.75
+    }
+  },
+  "distractor_breakdown": {
+    "intra_document_sibling": {
+      "count": 16,
+      "percent": 76.19
+    },
+    "sibling_clinical_condition": {
+      "count": 4,
+      "percent": 19.05
+    },
+    "lexical_overlap": {
+      "count": 1,
+      "percent": 4.76
+    }
+  },
+  "hard_negatives_mined": [
+    {
+      "query": "How does an intact glomerular filtration barrier selectively handle inulin compared to serum albumin?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0002-B-C0044"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0002-B-C0023",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Permselectivity as functional measure of a working GOAC",
+      "distractor_score": 7.5
+    },
+    {
+      "query": "Which chemical agent and model insults are utilized to evaluate glomerular filtration barrier injury in glomerulus-on-a-chip systems?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0002-B-C0045"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0002-B-C0090",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "PAN injury",
+      "distractor_score": 6.75
+    },
+    {
+      "query": "Which electrogenic sodium bicarbonate cotransporter variant mediates basolateral bicarbonate absorption in the renal proximal tubule?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0004-B-C0006"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0004-B-C0002",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "1. Introduction",
+      "distractor_score": 6.9375
+    },
+    {
+      "query": "What metabolic acid-base disorder develops from genetic inactivating mutations in the proximal tubular cotransporter NBCe1?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0004-B-C0008"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0004-B-C0006",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "2. Roles of PT Transport in Acid/Base Balance",
+      "distractor_score": 7.375
+    },
+    {
+      "query": "How does low urinary potassium excretion relate to the clinical progression of chronic kidney disease?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0003-B-C0001"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0003-B-C0003",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Introduction",
+      "distractor_score": 8.5625
+    },
+    {
+      "query": "What histopathological features of hypokalemic nephropathy develop in young animals subjected to dietary potassium depletion?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0003-B-C0013"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0003-B-C0012",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Hypokalemic nephropathy",
+      "distractor_score": 8.375
+    },
+    {
+      "query": "Which clinical conditions and acid-base disturbances cause acute hyperkalemia via transcellular potassium shifting?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0009-B-C0013"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0009-B-C0014",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Hyperkalemia from transcellular potassium shifts",
+      "distractor_score": 8.125
+    },
+    {
+      "query": "What extrarenal ocular and systemic manifestations accompany proximal renal tubular acidosis in patients with inactivating NBCe1 mutations?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0004-B-C0021"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0004-B-C0002",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "1. Introduction",
+      "distractor_score": 8.0625
+    },
+    {
+      "query": "Which two organ systems cooperate to regulate systemic pH, and what is the renal contribution to bicarbonate buffering?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0005-B-C0001"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0021-B-C0003",
+      "distractor_category": "SIBLING_CLINICAL_CONDITION",
+      "distractor_heading": "Introduction",
+      "distractor_score": 6.25
+    },
+    {
+      "query": "How does the proximal convoluted tubule divide transport duties with distal nephron segments regarding filtered water, ions, and hormonal regulation?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0005-B-C0007"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0005-B-C0023",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Proximal convoluted tubule",
+      "distractor_score": 7.0625
+    },
+    {
+      "query": "Why is early clinical detection and prompt intervention critical in the management of acute kidney injury (AKI) across hospital settings?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0006-B-C0001"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0006-B-C0136",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Commentary",
+      "distractor_score": 6.5
+    },
+    {
+      "query": "What diagnostic limitation arises when using estimated rather than true baseline serum creatinine to diagnose acute kidney injury?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0006-B-C0032"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0006-B-C0035",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Table 4",
+      "distractor_score": 7.9375
+    },
+    {
+      "query": "What three clinical components constitute the KDIGO CGA classification system for staging chronic kidney disease?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0007-B-C0035"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0007-B-C0037",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "1-3 CKD progression evaluation",
+      "distractor_score": 4.5625
+    },
+    {
+      "query": "How does exposure to nephrotoxic membranous nephropathy sera affect glomerular endothelial cells and endothelial surface glycocalyx markers?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0002-B-C0036"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0018-B-C0031",
+      "distractor_category": "SIBLING_CLINICAL_CONDITION",
+      "distractor_heading": "5. Glomerular Endothelial Cell",
+      "distractor_score": 6.8125
+    },
+    {
+      "query": "How does the inclusion of urine output criteria alongside serum creatinine improve prognostic predictions in critically ill AKI patients?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0006-B-C0047"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0006-B-C0048",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Commentary",
+      "distractor_score": 7.6875
+    },
+    {
+      "query": "What evidence supports combining oliguria criteria with serum creatinine measurements when diagnosing acute kidney injury in intensive care units?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0006-B-C0049"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0016-B-C0002",
+      "distractor_category": "LEXICAL_OVERLAP_DISTRACTOR",
+      "distractor_heading": "Introduction",
+      "distractor_score": 6.5
+    },
+    {
+      "query": "What sensor role do basolateral Kir4.1 potassium channels play in distal convoluted tubule cells during potassium depletion?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0009-B-C0019"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0003-B-C0007",
+      "distractor_category": "SIBLING_CLINICAL_CONDITION",
+      "distractor_heading": "New insights from tubulopathies",
+      "distractor_score": 7.625
+    },
+    {
+      "query": "Why is strict blood pressure control recommended in non-CKD hypertensive patients to prevent incident chronic kidney disease?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0007-B-C0053"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0007-B-C0052",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)",
+      "distractor_score": 6.9375
+    },
+    {
+      "query": "Mutations in which type IV collagen alpha-chain genes (COL4A3, COL4A4, COL4A5) cause Alport syndrome and disruption of the glomerular basement membrane?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0002-B-C0042"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0018-B-C0009",
+      "distractor_category": "SIBLING_CLINICAL_CONDITION",
+      "distractor_heading": "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus",
+      "distractor_score": 6.5
+    },
+    {
+      "query": "Which pharmacological class is recommended as medical expulsive therapy (MET) for distal ureteric calculi?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0012-B-C0021"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0012-B-C0012",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "3.1. Medical Treatment",
+      "distractor_score": 9.375
+    },
+    {
+      "query": "Which preoperative and intraoperative factors, such as MELD score and blood transfusions, increase the risk of AKI following liver surgery?",
+      "gold_chunks": [
+        "DOC-PMC-RENAL-0006-B-C0073"
+      ],
+      "distractor_chunk": "DOC-PMC-RENAL-0006-B-C0072",
+      "distractor_category": "INTRA_DOCUMENT_SIBLING",
+      "distractor_heading": "Liver transplantation",
+      "distractor_score": 8.375
+    }
+  ],
+  "per_query_audit": [
+    {
+      "query_idx": 0,
+      "query": "What is the primary early pathological hallmark of chronic kidney disease (CKD) affecting the glomeruli?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0004"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0004",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 1,
+      "query": "What cellular sources are utilized to obtain human podocytes for in vitro kidney research models?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0009"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0009",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Characterization of human podocytes and hGEC",
+      "top1_heading": "Characterization of human podocytes and hGEC",
+      "distractors": []
+    },
+    {
+      "query_idx": 2,
+      "query": "Which specific endothelial surface markers and receptors characterize the fenestrated human glomerular endothelial cells (hGEC)?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0012"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0012",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Characterization of human podocytes and hGEC",
+      "top1_heading": "Characterization of human podocytes and hGEC",
+      "distractors": []
+    },
+    {
+      "query_idx": 3,
+      "query": "How does an intact glomerular filtration barrier selectively handle inulin compared to serum albumin?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0044"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        8
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0023",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Permselectivity as functional measure of a working GOAC",
+      "top1_heading": "Permselectivity as functional measure of a working GOAC",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0002-B-C0023",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section": "Results > Permselectivity as functional measure of a working GOAC",
+          "heading": "Permselectivity as functional measure of a working GOAC",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 7.5,
+          "channel_ranks": {
+            "dense": 1,
+            "bm25": 1
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 4,
+      "query": "Which chemical agent and model insults are utilized to evaluate glomerular filtration barrier injury in glomerulus-on-a-chip systems?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0045"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        3
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0090",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Methods > PAN injury",
+      "top1_heading": "PAN injury",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0002-B-C0090",
+          "document_id": "DOC-PMC-RENAL-0002",
+          "section": "Methods > PAN injury",
+          "heading": "PAN injury",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 6.75,
+          "channel_ranks": {
+            "dense": 34,
+            "bm25": 1
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 5,
+      "query": "Which electrogenic sodium bicarbonate cotransporter variant mediates basolateral bicarbonate absorption in the renal proximal tubule?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0006"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        9
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "1. Introduction",
+      "top1_heading": "1. Introduction",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section": "1. Introduction",
+          "heading": "1. Introduction",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 6.9375,
+          "channel_ranks": {
+            "dense": 1,
+            "bm25": 1
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 6,
+      "query": "What metabolic acid-base disorder develops from genetic inactivating mutations in the proximal tubular cotransporter NBCe1?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0008"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        4
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0006",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "2. Roles of PT Transport in Acid/Base Balance",
+      "top1_heading": "2. Roles of PT Transport in Acid/Base Balance",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0004-B-C0006",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section": "2. Roles of PT Transport in Acid/Base Balance",
+          "heading": "2. Roles of PT Transport in Acid/Base Balance",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 7.375,
+          "channel_ranks": {
+            "dense": 3,
+            "bm25": 2,
+            "structural": 19
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 7,
+      "query": "Through what renal tubular mechanism does chronic hyperinsulinemia contribute to the pathogenesis of hypertension in metabolic syndrome?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0010"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0010",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "top1_heading": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "distractors": []
+    },
+    {
+      "query_idx": 8,
+      "query": "What is the functional difference between IRS1 and IRS2 in mediating tissue-specific insulin signaling and resistance states?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0012"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0012",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "top1_heading": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "distractors": []
+    },
+    {
+      "query_idx": 9,
+      "query": "How does impaired IRS1-dependent insulin signaling in glomerular podocytes and endothelial cells promote diabetic nephropathy?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0014"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0014",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "top1_heading": "3. Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome",
+      "distractors": []
+    },
+    {
+      "query_idx": 10,
+      "query": "How does low urinary potassium excretion relate to the clinical progression of chronic kidney disease?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0001"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_ranks": [
+        6
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0003",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0003-B-C0003",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section": "Introduction",
+          "heading": "Introduction",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 8.5625,
+          "channel_ranks": {
+            "dense": 2,
+            "bm25": 1
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 11,
+      "query": "What cardiovascular and systemic risks are associated with habitually low dietary potassium intake in population studies?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0003"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0003",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 12,
+      "query": "What histopathological features of hypokalemic nephropathy develop in young animals subjected to dietary potassium depletion?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0013"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_ranks": [
+        6
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "Hypokalemic nephropathy",
+      "top1_heading": "Hypokalemic nephropathy",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0003-B-C0012",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section": "Hypokalemic nephropathy",
+          "heading": "Hypokalemic nephropathy",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 8.375,
+          "channel_ranks": {
+            "dense": 3,
+            "bm25": 6,
+            "structural": 54
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 13,
+      "query": "How does female sex and estrogen influence distal tubular potassium handling and NCC activity?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0022"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0022",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "Sex differences",
+      "top1_heading": "Sex differences",
+      "distractors": []
+    },
+    {
+      "query_idx": 14,
+      "query": "What mathematical relationship characterizes the association between urinary potassium excretion and blood pressure in hypertensive populations?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0024"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0003"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0024",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "Perspectives for potassium",
+      "top1_heading": "Perspectives for potassium",
+      "distractors": []
+    },
+    {
+      "query_idx": 15,
+      "query": "How does tumor necrosis factor alpha (TNF-alpha) induce endothelial dysfunction and impair vascular relaxation?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0006"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0006",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "2. Inflammation and Cardiovascular Disease > 2.1. Markers of Inflammation",
+      "top1_heading": "2.1. Markers of Inflammation",
+      "distractors": []
+    },
+    {
+      "query_idx": 16,
+      "query": "What role does C-reactive protein (CRP) play as an acute-phase reactant and cardiovascular risk predictor in renal patients?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0008"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0008",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "2. Inflammation and Cardiovascular Disease > 2.1. Markers of Inflammation",
+      "top1_heading": "2.1. Markers of Inflammation",
+      "distractors": []
+    },
+    {
+      "query_idx": 17,
+      "query": "What vascular adhesion molecules are upregulated by endothelial inflammation to recruit circulating monocytes?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0010"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0010",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "2. Inflammation and Cardiovascular Disease > 2.2. Intercellular Adhesion Molecules",
+      "top1_heading": "2.2. Intercellular Adhesion Molecules",
+      "distractors": []
+    },
+    {
+      "query_idx": 18,
+      "query": "How does angiotensin II-induced oxidative stress cause endothelial dysfunction in the kidney?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0012"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0012",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "3. RAAS and Vascular Inflammation",
+      "top1_heading": "3. RAAS and Vascular Inflammation",
+      "distractors": []
+    },
+    {
+      "query_idx": 19,
+      "query": "Which mineralocorticoid receptor antagonists (MRAs) are utilized to block adverse aldosterone effects on endothelial and cardiac tissue?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0021"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0021",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "4. RAAS Blockers and Vascular Inflammation > 4.6. Mineralocorticoid Receptor Antagonists (MRA)",
+      "top1_heading": "4.6. Mineralocorticoid Receptor Antagonists (MRA)",
+      "distractors": []
+    },
+    {
+      "query_idx": 20,
+      "query": "Why is rapid cellular uptake and kaliuresis essential to prevent lethal hyperkalemia following an acute dietary potassium load?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0004"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0004",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Principles of potassium homoeostasis: a battle waged on two fronts > The three-pronged response to an acute potassium load",
+      "top1_heading": "The three-pronged response to an acute potassium load",
+      "distractors": []
+    },
+    {
+      "query_idx": 21,
+      "query": "What experimental evidence demonstrates that aldosterone-independent pathways can maintain potassium balance under physiological dietary intake?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0009"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0009",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Principles of potassium homoeostasis: a battle waged on two fronts > Chronic potassium homoeostasis: not just aldosterone",
+      "top1_heading": "Chronic potassium homoeostasis: not just aldosterone",
+      "distractors": []
+    },
+    {
+      "query_idx": 22,
+      "query": "What diurnal variation characterizes the circadian rhythm of renal potassium excretion in healthy humans?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0011"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0011",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Principles of potassium homoeostasis: a battle waged on two fronts > It\u2019s complicated!",
+      "top1_heading": "It\u2019s complicated!",
+      "distractors": []
+    },
+    {
+      "query_idx": 23,
+      "query": "Which clinical conditions and acid-base disturbances cause acute hyperkalemia via transcellular potassium shifting?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0013"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0014",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Hyperkalemia from transcellular potassium shifts",
+      "top1_heading": "Hyperkalemia from transcellular potassium shifts",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0009-B-C0014",
+          "document_id": "DOC-PMC-RENAL-0009",
+          "section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Hyperkalemia from transcellular potassium shifts",
+          "heading": "Hyperkalemia from transcellular potassium shifts",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 8.125,
+          "channel_ranks": {
+            "dense": 20,
+            "bm25": 3,
+            "structural": 28
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 24,
+      "query": "Why is persistent hyperkalemia rarely observed in clinical practice when both renal function and the adrenal-aldosterone axis are normal?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0015"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0015",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Hyperkalemia from defective potassium excretion in the distal nephron",
+      "top1_heading": "Hyperkalemia from defective potassium excretion in the distal nephron",
+      "distractors": []
+    },
+    {
+      "query_idx": 25,
+      "query": "What extrarenal ocular and systemic manifestations accompany proximal renal tubular acidosis in patients with inactivating NBCe1 mutations?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0021"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        3
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "1. Introduction",
+      "top1_heading": "1. Introduction",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+          "document_id": "DOC-PMC-RENAL-0004",
+          "section": "1. Introduction",
+          "heading": "1. Introduction",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 8.0625,
+          "channel_ranks": {
+            "dense": 4,
+            "bm25": 1
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 26,
+      "query": "Which two organ systems cooperate to regulate systemic pH, and what is the renal contribution to bicarbonate buffering?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0001"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_ranks": [
+        6
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": false,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0003",
+      "top1_doc_id": "DOC-PMC-RENAL-0021",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0021-B-C0003",
+          "document_id": "DOC-PMC-RENAL-0021",
+          "section": "Introduction",
+          "heading": "Introduction",
+          "category": "SIBLING_CLINICAL_CONDITION",
+          "rerank_score": 6.25,
+          "channel_ranks": {
+            "dense": 2,
+            "bm25": 3
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 27,
+      "query": "How does the proximal convoluted tubule divide transport duties with distal nephron segments regarding filtered water, ions, and hormonal regulation?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0007"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_doc_id": "DOC-PMC-RENAL-0005",
+      "top1_section": "Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Proximal convoluted tubule",
+      "top1_heading": "Proximal convoluted tubule",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+          "document_id": "DOC-PMC-RENAL-0005",
+          "section": "Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Proximal convoluted tubule",
+          "heading": "Proximal convoluted tubule",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 7.0625,
+          "channel_ranks": {
+            "dense": 4,
+            "bm25": 3,
+            "structural": 4
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 28,
+      "query": "How are human pluripotent stem cell-derived tubular organoids utilized to model renal diseases and drug toxicity in vitro?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0009"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0009",
+      "top1_doc_id": "DOC-PMC-RENAL-0005",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 29,
+      "query": "Which accessory urinary buffers, notably phosphate and ammonium, play vital roles in renal net acid excretion and systemic acid-base balance?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0011"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0011",
+      "top1_doc_id": "DOC-PMC-RENAL-0005",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 30,
+      "query": "Why is early clinical detection and prompt intervention critical in the management of acute kidney injury (AKI) across hospital settings?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0001"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0136",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0006-B-C0136",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section": "Commentary",
+          "heading": "Commentary",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 6.5,
+          "channel_ranks": {
+            "dense": 3,
+            "bm25": 21
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 31,
+      "query": "How does the time window for a 1.5-fold increase in serum creatinine differ between the KDIGO and AKIN definitions of acute kidney injury?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0021"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0021",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": []
+    },
+    {
+      "query_idx": 32,
+      "query": "How do diagnostic rates and mortality risk stratification compare when applying RIFLE, AKIN, and KDIGO criteria in intensive care unit (ICU) populations?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0029"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0029",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": []
+    },
+    {
+      "query_idx": 33,
+      "query": "What diagnostic limitation arises when using estimated rather than true baseline serum creatinine to diagnose acute kidney injury?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0032"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        6
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0035",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Table 4",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0006-B-C0035",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section": "Commentary",
+          "heading": "Table 4",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 7.9375,
+          "channel_ranks": {
+            "dense": 4,
+            "bm25": 2
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 34,
+      "query": "Why does assuming a baseline eGFR of 75 mL/min/1.73 m2 to back-calculate serum creatinine cause false-positive AKI diagnoses?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0044"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0044",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": []
+    },
+    {
+      "query_idx": 35,
+      "query": "Which pharmacological classes and lifestyle interventions are recommended to reduce proteinuria and confer renoprotection in chronic kidney disease?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0033"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0033",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 1. CKD diagnosis and its clinical significance > 1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria",
+      "top1_heading": "1-2-2 CKD severity evaluation method: evaluation of proteinuria and albuminuria",
+      "distractors": []
+    },
+    {
+      "query_idx": 36,
+      "query": "What three clinical components constitute the KDIGO CGA classification system for staging chronic kidney disease?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0035"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0037",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 1. CKD diagnosis and its clinical significance > 1-3 CKD progression evaluation",
+      "top1_heading": "1-3 CKD progression evaluation",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0007-B-C0037",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section": "Summary of CQs and statements > Chapter 1. CKD diagnosis and its clinical significance > 1-3 CKD progression evaluation",
+          "heading": "1-3 CKD progression evaluation",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 4.5625,
+          "channel_ranks": {
+            "dense": 2,
+            "bm25": 6
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 37,
+      "query": "What degree of eGFR decline after initiating RAAS inhibitors or SGLT2 inhibitors warrants referral to a nephrologist?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0040"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0040",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 1. CKD diagnosis and its clinical significance > 1-3 CKD progression evaluation",
+      "top1_heading": "1-3 CKD progression evaluation",
+      "distractors": []
+    },
+    {
+      "query_idx": 38,
+      "query": "What renal histopathological entity and clinical syndrome develops secondary to longstanding benign essential hypertension?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0073"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0073",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 3. Hypertensive nephrosclerosis/renal artery stenosis > 3-2 Hypertensive nephrosclerosis diagnosis and treatment",
+      "top1_heading": "3-2 Hypertensive nephrosclerosis diagnosis and treatment",
+      "distractors": []
+    },
+    {
+      "query_idx": 39,
+      "query": "What is the recommended lower limit for target hemoglobin when initiating erythropoiesis-stimulating agent (ESA) therapy for renal anemia in CKD?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0135"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0135",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 9. Renal anemia > 9-1 [CQ] What is the appropriate target hemoglobin (Hb) level for erythropoiesis stimulating agent (ESA) therapy in CKD patients with renal anemia?",
+      "top1_heading": "9-1 [CQ] What is the appropriate target hemoglobin (Hb) level for erythropoiesis stimulating agent (ESA) therapy in CKD patients with renal anemia?",
+      "distractors": []
+    },
+    {
+      "query_idx": 40,
+      "query": "What pathophysiological mechanism initiates membranous nephropathy (MN) leading to nephrotic syndrome in adults?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0027"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Sera from individuals with MN shows albumin leakage in the GOAC",
+      "top1_heading": "Sera from individuals with MN shows albumin leakage in the GOAC",
+      "distractors": []
+    },
+    {
+      "query_idx": 41,
+      "query": "Which immunoglobulin G subclass predominantly characterizes the subepithelial immune deposits in primary membranous nephropathy?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0029"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0029",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Sera from individuals with MN shows albumin leakage in the GOAC",
+      "top1_heading": "Sera from individuals with MN shows albumin leakage in the GOAC",
+      "distractors": []
+    },
+    {
+      "query_idx": 42,
+      "query": "Which podocyte membrane protein represents the predominant target autoantigen in adult primary membranous nephropathy?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0034"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0034",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Modeling mechanism of MN injury in podocyte in the GOAC",
+      "top1_heading": "Modeling mechanism of MN injury in podocyte in the GOAC",
+      "distractors": []
+    },
+    {
+      "query_idx": 43,
+      "query": "How does exposure to nephrotoxic membranous nephropathy sera affect glomerular endothelial cells and endothelial surface glycocalyx markers?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0036"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": false,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0031",
+      "top1_doc_id": "DOC-PMC-RENAL-0018",
+      "top1_section": "5. Glomerular Endothelial Cell",
+      "top1_heading": "5. Glomerular Endothelial Cell",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0018-B-C0031",
+          "document_id": "DOC-PMC-RENAL-0018",
+          "section": "5. Glomerular Endothelial Cell",
+          "heading": "5. Glomerular Endothelial Cell",
+          "category": "SIBLING_CLINICAL_CONDITION",
+          "rerank_score": 6.8125,
+          "channel_ranks": {
+            "dense": 4,
+            "bm25": 2,
+            "structural": 22
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 44,
+      "query": "What clinical antiproteinuric effect does alpha-MSH confer when evaluating glomerular injury in membranous nephropathy models?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0046"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0046",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Discussion",
+      "top1_heading": "Discussion",
+      "distractors": []
+    },
+    {
+      "query_idx": 45,
+      "query": "How does repeated antimicrobial exposure contribute to the pathogenesis of recurrent urinary tract infections (rUTIs) via microbiome dysbiosis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0009"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0009",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Microbiota, Dysbiosis, and Distal Reservoirs",
+      "top1_heading": "Microbiota, Dysbiosis, and Distal Reservoirs",
+      "distractors": []
+    },
+    {
+      "query_idx": 46,
+      "query": "Which bacterial virulence factors and persistence strategies, such as biofilm formation and fimbrial adhesins, facilitate recurrent catheter-associated UTIs?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0011"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0011",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Bacterial Virulence and Bladder Reservoirs",
+      "top1_heading": "Bacterial Virulence and Bladder Reservoirs",
+      "distractors": []
+    },
+    {
+      "query_idx": 47,
+      "query": "How do uropathogenic Escherichia coli (UPEC) form intracellular bacterial communities (IBCs) inside bladder umbrella cells to evade host immune clearance?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0013"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0013",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Bacterial Virulence and Bladder Reservoirs",
+      "top1_heading": "Bacterial Virulence and Bladder Reservoirs",
+      "distractors": []
+    },
+    {
+      "query_idx": 48,
+      "query": "Which uropathogens other than UPEC, including Klebsiella pneumoniae and Enterococcus faecalis, demonstrate intracellular persistence in human urothelial cells?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0015"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0015",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Bacterial Virulence and Bladder Reservoirs",
+      "top1_heading": "Bacterial Virulence and Bladder Reservoirs",
+      "distractors": []
+    },
+    {
+      "query_idx": 49,
+      "query": "How does horizontal gene transfer promote the dissemination of multidrug-resistant traits among recurrent uropathogens?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0017"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0017",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Bacterial Resistance and Resilience",
+      "top1_heading": "Bacterial Resistance and Resilience",
+      "distractors": []
+    },
+    {
+      "query_idx": 50,
+      "query": "How does the European Association of Urology (EAU) apply GRADE methodology to categorize guideline recommendations for urolithiasis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0005"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0005",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "1. Introduction",
+      "top1_heading": "1. Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 51,
+      "query": "Which clinical presentations and red-flag features, such as pyrexia or a solitary kidney, mandate urgent expedited evaluation for suspected urolithiasis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0007"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0007",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "2. Initial Assessment > 2.1. Presentation and Evaluation",
+      "top1_heading": "2.1. Presentation and Evaluation",
+      "distractors": []
+    },
+    {
+      "query_idx": 52,
+      "query": "Do clinical guidelines recommend routine pre-procedural ureteral stenting prior to uncomplicated ureteroscopy (URS)?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0015"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0015",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "3. Available Treatment Options and Their Specific Considerations > 3.4. Ureteroscopy (URS)",
+      "top1_heading": "3.4. Ureteroscopy (URS)",
+      "distractors": []
+    },
+    {
+      "query_idx": 53,
+      "query": "In what clinical circumstances do urology guidelines recommend open or laparoscopic surgery over endourological techniques for nephrolithiasis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0017"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0017",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "3. Available Treatment Options and Their Specific Considerations > 3.6. Open Surgery and Laparoscopy",
+      "top1_heading": "3.6. Open Surgery and Laparoscopy",
+      "distractors": []
+    },
+    {
+      "query_idx": 54,
+      "query": "What is the recommended emergency management for an infected obstructed ureter with sepsis secondary to urolithiasis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0019"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0019",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "4. Management > 4.2. Obstruction, Sepsis, Anuria",
+      "top1_heading": "4.2. Obstruction, Sepsis, Anuria",
+      "distractors": []
+    },
+    {
+      "query_idx": 55,
+      "query": "How does the inclusion of urine output criteria alongside serum creatinine improve prognostic predictions in critically ill AKI patients?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0047"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        5
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0048",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0006-B-C0048",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section": "Commentary",
+          "heading": "Commentary",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 7.6875,
+          "channel_ranks": {
+            "dense": 3,
+            "bm25": 3
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 56,
+      "query": "What evidence supports combining oliguria criteria with serum creatinine measurements when diagnosing acute kidney injury in intensive care units?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0049"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": false,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0016-B-C0002",
+      "top1_doc_id": "DOC-PMC-RENAL-0016",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0016-B-C0002",
+          "document_id": "DOC-PMC-RENAL-0016",
+          "section": "Introduction",
+          "heading": "Introduction",
+          "category": "LEXICAL_OVERLAP_DISTRACTOR",
+          "rerank_score": 6.5,
+          "channel_ranks": {
+            "dense": 37,
+            "bm25": 2
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 57,
+      "query": "Does concurrent administration of loop diuretics invalidate the diagnostic utility of urine output criteria for staging acute kidney injury?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0051"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0051",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary",
+      "top1_heading": "Commentary",
+      "distractors": []
+    },
+    {
+      "query_idx": 58,
+      "query": "What hemodynamic and hematological factors during cardiopulmonary bypass (CPB) reduce renal perfusion and increase the risk of postoperative AKI?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0067"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0067",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Duration of cardiopulmonary bypass",
+      "top1_heading": "Duration of cardiopulmonary bypass",
+      "distractors": []
+    },
+    {
+      "query_idx": 59,
+      "query": "How does pre-existing renal dysfunction (eGFR < 60 mL/min/1.73 m2) influence the risk and odds ratio of developing acute kidney injury during sepsis?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0103"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0103",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Pre-existing renal dysfunction",
+      "top1_heading": "Pre-existing renal dysfunction",
+      "distractors": []
+    },
+    {
+      "query_idx": 60,
+      "query": "What physiological marker molecule is freely filtered across the glomerular filtration barrier to evaluate small molecule permselectivity in glomerulus-on-a-chip models?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0023"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0023",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Permselectivity as functional measure of a working GOAC",
+      "top1_heading": "Permselectivity as functional measure of a working GOAC",
+      "distractors": []
+    },
+    {
+      "query_idx": 61,
+      "query": "Why do static transwell podocyte-endothelial co-cultures fail to establish an effective semi-permeable barrier compared to dynamic microfluidic chips?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0024"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0024",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Permselectivity as functional measure of a working GOAC",
+      "top1_heading": "Permselectivity as functional measure of a working GOAC",
+      "distractors": []
+    },
+    {
+      "query_idx": 62,
+      "query": "What describes the biphasic concentration-dependent regulatory effect of angiotensin II on proximal tubule sodium and bicarbonate transport?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0016"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0016",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "4. Effects of Ang II on PT Transport",
+      "top1_heading": "4. Effects of Ang II on PT Transport",
+      "distractors": []
+    },
+    {
+      "query_idx": 63,
+      "query": "Which intracellular signaling cascade mediates the high-dose inhibitory effect of angiotensin II on proximal tubule transport?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0018"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0004"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0018",
+      "top1_doc_id": "DOC-PMC-RENAL-0004",
+      "top1_section": "4. Effects of Ang II on PT Transport",
+      "top1_heading": "4. Effects of Ang II on PT Transport",
+      "distractors": []
+    },
+    {
+      "query_idx": 64,
+      "query": "What physiological mechanism maintains hypertonic medullary solute gradients against continuous washout by blood and tubular fluid?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0006"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0023"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0006",
+      "top1_doc_id": "DOC-PMC-RENAL-0023",
+      "top1_section": "Introduction",
+      "top1_heading": "Introduction",
+      "distractors": []
+    },
+    {
+      "query_idx": 65,
+      "query": "How do aldosterone synthase inhibitors (ASIs) reduce aldosterone-mediated organ damage?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0023"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0001"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0023",
+      "top1_doc_id": "DOC-PMC-RENAL-0001",
+      "top1_section": "4. RAAS Blockers and Vascular Inflammation > 4.7. Aldosterone Synthase Inhibitors",
+      "top1_heading": "4.7. Aldosterone Synthase Inhibitors",
+      "distractors": []
+    },
+    {
+      "query_idx": 66,
+      "query": "How does electrogenic sodium reabsorption through ENaC create the electrochemical driving force for potassium secretion via ROMK channels?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0017"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0017",
+      "top1_doc_id": "DOC-PMC-RENAL-0009",
+      "top1_section": "PATHOPHYSIOLOGY OF HYPERKALEMIA > Hyperkalemia from defective potassium excretion in the distal nephron > ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+      "top1_heading": "ROMK channels and the coupling of sodium and potassium transport in the distal nephron",
+      "distractors": []
+    },
+    {
+      "query_idx": 67,
+      "query": "What sensor role do basolateral Kir4.1 potassium channels play in distal convoluted tubule cells during potassium depletion?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0009-B-C0019"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0009"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": false,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0007",
+      "top1_doc_id": "DOC-PMC-RENAL-0003",
+      "top1_section": "New insights from tubulopathies",
+      "top1_heading": "New insights from tubulopathies",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0003-B-C0007",
+          "document_id": "DOC-PMC-RENAL-0003",
+          "section": "New insights from tubulopathies",
+          "heading": "New insights from tubulopathies",
+          "category": "SIBLING_CLINICAL_CONDITION",
+          "rerank_score": 7.625,
+          "channel_ranks": {
+            "dense": 1,
+            "bm25": 2
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 68,
+      "query": "How does dietary composition, specifically fruit and vegetable intake versus animal protein, affect systemic base loads and renal acid-base clearance?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0018"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0005"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0018",
+      "top1_doc_id": "DOC-PMC-RENAL-0005",
+      "top1_section": "Survey methodology > Mechanistic topography of acid-base exchange in the kidney",
+      "top1_heading": "Mechanistic topography of acid-base exchange in the kidney",
+      "distractors": []
+    },
+    {
+      "query_idx": 69,
+      "query": "What is the reported incidence of acute kidney injury following cardiac surgery and its associated in-hospital mortality rate?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0055"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0055",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Background",
+      "top1_heading": "Background",
+      "distractors": []
+    },
+    {
+      "query_idx": 70,
+      "query": "How does advanced patient age independently influence the risk of developing acute kidney injury after cardiac surgery?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0065"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0065",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Aging",
+      "top1_heading": "Aging",
+      "distractors": []
+    },
+    {
+      "query_idx": 71,
+      "query": "Why is strict blood pressure control recommended in non-CKD hypertensive patients to prevent incident chronic kidney disease?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0053"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0052",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 2. Hypertension/CVD (heart failure) > 2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)",
+      "top1_heading": "2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0007-B-C0052",
+          "document_id": "DOC-PMC-RENAL-0007",
+          "section": "Summary of CQs and statements > Chapter 2. Hypertension/CVD (heart failure) > 2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)",
+          "heading": "2-1 Blood pressure management to suppress CKD onset in hypertensive patients (Tables 2 and 3)",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 6.9375,
+          "channel_ranks": {
+            "bm25": 4,
+            "structural": 4
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 72,
+      "query": "Is there sufficient clinical trial evidence to recommend ACE inhibitors or ARBs over other antihypertensives in non-proteinuric CKD patients?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0065"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0007"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0065",
+      "top1_doc_id": "DOC-PMC-RENAL-0007",
+      "top1_section": "Summary of CQs and statements > Chapter 2. Hypertension/CVD (heart failure) > 2-3 [CQ] Are angiotensin converting enzyme (ACE) inhibitors/angiotensin II receptor blocker (ARBs) recommended for CKD patients without proteinuria and with hypertension?",
+      "top1_heading": "2-3 [CQ] Are angiotensin converting enzyme (ACE) inhibitors/angiotensin II receptor blocker (ARBs) recommended for CKD patients without proteinuria and with hypertension?",
+      "distractors": []
+    },
+    {
+      "query_idx": 73,
+      "query": "Through what cellular mechanism does adrenocorticotropic hormone (ACTH) and alpha-MSH stabilize podocyte actin stress fibers in nephrotic syndrome?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0039"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0039",
+      "top1_doc_id": "DOC-PMC-RENAL-0002",
+      "top1_section": "Results > Modeling response to therapy in the GOAC exposed to MN sera",
+      "top1_heading": "Modeling response to therapy in the GOAC exposed to MN sera",
+      "distractors": []
+    },
+    {
+      "query_idx": 74,
+      "query": "Mutations in which type IV collagen alpha-chain genes (COL4A3, COL4A4, COL4A5) cause Alport syndrome and disruption of the glomerular basement membrane?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0042"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0002"
+      ],
+      "gold_ranks": [
+        9
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "doc_hit_at_1": false,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0009",
+      "top1_doc_id": "DOC-PMC-RENAL-0018",
+      "top1_section": "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus",
+      "top1_heading": "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0018-B-C0009",
+          "document_id": "DOC-PMC-RENAL-0018",
+          "section": "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus",
+          "heading": "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus",
+          "category": "SIBLING_CLINICAL_CONDITION",
+          "rerank_score": 6.5,
+          "channel_ranks": {
+            "dense": 1,
+            "bm25": 2,
+            "entity_sparse": 15
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 75,
+      "query": "What role does defects in innate and adaptive mucosal immunity play in host susceptibility to recurrent urinary tract infections?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0021"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0011"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0021",
+      "top1_doc_id": "DOC-PMC-RENAL-0011",
+      "top1_section": "The Mechanisms of Recurrent UTI: A Multi-Faceted Problem > Host Factors",
+      "top1_heading": "Host Factors",
+      "distractors": []
+    },
+    {
+      "query_idx": 76,
+      "query": "Which pharmacological class is recommended as medical expulsive therapy (MET) for distal ureteric calculi?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0021"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0012",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "3. Available Treatment Options and Their Specific Considerations > 3.1. Medical Treatment",
+      "top1_heading": "3.1. Medical Treatment",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0012-B-C0012",
+          "document_id": "DOC-PMC-RENAL-0012",
+          "section": "3. Available Treatment Options and Their Specific Considerations > 3.1. Medical Treatment",
+          "heading": "3.1. Medical Treatment",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 9.375,
+          "channel_ranks": {
+            "dense": 1,
+            "bm25": 2
+          }
+        }
+      ]
+    },
+    {
+      "query_idx": 77,
+      "query": "How do ureteroscopy (URS) and shockwave lithotripsy (SWL) compare in terms of stone-free rate versus procedural morbidity?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0012-B-C0027"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0012"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0027",
+      "top1_doc_id": "DOC-PMC-RENAL-0012",
+      "top1_section": "4. Management > 4.3. Ureteric Stones > 4.3.2. Active Treatment",
+      "top1_heading": "4.3.2. Active Treatment",
+      "distractors": []
+    },
+    {
+      "query_idx": 78,
+      "query": "Why does the development of acute kidney injury following major non-cardiac surgery carry significant clinical and prognostic importance?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0071"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        1
+      ],
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0071",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Background",
+      "top1_heading": "Background",
+      "distractors": []
+    },
+    {
+      "query_idx": 79,
+      "query": "Which preoperative and intraoperative factors, such as MELD score and blood transfusions, increase the risk of AKI following liver surgery?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0073"
+      ],
+      "gold_doc_ids": [
+        "DOC-PMC-RENAL-0006"
+      ],
+      "gold_ranks": [
+        2
+      ],
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "doc_hit_at_1": true,
+      "doc_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0072",
+      "top1_doc_id": "DOC-PMC-RENAL-0006",
+      "top1_section": "Commentary > Liver transplantation",
+      "top1_heading": "Liver transplantation",
+      "distractors": [
+        {
+          "chunk_id": "DOC-PMC-RENAL-0006-B-C0072",
+          "document_id": "DOC-PMC-RENAL-0006",
+          "section": "Commentary > Liver transplantation",
+          "heading": "Liver transplantation",
+          "category": "INTRA_DOCUMENT_SIBLING",
+          "rerank_score": 8.375,
+          "channel_ranks": {
+            "dense": 2,
+            "bm25": 2
+          }
+        }
+      ]
+    }
+  ]
+}

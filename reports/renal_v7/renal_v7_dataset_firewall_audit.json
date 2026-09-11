@@ -1,0 +1,18 @@
+{
+  "report_type": "MEDICALPLAB_RENAL_V7_DATASET_FIREWALL_AUDIT",
+  "train_dev_path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v7\\renal-train-dev-v7.json",
+  "train_dev_sha256": "53d1f7ec685e354b863c8d9abae4dfd8001d7491c8df25e655a34d25c7b071e2",
+  "train_dev_n": 80,
+  "train_dev_unique_gold_chunks": 80,
+  "frozen_product_test_path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v7\\renal-product-test-v7.json",
+  "frozen_product_test_sha256": "735705e328e32167de58273055926b6fdaaf66c17ae443f036f67147a668a2fe",
+  "frozen_product_test_n": 100,
+  "frozen_product_test_unique_gold_chunks": 328,
+  "ood_v6_stress_path": "C:\\Users\\Adham Elsayed\\Desktop\\AdhamElsayedAI\\MedicalPlab\\evaluation\\renal\\v7\\renal-ood-stress-v6.json",
+  "ood_v6_stress_sha256": "a0463cd276854abbfaab421aa12e4f8ad15485c685c15d2104e434a956a7b2d2",
+  "ood_v6_stress_n": 40,
+  "chunk_overlap_count": 0,
+  "query_overlap_count": 0,
+  "verbatim_span_verified_pct": 100.0,
+  "firewall_verdict": "PASS_ZERO_LEAKAGE_CONFIRMED"
+}

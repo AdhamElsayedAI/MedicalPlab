@@ -1,0 +1,250 @@
+[
+  {
+    "external_id": "PUBMEDQA-RENAL-001",
+    "query": "Does sodium-glucose cotransporter 2 (SGLT2) inhibition reduce the risk of kidney failure in patients with chronic kidney disease without type 2 diabetes?",
+    "clinical_domain": "Pharmacology & CKD Progression",
+    "pubmed_context_topic": "DAPA-CKD / EMPA-KIDNEY trials on non-diabetic CKD",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0010",
+      "DOC-PMC-RENAL-0003",
+      "DOC-PMC-RENAL-0001"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-002",
+    "query": "Is aggressive blood pressure reduction associated with slowed loss of estimated glomerular filtration rate in autosomal dominant polycystic kidney disease?",
+    "clinical_domain": "Genetic Renal Disease",
+    "pubmed_context_topic": "HALT-PKD blood pressure targets",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-003",
+    "query": "Does oral sodium bicarbonate supplementation slow the progression of renal failure in patients with chronic kidney disease and mild metabolic acidosis?",
+    "clinical_domain": "Tubular Transport & Acid-Base",
+    "pubmed_context_topic": "Alkali therapy in metabolic acidosis of CKD",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0004",
+      "DOC-PMC-RENAL-0005",
+      "DOC-PMC-RENAL-0003"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-004",
+    "query": "Can dietary potassium restriction reduce all-cause mortality and preserve renal function in moderate-to-severe chronic kidney disease?",
+    "clinical_domain": "Electrolyte Disorders",
+    "pubmed_context_topic": "Potassium homeostasis and CKD progression",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0003",
+      "DOC-PMC-RENAL-0009"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-005",
+    "query": "Is renin-angiotensin system blockade safe and effective in advanced stage 4 or 5 chronic kidney disease?",
+    "clinical_domain": "Pharmacology & Nephroprotection",
+    "pubmed_context_topic": "STOP-ACEi trial and hyperkalemia considerations",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0009",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-006",
+    "query": "What is the clinical efficacy of mineralocorticoid receptor antagonists in reducing proteinuria and cardiovascular risk in diabetic nephropathy?",
+    "clinical_domain": "Diabetic Nephropathy & RAAS",
+    "pubmed_context_topic": "Finerenone FIDELIO-DKD mechanism",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-007",
+    "query": "Does intravenous loop diuretic administration increase the risk of worsening renal function in acute decompensated heart failure with cardiorenal syndrome?",
+    "clinical_domain": "Cardiorenal Syndrome",
+    "pubmed_context_topic": "Cardiorenal syndrome type 1 diuresis",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-008",
+    "query": "Can urinary neutrophil gelatinase-associated lipocalin (NGAL) differentiate intrinsic acute tubular necrosis from pre-renal azotemia before serum creatinine rises?",
+    "clinical_domain": "Acute Kidney Injury Biomarkers",
+    "pubmed_context_topic": "Renal injury tubular biomarkers",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0002",
+      "DOC-PMC-RENAL-0011",
+      "DOC-PMC-RENAL-0012"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-009",
+    "query": "Is low molecular weight heparin superior to unfractionated heparin for circuit patency in continuous renal replacement therapy without systemic bleeding?",
+    "clinical_domain": "Dialysis & Extracorporeal Therapy",
+    "pubmed_context_topic": "Anticoagulation in CRRT",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0013",
+      "DOC-PMC-RENAL-0014"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-010",
+    "query": "Does rituximab non-inferiorly induce complete remission compared to oral cyclophosphamide in anti-neutrophil cytoplasmic antibody-associated vasculitis with glomerulonephritis?",
+    "clinical_domain": "Glomerulonephritis & Immunotherapy",
+    "pubmed_context_topic": "RAVE trial ANCA-associated vasculitis",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0002",
+      "DOC-PMC-RENAL-0015"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-011",
+    "query": "What are the electrocardiographic manifestations and threshold serum potassium concentrations warranting emergency intravenous calcium gluconate therapy?",
+    "clinical_domain": "Emergency Electrolytes",
+    "pubmed_context_topic": "Membrane stabilization in hyperkalemia",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0009"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-012",
+    "query": "Does severe hypokalemia promote intracellular sodium and hydrogen accumulation via proximal tubular Na+/H+ exchanger activation?",
+    "clinical_domain": "Tubular Physiology",
+    "pubmed_context_topic": "Metabolic alkalosis generation in potassium deficiency",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0003",
+      "DOC-PMC-RENAL-0004",
+      "DOC-PMC-RENAL-0005"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-013",
+    "query": "How do podocyte slit diaphragm proteins nephrin and podocin maintain glomerular size selectivity against albuminuria?",
+    "clinical_domain": "Glomerular Cell Biology",
+    "pubmed_context_topic": "Podocyte architecture and proteinuria",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0002"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-014",
+    "query": "Which mutations in the NBCe1 sodium-bicarbonate cotransporter cause permanent proximal renal tubular acidosis with band keratopathy and glaucoma?",
+    "clinical_domain": "Inherited Tubular Disorders",
+    "pubmed_context_topic": "SLC4A4 mutation phenotypes",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0004"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-015",
+    "query": "Can sodium polystyrene sulfonate cause colonic mucosal necrosis in patients with hyperkalemia when co-administered with sorbitol?",
+    "clinical_domain": "Pharmacology & Gastrointestinal Safety",
+    "pubmed_context_topic": "Cation exchange resins gastrointestinal toxicity",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0009"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-016",
+    "query": "Does circulating angiotensin-(1-7) act via the Mas receptor to counteract angiotensin II mediated vasoconstriction and renal fibrosis?",
+    "clinical_domain": "Renal Endocrinology",
+    "pubmed_context_topic": "ACE2-Ang(1-7)-Mas axis",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-017",
+    "query": "What is the diagnostic accuracy of fractional excretion of urea compared to fractional excretion of sodium in diuretic-treated pre-renal acute kidney injury?",
+    "clinical_domain": "Diagnostic Investigation",
+    "pubmed_context_topic": "FEUrea vs FENa under loop diuretics",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0010",
+      "DOC-PMC-RENAL-0011"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-018",
+    "query": "How does chronic metabolic acidosis increase renal ammoniagenesis and urinary ammonium excretion in the proximal tubule?",
+    "clinical_domain": "Acid-Base Regulation",
+    "pubmed_context_topic": "Glutamine metabolism and ammonia excretion",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0004",
+      "DOC-PMC-RENAL-0005"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-019",
+    "query": "Is microfluidic glomerulus-on-a-chip capable of modeling puromycin aminonucleoside-induced podocyte foot process effacement and barrier breakdown?",
+    "clinical_domain": "Translational Nephrology Models",
+    "pubmed_context_topic": "Organ-on-a-chip nephrotic injury models",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0002"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-020",
+    "query": "What renal vascular and hemodynamic alterations occur when nonsteroidal anti-inflammatory drugs inhibit prostaglandin-mediated afferent arteriolar vasodilation?",
+    "clinical_domain": "Renal Pharmacology & Hemodynamics",
+    "pubmed_context_topic": "NSAID-induced acute kidney injury",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-021",
+    "query": "Does patiromer safely control serum potassium while allowing maintenance of spironolactone therapy in patients with resistant hypertension and CKD?",
+    "clinical_domain": "Potassium Binders & RAASi",
+    "pubmed_context_topic": "AMBER trial patiromer with spironolactone",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0009"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-022",
+    "query": "How does loop diuretic resistance develop in chronic heart failure through distal nephron compensatory hypertrophy and sodium reabsorption?",
+    "clinical_domain": "Cardiorenal Pharmacology",
+    "pubmed_context_topic": "Braking phenomenon and sequential nephron blockade",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0010"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-023",
+    "query": "What is the mechanism of type 4 renal tubular acidosis in patients receiving calcineurin inhibitors or trimethoprim?",
+    "clinical_domain": "Drug-Induced Tubular Disorders",
+    "pubmed_context_topic": "ENaC blockade and hyporeninemic hypoaldosteronism",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0009",
+      "DOC-PMC-RENAL-0005"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-024",
+    "query": "Does low serum bicarbonate below 22 mEq/L independently predict all-cause mortality in predialysis chronic kidney disease?",
+    "clinical_domain": "Epidemiology & Outcomes in CKD",
+    "pubmed_context_topic": "Metabolic acidosis and CKD mortality",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0003",
+      "DOC-PMC-RENAL-0004"
+    ]
+  },
+  {
+    "external_id": "PUBMEDQA-RENAL-025",
+    "query": "How does endothelin-1 contribute to podocyte cytoskeletal disruption and glomerular endothelial cell fenestration loss in hypertensive nephrosclerosis?",
+    "clinical_domain": "Endothelial-Podocyte Crosstalk",
+    "pubmed_context_topic": "Endothelin receptor antagonism in glomerular disease",
+    "expected_semantic_targets": [
+      "DOC-PMC-RENAL-0002",
+      "DOC-PMC-RENAL-0001"
+    ]
+  }
+]

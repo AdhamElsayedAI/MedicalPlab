@@ -1,0 +1,676 @@
+{
+  "benchmark": "renal-ood-stress-v6.json",
+  "benchmark_sha256": "a0463cd276854abbfaab421aa12e4f8ad15485c685c15d2104e434a956a7b2d2",
+  "classification": "OOD_SECTION_ANCHORED_STRESS_TEST",
+  "sample_size": 40,
+  "historical_v6_baselines": {
+    "v6_raw_dense_coverage_at_20": "15/40 (37.50%)",
+    "v6_selector_output_coverage_at_20": "18/40 (45.00%)",
+    "v6_dense_at_500_ceiling": "36/40 (90.00%)"
+  },
+  "v7_stack_a_metrics": {
+    "candidate_recall_at_20": {
+      "count": 36,
+      "total": 40,
+      "percent": 90.0,
+      "ci_95": [
+        76.95,
+        96.04
+      ]
+    },
+    "candidate_recall_at_50": {
+      "count": 37,
+      "total": 40,
+      "percent": 92.5,
+      "ci_95": [
+        80.14,
+        97.42
+      ]
+    },
+    "passage_hit_at_1": {
+      "count": 9,
+      "total": 40,
+      "percent": 22.5,
+      "ci_95": [
+        12.32,
+        37.5
+      ]
+    },
+    "passage_hit_at_5": {
+      "count": 33,
+      "total": 40,
+      "percent": 82.5,
+      "ci_95": [
+        68.05,
+        91.25
+      ]
+    },
+    "document_hit_at_1": {
+      "count": 39,
+      "total": 40,
+      "percent": 97.5,
+      "ci_95": [
+        87.12,
+        99.56
+      ]
+    },
+    "document_hit_at_5": {
+      "count": 39,
+      "total": 40,
+      "percent": 97.5,
+      "ci_95": [
+        87.12,
+        99.56
+      ]
+    },
+    "mrr": 0.4577,
+    "ndcg_at_10": 0.5579,
+    "latency_ms": {
+      "p50": 2089.6,
+      "p95": 2615.8,
+      "total_seconds": 86.1
+    }
+  },
+  "per_query_results": [
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0001",
+      "query": "What clinical or physiological evidence regarding Culturing human podocytes and hGEC on the chip is documented in Results > Culturing human podocytes and hGEC on the chip?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0014"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0002",
+      "gold_rank": 7,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0011",
+      "latency_ms": 4652.5
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0002",
+      "query": "What clinical or physiological evidence regarding Culturing human podocytes and hGEC on the chip is documented in Results > Culturing human podocytes and hGEC on the chip?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0016"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0002",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0011",
+      "latency_ms": 2931.8
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0003",
+      "query": "What clinical or physiological evidence regarding Ethics statement and acquisition of human samples is documented in Methods > Ethics statement and acquisition of human samples?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0050"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0002",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0051",
+      "latency_ms": 1552.6
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0004",
+      "query": "What clinical or physiological evidence regarding Survey methodology is documented in Survey methodology?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0013"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0005",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0014",
+      "latency_ms": 1669.0
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0005",
+      "query": "What clinical or physiological evidence regarding Loop of Henle is documented in Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Loop of Henle?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0036"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0005",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0018",
+      "latency_ms": 2160.3
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0006",
+      "query": "What clinical or physiological evidence regarding Distal convoluted tubule is documented in Survey methodology > Mechanistic topography of acid-base exchange in the kidney > Distal convoluted tubule?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0043"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0005",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0018",
+      "latency_ms": 2427.5
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0007",
+      "query": "What clinical or physiological evidence regarding Explanation to the patient\u2019s family is documented in Commentary > Explanation to the patient\u2019s family?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0337"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0006",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0337",
+      "latency_ms": 1687.0
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0008",
+      "query": "What clinical or physiological evidence regarding Subsequent follow-up and reconsideration of the treatment strategy is documented in Commentary > Subsequent follow-up and reconsideration of the treatment strategy?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0339"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0006",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0339",
+      "latency_ms": 1837.5
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0009",
+      "query": "What clinical or physiological evidence regarding 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d is documented in Summary of CQs and statements > Chapter 9. Renal anemia > 9-3 Addition to \u201cRecommendation for appropriate use of HIF-prolyl hydroxylase (HIF-PH) inhibitors (September 29, 2020 version)\u201d?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0139"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0007",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0139",
+      "latency_ms": 2112.9
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0010",
+      "query": "What clinical or physiological evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) is documented in Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0165"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0007",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0165",
+      "latency_ms": 2275.8
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0011",
+      "query": "What clinical or physiological evidence regarding 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6) is documented in Summary of CQs and statements > Chapter 11 Pharmacotherapy > 11-6 Kidney function estimation formula used for setting drug doses by kidney function (Table 6)?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0007-B-C0167"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0007",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0007-B-C0165",
+      "latency_ms": 2240.7
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0012",
+      "query": "What clinical or physiological evidence regarding Grading system is documented in Methods > Grading system?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0008"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0008",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0009",
+      "latency_ms": 1962.6
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0013",
+      "query": "What clinical or physiological evidence regarding Definitions is documented in Clinical practice recommendations > Definitions and diagnostic work-up > Definitions?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0013"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0008",
+      "gold_rank": null,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0022",
+      "latency_ms": 1762.0
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0014",
+      "query": "What clinical or physiological evidence regarding Initial diagnostic workup of a child with SRNS is documented in Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0035"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0008",
+      "gold_rank": null,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0041",
+      "latency_ms": 1804.4
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0015",
+      "query": "What clinical or physiological evidence regarding Initial diagnostic workup of a child with SRNS is documented in Evidence and rationale > Definition of multi-drug resistant nephrotic syndrome > Initial diagnostic workup of a child with SRNS?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0039"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0008",
+      "gold_rank": null,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0041",
+      "latency_ms": 1834.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0016",
+      "query": "What clinical or physiological evidence regarding Evaluation of the patient with chronic HK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Evaluation of the patient with chronic HK?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0018"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0010",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0019",
+      "latency_ms": 1855.5
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0017",
+      "query": "What clinical or physiological evidence regarding Target levels of sK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Target levels of sK?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0035"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0010",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0018",
+      "latency_ms": 1863.9
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0018",
+      "query": "What clinical or physiological evidence regarding Nutritional approach to chronic HK is documented in Hyperkalemia in non-dialytic chronic kidney disease > Nutritional approach to chronic HK?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0038"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0010",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0019",
+      "latency_ms": 1876.1
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0019",
+      "query": "What clinical or physiological evidence regarding Position statement 1.4 is documented in Hyperkalemia in non-dialytic chronic kidney disease > Position statement 1.4?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0010-B-C0043"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0010",
+      "gold_rank": 5,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0010-B-C0020",
+      "latency_ms": 1754.1
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0020",
+      "query": "What clinical or physiological evidence regarding Differences Between Mouse and Human Models is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0054"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0011",
+      "gold_rank": 21,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0060",
+      "latency_ms": 2135.1
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0021",
+      "query": "What clinical or physiological evidence regarding Host Pathogen Interactions and Immunological Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0062"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0011",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0063",
+      "latency_ms": 2495.6
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0022",
+      "query": "What clinical or physiological evidence regarding Host Pathogen Interactions and Immunological Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Host Pathogen Interactions and Immunological Differences?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0064"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0011",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0063",
+      "latency_ms": 2455.1
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0023",
+      "query": "What clinical or physiological evidence regarding Bacterial Differences is documented in Animal Models for Studying UTI > Differences Between Mouse and Human Models > Bacterial Differences?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0011-B-C0066"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0011",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0011-B-C0066",
+      "latency_ms": 2214.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0024",
+      "query": "What clinical or physiological evidence regarding Eradication of Stones Might Lead to UTI Resolution is documented in Results > Eradication of Stones Might Lead to UTI Resolution?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0031"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0013",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0040",
+      "latency_ms": 2297.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0025",
+      "query": "What clinical or physiological evidence regarding Eradication of Stones Might Lead to UTI Resolution is documented in Results > Eradication of Stones Might Lead to UTI Resolution?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0013-B-C0039"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0013",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0013-B-C0040",
+      "latency_ms": 2334.3
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0026",
+      "query": "What clinical or physiological evidence regarding SFU Grading System is documented in Hydronephrosis Grading Systems > SFU Grading System?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0030"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0014",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0028",
+      "latency_ms": 2049.4
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0027",
+      "query": "What clinical or physiological evidence regarding Radiology Grading System is documented in Hydronephrosis Grading Systems > Radiology Grading System?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0014-B-C0037"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0014",
+      "gold_rank": 5,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0035",
+      "latency_ms": 1997.9
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0028",
+      "query": "What clinical or physiological evidence regarding 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease is documented in 6. Mesangial Cell: Podocyte Crosstalk in Glomerular Disease?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0018-B-C0036"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0018",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0036",
+      "latency_ms": 2599.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0029",
+      "query": "What clinical or physiological evidence regarding 1. Introduction is documented in 1. Introduction?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0003"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0019",
+      "gold_rank": 8,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": false,
+      "document_hit_at_5": false,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0003",
+      "latency_ms": 1955.4
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0030",
+      "query": "What clinical or physiological evidence regarding 3. Glucose Transporters in Healthy Human Kidneys is documented in 3. Glucose Transporters in Healthy Human Kidneys?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0010"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0019",
+      "gold_rank": 11,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": false,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0006",
+      "latency_ms": 1986.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0031",
+      "query": "What clinical or physiological evidence regarding 3.1. Characteristics of Human Glucose Transporters is documented in 3. Glucose Transporters in Healthy Human Kidneys > 3.1. Characteristics of Human Glucose Transporters?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0019-B-C0013"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0019",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0019-B-C0013",
+      "latency_ms": 1937.3
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0032",
+      "query": "What clinical or physiological evidence regarding Animals and experimental design is documented in Methods > Animals and experimental design?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B-C0027"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0021",
+      "gold_rank": 4,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0023",
+      "latency_ms": 2234.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0033",
+      "query": "What clinical or physiological evidence regarding Plasma volume is documented in Methods > Plasma volume?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0021-B-C0029"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0021",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0029",
+      "latency_ms": 2329.8
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0034",
+      "query": "What clinical or physiological evidence regarding The structure of the mammalian renal medulla is documented in The structure of the mammalian renal medulla?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0009"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0023",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0010",
+      "latency_ms": 2066.2
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0035",
+      "query": "What clinical or physiological evidence regarding The vasculature of the renal medulla is documented in The vasculature of the renal medulla?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0021"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0023",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0019",
+      "latency_ms": 2173.8
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0036",
+      "query": "What clinical or physiological evidence regarding Inner stripe is documented in The regions of the medulla > Inner stripe?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0028"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0023",
+      "gold_rank": 1,
+      "passage_hit_at_1": true,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0028",
+      "latency_ms": 2065.1
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0037",
+      "query": "What clinical or physiological evidence regarding Inner medulla is documented in The regions of the medulla > Inner medulla?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0030"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0023",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0036",
+      "latency_ms": 2151.7
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0038",
+      "query": "What clinical or physiological evidence regarding EPO physiology, receptor signalling, and dysregulation in CKD is documented in ERYTHROPOIETIN > EPO physiology, receptor signalling, and dysregulation in CKD?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0038"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0024",
+      "gold_rank": 3,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0039",
+      "latency_ms": 2014.9
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0039",
+      "query": "What clinical or physiological evidence regarding Effects of EPO on innate immunity is documented in ERYTHROPOIETIN > Effects of EPO on innate immunity?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0041"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0024",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0040",
+      "latency_ms": 2209.3
+    },
+    {
+      "query_id": "V6-RNK-SELECT-VAL-0040",
+      "query": "What clinical or physiological evidence regarding Effects of EPO on adaptive immunity is documented in ERYTHROPOIETIN > Effects of EPO on adaptive immunity?",
+      "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0024-B-C0043"
+      ],
+      "gold_document_id": "DOC-PMC-RENAL-0024",
+      "gold_rank": 2,
+      "passage_hit_at_1": false,
+      "passage_hit_at_5": true,
+      "document_hit_at_1": true,
+      "document_hit_at_5": true,
+      "top1_chunk_id": "DOC-PMC-RENAL-0024-B-C0047",
+      "latency_ms": 2120.0
+    }
+  ]
+}
