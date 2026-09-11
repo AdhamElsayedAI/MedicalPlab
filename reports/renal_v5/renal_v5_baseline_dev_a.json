@@ -1,6 +1,6 @@
 {
   "benchmark": "MEDICALPLAB_RENAL_V5_BASELINE_DEV_A",
-  "timestamp": "2026-09-11T00:35:10Z",
+  "timestamp": "2026-09-11T03:23:20Z",
   "dataset": "evaluation/renal/v5/renal-rerank-dev-a-v5.json",
   "dataset_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
   "n_queries": 50,
@@ -51,24 +51,24 @@
       "rate": 0.84
     },
     "parent_section_hit_at_1": {
-      "numerator": 2,
+      "numerator": 20,
       "denominator": 50,
-      "rate": 0.04
+      "rate": 0.4
     },
     "parent_section_hit_at_3": {
-      "numerator": 2,
+      "numerator": 32,
       "denominator": 50,
-      "rate": 0.04
+      "rate": 0.64
     },
     "parent_section_hit_at_5": {
-      "numerator": 2,
+      "numerator": 33,
       "denominator": 50,
-      "rate": 0.04
+      "rate": 0.66
     },
     "parent_section_hit_at_10": {
-      "numerator": 2,
+      "numerator": 36,
       "denominator": 50,
-      "rate": 0.04
+      "rate": 0.72
     },
     "reranker_input_hit_at_20": {
       "numerator": 30,
@@ -94,12 +94,12 @@
     "ndcg_at_10": 0.42450534051425637
   },
   "latency_ms": {
-    "query_encoding_p50": 29.57451800000854,
-    "first_stage_p50": 1.603550001163967,
-    "first_stage_p95": 2.4596949944680087,
-    "reranker_p50": 800.7577999960631,
-    "reranker_p95": 7021.759629998996,
-    "total_p50": 832.4039679963607,
-    "total_p95": 7053.194382996734
+    "query_encoding_p50": 17.6170540000021,
+    "first_stage_p50": 1.2295999999878404,
+    "first_stage_p95": 1.5537349999021897,
+    "reranker_p50": 774.0509499999462,
+    "reranker_p95": 3907.422935000068,
+    "total_p50": 794.8340540000663,
+    "total_p95": 3926.247229000192
   }
 }

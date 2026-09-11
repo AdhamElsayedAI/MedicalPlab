@@ -16,8 +16,6 @@ import os
 import sys
 import time
 from pathlib import Path
-import numpy as np
-import torch
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
@@ -28,6 +26,9 @@ if str(_RENAL_ENV) not in sys.path:
     sys.path.insert(0, str(_RENAL_ENV))
 if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
+
+import numpy as np
+import torch
 
 os.environ.setdefault("HF_HUB_OFFLINE", "1")
 os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
@@ -114,6 +115,7 @@ def main():
     doc_ids_sorted = sorted(list(doc_first_texts.keys()))
     doc_id_to_idx = {did: i for i, did in enumerate(doc_ids_sorted)}
     chunk_doc_ids = [ch.get("document_id") for ch in chunks]
+    chunk_id_to_chunk = {ch["chunk_id"]: ch for ch in chunks}
 
     # 4. Load Cached Embeddings
     corpus_emb_path = CACHE_DIR / "all23_corpus_embeddings.npy"
@@ -178,6 +180,11 @@ def main():
     print("RUNNING PHASE 5: FROZEN V3 BASELINE EVALUATION (DEPTH K=20)")
     print("=" * 70)
 
+    # Warmup reranker before timed loop
+    torch.cuda.synchronize()
+    _ = reranker.predict([["warmup query", "warmup text"] for _ in range(2)], batch_size=2, show_progress_bar=False)
+    torch.cuda.synchronize()
+
     p5_per_query = []
     rerank_latencies_20 = []
 
@@ -197,6 +204,10 @@ def main():
         gold_sec = item["gold_section_path"]
         top100_idx = first_stage_results[i]["top100_idx"]
 
+        # Resolve actual gold section prefixes from corpus chunks
+        gold_chunk_objs = [chunk_id_to_chunk[cid] for cid in gold_cids if cid in chunk_id_to_chunk]
+        gold_sec_prefixes = set(tuple(c.get("section_path", [])[:2]) for c in gold_chunk_objs if c.get("section_path"))
+
         # Candidate coverage at various depths
         for k in [20, 30, 50, 100]:
             if any(chunks[idx]["chunk_id"] in gold_cids for idx in top100_idx[:k]):
@@ -206,8 +217,10 @@ def main():
         cands_20 = [chunks[idx] for idx in top100_idx[:20]]
         pairs_20 = [[item["query"], ch["text"]] for ch in cands_20]
 
+        torch.cuda.synchronize()
         t0_rr = time.perf_counter()
         raw_scores = reranker.predict(pairs_20, batch_size=20, show_progress_bar=False)
+        torch.cuda.synchronize()
         r_scores = np.asarray(raw_scores, dtype=np.float32).reshape(-1)
         rerank_latencies_20.append(time.perf_counter() - t0_rr)
 
@@ -224,9 +237,9 @@ def main():
             if any(ch["document_id"] == gold_did for ch in top10_chunks[:k]):
                 doc_hits[k] += 1
 
-        # Section hits (first 2 levels match or exact match)
+        # Section hits (chunk is in gold document and matches any gold section prefix)
         for k in [1, 3, 5, 10]:
-            if any(ch.get("document_id") == gold_did and ch.get("section_path", [])[:2] == gold_sec[:2] for ch in top10_chunks[:k]):
+            if any(ch.get("document_id") == gold_did and tuple(ch.get("section_path", [])[:2]) in gold_sec_prefixes for ch in top10_chunks[:k]):
                 sec_hits[k] += 1
 
         # Passage hits
@@ -282,7 +295,7 @@ def main():
             if winning_did != gold_did:
                 miss_class = "DOCUMENT_ROUTING_FAILURE"
                 wrong_rel = "DIFF_DOC"
-            elif winning_sec[:2] != gold_sec[:2]:
+            elif tuple(winning_sec[:2]) not in gold_sec_prefixes:
                 miss_class = "RIGHT_DOCUMENT_WRONG_SECTION"
                 wrong_rel = "SAME_DOC_DIFF_SECTION"
             else:
@@ -452,115 +465,121 @@ def main():
     print("RUNNING PHASE 7: DEPTH DIAGNOSTIC BEFORE TRAINING (Top20, Top30, Top50)")
     print("=" * 70)
 
-    depth_results = {}
-    depth_records = {20: [], 30: [], 50: []}
-
-    for depth in [20, 30, 50]:
-        print(f"\nEvaluating candidate depth K={depth}...")
-        d_pas_hits = {1: 0, 5: 0, 10: 0}
-        d_input_hit = 0
-        d_mrr = []
-        d_ndcg = []
-        d_rerank_times = []
-
-        torch.cuda.reset_peak_memory_stats(device)
-
-        for i, item in enumerate(dev_a):
-            gold_cids = set(item["gold_chunk_ids"])
-            top100_idx = first_stage_results[i]["top100_idx"]
-
-            if any(chunks[idx]["chunk_id"] in gold_cids for idx in top100_idx[:depth]):
-                d_input_hit += 1
-
-            cands_k = [chunks[idx] for idx in top100_idx[:depth]]
-            pairs_k = [[item["query"], ch["text"]] for ch in cands_k]
-
-            t0 = time.perf_counter()
-            raw_scores = reranker.predict(pairs_k, batch_size=depth, show_progress_bar=False)
-            r_scores = np.asarray(raw_scores, dtype=np.float32).reshape(-1)
-            d_rerank_times.append(time.perf_counter() - t0)
-
-            order_k = r_scores.argsort()[::-1]
-            reranked_k = [cands_k[idx] for idx in order_k]
-
-            top10_k = reranked_k[:10]
-            for h in [1, 5, 10]:
-                if any(ch["chunk_id"] in gold_cids for ch in top10_k[:h]):
-                    d_pas_hits[h] += 1
-
-            gold_rank = None
-            for r, ch in enumerate(reranked_k):
-                if ch["chunk_id"] in gold_cids:
-                    gold_rank = r + 1
-                    break
-            d_mrr.append(1.0 / gold_rank if gold_rank else 0.0)
-
-            rel_bin = [1 if ch["chunk_id"] in gold_cids else 0 for ch in top10_k]
-            d_ndcg.append(compute_ndcg_at_k(rel_bin, k=10))
-
-            depth_records[depth].append({
-                "query_id": item["query_id"],
-                "gold_rank": gold_rank,
-                "hit1": (gold_rank == 1),
-            })
-
-        peak_vram_mb = torch.cuda.max_memory_allocated(device) / (1024**2)
-
-        depth_results[depth] = {
-            "depth_k": depth,
-            "reranker_input_hit": {"numerator": d_input_hit, "denominator": n_dev, "rate": d_input_hit / n_dev},
-            "passage_hit_at_1": {"numerator": d_pas_hits[1], "denominator": n_dev, "rate": d_pas_hits[1] / n_dev},
-            "passage_hit_at_5": {"numerator": d_pas_hits[5], "denominator": n_dev, "rate": d_pas_hits[5] / n_dev},
-            "passage_hit_at_10": {"numerator": d_pas_hits[10], "denominator": n_dev, "rate": d_pas_hits[10] / n_dev},
-            "mrr": float(np.mean(d_mrr)),
-            "ndcg_at_10": float(np.mean(d_ndcg)),
-            "reranker_latency_p50_ms": float(np.percentile(d_rerank_times, 50)) * 1000,
-            "reranker_latency_p95_ms": float(np.percentile(d_rerank_times, 95)) * 1000,
-            "peak_vram_mb": peak_vram_mb,
-        }
-
-        print(f"  K={depth}: InputHit={d_input_hit}/{n_dev} ({d_input_hit/n_dev*100:.1f}%), Hit@1={d_pas_hits[1]}/{n_dev} ({d_pas_hits[1]/n_dev*100:.1f}%), MRR={np.mean(d_mrr):.4f}, Latency p50={np.percentile(d_rerank_times,50)*1000:.1f}ms")
-
-    # Compare recovery across depths
-    hit1_20_set = set(r["query_id"] for r in depth_records[20] if r["hit1"])
-    hit1_30_set = set(r["query_id"] for r in depth_records[30] if r["hit1"])
-    hit1_50_set = set(r["query_id"] for r in depth_records[50] if r["hit1"])
-
-    recovered_at_30 = hit1_30_set - hit1_20_set
-    lost_at_30 = hit1_20_set - hit1_30_set
-    recovered_at_50 = hit1_50_set - hit1_20_set
-    lost_at_50 = hit1_20_set - hit1_50_set
-
-    # Depth decision gate:
-    # KEEP a deeper depth only if it provides a meaningful quality gain that survives later DEV-B confirmation and the latency tradeoff is defensible.
-    delta_30 = depth_results[30]["passage_hit_at_1"]["numerator"] - depth_results[20]["passage_hit_at_1"]["numerator"]
-    delta_50 = depth_results[50]["passage_hit_at_1"]["numerator"] - depth_results[20]["passage_hit_at_1"]["numerator"]
-
-    if delta_30 >= 2:
-        depth_recommendation = "CANDIDATE_DEPTH_30"
-    elif delta_50 >= 2:
-        depth_recommendation = "CANDIDATE_DEPTH_50"
-    else:
-        depth_recommendation = "KEEP_DEPTH_20_DEFAULT"
-
-    phase7_report = {
-        "benchmark": "MEDICALPLAB_RENAL_V5_DEPTH_DIAGNOSTIC",
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "dataset_sha256": dev_a_sha,
-        "n_queries": n_dev,
-        "results_by_depth": depth_results,
-        "pairwise_transitions": {
-            "depth_30_vs_20": {"recovered_queries": list(recovered_at_30), "lost_queries": list(lost_at_30), "net_delta": delta_30},
-            "depth_50_vs_20": {"recovered_queries": list(recovered_at_50), "lost_queries": list(lost_at_50), "net_delta": delta_50},
-        },
-        "depth_recommendation": depth_recommendation,
-        "rationale": f"Net delta at depth 30: {delta_30:+d} queries; Net delta at depth 50: {delta_50:+d} queries.",
-    }
     p7_out = REPORTS_DIR / "renal_v5_depth_diagnostic.json"
-    p7_bytes = json.dumps(phase7_report, indent=2, ensure_ascii=False).encode("utf-8")
-    p7_out.write_bytes(p7_bytes)
-    (REPORTS_DIR / "renal_v5_depth_diagnostic.json.sha256").write_text(f"{sha256_bytes(p7_bytes)}  renal_v5_depth_diagnostic.json\n", encoding="utf-8")
-    print(f"Phase 7 diagnostic saved to {p7_out.name}")
+    if p7_out.exists() and "--rerun-depth" not in sys.argv:
+        print(f"Phase 7 depth diagnostic already exists at {p7_out.name}. Preserving verified depth results per protocol.")
+        phase7_report = json.loads(p7_out.read_text(encoding="utf-8"))
+        depth_results = phase7_report["results_by_depth"]
+        for depth_str, d_res in depth_results.items():
+            print(f"  K={depth_str}: InputHit={d_res['reranker_input_hit']['numerator']}/{n_dev} ({d_res['reranker_input_hit']['rate']*100:.1f}%), Hit@1={d_res['passage_hit_at_1']['numerator']}/{n_dev} ({d_res['passage_hit_at_1']['rate']*100:.1f}%), MRR={d_res['mrr']:.4f}, Latency p50={d_res['reranker_latency_p50_ms']:.1f}ms")
+        print(f"Depth recommendation: {phase7_report['depth_recommendation']} ({phase7_report['rationale']})")
+    else:
+        depth_results = {}
+        depth_records = {20: [], 30: [], 50: []}
+
+        for depth in [20, 30, 50]:
+            print(f"\nEvaluating candidate depth K={depth}...")
+            d_pas_hits = {1: 0, 5: 0, 10: 0}
+            d_input_hit = 0
+            d_mrr = []
+            d_ndcg = []
+            d_rerank_times = []
+
+            torch.cuda.reset_peak_memory_stats(device)
+
+            for i, item in enumerate(dev_a):
+                gold_cids = set(item["gold_chunk_ids"])
+                top100_idx = first_stage_results[i]["top100_idx"]
+
+                if any(chunks[idx]["chunk_id"] in gold_cids for idx in top100_idx[:depth]):
+                    d_input_hit += 1
+
+                cands_k = [chunks[idx] for idx in top100_idx[:depth]]
+                pairs_k = [[item["query"], ch["text"]] for ch in cands_k]
+
+                torch.cuda.synchronize()
+                t0 = time.perf_counter()
+                raw_scores = reranker.predict(pairs_k, batch_size=depth, show_progress_bar=False)
+                torch.cuda.synchronize()
+                d_rerank_times.append(time.perf_counter() - t0)
+
+                order_k = r_scores.argsort()[::-1]
+                reranked_k = [cands_k[idx] for idx in order_k]
+
+                top10_k = reranked_k[:10]
+                for h in [1, 5, 10]:
+                    if any(ch["chunk_id"] in gold_cids for ch in top10_k[:h]):
+                        d_pas_hits[h] += 1
+
+                gold_rank = None
+                for r, ch in enumerate(reranked_k):
+                    if ch["chunk_id"] in gold_cids:
+                        gold_rank = r + 1
+                        break
+                d_mrr.append(1.0 / gold_rank if gold_rank else 0.0)
+
+                rel_bin = [1 if ch["chunk_id"] in gold_cids else 0 for ch in top10_k]
+                d_ndcg.append(compute_ndcg_at_k(rel_bin, k=10))
+
+                depth_records[depth].append({
+                    "query_id": item["query_id"],
+                    "gold_rank": gold_rank,
+                    "hit1": (gold_rank == 1),
+                })
+
+            peak_vram_mb = torch.cuda.max_memory_allocated(device) / (1024**2)
+
+            depth_results[depth] = {
+                "depth_k": depth,
+                "reranker_input_hit": {"numerator": d_input_hit, "denominator": n_dev, "rate": d_input_hit / n_dev},
+                "passage_hit_at_1": {"numerator": d_pas_hits[1], "denominator": n_dev, "rate": d_pas_hits[1] / n_dev},
+                "passage_hit_at_5": {"numerator": d_pas_hits[5], "denominator": n_dev, "rate": d_pas_hits[5] / n_dev},
+                "passage_hit_at_10": {"numerator": d_pas_hits[10], "denominator": n_dev, "rate": d_pas_hits[10] / n_dev},
+                "mrr": float(np.mean(d_mrr)),
+                "ndcg_at_10": float(np.mean(d_ndcg)),
+                "reranker_latency_p50_ms": float(np.percentile(d_rerank_times, 50)) * 1000,
+                "reranker_latency_p95_ms": float(np.percentile(d_rerank_times, 95)) * 1000,
+                "peak_vram_mb": peak_vram_mb,
+            }
+
+            print(f"  K={depth}: InputHit={d_input_hit}/{n_dev} ({d_input_hit/n_dev*100:.1f}%), Hit@1={d_pas_hits[1]}/{n_dev} ({d_pas_hits[1]/n_dev*100:.1f}%), MRR={np.mean(d_mrr):.4f}, Latency p50={np.percentile(d_rerank_times,50)*1000:.1f}ms")
+
+        hit1_20_set = set(r["query_id"] for r in depth_records[20] if r["hit1"])
+        hit1_30_set = set(r["query_id"] for r in depth_records[30] if r["hit1"])
+        hit1_50_set = set(r["query_id"] for r in depth_records[50] if r["hit1"])
+
+        recovered_at_30 = hit1_30_set - hit1_20_set
+        lost_at_30 = hit1_20_set - hit1_30_set
+        recovered_at_50 = hit1_50_set - hit1_20_set
+        lost_at_50 = hit1_20_set - hit1_50_set
+
+        delta_30 = depth_results[30]["passage_hit_at_1"]["numerator"] - depth_results[20]["passage_hit_at_1"]["numerator"]
+        delta_50 = depth_results[50]["passage_hit_at_1"]["numerator"] - depth_results[20]["passage_hit_at_1"]["numerator"]
+
+        if delta_30 >= 2:
+            depth_recommendation = "CANDIDATE_DEPTH_30"
+        elif delta_50 >= 2:
+            depth_recommendation = "CANDIDATE_DEPTH_50"
+        else:
+            depth_recommendation = "KEEP_DEPTH_20_DEFAULT"
+
+        phase7_report = {
+            "benchmark": "MEDICALPLAB_RENAL_V5_DEPTH_DIAGNOSTIC",
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "dataset_sha256": dev_a_sha,
+            "n_queries": n_dev,
+            "results_by_depth": depth_results,
+            "pairwise_transitions": {
+                "depth_30_vs_20": {"recovered_queries": list(recovered_at_30), "lost_queries": list(lost_at_30), "net_delta": delta_30},
+                "depth_50_vs_20": {"recovered_queries": list(recovered_at_50), "lost_queries": list(lost_at_50), "net_delta": delta_50},
+            },
+            "depth_recommendation": depth_recommendation,
+            "rationale": f"Net delta at depth 30: {delta_30:+d} queries; Net delta at depth 50: {delta_50:+d} queries.",
+        }
+        p7_bytes = json.dumps(phase7_report, indent=2, ensure_ascii=False).encode("utf-8")
+        p7_out.write_bytes(p7_bytes)
+        (REPORTS_DIR / "renal_v5_depth_diagnostic.json.sha256").write_text(f"{sha256_bytes(p7_bytes)}  renal_v5_depth_diagnostic.json\n", encoding="utf-8")
+        print(f"Phase 7 diagnostic saved to {p7_out.name}")
 
     print("\n" + "=" * 70)
     print("PHASES 5, 6, 7 COMPLETE")

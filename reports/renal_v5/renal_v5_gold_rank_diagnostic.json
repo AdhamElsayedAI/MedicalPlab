@@ -1,6 +1,6 @@
 {
   "benchmark": "MEDICALPLAB_RENAL_V5_GOLD_RANK_DIAGNOSTIC",
-  "timestamp": "2026-09-11T00:35:10Z",
+  "timestamp": "2026-09-11T03:23:20Z",
   "dataset_sha256": "8d9e0fddab87f14cc7ba404ed30256f713f1ab62e9aabe674c6a4c032b1195ec",
   "n_queries": 50,
   "theoretical_ceiling_hit1": {
@@ -20,10 +20,10 @@
   "classification_summary": {
     "HIT_AT_1": 15,
     "DOCUMENT_ROUTING_FAILURE": 7,
-    "RIGHT_SECTION_WRONG_PASSAGE": 1,
+    "RIGHT_SECTION_WRONG_PASSAGE": 3,
     "RERANKER_INPUT_MISS": 11,
     "CANDIDATE_SUPERSET_MISS": 9,
-    "RIGHT_DOCUMENT_WRONG_SECTION": 7
+    "RIGHT_DOCUMENT_WRONG_SECTION": 5
   },
   "detailed_query_diagnostics": [
     {
@@ -36,9 +36,9 @@
         "Abstract"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0018-B-C0024",
+        "DOC-PMC-RENAL-0018-B-C0001",
         "DOC-PMC-RENAL-0018-B-C0003",
-        "DOC-PMC-RENAL-0018-B-C0001"
+        "DOC-PMC-RENAL-0018-B-C0024"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -65,9 +65,9 @@
         "2. Glomerular Filtration Slit Diaphragm: A Multicomponent Apparatus"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0018-B-C0026",
         "DOC-PMC-RENAL-0018-B-C0025",
-        "DOC-PMC-RENAL-0018-B-C0003"
+        "DOC-PMC-RENAL-0018-B-C0003",
+        "DOC-PMC-RENAL-0018-B-C0026"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 1,
@@ -94,8 +94,8 @@
         "GFR Estimation"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0016-B-C0007",
-        "DOC-PMC-RENAL-0016-B-C0147"
+        "DOC-PMC-RENAL-0016-B-C0147",
+        "DOC-PMC-RENAL-0016-B-C0007"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 1,
@@ -122,9 +122,9 @@
         "GFR Estimation"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0016-B-C0001",
+        "DOC-PMC-RENAL-0016-B-C0003",
         "DOC-PMC-RENAL-0016-B-C0002",
-        "DOC-PMC-RENAL-0016-B-C0003"
+        "DOC-PMC-RENAL-0016-B-C0001"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -181,9 +181,9 @@
         "Microfluidics"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0002-B-C0002",
         "DOC-PMC-RENAL-0002-B-C0007",
-        "DOC-PMC-RENAL-0002-B-C0019"
+        "DOC-PMC-RENAL-0002-B-C0019",
+        "DOC-PMC-RENAL-0002-B-C0002"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -213,8 +213,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0019-B-C0028",
-        "DOC-PMC-RENAL-0019-B-C0041",
-        "DOC-PMC-RENAL-0019-B-C0018"
+        "DOC-PMC-RENAL-0019-B-C0018",
+        "DOC-PMC-RENAL-0019-B-C0041"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 4,
@@ -244,8 +244,8 @@
         "3.2. SGK1 in Insulin Signaling Pathway"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0020-B-C0001",
         "DOC-PMC-RENAL-0020-B-C0005",
+        "DOC-PMC-RENAL-0020-B-C0001",
         "DOC-PMC-RENAL-0020-B-C0004"
       ],
       "enters_top20": true,
@@ -273,9 +273,9 @@
         "Abstract"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0021-B-C0002",
+        "DOC-PMC-RENAL-0021-B-C0001",
         "DOC-PMC-RENAL-0021-B-C0005",
-        "DOC-PMC-RENAL-0021-B-C0001"
+        "DOC-PMC-RENAL-0021-B-C0002"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 21,
@@ -303,8 +303,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0020-B-C0013",
-        "DOC-PMC-RENAL-0020-B-C0011",
-        "DOC-PMC-RENAL-0020-B-C0001"
+        "DOC-PMC-RENAL-0020-B-C0001",
+        "DOC-PMC-RENAL-0020-B-C0011"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 28,
@@ -360,9 +360,9 @@
         "Countercurrent Exchange"
       ],
       "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0023-B-C0001",
         "DOC-PMC-RENAL-0023-B-C0002",
-        "DOC-PMC-RENAL-0023-B-C0014",
-        "DOC-PMC-RENAL-0023-B-C0001"
+        "DOC-PMC-RENAL-0023-B-C0014"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 1,
@@ -389,9 +389,9 @@
         "Loop of Henle"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0023-B-C0013",
+        "DOC-PMC-RENAL-0023-B-C0004",
         "DOC-PMC-RENAL-0023-B-C0016",
-        "DOC-PMC-RENAL-0023-B-C0004"
+        "DOC-PMC-RENAL-0023-B-C0013"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 37,
@@ -421,8 +421,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0023-B-C0047",
-        "DOC-PMC-RENAL-0023-B-C0050",
-        "DOC-PMC-RENAL-0023-B-C0052"
+        "DOC-PMC-RENAL-0023-B-C0052",
+        "DOC-PMC-RENAL-0023-B-C0050"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 11,
@@ -438,8 +438,8 @@
         "Loops of Henle",
         "Type 2a epithelium"
       ],
-      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
-      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+      "wrong_winner_relationship": "SAME_SECTION_NEIGHBOR",
+      "failure_classification": "RIGHT_SECTION_WRONG_PASSAGE"
     },
     {
       "query_id": "V5-RNK-DEV-A-0015",
@@ -479,9 +479,9 @@
         "RAAS"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0001-B-C0003",
+        "DOC-PMC-RENAL-0001-B-C0002",
         "DOC-PMC-RENAL-0001-B-C0015",
-        "DOC-PMC-RENAL-0001-B-C0002"
+        "DOC-PMC-RENAL-0001-B-C0003"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 10,
@@ -510,9 +510,9 @@
         "Vascular Inflammation"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0001-B-C0003",
         "DOC-PMC-RENAL-0001-B-C0004",
-        "DOC-PMC-RENAL-0001-B-C0002"
+        "DOC-PMC-RENAL-0001-B-C0002",
+        "DOC-PMC-RENAL-0001-B-C0003"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -541,8 +541,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0024-B-C0005",
-        "DOC-PMC-RENAL-0024-B-C0002",
-        "DOC-PMC-RENAL-0024-B-C0001"
+        "DOC-PMC-RENAL-0024-B-C0001",
+        "DOC-PMC-RENAL-0024-B-C0002"
       ],
       "enters_top20": false,
       "pre_reranker_rank": null,
@@ -572,9 +572,9 @@
         "Immunomodulation"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0024-B-C0033",
+        "DOC-PMC-RENAL-0024-B-C0030",
         "DOC-PMC-RENAL-0024-B-C0005",
-        "DOC-PMC-RENAL-0024-B-C0030"
+        "DOC-PMC-RENAL-0024-B-C0033"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -602,8 +602,8 @@
         "ACE"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0001-B-C0003",
-        "DOC-PMC-RENAL-0001-B-C0002"
+        "DOC-PMC-RENAL-0001-B-C0002",
+        "DOC-PMC-RENAL-0001-B-C0003"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 5,
@@ -631,8 +631,8 @@
         "ECG"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0009-B-C0007",
         "DOC-PMC-RENAL-0009-B-C0001",
+        "DOC-PMC-RENAL-0009-B-C0007",
         "DOC-PMC-RENAL-0009-B-C0002"
       ],
       "enters_top20": false,
@@ -755,9 +755,9 @@
         "Proximal Tubule"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0004-B-C0004",
+        "DOC-PMC-RENAL-0004-B-C0001",
         "DOC-PMC-RENAL-0004-B-C0002",
-        "DOC-PMC-RENAL-0004-B-C0001"
+        "DOC-PMC-RENAL-0004-B-C0004"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 1,
@@ -786,9 +786,9 @@
         "Acid-Base Physiology"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0005-B-C0005",
         "DOC-PMC-RENAL-0005-B-C0030",
-        "DOC-PMC-RENAL-0005-B-C0040"
+        "DOC-PMC-RENAL-0005-B-C0040",
+        "DOC-PMC-RENAL-0005-B-C0005"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 1,
@@ -817,8 +817,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0005-B-C0026",
-        "DOC-PMC-RENAL-0005-B-C0041",
-        "DOC-PMC-RENAL-0005-B-C0038"
+        "DOC-PMC-RENAL-0005-B-C0038",
+        "DOC-PMC-RENAL-0005-B-C0041"
       ],
       "enters_top20": false,
       "pre_reranker_rank": null,
@@ -890,8 +890,8 @@
       "winning_section_path": [
         "Commentary"
       ],
-      "wrong_winner_relationship": "SAME_DOC_DIFF_SECTION",
-      "failure_classification": "RIGHT_DOCUMENT_WRONG_SECTION"
+      "wrong_winner_relationship": "SAME_SECTION_NEIGHBOR",
+      "failure_classification": "RIGHT_SECTION_WRONG_PASSAGE"
     },
     {
       "query_id": "V5-RNK-DEV-A-0030",
@@ -904,9 +904,9 @@
         "Rhabdomyolysis"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0015-B-C0001",
         "DOC-PMC-RENAL-0015-B-C0045",
-        "DOC-PMC-RENAL-0015-B-C0040"
+        "DOC-PMC-RENAL-0015-B-C0040",
+        "DOC-PMC-RENAL-0015-B-C0001"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 2,
@@ -934,9 +934,9 @@
         "RRT Indications"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0015-B-C0001",
         "DOC-PMC-RENAL-0015-B-C0045",
-        "DOC-PMC-RENAL-0015-B-C0040"
+        "DOC-PMC-RENAL-0015-B-C0040",
+        "DOC-PMC-RENAL-0015-B-C0001"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 3,
@@ -990,9 +990,9 @@
         "Renal Protection"
       ],
       "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0015-B-C0042",
         "DOC-PMC-RENAL-0015-B-C0043",
-        "DOC-PMC-RENAL-0015-B-C0039",
-        "DOC-PMC-RENAL-0015-B-C0042"
+        "DOC-PMC-RENAL-0015-B-C0039"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 5,
@@ -1082,8 +1082,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0007-B-C0144",
-        "DOC-PMC-RENAL-0007-B-C0141",
-        "DOC-PMC-RENAL-0007-B-C0142"
+        "DOC-PMC-RENAL-0007-B-C0142",
+        "DOC-PMC-RENAL-0007-B-C0141"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 3,
@@ -1144,9 +1144,9 @@
         "Management"
       ],
       "gold_chunk_ids": [
+        "DOC-PMC-RENAL-0008-B-C0018",
         "DOC-PMC-RENAL-0008-B-C0002",
-        "DOC-PMC-RENAL-0008-B-C0028",
-        "DOC-PMC-RENAL-0008-B-C0018"
+        "DOC-PMC-RENAL-0008-B-C0028"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 43,
@@ -1174,9 +1174,9 @@
         "Oedema"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0008-B-C0002",
+        "DOC-PMC-RENAL-0008-B-C0001",
         "DOC-PMC-RENAL-0008-B-C0011",
-        "DOC-PMC-RENAL-0008-B-C0001"
+        "DOC-PMC-RENAL-0008-B-C0002"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 65,
@@ -1205,8 +1205,8 @@
         "Complications"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0008-B-C0281",
-        "DOC-PMC-RENAL-0008-B-C0279"
+        "DOC-PMC-RENAL-0008-B-C0279",
+        "DOC-PMC-RENAL-0008-B-C0281"
       ],
       "enters_top20": false,
       "pre_reranker_rank": null,
@@ -1236,8 +1236,8 @@
         "Congenital NS"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0018-B-C0007",
-        "DOC-PMC-RENAL-0018-B-C0025"
+        "DOC-PMC-RENAL-0018-B-C0025",
+        "DOC-PMC-RENAL-0018-B-C0007"
       ],
       "enters_top20": false,
       "pre_reranker_rank": null,
@@ -1265,9 +1265,9 @@
         "Pathogenesis"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0011-B-C0001",
+        "DOC-PMC-RENAL-0011-B-C0003",
         "DOC-PMC-RENAL-0011-B-C0002",
-        "DOC-PMC-RENAL-0011-B-C0003"
+        "DOC-PMC-RENAL-0011-B-C0001"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 19,
@@ -1327,9 +1327,9 @@
         "Stone Composition"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0012-B-C0062",
+        "DOC-PMC-RENAL-0012-B-C0063",
         "DOC-PMC-RENAL-0012-B-C0046",
-        "DOC-PMC-RENAL-0012-B-C0063"
+        "DOC-PMC-RENAL-0012-B-C0062"
       ],
       "enters_top20": false,
       "pre_reranker_rank": null,
@@ -1389,8 +1389,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0013-B-C0003",
-        "DOC-PMC-RENAL-0013-B-C0002",
-        "DOC-PMC-RENAL-0013-B-C0001"
+        "DOC-PMC-RENAL-0013-B-C0001",
+        "DOC-PMC-RENAL-0013-B-C0002"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 3,
@@ -1419,9 +1419,9 @@
         "Grading"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0014-B-C0003",
         "DOC-PMC-RENAL-0014-B-C0002",
-        "DOC-PMC-RENAL-0014-B-C0001"
+        "DOC-PMC-RENAL-0014-B-C0001",
+        "DOC-PMC-RENAL-0014-B-C0003"
       ],
       "enters_top20": true,
       "pre_reranker_rank": 6,
@@ -1450,8 +1450,8 @@
       ],
       "gold_chunk_ids": [
         "DOC-PMC-RENAL-0025-B-C0002",
-        "DOC-PMC-RENAL-0025-B-C0001",
-        "DOC-PMC-RENAL-0025-B-C0003"
+        "DOC-PMC-RENAL-0025-B-C0003",
+        "DOC-PMC-RENAL-0025-B-C0001"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 36,
@@ -1479,9 +1479,9 @@
         "Investigation"
       ],
       "gold_chunk_ids": [
-        "DOC-PMC-RENAL-0025-B-C0007",
+        "DOC-PMC-RENAL-0025-B-C0008",
         "DOC-PMC-RENAL-0025-B-C0004",
-        "DOC-PMC-RENAL-0025-B-C0008"
+        "DOC-PMC-RENAL-0025-B-C0007"
       ],
       "enters_top20": false,
       "pre_reranker_rank": 21,
