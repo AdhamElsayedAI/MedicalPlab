@@ -32,7 +32,6 @@ def sha256_file(path: Path) -> str:
     with path.open("rb") as f:
         for b in iter(lambda:f.read(1024*1024), b""): h.update(b)
     return h.hexdigest()
-
 def canonical_json_bytes(obj: Any) -> bytes:
     return (json.dumps(obj, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8")
 def atomic_json(path: Path, obj: Any) -> str:
@@ -56,10 +55,22 @@ def stat(count:int,total:int)->dict[str,Any]:
     return {"count":count,"total":total,"rate":round(count/total,4) if total else 0.0,"pct":f"{100*count/total:.2f}%" if total else "0.00%","ci_95_wilson":wilson(count,total)}
 
 def resolve_corpus_dir(cfg:dict[str,Any])->Path:
-    for c in cfg["data"]["corpus_dir_candidates"]:
-        p=root_path(c)
-        if p.exists() and any(p.glob("*.chunks.json")): return p
-    raise FileNotFoundError("CORPUS_CHUNK_DIRECTORY_NOT_FOUND")
+    data = cfg.get("data", {})
+    if data.get("corpus_lock_policy") != "EXACT_PATH_NO_FALLBACK":
+        raise RuntimeError("CORPUS_LOCK_POLICY_REQUIRED")
+    configured = data.get("corpus_dir")
+    if not configured:
+        raise RuntimeError("CORPUS_DIR_MUST_BE_EXPLICIT")
+    p = root_path(configured)
+    if not p.exists() or not p.is_dir():
+        raise FileNotFoundError(f"LOCKED_CORPUS_DIRECTORY_NOT_FOUND path={p}")
+    if not any(p.glob("*.chunks.json")):
+        raise FileNotFoundError(f"LOCKED_CORPUS_HAS_NO_CHUNK_FILES path={p}")
+    for legacy in data.get("legacy_corpus_dirs", []):
+        if p.resolve() == root_path(legacy).resolve():
+            raise RuntimeError(f"LEGACY_CORPUS_FORBIDDEN path={p}")
+    return p
+
 def load_chunks(corpus_dir:Path)->tuple[dict[str,dict[str,Any]],list[str]]:
     chunks={}; ordered=[]
     for p in sorted(corpus_dir.glob("*.chunks.json")):
