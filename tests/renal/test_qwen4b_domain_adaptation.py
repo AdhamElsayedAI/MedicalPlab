@@ -40,9 +40,12 @@ def test_report_schema_accepts_minimal_valid_shape():
     sample={'benchmark':'PRODUCT_DEV_V3','n_queries':100,'product_dev_v3_sha256':'a'*64,'base_model':'Qwen/Qwen3-Embedding-4B','base_revision':'b'*40,'adapter_sha256':'c'*64,'train_sha256':'d'*64,'before':{},'after':{},'performance':{},'gate':{'status':'RETRIEVAL_DEVELOPMENT_GATE_FAILED','passed':False,'thresholds':{}}}
     jsonschema.validate(sample,schema)
 
-def test_latest_checkpoint_requires_complete_marker(tmp_path):
+def test_latest_checkpoint_requires_complete_marker_and_adapter_config(tmp_path):
     from train_qwen4b_retrieval_lora import latest_checkpoint
-    base=tmp_path/'checkpoints'; (base/'checkpoint-step-000001').mkdir(parents=True); good=base/'checkpoint-step-000002'; good.mkdir(); (good/'COMPLETE').write_text('ok')
+    base=tmp_path/'checkpoints'
+    (base/'checkpoint-step-000001').mkdir(parents=True)
+    incomplete=base/'checkpoint-step-000002'; incomplete.mkdir(); (incomplete/'COMPLETE').write_text('ok')
+    good=base/'checkpoint-step-000003'; (good/'adapter').mkdir(parents=True); (good/'COMPLETE').write_text('ok'); (good/'adapter'/'adapter_config.json').write_text('{}')
     cfg={'outputs':{'checkpoints':str(base)}}
     assert latest_checkpoint(cfg)==good
 
@@ -126,3 +129,15 @@ def test_qwen4b_preprocess_accepts_batchencoding_like_mapping(monkeypatch):
     out=t._preprocess_features(FakeST(),'kidney query',False,{'model':{'prompt':'PROMPT: '}})
     assert out['modality']=='text'
     assert out['input_ids'].shape==(1,2)
+
+def test_verify_peft_adapter_dir_requires_config_and_exactly_one_weights(tmp_path):
+    import pytest
+    from train_qwen4b_retrieval_lora import _verify_peft_adapter_dir
+    with pytest.raises(RuntimeError,match='PEFT_ADAPTER_CONFIG_MISSING'):
+        _verify_peft_adapter_dir(tmp_path)
+    (tmp_path/'adapter_config.json').write_text('{}')
+    (tmp_path/'adapter_model.safetensors').write_bytes(b'x')
+    assert _verify_peft_adapter_dir(tmp_path)==tmp_path
+    (tmp_path/'adapter_model.bin').write_bytes(b'y')
+    with pytest.raises(RuntimeError,match='PEFT_ADAPTER_WEIGHTS_INVALID'):
+        _verify_peft_adapter_dir(tmp_path)
