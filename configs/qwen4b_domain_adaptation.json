@@ -1,0 +1,88 @@
+{
+  "experiment_id": "qwen4b-domain-adaptation-v1",
+  "seed": 20260912,
+  "model": {
+    "id": "Qwen/Qwen3-Embedding-4B",
+    "revision": "5cf2132abc99cad020ac570b19d031efec650f2b",
+    "tokenizer_revision": "5cf2132abc99cad020ac570b19d031efec650f2b",
+    "prompt": "Instruct: Given a medical query, retrieve relevant clinical evidence passages.\nQuery: ",
+    "max_seq_length": 256,
+    "quantization": {
+      "load_in_4bit": true,
+      "type": "nf4",
+      "double_quant": true,
+      "compute_dtype": "float16"
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "bias": "none",
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ]
+    }
+  },
+  "training": {
+    "objective": "two-way InfoNCE with explicit source-grounded hard negatives",
+    "temperature": 0.05,
+    "epochs": 1,
+    "micro_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "checkpoint_every_optimizer_steps": 4,
+    "validation_fraction": 0.1,
+    "early_stopping_patience": 2
+  },
+  "data": {
+    "source_pool": "evaluation/renal/v5/renal-rerank-train-v5-clean-v1.json",
+    "required_source_status": "VERIFIED_SAFE_UNSPENT",
+    "corpus_dir_candidates": [
+      "Data/experiments/renal_v2/chunking/B_400_overlap",
+      "Data/experiments/renal/chunking/B_400_10pct_overlap"
+    ],
+    "product_dev_v3": "evaluation/evidence_engine/product_dev_v3.json",
+    "product_dev_v3_sha256": "dfed4a3c3ddeaa3b854317089747ce5bd2ad482867195cb0ce14c68620578746",
+    "baseline_report": "reports/evidence_engine/product_dev_v3_qwen4b_rrf_report.json",
+    "train_output": "artifacts/qwen4b_domain_adaptation/train.json",
+    "firewall_report": "artifacts/qwen4b_domain_adaptation/firewall_report.json",
+    "forbidden_eval_globs": [
+      "evaluation/evidence_engine/product_dev_v*.json",
+      "evaluation/evidence_engine/final_product_test.json",
+      "evaluation/evidence_engine/claim_verifier_benchmark.json",
+      "evaluation/evidence_engine/pubmedqa_external_benchmark.json",
+      "evaluation/renal/**/*dev*.json",
+      "evaluation/renal/**/*heldout*.json",
+      "evaluation/renal/**/*product*.json",
+      "evaluation/renal/**/*ood*.json",
+      "evaluation/renal/**/*external-eval*.json",
+      "evaluation/renal/**/*select-val*.json",
+      "evaluation/renal/**/*selector-validation*.json",
+      "evaluation/renal/**/*safety-test*.json",
+      "Data/questions/**/*eval*.json",
+      "Data/questions/**/*golden*.json",
+      "evaluation/**/*heldout*.json",
+      "evaluation/**/*final*.json",
+      "evaluation/plab/**/*.json"
+    ],
+    "near_duplicate_threshold": 0.86,
+    "semantic_near_duplicate_threshold": 0.92
+  },
+  "outputs": {
+    "root": "artifacts/qwen4b_domain_adaptation",
+    "adapter": "artifacts/qwen4b_domain_adaptation/adapter",
+    "checkpoints": "artifacts/qwen4b_domain_adaptation/checkpoints",
+    "sanity_report": "artifacts/qwen4b_domain_adaptation/sanity_report.json",
+    "training_report": "artifacts/qwen4b_domain_adaptation/training_report.json",
+    "evaluation_report": "artifacts/qwen4b_domain_adaptation/evaluation_report.json",
+    "evaluation_markdown": "artifacts/qwen4b_domain_adaptation/evaluation_report.md",
+    "gate_result": "artifacts/qwen4b_domain_adaptation/gate_result.json"
+  },
+  "gate": {
+    "semantic_recall_at_20": 0.95,
+    "semantic_recall_at_50": 0.98
+  }
+}
