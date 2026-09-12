@@ -1,0 +1,94 @@
+{
+  "benchmark": "PRODUCT_DEV_V3",
+  "n_total": 100,
+  "sha256": "dfed4a3c3ddeaa3b854317089747ce5bd2ad482867195cb0ce14c68620578746",
+  "firewall_status": "PASSED_ZERO_LEAKS",
+  "curriculum_distribution": {
+    "pathophysiology": {
+      "count": 19,
+      "percent": "19%"
+    },
+    "acid_base": {
+      "count": 16,
+      "percent": "16%"
+    },
+    "renal_physiology": {
+      "count": 14,
+      "percent": "14%"
+    },
+    "aki": {
+      "count": 13,
+      "percent": "13%"
+    },
+    "electrolytes": {
+      "count": 11,
+      "percent": "11%"
+    },
+    "pharmacology": {
+      "count": 7,
+      "percent": "7%"
+    },
+    "differential_diagnosis": {
+      "count": 3,
+      "percent": "3%"
+    },
+    "glomerular_disease": {
+      "count": 2,
+      "percent": "2%"
+    },
+    "dialysis": {
+      "count": 2,
+      "percent": "2%"
+    },
+    "renal_imaging": {
+      "count": 2,
+      "percent": "2%"
+    },
+    "laboratory_interpretation": {
+      "count": 2,
+      "percent": "2%"
+    },
+    "urinalysis": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "tubular_interstitial_disease": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "ckd": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "transplantation": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "clinical_thresholds_cutoffs": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "investigations": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "management": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "clinical_presentation": {
+      "count": 1,
+      "percent": "1%"
+    },
+    "diagnosis": {
+      "count": 1,
+      "percent": "1%"
+    }
+  },
+  "provenance_breakdown": {
+    "PRODUCT_DEV_V2_AUDITED_VALID": 45,
+    "MANUALLY_AUTHORED_CURRICULUM_SPEC": 24,
+    "BLUEPRINT_TARGETED_FILL": 8,
+    "BLUEPRINT_EXPANSION_SPEC": 23
+  }
+}

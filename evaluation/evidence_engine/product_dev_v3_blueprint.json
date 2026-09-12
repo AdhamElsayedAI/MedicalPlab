@@ -1,0 +1,107 @@
+{
+  "version": "PRODUCT_DEV_V3_BLUEPRINT_V1",
+  "predeclared_date": "2026-09-12",
+  "target_n": 100,
+  "curriculum_categories": {
+    "renal_physiology": {
+      "target_pct": 8.0,
+      "target_count": 8,
+      "description": "Glomerular filtration, tubular transport, autoregulation, clearance"
+    },
+    "pathophysiology": {
+      "target_pct": 8.0,
+      "target_count": 8,
+      "description": "Mechanisms of glomerular injury, tubular necrosis, fibrosis"
+    },
+    "clinical_presentation": {
+      "target_pct": 5.0,
+      "target_count": 5,
+      "description": "Edema, hematuria, oliguria, uremic symptoms"
+    },
+    "diagnosis": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Diagnostic criteria for renal syndromes"
+    },
+    "differential_diagnosis": {
+      "target_pct": 5.0,
+      "target_count": 5,
+      "description": "Prerenal vs intrinsic AKI, nephritic vs nephrotic"
+    },
+    "investigations": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Renal biopsy indications, serology (ANCA, anti-GBM, complements)"
+    },
+    "laboratory_interpretation": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Creatinine, eGFR, urea, proteinuria, albumin-to-creatinine ratio"
+    },
+    "management": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Fluid resuscitation, blood pressure targets, conservative CKD care"
+    },
+    "pharmacology": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "RAAS inhibitors, SGLT2i, diuretics, calcineurin inhibitors, toxicity"
+    },
+    "electrolytes": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Hyperkalemia, hypokalemia, hyponatremia, hypercalcemia"
+    },
+    "acid_base": {
+      "target_pct": 5.0,
+      "target_count": 5,
+      "description": "Metabolic acidosis, anion gap, renal tubular acidosis"
+    },
+    "aki": {
+      "target_pct": 7.0,
+      "target_count": 7,
+      "description": "KDIGO AKI staging, causes, complications, renal replacement thresholds"
+    },
+    "ckd": {
+      "target_pct": 7.0,
+      "target_count": 7,
+      "description": "KDIGO CKD staging (G1-G5, A1-A3), progression risk, mineral bone disease"
+    },
+    "glomerular_disease": {
+      "target_pct": 5.0,
+      "target_count": 5,
+      "description": "MCD, FSGS, membranous, IgA nephropathy, RPGN, lupus nephritis"
+    },
+    "tubular_interstitial_disease": {
+      "target_pct": 4.0,
+      "target_count": 4,
+      "description": "Acute interstitial nephritis, analgesic nephropathy, polycystic kidney"
+    },
+    "dialysis": {
+      "target_pct": 3.0,
+      "target_count": 3,
+      "description": "Hemodialysis, peritoneal dialysis, vascular access, dialysis complications"
+    },
+    "transplantation": {
+      "target_pct": 3.0,
+      "target_count": 3,
+      "description": "Donor matching, immunosuppression, acute/chronic rejection"
+    },
+    "urinalysis": {
+      "target_pct": 2.0,
+      "target_count": 2,
+      "description": "RBC casts, granular casts, dysmorphic RBCs, dipstick protein"
+    },
+    "renal_imaging": {
+      "target_pct": 2.0,
+      "target_count": 2,
+      "description": "Renal ultrasound, doppler for renal artery stenosis, CT/MRI"
+    },
+    "clinical_thresholds_cutoffs": {
+      "target_pct": 6.0,
+      "target_count": 6,
+      "description": "Potassium emergency cutoffs, BP targets (<130/80), KDIGO eGFR drop"
+    }
+  }
+}

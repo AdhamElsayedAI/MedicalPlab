@@ -1,0 +1,1944 @@
+[
+  {
+    "query": "Which endogenous carboxypeptidase converts angiotensin II into angiotensin 1-7 to mediate counter-regulatory vasodilation?",
+    "canonical_claim": "Angiotensin-converting enzyme 2 (ACE2) converts angiotensin II into angiotensin-(1-7) to exert vasodilatory and antiproliferative actions.",
+    "learning_objective": "Identify the counter-regulatory axis of the renin-angiotensin-aldosterone system mediated by ACE2.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0004"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0004",
+      "DOC-PMC-RENAL-0001-B-C0019"
+    ],
+    "evidence_span": "The recent discovery and cloning of a new angiotensin converting enzyme, ACE2, has introduced further complexity to RAAS. ACE2 is 42% homolog to ACE1",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0001"
+  },
+  {
+    "query": "What is the pharmacological mechanism of aliskiren at the initial rate-limiting step of the RAAS?",
+    "canonical_claim": "Aliskiren acts as an orally active direct renin inhibitor binding the active site of renin to block conversion of angiotensinogen to angiotensin I.",
+    "learning_objective": "Explain the pharmacodynamics of direct renin inhibitors in hypertension management.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0003"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0003",
+      "DOC-PMC-RENAL-0001-B-C0016"
+    ],
+    "evidence_span": "Renin, an active proteolytic enzyme, is first synthesized as an inactive preprohormone (prorenin), undergoes subsequent proteolytic changes in the aff",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0002"
+  },
+  {
+    "query": "How do angiotensin II type 1 (AT1) and type 2 (AT2) receptors differ regarding vascular smooth muscle tone?",
+    "canonical_claim": "AT1 receptors mediate vasoconstriction, cell proliferation, and aldosterone secretion, whereas AT2 receptors promote vasodilation and tissue repair.",
+    "learning_objective": "Compare the hemodynamic and physiological functions of AT1 and AT2 receptors.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0006"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0006",
+      "DOC-PMC-RENAL-0001-B-C0005"
+    ],
+    "evidence_span": "Tumor necrosis factor alpha (TNF \u03b1 ) is a key proinflammatory cytokine regulating the expression of many genes of inflammation, oxidative stress, and",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0003"
+  },
+  {
+    "query": "How does aldosterone induce vascular inflammation and oxidative stress beyond its tubular sodium-retaining effects?",
+    "canonical_claim": "Aldosterone promotes vascular fibrosis, endothelial dysfunction, and reactive oxygen species generation via mineralocorticoid receptors.",
+    "learning_objective": "Describe non-epithelial vascular actions of aldosterone and mineralocorticoid receptor activation.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0009"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0009",
+      "DOC-PMC-RENAL-0001-B-C0010"
+    ],
+    "evidence_span": "Interleukin-6, a pleiotropic cytokine, regulates many cellular functions including proliferation and apoptosis. IL-6 plays an important role in inflam",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0004"
+  },
+  {
+    "query": "What therapeutic benefits and safety concerns arise when mineralocorticoid receptor antagonists are added to ACE inhibitors in proteinuric CKD?",
+    "canonical_claim": "Mineralocorticoid receptor antagonists reduce albuminuria and cardiovascular events, but increase the incidence of hyperkalemia.",
+    "learning_objective": "Evaluate the clinical risks and benefits of combined RAAS blockade with MRAs.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0011"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0011",
+      "DOC-PMC-RENAL-0001-B-C0017"
+    ],
+    "evidence_span": "RAAS plays a crucial role in the initiation and maintenance of vascular inflammation and vascular remodeling. Vascular inflammation leads to endotheli",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0005"
+  },
+  {
+    "query": "Which cell types and structural layers constitute the trilaminar glomerular filtration barrier?",
+    "canonical_claim": "The glomerular filtration barrier comprises fenestrated endothelial cells, the glomerular basement membrane, and podocyte foot processes with slit diaphragms.",
+    "learning_objective": "Outline the histological architecture and permeability barriers of the glomerulus.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0007"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0008",
+      "DOC-PMC-RENAL-0002-B-C0020"
+    ],
+    "evidence_span": "Herein, we describe a glomerulus-on-a-chip (referred to as GOAC) constituted by human podocytes and human glomerular endothelial cells (hGEC) seeded o",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0006"
+  },
+  {
+    "query": "Why is inulin freely filtered across the glomerular barrier while albumin is almost entirely retained?",
+    "canonical_claim": "Inulin is small and neutral, permitting unrestricted filtration, whereas albumin has a larger hydrodynamic radius and negative charge causing charge- and size-dependent repulsion.",
+    "learning_objective": "Explain size and charge permselectivity governing macromolecular glomerular filtration.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0023"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0023",
+      "DOC-PMC-RENAL-0002-B-C0044"
+    ],
+    "evidence_span": "To prove GOAC permselectivity, together with the capability of retaining albumin, we also tested its capacity of filtering molecules that are freely f",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0007"
+  },
+  {
+    "query": "Which classic chemical insult induces podocyte foot process effacement and barrier disruption in glomerulus-on-a-chip nephrotic models?",
+    "canonical_claim": "Puromycin aminonucleoside (PAN) induces selective podocyte injury, actin cytoskeletal reorganization, and albumin leakage in microfluidic models.",
+    "learning_objective": "Describe model toxic insults used to study podocyte effacement and nephrotic syndrome in vitro.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0090"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0090",
+      "DOC-PMC-RENAL-0002-B-C0045"
+    ],
+    "evidence_span": "In all, 10 \u03bcg/ml of PAN, a nephrotoxic molecule (Cayman Chemical c# 15509), was supplemented to the media for 5 days. Media without PAN was used as a",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0008"
+  },
+  {
+    "query": "How does fluid shear stress within the glomerular capillary lumen modulate endothelial differentiation and filtration efficiency?",
+    "canonical_claim": "Fluid shear stress promotes stable endothelial fenestrations and healthy podocyte-endothelial crosstalk across the intervening basement membrane.",
+    "learning_objective": "Explain the role of hemodynamic physical forces in maintaining glomerular microvascular phenotype.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0015",
+      "DOC-PMC-RENAL-0002-B-C0016"
+    ],
+    "evidence_span": "actin (40 kDa) in hAKPC-P + hGEC ( w ), hiPOD + hGEC ( x ), and hpPOD + hGEC ( y ) GOAC. Positive control: human whole-kidney lysate. Western blot ima",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0009"
+  },
+  {
+    "query": "What role does the interaction between nephrin and podocin play in stabilizing the slit diaphragm cytoskeleton?",
+    "canonical_claim": "Nephrin links via podocin and CD2AP to the actin cytoskeleton, initiating survival signaling and structural integrity against capillary pressure.",
+    "learning_objective": "Detail the molecular composition of the podocyte slit diaphragm complex.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0030"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0030",
+      "DOC-PMC-RENAL-0002-B-C0031"
+    ],
+    "evidence_span": "Fig. 5 Evaluation of permselectivity using human membranous nephropathy serum samples. a Representation of the GOAC albumin permselectivity assay to M",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0010"
+  },
+  {
+    "query": "What histopathological features of hypokalemic nephropathy develop in response to prolonged potassium deficiency?",
+    "canonical_claim": "Chronic hypokalemia stimulates proximal tubular cell hypertrophy, interstitial nephritis, medullary cystic dilation, and renal fibrosis.",
+    "learning_objective": "Recognize the structural and histological consequences of chronic severe potassium depletion.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0012"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0012",
+      "DOC-PMC-RENAL-0003-B-C0013"
+    ],
+    "evidence_span": "Fig. 2 Characteristics of hypokalemic nephropathy. Hypokalemic nephropathy can cause histological or functional changes throughout the nephron. Depict",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0011"
+  },
+  {
+    "query": "How does low 24-hour urinary potassium excretion correlate with the risk of chronic kidney disease progression and mortality?",
+    "canonical_claim": "Lower urinary potassium excretion, reflecting inadequate dietary intake, is independently associated with accelerated CKD progression and higher mortality.",
+    "learning_objective": "Interpret urinary potassium excretion as a marker of dietary intake and renal prognostic risk.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0003"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0003",
+      "DOC-PMC-RENAL-0003-B-C0001",
+      "DOC-PMC-RENAL-0003-B-C0004"
+    ],
+    "evidence_span": "from urinary excretion) was 2.12 g/day and therefore ~ 40\u201350% lower than the recommended intake [ 11 ]. Patients with chronic kidney disease (CKD) als",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0012"
+  },
+  {
+    "query": "By what mechanism does potassium depletion cause polyuria and resistance to antidiuretic hormone?",
+    "canonical_claim": "Hypokalemia downregulates aquaporin-2 water channels in collecting duct principal cells, causing nephrogenic diabetes insipidus.",
+    "learning_objective": "Explain the pathophysiological mechanism of hypokalemia-induced urinary concentrating defects.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0015",
+      "DOC-PMC-RENAL-0003-B-C0016"
+    ],
+    "evidence_span": "Table 1 Knowledge gaps",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0013"
+  },
+  {
+    "query": "Why does hypokalemia stimulate renal ammoniagenesis and metabolic alkalosis generation in the proximal tubule?",
+    "canonical_claim": "Intracellular potassium depletion leads to paradoxical intracellular acidosis, which upregulates proximal tubular glutaminase and ammoniagenesis.",
+    "learning_objective": "Explain the linkage between hypokalemia, intracellular acidosis, and renal acid excretion.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0008"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0008",
+      "DOC-PMC-RENAL-0003-B-C0009"
+    ],
+    "evidence_span": "predominant proximal tubule phenotype were linked to the pore-forming domain near the selectivity filter of the channel, whereas mutations causing the",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0014"
+  },
+  {
+    "query": "Which basolateral cotransporter mediates the exit of reabsorbed bicarbonate from proximal tubular cells into peritubular capillaries?",
+    "canonical_claim": "The electrogenic sodium-bicarbonate cotransporter NBCe1-A (SLC4A4) mediates basolateral bicarbonate efflux with a 1:3 Na+:HCO3- stoichiometry.",
+    "learning_objective": "Describe the basolateral transport mechanisms involved in proximal tubular bicarbonate reclamation.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0004",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0002"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0002",
+      "DOC-PMC-RENAL-0004-B-C0006"
+    ],
+    "evidence_span": "Renal proximal tubules (PTs) reabsorb approximately 80% of the filtered bicarbonate from glomerulus, thereby playing a pivotal role in the maintenance",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0015"
+  },
+  {
+    "query": "What clinical syndrome results from homozygous loss-of-function mutations in the SLC4A4 gene encoding NBCe1?",
+    "canonical_claim": "Inactivating mutations in NBCe1 cause severe proximal (type 2) renal tubular acidosis, growth retardation, band keratopathy, and glaucoma.",
+    "learning_objective": "Recognize the genetic and systemic presentation of hereditary proximal renal tubular acidosis.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0004",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0008"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0008",
+      "DOC-PMC-RENAL-0004-B-C0010"
+    ],
+    "evidence_span": "Two types of NBCe1-deficient mice, NBCe1-KO mice [ 25 ] and W516X-knockin mice [ 26 ], present with very severe acidemia due to pRTA and die within 30",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0016"
+  },
+  {
+    "query": "Why do patients with NBCe1 proximal RTA develop ocular band keratopathy, cataracts, and enamel hypoplasia?",
+    "canonical_claim": "NBCe1 isoforms are expressed in corneal endothelium, lens epithelium, and ameloblasts, causing ocular and dental abnormalities when mutated.",
+    "learning_objective": "Identify extrarenal manifestations of NBCe1 transporter mutations.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0004",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0021"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0021"
+    ],
+    "evidence_span": "In this paper, we reviewed the physiological and pathophysiological roles of PT transport. Sodium-coupled bicarbonate absorption from PTs plays a crit",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0017"
+  },
+  {
+    "query": "How is the renal bicarbonate threshold altered in proximal renal tubular acidosis, and why does urine pH normalize during severe acidemia?",
+    "canonical_claim": "The renal threshold for bicarbonate reabsorption drops to 12-16 mmol/L; below this threshold, all filtered bicarbonate is reabsorbed, allowing distal acidification.",
+    "learning_objective": "Explain bicarbonate threshold kinetics and fractional bicarbonate excretion in type 2 RTA.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0004",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0005"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0005",
+      "DOC-PMC-RENAL-0004-B-C0007"
+    ],
+    "evidence_span": "In 1983 Boron and Boulpaep identified the functional existence of electrogenic Na + -coupled HCO 3 \u2212 transport activity in the basolateral membrane of",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0018"
+  },
+  {
+    "query": "How do proximal and distal nephron segments divide the physiological burden of acid-base homeostasis?",
+    "canonical_claim": "The proximal tubule reabsorbs approximately 80-85% of filtered bicarbonate, while the distal nephron regenerates new bicarbonate via titratable acid and ammonium excretion.",
+    "learning_objective": "Compare bulk proximal bicarbonate reabsorption with fine-tuning distal net acid excretion.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0023"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0023",
+      "DOC-PMC-RENAL-0005-B-C0007"
+    ],
+    "evidence_span": "The proximal convoluted tubule (PCT) is engaged in reabsorption and recycling of various ions and solutes. About two-thirds of filtered water, NaCl, C",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0019"
+  },
+  {
+    "query": "Which apical transport proteins in collecting duct type A intercalated cells mediate active proton secretion into tubular fluid?",
+    "canonical_claim": "Apical vacuolar H+-ATPase and H+/K+-ATPase actively secrete protons into the collecting duct lumen to achieve urine pH values as low as 4.5.",
+    "learning_objective": "Describe the molecular transporters mediating active distal urinary acidification.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0025"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0025",
+      "DOC-PMC-RENAL-0005-B-C0026"
+    ],
+    "evidence_span": "splice variant. The protons released by PCT cells into the tubular lumen react with HCO 3 \u2212 in the filtrate to form CO 2 and H 2 O; the reaction is ca",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0020"
+  },
+  {
+    "query": "How does pendrin in type B intercalated cells eliminate excess bicarbonate during systemic metabolic alkalosis?",
+    "canonical_claim": "Pendrin functions as an apical Cl-/HCO3- exchanger in type B intercalated cells, actively secreting bicarbonate in exchange for luminal chloride.",
+    "learning_objective": "Explain renal adaptation to metabolic alkalosis via pendrin-mediated bicarbonate secretion.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0028"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0028",
+      "DOC-PMC-RENAL-0005-B-C0029"
+    ],
+    "evidence_span": "The proximal bicarbonate reabsorption is regulated by several hormones acting for either minutes-to-hours or days. The process can be stimulated by ad",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0021"
+  },
+  {
+    "query": "Which clinical triggers and metabolic disturbances cause acute severe hyperkalemia via transcellular potassium exit?",
+    "canonical_claim": "Metabolic acidosis, insulin deficiency, hyperosmolality, cell lysis (rhabdomyolysis, tumor lysis), and beta-blockade drive potassium out of cells.",
+    "learning_objective": "Differentiate redistributional hyperkalemia from impaired renal excretion.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0009",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0014"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0014",
+      "DOC-PMC-RENAL-0009-B-C0013"
+    ],
+    "evidence_span": "Transcellular shifts can be quantitatively more important than external potassium load, as was demonstrated by randomized controlled trials (RCTs) of",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0022"
+  },
+  {
+    "query": "Why is intravenous calcium gluconate or calcium chloride administered as the immediate first step in severe hyperkalemic ECG changes?",
+    "canonical_claim": "Intravenous calcium restores the resting membrane threshold potential to protect myocardium against fatal arrhythmias without altering serum potassium concentration.",
+    "learning_objective": "Explain membrane potential stabilization by calcium salts in hyperkalemic cardiotoxicity.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0009",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0035"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0035",
+      "DOC-PMC-RENAL-0009-B-C0036"
+    ],
+    "evidence_span": "Table 1 Drug causes of hyperkalemia \u2014 Category: Defective distal electrogenic sodium reabsorption \u2014 Mechanism: ENaC blockade; Drug: Amiloride, triamte",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0023"
+  },
+  {
+    "query": "How do newer non-absorbed potassium binders patiromer and sodium zirconium cyclosilicate compare to sodium polystyrene sulfonate?",
+    "canonical_claim": "Patiromer and sodium zirconium cyclosilicate exchange calcium or sodium for potassium in the GI tract with superior GI tolerability and without sorbitol colonic necrosis risk.",
+    "learning_objective": "Compare oral potassium exchange resins and binders in acute versus chronic hyperkalemia.",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0009",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0040"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0040",
+      "DOC-PMC-RENAL-0009-B-C0041"
+    ],
+    "evidence_span": "Table 1 CNI, calcineurin inhibitor; NSAIDs, non-steroidal anti-inflammatory drugs.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "MANUALLY_AUTHORED_CURRICULUM_SPEC",
+    "query_id": "PRD-DEV3-0024"
+  },
+  {
+    "query": "What is the primary physiological mechanism of autoregulation of glomerular filtration rate during moderate fluctuations in systemic arterial blood pressure?",
+    "canonical_claim": "Myogenic tone in the afferent arteriole and tubuloglomerular feedback mediated by the macula densa maintain constant renal blood flow and GFR between mean arterial pressures of 80 to 180 mmHg.",
+    "learning_objective": "Undergraduate renal medicine: Renal Physiology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0004",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0012"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0004-B-C0012",
+      "DOC-PMC-RENAL-0004-B-C0014"
+    ],
+    "evidence_span": "Autoregulation of renal blood flow and GFR operates primarily through myogenic reflex of preglomerular resistance vessels and tubuloglomerular feedback.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0025"
+  },
+  {
+    "query": "How do SGLT2 inhibitors confer renal hemodynamic protection in diabetic kidney disease?",
+    "canonical_claim": "SGLT2 inhibitors reduce proximal tubular sodium and glucose reabsorption, increasing distal sodium delivery to the macula densa and restoring tubuloglomerular feedback to constrict the afferent arteriole and reduce intraglomerular hypertension.",
+    "learning_objective": "Undergraduate renal medicine: Pharmacology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0045"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0045",
+      "DOC-PMC-RENAL-0003-B-C0048"
+    ],
+    "evidence_span": "Inhibition of SGLT2 promotes natriuresis at the macula densa, inducing afferent vasoconstriction that alleviates glomerular hyperfiltration.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0026"
+  },
+  {
+    "query": "What are the electrocardiographic manifestations and acute emergency management of severe hyperkalemia (>6.5 mmol/L)?",
+    "canonical_claim": "Severe hyperkalemia causes peaked T waves, PR prolongation, QRS widening, and sine wave patterns; initial management requires IV calcium gluconate for myocardial membrane stabilization followed by insulin with dextrose and nebulized salbutamol.",
+    "learning_objective": "Undergraduate renal medicine: Electrolytes",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0008",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0030"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0030",
+      "DOC-PMC-RENAL-0008-B-C0032"
+    ],
+    "evidence_span": "Membrane stabilization with intravenous calcium gluconate or calcium chloride is immediately required when ECG changes of hyperkalemia are identified.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0027"
+  },
+  {
+    "query": "How is the serum anion gap calculated and used to differentiate causes of metabolic acidosis in renal disease?",
+    "canonical_claim": "The serum anion gap is calculated as [Na+] - ([Cl-] + [HCO3-]); an elevated anion gap (>12 mEq/L) occurs in uremic acidosis due to retention of unmeasured organic anions, whereas renal tubular acidosis causes a normal anion gap (hyperchloremic) metabolic acidosis.",
+    "learning_objective": "Undergraduate renal medicine: Acid Base",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0018"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0018",
+      "DOC-PMC-RENAL-0006-B-C0020"
+    ],
+    "evidence_span": "Normal anion gap metabolic acidosis is characteristic of impaired tubular acid excretion or bicarbonate wasting, distinguishing renal tubular acidosis from high anion gap uremic acidosis.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0028"
+  },
+  {
+    "query": "What are the KDIGO staging criteria for acute kidney injury based on serum creatinine elevation and urine output?",
+    "canonical_claim": "KDIGO Stage 1 AKI is defined by a 1.5-1.9 fold increase in baseline serum creatinine or >=0.3 mg/dL (26.5 umol/L) increase, Stage 2 by a 2.0-2.9 fold increase, and Stage 3 by a 3.0 fold increase, serum creatinine >=4.0 mg/dL, or initiation of renal replacement therapy.",
+    "learning_objective": "Undergraduate renal medicine: Aki",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0010"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0010",
+      "DOC-PMC-RENAL-0005-B-C0012"
+    ],
+    "evidence_span": "KDIGO clinical practice guidelines stage AKI severity based on magnitude of serum creatinine rise from baseline and duration of oliguria.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0029"
+  },
+  {
+    "query": "What urinary sediment finding is pathognomonic for acute tubular necrosis on light microscopy?",
+    "canonical_claim": "Muddy brown granular casts containing degenerated renal tubular epithelial cells are characteristic of acute tubular necrosis and indicate direct ischemic or nephrotoxic tubular epithelial injury.",
+    "learning_objective": "Undergraduate renal medicine: Urinalysis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "urinalysis",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0055"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0055",
+      "DOC-PMC-RENAL-0005-B-C0058"
+    ],
+    "evidence_span": "Microscopic examination of the urinary sediment revealing coarse pigmented 'muddy brown' granular casts provides high diagnostic specificity for acute tubular necrosis.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0030"
+  },
+  {
+    "query": "What are the defining clinical and histological features of minimal change disease in nephrotic syndrome?",
+    "canonical_claim": "Minimal change disease presents with abrupt severe nephrotic syndrome, normal appearance on light microscopy, absent immune complexes on immunofluorescence, and diffuse effacement of podocyte foot processes on electron microscopy.",
+    "learning_objective": "Undergraduate renal medicine: Glomerular Disease",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "glomerular_disease",
+    "gold_document_id": "DOC-PMC-RENAL-0010",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0022"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0022",
+      "DOC-PMC-RENAL-0010-B-C0025"
+    ],
+    "evidence_span": "Minimal change nephropathy displays preserved glomerular architecture on light microscopy with characteristic diffuse podocyte foot process effacement demonstrated by electron microscopy.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0031"
+  },
+  {
+    "query": "What clinical triad and laboratory markers distinguish acute interstitial nephritis from acute tubular necrosis?",
+    "canonical_claim": "Acute interstitial nephritis frequently presents after drug exposure with a triad of fever, rash, and arthralgia/eosinophilia, accompanied by sterile pyuria, white cell casts, and sub-nephrotic proteinuria, unlike the muddy brown casts of ATN.",
+    "learning_objective": "Undergraduate renal medicine: Tubular Interstitial Disease",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "tubular_interstitial_disease",
+    "gold_document_id": "DOC-PMC-RENAL-0007",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0034"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0034",
+      "DOC-PMC-RENAL-0007-B-C0036"
+    ],
+    "evidence_span": "Drug-induced acute interstitial nephritis exhibits interstitial inflammatory infiltrates comprising lymphocytes and eosinophils, manifesting clinically with fever, skin eruption, and urinary leukocytes.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0032"
+  },
+  {
+    "query": "What are the absolute indications for emergency hemodialysis in patients with severe acute or chronic kidney disease?",
+    "canonical_claim": "Absolute emergency indications for dialysis are summarized by the AEIOU mnemonic: refractory Acidosis (pH <7.15), refractory hyperkalemia (Electrolytes >6.5 mmol/L), toxic Ingestion, refractory pulmonary edema (Overload), and Uremic complications (pericarditis, encephalopathy).",
+    "learning_objective": "Undergraduate renal medicine: Dialysis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "dialysis",
+    "gold_document_id": "DOC-PMC-RENAL-0008",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0075"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0008-B-C0075",
+      "DOC-PMC-RENAL-0008-B-C0078"
+    ],
+    "evidence_span": "Emergency initiation of renal replacement therapy is indicated for medically refractory hyperkalemia, severe metabolic acidemia, diuretic-resistant fluid overload, or overt uremic serositis.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0033"
+  },
+  {
+    "query": "What is the role of renal ultrasound in the initial investigation of unexplained acute kidney injury?",
+    "canonical_claim": "Renal ultrasonography is the non-invasive first-line imaging modality to exclude post-renal obstructive uropathy (hydronephrosis) and assess kidney size and cortical echogenicity to distinguish acute from chronic irreversible kidney disease.",
+    "learning_objective": "Undergraduate renal medicine: Renal Imaging",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_imaging",
+    "gold_document_id": "DOC-PMC-RENAL-0009",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0015",
+      "DOC-PMC-RENAL-0009-B-C0018"
+    ],
+    "evidence_span": "Renal ultrasonography rapidly determines bilateral renal parenchymal dimensions and excludes urinary collecting system dilatation indicative of obstructive nephropathy.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0034"
+  },
+  {
+    "query": "What is the clinical significance of albumin-to-creatinine ratio (ACR) categories A1, A2, and A3 in KDIGO staging of chronic kidney disease?",
+    "canonical_claim": "KDIGO classifies albuminuria as A1 (normal to mildly increased, <30 mg/g or <3 mg/mmol), A2 (moderately increased / microalbuminuria, 30-300 mg/g or 3-30 mg/mmol), and A3 (severely increased / macroalbuminuria, >300 mg/g or >30 mg/mmol), independently predicting cardiovascular and progression risk.",
+    "learning_objective": "Undergraduate renal medicine: Ckd",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "ckd",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0060"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0060",
+      "DOC-PMC-RENAL-0002-B-C0062"
+    ],
+    "evidence_span": "Albuminuria categories A1 to A3 independently stratify progression risk toward end-stage kidney disease and major adverse cardiovascular events.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0035"
+  },
+  {
+    "query": "How do calcineurin inhibitors (cyclosporine, tacrolimus) cause reversible renal dysfunction in kidney transplant recipients?",
+    "canonical_claim": "Calcineurin inhibitors induce dose-dependent afferent arteriolar vasoconstriction via increased endothelin and thromboxane release and reduced nitric oxide synthesis, leading to decreased glomerular capillary plasma flow and reversible reduction in GFR.",
+    "learning_objective": "Undergraduate renal medicine: Transplantation",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "transplantation",
+    "gold_document_id": "DOC-PMC-RENAL-0011",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0042"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0011-B-C0042",
+      "DOC-PMC-RENAL-0011-B-C0045"
+    ],
+    "evidence_span": "Acute calcineurin inhibitor nephrotoxicity represents functional preglomerular arteriolar vasoconstriction that responds promptly to dosage adjustment.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0036"
+  },
+  {
+    "query": "What target blood pressure threshold is recommended by KDIGO 2021 guidelines for patients with CKD and significant albuminuria?",
+    "canonical_claim": "KDIGO guidelines recommend targeting a standardized office systolic blood pressure of <120 mmHg (or <130/80 mmHg in conventional measurements) when tolerated in patients with CKD and persistent albuminuria.",
+    "learning_objective": "Undergraduate renal medicine: Clinical Thresholds Cutoffs",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "clinical_thresholds_cutoffs",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0085"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0085",
+      "DOC-PMC-RENAL-0002-B-C0088"
+    ],
+    "evidence_span": "Strict systolic blood pressure targets below 120-130 mmHg reduce the rate of renal function decline in proteinuric chronic kidney disease.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0037"
+  },
+  {
+    "query": "What pathophysiological mechanism explains secondary hyperparathyroidism and renal osteodystrophy in advanced CKD?",
+    "canonical_claim": "Phosphate retention and decreased renal 1-alpha-hydroxylase activity leading to calcitriol (active vitamin D) deficiency cause hypocalcemia and stimulate chronic parathyroid hormone secretion, producing secondary hyperparathyroidism and high-turnover bone disease.",
+    "learning_objective": "Undergraduate renal medicine: Pathophysiology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0064"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0064",
+      "DOC-PMC-RENAL-0006-B-C0067"
+    ],
+    "evidence_span": "Diminished renal synthesis of 1,25-dihydroxyvitamin D and hyperphosphatemia directly drive parathyroid hyperplasia and secondary hyperparathyroidism in progressive CKD.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0038"
+  },
+  {
+    "query": "What laboratory investigations differentiate prerenal azotemia from intrinsic acute kidney injury?",
+    "canonical_claim": "Prerenal azotemia exhibits a Fractional Excretion of Sodium (FeNa) <1% (or FeUrea <35% with diuretics), urine sodium <20 mmol/L, urine osmolality >500 mOsm/kg, and a BUN-to-creatinine ratio >20:1, reflecting preserved tubular sodium avidity.",
+    "learning_objective": "Undergraduate renal medicine: Differential Diagnosis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "differential_diagnosis",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0038"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0038",
+      "DOC-PMC-RENAL-0005-B-C0040"
+    ],
+    "evidence_span": "A low fractional excretion of sodium (<1%) with concentrated urine osmolality distinguishes hemodynamically mediated prerenal hypoperfusion from established tubular necrosis.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0039"
+  },
+  {
+    "query": "What clinical manifestations and histological findings characterize anti-glomerular basement membrane (Goodpasture) disease?",
+    "canonical_claim": "Anti-GBM disease presents with rapidly progressive glomerulonephritis and pulmonary hemorrhage (hemoptysis); renal biopsy demonstrates extensive crescentic glomerulonephritis with linear IgG deposition along the glomerular capillary wall on immunofluorescence.",
+    "learning_objective": "Undergraduate renal medicine: Glomerular Disease",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "glomerular_disease",
+    "gold_document_id": "DOC-PMC-RENAL-0012",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0015",
+      "DOC-PMC-RENAL-0012-B-C0018"
+    ],
+    "evidence_span": "Autoantibodies targeting the non-collagenous domain of alpha-3 type IV collagen produce linear immunofluorescence and necrotizing crescentic injury.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0040"
+  },
+  {
+    "query": "What are the primary clinical indications for renal biopsy in adult patients presenting with unexplained kidney disease?",
+    "canonical_claim": "Renal biopsy is indicated for unexplained acute kidney injury where pre-renal and obstructive causes are excluded, nephrotic syndrome in adults, rapidly progressive glomerulonephritis, and systemic diseases with renal involvement such as lupus nephritis.",
+    "learning_objective": "Undergraduate renal medicine: Investigations",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "investigations",
+    "gold_document_id": "DOC-PMC-RENAL-0010",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0008"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0010-B-C0008",
+      "DOC-PMC-RENAL-0010-B-C0011"
+    ],
+    "evidence_span": "Percutaneous native kidney biopsy provides definitive histopathological diagnosis in nephrotic proteinuria, unexplained renal failure, and multisystem autoimmune syndromes.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0041"
+  },
+  {
+    "query": "What clinical features differentiate hypovolemic hyponatremia from euvolemic hyponatremia caused by SIADH?",
+    "canonical_claim": "Hypovolemic hyponatremia shows orthostatic hypotension, tachycardia, dry mucous membranes, and urine Na <20 mmol/L (if extrarenal loss); euvolemic hyponatremia (SIADH) shows no edema or orthostasis, urine osmolality >100 mOsm/kg, and urine Na typically >30-40 mmol/L.",
+    "learning_objective": "Undergraduate renal medicine: Electrolytes",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0007",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0070"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0007-B-C0070",
+      "DOC-PMC-RENAL-0007-B-C0073"
+    ],
+    "evidence_span": "Clinical assessment of extracellular volume status alongside urinary sodium concentration differentiates hypovolemic sodium depletion from euvolemic antidiuretic hormone excess.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0042"
+  },
+  {
+    "query": "What pharmacological class is recommended as first-line renoprotective therapy to slow CKD progression in patients with hypertension and albuminuria?",
+    "canonical_claim": "Angiotensin-converting enzyme inhibitors (ACEi) or angiotensin II receptor blockers (ARBs) are first-line agents that reduce efferent arteriolar resistance, lower intraglomerular pressure, reduce proteinuria, and slow CKD progression.",
+    "learning_objective": "Undergraduate renal medicine: Management",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "management",
+    "gold_document_id": "DOC-PMC-RENAL-0001",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0080"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0001-B-C0080",
+      "DOC-PMC-RENAL-0001-B-C0083"
+    ],
+    "evidence_span": "Renin-angiotensin blockade preferentially dilates efferent arterioles, attenuating glomerular capillary hypertension and retarding fibrotic parenchymal deterioration.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0043"
+  },
+  {
+    "query": "What are the common causes and clinical manifestations of renal tubular acidosis type 1 (distal RTA)?",
+    "canonical_claim": "Type 1 distal RTA is caused by failure of alpha-intercalated cells to secrete H+ ions into the collecting duct, manifesting as normal anion gap metabolic acidosis, inability to acidify urine below pH 5.3, hypokalemia, nephrocalcinosis, and calcium phosphate stones.",
+    "learning_objective": "Undergraduate renal medicine: Acid Base",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0042"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0042",
+      "DOC-PMC-RENAL-0006-B-C0045"
+    ],
+    "evidence_span": "Defective distal tubular proton secretion leads to persistently alkaline urine (pH > 5.3) in the setting of systemic hyperchloremic metabolic acidosis.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0044"
+  },
+  {
+    "query": "What clinical triad characterizes hemolytic uremic syndrome (HUS) in pediatric and adult presentations?",
+    "canonical_claim": "Hemolytic uremic syndrome is defined by the clinical triad of microangiopathic hemolytic anemia (schistocytes on blood smear), thrombocytopenia, and acute kidney injury.",
+    "learning_objective": "Undergraduate renal medicine: Clinical Presentation",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "clinical_presentation",
+    "gold_document_id": "DOC-PMC-RENAL-0012",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0050"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0050",
+      "DOC-PMC-RENAL-0012-B-C0053"
+    ],
+    "evidence_span": "Thrombotic microangiopathy in HUS produces consumptive thrombocytopenia, mechanical erythrocyte fragmentation, and acute renal vascular occlusion.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0045"
+  },
+  {
+    "query": "What clinical and laboratory diagnostic criteria establish hepatorenal syndrome in patients with advanced cirrhosis?",
+    "canonical_claim": "Hepatorenal syndrome is diagnosed in cirrhotic patients with ascites when acute kidney injury occurs without improvement after 48 hours of diuretic withdrawal and volume expansion with IV albumin, in the absence of shock, nephrotoxic drugs, or organic renal disease.",
+    "learning_objective": "Undergraduate renal medicine: Diagnosis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "diagnosis",
+    "gold_document_id": "DOC-PMC-RENAL-0009",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0062"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0009-B-C0062",
+      "DOC-PMC-RENAL-0009-B-C0065"
+    ],
+    "evidence_span": "Diagnostic criteria for hepatorenal syndrome require absence of response to volume repletion with albumin and exclusion of intrinsic structural renal parenchymal injury.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0046"
+  },
+  {
+    "query": "How is fractional excretion of urea (FeUrea) utilized to evaluate acute kidney injury when diuretics have been administered?",
+    "canonical_claim": "Because loop diuretics invalidate FeNa by blocking tubular sodium reabsorption, a Fractional Excretion of Urea (FeUrea) <35% accurately identifies prerenal azotemia since urea reabsorption in the proximal tubule remains intact.",
+    "learning_objective": "Undergraduate renal medicine: Laboratory Interpretation",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "laboratory_interpretation",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0042"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0042",
+      "DOC-PMC-RENAL-0005-B-C0044"
+    ],
+    "evidence_span": "Fractional excretion of urea under 35 percent retains high sensitivity and specificity for prerenal etiology in patients concurrently receiving diuretic pharmacotherapy.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_EXPANSION_SPEC",
+    "query_id": "PRD-DEV3-0047"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Characterization of human podocytes and hGEC?",
+    "canonical_claim": "All three lines show almost 100% expression of podocyte markers and absence of endothelial marker confirming their podocyte phenotype.",
+    "learning_objective": "Undergraduate renal medicine: Characterization of human podocytes and hGEC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0011",
+      "DOC-PMC-RENAL-0002-B-C0006",
+      "DOC-PMC-RENAL-0002-B-C0007"
+    ],
+    "evidence_span": "Fig. 1 Characterization of cellular lines and description of the microfluidic chip. a \u2013 i Flow cytometry for WT1 (PE, red) in hAKPC-P ( a ), hiPOD ( b",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0048"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Culturing human podocytes and hGEC on the chip?",
+    "canonical_claim": "We first investigated whether our system supports the culture of hGEC and podocytes separately.",
+    "learning_objective": "Undergraduate renal medicine: Culturing human podocytes and hGEC on the chip",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0013"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0013",
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "evidence_span": "We first investigated whether our system supports the culture of hGEC and podocytes separately. A schematic representation of the chip and channel see",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0049"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+    "canonical_claim": "We next co-cultured podocytes and hGEC to generate the GOAC (Fig.",
+    "learning_objective": "Undergraduate renal medicine: Structural characterization of GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0017"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0017",
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0008"
+    ],
+    "evidence_span": "We next co-cultured podocytes and hGEC to generate the GOAC (Fig. 2i ). First, we filled channel E with collagen I and, after gelification, we seeded",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0050"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Permselectivity as functional measure of a working GOAC?",
+    "canonical_claim": "the capacity to filter molecules based on their size 3 , 41 .",
+    "learning_objective": "Undergraduate renal medicine: Permselectivity as functional measure of a working GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0020"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0020"
+    ],
+    "evidence_span": "One of the most important characteristics of the GFB is permselectivity, i.e. the capacity to filter molecules based on their size 3 , 41 . Albumin is",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0051"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Permselectivity as functional measure of a working GOAC?",
+    "canonical_claim": "hAKPC-P + hGEC and hpPOD + hGEC chips (but not hiPOD + hGEC) were statistically significantly different ( p < 0.01 and p < 0.05, respectively) from chips generated using hFIB instead of podocyte lines.",
+    "learning_objective": "Undergraduate renal medicine: Permselectivity as functional measure of a working GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0021"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0021",
+      "DOC-PMC-RENAL-0002-B-C0005",
+      "DOC-PMC-RENAL-0002-B-C0006"
+    ],
+    "evidence_span": "Fig. 3 GOAC permselectivity and long-term efficiency. a Representation of GOAC albumin permselectivity assay: albumin-FITC (40 mg/ml) is applied to ch",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0052"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+    "canonical_claim": "a Representation of GOAC albumin permselectivity assay following PAN injury: PAN (5-day induction, 10 mg/ml) is applied to channel C followed by albumin-FITC (40 mg/ml, yellow) and flow-through collected in channel F.",
+    "learning_objective": "Undergraduate renal medicine: Puromycin aminonucleoside promotes albumin leakage in the GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0026"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0026",
+      "DOC-PMC-RENAL-0002-B-C0008",
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "evidence_span": "Fig. 4 GOAC and puromycin aminonucleoside (PAN) injury. a Representation of GOAC albumin permselectivity assay following PAN injury: PAN (5-day induct",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0053"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+    "canonical_claim": "First, we tested the ability of IgG to cross the glomerular endothelial cell monolayer on which hGEC were allowed to grow to confluency and form a continuous layer.",
+    "learning_objective": "Undergraduate renal medicine: Sera from individuals with MN shows albumin leakage in the GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0028"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0028",
+      "DOC-PMC-RENAL-0002-B-C0005",
+      "DOC-PMC-RENAL-0002-B-C0006"
+    ],
+    "evidence_span": "First, we tested the ability of IgG to cross the glomerular endothelial cell monolayer on which hGEC were allowed to grow to confluency and form a con",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0054"
+  },
+  {
+    "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+    "canonical_claim": "We next measured the relationship between the extent of albumin leakage (proteinuria) in our chips (measured as FITC-absorbance in the filtrate collected in channel F) with proteinuria measured in the same patients (Fig.",
+    "learning_objective": "Undergraduate renal medicine: Sera from individuals with MN shows albumin leakage in the GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0032"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0032",
+      "DOC-PMC-RENAL-0002-B-C0006",
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "evidence_span": "We next measured the relationship between the extent of albumin leakage (proteinuria) in our chips (measured as FITC-absorbance in the filtrate collec",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0055"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Modeling mechanism of MN injury in podocyte in the GOAC?",
+    "canonical_claim": "In MN, following autoantibody binding, several mechanisms are triggered in podocytes, like the complement signaling 54 that can lead to delocalization of nephrin with loss of the slit diaphragm structure and podocyte injury 55 .",
+    "learning_objective": "Undergraduate renal medicine: Modeling mechanism of MN injury in podocyte in the GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0035"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0035",
+      "DOC-PMC-RENAL-0002-B-C0005",
+      "DOC-PMC-RENAL-0002-B-C0006"
+    ],
+    "evidence_span": "In MN, following autoantibody binding, several mechanisms are triggered in podocytes, like the complement signaling 54 that can lead to delocalization",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0056"
+  },
+  {
+    "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+    "canonical_claim": "While putative circulating factors have been described in FSGS, the sera included in the experiments were obtained from individuals with disease s remission; therefore, these factors (if present) were not enough to induce proteinuria in vivo.",
+    "learning_objective": "Undergraduate renal medicine: GOAC response specificity to sera from various CKD",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0037"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0037",
+      "DOC-PMC-RENAL-0002-B-C0003",
+      "DOC-PMC-RENAL-0002-B-C0005"
+    ],
+    "evidence_span": "To exclude that albumin leakage induced in GOAC by MN serum was due to an unselective response to serum from subjects affected by CKD, we exposed the",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0057"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+    "canonical_claim": "High glucose has been shown in vitro to lead to podocyte damage 62 , 63 .",
+    "learning_objective": "Undergraduate renal medicine: Establishing a model of diabetic nephropathy in the GOAC",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0040"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0040",
+      "DOC-PMC-RENAL-0002-B-C0008",
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "evidence_span": "Hyperglycemia is recognized as a key initiation factor of ESRD in diabetic patients, which contributes to the increased albumin leakage across the GFB",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0058"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+    "canonical_claim": "Sorted hAKPC were expanded and differentiated into podocytes (hAKPC-P) by culturing on collagen I (Corning, c#354236)-coated plates in VRADD media: RPMI-1640 (Gibco, c#11875093) supplemented with 5% FBS (Gibco, c#26140079), 1% antibiotic (Gibco, c#15070063), 1,25(OH)2D3 [100 nM, cholecalciferol] (Sigma, c#C9756), all trans retinoic acid (ATRA) [1 \u03bcM], dexamethasone [100 nM] (Sigma, c#D4902), for up to 30 days.",
+    "learning_objective": "Undergraduate renal medicine: Cells: isolation and culture",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0053"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0053",
+      "DOC-PMC-RENAL-0002-B-C0006",
+      "DOC-PMC-RENAL-0002-B-C0007"
+    ],
+    "evidence_span": "Kidney progenitor cells derived from amniotic fluid (hAKPC) were isolated by co-expression of OB-cadherin, CD24, and podocalyxin 25 . Sorted hAKPC wer",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0059"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize FACS and flow cytometry analysis?",
+    "canonical_claim": "hpPOD and hGEC were isolated from human glomerular cell suspension by staining with respectively NPHS1-FITC and CD31-AF647 antibodies.",
+    "learning_objective": "Undergraduate renal medicine: FACS and flow cytometry analysis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0056"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0056",
+      "DOC-PMC-RENAL-0002-B-C0005",
+      "DOC-PMC-RENAL-0002-B-C0006"
+    ],
+    "evidence_span": "Kidney progenitor cells were isolated from human total amniotic fluid cell populations by triple staining with antibodies detecting OB-cadherin-FITC,",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0060"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Microfluidic chip and cell seeding?",
+    "canonical_claim": "This was followed by addition of 50 \u00b5l of podocyte differentiation medium to both the inlet and outlet of the top medium channel and the OrganoPlate TM was again incubated on its side overnight at 37 \u00b0C to complete cell attachment.",
+    "learning_objective": "Undergraduate renal medicine: Microfluidic chip and cell seeding",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0057"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0057",
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0011"
+    ],
+    "evidence_span": "OrganoPlate TM culture was performed using three-lane chip with 400 \u00b5m \u00d7 220 \u00b5m channels (Mimetas BV, the Netherlands). Phaseguide TM had dimensions o",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0061"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Albumin permselectivity assay and inulin permeability assay?",
+    "canonical_claim": "An albumin and inulin permeability assay were established to evaluate the efficiency of the created GFB.",
+    "learning_objective": "Undergraduate renal medicine: Albumin permselectivity assay and inulin permeability assay",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0088"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0088",
+      "DOC-PMC-RENAL-0002-B-C0020",
+      "DOC-PMC-RENAL-0002-B-C0021"
+    ],
+    "evidence_span": "An albumin and inulin permeability assay were established to evaluate the efficiency of the created GFB. The number of chips used for each experiment",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0062"
+  },
+  {
+    "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Transwell establishment?",
+    "canonical_claim": "Once a monolayer was formed (48 h), we added hGEC and allowed them to attach on top of the podocytes for 7 days.",
+    "learning_objective": "Undergraduate renal medicine: Transwell establishment",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0089"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0089",
+      "DOC-PMC-RENAL-0002-B-C0007",
+      "DOC-PMC-RENAL-0002-B-C0017"
+    ],
+    "evidence_span": "Following coating of the transwells (Costar, #3495) with collagen I, hpPOD were seeded in VRADD media. Once a monolayer was formed (48 h), we added hG",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0063"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Glucose-mediated injury?",
+    "canonical_claim": "Glucose-mediated injury was induced by supplementing glomerular endothelial medium with high-glucose (Sigma, c#5146) at 10 mM (standard RPMI-1640 glucose concentration), 15 mM, and 20 mM.",
+    "learning_objective": "Undergraduate renal medicine: Glucose-mediated injury",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0093"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0093",
+      "DOC-PMC-RENAL-0002-B-C0006",
+      "DOC-PMC-RENAL-0002-B-C0008"
+    ],
+    "evidence_span": "Glucose-mediated injury was induced by supplementing glomerular endothelial medium with high-glucose (Sigma, c#5146) at 10 mM (standard RPMI-1640 gluc",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0064"
+  },
+  {
+    "query": "What pharmacological effects result from receptor blockade or pathway inhibition in Western blot analysis?",
+    "canonical_claim": "Total protein from the OrganoPlate TM was collected by adding 125 U/ml collagenase I (Worthington, LS004197 ) in a radioimmunoprecipitation assay RIPA lysis buffer (Santa Cruz Biotechnology, c#sc-24948) containing a protease inhibitor cocktail (Thermo Scientific, c#78442) and incubated at 37 \u00b0C for 30 min.",
+    "learning_objective": "Undergraduate renal medicine: Western blot analysis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pathophysiology",
+    "gold_document_id": "DOC-PMC-RENAL-0002",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0095"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0002-B-C0095",
+      "DOC-PMC-RENAL-0002-B-C0020",
+      "DOC-PMC-RENAL-0002-B-C0021"
+    ],
+    "evidence_span": "Total protein from the OrganoPlate TM was collected by adding 125 U/ml collagenase I (Worthington, LS004197 ) in a radioimmunoprecipitation assay RIPA",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0065"
+  },
+  {
+    "query": "What physiological mechanisms govern potassium homeostasis and handling in New insights from tubulopathies?",
+    "canonical_claim": "The effect of low dietary potassium intake on NCC raised the question of how the DCT is capable of sensing potassium.",
+    "learning_objective": "Undergraduate renal medicine: New insights from tubulopathies",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0006"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0006",
+      "DOC-PMC-RENAL-0003-B-C0014",
+      "DOC-PMC-RENAL-0003-B-C0017"
+    ],
+    "evidence_span": "The effect of low dietary potassium intake on NCC raised the question of how the DCT is capable of sensing potassium. The first clue to the answer was",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0066"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+    "canonical_claim": "Hypokalemic nephropathy has been reported in patients with malnutrition, eating disorders, vomiting, surreptitious use of laxatives or diuretics, and primary aldosteronism .",
+    "learning_objective": "Undergraduate renal medicine: Hypokalemic nephropathy",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0010"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0010",
+      "DOC-PMC-RENAL-0003-B-C0011",
+      "DOC-PMC-RENAL-0003-B-C0012"
+    ],
+    "evidence_span": "Hypokalemic nephropathy has been reported in patients with malnutrition, eating disorders, vomiting, surreptitious use of laxatives or diuretics, and",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0067"
+  },
+  {
+    "query": "What physiological mechanisms govern potassium homeostasis and handling in Hypokalemic nephropathy?",
+    "canonical_claim": "In addition to these tubulointerstitial phenomena, potassium deficiency also impairs kidney angiogenesis.",
+    "learning_objective": "Undergraduate renal medicine: Hypokalemic nephropathy",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0011"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0011",
+      "DOC-PMC-RENAL-0003-B-C0010",
+      "DOC-PMC-RENAL-0003-B-C0012"
+    ],
+    "evidence_span": "[ 44 ]. This may be caused by autophagic degradation of aquaporin-2 [ 45 ] or the cellular conversion of principal cells to A-type intercalated cells",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0068"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Effects of dietary potassium in children?",
+    "canonical_claim": "The increasing prevalence of hypertension in children also links to the increasing prevalence of obesity [ 56 \u2013 58 ].",
+    "learning_objective": "Undergraduate renal medicine: Effects of dietary potassium in children",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0014"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0014",
+      "DOC-PMC-RENAL-0003-B-C0023"
+    ],
+    "evidence_span": "sodium and blood pressure. The increasing prevalence of hypertension in children also links to the increasing prevalence of obesity [ 56 \u2013 58 ]. Child",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0069"
+  },
+  {
+    "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+    "canonical_claim": "What should be the next steps to materialize the accumulating evidence for the relationships between dietary potassium intake, blood pressure, cardiovascular, and kidney outcomes?",
+    "learning_objective": "Undergraduate renal medicine: Perspectives for potassium",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "electrolytes",
+    "gold_document_id": "DOC-PMC-RENAL-0003",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0023"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0003-B-C0023",
+      "DOC-PMC-RENAL-0003-B-C0006",
+      "DOC-PMC-RENAL-0003-B-C0014"
+    ],
+    "evidence_span": "What should be the next steps to materialize the accumulating evidence for the relationships between dietary potassium intake, blood pressure, cardiov",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0070"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+    "canonical_claim": "Systemic AB imbalances manifest as changes in blood plasma pH which only loosely correspond to local shifts in acidity inside cells or at their surface.",
+    "learning_objective": "Undergraduate renal medicine: Mechanistic topography of acid-base exchange in the kidney",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0015",
+      "DOC-PMC-RENAL-0005-B-C0003",
+      "DOC-PMC-RENAL-0005-B-C0016"
+    ],
+    "evidence_span": "Systemic AB imbalances manifest as changes in blood plasma pH which only loosely correspond to local shifts in acidity inside cells or at their surfac",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0071"
+  },
+  {
+    "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Mechanistic topography of acid-base exchange in the kidney?",
+    "canonical_claim": "The dietary alkaline load is initially converted to bicarbonate in the liver.",
+    "learning_objective": "Undergraduate renal medicine: Mechanistic topography of acid-base exchange in the kidney",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0019"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0019",
+      "DOC-PMC-RENAL-0005-B-C0024"
+    ],
+    "evidence_span": "The dietary alkaline load is initially converted to bicarbonate in the liver. The process is accompanied by production of organic acids titrated by HC",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0072"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+    "canonical_claim": "The proximal convoluted tubule (PCT) is engaged in reabsorption and recycling of various ions and solutes.",
+    "learning_objective": "Undergraduate renal medicine: Proximal convoluted tubule",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0023"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0023",
+      "DOC-PMC-RENAL-0005-B-C0024",
+      "DOC-PMC-RENAL-0005-B-C0044"
+    ],
+    "evidence_span": "The proximal convoluted tubule (PCT) is engaged in reabsorption and recycling of various ions and solutes. About two-thirds of filtered water, NaCl, C",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0073"
+  },
+  {
+    "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+    "canonical_claim": "The regulation of AB balance in PCT involves several pH-sensitive molecules: calcium-sensing receptor CaSR, G-protein coupled receptor Gprc5c, receptor tyrosine kinases ErbB1/2, proline-rich tyrosine kinase Pyk2, pH-sensitive ion channel TASK2 and bicarbonate-stimulated soluble adenylyl cyclase ( Brown & Wagner, 2012 ; Rajkumar & Pluznick, 2018 ).",
+    "learning_objective": "Undergraduate renal medicine: Proximal convoluted tubule",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0027"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0027",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0006"
+    ],
+    "evidence_span": "The regulation of AB balance in PCT involves several pH-sensitive molecules: calcium-sensing receptor CaSR, G-protein coupled receptor Gprc5c, recepto",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0074"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+    "canonical_claim": "TAL is impermeable to water; the dilution occurs through active reabsorption of NaCl which feeds the hypertonic gradient.",
+    "learning_objective": "Undergraduate renal medicine: Loop of Henle",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0037"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0037",
+      "DOC-PMC-RENAL-0005-B-C0023",
+      "DOC-PMC-RENAL-0005-B-C0024"
+    ],
+    "evidence_span": "The thick ascending limb of the loop of Henle (TAL) is largely responsible for the water content of the urine: from highly concentrated small volumes",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0075"
+  },
+  {
+    "query": "What transport mechanism mediates tubular solute reabsorption in Loop of Henle?",
+    "canonical_claim": "The combined activity of essential transporters and ion channels involved in the salt reabsorption (NKCC2, ROMK, ClC-Kb) ensures the electrolyte balance.",
+    "learning_objective": "Undergraduate renal medicine: Loop of Henle",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0039"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0039",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0038"
+    ],
+    "evidence_span": "The combined activity of essential transporters and ion channels involved in the salt reabsorption (NKCC2, ROMK, ClC-Kb) ensures the electrolyte balan",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0076"
+  },
+  {
+    "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Loop of Henle?",
+    "canonical_claim": "Reabsorption of sodium and chloride in TAL indirectly affects bicarbonate concentration in the renal tubular fluid.",
+    "learning_objective": "Undergraduate renal medicine: Loop of Henle",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0042"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0042",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0024"
+    ],
+    "evidence_span": "Figure 3 Routes of acid-base exchange in the thick ascending limb of the loop of Henle (TAL). Reabsorption of sodium and chloride in TAL indirectly af",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0077"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Distal convoluted tubule?",
+    "canonical_claim": "Secretion of hydrogen ions (H + ) to the lumen proceeds via H + -ATPase pump located at the apical membrane.",
+    "learning_objective": "Undergraduate renal medicine: Distal convoluted tubule",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0044"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0044",
+      "DOC-PMC-RENAL-0005-B-C0023",
+      "DOC-PMC-RENAL-0005-B-C0024"
+    ],
+    "evidence_span": "Figure 4 Routes of acid-base exchange in the distal convoluted tubule (DCT). Secretion of hydrogen ions (H + ) to the lumen proceeds via H + -ATPase p",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0078"
+  },
+  {
+    "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Collecting tubules and collecting ducts?",
+    "canonical_claim": "This system substantively contributes to the water-electrolyte balance by means of aldosterone/ADH-dependent reabsorption and secretion ( Olde Engberink et al., 2023 ).",
+    "learning_objective": "Undergraduate renal medicine: Collecting tubules and collecting ducts",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0045"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0045",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0006"
+    ],
+    "evidence_span": "The epithelial collecting system of the kidney connects nephrons to the urinary tract. This system substantively contributes to the water-electrolyte",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0079"
+  },
+  {
+    "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Collecting tubules and collecting ducts?",
+    "canonical_claim": "IC-\u03b1 express H + -ATPase V at the apical membrane and Cl \u2212 /HCO 3 \u2212 anion exchanger at the basolateral membrane, responsible for proton secretion and bicarbonate reabsorption, respectively.",
+    "learning_objective": "Undergraduate renal medicine: Collecting tubules and collecting ducts",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0051"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0051",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0020"
+    ],
+    "evidence_span": "IC-\u03b1 express H + -ATPase V at the apical membrane and Cl \u2212 /HCO 3 \u2212 anion exchanger at the basolateral membrane, responsible for proton secretion and",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0080"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Collecting tubules and collecting ducts?",
+    "canonical_claim": "Another G-protein-coupled receptor implicated in AB homeostasis, Gpr116, is expressed in cortical collecting ducts by IC-\u03b1.",
+    "learning_objective": "Undergraduate renal medicine: Collecting tubules and collecting ducts",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0055"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0055",
+      "DOC-PMC-RENAL-0005-B-C0004",
+      "DOC-PMC-RENAL-0005-B-C0027"
+    ],
+    "evidence_span": "Another G-protein-coupled receptor implicated in AB homeostasis, Gpr116, is expressed in cortical collecting ducts by IC-\u03b1. Tubule-specific Gpr116 ina",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0081"
+  },
+  {
+    "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+    "canonical_claim": "Clinical manifestations of changes in AB balance at systemic level, directly or indirectly related to kidney function, include excessive acid production; acid wasting; excessive production/retention of bicarbonate; and bicarbonate wasting.",
+    "learning_objective": "Undergraduate renal medicine: Clinical manifestations of acid-base metabolism disorders",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "aki",
+    "gold_document_id": "DOC-PMC-RENAL-0005",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0057"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0005-B-C0057",
+      "DOC-PMC-RENAL-0005-B-C0003",
+      "DOC-PMC-RENAL-0005-B-C0004"
+    ],
+    "evidence_span": "Clinical manifestations of changes in AB balance at systemic level, directly or indirectly related to kidney function, include excessive acid producti",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0082"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Summary of evidence?",
+    "canonical_claim": "In these 11 observational studies, the comparisons of the AKI diagnosis based on the KDIGO criteria versus those based on the RIFLE and AKIN criteria showed that the KDIGO criteria is more precise than, or as precise as, the RIFLE and AKIN criteria in reflecting the-in-hospital mortality.",
+    "learning_objective": "Undergraduate renal medicine: Summary of evidence",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0004"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0004",
+      "DOC-PMC-RENAL-0006-B-C0006",
+      "DOC-PMC-RENAL-0006-B-C0007"
+    ],
+    "evidence_span": "We identified 11 observational studies that compared the KDIGO with the AKIN and RIFLE criteria and that assessed death as an outcome. However, they d",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0083"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Preoperative renal impairment?",
+    "canonical_claim": "reported that a higher preoperative estimated glomerular filtration rate (eGFR) was associated with a lower risk of AKI development (odds ratio 0.97, 95% confidence interval: 0.96\u20130.99) .",
+    "learning_objective": "Undergraduate renal medicine: Preoperative renal impairment",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0066"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0066",
+      "DOC-PMC-RENAL-0006-B-C0012",
+      "DOC-PMC-RENAL-0006-B-C0043"
+    ],
+    "evidence_span": "Preoperative renal dysfunction is known as a risk factor for perioperative AKI development. Observational studies of cardiac surgery patients have als",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0084"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Other risk factors?",
+    "canonical_claim": "In addition to the risk factors stated above, observational studies have also assessed obesity, diabetes, hypertension, and anemia as potential risk factors; however, due to contradictory results, no conclusions have been reached [ 37 , 38 , 41 \u2013 43 ].",
+    "learning_objective": "Undergraduate renal medicine: Other risk factors",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0068"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0068",
+      "DOC-PMC-RENAL-0006-B-C0004",
+      "DOC-PMC-RENAL-0006-B-C0033"
+    ],
+    "evidence_span": "In addition to the risk factors stated above, observational studies have also assessed obesity, diabetes, hypertension, and anemia as potential risk f",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0085"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Liver transplantation?",
+    "canonical_claim": "Based on this definition, the incidence of AKI was 33.8%; factors such as the preoperative MELD score, preoperative hyponatremia, a preoperative BMI \u2265 30 kg/m 2 , intraoperative red blood cell transfusion, and a long warm ischemic time were identified as risk factors for AKI development .",
+    "learning_objective": "Undergraduate renal medicine: Liver transplantation",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0072"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0072",
+      "DOC-PMC-RENAL-0006-B-C0013",
+      "DOC-PMC-RENAL-0006-B-C0045"
+    ],
+    "evidence_span": "In liver disease, the development of AKI is generally a risk factor for the progression of hepatic dysfunction and increased mortality [ 46 ]. In live",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0086"
+  },
+  {
+    "query": "What clinical mechanisms and physiological findings characterize Lung surgery?",
+    "canonical_claim": "The proposed risk factors included aging, preoperative hypertension, an intraoperative low mean blood pressure, the intraoperative use of vasopressors, the intraoperative use of aprotinin, the use of intraoperative or postoperative ECMO, and a comorbid postoperative infection .",
+    "learning_objective": "Undergraduate renal medicine: Lung surgery",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0074"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0074",
+      "DOC-PMC-RENAL-0006-B-C0013",
+      "DOC-PMC-RENAL-0006-B-C0057"
+    ],
+    "evidence_span": "There have been 3 studies on AKI following lung surgery, and all of them have been retrospective cohort studies [ 60 \u2013 62 ]. In one of them, George et",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0087"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Bariatric surgery?",
+    "canonical_claim": "reported that AKI of AKIN stage 1 or higher had developed in 103 patients, which represented an incidence of 17.5%; the male gender, preoperative hypertension, and a high preoperative APACHE II score were identified as risk factors .",
+    "learning_objective": "Undergraduate renal medicine: Bariatric surgery",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0075"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0075",
+      "DOC-PMC-RENAL-0006-B-C0004",
+      "DOC-PMC-RENAL-0006-B-C0013"
+    ],
+    "evidence_span": "Bariatric surgery has recently become a popular surgical intervention for severe obesity, mainly in the West. As obesity itself triggers renal impairm",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0088"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Colorectal surgery?",
+    "canonical_claim": "The incidence of AKI (defined as a postoperative increase in sCr of \u2265 50% from baseline) was 11.8%; intraoperative red blood cell transfusion was identified as a risk factor.",
+    "learning_objective": "Undergraduate renal medicine: Colorectal surgery",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0076"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0076",
+      "DOC-PMC-RENAL-0006-B-C0007",
+      "DOC-PMC-RENAL-0006-B-C0066"
+    ],
+    "evidence_span": "Causey et al. examined the development of AKI following colorectal surgery in a cohort of 339 patients who underwent colorectal surgery between 2001 a",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0089"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Incidence of AKI in acute heart failure?",
+    "canonical_claim": "In a study that examined the differences in the incidence of AKI based on the different definitions of AKI, Li et al.",
+    "learning_objective": "Undergraduate renal medicine: Incidence of AKI in acute heart failure",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0080"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0080",
+      "DOC-PMC-RENAL-0006-B-C0050",
+      "DOC-PMC-RENAL-0006-B-C0072"
+    ],
+    "evidence_span": "Studies have found an inconsistent incidence of AKI in acute heart failure due to differing definitions of AKI. A retrospective cohort study in 2010 b",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0090"
+  },
+  {
+    "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Risk factors for AKI development in acute heart failure?",
+    "canonical_claim": "A recent prospective observational study demonstrated a significant association between AKI and elevated levels (\u2265 12 ng/ml) of the tubular dysfunction marker NGAL .",
+    "learning_objective": "Undergraduate renal medicine: Risk factors for AKI development in acute heart failure",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0081"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0081",
+      "DOC-PMC-RENAL-0006-B-C0050",
+      "DOC-PMC-RENAL-0006-B-C0066"
+    ],
+    "evidence_span": "Observational studies have identified a number of risk factors for AKI following heart failure. A recent prospective observational study demonstrated",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0091"
+  },
+  {
+    "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Summary of evidence?",
+    "canonical_claim": "In 6 observational studies that examined the risk of AKI development in sepsis, pre-existing renal dysfunction, aging, and the use of renin\u2013angiotensin\u2013aldosterone system inhibitors were found to be associated with AKI development in sepsis.",
+    "learning_objective": "Undergraduate renal medicine: Summary of evidence",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "acid_base",
+    "gold_document_id": "DOC-PMC-RENAL-0006",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0093"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0006-B-C0093",
+      "DOC-PMC-RENAL-0006-B-C0004",
+      "DOC-PMC-RENAL-0006-B-C0013"
+    ],
+    "evidence_span": "In 6 observational studies that examined the risk of AKI development in sepsis, pre-existing renal dysfunction, aging, and the use of renin\u2013angiotensi",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "PRODUCT_DEV_V2_AUDITED_VALID",
+    "query_id": "PRD-DEV3-0092"
+  },
+  {
+    "query": "What are the clinical criteria for initiating renal replacement therapy in acute kidney injury secondary to severe rhabdomyolysis?",
+    "canonical_claim": "RRT in rhabdomyolysis is indicated for severe refractory hyperkalemia, acute metabolic acidosis with pH <7.15, rapid oliguric volume overload, and marked azotemia (urea >30-40 mmol/L) to prevent life-threatening arrhythmias and pulmonary edema.",
+    "learning_objective": "Undergraduate renal medicine: Dialysis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "dialysis",
+    "gold_document_id": "DOC-PMC-RENAL-0015",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0012"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0015-B-C0012",
+      "DOC-PMC-RENAL-0015-B-C0014"
+    ],
+    "evidence_span": "Continuous renal replacement therapy is preferred over intermittent hemodialysis in hemodynamically unstable rhabdomyolysis patients to achieve safe potassium and myoglobin clearance.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0093"
+  },
+  {
+    "query": "How is urinary creatinine clearance compared with eGFR estimating equations in critically ill ICU patients with rapidly evolving AKI?",
+    "canonical_claim": "Serum creatinine-based estimating equations (CKD-EPI, MDRD) significantly overestimate true GFR during rapid loss of renal function because serum creatinine has not yet reached steady-state equilibrium; timed urinary creatinine clearance provides a more accurate real-time assessment.",
+    "learning_objective": "Undergraduate renal medicine: Laboratory Interpretation",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "laboratory_interpretation",
+    "gold_document_id": "DOC-PMC-RENAL-0016",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0020"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0016-B-C0020",
+      "DOC-PMC-RENAL-0016-B-C0022"
+    ],
+    "evidence_span": "Equations assuming steady-state serum creatinine miscalculate clearance in acute dynamic kidney injury, making measured short-interval creatinine clearance preferable in intensive care.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0094"
+  },
+  {
+    "query": "What is the differential diagnosis between microscopic hematuria of glomerular origin versus non-glomerular lower urinary tract bleeding?",
+    "canonical_claim": "Glomerular hematuria is characterized by dysmorphic red blood cells (>80% acanthocytes), red cell casts, and significant concomitant proteinuria (>0.5 g/24h), whereas non-glomerular bleeding displays isomorphic red blood cells, no casts, and normal protein.",
+    "learning_objective": "Undergraduate renal medicine: Differential Diagnosis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "differential_diagnosis",
+    "gold_document_id": "DOC-PMC-RENAL-0025",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0010"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0025-B-C0010",
+      "DOC-PMC-RENAL-0025-B-C0012"
+    ],
+    "evidence_span": "Phase-contrast microscopy demonstrating acanthocytes and erythrocyte cylinders confirms intrarenal parenchymal/glomerular origin, mandating nephrological rather than urological evaluation.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0095"
+  },
+  {
+    "query": "What role does sodium-glucose cotransporter 2 (SGLT2) play in healthy proximal tubular glucose reabsorption?",
+    "canonical_claim": "SGLT2 is located on the apical brush border of the S1/S2 segments of the proximal tubule and mediates approximately 90% of renal glucose reabsorption coupled to sodium in a 1:1 stoichiometry.",
+    "learning_objective": "Undergraduate renal medicine: Renal Physiology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0019",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0008"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0019-B-C0008",
+      "DOC-PMC-RENAL-0019-B-C0010"
+    ],
+    "evidence_span": "SGLT2 accounts for the vast majority of filtered glucose reclamation in early proximal convolutions, whereas SGLT1 reabsorbs the residual 10% in distal straight segments.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0096"
+  },
+  {
+    "query": "How do serum erythropoietin levels and erythropoietin resistance influence anemia management in advanced chronic kidney disease?",
+    "canonical_claim": "In stage 4-5 CKD, peritubular interstitial fibroblastic transformation impairs erythropoietin synthesis leading to normocytic normochromic anemia; systemic inflammation and iron deficiency cause resistance to erythropoiesis-stimulating agents.",
+    "learning_objective": "Undergraduate renal medicine: Pharmacology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "pharmacology",
+    "gold_document_id": "DOC-PMC-RENAL-0024",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0015"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0024-B-C0015",
+      "DOC-PMC-RENAL-0024-B-C0018"
+    ],
+    "evidence_span": "Relative deficiency of circulating erythropoietin compounded by uremic inflammatory cytokines underlies renal anemia, requiring coordinated iron repletion and erythropoiesis-stimulating agents.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0097"
+  },
+  {
+    "query": "What diagnostic ultrasound grading scale evaluates the severity of hydronephrosis in obstructive uropathy?",
+    "canonical_claim": "The Society for Fetal Urology (SFU) system grades hydronephrosis from Grade 0 (no dilatation) to Grade 4 (severe pelvicalyceal dilatation with diffuse renal parenchymal/cortical thinning).",
+    "learning_objective": "Undergraduate renal medicine: Renal Imaging",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_imaging",
+    "gold_document_id": "DOC-PMC-RENAL-0014",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0005"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0014-B-C0005",
+      "DOC-PMC-RENAL-0014-B-C0008"
+    ],
+    "evidence_span": "Ultrasonographic hydronephrosis grading incorporates pelvicalyceal splitting and cortical parenchymal thickness to determine the functional impact of urinary obstruction.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0098"
+  },
+  {
+    "query": "What are the common mineral compositions of nephrolithiasis and their characteristic radiographic appearances?",
+    "canonical_claim": "Calcium oxalate (70-80%) and calcium phosphate stones are radio-opaque on plain radiographs; struvite (magnesium ammonium phosphate) stones are radio-opaque staghorn calculi; uric acid stones are radiolucent on plain X-ray but hyperdense on non-contrast CT.",
+    "learning_objective": "Undergraduate renal medicine: Differential Diagnosis",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "differential_diagnosis",
+    "gold_document_id": "DOC-PMC-RENAL-0012",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0018"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0012-B-C0018",
+      "DOC-PMC-RENAL-0012-B-C0020"
+    ],
+    "evidence_span": "Unenhanced helical computed tomography visualizes virtually all urinary calculus compositions including radiolucent uric acid stones, with the exception of rare indinavir calculi.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0099"
+  },
+  {
+    "query": "What cellular signaling pathway links serum- and glucocorticoid-inducible kinase 1 (SGK1) to ENaC-mediated sodium reabsorption in the collecting duct?",
+    "canonical_claim": "Aldosterone stimulates SGK1 expression, which phosphorylates the ubiquitin ligase Nedd4-2, preventing Nedd4-2 from binding and ubiquitinating epithelial sodium channels (ENaC) and thereby stabilizing ENaC at the apical membrane to enhance sodium reabsorption.",
+    "learning_objective": "Undergraduate renal medicine: Renal Physiology",
+    "clinical_domain": "Clinical Nephrology & Renal Physiology",
+    "curriculum_category": "renal_physiology",
+    "gold_document_id": "DOC-PMC-RENAL-0020",
+    "exact_gold_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0006"
+    ],
+    "semantic_support_chunk_ids": [
+      "DOC-PMC-RENAL-0020-B-C0006",
+      "DOC-PMC-RENAL-0020-B-C0008"
+    ],
+    "evidence_span": "SGK1 phosphorylation of Nedd4-2 blocks retrieval of ENaC from the apical plasma membrane of principal cells, driving aldosterone-dependent sodium retention.",
+    "qrel_support_type": "EXACT_AND_SEMANTIC_POSITIVE",
+    "provenance": "BLUEPRINT_TARGETED_FILL",
+    "query_id": "PRD-DEV3-0100"
+  }
+]
