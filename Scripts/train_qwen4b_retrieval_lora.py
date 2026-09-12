@@ -1,5 +1,6 @@
 from __future__ import annotations
 import argparse, gc, json, math, os, platform, random, shutil, time, traceback
+from collections.abc import Mapping
 from pathlib import Path
 import numpy as np
 from qwen4b_adaptation_common import load_config, root_path, atomic_json, sha256_file, sha256_tree
@@ -30,7 +31,7 @@ def load_model(cfg, adapter:Path|None=None, trainable=True):
 def _move_features_to_device(value,device):
     import torch
     if torch.is_tensor(value): return value.to(device)
-    if isinstance(value,dict): return {k:_move_features_to_device(v,device) for k,v in value.items()}
+    if isinstance(value,Mapping): return {k:_move_features_to_device(v,device) for k,v in value.items()}
     if isinstance(value,list): return [_move_features_to_device(v,device) for v in value]
     if isinstance(value,tuple): return tuple(_move_features_to_device(v,device) for v in value)
     return value
@@ -42,7 +43,7 @@ def _preprocess_features(st,text,query,cfg):
     else:
         if prompt: text=prompt+text
         feats=st.tokenize([text])
-    if not isinstance(feats,dict): raise RuntimeError(f"SENTENCE_TRANSFORMER_PREPROCESS_INVALID type={type(feats).__name__}")
+    if not isinstance(feats,Mapping): raise RuntimeError(f"SENTENCE_TRANSFORMER_PREPROCESS_INVALID type={type(feats).__name__}")
     return _move_features_to_device(feats,'cuda:0')
 
 def emb(st,text,query=False,cfg=None):
