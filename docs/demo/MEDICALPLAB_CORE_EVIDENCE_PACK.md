@@ -1,232 +1,277 @@
-# MedicalPlab Renal V7 — Product-Grade Retrieval Recovery Core Evidence Pack
+# MedicalPlab Core AI — Measurement Integrity, Benchmark Recovery & Evidence Grounding Pack
 
-> **Document Status**: Canonical & Cryptographically Sealed  
-> **Campaign**: Renal V7 Product-Grade Retrieval Recovery  
-> **Production Status**: Invariant Preserved — Production Runtime remains `QwenRenalRetrieverV3` (`RENAL_RUNTIME_VERSION = "v3"`)  
-> **Historical Boundary**: V6 permanently closed at commit `9bad4967a4cee771099f5bb927a6fbd9b3347060` with zero mutation.
-
----
-
-## 1. Executive Summary & Forensic Resolution
-
-The Renal V7 campaign was commissioned under explicit owner authorization to resolve the root causes of the historical V6 validation collapse and establish an authentic, product-grade clinical retrieval system for undergraduate nephrology education.
-
-### The Forensic Discovery
-In Renal V6, model performance appeared to collapse on an independent $N=40$ validation set (Dense@20: 37.5%, Selector@20: 45.0%). Forensic audit in V7 revealed that:
-1. The V6 validation benchmark was an **out-of-distribution (OOD) section-anchored stress test** with synthetically generated heading templates, rather than the target undergraduate clinical task.
-2. Single-channel dense embeddings suffered from a **candidate truncation bottleneck**: relevant passages were ranked between positions 21 and 500 (Dense@500 ceiling was 90.0%), making any top-20 selector fail before reranking.
-
-### The V7 Recovery
-By replacing single-channel dense acquisition with **Multi-Channel Candidate Union & Rank Fusion (Stack A)**:
-- **Channel A**: Qwen3 Dense Semantic Embedding (with document prior)
-- **Channel B**: Okapi BM25 Lexical Retrieval
-- **Channel C**: Entity-Weighted Clinical Sparse Retrieval
-- **Channel D**: Hierarchical Section Path / Heading Structural Matching
-- **Reciprocal Rank Fusion ($k=60$)** with candidate depth $K=50$ and section-level crowding dampening.
-- **Hierarchical Structured Reranker Input** with explicit medical claim support instruction.
-
-When executed with **zero retuning** on the exact frozen V6 $N=40$ stress benchmark, V7 Stack A recovered **CandidateRecall@20 from 37.50% to 90.00% (36/40)** and **CandidateRecall@50 to 92.50% (37/40)**, with a **97.50% (39/40) Document Hit Rate**, conclusively proving that multi-channel fusion resolves the candidate truncation pathology without requiring model parameter tuning.
+> **Document Status**: Canonical, Cryptographically Sealed & Auditor-Defensible
+> **Campaign**: MedicalPlab Core AI Measurement Integrity & Grounding Authority
+> **Production Runtime Invariant**: Unchanged — Production Runtime remains `QwenRenalRetrieverV3` (`RENAL_RUNTIME_VERSION = "v3"`)
+> **Repository HEAD**: Checked out at `ai-data-execution-v1` (Research Checkpoint `3f0faf88421c97a29955ea5df691a539097d7ee4`)
+> **Primary Scientific Rule**: Measurement Correction $\ne$ Model Improvement.
 
 ---
 
-## 2. Invariant & Governance Ledger
+## 0. Metric Taxonomy & Methodological Boundary
 
-| Invariant | Requirement | Status | Verification Evidence |
-| :--- | :--- | :--- | :--- |
-| **Production Runtime** | Production default MUST remain V3 | **PRESERVED** | `src/medicalplab/learn/service.py:35` (`RENAL_RUNTIME_VERSION = "v3"`), verified by `tests/test_renal_v7_closure.py::test_production_runtime_invariant` |
-| **Historical V6 Immutability** | Zero edits to V6/V5 datasets, benchmarks, reports | **PRESERVED** | Historical commit `9bad4967a4cee771099f5bb927a6fbd9b3347060` bitwise untouched |
-| **Single-Shot Protocol** | `FROZEN_PRODUCT_TEST` executed strictly once | **VERIFIED** | Executed once with frozen Stack A parameters (`reports/renal_v7/renal_v7_frozen_product_test_report.json`) |
-| **Zero-Leakage Firewall** | Zero query/chunk overlap between partitions | **VERIFIED** | `reports/renal_v7/renal_v7_dataset_firewall_audit.json` (0 chunk overlap, 0 query overlap) |
-| **Wilson 95% CIs** | All benchmark metrics reported with exact numerators/denominators and CIs | **VERIFIED** | All tables include exact counts, percentages, and Wilson score intervals |
+To eliminate the scientific ambiguity that previously impeded research progress, all metrics across the lifecycle of MedicalPlab are strictly categorized into five mutually exclusive tiers:
 
----
+```
+[ Tier A: Historical Diagnostic Metrics ] -> Preserved as immutable historical diagnostic record (V1–V7)
+[ Tier B: Invalidated / Superseded Metrics ] -> Formally classified as invalid due to measurement/lineage defects
+[ Tier C: Current Trustworthy Clean Metrics ] -> Derived from audited, firewalled benchmarks with multi-positive QRELs
+[ Tier D: Task-Definition / Measurement Correction Delta ] -> Delta from repairing benchmarks & fixing measurement bugs (NOT model improvement)
+[ Tier E: Model Improvement Delta ] -> Performance delta between two models on the EXACT SAME valid benchmark
+```
 
-## 3. Cryptographic Artifact Manifest
+### A. Historical Metrics (Preserved Diagnostic Record)
+- **Renal V7 Multi-Route (Stack A)** on `TRAIN_DEV` ($N=80$): CandidateRecall@20 = 98.75% (79/80), PassageHit@1 = 76.25% (61/80), PassageHit@5 = 91.25% (73/80).
+- **Renal V7 on V6 OOD Stress Benchmark** ($N=40$): CandidateRecall@20 = 90.00% (36/40), DocumentHit@1 = 97.50% (39/40).
+- **Historical Stage 8 Exhaustive BGE-M3** on `PRODUCT_DEV_V2` ($N=120$): Recall@20 = 79.17% (95/120), Recall@50 = 85.00% (102/120), Recall@100 = 88.33% (106/120).
 
-All datasets, audits, bake-off reports, and evaluation logs are persisted with SHA-256 sidecars:
+### B. Invalidated / Superseded Metrics (Defects Formally Classified)
+1. **Stage 8 Qwen3-Reranker-4B on PRODUCT_DEV_V2**:
+   - *Reported*: Hit@1 = 20.00%, Hit@5 = 51.67%, Eligible Positives = 86/120.
+   - *Classification*: `RERANKER_EVALUATION_INVALIDATED_BY_IMPLEMENTATION_ARTIFACT`.
+   - *Forensic Cause*: Used raw passage without document title, section path, or clinical target, and evaluated only Top-25 candidates from a 4-route candidate retriever rather than the Top-100 BGE-M3 pool.
+2. **Historical DocHit@1 (10.83%) vs SectionHit@1 (58.33%)**:
+   - *Classification*: `CROSS_UNIVERSE_METRIC_CONFLATION`.
+   - *Forensic Cause*: DocHit was measured on standalone DocumentRouter cards (ranking 23 documents); SectionHit was measured from a fused passage retrieval pool. They did not share the same ranking candidate list.
+3. **`final_product_test.json` (Unexecuted N=100)**:
+   - *Classification*: `FINAL_PRODUCT_TEST_STATUS = INVALIDATED_UNEXECUTED_BY_CONSTRUCTION_METHOD`.
+   - *Forensic Cause*: Construction methodology used mechanical heading concatenation (`q = f"In undergraduate renal medicine, what clinical principles and evidence guide {clean_h} in {title}?"`) and sibling-chunk heuristics. Remains sealed and unconsumed.
 
-| Artifact Path | Description | Records | SHA-256 Digest |
-| :--- | :--- | :--- | :--- |
-| `docs/spec/RENAL_V7_PRODUCT_BENCHMARK_SPEC.md` | Frozen Benchmark Specification | — | `e740d04b6c3eb9df96fc6ef573172e2d9bda2054ffef72efea47ae23000dfbba` |
-| `evaluation/renal/v7/renal-train-dev-v7.json` | Development Benchmark (`TRAIN_DEV`) | $N=80$ | `53d1f7ec685e354b863c8d9abae4dfd8001d7491c8df25e655a34d25c7b071e2` |
-| `evaluation/renal/v7/renal-product-test-v7.json` | Frozen Product Test Benchmark | $N=100$ | `735705e328e32167de58273055926b6fdaaf66c17ae443f036f67147a668a2fe` |
-| `evaluation/renal/v7/renal-ood-stress-v6.json` | Frozen OOD Stress Benchmark (V6 validation) | $N=40$ | `a0463cd276854abbfaab421aa12e4f8ad15485c685c15d2104e434a956a7b2d2` |
-| `evaluation/renal/v7/renal-external-eval-v7.json` | External Biomedical Transfer Benchmark | $N=25$ | `aa73f75fc0ba556a2c25b6d14fb87f6733aca0b33e1f994c4363bbcdab2d0a5d` |
-| `evaluation/renal/v7/renal-answerability-safety-v7.json` | Answerability & Safety Benchmark | $N=80$ | `188570528e71b87a7c8c5427675b762de8b4faa2e745a29e3627d971fb4019b1` |
-| `reports/renal_v7/renal_v7_dataset_firewall_audit.json` | Firewall & Grounding Audit | — | `4014f9947a18f7612253a2fc7a758fb53206709ff9f5254c9119e1d6ee571533` |
-| `reports/renal_v7/renal_v7_audit_and_reuse_inventory.json` | Capability Inventory Audit | — | `e1d44df4eefae991cb88f61537233ebc83fc6ec65d217983ea4baeaae69611f7` |
-| `reports/renal_v7/renal_v7_model_bakeoff_report.json` | Bounded Model Bake-Off Report | 5 configs | `70d40d10e945436d5bea72495bf56019224ae822f7a37df29cd5443bf39c8278` |
-| `reports/renal_v7/renal_v7_hard_negative_audit.json` | Hard-Negative Mining & Error Audit | $N=80$ | `69768befb86abd2a015f804f3d7f30149c624076f791b27b20b5c48a81c736db` |
-| `reports/renal_v7/renal_v7_pretest_gate_audit.json` | Pre-Test Engineering Gate Audit | — | `f0482894b5a92986887349d2cb33d43e642cc68399585f93b37a1e864864dff3` |
-| `reports/renal_v7/renal_v7_frozen_product_test_report.json` | Frozen Product Test Results | $N=100$ | `6808919215c5e41e9fa85b7dd8bb4352401d4d1976b7d647db412de8598c7bf1` |
-| `reports/renal_v7/renal_v7_ood_stress_test_report.json` | OOD Stress Benchmark Results | $N=40$ | `79154ed4594c1d9e70eac54c22d98e91716d5c32ee4bc144ac30477c389b3d00` |
-| `reports/renal_v7/renal_v7_external_evaluation_report.json` | External Biomedical Generalization Report | $N=25$ | `07589b3eddf9fc36e0d43921b08e5a3bcf14e8a39b799d491a676eea5372318e` |
-| `reports/renal_v7/renal_v7_answerability_safety_report.json` | Answerability & Abstention Safety Report | $N=80$ | `32ff27e70a42ef1295ac917895329f10987af86d91221b238393b72323ff61a7` |
+### C. Current Trustworthy Metrics (Audited on PRODUCT_DEV_V3, N=100)
+- **Reference Exhaustive BGE-M3 Retrieval**:
+  - Semantic Recall@20: **58.00%** (58/100) [95% CI: 48.21%, 67.20%]
+  - Semantic Recall@50: **63.00%** (63/100) [95% CI: 53.22%, 71.82%]
+  - Semantic Recall@100: **69.00%** (69/100) [95% CI: 59.37%, 77.22%]
+  - Exact-Gold Recall@20: **55.00%** (55/100) [95% CI: 45.24%, 64.39%]
+  - Exact-Gold Recall@50: **60.00%** (60/100) [95% CI: 50.20%, 69.06%]
+  - Passage DocHit@1: **56.00%** | DocHit@5: **74.00%**
+  - Passage SectionHit@1: **31.00%** | SectionHit@5: **51.00%**
+  - MRR: **0.2946** | nDCG@10: **0.3316**
+- **Stage-B CentralClaimVerifier on Held-Out Benchmark ($N=60$)**:
+  - Macro-F1: **0.4697**
+  - SUPPORTED Precision: **100.00%** (2/2) [95% CI: 34.24%, 100.00%]
+  - CONTRADICTED Precision: **87.50%** (7/8) [95% CI: 52.91%, 97.76%]
+  - High-Risk Clinical Safety Fail-Closed Rate: **100.00%** (0/10 unsafe support)
+- **Legacy PLAB Cardiorespiratory 36 Questions**:
+  - `EVIDENCE_VERIFIED`: **7 / 36 (19.44%)**
+  - `NEEDS_SOURCE_REPAIR`: **29 / 36 (80.56%)**
+  - `REJECTED`: **0 / 36 (0.00%)**
+  - `Golden`: **0 / 36** (Strict requirement: Golden requires real qualified clinician review only).
 
----
-
-## 4. Multi-Lane Evaluation Matrix
-
-### Lane 1: Bounded Model Bake-Off on TRAIN_DEV ($N=80$)
-
-Evaluated on NVIDIA GeForce RTX 3060 Laptop GPU across 5 retrieval configurations:
-
-| Metric | Config 1: V3 Dense Baseline (Depth 20) | Config 2: Pure BM25 (Depth 50) | Config 3: Dual Hybrid Dense+BM25 (Depth 50) | Config 4 (STACK A): Multi-Channel V7 (Depth 50) | Config 5 (STACK A+): Multi-Channel V7 (Depth 100) |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **CandidateRecall@20** | 74/80 (92.50%) | 72/80 (90.00%) | **79/80 (98.75%)** | **79/80 (98.75%)** | **79/80 (98.75%)** |
-| **CandidateRecall@50** | 74/80 (92.50%) | 78/80 (97.50%) | **80/80 (100.0%)** | **80/80 (100.0%)** | **80/80 (100.0%)** |
-| **CandidateRecall@100**| 74/80 (92.50%) | 78/80 (97.50%) | **80/80 (100.0%)** | **80/80 (100.0%)** | **80/80 (100.0%)** |
-| **PassageHit@1** | 60/80 (75.00%) | 60/80 (75.00%) | 61/80 (76.25%) | **61/80 (76.25%)** | 60/80 (75.00%) |
-| **PassageHit@5** | 71/80 (88.75%) | 73/80 (91.25%) | 74/80 (92.50%) | **73/80 (91.25%)** | 73/80 (91.25%) |
-| **MRR** | 0.8103 | 0.8224 | **0.8350** | **0.8341** | 0.8281 |
-| **nDCG@10** | 0.8383 | 0.8554 | **0.8710** | **0.8701** | 0.8657 |
-| **p50 Latency** | 1209 ms | 2279 ms | 2406 ms | **2356 ms** | 4012 ms |
-| **p95 Latency** | 1429 ms | 2872 ms | 3176 ms | **6622 ms** | 8330 ms |
-| **Max VRAM** | 4164 MB | 4262 MB | 4262 MB | **4262 MB** | 4262 MB |
-
----
-
-### Lane 2: Hard-Negative Mining & PEFT Gate Assessment
-
-Mined across all 80 items of `TRAIN_DEV`:
-- **Document-Level Hit@1**: 75/80 = **93.75%**
-- **Document-Level Hit@5**: 80/80 = **100.00%**
-- **Section-Level Hit@1**: 63/80 = **78.75%**
-- **Section-Level Hit@5**: 75/80 = **93.75%**
-
-**Top-1 Distractor Classification (21 non-exact matches)**:
-- **Intra-document siblings** (adjacent 400-token chunks within the same document and section): **16/21 (76.2%)**
-- **Sibling clinical conditions** (cross-document clinical distractors): **4/21 (19.0%)** = **5.0% of all queries**
-- **High-lexical overlap distractors**: **1/21 (4.8%)**
-
-**PEFT/LoRA Decision Rule**:
-> Under Milestone 6 policy, LoRA fine-tuning is authorized *if and only if* pre-test gates fail due to intra-family clinical confusion. Because cross-document clinical confusion occurred in only 5.0% of queries (4/80) and 76.2% of non-exact matches were adjacent sibling chunks from the correct article, **LoRA adaptation was formally REJECTED**. Stack A was frozen without parameter modification.
+### D. Measurement Correction Delta (NOT Model Improvement)
+- On `PRODUCT_DEV_V2`, BGE-M3 Recall@50 was **85.00%** because 34.17% of queries leaked section headings and editorial tokens (e.g. `...in . Commentary?`, `...in . Discussion?`).
+- On clean `PRODUCT_DEV_V3`, BGE-M3 Recall@50 is **63.00%**.
+- This $-22.00\%$ delta represents **TASK_DEFINITION_CORRECTION_DELTA** (removing synthetic leakage), **NOT** model degradation.
 
 ---
 
-### Lane 3: Frozen Product Test ($N=100$) — Single-Shot Execution
+## 1. Shared Evidence Engine Architecture
 
-Executed strictly ONCE on `evaluation/renal/v7/renal-product-test-v7.json` with frozen Stack A:
+The unified Evidence Engine V2 (`src/medicalplab/evidence_engine/`) serves Course Learning, PLAB question authoring, Clinical Reasoning, and the Socratic Tutor:
 
-| Metric | Numerator / Denominator | Point Estimate | Wilson 95% Confidence Interval |
-| :--- | :---: | :---: | :---: |
-| **CandidateRecall@20** | 56 / 100 | **56.00%** | [46.23%, 65.33%] |
-| **CandidateRecall@50** | 61 / 100 | **61.00%** | [51.20%, 69.98%] |
-| **PassageHit@1** | 30 / 100 | **30.00%** | [21.89%, 39.58%] |
-| **PassageHit@5** | 46 / 100 | **46.00%** | [36.56%, 55.74%] |
-| **DocumentHit@1** | 65 / 100 | **65.00%** | [55.25%, 73.64%] |
-| **DocumentHit@5** | 77 / 100 | **77.00%** | [67.85%, 84.16%] |
-| **MRR** | — | **0.3774** | — |
-| **nDCG@10** | — | **0.6579** | — |
-| **p50 Latency** | — | **2177.0 ms** | — |
-| **p95 Latency** | — | **2530.4 ms** | — |
-| **Max VRAM** | — | **4197.9 MB** | — |
-
-**Product Test Error Breakdown (70 non-exact rank-1 returns)**:
-- **Intra-document siblings**: 35 / 70 (50.0%) — correct source document retrieved; adjacent chunk selected by reranker.
-- **Cross-document clinical distractors**: 33 / 70 (47.1%) — intra-family differentiation (e.g. ATN vs pre-renal, membranous vs FSGS).
-- **Lexical distractors**: 2 / 70 (2.9%) — spurious BM25 overlap.
-
----
-
-### Lane 4: OOD Section-Anchored Stress Test ($N=40$)
-
-Evaluated on the exact frozen V6 validation benchmark (`renal-ood-stress-v6.json`) with zero retuning:
-
-| Architecture / Milestone | CandidateRecall@20 | CandidateRecall@50 | PassageHit@1 | PassageHit@5 | DocumentHit@1 | DocumentHit@5 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **V6 Raw Dense Baseline** | 15 / 40 (37.50%) | — | — | — | — | — |
-| **V6 Class A Selector** | 18 / 40 (45.00%) | — | — | — | — | — |
-| **V6 Dense@500 Ceiling** | 36 / 40 (90.00%) | — | — | — | — | — |
-| **V7 Stack A Multi-Channel** | **36 / 40 (90.00%)** | **37 / 40 (92.50%)** | 9 / 40 (22.50%) | **33 / 40 (82.50%)** | **39 / 40 (97.50%)** | **39 / 40 (97.50%)** |
-| **Wilson 95% CI (V7 Stack A)** | [76.95%, 96.04%] | [80.14%, 97.42%] | [12.32%, 37.50%] | [68.05%, 91.25%] | [87.12%, 99.56%] | [87.12%, 99.56%] |
-
-**Key Takeaway**: V7 Stack A matched the theoretical Dense@500 ceiling at top-20 (**90.00% vs 37.50%**), demonstrating that multi-channel candidate acquisition completely eliminates the candidate truncation pathology that caused the V6 failure.
-
----
-
-### Lane 5: External Biomedical Evaluation ($N=25$)
-
-Evaluated on 25 PubMedQA / MedRAG style clinical nephrology queries testing zero-shot generalization across open biomedical literature:
-- **Top-1 Semantic Document Hit**: 6 / 25 (**24.00%**)
-- **Top-5 Semantic Document Hit**: 16 / 25 (**64.00%**)
-- **p50 Latency**: 1985.8 ms | **p95 Latency**: 2555.6 ms
-- **Finding**: Multi-channel retrieval transfers effectively to external clinical questions without requiring memorization of the underlying corpus.
-
----
-
-### Lane 6: Answerability, Safe Abstention & Citation Verification ($N=80$)
-
-Evaluated on 40 supported clinical queries vs 40 unsupported/adversarial queries (out-of-domain, fabricated treatments, unrepresented rare diseases, contradictory claims):
-
-| Safety Metric | Value Achieved | Gate Requirement | Status |
-| :--- | :---: | :---: | :---: |
-| **Calibrated Threshold ($\tau_{\text{abstain}}$)** | **5.0** | Empirically Swept | Tuned |
-| **Answerability Precision** | **0.9615 (96.15%)** | $\ge 0.90$ | **PASS** |
-| **Unsafe Accept Rate** | **0.0250 (2.50%, 1/40)** | $\le 0.05$ | **PASS** |
-| **Safe Abstention Rate** | **0.9750 (97.50%, 39/40)** | High Abstention | **EXCELLENT** |
-| **Answerability Recall** | **0.6250 (62.50%, 25/40)** | $\ge 0.75$ | Conservative Tradeoff |
-| **Citation Groundedness** | **100.0% (26/26 accepted)** | 100% Valid Cites | **PASS** |
-
-At $\tau_{\text{abstain}} = 5.0$, the system safely rejects 97.5% of adversarial/hallucinatory queries while achieving 96.15% precision and 100% citation groundedness on accepted answers.
-
----
-
-## 5. Architectural Specifications
-
-### Query Canonicalizer (`RenalQueryCanonicalizer`)
-Located at [`src/medicalplab/learn/renal_canonicalizer.py`](file:///c:/Users/Adham%20Elsayed/Desktop/AdhamElsayedAI/MedicalPlab/src/medicalplab/learn/renal_canonicalizer.py):
-- **Clinical Acronym Expansion**: Regex boundary matching for KDIGO, AKI, CKD, ESRD, FSGS, MCD, MN, MPGN, ADPKD, RTA, ATN, AIN, HUS, TTP, ANCA, GBM, SGLT2, etc.
-- **UK/US Spelling Unification**: Bidirectional unification (e.g. *oedema/edema*, *haematuria/hematuria*, *proteinuria*).
-- **Comparator & Unit Normalization**: Standardized symbol mapping (`<`, `<=`, `>`, `>=`, `=`, `mL/min/1.73m2`, `g/24h`).
-- **Strict Polarity Preservation**: Preserves negation markers (`no`, `not`, `without`, `absence of`) without inversion.
-
-### Multi-Channel Retriever (`RenalV7MultiChannelRetriever`)
-Located at [`src/medicalplab/learn/renal_v7_retriever.py`](file:///c:/Users/Adham%20Elsayed/Desktop/AdhamElsayedAI/MedicalPlab/src/medicalplab/learn/renal_v7_retriever.py):
-- **Candidate Depth**: $K=50$ (pool depth to reranker).
-- **RRF Constant**: $k=60$.
-- **Channel Weights**: Dense = 1.0, BM25 = 1.0, Entity Sparse = 0.8, Structural Section = 0.6.
-- **Crowding Dampener**: `max_chunks_per_section = 4`.
-- **Structured Reranker Input**:
-  ```text
-  Title: {doc_title}
-  Section Path: {section_path}
-  Heading: {heading}
-  Evidence: {passage_text}
-  ```
-- **Medical Claim Support Instruction**:
-  ```text
-  Instruct: Determine whether the evidence passage directly supports the exact medical proposition requested in the query. Topical relevance without direct claim support is non-support.
-  Query: {query}
-  ```
-
----
-
-## 6. Verification and Regression Commands
-
-To verify all V7 invariants, cryptographic hashes, and closure criteria:
-
-```bash
-# 1. Run comprehensive V7 closure test suite
-pytest tests/test_renal_v7_closure.py tests/test_renal_v7_canonicalizer.py -v
-
-# 2. Re-verify cryptographic sidecars across all V7 datasets and reports
-python -c "
-import hashlib, Path from pathlib
-root = Path('.')
-for p in root.glob('reports/renal_v7/*.json.sha256'):
-    json_path = p.with_suffix('')
-    expected = p.read_text().split()[0].strip()
-    actual = hashlib.sha256(json_path.read_bytes()).hexdigest()
-    assert actual == expected, f'Mismatch in {json_path}'
-print('All V7 SHA-256 sidecars verified successfully!')
-"
+```
+[ Clinical Query / PLAB Proposition ]
+                 │
+                 ▼
+     [ ClinicalQueryProcessor ]
+       ├── Original Clinical Question
+       ├── Canonical Query Formulation
+       └── Neutral Retrieval Target
+                 │
+                 ▼
+   [ BGEM3ExhaustiveRetriever ]
+       ├── Dense Representation (1024-dim, Mode B)
+       ├── Lexical Representation (Multi-lingual Sparse)
+       └── Exhaustive Scoring across 2,691 Renal Chunks
+                 │
+                 ▼
+  [ Top-50 Candidates with Provenance ]
+                 │
+                 ▼
+      [ EvidenceReranker ] (Qwen/Qwen3-Reranker-4B, 4-bit NF4)
+       ├── Structured Prompt: Instruction + Original Question + Neutral Target
+       └── Hierarchical Passage: Title + Section Path + Heading + Passage
+                 │
+                 ▼
+    [ CentralClaimVerifier (Stage-B) ]
+       ├── Deterministic Veto Layer:
+       │    ├── Provenance Check (Chunk in Verified Corpus)
+       │    ├── Negation / Polarity Reversal Veto
+       │    ├── Numeric / Threshold / Unit Veto
+       │    ├── Guideline Authority Veto (NICE vs WHO)
+       │    └── High-Risk Clinical Fail-Closed Gate
+       └── Discrete 4-State Output:
+            ├── SUPPORTED
+            ├── PARTIALLY_SUPPORTED
+            ├── CONTRADICTED
+            └── NOT_SUPPORTED
 ```
 
 ---
 
-## 7. Clean Handoff & Conclusions
+## 2. Forensic Measurement-Integrity Findings
 
-1. **Mission Complete**: All 12 milestones of the Renal V7 campaign have been fully executed and documented.
-2. **Production Baseline Unchanged**: Production runtime remains `QwenRenalRetrieverV3` (`RENAL_RUNTIME_VERSION = "v3"`). V7 artifacts reside in a clean, isolated namespace.
-3. **Forensic Closure**: The historical V6 failure has been thoroughly diagnosed, resolved, and documented with empirical proof.
+### 2.1 The "106 vs 86" Contradiction Resolved
+- **Discrepancy**: Prior summary reports cited BGE-M3 Top-100 Semantic Recall as $106/120$ ($88.33\%$), but stated that the reranker had only $86/120$ eligible positives in its candidate input pool.
+- **Root Cause**: Two different candidate artifacts at two different candidate depths were conflated:
+  - $86/120$ was the semantic hit count inside the **Top-25 candidate pool** produced by the 4-route `CandidateRetriever` (Qwen-0.6B Dense + BM25).
+  - $106/120$ was the semantic hit count inside the **Top-100 candidate pool** produced by the exhaustive BGE-M3 retriever.
+- **Resolution**: Canonical candidate lineage artifact generated and persisted: `reports/evidence_engine/canonical_candidate_lineage.json` (SHA-256: `f0e00e4e7c50f5d22e2ae645474814bf467ab7e0d5c1cca3337ba1d9da1f371e`).
+
+### 2.2 DocHit vs SectionHit Hierarchy Restored
+- **Discrepancy**: Stage 8 reported `DocHit@1 = 10.83%` while `SectionHit@1 = 58.33%`, appearing to violate the logical hierarchy that a section hit implies a document hit.
+- **Root Cause**: The two metrics were evaluated across different candidate universes:
+  - `DocHit` was evaluated on the **DocumentRouter** (which ranked 23 document cards).
+  - `SectionHit` was evaluated on the **Passage Retriever** (which ranked passages from the 4-route candidate pool).
+- **Resolution**: Evaluated from the **same ranked passage list** on `PRODUCT_DEV_V3`, the hierarchical invariant holds strictly across all depths:
+  - $DocHit@1 = 56.00\% \ge SectionHit@1 = 31.00\%$
+  - $DocHit@5 = 74.00\% \ge SectionHit@5 = 51.00\%$
+  - $DocHit@10 = 80.00\% \ge SectionHit@10 = 62.00\%$
+
+---
+
+## 3. Benchmark Repair: From PRODUCT_DEV_V2 to PRODUCT_DEV_V3
+
+### 3.1 Blinded All-Query Audit of PRODUCT_DEV_V2 ($N=120$)
+All 120 items in `PRODUCT_DEV_V2` were audited blindly (without access to retrieval ranks or model identities):
+
+| Classification | Count | Percentage | Primary Defect / Characteristics |
+| :--- | :---: | :---: | :--- |
+| **VALID_PRODUCT_QUERY** | 77 | 64.17% | Authentic undergraduate clinical questions (only 46 distinct non-templated queries) |
+| **EDITORIAL_STRUCTURE_QUERY** | 41 | 34.17% | Artificial queries targeting publication structure (`...in . Commentary?`, `...in . Discussion?`) |
+| **QUERY_EVIDENCE_MISMATCH** | 2 | 1.67% | Query premise disconnected from cited evidence chunk |
+| **Total Audited** | **120** | **100.0%** | Audit artifact: `reports/evidence_engine/product_dev_v2_blinded_audit.json` |
+
+### 3.2 PRODUCT_DEV_V3 Construction & Cryptographic Freeze
+- **Curriculum Blueprint**: 20 pre-declared clinical categories (Physiology, AKI, CKD, Glomerulonephritis, Transplantation, Electrolytes, Acid-Base, Urinalysis, Imaging, Pharmacology, etc.) with 5 items each.
+- **Multi-System Blinded QREL Pool**: Candidates pooled across BGE-M3 Top-100, Qwen Dense Top-100, BM25 Top-100, and structural siblings, adjudicated without retriever rank or score visibility.
+- **Cryptographic Firewall**: Strict bitwise check against `renal-train-dev-v7`, `renal-product-test-v7`, `renal-ood-stress-v6`, and `final_product_test.json`: **0 leaks detected**.
+- **Benchmark Artifact**: `evaluation/evidence_engine/product_dev_v3.json` ($N=100$)
+- **SHA-256 Digest**: `dfed4a3c3ddeaa3b854317089747ce5bd2ad482867195cb0ce14c68620578746`
+
+---
+
+## 4. Clean Reference Retrieval Re-Baseline on PRODUCT_DEV_V3
+
+Conducted across all 100 queries of `PRODUCT_DEV_V3` against the 2,691 Renal corpus chunks (`BAAI/bge-m3`, revision `5617a9f61b028005a4858fdac845db406aefb181`):
+
+| Depth ($K$) | Semantic Recall ($K$) | Exact-Gold Recall ($K$) | Passage DocHit ($K$) | Passage SectionHit ($K$) |
+| :---: | :---: | :---: | :---: | :---: |
+| **@1** | 20.00% (20/100) | 18.00% (18/100) | 56.00% (56/100) | 31.00% (31/100) |
+| **@5** | 38.00% (38/100) | 36.00% (36/100) | 74.00% (74/100) | 51.00% (51/100) |
+| **@10** | 51.00% (51/100) | 48.00% (48/100) | 80.00% (80/100) | 62.00% (62/100) |
+| **@20** | **58.00%** (58/100) [48.2%, 67.2%] | **55.00%** (55/100) [45.2%, 64.4%] | 83.00% (83/100) | 68.00% (68/100) |
+| **@50** | **63.00%** (63/100) [53.2%, 71.8%] | **60.00%** (60/100) [50.2%, 69.1%] | 86.00% (86/100) | 71.00% (71/100) |
+| **@100** | **69.00%** (69/100) [59.4%, 77.2%] | **66.00%** (66/100) [56.3%, 74.5%] | 90.00% (90/100) | 75.00% (75/100) |
+| **@200** | **73.00%** (73/100) | **69.00%** (69/100) | 92.00% (92/100) | 76.00% (76/100) |
+
+- **Summary Ranking Metrics**:
+  - MRR: **0.2946**
+  - nDCG@10: **0.3316**
+  - Rank Distribution: Median = 10.0, p75 = 204.0, p90 = 835.0, Max = 2470
+- **Artifact**: `reports/evidence_engine/product_dev_v3_bge_m3_baseline_report.json` (SHA-256: `bdc0c9662c41c932e3a2751e49c3c67c50abfe5878d9c863ea250d09365d2aef`)
+
+---
+
+## 5. Stage-B Central Claim-Verifier Authority & Benchmark Evaluation
+
+Evaluated on the held-out `claim_verifier_benchmark.json` ($N=60$ balanced across 4 discrete states, including 14 mandatory clinical hard cases):
+
+### 5.1 Multi-Class Grounding Confusion Matrix
+| Ground Truth \ Predicted | SUPPORTED | PARTIALLY_SUPPORTED | CONTRADICTED | NOT_SUPPORTED | Total |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **SUPPORTED** | **2** | 6 | 0 | 7 | 15 |
+| **PARTIALLY_SUPPORTED** | 0 | **8** | 1 | 6 | 15 |
+| **CONTRADICTED** | 0 | 5 | **7** | 3 | 15 |
+| **NOT_SUPPORTED** | 0 | 1 | 1 | **13** | 15 |
+| **Total Predicted** | 2 | 20 | 9 | 29 | **60** |
+
+### 5.2 Performance Metrics
+- **Macro-F1**: **0.4697**
+- **SUPPORTED**: Precision = **100.00%** (2/2), Recall = **13.33%** (2/15), F1 = **0.2353**
+- **PARTIALLY_SUPPORTED**: Precision = **40.00%** (8/20), Recall = **53.33%** (8/15), F1 = **0.4571**
+- **CONTRADICTED**: Precision = **87.50%** (7/8), Recall = **46.67%** (7/15), F1 = **0.6087**
+- **NOT_SUPPORTED**: Precision = **43.33%** (13/29), Recall = **86.67%** (13/15), F1 = **0.5778**
+- **Safety Integrity**:
+  - False Support Rate (unsafe accept on unsupported/contradicted): **20.00% (6/30)** [95% CI: 9.50%, 37.31%]
+  - High-Risk Clinical Safety Fail-Closed Rate: **100.00%** (0 / 10 unsafe supports on high-risk claims)
+- **Artifact**: `reports/evidence_engine/claim_verifier_evaluation_report.json` (SHA-256: `827a52f429b03bc412932f6bb1885f38e24c7471514bdb8d923d3e5f2cb1a88a`)
+
+---
+
+## 6. Legacy PLAB Cardiorespiratory Question Bank Re-Adjudication
+
+All 36 legacy questions in `Data/questions/cardiorespiratory_batch_1.json` were audited against the shared Stage-B evidence verification layer:
+
+| Metric / Dimension | Value | Methodological Standard |
+| :--- | :---: | :--- |
+| **Total Legacy Questions** | 36 | `cardiorespiratory_batch_1_v1` |
+| **EVIDENCE_VERIFIED** | **7 / 36 (19.44%)** | Cited evidence strictly entails why the correct option is medically correct |
+| **NEEDS_SOURCE_REPAIR** | **29 / 36 (80.56%)** | Clinically sound questions requiring replacement citations / specific authority bindings |
+| **REJECTED** | **0 / 36 (0.00%)** | Zero medically invalid or unrepairable questions |
+| **False-Positive Citations Detected** | 18 | Quotes defining general context without mentioning correct clinical option |
+| **Authority Mismatches Detected** | 2 | Stem citing NICE guidelines while evidence was drawn from non-NICE corpus documents |
+| **Human-Reviewed / Golden** | **0 / 36 (0.00%)** | **Invariant**: Golden = 0 until actual qualified UK clinician review is completed |
+| **Scale-to-200 Gate Status** | **LOCKED** | Stopped at 36; scaling to 200 questions requires explicit owner authorization |
+
+---
+
+## 7. Safety, Clinical Reasoning & Tutor Evaluation Specifications
+
+### 7.1 Safety Evaluation Framework
+- **Adversarial Check ($N=40$)**: Formally designated as `ADVERSARIAL_UNSAFE_ACCEPT_CHECK` (not full safety validation).
+- **Answerability & Safety Benchmark ($N=80$)**: Evaluated on `evaluation/renal/v7/renal-answerability-safety-v7.json`:
+  - Answerability Precision: **96.15% (25/26)** [95% CI: 80.36%, 99.90%]
+  - Answerability Recall: **62.50% (25/40)** [95% CI: 45.88%, 77.27%]
+  - Safe Abstention Rate on Unsupported: **97.50% (39/40)**
+  - Unsafe Acceptance Rate: **2.50% (1/40)**
+  - Overall Safety Gate: **FAILED (Recall 62.5% < 75% threshold)** due to overly conservative abstention.
+
+### 7.2 Clinical Reasoning Evaluation Framework (Frozen 9-Dimensional Rubric)
+Future Clinical Reasoning evaluations must report each dimension independently:
+1. *Problem Representation* (synthesis of patient presentation)
+2. *Differential Diagnosis* (plausible options ranked by likelihood)
+3. *Dangerous Diagnosis Omissions* (exclusion of lethal conditions)
+4. *Investigation Selection* (evidence-based diagnostic choices)
+5. *Investigation Sequencing* (appropriate escalation from bedside to invasive)
+6. *Management Formulation* (guideline-concordant therapy)
+7. *Evidence Support* (citations binding to verified corpus)
+8. *Unsafe Recommendations* (contraindicated drugs/dosages)
+9. *Schema Validity* (strict JSON contract compliance)
+
+### 7.3 Socratic Tutor Evaluation Framework (Frozen 6-Dimensional Rubric)
+1. *Pedagogical Progression* (stepwise guidance rather than immediate lecture)
+2. *Hint Usefulness* (scaffolding tailored to user misunderstanding)
+3. *Misconception Correction* (identifying and correcting specific diagnostic flaws)
+4. *Premature Answer Disclosure Prevention* (zero answer leakage before student reasoning)
+5. *Evidence Grounding* (feedback verified against Stage-B corpus)
+6. *Clinical Safety* (zero endorsement of hazardous medical actions)
+
+---
+
+## 8. Hardware Footprint & Operational Safety
+
+All evaluations executed strictly on local hardware (NVIDIA GeForce RTX 3060 Laptop GPU, 6GB VRAM, 16GB Host RAM):
+- **Sequential Model Loading**: BGE-M3 representations fully flushed from VRAM before loading Qwen models.
+- **Quantization Integrity**: 4-bit NF4 with FP16 compute via `BitsAndBytesConfig`.
+- **Peak VRAM**: 5.85 GB (0 OOM events).
+- **Host Memory**: Paged virtual memory managed under 12 GB commit limit.
+- **Inference Mode**: `torch.inference_mode()` enabled for all evaluation loops.
+
+---
+
+## 9. Primary Scientific Status & Next Owner Decision
+
+### Final Primary Scientific State:
+$$\mathbf{BENCHMARK\_REPAIR\_RESOLVED\_PRIMARY\_FAILURE}$$
+
+### Scientific Justification:
+1. Historical reports of "model semantic failure" were an artifact of benchmark contamination: 34.17% of `PRODUCT_DEV_V2` items contained artificial editorial heading concatenation rather than genuine clinical inquiries.
+2. The hierarchical metric conflict (`DocHit@1 < SectionHit@1`) and candidate discrepancy (`106 vs 86`) were implementation and cross-universe reporting defects, not model failures.
+3. On the clean, firewalled `PRODUCT_DEV_V3`, reference BGE-M3 retrieval achieves a baseline of 58.0% Recall@20 and 63.0% Recall@50 without any fine-tuning.
+4. Stage-B CentralClaimVerifier provides 100% fail-closed protection on high-risk medical contraindications, but lexical heuristics limit general semantic recall (13.33%), establishing the need for an independent semantic NLI verification signal.
+
+### Recommended Next Milestone:
+$$\mathbf{NEXT\_OWNER\_DECISION: M1\_INDEPENDENT\_BIOMEDICAL\_NLI\_VERIFICATION}$$
+- Evaluate at most **one** off-the-shelf biomedical NLI model (e.g. `BioLinkBERT-NLI` or `MedNLI`) strictly within the Stage-B evidence verifier on `claim_verifier_benchmark.json` to test whether it improves SUPPORTED recall beyond lexical heuristics while preserving zero high-risk false-support.
+- **Do NOT** train new retrieval models, swap embeddings, tune RRF weights, or scale PLAB beyond 36 without explicit owner authorization.
