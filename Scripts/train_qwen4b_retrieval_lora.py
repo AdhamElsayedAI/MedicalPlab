@@ -27,10 +27,27 @@ def load_model(cfg, adapter:Path|None=None, trainable=True):
     st[0].auto_model=base; st.train(trainable)
     return st
 
+def _move_features_to_device(value,device):
+    import torch
+    if torch.is_tensor(value): return value.to(device)
+    if isinstance(value,dict): return {k:_move_features_to_device(v,device) for k,v in value.items()}
+    if isinstance(value,list): return [_move_features_to_device(v,device) for v in value]
+    if isinstance(value,tuple): return tuple(_move_features_to_device(v,device) for v in value)
+    return value
+
+def _preprocess_features(st,text,query,cfg):
+    prompt=cfg['model']['prompt'] if query else None
+    if hasattr(st,'preprocess'):
+        feats=st.preprocess([text],prompt=prompt)
+    else:
+        if prompt: text=prompt+text
+        feats=st.tokenize([text])
+    if not isinstance(feats,dict): raise RuntimeError(f"SENTENCE_TRANSFORMER_PREPROCESS_INVALID type={type(feats).__name__}")
+    return _move_features_to_device(feats,'cuda:0')
+
 def emb(st,text,query=False,cfg=None):
     import torch
-    if query: text=cfg['model']['prompt']+text
-    feats=st.tokenize([text]); feats={k:v.to('cuda:0') for k,v in feats.items()}
+    feats=_preprocess_features(st,text,query,cfg)
     out=st(feats)['sentence_embedding']; return torch.nn.functional.normalize(out.float(),p=2,dim=-1)
 def loss_one(st,r,neg_index,cfg):
     import torch

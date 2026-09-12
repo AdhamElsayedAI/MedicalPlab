@@ -77,3 +77,35 @@ def test_builder_synthetic_source_grounded_pipeline(tmp_path, monkeypatch):
     rep=b.build(cfg)
     assert rep['n']==8
     data=json.loads(output.read_text()); assert all(r['hard_negative_ids'] for r in data)
+
+def test_qwen4b_feature_device_move_preserves_non_tensor_metadata():
+    import torch
+    from train_qwen4b_retrieval_lora import _move_features_to_device
+    features={
+        'input_ids':torch.tensor([[1,2,3]]),
+        'attention_mask':torch.tensor([[1,1,1]]),
+        'modality':'text',
+        'nested':{'task':'retrieval','tensor':torch.tensor([1])},
+        'labels':['a','b'],
+    }
+    moved=_move_features_to_device(features,'cpu')
+    assert moved['input_ids'].device.type=='cpu'
+    assert moved['attention_mask'].device.type=='cpu'
+    assert moved['modality']=='text'
+    assert moved['nested']['task']=='retrieval'
+    assert moved['nested']['tensor'].device.type=='cpu'
+    assert moved['labels']==['a','b']
+
+def test_qwen4b_preprocess_path_preserves_metadata_and_query_prompt(monkeypatch):
+    import torch
+    import train_qwen4b_retrieval_lora as t
+    calls={}
+    class FakeST:
+        def preprocess(self,texts,prompt=None):
+            calls['texts']=texts; calls['prompt']=prompt
+            return {'input_ids':torch.tensor([[1]]),'modality':'text'}
+    monkeypatch.setattr(t,'_move_features_to_device',lambda value,device:value)
+    cfg={'model':{'prompt':'PROMPT: '}}
+    out=t._preprocess_features(FakeST(),'kidney query',True,cfg)
+    assert calls=={'texts':['kidney query'],'prompt':'PROMPT: '}
+    assert out['modality']=='text'
