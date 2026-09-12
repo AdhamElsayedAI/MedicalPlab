@@ -1,0 +1,839 @@
+{
+  "verifier_name": "CentralClaimVerifier",
+  "benchmark_file": "evaluation\\evidence_engine\\claim_verifier_benchmark.json",
+  "benchmark_sha256": "53ea79f0b7b991af5ba1d7860c8ea7ea8bd2f38fec37c50c26f85d4b44760d8b",
+  "n_items": 60,
+  "evaluation_timestamp": "2026-09-12T04:21:32Z",
+  "total_elapsed_seconds": 0.0495,
+  "confusion_matrix": {
+    "SUPPORTED": {
+      "SUPPORTED": 2,
+      "PARTIALLY_SUPPORTED": 6,
+      "CONTRADICTED": 0,
+      "NOT_SUPPORTED": 7
+    },
+    "PARTIALLY_SUPPORTED": {
+      "SUPPORTED": 0,
+      "PARTIALLY_SUPPORTED": 8,
+      "CONTRADICTED": 1,
+      "NOT_SUPPORTED": 6
+    },
+    "CONTRADICTED": {
+      "SUPPORTED": 0,
+      "PARTIALLY_SUPPORTED": 4,
+      "CONTRADICTED": 7,
+      "NOT_SUPPORTED": 4
+    },
+    "NOT_SUPPORTED": {
+      "SUPPORTED": 0,
+      "PARTIALLY_SUPPORTED": 2,
+      "CONTRADICTED": 0,
+      "NOT_SUPPORTED": 13
+    }
+  },
+  "macro_f1": 0.4697,
+  "per_class_metrics": {
+    "SUPPORTED": {
+      "true_count": 15,
+      "predicted_count": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 13,
+      "precision": {
+        "count": 2,
+        "total": 2,
+        "rate": 1.0,
+        "pct": "100.00%",
+        "ci_95_wilson": [
+          0.3424,
+          1.0
+        ]
+      },
+      "recall": {
+        "count": 2,
+        "total": 15,
+        "rate": 0.1333,
+        "pct": "13.33%",
+        "ci_95_wilson": [
+          0.0374,
+          0.3788
+        ]
+      },
+      "f1": 0.2353
+    },
+    "PARTIALLY_SUPPORTED": {
+      "true_count": 15,
+      "predicted_count": 20,
+      "tp": 8,
+      "fp": 12,
+      "fn": 7,
+      "precision": {
+        "count": 8,
+        "total": 20,
+        "rate": 0.4,
+        "pct": "40.00%",
+        "ci_95_wilson": [
+          0.2188,
+          0.6134
+        ]
+      },
+      "recall": {
+        "count": 8,
+        "total": 15,
+        "rate": 0.5333,
+        "pct": "53.33%",
+        "ci_95_wilson": [
+          0.3012,
+          0.7519
+        ]
+      },
+      "f1": 0.4571
+    },
+    "CONTRADICTED": {
+      "true_count": 15,
+      "predicted_count": 8,
+      "tp": 7,
+      "fp": 1,
+      "fn": 8,
+      "precision": {
+        "count": 7,
+        "total": 8,
+        "rate": 0.875,
+        "pct": "87.50%",
+        "ci_95_wilson": [
+          0.5291,
+          0.9776
+        ]
+      },
+      "recall": {
+        "count": 7,
+        "total": 15,
+        "rate": 0.4667,
+        "pct": "46.67%",
+        "ci_95_wilson": [
+          0.2481,
+          0.6988
+        ]
+      },
+      "f1": 0.6087
+    },
+    "NOT_SUPPORTED": {
+      "true_count": 15,
+      "predicted_count": 30,
+      "tp": 13,
+      "fp": 17,
+      "fn": 2,
+      "precision": {
+        "count": 13,
+        "total": 30,
+        "rate": 0.4333,
+        "pct": "43.33%",
+        "ci_95_wilson": [
+          0.2738,
+          0.608
+        ]
+      },
+      "recall": {
+        "count": 13,
+        "total": 15,
+        "rate": 0.8667,
+        "pct": "86.67%",
+        "ci_95_wilson": [
+          0.6212,
+          0.9626
+        ]
+      },
+      "f1": 0.5778
+    }
+  },
+  "safety_metrics": {
+    "supported_precision": {
+      "count": 2,
+      "total": 2,
+      "rate": 1.0,
+      "pct": "100.00%",
+      "ci_95_wilson": [
+        0.3424,
+        1.0
+      ]
+    },
+    "contradicted_recall": {
+      "count": 7,
+      "total": 15,
+      "rate": 0.4667,
+      "pct": "46.67%",
+      "ci_95_wilson": [
+        0.2481,
+        0.6988
+      ]
+    },
+    "false_support_rate": {
+      "count": 6,
+      "total": 30,
+      "rate": 0.2,
+      "pct": "20.00%",
+      "ci_95_wilson": [
+        0.095,
+        0.3731
+      ]
+    },
+    "false_rejection_rate": {
+      "count": 7,
+      "total": 15,
+      "rate": 0.4667,
+      "pct": "46.67%",
+      "ci_95_wilson": [
+        0.2481,
+        0.6988
+      ]
+    },
+    "high_risk_total": 18,
+    "high_risk_unsupported_total": 10,
+    "high_risk_false_support_count": 0,
+    "high_risk_unsafe_rate": {
+      "count": 0,
+      "total": 10,
+      "rate": 0.0,
+      "pct": "0.00%",
+      "ci_95_wilson": [
+        0.0,
+        0.2775
+      ]
+    }
+  },
+  "per_item_records": [
+    {
+      "claim_id": "CLM-SUP-0001",
+      "true_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "confidence": 0.9,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Direct evidence entails all material requested propositions.",
+      "hard_case_category": "direct_guideline_recommendation"
+    },
+    {
+      "claim_id": "CLM-SUP-0002",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "definitive_diagnostic_modality"
+    },
+    {
+      "claim_id": "CLM-SUP-0003",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "emergency_electrolyte_threshold"
+    },
+    {
+      "claim_id": "CLM-SUP-0004",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "genetic_etiology"
+    },
+    {
+      "claim_id": "CLM-SUP-0005",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "diagnostic_index_threshold"
+    },
+    {
+      "claim_id": "CLM-SUP-0006",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "targeted_pharmacotherapy"
+    },
+    {
+      "claim_id": "CLM-SUP-0007",
+      "true_label": "SUPPORTED",
+      "predicted_label": "SUPPORTED",
+      "confidence": 0.9,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Direct evidence entails all material requested propositions.",
+      "hard_case_category": "pathognomonic_urinalysis"
+    },
+    {
+      "claim_id": "CLM-SUP-0008",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "renal_dose_adjustment"
+    },
+    {
+      "claim_id": "CLM-SUP-0009",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (25.0%).",
+      "hard_case_category": "pathophysiological_mechanism"
+    },
+    {
+      "claim_id": "CLM-SUP-0010",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "mineral_metabolism_etiology"
+    },
+    {
+      "claim_id": "CLM-SUP-0011",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "first_line_immunosuppression"
+    },
+    {
+      "claim_id": "CLM-SUP-0012",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "syndromic_presentation"
+    },
+    {
+      "claim_id": "CLM-SUP-0013",
+      "true_label": "SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "diagnostic_rule_criteria"
+    },
+    {
+      "claim_id": "CLM-SUP-0014",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "acid_base_tubular_pathophysiology"
+    },
+    {
+      "claim_id": "CLM-SUP-0015",
+      "true_label": "SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "investigation_timing_guideline"
+    },
+    {
+      "claim_id": "CLM-PART-0001",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "partial_evidence_presented_as_full_support"
+    },
+    {
+      "claim_id": "CLM-PART-0002",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "wrong_population"
+    },
+    {
+      "claim_id": "CLM-PART-0003",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (25.0%).",
+      "hard_case_category": "partial_evidence_presented_as_full_support"
+    },
+    {
+      "claim_id": "CLM-PART-0004",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "correct_treatment_wrong_patient_group"
+    },
+    {
+      "claim_id": "CLM-PART-0005",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "partial_evidence_presented_as_full_support"
+    },
+    {
+      "claim_id": "CLM-PART-0006",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.85,
+      "is_high_risk": false,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Evidence directly contradicts claim proposition (POLARITY_MISMATCH).",
+      "hard_case_category": "association_vs_recommendation"
+    },
+    {
+      "claim_id": "CLM-PART-0007",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_population"
+    },
+    {
+      "claim_id": "CLM-PART-0008",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_threshold"
+    },
+    {
+      "claim_id": "CLM-PART-0009",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (37.5%).",
+      "hard_case_category": "screening_vs_confirmation"
+    },
+    {
+      "claim_id": "CLM-PART-0010",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-PART-0011",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (36.4%).",
+      "hard_case_category": "partial_evidence_presented_as_full_support"
+    },
+    {
+      "claim_id": "CLM-PART-0012",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "association_vs_recommendation"
+    },
+    {
+      "claim_id": "CLM-PART-0013",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "pathophysiological_mechanism"
+    },
+    {
+      "claim_id": "CLM-PART-0014",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_population"
+    },
+    {
+      "claim_id": "CLM-PART-0015",
+      "true_label": "PARTIALLY_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (9.1%).",
+      "hard_case_category": "partial_evidence_presented_as_full_support"
+    },
+    {
+      "claim_id": "CLM-CONT-0001",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH",
+      "hard_case_category": "wrong_dose"
+    },
+    {
+      "claim_id": "CLM-CONT-0002",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH",
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH, NUMERIC_MISMATCH",
+      "hard_case_category": "wrong_population"
+    },
+    {
+      "claim_id": "CLM-CONT-0003",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-CONT-0004",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "negation_reversal"
+    },
+    {
+      "claim_id": "CLM-CONT-0005",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-CONT-0006",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "correct_number_wrong_unit"
+    },
+    {
+      "claim_id": "CLM-CONT-0007",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_threshold"
+    },
+    {
+      "claim_id": "CLM-CONT-0008",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH",
+      "hard_case_category": "guideline_authority_mismatch"
+    },
+    {
+      "claim_id": "CLM-CONT-0009",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.85,
+      "is_high_risk": false,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Evidence directly contradicts claim proposition (POLARITY_MISMATCH).",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-CONT-0010",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "CONTRADICTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "POLARITY_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: POLARITY_MISMATCH",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-CONT-0011",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-CONT-0012",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (38.5%).",
+      "hard_case_category": "wrong_threshold"
+    },
+    {
+      "claim_id": "CLM-CONT-0013",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "wrong_threshold"
+    },
+    {
+      "claim_id": "CLM-CONT-0014",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (30.0%).",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-CONT-0015",
+      "true_label": "CONTRADICTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "pathophysiological_mechanism"
+    },
+    {
+      "claim_id": "CLM-NOT-0001",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (33.3%).",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0002",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (0.0%).",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0003",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0004",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0005",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (15.4%).",
+      "hard_case_category": "screening_vs_confirmation"
+    },
+    {
+      "claim_id": "CLM-NOT-0006",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "treatment_vs_prevention"
+    },
+    {
+      "claim_id": "CLM-NOT-0007",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "wrong_population"
+    },
+    {
+      "claim_id": "CLM-NOT-0008",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0009",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Failed high-risk deterministic veto checks: NUMERIC_MISMATCH",
+      "hard_case_category": "diagnosis_vs_risk_factor"
+    },
+    {
+      "claim_id": "CLM-NOT-0010",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "wrong_threshold"
+    },
+    {
+      "claim_id": "CLM-NOT-0011",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Insufficient lexical evidence overlap (36.4%).",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-NOT-0012",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": false,
+      "veto_flags": [
+        "NUMERIC_MISMATCH"
+      ],
+      "rationale": "Deterministic veto triggered: NUMERIC_MISMATCH",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0013",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "wrong_treatment"
+    },
+    {
+      "claim_id": "CLM-NOT-0014",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "NOT_SUPPORTED",
+      "confidence": 0.1,
+      "is_high_risk": true,
+      "veto_flags": [],
+      "rationale": "High-risk clinical claim fails closed without full entailment.",
+      "hard_case_category": "same_disease_wrong_claim"
+    },
+    {
+      "claim_id": "CLM-NOT-0015",
+      "true_label": "NOT_SUPPORTED",
+      "predicted_label": "PARTIALLY_SUPPORTED",
+      "confidence": 0.5,
+      "is_high_risk": false,
+      "veto_flags": [],
+      "rationale": "Core concepts present in evidence but lacks complete statement overlap.",
+      "hard_case_category": "wrong_population"
+    }
+  ]
+}
