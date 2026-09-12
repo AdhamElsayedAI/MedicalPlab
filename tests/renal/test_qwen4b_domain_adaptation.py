@@ -1,4 +1,5 @@
 import importlib.util, json, sys
+from collections.abc import Mapping
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]; S=ROOT/'Scripts'; sys.path.insert(0,str(S))
 from qwen4b_adaptation_common import normalize_text, jaccard, canonical_json_bytes, sha256_bytes
@@ -109,3 +110,19 @@ def test_qwen4b_preprocess_path_preserves_metadata_and_query_prompt(monkeypatch)
     out=t._preprocess_features(FakeST(),'kidney query',True,cfg)
     assert calls=={'texts':['kidney query'],'prompt':'PROMPT: '}
     assert out['modality']=='text'
+
+def test_qwen4b_preprocess_accepts_batchencoding_like_mapping(monkeypatch):
+    import torch
+    import train_qwen4b_retrieval_lora as t
+    class BatchEncodingLike(Mapping):
+        def __init__(self,data): self.data=data
+        def __getitem__(self,key): return self.data[key]
+        def __iter__(self): return iter(self.data)
+        def __len__(self): return len(self.data)
+    class FakeST:
+        def preprocess(self,texts,prompt=None):
+            return BatchEncodingLike({'input_ids':torch.tensor([[1,2]]),'attention_mask':torch.tensor([[1,1]]),'modality':'text'})
+    monkeypatch.setattr(t,'_move_features_to_device',lambda value,device:dict(value))
+    out=t._preprocess_features(FakeST(),'kidney query',False,{'model':{'prompt':'PROMPT: '}})
+    assert out['modality']=='text'
+    assert out['input_ids'].shape==(1,2)
