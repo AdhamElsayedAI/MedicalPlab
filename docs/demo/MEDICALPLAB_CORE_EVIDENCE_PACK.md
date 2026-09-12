@@ -47,6 +47,22 @@ To eliminate the scientific ambiguity that previously impeded research progress,
   - Passage DocHit@1: **56.00%** | DocHit@5: **74.00%**
   - Passage SectionHit@1: **31.00%** | SectionHit@5: **51.00%**
   - MRR: **0.2946** | nDCG@10: **0.3316**
+- **Frozen Recovery Retrieval: Qwen3-Embedding-4B + BM25 -> Fixed RRF (k=60)**:
+  - Semantic Recall@20: **54.00%** (54/100) [95% CI: 44.26%, 63.44%]
+  - Semantic Recall@50: **64.00%** (64/100) [95% CI: 54.24%, 72.73%]
+  - Semantic Recall@100: **68.00%** (68/100) [95% CI: 58.35%, 76.33%]
+  - Exact-Gold Recall@20: **53.00%** (53/100) | Exact-Gold Recall@50: **62.00%** (62/100)
+  - Passage DocHit@1: **57.00%** | DocHit@5: **77.00%**
+  - Passage SectionHit@1: **57.00%** | SectionHit@5: **77.00%**
+  - MRR: **0.2699** | nDCG@10: **0.3069**
+- **Corrected Qwen3-Reranker-4B (4-bit NF4, Structured Medical Prompt)**:
+  - Semantic Hit@1: **24.00%** (24/100) [95% CI: 16.71%, 33.24%]
+  - Semantic Hit@3: **32.00%** (32/100) [95% CI: 23.68%, 41.69%]
+  - Semantic Hit@5: **41.00%** (41/100) [95% CI: 31.91%, 50.77%]
+  - Semantic Hit@10: **51.00%** (51/100) [95% CI: 41.35%, 60.58%]
+  - Exact Hit@1: **19.00%** | Exact Hit@5: **35.00%**
+  - MRR: **0.3198** | nDCG@10: **0.3469**
+  - Movement: **23 improved, 19 unchanged, 21 degraded** (out of 63 eligible positives, degradation rate = 33.33%)
 - **Stage-B CentralClaimVerifier on Held-Out Benchmark ($N=60$)**:
   - Macro-F1: **0.4697**
   - SUPPORTED Precision: **100.00%** (2/2) [95% CI: 34.24%, 100.00%]
@@ -151,25 +167,61 @@ All 120 items in `PRODUCT_DEV_V2` were audited blindly (without access to retrie
 
 ---
 
-## 4. Clean Reference Retrieval Re-Baseline on PRODUCT_DEV_V3
+## 4. Clean Reference & Frozen Recovery Retrieval on PRODUCT_DEV_V3 ($N=100$)
 
-Conducted across all 100 queries of `PRODUCT_DEV_V3` against the 2,691 Renal corpus chunks (`BAAI/bge-m3`, revision `5617a9f61b028005a4858fdac845db406aefb181`):
+Conducted across all 100 queries of `PRODUCT_DEV_V3` against the 2,691 Renal corpus chunks.
 
-| Depth ($K$) | Semantic Recall ($K$) | Exact-Gold Recall ($K$) | Passage DocHit ($K$) | Passage SectionHit ($K$) |
-| :---: | :---: | :---: | :---: | :---: |
-| **@1** | 20.00% (20/100) | 18.00% (18/100) | 56.00% (56/100) | 31.00% (31/100) |
-| **@5** | 38.00% (38/100) | 36.00% (36/100) | 74.00% (74/100) | 51.00% (51/100) |
-| **@10** | 51.00% (51/100) | 48.00% (48/100) | 80.00% (80/100) | 62.00% (62/100) |
-| **@20** | **58.00%** (58/100) [48.2%, 67.2%] | **55.00%** (55/100) [45.2%, 64.4%] | 83.00% (83/100) | 68.00% (68/100) |
-| **@50** | **63.00%** (63/100) [53.2%, 71.8%] | **60.00%** (60/100) [50.2%, 69.1%] | 86.00% (86/100) | 71.00% (71/100) |
-| **@100** | **69.00%** (69/100) [59.4%, 77.2%] | **66.00%** (66/100) [56.3%, 74.5%] | 90.00% (90/100) | 75.00% (75/100) |
-| **@200** | **73.00%** (73/100) | **69.00%** (69/100) | 92.00% (92/100) | 76.00% (76/100) |
+### 4.1 Comparative Retrieval Performance
+| Configuration | Semantic Recall@20 | Semantic Recall@50 | Semantic Recall@100 | Exact-Gold Recall@20 | MRR | nDCG@10 | Median Rank | Max Rank |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **BGE-M3 Exhaustive (Baseline)** | **58.00%** (58/100) | **63.00%** (63/100) | **69.00%** (69/100) | 55.00% | **0.2946** | **0.3316** | **10.0** | **2470** |
+| **Qwen3-Embedding-4B (Dense Only)** | 55.00% (55/100) | 64.00% (64/100) | 68.00% (68/100) | 51.00% | 0.3007 | 0.3346 | 11.0 | 2692 |
+| **Okapi BM25 (Lexical Only)** | 52.00% (52/100) | 60.00% (60/100) | 67.00% (67/100) | 51.00% | 0.2224 | 0.2607 | 17.0 | 2692 |
+| **Fixed RRF (Qwen-4B + BM25, k=60)** | **54.00%** (54/100) | **64.00%** (64/100) | **68.00%** (68/100) | **53.00%** | **0.2699** | **0.3069** | **11.0** | **2692** |
 
-- **Summary Ranking Metrics**:
-  - MRR: **0.2946**
-  - nDCG@10: **0.3316**
-  - Rank Distribution: Median = 10.0, p75 = 204.0, p90 = 835.0, Max = 2470
-- **Artifact**: `reports/evidence_engine/product_dev_v3_bge_m3_baseline_report.json` (SHA-256: `bdc0c9662c41c932e3a2751e49c3c67c50abfe5878d9c863ea250d09365d2aef`)
+### 4.2 Detailed Depth Metrics: Frozen Fixed RRF (Qwen-4B + BM25)
+- **Semantic Recall@1**: 15.00% (15/100) [95% CI: 9.32%, 23.28%]
+- **Semantic Recall@5**: 32.00% (32/100) [95% CI: 23.68%, 41.69%]
+- **Semantic Recall@10**: 46.00% (46/100) [95% CI: 36.63%, 55.74%]
+- **Semantic Recall@20**: **54.00%** (54/100) [95% CI: 44.26%, 63.44%]
+- **Semantic Recall@50**: **64.00%** (64/100) [95% CI: 54.24%, 72.73%]
+- **Semantic Recall@100**: **68.00%** (68/100) [95% CI: 58.35%, 76.33%]
+- **Semantic Recall@200**: **72.00%** (72/100) [95% CI: 62.50%, 79.88%]
+- **Exact-Gold Recall@20**: 53.00% | **Exact-Gold Recall@50**: 62.00%
+- **Passage DocHit@1**: 57.00% | **DocHit@5**: 77.00%
+- **Passage SectionHit@1**: 57.00% | **SectionHit@5**: 77.00%
+- **Predefined Retrieval Gates Assessment**:
+  - Target Recall@20 >= 95.0%: Observed = **54.00%** -> **FAILED**
+  - Target Recall@50 >= 98.0%: Observed = **64.00%** -> **FAILED**
+- **Decision Tree Verdict**: `GENUINE_RETRIEVAL_GAP_CONFIRMED`
+- **Artifacts**:
+  - BGE-M3 Report: `reports/evidence_engine/product_dev_v3_bge_m3_baseline_report.json` (SHA-256: `bdc0c9662c41c932e3a2751e49c3c67c50abfe5878d9c863ea250d09365d2aef`)
+  - Qwen-4B RRF Report: `reports/evidence_engine/product_dev_v3_qwen4b_rrf_report.json` (SHA-256: `1ba758566a267a72617cacb96ef1009fa1a04d3abbc038885dd110c2a7757511`)
+
+---
+
+## 5. Corrected Qwen3-Reranker-4B Evaluation on Clean PRODUCT_DEV_V3
+
+Evaluated `Qwen/Qwen3-Reranker-4B` (4-bit NF4, revision `22e683669bc0f0bd69640a1354a6d0aebcfeede5`) using the verified structured medical relevance prompt across candidate depth $K=50$:
+
+| Metric | Value (N=100) | 95% Wilson Confidence Interval | Description |
+| :--- | :---: | :---: | :--- |
+| **Semantic Hit@1** | **24.00%** (24/100) | [16.71%, 33.24%] | At least one semantic positive ranked at rank 1 |
+| **Semantic Hit@3** | **32.00%** (32/100) | [23.68%, 41.69%] | At least one semantic positive ranked in top 3 |
+| **Semantic Hit@5** | **41.00%** (41/100) | [31.91%, 50.77%] | At least one semantic positive ranked in top 5 |
+| **Semantic Hit@10** | **51.00%** (51/100) | [41.35%, 60.58%] | At least one semantic positive ranked in top 10 |
+| **Exact Hit@1** | **19.00%** (19/100) | [12.48%, 27.79%] | Exact-gold chunk placed at rank 1 |
+| **Exact Hit@5** | **35.00%** (35/100) | [26.35%, 44.82%] | Exact-gold chunk placed in top 5 |
+| **MRR** | **0.3198** | — | Mean Reciprocal Rank across 100 queries |
+| **nDCG@10** | **0.3469** | — | Normalized Discounted Cumulative Gain at 10 |
+
+### Rank Movement Analysis (Eligible Positives = 63/100)
+- **Eligible Positives**: 63 queries contained at least one semantic positive in the Top-50 candidate pool.
+- **Improved**: **23 / 63 (36.51%)** queries had their positive rank promoted.
+- **Unchanged**: **19 / 63 (30.16%)** queries maintained their initial rank.
+- **Degraded**: **21 / 63 (33.33%)** queries had their positive rank demoted.
+- **Degraded Rate Gate**: Observed 33.33% > 10.0% threshold -> **Degradation gate failed**.
+- **Artifact**: `reports/evidence_engine/product_dev_v3_reranker_report.json` (SHA-256: `d56d68fe5b36dac5679299fb546e06d043217bed689643a3da9d9c9a06988544`)
 
 ---
 
@@ -263,15 +315,25 @@ All evaluations executed strictly on local hardware (NVIDIA GeForce RTX 3060 Lap
 ## 9. Primary Scientific Status & Next Owner Decision
 
 ### Final Primary Scientific State:
-$$\mathbf{BENCHMARK\_REPAIR\_RESOLVED\_PRIMARY\_FAILURE}$$
+$$\mathbf{GENUINE\_RETRIEVAL\_GAP\_CONFIRMED}$$
 
 ### Scientific Justification:
-1. Historical reports of "model semantic failure" were an artifact of benchmark contamination: 34.17% of `PRODUCT_DEV_V2` items contained artificial editorial heading concatenation rather than genuine clinical inquiries.
-2. The hierarchical metric conflict (`DocHit@1 < SectionHit@1`) and candidate discrepancy (`106 vs 86`) were implementation and cross-universe reporting defects, not model failures.
-3. On the clean, firewalled `PRODUCT_DEV_V3`, reference BGE-M3 retrieval achieves a baseline of 58.0% Recall@20 and 63.0% Recall@50 without any fine-tuning.
-4. Stage-B CentralClaimVerifier provides 100% fail-closed protection on high-risk medical contraindications, but lexical heuristics limit general semantic recall (13.33%), establishing the need for an independent semantic NLI verification signal.
+1. **Measurement Integrity Established**: The historical 106-vs-86 lineage contradiction and DocHit-vs-SectionHit hierarchy inversion were proven to be reporting artifacts and resolved via canonical lineage artifact `reports/evidence_engine/canonical_candidate_lineage.json` (SHA-256: `f0e00e4e...`).
+2. **Benchmark Validity Established**: Blinded all-query audit of `PRODUCT_DEV_V2` revealed 34.17% editorial heading contamination. The clean, firewalled `PRODUCT_DEV_V3` ($N=100$) establishes an unpolluted developmental evaluation standard.
+3. **Retrieval Stage Evaluated on PRODUCT_DEV_V3**:
+   - The frozen recovery architecture (`Qwen3-Embedding-4B + BM25 -> Fixed RRF, k=60`) achieves:
+     - Semantic Recall@20 = **54.00%** (Predefined Gate: $\ge 95.0\%$ -> **FAILED**)
+     - Semantic Recall@50 = **64.00%** (Predefined Gate: $\ge 98.0\%$ -> **FAILED**)
+     - Semantic Recall@100 = **68.00%**
+   - Reference `BGE-M3` Exhaustive Hybrid achieves:
+     - Semantic Recall@20 = **58.00%**
+     - Semantic Recall@50 = **63.00%**
+     - Semantic Recall@100 = **69.00%**
+4. **Diagnosis**: Both reference embedding architectures (`BGE-M3` and `Qwen3-Embedding-4B`) hit a genuine zero-shot semantic ceiling around ~54–58% Recall@20 and ~63–64% Recall@50 when evaluated on authentic clinical queries without synthetic heading leakage. The gap to aspirational gates (95% @20, 98% @50) is real and confirmed.
+5. **Reranking Bottleneck**: `Qwen3-Reranker-4B` evaluated across depth $K=50$ candidates achieves Hit@1 = 24.00%, Hit@5 = 41.00%, but degrades 33.33% (21/63) of eligible positives, failing the $<10\%$ degradation tolerance gate.
+6. **Decision Tree Execution (Case C)**: Since measurement is trustworthy, benchmark is valid, but retrieval falls short of predefined gates, the system halts autonomously at Gate C without inventing new model variants or bake-offs.
 
 ### Recommended Next Milestone:
-$$\mathbf{NEXT\_OWNER\_DECISION: M1\_INDEPENDENT\_BIOMEDICAL\_NLI\_VERIFICATION}$$
-- Evaluate at most **one** off-the-shelf biomedical NLI model (e.g. `BioLinkBERT-NLI` or `MedNLI`) strictly within the Stage-B evidence verifier on `claim_verifier_benchmark.json` to test whether it improves SUPPORTED recall beyond lexical heuristics while preserving zero high-risk false-support.
-- **Do NOT** train new retrieval models, swap embeddings, tune RRF weights, or scale PLAB beyond 36 without explicit owner authorization.
+$$\mathbf{NEXT\_OWNER\_DECISION: M1\_DOMAIN\_SPECIFIC\_EVIDENCE\_FINE\_TUNING\_OR\_BM25\_EXPANSION}$$
+- To bridge the confirmed retrieval gap from 64% Recall@50 toward product targets, the single highest-leverage intervention is domain-adapted bi-encoder fine-tuning (e.g. contrastive fine-tuning on medical evidence pairs) or clinical query expansion targeting medical terminology.
+- **Explicit Boundary**: Do **NOT** train new retrieval models, fine-tune weights, swap embeddings, tune RRF weights, scale PLAB beyond 36, or unseal the final product test without explicit owner authorization.

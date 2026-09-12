@@ -1,0 +1,1113 @@
+{
+  "benchmark": "PRODUCT_DEV_V3",
+  "benchmark_file": "evaluation\\evidence_engine\\product_dev_v3.json",
+  "n_queries": 100,
+  "reranker_model": "Qwen/Qwen3-Reranker-4B",
+  "reranker_revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+  "rerank_depth": 50,
+  "evaluation_timestamp": "2026-09-12T05:11:58Z",
+  "total_elapsed_seconds": 3806.03,
+  "mean_query_latency_ms": 38058.9,
+  "p50_latency_ms": 21081.8,
+  "p95_latency_ms": 119934.4,
+  "metrics": {
+    "semantic_hit": {
+      "hit_at_1": {
+        "count": 24,
+        "total": 100,
+        "rate": 0.24,
+        "pct": "24.00%",
+        "ci_95_wilson": [
+          0.1669,
+          0.3323
+        ]
+      },
+      "hit_at_3": {
+        "count": 32,
+        "total": 100,
+        "rate": 0.32,
+        "pct": "32.00%",
+        "ci_95_wilson": [
+          0.2367,
+          0.4166
+        ]
+      },
+      "hit_at_5": {
+        "count": 41,
+        "total": 100,
+        "rate": 0.41,
+        "pct": "41.00%",
+        "ci_95_wilson": [
+          0.3187,
+          0.508
+        ]
+      },
+      "hit_at_10": {
+        "count": 51,
+        "total": 100,
+        "rate": 0.51,
+        "pct": "51.00%",
+        "ci_95_wilson": [
+          0.4135,
+          0.6058
+        ]
+      }
+    },
+    "exact_hit": {
+      "hit_at_1": {
+        "count": 19,
+        "total": 100,
+        "rate": 0.19,
+        "pct": "19.00%",
+        "ci_95_wilson": [
+          0.1251,
+          0.2778
+        ]
+      },
+      "hit_at_3": {
+        "count": 28,
+        "total": 100,
+        "rate": 0.28,
+        "pct": "28.00%",
+        "ci_95_wilson": [
+          0.2014,
+          0.3749
+        ]
+      },
+      "hit_at_5": {
+        "count": 35,
+        "total": 100,
+        "rate": 0.35,
+        "pct": "35.00%",
+        "ci_95_wilson": [
+          0.2636,
+          0.4475
+        ]
+      },
+      "hit_at_10": {
+        "count": 45,
+        "total": 100,
+        "rate": 0.45,
+        "pct": "45.00%",
+        "ci_95_wilson": [
+          0.3561,
+          0.5476
+        ]
+      }
+    },
+    "mrr": 0.3198,
+    "ndcg_at_10": 0.3469
+  },
+  "movement_analysis": {
+    "eligible_positives": 63,
+    "improved": 23,
+    "unchanged": 19,
+    "degraded": 21,
+    "not_in_candidates": 37,
+    "degraded_eligible_rate": 0.3333,
+    "degraded_eligible_pct": "33.33%",
+    "degraded_gate_passed": false
+  },
+  "per_item_results": [
+    {
+      "query_id": "PRD-DEV3-0001",
+      "query": "Which endogenous carboxypeptidase converts angiotensin II into angiotensin 1-7 to mediate counter-regulatory vasodilation?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0001-B-C0004",
+      "top1_score": 0.875,
+      "latency_ms": 44590.0
+    },
+    {
+      "query_id": "PRD-DEV3-0002",
+      "query": "What is the pharmacological mechanism of aliskiren at the initial rate-limiting step of the RAAS?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0001-B-C0016",
+      "top1_score": 3.625,
+      "latency_ms": 38103.8
+    },
+    {
+      "query_id": "PRD-DEV3-0003",
+      "query": "How do angiotensin II type 1 (AT1) and type 2 (AT2) receptors differ regarding vascular smooth muscle tone?",
+      "pre_rank_sem": 23,
+      "post_rank_sem": 35,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0015",
+      "top1_score": 0.0,
+      "latency_ms": 39251.7
+    },
+    {
+      "query_id": "PRD-DEV3-0004",
+      "query": "How does aldosterone induce vascular inflammation and oxidative stress beyond its tubular sodium-retaining effects?",
+      "pre_rank_sem": 33,
+      "post_rank_sem": 12,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0001-B-C0014",
+      "top1_score": 5.9375,
+      "latency_ms": 37356.1
+    },
+    {
+      "query_id": "PRD-DEV3-0005",
+      "query": "What therapeutic benefits and safety concerns arise when mineralocorticoid receptor antagonists are added to ACE inhibitors in proteinuric CKD?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0086",
+      "top1_score": 2.0625,
+      "latency_ms": 11837.0
+    },
+    {
+      "query_id": "PRD-DEV3-0006",
+      "query": "Which cell types and structural layers constitute the trilaminar glomerular filtration barrier?",
+      "pre_rank_sem": 9,
+      "post_rank_sem": 6,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 2.4375,
+      "latency_ms": 19756.6
+    },
+    {
+      "query_id": "PRD-DEV3-0007",
+      "query": "Why is inulin freely filtered across the glomerular barrier while albumin is almost entirely retained?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0023",
+      "top1_score": 2.25,
+      "latency_ms": 96037.0
+    },
+    {
+      "query_id": "PRD-DEV3-0008",
+      "query": "Which classic chemical insult induces podocyte foot process effacement and barrier disruption in glomerulus-on-a-chip nephrotic models?",
+      "pre_rank_sem": 4,
+      "post_rank_sem": 5,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0002",
+      "top1_score": 3.0625,
+      "latency_ms": 94523.7
+    },
+    {
+      "query_id": "PRD-DEV3-0009",
+      "query": "How does fluid shear stress within the glomerular capillary lumen modulate endothelial differentiation and filtration efficiency?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0019",
+      "top1_score": 2.3125,
+      "latency_ms": 13707.9
+    },
+    {
+      "query_id": "PRD-DEV3-0010",
+      "query": "What role does the interaction between nephrin and podocin play in stabilizing the slit diaphragm cytoskeleton?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0025",
+      "top1_score": 4.0,
+      "latency_ms": 88059.4
+    },
+    {
+      "query_id": "PRD-DEV3-0011",
+      "query": "What histopathological features of hypokalemic nephropathy develop in response to prolonged potassium deficiency?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_score": 5.6875,
+      "latency_ms": 19981.9
+    },
+    {
+      "query_id": "PRD-DEV3-0012",
+      "query": "How does low 24-hour urinary potassium excretion correlate with the risk of chronic kidney disease progression and mortality?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 2,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0010-B-C0026",
+      "top1_score": 3.4375,
+      "latency_ms": 21058.4
+    },
+    {
+      "query_id": "PRD-DEV3-0013",
+      "query": "By what mechanism does potassium depletion cause polyuria and resistance to antidiuretic hormone?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0010",
+      "top1_score": 0.125,
+      "latency_ms": 20656.2
+    },
+    {
+      "query_id": "PRD-DEV3-0014",
+      "query": "Why does hypokalemia stimulate renal ammoniagenesis and metabolic alkalosis generation in the proximal tubule?",
+      "pre_rank_sem": 12,
+      "post_rank_sem": 17,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0009-B-C0061",
+      "top1_score": 2.1875,
+      "latency_ms": 19884.3
+    },
+    {
+      "query_id": "PRD-DEV3-0015",
+      "query": "Which basolateral cotransporter mediates the exit of reabsorbed bicarbonate from proximal tubular cells into peritubular capillaries?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 4.0625,
+      "latency_ms": 36768.3
+    },
+    {
+      "query_id": "PRD-DEV3-0016",
+      "query": "What clinical syndrome results from homozygous loss-of-function mutations in the SLC4A4 gene encoding NBCe1?",
+      "pre_rank_sem": 9,
+      "post_rank_sem": 6,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0006",
+      "top1_score": 1.375,
+      "latency_ms": 21357.0
+    },
+    {
+      "query_id": "PRD-DEV3-0017",
+      "query": "Why do patients with NBCe1 proximal RTA develop ocular band keratopathy, cataracts, and enamel hypoplasia?",
+      "pre_rank_sem": 14,
+      "post_rank_sem": 5,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0006",
+      "top1_score": 2.125,
+      "latency_ms": 38389.5
+    },
+    {
+      "query_id": "PRD-DEV3-0018",
+      "query": "How is the renal bicarbonate threshold altered in proximal renal tubular acidosis, and why does urine pH normalize during severe acidemia?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0035",
+      "top1_score": 1.875,
+      "latency_ms": 21771.8
+    },
+    {
+      "query_id": "PRD-DEV3-0019",
+      "query": "How do proximal and distal nephron segments divide the physiological burden of acid-base homeostasis?",
+      "pre_rank_sem": 23,
+      "post_rank_sem": 6,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 3.75,
+      "latency_ms": 21503.7
+    },
+    {
+      "query_id": "PRD-DEV3-0020",
+      "query": "Which apical transport proteins in collecting duct type A intercalated cells mediate active proton secretion into tubular fluid?",
+      "pre_rank_sem": 13,
+      "post_rank_sem": 24,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0048",
+      "top1_score": 4.125,
+      "latency_ms": 35497.4
+    },
+    {
+      "query_id": "PRD-DEV3-0021",
+      "query": "How does pendrin in type B intercalated cells eliminate excess bicarbonate during systemic metabolic alkalosis?",
+      "pre_rank_sem": 20,
+      "post_rank_sem": 30,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0021-B-C0004",
+      "top1_score": 3.375,
+      "latency_ms": 21680.8
+    },
+    {
+      "query_id": "PRD-DEV3-0022",
+      "query": "Which clinical triggers and metabolic disturbances cause acute severe hyperkalemia via transcellular potassium exit?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0009-B-C0013",
+      "top1_score": 3.1875,
+      "latency_ms": 20291.0
+    },
+    {
+      "query_id": "PRD-DEV3-0023",
+      "query": "Why is intravenous calcium gluconate or calcium chloride administered as the immediate first step in severe hyperkalemic ECG changes?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0010-B-C0129",
+      "top1_score": 7.5625,
+      "latency_ms": 10505.2
+    },
+    {
+      "query_id": "PRD-DEV3-0024",
+      "query": "How do newer non-absorbed potassium binders patiromer and sodium zirconium cyclosilicate compare to sodium polystyrene sulfonate?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0010-B-C0042",
+      "top1_score": 3.6875,
+      "latency_ms": 40871.6
+    },
+    {
+      "query_id": "PRD-DEV3-0025",
+      "query": "What is the primary physiological mechanism of autoregulation of glomerular filtration rate during moderate fluctuations in systemic arterial blood pressure?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0004",
+      "top1_score": -1.8125,
+      "latency_ms": 12486.3
+    },
+    {
+      "query_id": "PRD-DEV3-0026",
+      "query": "How do SGLT2 inhibitors confer renal hemodynamic protection in diabetic kidney disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0019-B-C0097",
+      "top1_score": 4.625,
+      "latency_ms": 9507.8
+    },
+    {
+      "query_id": "PRD-DEV3-0027",
+      "query": "What are the electrocardiographic manifestations and acute emergency management of severe hyperkalemia (>6.5 mmol/L)?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0009-B-C0058",
+      "top1_score": 3.9375,
+      "latency_ms": 11182.0
+    },
+    {
+      "query_id": "PRD-DEV3-0028",
+      "query": "How is the serum anion gap calculated and used to differentiate causes of metabolic acidosis in renal disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0021-B-C0003",
+      "top1_score": -2.4375,
+      "latency_ms": 20932.1
+    },
+    {
+      "query_id": "PRD-DEV3-0029",
+      "query": "What are the KDIGO staging criteria for acute kidney injury based on serum creatinine elevation and urine output?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0027",
+      "top1_score": 3.625,
+      "latency_ms": 20545.3
+    },
+    {
+      "query_id": "PRD-DEV3-0030",
+      "query": "What urinary sediment finding is pathognomonic for acute tubular necrosis on light microscopy?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0175",
+      "top1_score": -2.0,
+      "latency_ms": 40845.4
+    },
+    {
+      "query_id": "PRD-DEV3-0031",
+      "query": "What are the defining clinical and histological features of minimal change disease in nephrotic syndrome?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0223",
+      "top1_score": 2.3125,
+      "latency_ms": 19061.0
+    },
+    {
+      "query_id": "PRD-DEV3-0032",
+      "query": "What clinical triad and laboratory markers distinguish acute interstitial nephritis from acute tubular necrosis?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0175",
+      "top1_score": -2.0625,
+      "latency_ms": 20423.6
+    },
+    {
+      "query_id": "PRD-DEV3-0033",
+      "query": "What are the absolute indications for emergency hemodialysis in patients with severe acute or chronic kidney disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0216",
+      "top1_score": 1.875,
+      "latency_ms": 10475.0
+    },
+    {
+      "query_id": "PRD-DEV3-0034",
+      "query": "What is the role of renal ultrasound in the initial investigation of unexplained acute kidney injury?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0014-B-C0004",
+      "top1_score": 3.3125,
+      "latency_ms": 19768.5
+    },
+    {
+      "query_id": "PRD-DEV3-0035",
+      "query": "What is the clinical significance of albumin-to-creatinine ratio (ACR) categories A1, A2, and A3 in KDIGO staging of chronic kidney disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0030",
+      "top1_score": 0.875,
+      "latency_ms": 35653.4
+    },
+    {
+      "query_id": "PRD-DEV3-0036",
+      "query": "How do calcineurin inhibitors (cyclosporine, tacrolimus) cause reversible renal dysfunction in kidney transplant recipients?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0009-B-C0077",
+      "top1_score": 2.125,
+      "latency_ms": 23513.6
+    },
+    {
+      "query_id": "PRD-DEV3-0037",
+      "query": "What target blood pressure threshold is recommended by KDIGO 2021 guidelines for patients with CKD and significant albuminuria?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0058",
+      "top1_score": 1.625,
+      "latency_ms": 30636.8
+    },
+    {
+      "query_id": "PRD-DEV3-0038",
+      "query": "What pathophysiological mechanism explains secondary hyperparathyroidism and renal osteodystrophy in advanced CKD?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0024-B-C0008",
+      "top1_score": -1.75,
+      "latency_ms": 20426.5
+    },
+    {
+      "query_id": "PRD-DEV3-0039",
+      "query": "What laboratory investigations differentiate prerenal azotemia from intrinsic acute kidney injury?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0180",
+      "top1_score": 3.1875,
+      "latency_ms": 19880.2
+    },
+    {
+      "query_id": "PRD-DEV3-0040",
+      "query": "What clinical manifestations and histological findings characterize anti-glomerular basement membrane (Goodpasture) disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0237",
+      "top1_score": 0.5,
+      "latency_ms": 20431.4
+    },
+    {
+      "query_id": "PRD-DEV3-0041",
+      "query": "What are the primary clinical indications for renal biopsy in adult patients presenting with unexplained kidney disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0240",
+      "top1_score": 4.5625,
+      "latency_ms": 9792.4
+    },
+    {
+      "query_id": "PRD-DEV3-0042",
+      "query": "What clinical features differentiate hypovolemic hyponatremia from euvolemic hyponatremia caused by SIADH?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0008-B-C0254",
+      "top1_score": -3.625,
+      "latency_ms": 34021.7
+    },
+    {
+      "query_id": "PRD-DEV3-0043",
+      "query": "What pharmacological class is recommended as first-line renoprotective therapy to slow CKD progression in patients with hypertension and albuminuria?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0007-B-C0033",
+      "top1_score": 1.0,
+      "latency_ms": 10498.5
+    },
+    {
+      "query_id": "PRD-DEV3-0044",
+      "query": "What are the common causes and clinical manifestations of renal tubular acidosis type 1 (distal RTA)?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0062",
+      "top1_score": -0.75,
+      "latency_ms": 20338.2
+    },
+    {
+      "query_id": "PRD-DEV3-0045",
+      "query": "What clinical triad characterizes hemolytic uremic syndrome (HUS) in pediatric and adult presentations?",
+      "pre_rank_sem": 29,
+      "post_rank_sem": 44,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0008-B-C0104",
+      "top1_score": -4.125,
+      "latency_ms": 14541.5
+    },
+    {
+      "query_id": "PRD-DEV3-0046",
+      "query": "What clinical and laboratory diagnostic criteria establish hepatorenal syndrome in patients with advanced cirrhosis?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0003",
+      "top1_score": -3.9375,
+      "latency_ms": 11042.9
+    },
+    {
+      "query_id": "PRD-DEV3-0047",
+      "query": "How is fractional excretion of urea (FeUrea) utilized to evaluate acute kidney injury when diuretics have been administered?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0194",
+      "top1_score": -0.25,
+      "latency_ms": 23944.0
+    },
+    {
+      "query_id": "PRD-DEV3-0048",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Characterization of human podocytes and hGEC?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0011",
+      "top1_score": 4.25,
+      "latency_ms": 108712.8
+    },
+    {
+      "query_id": "PRD-DEV3-0049",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Culturing human podocytes and hGEC on the chip?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 2,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0001",
+      "top1_score": 4.875,
+      "latency_ms": 93388.7
+    },
+    {
+      "query_id": "PRD-DEV3-0050",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 2,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 4.4375,
+      "latency_ms": 82490.8
+    },
+    {
+      "query_id": "PRD-DEV3-0051",
+      "query": "What clinical mechanisms and physiological findings characterize Permselectivity as functional measure of a working GOAC?",
+      "pre_rank_sem": 3,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0020",
+      "top1_score": 5.625,
+      "latency_ms": 106366.3
+    },
+    {
+      "query_id": "PRD-DEV3-0052",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Permselectivity as functional measure of a working GOAC?",
+      "pre_rank_sem": 6,
+      "post_rank_sem": 10,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0020",
+      "top1_score": 5.0,
+      "latency_ms": 122696.7
+    },
+    {
+      "query_id": "PRD-DEV3-0053",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 2,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0025",
+      "top1_score": 4.75,
+      "latency_ms": 130546.9
+    },
+    {
+      "query_id": "PRD-DEV3-0054",
+      "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "pre_rank_sem": 7,
+      "post_rank_sem": 4,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 6.5625,
+      "latency_ms": 119834.6
+    },
+    {
+      "query_id": "PRD-DEV3-0055",
+      "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "pre_rank_sem": 5,
+      "post_rank_sem": 5,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 3.9375,
+      "latency_ms": 121831.1
+    },
+    {
+      "query_id": "PRD-DEV3-0056",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Modeling mechanism of MN injury in podocyte in the GOAC?",
+      "pre_rank_sem": 5,
+      "post_rank_sem": 4,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0034",
+      "top1_score": 4.125,
+      "latency_ms": 121836.6
+    },
+    {
+      "query_id": "PRD-DEV3-0057",
+      "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0037",
+      "top1_score": 3.8125,
+      "latency_ms": 112330.8
+    },
+    {
+      "query_id": "PRD-DEV3-0058",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 10,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 4.1875,
+      "latency_ms": 125285.3
+    },
+    {
+      "query_id": "PRD-DEV3-0059",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+      "pre_rank_sem": 8,
+      "post_rank_sem": 7,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 5.0,
+      "latency_ms": 14565.0
+    },
+    {
+      "query_id": "PRD-DEV3-0060",
+      "query": "What clinical mechanisms and physiological findings characterize FACS and flow cytometry analysis?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0056",
+      "top1_score": 3.0625,
+      "latency_ms": 96554.7
+    },
+    {
+      "query_id": "PRD-DEV3-0061",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Microfluidic chip and cell seeding?",
+      "pre_rank_sem": 6,
+      "post_rank_sem": 4,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0001",
+      "top1_score": 5.0,
+      "latency_ms": 105620.6
+    },
+    {
+      "query_id": "PRD-DEV3-0062",
+      "query": "What clinical mechanisms and physiological findings characterize Albumin permselectivity assay and inulin permeability assay?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0088",
+      "top1_score": 3.1875,
+      "latency_ms": 103164.2
+    },
+    {
+      "query_id": "PRD-DEV3-0063",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Transwell establishment?",
+      "pre_rank_sem": 8,
+      "post_rank_sem": 6,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 4.25,
+      "latency_ms": 22056.8
+    },
+    {
+      "query_id": "PRD-DEV3-0064",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Glucose-mediated injury?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0093",
+      "top1_score": 1.125,
+      "latency_ms": 10476.1
+    },
+    {
+      "query_id": "PRD-DEV3-0065",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in Western blot analysis?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0002-B-C0095",
+      "top1_score": -1.0625,
+      "latency_ms": 97073.0
+    },
+    {
+      "query_id": "PRD-DEV3-0066",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in New insights from tubulopathies?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 2,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 4.0625,
+      "latency_ms": 21088.3
+    },
+    {
+      "query_id": "PRD-DEV3-0067",
+      "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_score": 6.75,
+      "latency_ms": 19925.2
+    },
+    {
+      "query_id": "PRD-DEV3-0068",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Hypokalemic nephropathy?",
+      "pre_rank_sem": 3,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_score": 4.5,
+      "latency_ms": 21167.6
+    },
+    {
+      "query_id": "PRD-DEV3-0069",
+      "query": "What clinical mechanisms and physiological findings characterize Effects of dietary potassium in children?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 10,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0013",
+      "top1_score": 5.9375,
+      "latency_ms": 20247.9
+    },
+    {
+      "query_id": "PRD-DEV3-0070",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+      "pre_rank_sem": 17,
+      "post_rank_sem": 30,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 3.5625,
+      "latency_ms": 19970.4
+    },
+    {
+      "query_id": "PRD-DEV3-0071",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 11,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 5.0,
+      "latency_ms": 20984.5
+    },
+    {
+      "query_id": "PRD-DEV3-0072",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Mechanistic topography of acid-base exchange in the kidney?",
+      "pre_rank_sem": 8,
+      "post_rank_sem": 12,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 4.625,
+      "latency_ms": 33666.9
+    },
+    {
+      "query_id": "PRD-DEV3-0073",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 5.1875,
+      "latency_ms": 20657.3
+    },
+    {
+      "query_id": "PRD-DEV3-0074",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "pre_rank_sem": 25,
+      "post_rank_sem": 14,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 5.4375,
+      "latency_ms": 34102.3
+    },
+    {
+      "query_id": "PRD-DEV3-0075",
+      "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+      "pre_rank_sem": 6,
+      "post_rank_sem": 4,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 4.5,
+      "latency_ms": 12715.0
+    },
+    {
+      "query_id": "PRD-DEV3-0076",
+      "query": "What transport mechanism mediates tubular solute reabsorption in Loop of Henle?",
+      "pre_rank_sem": 4,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0038",
+      "top1_score": 3.75,
+      "latency_ms": 20064.7
+    },
+    {
+      "query_id": "PRD-DEV3-0077",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Loop of Henle?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 3,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 4.625,
+      "latency_ms": 20305.3
+    },
+    {
+      "query_id": "PRD-DEV3-0078",
+      "query": "What clinical mechanisms and physiological findings characterize Distal convoluted tubule?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0044",
+      "top1_score": 4.5625,
+      "latency_ms": 20381.9
+    },
+    {
+      "query_id": "PRD-DEV3-0079",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Collecting tubules and collecting ducts?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 6,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 3.1875,
+      "latency_ms": 39522.4
+    },
+    {
+      "query_id": "PRD-DEV3-0080",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Collecting tubules and collecting ducts?",
+      "pre_rank_sem": 10,
+      "post_rank_sem": 16,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0046",
+      "top1_score": 4.125,
+      "latency_ms": 20705.2
+    },
+    {
+      "query_id": "PRD-DEV3-0081",
+      "query": "What clinical mechanisms and physiological findings characterize Collecting tubules and collecting ducts?",
+      "pre_rank_sem": 6,
+      "post_rank_sem": 6,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0045",
+      "top1_score": 5.0,
+      "latency_ms": 22217.1
+    },
+    {
+      "query_id": "PRD-DEV3-0082",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "pre_rank_sem": 7,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0005-B-C0057",
+      "top1_score": 5.25,
+      "latency_ms": 21075.3
+    },
+    {
+      "query_id": "PRD-DEV3-0083",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Summary of evidence?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.875,
+      "latency_ms": 10227.7
+    },
+    {
+      "query_id": "PRD-DEV3-0084",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Preoperative renal impairment?",
+      "pre_rank_sem": 16,
+      "post_rank_sem": 5,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0185",
+      "top1_score": 2.5,
+      "latency_ms": 20127.2
+    },
+    {
+      "query_id": "PRD-DEV3-0085",
+      "query": "What clinical mechanisms and physiological findings characterize Other risk factors?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 2,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0009-B-C0047",
+      "top1_score": 3.375,
+      "latency_ms": 10136.8
+    },
+    {
+      "query_id": "PRD-DEV3-0086",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Liver transplantation?",
+      "pre_rank_sem": 9,
+      "post_rank_sem": 2,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0024-B-C0054",
+      "top1_score": 1.125,
+      "latency_ms": 97517.0
+    },
+    {
+      "query_id": "PRD-DEV3-0087",
+      "query": "What clinical mechanisms and physiological findings characterize Lung surgery?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0074",
+      "top1_score": 2.375,
+      "latency_ms": 10671.2
+    },
+    {
+      "query_id": "PRD-DEV3-0088",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Bariatric surgery?",
+      "pre_rank_sem": 5,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0075",
+      "top1_score": 1.25,
+      "latency_ms": 38265.3
+    },
+    {
+      "query_id": "PRD-DEV3-0089",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Colorectal surgery?",
+      "pre_rank_sem": 2,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0076",
+      "top1_score": 2.5625,
+      "latency_ms": 40090.1
+    },
+    {
+      "query_id": "PRD-DEV3-0090",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Incidence of AKI in acute heart failure?",
+      "pre_rank_sem": 18,
+      "post_rank_sem": 1,
+      "movement": "IMPROVED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0080",
+      "top1_score": 2.5625,
+      "latency_ms": 11678.5
+    },
+    {
+      "query_id": "PRD-DEV3-0091",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Risk factors for AKI development in acute heart failure?",
+      "pre_rank_sem": 1,
+      "post_rank_sem": 1,
+      "movement": "UNCHANGED",
+      "top1_cid": "DOC-PMC-RENAL-0006-B-C0081",
+      "top1_score": 3.9375,
+      "latency_ms": 11068.5
+    },
+    {
+      "query_id": "PRD-DEV3-0092",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Summary of evidence?",
+      "pre_rank_sem": 3,
+      "post_rank_sem": 22,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 4.0,
+      "latency_ms": 37467.1
+    },
+    {
+      "query_id": "PRD-DEV3-0093",
+      "query": "What are the clinical criteria for initiating renal replacement therapy in acute kidney injury secondary to severe rhabdomyolysis?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0015-B-C0045",
+      "top1_score": 4.75,
+      "latency_ms": 12243.7
+    },
+    {
+      "query_id": "PRD-DEV3-0094",
+      "query": "How is urinary creatinine clearance compared with eGFR estimating equations in critically ill ICU patients with rapidly evolving AKI?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0016-B-C0001",
+      "top1_score": 4.9375,
+      "latency_ms": 21508.6
+    },
+    {
+      "query_id": "PRD-DEV3-0095",
+      "query": "What is the differential diagnosis between microscopic hematuria of glomerular origin versus non-glomerular lower urinary tract bleeding?",
+      "pre_rank_sem": 3,
+      "post_rank_sem": 4,
+      "movement": "DEGRADED",
+      "top1_cid": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": 3.4375,
+      "latency_ms": 10984.2
+    },
+    {
+      "query_id": "PRD-DEV3-0096",
+      "query": "What role does sodium-glucose cotransporter 2 (SGLT2) play in healthy proximal tubular glucose reabsorption?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0019-B-C0097",
+      "top1_score": 5.4375,
+      "latency_ms": 10647.6
+    },
+    {
+      "query_id": "PRD-DEV3-0097",
+      "query": "How do serum erythropoietin levels and erythropoietin resistance influence anemia management in advanced chronic kidney disease?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0024-B-C0039",
+      "top1_score": 2.125,
+      "latency_ms": 12089.1
+    },
+    {
+      "query_id": "PRD-DEV3-0098",
+      "query": "What diagnostic ultrasound grading scale evaluates the severity of hydronephrosis in obstructive uropathy?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0014-B-C0072",
+      "top1_score": 4.6875,
+      "latency_ms": 14975.2
+    },
+    {
+      "query_id": "PRD-DEV3-0099",
+      "query": "What are the common mineral compositions of nephrolithiasis and their characteristic radiographic appearances?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0012-B-C0078",
+      "top1_score": -0.625,
+      "latency_ms": 22338.4
+    },
+    {
+      "query_id": "PRD-DEV3-0100",
+      "query": "What cellular signaling pathway links serum- and glucocorticoid-inducible kinase 1 (SGK1) to ENaC-mediated sodium reabsorption in the collecting duct?",
+      "pre_rank_sem": null,
+      "post_rank_sem": null,
+      "movement": "NOT_IN_CANDIDATES",
+      "top1_cid": "DOC-PMC-RENAL-0020-B-C0023",
+      "top1_score": 4.3125,
+      "latency_ms": 36837.4
+    }
+  ]
+}

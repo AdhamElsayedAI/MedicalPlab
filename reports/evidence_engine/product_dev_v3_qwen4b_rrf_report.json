@@ -1,0 +1,682 @@
+{
+  "benchmark": "PRODUCT_DEV_V3",
+  "benchmark_file": "evaluation\\evidence_engine\\product_dev_v3.json",
+  "n_queries": 100,
+  "models": {
+    "dense_model": "Qwen/Qwen3-Embedding-4B",
+    "dense_revision": "5cf2132abc99cad020ac570b19d031efec650f2b",
+    "dense_quantization": "4-bit NF4, fp16 compute",
+    "lexical_model": "Okapi BM25 (k1=1.5, b=0.75)",
+    "fusion": "Fixed Reciprocal Rank Fusion (k=60, equal weighting)"
+  },
+  "evaluation_timestamp": "2026-09-12T05:15:15Z",
+  "predefined_gates": {
+    "gate_recall_at_20_gte_95": {
+      "threshold": 0.95,
+      "observed": 0.54,
+      "passed": false
+    },
+    "gate_recall_at_50_gte_98": {
+      "threshold": 0.98,
+      "observed": 0.64,
+      "passed": false
+    },
+    "gate_verdict": "GENUINE_RETRIEVAL_GAP_CONFIRMED"
+  },
+  "configurations": {
+    "DENSE_ONLY": {
+      "semantic_recall": {
+        "recall_at_1": {
+          "count": 19,
+          "total": 100,
+          "rate": 0.19,
+          "pct": "19.00%",
+          "ci_95_wilson": [
+            0.1251,
+            0.2778
+          ]
+        },
+        "recall_at_5": {
+          "count": 44,
+          "total": 100,
+          "rate": 0.44,
+          "pct": "44.00%",
+          "ci_95_wilson": [
+            0.3467,
+            0.5377
+          ]
+        },
+        "recall_at_10": {
+          "count": 49,
+          "total": 100,
+          "rate": 0.49,
+          "pct": "49.00%",
+          "ci_95_wilson": [
+            0.3942,
+            0.5865
+          ]
+        },
+        "recall_at_20": {
+          "count": 55,
+          "total": 100,
+          "rate": 0.55,
+          "pct": "55.00%",
+          "ci_95_wilson": [
+            0.4524,
+            0.6439
+          ]
+        },
+        "recall_at_50": {
+          "count": 64,
+          "total": 100,
+          "rate": 0.64,
+          "pct": "64.00%",
+          "ci_95_wilson": [
+            0.5424,
+            0.7273
+          ]
+        },
+        "recall_at_100": {
+          "count": 68,
+          "total": 100,
+          "rate": 0.68,
+          "pct": "68.00%",
+          "ci_95_wilson": [
+            0.5834,
+            0.7633
+          ]
+        },
+        "recall_at_200": {
+          "count": 75,
+          "total": 100,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.657,
+            0.8245
+          ]
+        }
+      },
+      "exact_recall": {
+        "recall_at_1": {
+          "count": 13,
+          "total": 100,
+          "rate": 0.13,
+          "pct": "13.00%",
+          "ci_95_wilson": [
+            0.0776,
+            0.2098
+          ]
+        },
+        "recall_at_5": {
+          "count": 37,
+          "total": 100,
+          "rate": 0.37,
+          "pct": "37.00%",
+          "ci_95_wilson": [
+            0.2818,
+            0.4678
+          ]
+        },
+        "recall_at_10": {
+          "count": 42,
+          "total": 100,
+          "rate": 0.42,
+          "pct": "42.00%",
+          "ci_95_wilson": [
+            0.328,
+            0.5179
+          ]
+        },
+        "recall_at_20": {
+          "count": 51,
+          "total": 100,
+          "rate": 0.51,
+          "pct": "51.00%",
+          "ci_95_wilson": [
+            0.4135,
+            0.6058
+          ]
+        },
+        "recall_at_50": {
+          "count": 61,
+          "total": 100,
+          "rate": 0.61,
+          "pct": "61.00%",
+          "ci_95_wilson": [
+            0.512,
+            0.6998
+          ]
+        },
+        "recall_at_100": {
+          "count": 67,
+          "total": 100,
+          "rate": 0.67,
+          "pct": "67.00%",
+          "ci_95_wilson": [
+            0.5731,
+            0.7544
+          ]
+        },
+        "recall_at_200": {
+          "count": 71,
+          "total": 100,
+          "rate": 0.71,
+          "pct": "71.00%",
+          "ci_95_wilson": [
+            0.6146,
+            0.7899
+          ]
+        }
+      },
+      "passage_doc_hit": {
+        "hit_at_1": {
+          "count": 59,
+          "total": 100,
+          "rate": 0.59,
+          "pct": "59.00%",
+          "ci_95_wilson": [
+            0.492,
+            0.6813
+          ]
+        },
+        "hit_at_5": {
+          "count": 75,
+          "total": 100,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.657,
+            0.8245
+          ]
+        },
+        "hit_at_10": {
+          "count": 77,
+          "total": 100,
+          "rate": 0.77,
+          "pct": "77.00%",
+          "ci_95_wilson": [
+            0.6785,
+            0.8416
+          ]
+        }
+      },
+      "passage_section_hit": {
+        "hit_at_1": {
+          "count": 59,
+          "total": 100,
+          "rate": 0.59,
+          "pct": "59.00%",
+          "ci_95_wilson": [
+            0.492,
+            0.6813
+          ]
+        },
+        "hit_at_5": {
+          "count": 75,
+          "total": 100,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.657,
+            0.8245
+          ]
+        },
+        "hit_at_10": {
+          "count": 77,
+          "total": 100,
+          "rate": 0.77,
+          "pct": "77.00%",
+          "ci_95_wilson": [
+            0.6785,
+            0.8416
+          ]
+        }
+      },
+      "mrr": 0.3007,
+      "ndcg_at_10": 0.3346,
+      "rank_distribution": {
+        "median": 11.0,
+        "p75": 207.5,
+        "p90": 1164.3000000000006,
+        "max": 2692
+      }
+    },
+    "BM25_ONLY": {
+      "semantic_recall": {
+        "recall_at_1": {
+          "count": 13,
+          "total": 100,
+          "rate": 0.13,
+          "pct": "13.00%",
+          "ci_95_wilson": [
+            0.0776,
+            0.2098
+          ]
+        },
+        "recall_at_5": {
+          "count": 32,
+          "total": 100,
+          "rate": 0.32,
+          "pct": "32.00%",
+          "ci_95_wilson": [
+            0.2367,
+            0.4166
+          ]
+        },
+        "recall_at_10": {
+          "count": 42,
+          "total": 100,
+          "rate": 0.42,
+          "pct": "42.00%",
+          "ci_95_wilson": [
+            0.328,
+            0.5179
+          ]
+        },
+        "recall_at_20": {
+          "count": 52,
+          "total": 100,
+          "rate": 0.52,
+          "pct": "52.00%",
+          "ci_95_wilson": [
+            0.4232,
+            0.6154
+          ]
+        },
+        "recall_at_50": {
+          "count": 60,
+          "total": 100,
+          "rate": 0.6,
+          "pct": "60.00%",
+          "ci_95_wilson": [
+            0.502,
+            0.6906
+          ]
+        },
+        "recall_at_100": {
+          "count": 67,
+          "total": 100,
+          "rate": 0.67,
+          "pct": "67.00%",
+          "ci_95_wilson": [
+            0.5731,
+            0.7544
+          ]
+        },
+        "recall_at_200": {
+          "count": 71,
+          "total": 100,
+          "rate": 0.71,
+          "pct": "71.00%",
+          "ci_95_wilson": [
+            0.6146,
+            0.7899
+          ]
+        }
+      },
+      "exact_recall": {
+        "recall_at_1": {
+          "count": 12,
+          "total": 100,
+          "rate": 0.12,
+          "pct": "12.00%",
+          "ci_95_wilson": [
+            0.07,
+            0.1981
+          ]
+        },
+        "recall_at_5": {
+          "count": 30,
+          "total": 100,
+          "rate": 0.3,
+          "pct": "30.00%",
+          "ci_95_wilson": [
+            0.2189,
+            0.3959
+          ]
+        },
+        "recall_at_10": {
+          "count": 40,
+          "total": 100,
+          "rate": 0.4,
+          "pct": "40.00%",
+          "ci_95_wilson": [
+            0.3094,
+            0.498
+          ]
+        },
+        "recall_at_20": {
+          "count": 51,
+          "total": 100,
+          "rate": 0.51,
+          "pct": "51.00%",
+          "ci_95_wilson": [
+            0.4135,
+            0.6058
+          ]
+        },
+        "recall_at_50": {
+          "count": 58,
+          "total": 100,
+          "rate": 0.58,
+          "pct": "58.00%",
+          "ci_95_wilson": [
+            0.4821,
+            0.672
+          ]
+        },
+        "recall_at_100": {
+          "count": 64,
+          "total": 100,
+          "rate": 0.64,
+          "pct": "64.00%",
+          "ci_95_wilson": [
+            0.5424,
+            0.7273
+          ]
+        },
+        "recall_at_200": {
+          "count": 68,
+          "total": 100,
+          "rate": 0.68,
+          "pct": "68.00%",
+          "ci_95_wilson": [
+            0.5834,
+            0.7633
+          ]
+        }
+      },
+      "passage_doc_hit": {
+        "hit_at_1": {
+          "count": 51,
+          "total": 100,
+          "rate": 0.51,
+          "pct": "51.00%",
+          "ci_95_wilson": [
+            0.4135,
+            0.6058
+          ]
+        },
+        "hit_at_5": {
+          "count": 72,
+          "total": 100,
+          "rate": 0.72,
+          "pct": "72.00%",
+          "ci_95_wilson": [
+            0.6251,
+            0.7986
+          ]
+        },
+        "hit_at_10": {
+          "count": 75,
+          "total": 100,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.657,
+            0.8245
+          ]
+        }
+      },
+      "passage_section_hit": {
+        "hit_at_1": {
+          "count": 51,
+          "total": 100,
+          "rate": 0.51,
+          "pct": "51.00%",
+          "ci_95_wilson": [
+            0.4135,
+            0.6058
+          ]
+        },
+        "hit_at_5": {
+          "count": 72,
+          "total": 100,
+          "rate": 0.72,
+          "pct": "72.00%",
+          "ci_95_wilson": [
+            0.6251,
+            0.7986
+          ]
+        },
+        "hit_at_10": {
+          "count": 75,
+          "total": 100,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.657,
+            0.8245
+          ]
+        }
+      },
+      "mrr": 0.2224,
+      "ndcg_at_10": 0.2607,
+      "rank_distribution": {
+        "median": 17.0,
+        "p75": 328.5,
+        "p90": 1568.9000000000008,
+        "max": 2692
+      }
+    },
+    "FIXED_RRF": {
+      "semantic_recall": {
+        "recall_at_1": {
+          "count": 17,
+          "total": 100,
+          "rate": 0.17,
+          "pct": "17.00%",
+          "ci_95_wilson": [
+            0.1089,
+            0.2555
+          ]
+        },
+        "recall_at_5": {
+          "count": 40,
+          "total": 100,
+          "rate": 0.4,
+          "pct": "40.00%",
+          "ci_95_wilson": [
+            0.3094,
+            0.498
+          ]
+        },
+        "recall_at_10": {
+          "count": 47,
+          "total": 100,
+          "rate": 0.47,
+          "pct": "47.00%",
+          "ci_95_wilson": [
+            0.3751,
+            0.5671
+          ]
+        },
+        "recall_at_20": {
+          "count": 54,
+          "total": 100,
+          "rate": 0.54,
+          "pct": "54.00%",
+          "ci_95_wilson": [
+            0.4426,
+            0.6344
+          ]
+        },
+        "recall_at_50": {
+          "count": 64,
+          "total": 100,
+          "rate": 0.64,
+          "pct": "64.00%",
+          "ci_95_wilson": [
+            0.5424,
+            0.7273
+          ]
+        },
+        "recall_at_100": {
+          "count": 68,
+          "total": 100,
+          "rate": 0.68,
+          "pct": "68.00%",
+          "ci_95_wilson": [
+            0.5834,
+            0.7633
+          ]
+        },
+        "recall_at_200": {
+          "count": 74,
+          "total": 100,
+          "rate": 0.74,
+          "pct": "74.00%",
+          "ci_95_wilson": [
+            0.6463,
+            0.816
+          ]
+        }
+      },
+      "exact_recall": {
+        "recall_at_1": {
+          "count": 16,
+          "total": 100,
+          "rate": 0.16,
+          "pct": "16.00%",
+          "ci_95_wilson": [
+            0.101,
+            0.2442
+          ]
+        },
+        "recall_at_5": {
+          "count": 38,
+          "total": 100,
+          "rate": 0.38,
+          "pct": "38.00%",
+          "ci_95_wilson": [
+            0.291,
+            0.4779
+          ]
+        },
+        "recall_at_10": {
+          "count": 45,
+          "total": 100,
+          "rate": 0.45,
+          "pct": "45.00%",
+          "ci_95_wilson": [
+            0.3561,
+            0.5476
+          ]
+        },
+        "recall_at_20": {
+          "count": 53,
+          "total": 100,
+          "rate": 0.53,
+          "pct": "53.00%",
+          "ci_95_wilson": [
+            0.4329,
+            0.6249
+          ]
+        },
+        "recall_at_50": {
+          "count": 62,
+          "total": 100,
+          "rate": 0.62,
+          "pct": "62.00%",
+          "ci_95_wilson": [
+            0.5221,
+            0.709
+          ]
+        },
+        "recall_at_100": {
+          "count": 64,
+          "total": 100,
+          "rate": 0.64,
+          "pct": "64.00%",
+          "ci_95_wilson": [
+            0.5424,
+            0.7273
+          ]
+        },
+        "recall_at_200": {
+          "count": 69,
+          "total": 100,
+          "rate": 0.69,
+          "pct": "69.00%",
+          "ci_95_wilson": [
+            0.5937,
+            0.7722
+          ]
+        }
+      },
+      "passage_doc_hit": {
+        "hit_at_1": {
+          "count": 57,
+          "total": 100,
+          "rate": 0.57,
+          "pct": "57.00%",
+          "ci_95_wilson": [
+            0.4722,
+            0.6627
+          ]
+        },
+        "hit_at_5": {
+          "count": 77,
+          "total": 100,
+          "rate": 0.77,
+          "pct": "77.00%",
+          "ci_95_wilson": [
+            0.6785,
+            0.8416
+          ]
+        },
+        "hit_at_10": {
+          "count": 79,
+          "total": 100,
+          "rate": 0.79,
+          "pct": "79.00%",
+          "ci_95_wilson": [
+            0.7002,
+            0.8583
+          ]
+        }
+      },
+      "passage_section_hit": {
+        "hit_at_1": {
+          "count": 57,
+          "total": 100,
+          "rate": 0.57,
+          "pct": "57.00%",
+          "ci_95_wilson": [
+            0.4722,
+            0.6627
+          ]
+        },
+        "hit_at_5": {
+          "count": 77,
+          "total": 100,
+          "rate": 0.77,
+          "pct": "77.00%",
+          "ci_95_wilson": [
+            0.6785,
+            0.8416
+          ]
+        },
+        "hit_at_10": {
+          "count": 79,
+          "total": 100,
+          "rate": 0.79,
+          "pct": "79.00%",
+          "ci_95_wilson": [
+            0.7002,
+            0.8583
+          ]
+        }
+      },
+      "mrr": 0.2699,
+      "ndcg_at_10": 0.3069,
+      "rank_distribution": {
+        "median": 11.0,
+        "p75": 210.75,
+        "p90": 729.9000000000005,
+        "max": 2692
+      }
+    }
+  }
+}
