@@ -1,0 +1,862 @@
+{
+  "benchmark": "PRODUCT_DEV_V2",
+  "n_total": 120,
+  "classification_summary": {
+    "VALID_PRODUCT_QUERY": {
+      "count": 77,
+      "percent": "64.17%"
+    },
+    "EDITORIAL_STRUCTURE_QUERY": {
+      "count": 41,
+      "percent": "34.17%"
+    },
+    "QUERY_EVIDENCE_MISMATCH": {
+      "count": 2,
+      "percent": "1.67%"
+    }
+  },
+  "valid_count": 77,
+  "invalid_count": 43,
+  "detailed_audit": [
+    {
+      "query_id": "PRD-DEV2-0001",
+      "query": "Which signaling mechanisms promote tubulointerstitial fibrosis and progression in Renal Clinical Evidence?",
+      "canonical_claim": "Inflammation is an important mechanism in the development and progression of CVD such as hypertension and atherosclerosis.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0002",
+      "query": "Which signaling mechanisms promote tubulointerstitial fibrosis and progression in . Inflammation and Cardiovascular Disease?",
+      "canonical_claim": "Inflammation plays a key role in the initiation, progression, and development of an array of cardiovascular diseases such as hypertension, atherosclerosis, restenosis after balloon angioplasty, nephropathy, and cardiomyopathy .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0003",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in . Markers of Inflammation?",
+      "canonical_claim": "Activated NF- \u03ba B induces vascular smooth muscle cells proliferation and mediates neointima hyperplasia after vascular injury .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0004",
+      "query": "What clinical mechanisms and physiological findings characterize . Markers of Inflammation?",
+      "canonical_claim": "IL-6 plays an important role in inflammation and modulates the development of several diseases including cardiovascular disease such as hypertension and other related diseases.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0005",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in . RAAS and Vascular Inflammation?",
+      "canonical_claim": "A dysfunctional endothelium is leaky and facilitates migration of inflammatory cell into the vascular wall and stimulates smooth muscle cells proliferation, processes that decrease vascular function and promote development of cardiovascular disease and tissue injury.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0006",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . RAAS and Vascular Inflammation?",
+      "canonical_claim": "Several RAAS inhibitors such as ACEI ramipril and ARB losartan improve endothelial activity and vascular function by increasing NO bioavailability .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0007",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS and Vascular Inflammation?",
+      "canonical_claim": "The proinflammatory and profibrotic effects of the RAAS are also mediated by aldosterone.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0008",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS Blockers and Vascular Inflammation?",
+      "canonical_claim": "Blocking RAAS signaling either with ACEIs which inhibit the formation of angiotensin, or ARBs which block angiotensin receptors, or DRIs which inhibit the renin-angiotensinogen reaction, or MRAs which block aldosterone, alone or in combinations, reduces mortality and morbidity in diabetes, hypertension, atherosclerosis, heart failure, and stroke .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0009",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . (Pro)renin Receptor and Potential Inhibitors?",
+      "canonical_claim": "(Pro)renin receptor (P)RR discovery in 2002 has shed light on tissue renin-angiotensin system and function of circulating prorenin, the inactive precursor of renin.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0010",
+      "query": "What clinical mechanisms and physiological findings characterize . Angiotensin Converting Enzyme Inhibitors (ACEIs)?",
+      "canonical_claim": "The use of ACEIs is an effective conventional treatment of hypertension and reducing left ventricular hypertrophy, therefore, ACEIs improve CV outcomes  ACEIs treatment of patients with a dysfunctional endothelium caused by various pathological conditions improves endothelial functions measured by brachial flow mediated vasodilation (FMD) .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0011",
+      "query": "What clinical mechanisms and physiological findings characterize . RAAS and Vascular Remodeling?",
+      "canonical_claim": "Changes in the structure and function of blood vessels especially in small resistance blood vessels potentiate the complications of hypertension.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0012",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS and Vascular Remodeling?",
+      "canonical_claim": "In addition to its role in hypertension, the renin-angiotensin-aldosterone system also plays an important role in mediating vascular remodeling in neointimal hyperplasia after angioplasty and atherosclerosis [ 122 \u2013 124 ].",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0013",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . Perspective on RAAS Inhibition?",
+      "canonical_claim": "For example, the current understanding about interactions between Ang II and aldosterone to regulate deleterious cellular processes indicates the intricacy of RAAS signaling and provides the basis for blocking RAAS at multiple levels.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0014",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "canonical_claim": "Over 10% of adults worldwide are affected by renal abnormalities and the number of those with end-stage renal disease (ESRD) receiving replacement therapy with dialysis or transplant is estimated at >1.4 million, with an annual growth rate of 8% 1 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0015",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "canonical_claim": "Even though some success in generating kidney structures has been described using conventional 2D or 3D culture systems (including spheroids and extracellular based gels 5 ), the results are still inconsistent.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0016",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "canonical_claim": "The chip technology has been used to replicate renal structures, including proximal tubules 16 \u2013 19 and, in few instances, the glomerular compartment 20 \u2013 22 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0017",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Renal Clinical Evidence?",
+      "canonical_claim": "Herein, we describe a glomerulus-on-a-chip (referred to as GOAC) constituted by human podocytes and human glomerular endothelial cells (hGEC) seeded on Organoplates TM (MIMETAS).",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0018",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Renal Clinical Evidence?",
+      "canonical_claim": "We also assessed response of GOAC to glucose-induced damage and performed studies of disease modeling by generating GOAC using amniotic fluid kidney progenitor-derived podocytes (hAKPC-P 25 ) from subjects affected by Alport syndrome (AS), a hereditary CKD characterized by mutations in the alpha chains of COL4 genes 26 .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0019",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Characterization of human podocytes and hGEC?",
+      "canonical_claim": "All three lines show almost 100% expression of podocyte markers and absence of endothelial marker confirming their podocyte phenotype.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0020",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Culturing human podocytes and hGEC on the chip?",
+      "canonical_claim": "We first investigated whether our system supports the culture of hGEC and podocytes separately.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0021",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+      "canonical_claim": "We next co-cultured podocytes and hGEC to generate the GOAC (Fig.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0022",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+      "canonical_claim": "Podocytes and endothelial cells alone do not guarantee the correct function of the filtration barrier in the absence of a GBM.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0023",
+      "query": "What clinical mechanisms and physiological findings characterize Permselectivity as functional measure of a working GOAC?",
+      "canonical_claim": "the capacity to filter molecules based on their size 3 , 41 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0024",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Permselectivity as functional measure of a working GOAC?",
+      "canonical_claim": "hAKPC-P + hGEC and hpPOD + hGEC chips (but not hiPOD + hGEC) were statistically significantly different ( p < 0.01 and p < 0.05, respectively) from chips generated using hFIB instead of podocyte lines.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0025",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+      "canonical_claim": "To test the hypothesis that our GOAC can model a kidney injury state, we exposed the GOAC to puromycin aminonucleoside (PAN; Fig.",
+      "category": "QUERY_EVIDENCE_MISMATCH",
+      "rationale": "Query asks about acute tubular injury but claim does not address tubular injury"
+    },
+    {
+      "query_id": "PRD-DEV2-0026",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+      "canonical_claim": "a Representation of GOAC albumin permselectivity assay following PAN injury: PAN (5-day induction, 10 mg/ml) is applied to channel C followed by albumin-FITC (40 mg/ml, yellow) and flow-through collected in channel F.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0027",
+      "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "canonical_claim": "First, we tested the ability of IgG to cross the glomerular endothelial cell monolayer on which hGEC were allowed to grow to confluency and form a continuous layer.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0028",
+      "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "canonical_claim": "5 Evaluation of permselectivity using human membranous nephropathy serum samples.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0029",
+      "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "canonical_claim": "We next measured the relationship between the extent of albumin leakage (proteinuria) in our chips (measured as FITC-absorbance in the filtrate collected in channel F) with proteinuria measured in the same patients (Fig.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0030",
+      "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "canonical_claim": "6 Correlation of GOAC proteinuria with clinical data and MN mechanism modeling on the chip.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0031",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Modeling mechanism of MN injury in podocyte in the GOAC?",
+      "canonical_claim": "In MN, following autoantibody binding, several mechanisms are triggered in podocytes, like the complement signaling 54 that can lead to delocalization of nephrin with loss of the slit diaphragm structure and podocyte injury 55 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0032",
+      "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+      "canonical_claim": "While putative circulating factors have been described in FSGS, the sera included in the experiments were obtained from individuals with disease s remission; therefore, these factors (if present) were not enough to induce proteinuria in vivo.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0033",
+      "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+      "canonical_claim": "Quantification of proteinuria (albumin-FITC) was performed by measuring absorbance (fluorescein, 0.1 s) of flow-through for hAKPC-P + hGEC at 60 min Number of replicates for chips used in d is as follows: CTRL2: #6 : MN3: #9; MN3 + a-MSH: #11.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0034",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+      "canonical_claim": "High glucose has been shown in vitro to lead to podocyte damage 62 , 63 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0035",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+      "canonical_claim": "Following formation of the AS podocyte-endothelial cell layer, albumin-FITC is applied to channel C (yellow) and flow-through presents in channel F.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0036",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Discussion?",
+      "canonical_claim": "Our data show that we can combine human podocytes and glomerular endothelial cells with the MIMETAS TM technology to create a functional GFB in vitro.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0037",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Discussion?",
+      "canonical_claim": "Here, we validate the GOAC using podocytes derived from a patient affected of AS (ref.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0038",
+      "query": "What clinical mechanisms and physiological findings characterize Discussion?",
+      "canonical_claim": "We acknowledge that our system has some limitations, including the bi-directionality of the flow (in vivo the flow in the vascular lumen is uni-directional with the glomerulus receiving its blood supply from afferent arterioles before exiting into efferent arterioles and is not recirculated), and the fact that GOAC does not include mesangial cells, an important component of normal glomeruli 65 ; future studies will focus on generating a four lane chips, allowing culture of three different cell types.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0039",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+      "canonical_claim": "Sorted hAKPC were expanded and differentiated into podocytes (hAKPC-P) by culturing on collagen I (Corning, c#354236)-coated plates in VRADD media: RPMI-1640 (Gibco, c#11875093) supplemented with 5% FBS (Gibco, c#26140079), 1% antibiotic (Gibco, c#15070063), 1,25(OH)2D3 [100 nM, cholecalciferol] (Sigma, c#C9756), all trans retinoic acid (ATRA) [1 \u03bcM], dexamethasone [100 nM] (Sigma, c#D4902), for up to 30 days.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0040",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+      "canonical_claim": "Primary podocytes (hpPOD) and glomerular endothelial cells (hGEC) were isolated from discarded human kidney samples through mechanical and chemical digestion.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0041",
+      "query": "What clinical mechanisms and physiological findings characterize FACS and flow cytometry analysis?",
+      "canonical_claim": "hpPOD and hGEC were isolated from human glomerular cell suspension by staining with respectively NPHS1-FITC and CD31-AF647 antibodies.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0042",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Microfluidic chip and cell seeding?",
+      "canonical_claim": "This was followed by addition of 50 \u00b5l of podocyte differentiation medium to both the inlet and outlet of the top medium channel and the OrganoPlate TM was again incubated on its side overnight at 37 \u00b0C to complete cell attachment.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0043",
+      "query": "What clinical mechanisms and physiological findings characterize Albumin permselectivity assay and inulin permeability assay?",
+      "canonical_claim": "An albumin and inulin permeability assay were established to evaluate the efficiency of the created GFB.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0044",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Transwell establishment?",
+      "canonical_claim": "Once a monolayer was formed (48 h), we added hGEC and allowed them to attach on top of the podocytes for 7 days.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0045",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in PAN injury?",
+      "canonical_claim": "After PAN injury, damage was assessed using the albumin assay performed on the chip as described above.",
+      "category": "QUERY_EVIDENCE_MISMATCH",
+      "rationale": "Query asks about acute tubular injury but claim does not address tubular injury"
+    },
+    {
+      "query_id": "PRD-DEV2-0046",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Glucose-mediated injury?",
+      "canonical_claim": "Glucose-mediated injury was induced by supplementing glomerular endothelial medium with high-glucose (Sigma, c#5146) at 10 mM (standard RPMI-1640 glucose concentration), 15 mM, and 20 mM.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0047",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in Western blot analysis?",
+      "canonical_claim": "Total protein from the OrganoPlate TM was collected by adding 125 U/ml collagenase I (Worthington, LS004197 ) in a radioimmunoprecipitation assay RIPA lysis buffer (Santa Cruz Biotechnology, c#sc-24948) containing a protease inhibitor cocktail (Thermo Scientific, c#78442) and incubated at 37 \u00b0C for 30 min.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0048",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in New insights from tubulopathies?",
+      "canonical_claim": "The effect of low dietary potassium intake on NCC raised the question of how the DCT is capable of sensing potassium.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0049",
+      "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+      "canonical_claim": "Hypokalemic nephropathy has been reported in patients with malnutrition, eating disorders, vomiting, surreptitious use of laxatives or diuretics, and primary aldosteronism .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0050",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Hypokalemic nephropathy?",
+      "canonical_claim": "In addition to these tubulointerstitial phenomena, potassium deficiency also impairs kidney angiogenesis.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0051",
+      "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+      "canonical_claim": "Hypokalemic nephropathy can cause histological or functional changes throughout the nephron.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0052",
+      "query": "What clinical mechanisms and physiological findings characterize Effects of dietary potassium in children?",
+      "canonical_claim": "The increasing prevalence of hypertension in children also links to the increasing prevalence of obesity [ 56 \u2013 58 ].",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0053",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+      "canonical_claim": "What should be the next steps to materialize the accumulating evidence for the relationships between dietary potassium intake, blood pressure, cardiovascular, and kidney outcomes?",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0054",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+      "canonical_claim": "These studies will be necessary to further determine the contribution of dietary potassium to outcomes.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0055",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Introduction?",
+      "canonical_claim": "Renal proximal tubules (PTs) reabsorb approximately 80% of the filtered bicarbonate from glomerulus, thereby playing a pivotal role in the maintenance of systemic acid-base balance .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0056",
+      "query": "What clinical mechanisms and physiological findings characterize . Introduction?",
+      "canonical_claim": "For example, hypertension is frequently associated with metabolic syndrome, and insulin-mediated stimulation of PT transport may play a role in this association .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0057",
+      "query": "What transport mechanism mediates tubular solute reabsorption in . Roles of PT Transport in Acid/Base Balance?",
+      "canonical_claim": "Yoshitomi and colleagues initially reported that the Na + -HCO 3 \u2212 cotransporter in rat PTs in vivo functions with 1Na + to 3HCO 3 \u2212 stoichiometry .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0058",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Roles of PT Transport in Acid/Base Balance?",
+      "canonical_claim": "Unlike NBCe1-deficient mice, NHE3-KO mice present with only mild acidemia .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0059",
+      "query": "What clinical mechanisms and physiological findings characterize . Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome?",
+      "canonical_claim": "Insulin can relax vascular tones through the phosphatidylinositol 3 kinase (PI3K)/Akt-dependent nitric oxide (NO) production, and simple hyperinsulinemia may not necessarily induce hypertension .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0060",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome?",
+      "canonical_claim": "To clarify the relative importance of IRS1 and IRS2 in the stimulatory effect of insulin on PT transport, Zheng and colleagues compared the effects of insulin on sodium-coupled bicarbonate absorption in isolated PTs from IRS1-KO and IRS2-KO mice.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0061",
+      "query": "What clinical mechanisms and physiological findings characterize . Effects of Ang II on PT Transport?",
+      "canonical_claim": "There are two major Ang II receptors (AT), AT 1 and AT 2 .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0062",
+      "query": "What clinical mechanisms and physiological findings characterize . Effects of Ang II on PT Transport?",
+      "canonical_claim": "Controversial data have been reported as to the receptor subtype(s) responsible for the biphasic effects of Ang II on PT transport .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0063",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . Effects of Ang II on PT Transport?",
+      "canonical_claim": "In wild-type mice, the inhibitory effect of Ang II was dependent on the NO/cGMP/cGMP-dependent kinase II (cGKII) pathway.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0064",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . Effects of Ang II on PT Transport?",
+      "canonical_claim": "For example, NO is generally thought to work as inhibitory on PT transport in rodents .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+\\.\\s+'"
+    },
+    {
+      "query_id": "PRD-DEV2-0065",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "canonical_claim": "The acid-base (AB) balance is a critical facet of homeostasis, as the binding properties of biomolecules (key to every biological process) strongly depend on acidity of the aqueous media of cells and tissues, determined by production and excretion rates of acids and bases, their preservation efficiency and physiological adequacy.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0066",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "canonical_claim": "The human body has an evolutionary refined capability of pH adjustment, effectuated by the lungs via gas exchange and by the kidneys via fine tuning of proton/bicarbonate secretion and reabsorption.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0067",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "canonical_claim": "However, patients with chronic renal failure develop constant progressive metabolic acidosis ( Wesson, 2021 ; Imenez Silva & Mohebbi, 2022 ).",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0068",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "canonical_claim": "The most extensive buffer system in the body is provided by bicarbonate ions (HCO 3 \u2212 ).",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'in\\s+Renal Clinical Evidence\\?'"
+    },
+    {
+      "query_id": "PRD-DEV2-0069",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "canonical_claim": "However, the use of animal models is justified by the common nature of many diseases in humans and animals, including microbial infections, allergies, diabetes, renal failure, hypertension, cancers, myopathies, epilepsies, etc .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0070",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "Systemic AB imbalances manifest as changes in blood plasma pH which only loosely correspond to local shifts in acidity inside cells or at their surface.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0071",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "The distribution of extracellular fluids in the body is non-uniform: apart from blood plasma, cerebrospinal fluid and pleuroperitoneal fluid, these include interstitial fluids that closely interact with diverse cell niches in renal tubules, gland acini and ductal systems, lymphoid patches, etc .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0072",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "The dietary alkaline load is initially converted to bicarbonate in the liver.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0073",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "The mechanism involving organic anions, notably citrate, not only affords the restoration of base balance while maintaining the urine pH around 6.0, but also minimizes the risks of stone formation through the chelating action of citrate on ionized calcium.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0074",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "Each of these systems is involved in maintaining acid-base balance in the body to a greater or lesser extent.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0075",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "canonical_claim": "Further, the authors will consider how each of the nephron parts affects the acid-base balance.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0076",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "The proximal convoluted tubule (PCT) is engaged in reabsorption and recycling of various ions and solutes.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0077",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "The glomerular filtrate that contacts the apical surfaces of PCT cells is initially similar in composition to the interstitial fluid that contacts the basolateral surfaces.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0078",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "The protons released by PCT cells into the tubular lumen react with HCO 3 \u2212 in the filtrate to form CO 2 and H 2 O; the reaction is catalyzed by carbonic anhydrase IV expressed at the apical membrane.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0079",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "canonical_claim": "The regulation of AB balance in PCT involves several pH-sensitive molecules: calcium-sensing receptor CaSR, G-protein coupled receptor Gprc5c, receptor tyrosine kinases ErbB1/2, proline-rich tyrosine kinase Pyk2, pH-sensitive ion channel TASK2 and bicarbonate-stimulated soluble adenylyl cyclase ( Brown & Wagner, 2012 ; Rajkumar & Pluznick, 2018 ).",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0080",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "canonical_claim": "The proximal bicarbonate reabsorption is regulated by several hormones acting for either minutes-to-hours or days.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0081",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "canonical_claim": "TASK2, another pH-sensitive molecule regulating bicarbonate reabsorption in PCT, is a two-pore domain K + channel activated by extracellular alkalization.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0082",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "Soluble adenylyl cyclase (sAC) is expressed in kidney tubules and activated by HCO 3 \u2013 ions; the response can be enhanced by calcium.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0083",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "Calcium-sensing receptor CaSR is a G protein-coupled receptor (GPCR) expressed at the apical membrane.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0084",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "canonical_claim": "Bicarbonate reabsorption in the kidney is also coupled to glucose reabsorption.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0085",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "canonical_claim": "It should be mentioned that transport and metabolism of amino acids (AA) in PCT also contribute to AB balance regulation.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0086",
+      "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+      "canonical_claim": "TAL is impermeable to water; the dilution occurs through active reabsorption of NaCl which feeds the hypertonic gradient.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0087",
+      "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+      "canonical_claim": "The loop of Henle (particularly TAL) reabsorbs about 40% of Na + present in the glomerular filtrate.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0088",
+      "query": "What transport mechanism mediates tubular solute reabsorption in Loop of Henle?",
+      "canonical_claim": "The combined activity of essential transporters and ion channels involved in the salt reabsorption (NKCC2, ROMK, ClC-Kb) ensures the electrolyte balance.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0089",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Loop of Henle?",
+      "canonical_claim": "Reabsorption of sodium and chloride in TAL indirectly affects bicarbonate concentration in the renal tubular fluid.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0090",
+      "query": "What clinical mechanisms and physiological findings characterize Distal convoluted tubule?",
+      "canonical_claim": "Secretion of hydrogen ions (H + ) to the lumen proceeds via H + -ATPase pump located at the apical membrane.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0091",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Collecting tubules and collecting ducts?",
+      "canonical_claim": "This system substantively contributes to the water-electrolyte balance by means of aldosterone/ADH-dependent reabsorption and secretion ( Olde Engberink et al., 2023 ).",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0092",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Collecting tubules and collecting ducts?",
+      "canonical_claim": "IC-\u03b1 express H + -ATPase V at the apical membrane and Cl \u2212 /HCO 3 \u2212 anion exchanger at the basolateral membrane, responsible for proton secretion and bicarbonate reabsorption, respectively.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0093",
+      "query": "What clinical mechanisms and physiological findings characterize Collecting tubules and collecting ducts?",
+      "canonical_claim": "Another G-protein-coupled receptor implicated in AB homeostasis, Gpr116, is expressed in cortical collecting ducts by IC-\u03b1.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0094",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "Clinical manifestations of changes in AB balance at systemic level, directly or indirectly related to kidney function, include excessive acid production; acid wasting; excessive production/retention of bicarbonate; and bicarbonate wasting.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0095",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "Excessive acid production is observed in diabetic ketoacidosis.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0096",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "The patients develop dehydration and vomiting; the massive loss of hydrochloric acid from the stomach may cause hypochloremic metabolic alkalosis, notably in infants ( van den Bunder et al., 2020 ).",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0097",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "Patients with mixed or type 2 respiratory failure often develop metabolic alkalosis, with increased bicarbonate levels compensating for the rise in blood CO 2 .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0098",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "Eventually, increased excretion of bicarbonate with the urine restores the systemic pH balance.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0099",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "It is important to consider genetic basis of particular failures in AB homeostasis, notably mutations that affect bicarbonate transport in the kidney.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0100",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "canonical_claim": "(2023) also demonstrate a significant association of altered AB homeostasis with mortality rates among patients diagnosed with COVID-19, with significantly higher risks of lethal outcome in patients with metabolic acidosis associated with respiratory compensation, respiratory alkalosis with metabolic compensation and even patients with uncompensated respiratory acidosis.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0101",
+      "query": "What clinical mechanisms and physiological findings characterize Conclusion?",
+      "canonical_claim": "The acid-base homeostasis is fundamental for health as it ensures the optimal functioning of cells and biomolecules.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0102",
+      "query": "What clinical mechanisms and physiological findings characterize Conclusion?",
+      "canonical_claim": "Understanding of the mechanisms of pH-sensitivity, as well as the influence of H + ion concentration on intracellular signaling, inflammation and immunogenesis processes will allow us to develop new ways of treatment, first of all, of chronic renal failure.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0103",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Conclusion?",
+      "canonical_claim": "Limitations of the study: The focus of the review primarily lies on the acid-base exchange in kidney and it is crucial to note that the effects of acid-base regulation through the renal pathway manifest over an extended period, often taking days to become apparent.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0104",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Summary of evidence?",
+      "canonical_claim": "In these 11 observational studies, the comparisons of the AKI diagnosis based on the KDIGO criteria versus those based on the RIFLE and AKIN criteria showed that the KDIGO criteria is more precise than, or as precise as, the RIFLE and AKIN criteria in reflecting the-in-hospital mortality.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0105",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "canonical_claim": "In addition, while both the AKIN criteria and the RIFLE criteria included the urine output, the AKIN criteria specified that when making a diagnosis based on the urine output alone, urinary tract obstructions and easily reversible causes of a reduced urine output were to be excluded, and an adjustment was to be made for the body fluid volume.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0106",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "canonical_claim": "Based on the above, the KDIGO criteria are considered to be more useful in their survival outcome prediction ability than the RIFLE or AKIN criteria for the diagnosis of AKI.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0107",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "canonical_claim": "The diagnosis of acute kidney injury (AKI) requires the baseline renal function; however, in actual clinical practice, the patient\u2019s history of examination and his/her baseline renal function are often unknown.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0108",
+      "query": "What clinical mechanisms and physiological findings characterize Commentary?",
+      "canonical_claim": "In conclusion, there is currently no specific baseline sCr estimation method on par with a measured baseline sCr.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0109",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "canonical_claim": "All these criteria sets enable the diagnosis and staging of AKI based on changes in the serum creatinine (sCr) or the urine output [ 1 \u2013 3 ].",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0110",
+      "query": "What clinical mechanisms and physiological findings characterize Commentary?",
+      "canonical_claim": "demonstrated that patients who fulfilled both the sCr and urine output criteria were at the highest risk of death and the initiation of permanent renal replacement therapy (RRT), while isolated oliguria was associated with a long-term risk of death even when the sCr criterion was not fulfilled .",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching 'characterize\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0111",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "canonical_claim": "To summarize the above studies, the inclusion of the urine output along with the sCr to determine the AKI stage improves the sensitivity of the AKI diagnosis, and yields more accurate reflections of the survival and renal outcomes than AKI staging based on the sCr alone.",
+      "category": "EDITORIAL_STRUCTURE_QUERY",
+      "rationale": "Query targets manuscript section/editorial label matching '\\bin\\s+[\\.\\s]*(Introduction|Discussion|Commentary|Methods|Results|Conclusions?|Background|References|Acknowledgements?)\\b'"
+    },
+    {
+      "query_id": "PRD-DEV2-0112",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Preoperative renal impairment?",
+      "canonical_claim": "reported that a higher preoperative estimated glomerular filtration rate (eGFR) was associated with a lower risk of AKI development (odds ratio 0.97, 95% confidence interval: 0.96\u20130.99) .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0113",
+      "query": "What clinical mechanisms and physiological findings characterize Other risk factors?",
+      "canonical_claim": "In addition to the risk factors stated above, observational studies have also assessed obesity, diabetes, hypertension, and anemia as potential risk factors; however, due to contradictory results, no conclusions have been reached [ 37 , 38 , 41 \u2013 43 ].",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0114",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Liver transplantation?",
+      "canonical_claim": "Based on this definition, the incidence of AKI was 33.8%; factors such as the preoperative MELD score, preoperative hyponatremia, a preoperative BMI \u2265 30 kg/m 2 , intraoperative red blood cell transfusion, and a long warm ischemic time were identified as risk factors for AKI development .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0115",
+      "query": "What clinical mechanisms and physiological findings characterize Lung surgery?",
+      "canonical_claim": "The proposed risk factors included aging, preoperative hypertension, an intraoperative low mean blood pressure, the intraoperative use of vasopressors, the intraoperative use of aprotinin, the use of intraoperative or postoperative ECMO, and a comorbid postoperative infection .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0116",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Bariatric surgery?",
+      "canonical_claim": "reported that AKI of AKIN stage 1 or higher had developed in 103 patients, which represented an incidence of 17.5%; the male gender, preoperative hypertension, and a high preoperative APACHE II score were identified as risk factors .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0117",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Colorectal surgery?",
+      "canonical_claim": "The incidence of AKI (defined as a postoperative increase in sCr of \u2265 50% from baseline) was 11.8%; intraoperative red blood cell transfusion was identified as a risk factor.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0118",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Incidence of AKI in acute heart failure?",
+      "canonical_claim": "In a study that examined the differences in the incidence of AKI based on the different definitions of AKI, Li et al.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0119",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Risk factors for AKI development in acute heart failure?",
+      "canonical_claim": "A recent prospective observational study demonstrated a significant association between AKI and elevated levels (\u2265 12 ng/ml) of the tubular dysfunction marker NGAL .",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    },
+    {
+      "query_id": "PRD-DEV2-0120",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Summary of evidence?",
+      "canonical_claim": "In 6 observational studies that examined the risk of AKI development in sepsis, pre-existing renal dysfunction, aging, and the use of renin\u2013angiotensin\u2013aldosterone system inhibitors were found to be associated with AKI development in sepsis.",
+      "category": "VALID_PRODUCT_QUERY",
+      "rationale": "Clinically coherent medical learning objective with direct claim support"
+    }
+  ]
+}
