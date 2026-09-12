@@ -12,6 +12,42 @@ def _imports():
     from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training, PeftModel
     return torch,SentenceTransformer,BitsAndBytesConfig,LoraConfig,TaskType,get_peft_model,prepare_model_for_kbit_training,PeftModel
 
+def _require_peft_model(st):
+    from peft import PeftModel
+    direct=getattr(st[0],'auto_model',None)
+    if isinstance(direct,PeftModel): return direct
+    found=[]
+    for module in st.modules():
+        if isinstance(module,PeftModel) and all(module is not x for x in found): found.append(module)
+    if len(found)!=1:
+        raise RuntimeError(f'PEFT_WRAPPER_NOT_FOUND_OR_AMBIGUOUS count={len(found)} direct_type={type(direct).__name__}')
+    return found[0]
+
+def _verify_peft_adapter_dir(path:Path):
+    path=Path(path)
+    cfg=path/'adapter_config.json'
+    weights=[path/'adapter_model.safetensors',path/'adapter_model.bin']
+    if not cfg.is_file(): raise RuntimeError(f'PEFT_ADAPTER_CONFIG_MISSING path={path}')
+    existing=[p for p in weights if p.is_file()]
+    if len(existing)!=1: raise RuntimeError(f'PEFT_ADAPTER_WEIGHTS_INVALID path={path} count={len(existing)}')
+    return path
+
+def _save_peft_adapter(st,path:Path):
+    from peft import PeftModel
+    path=Path(path); shutil.rmtree(path,ignore_errors=True)
+    peft_model=_require_peft_model(st)
+    adapter_names=list(peft_model.peft_config.keys())
+    if adapter_names!=['default']:
+        raise RuntimeError(f'UNEXPECTED_PEFT_ADAPTER_NAMES names={adapter_names}')
+    PeftModel.save_pretrained(
+        peft_model,
+        str(path),
+        safe_serialization=True,
+        selected_adapters=['default'],
+        save_embedding_layers=False,
+    )
+    return _verify_peft_adapter_dir(path)
+
 def load_model(cfg, adapter:Path|None=None, trainable=True):
     torch,ST,BnB,LoraConfig,TaskType,get_peft,prepare,PeftModel=_imports(); m=cfg['model']
     bnb=BnB(load_in_4bit=True,bnb_4bit_quant_type='nf4',bnb_4bit_use_double_quant=True,bnb_4bit_compute_dtype=torch.float16)
@@ -21,11 +57,13 @@ def load_model(cfg, adapter:Path|None=None, trainable=True):
         base=prepare(base,use_gradient_checkpointing=True)
         if hasattr(base,'gradient_checkpointing_enable'): base.gradient_checkpointing_enable()
     if adapter:
+        adapter=_verify_peft_adapter_dir(Path(adapter))
         base=PeftModel.from_pretrained(base,str(adapter),is_trainable=trainable)
     else:
         lc=LoraConfig(r=int(m['lora']['r']),lora_alpha=int(m['lora']['alpha']),lora_dropout=float(m['lora']['dropout']),bias=m['lora']['bias'],target_modules=m['lora']['target_modules'],task_type=TaskType.FEATURE_EXTRACTION)
         base=get_peft(base,lc)
     st[0].auto_model=base; st.train(trainable)
+    _require_peft_model(st)
     return st
 
 def _move_features_to_device(value,device):
@@ -71,9 +109,10 @@ def sanity(cfg,train):
     torch.cuda.empty_cache(); torch.cuda.reset_peak_memory_stats(); st=load_model(cfg,trainable=True)
     trainable=[(n,p) for n,p in st.named_parameters() if p.requires_grad]; names=[n for n,_ in trainable]
     if not trainable or any('lora_' not in n for n in names): raise RuntimeError('UNINTENDED_TRAINABLE_PARAMETERS')
-    peft_model=st[0].auto_model; candidates=[peft_model,getattr(peft_model,'base_model',None),getattr(getattr(peft_model,'base_model',None),'model',None)]
+    peft_model=_require_peft_model(st); candidates=[peft_model,getattr(peft_model,'base_model',None),getattr(getattr(peft_model,'base_model',None),'model',None)]
     if not any(bool(getattr(x,'is_loaded_in_4bit',False)) for x in candidates if x is not None): raise RuntimeError('EXPECTED_4BIT_QUANTIZATION_NOT_ACTIVE')
     if not any(('q_proj' in n or 'v_proj' in n) and 'lora_' in n for n in names): raise RuntimeError('EXPECTED_LORA_TARGETS_NOT_ATTACHED')
+    trainable_count=sum(p.numel() for _,p in trainable)
     opt=torch.optim.AdamW([p for _,p in trainable],lr=float(cfg['training']['learning_rate']))
     r=train[0]; vals=[]
     for i in range(2):
@@ -85,13 +124,13 @@ def sanity(cfg,train):
         opt.step(); vals.append({'loss':float(loss.detach()),'positive_logit':ps,'negative_logit':ns})
     with torch.no_grad(): _,ps,ns,*_=loss_one(st,r,0,cfg)
     if not ps>ns: raise RuntimeError(f'SANITY_DISCRIMINATION_FAILED positive={ps} negative={ns}')
-    tmp=root_path(cfg['outputs']['root'])/'sanity_adapter_tmp'; shutil.rmtree(tmp,ignore_errors=True); st[0].auto_model.save_pretrained(tmp)
-    adapter_sha=sha256_tree(tmp); snap=gpu_snapshot(torch); del st,opt; gc.collect(); torch.cuda.empty_cache()
+    tmp=root_path(cfg['outputs']['root'])/'sanity_adapter_tmp'; _save_peft_adapter(st,tmp)
+    adapter_sha=sha256_tree(tmp); snap=gpu_snapshot(torch); del st,opt,trainable; gc.collect(); torch.cuda.empty_cache()
     reload_st=load_model(cfg,tmp,trainable=False)
     with torch.no_grad(): e=emb(reload_st,r['query'],True,cfg)
     if not torch.isfinite(e).all(): raise RuntimeError('NONFINITE_RELOADED_EMBEDDING')
     del reload_st; gc.collect(); torch.cuda.empty_cache(); shutil.rmtree(tmp,ignore_errors=True)
-    rep={'status':'PASS','cuda_active':True,'model_id':cfg['model']['id'],'revision':cfg['model']['revision'],'tokenizer_revision':cfg['model']['tokenizer_revision'],'quantization':cfg['model']['quantization'],'lora':cfg['model']['lora'],'trainable_parameter_count':sum(p.numel() for _,p in trainable),'only_lora_trainable':True,'steps':vals,'post_step_positive_logit':ps,'post_step_negative_logit':ns,'save_reload_verified':True,'sanity_adapter_sha256':adapter_sha,**snap}
+    rep={'status':'PASS','cuda_active':True,'model_id':cfg['model']['id'],'revision':cfg['model']['revision'],'tokenizer_revision':cfg['model']['tokenizer_revision'],'quantization':cfg['model']['quantization'],'lora':cfg['model']['lora'],'trainable_parameter_count':trainable_count,'only_lora_trainable':True,'steps':vals,'post_step_positive_logit':ps,'post_step_negative_logit':ns,'save_reload_verified':True,'sanity_adapter_sha256':adapter_sha,**snap}
     atomic_json(root_path(cfg['outputs']['sanity_report']),rep); return rep
 
 def split_grouped(train,cfg):
@@ -102,13 +141,12 @@ def split_grouped(train,cfg):
     vg=set(ordered[:nval]); return [r for r in train if (r.get('split_group_key') or r['claim_family']) not in vg],[r for r in train if (r.get('split_group_key') or r['claim_family']) in vg]
 def checkpoint(st,opt,state,cfg):
     base=root_path(cfg['outputs']['checkpoints']); base.mkdir(parents=True,exist_ok=True); dst=base/f"checkpoint-step-{state['optimizer_step']:06d}"; tmp=base/(dst.name+'.tmp'); shutil.rmtree(tmp,ignore_errors=True); tmp.mkdir()
-    st[0].auto_model.save_pretrained(tmp/'adapter'); import torch; torch.save(opt.state_dict(),tmp/'optimizer.pt'); atomic_json(tmp/'trainer_state.json',state); (tmp/'COMPLETE').write_text('ok\n');
-    if dst.exists():
-        shutil.rmtree(dst)
+    _save_peft_adapter(st,tmp/'adapter'); import torch; torch.save(opt.state_dict(),tmp/'optimizer.pt'); atomic_json(tmp/'trainer_state.json',state); (tmp/'COMPLETE').write_text('ok\n')
+    if dst.exists(): shutil.rmtree(dst)
     os.replace(tmp,dst)
     return dst
 def latest_checkpoint(cfg):
-    base=root_path(cfg['outputs']['checkpoints']); cands=sorted([p for p in base.glob('checkpoint-step-*') if (p/'COMPLETE').exists()]) if base.exists() else []; return cands[-1] if cands else None
+    base=root_path(cfg['outputs']['checkpoints']); cands=sorted([p for p in base.glob('checkpoint-step-*') if (p/'COMPLETE').exists() and (p/'adapter'/'adapter_config.json').is_file()]) if base.exists() else []; return cands[-1] if cands else None
 
 def train_full(cfg,train):
     import torch
@@ -123,7 +161,7 @@ def train_full(cfg,train):
         if (micro+1)%accum==0 or micro+1==len(order):
             torch.nn.utils.clip_grad_norm_(params,float(cfg['training']['max_grad_norm'])); opt.step(); opt.zero_grad(set_to_none=True); state['optimizer_step']+=1
             if state['optimizer_step']%int(cfg['training']['checkpoint_every_optimizer_steps'])==0: checkpoint(st,opt,state,cfg)
-    state['epoch']=1; final_ck=checkpoint(st,opt,state,cfg); adapter=root_path(cfg['outputs']['adapter']); shutil.rmtree(adapter,ignore_errors=True); adapter.mkdir(parents=True,exist_ok=True); st[0].auto_model.save_pretrained(adapter); adapter_sha=sha256_tree(adapter)
+    state['epoch']=1; final_ck=checkpoint(st,opt,state,cfg); adapter=root_path(cfg['outputs']['adapter']); _save_peft_adapter(st,adapter); adapter_sha=sha256_tree(adapter)
     st.eval(); v=[]
     with torch.no_grad():
         for i,r in enumerate(val): v.append(float(loss_one(st,r,i,cfg)[0]))
