@@ -65,6 +65,27 @@ def _residual_map(cfg):
     return {str(r.get('query_id')): r for r in report.get('residual_failures', []) if r.get('query_id')}
 
 
+def _blind_row(row):
+    # Reviewer-facing representation intentionally excludes all model outcomes,
+    # ranks, lexical scores, and heuristic model-selection hints.
+    return {
+        'manual_review_priority': row['manual_review_priority'],
+        'query_id': row['query_id'],
+        'query': row['query'],
+        'canonical_claim': row['canonical_claim'],
+        'gold_document_id': row['gold_document_id'],
+        'exact_gold_chunk_ids': row['exact_gold_chunk_ids'],
+        'semantic_support_chunk_ids': row['semantic_support_chunk_ids'],
+        'missing_exact_gold_chunk_ids': row['missing_exact_gold_chunk_ids'],
+        'missing_semantic_support_chunk_ids': row['missing_semantic_support_chunk_ids'],
+        'document_mismatch_chunk_ids': row['document_mismatch_chunk_ids'],
+        'evidence_span': row['evidence_span'],
+        'support_previews': row['support_previews'],
+        'hard_integrity_flags': row['hard_integrity_flags'],
+        'provenance_alignment_flags': row['provenance_alignment_flags'],
+    }
+
+
 def audit(cfg):
     product_sha = verify_product_dev_sha(cfg)
     items = json.loads(root_path(cfg['data']['product_dev_v3']).read_text(encoding='utf-8'))
@@ -181,9 +202,13 @@ def audit(cfg):
     hard_flagged = [r for r in rows if r['hard_integrity_flags']]
     provenance_flagged = [r for r in rows if r['provenance_alignment_flags']]
     heuristic_flagged = [r for r in rows if r['heuristic_review_flags']]
-    queue = [r for r in rows if r['manual_review_priority']]
+    engineering_queue = [r for r in rows if r['manual_review_priority']]
     priority_order = {'P0_HARD_INTEGRITY': 0, 'P1_PROVENANCE_ALIGNMENT': 1, 'P2_HEURISTIC_REVIEW': 2}
-    queue.sort(key=lambda r: (priority_order[r['manual_review_priority']], not r['outside_top_50_after_adaptation'], r['query_id']))
+    engineering_queue.sort(key=lambda r: (priority_order[r['manual_review_priority']], not r['outside_top_50_after_adaptation'], r['query_id']))
+
+    # Blind queue is independent of model outcome and sorted only by audit priority + stable query id.
+    blind_queue = [_blind_row(r) for r in rows if r['manual_review_priority'] in {'P0_HARD_INTEGRITY', 'P1_PROVENANCE_ALIGNMENT'}]
+    blind_queue.sort(key=lambda r: (priority_order[r['manual_review_priority']], r['query_id']))
 
     score_state = 'PROVISIONAL_PENDING_QREL_ADJUDICATION' if (hard_flagged or provenance_flagged) else 'BENCHMARK_INTEGRITY_CHECK_PASSED'
     summary = {
@@ -191,9 +216,12 @@ def audit(cfg):
         'benchmark_sha256': product_sha,
         'n_items': len(items),
         'hard_integrity_flagged_n': len(hard_flagged),
+        'hard_integrity_query_ids': [r['query_id'] for r in hard_flagged],
         'provenance_alignment_flagged_n': len(provenance_flagged),
+        'provenance_alignment_query_ids': [r['query_id'] for r in provenance_flagged],
         'heuristic_review_flagged_n': len(heuristic_flagged),
-        'manual_review_queue_n': len(queue),
+        'engineering_review_queue_n': len(engineering_queue),
+        'blind_adjudication_queue_n': len(blind_queue),
         'hard_integrity_flag_counts': dict(sorted(hard_counts.items())),
         'provenance_alignment_flag_counts': dict(sorted(provenance_counts.items())),
         'heuristic_review_flag_counts': dict(sorted(heuristic_counts.items())),
@@ -201,30 +229,33 @@ def audit(cfg):
         'benchmark_mutated': False,
         'model_weights_loaded': False,
         'benchmark_rerun': False,
+        'reviewer_blinding': 'MODEL_OUTCOMES_AND_RANKS_EXCLUDED_FROM_BLIND_QUEUE',
         'interpretation': (
             'Hard integrity flags are deterministic missing-ID or document-consistency defects. '
             'Provenance-alignment flags require human adjudication because a non-matching evidence span may reflect truncation, paraphrase, or an incorrect qrel. '
-            'Heuristic flags are triage only and are never automatic invalidation.'
+            'Heuristic flags are engineering triage only and are excluded from mandatory blind adjudication unless promoted by a reviewer.'
         ),
     }
 
     out_root = root_path(cfg['outputs']['root'])
     atomic_json(out_root / 'product_dev_v3_qrel_integrity_audit.json', {'summary': summary, 'items': rows})
-    atomic_json(out_root / 'product_dev_v3_qrel_review_queue.json', {'summary': summary, 'review_queue': queue})
+    atomic_json(out_root / 'product_dev_v3_qrel_review_queue.json', {'summary': summary, 'review_queue': engineering_queue})
+    atomic_json(out_root / 'product_dev_v3_qrel_review_queue_blind.json', {'summary': summary, 'review_queue': blind_queue})
 
-    csv_path = out_root / 'product_dev_v3_qrel_review_queue.csv'
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-    with csv_path.open('w', encoding='utf-8-sig', newline='') as f:
+    # Engineering queue may contain model outcomes for diagnosis only. Do not use it for blinded qrel adjudication.
+    engineering_csv = out_root / 'product_dev_v3_qrel_review_queue.csv'
+    engineering_csv.parent.mkdir(parents=True, exist_ok=True)
+    with engineering_csv.open('w', encoding='utf-8-sig', newline='') as f:
         fields = [
             'manual_review_priority','query_id','outside_top_50_after_adaptation','retrieval_residual_rank',
             'query','canonical_claim','gold_document_id','exact_gold_chunk_ids','semantic_support_chunk_ids',
             'missing_exact_gold_chunk_ids','missing_semantic_support_chunk_ids','document_mismatch_chunk_ids',
             'evidence_span','hard_integrity_flags','provenance_alignment_flags','heuristic_review_flags',
-            'best_same_document_chunk_id','best_same_document_score','review_decision','reviewer','review_notes'
+            'best_same_document_chunk_id','best_same_document_score'
         ]
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
-        for r in queue:
+        for r in engineering_queue:
             best = r.get('best_same_document_claim_match') or {}
             w.writerow({
                 'manual_review_priority': r['manual_review_priority'],
@@ -245,7 +276,41 @@ def audit(cfg):
                 'heuristic_review_flags': ';'.join(r['heuristic_review_flags']),
                 'best_same_document_chunk_id': best.get('chunk_id'),
                 'best_same_document_score': best.get('score'),
+            })
+
+    # Reviewer-facing queue deliberately excludes adaptation result, residual rank, lexical scores, and suggested alternatives.
+    blind_csv = out_root / 'product_dev_v3_qrel_review_queue_blind.csv'
+    with blind_csv.open('w', encoding='utf-8-sig', newline='') as f:
+        fields = [
+            'manual_review_priority','query_id','query','canonical_claim','gold_document_id',
+            'exact_gold_chunk_ids','semantic_support_chunk_ids','missing_exact_gold_chunk_ids',
+            'missing_semantic_support_chunk_ids','document_mismatch_chunk_ids','evidence_span',
+            'support_previews','hard_integrity_flags','provenance_alignment_flags',
+            'review_decision','correct_exact_gold_chunk_ids','correct_semantic_support_chunk_ids',
+            'correct_evidence_span','reviewer','review_notes'
+        ]
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for r in blind_queue:
+            w.writerow({
+                'manual_review_priority': r['manual_review_priority'],
+                'query_id': r['query_id'],
+                'query': r['query'],
+                'canonical_claim': r['canonical_claim'],
+                'gold_document_id': r['gold_document_id'],
+                'exact_gold_chunk_ids': ';'.join(r['exact_gold_chunk_ids']),
+                'semantic_support_chunk_ids': ';'.join(r['semantic_support_chunk_ids']),
+                'missing_exact_gold_chunk_ids': ';'.join(r['missing_exact_gold_chunk_ids']),
+                'missing_semantic_support_chunk_ids': ';'.join(r['missing_semantic_support_chunk_ids']),
+                'document_mismatch_chunk_ids': ';'.join(r['document_mismatch_chunk_ids']),
+                'evidence_span': r['evidence_span'],
+                'support_previews': json.dumps(r['support_previews'], ensure_ascii=False),
+                'hard_integrity_flags': ';'.join(r['hard_integrity_flags']),
+                'provenance_alignment_flags': ';'.join(r['provenance_alignment_flags']),
                 'review_decision': '',
+                'correct_exact_gold_chunk_ids': '',
+                'correct_semantic_support_chunk_ids': '',
+                'correct_evidence_span': '',
                 'reviewer': '',
                 'review_notes': '',
             })
@@ -257,11 +322,13 @@ def audit(cfg):
         f"- Hard-integrity flagged: {len(hard_flagged)}",
         f"- Provenance-alignment flagged: {len(provenance_flagged)}",
         f"- Heuristic-review flagged: {len(heuristic_flagged)}",
-        f"- Manual-review queue: {len(queue)}",
+        f"- Engineering queue: {len(engineering_queue)}",
+        f"- Blind mandatory adjudication queue: {len(blind_queue)}",
         f"- Score interpretation: **{score_state}**",
         '- Benchmark mutated: **No**',
         '- Model weights loaded: **No**',
-        '- Benchmark rerun: **No**', '',
+        '- Benchmark rerun: **No**',
+        '- Reviewer blinding: **model outcomes/ranks excluded from blind queue**', '',
         '## Hard integrity flags', ''
     ]
     if hard_counts:
@@ -273,7 +340,7 @@ def audit(cfg):
         md.extend(f'- {k}: {v}' for k, v in sorted(provenance_counts.items()))
     else:
         md.append('- None')
-    md += ['', '## Heuristic manual-review flags', '']
+    md += ['', '## Heuristic engineering-triage flags', '']
     if heuristic_counts:
         md.extend(f'- {k}: {v}' for k, v in sorted(heuristic_counts.items()))
     else:
@@ -281,8 +348,9 @@ def audit(cfg):
     md += [
         '', '## Scientific interpretation', '',
         '- Missing qrel chunk IDs and document-ID inconsistencies are hard integrity defects.',
-        '- Evidence-span alignment failures require manual adjudication; they are not automatically invalid qrels.',
-        '- Lexical heuristics are triage only; they do not authorize relabeling.',
+        '- Evidence-span alignment failures require blind manual adjudication; they are not automatically invalid qrels.',
+        '- Lexical heuristics are engineering triage only; they do not authorize relabeling.',
+        '- Use `product_dev_v3_qrel_review_queue_blind.csv` for human adjudication, not the engineering queue.',
         '- Do not use PRODUCT_DEV_V3 items for training.',
         '- Do not rerun adaptation or advance to reranker until benchmark adjudication is complete and retrieval gate validity is restored.',
         ''
