@@ -46,7 +46,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Hypertension can be defined using specific systolic and diastolic blood pressure...' defines context but does NOT mention correct option 'Amlodipine 5 mg once daily'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0002",
@@ -87,7 +91,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Hypertension can be divided into two major categories: essential (or primary) hy...' defines context but does NOT mention correct option 'Plasma aldosterone-to-renin ratio'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0003",
@@ -128,7 +136,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Although several countries and professional societies have guidelines on the top...' defines context but does NOT mention correct option 'Add a calcium channel blocker (e.g. amlodipine 5 mg daily)'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0004",
@@ -169,7 +181,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Several clinical risk scores have been developed to assess stroke risk in patien...' defines context but does NOT mention correct option 'Direct-acting oral anticoagulant (DOAC, e.g. apixaban)'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0005",
@@ -210,7 +226,12 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Commonly used medications for rate control include atrio-ventricular (AV) nodal ...' defines context but does NOT mention correct option 'Bisoprolol'",
+        "AUTHORITY_MISMATCH: Stem cites NICE guideline, but evidence is drawn from DOC-PMC-CARD-0008 without NICE authority binding."
+      ]
     },
     {
       "question_id": "PLAB-CARD-0006",
@@ -238,7 +259,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation": "Smoking and excessive alcohol consumption both adversely affect AF outcomes and significantly increase the risk of post-ablation AF recurrence. Comprehensive lifestyle intervention and risk factor modification—including smoking cessation, limiting alcohol intake, weight loss, and screening for obstructive sleep apnea—are essential components of holistic AF management. Extreme exercise (high-intensity training) can actually trigger AF, and routine caffeine avoidance has not been shown to reduce AF recurrence.",
+      "explanation": "Smoking and excessive alcohol consumption both adversely affect AF outcomes and significantly increase the risk of post-ablation AF recurrence. Comprehensive lifestyle intervention and risk factor modification\u2014including smoking cessation, limiting alcohol intake, weight loss, and screening for obstructive sleep apnea\u2014are essential components of holistic AF management. Extreme exercise (high-intensity training) can actually trigger AF, and routine caffeine avoidance has not been shown to reduce AF recurrence.",
       "specialty": "Cardiology",
       "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
       "learning_objective": "Recognize the critical role of lifestyle intervention (smoking cessation and alcohol reduction) in reducing AF recurrence.",
@@ -251,7 +272,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0007",
@@ -292,7 +315,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0008",
@@ -333,7 +358,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Distinguishing between the cardiac and non-cardiac causes of syncope is critical...' defines context but does NOT mention correct option 'Admit or urgently refer for specialist cardiovascular evaluation with telemetry/echocardiography'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0009",
@@ -374,7 +403,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-RESP-0001",
@@ -382,11 +413,11 @@
       "choices": [
         {
           "id": "A",
-          "text": "Target SpO2 94–98% using 15 L/min via a non-rebreather mask"
+          "text": "Target SpO2 94\u201398% using 15 L/min via a non-rebreather mask"
         },
         {
           "id": "B",
-          "text": "Target SpO2 98–100% using high-flow nasal cannula"
+          "text": "Target SpO2 98\u2013100% using high-flow nasal cannula"
         },
         {
           "id": "C",
@@ -394,15 +425,15 @@
         },
         {
           "id": "D",
-          "text": "Target SpO2 80–84% to avoid respiratory drive depression"
+          "text": "Target SpO2 80\u201384% to avoid respiratory drive depression"
         },
         {
           "id": "E",
-          "text": "Target SpO2 88–92% using a 28% or 24% Venturi mask"
+          "text": "Target SpO2 88\u201392% using a 28% or 24% Venturi mask"
         }
       ],
       "correct_answer": "E",
-      "explanation": "In acute exacerbations of COPD, particularly when the patient is at risk of hypercapnic respiratory failure (demonstrated by PaCO2 6.8 kPa with baseline metabolic compensation), controlled oxygen therapy targeting an SpO2 of 88–92% via a 24% or 28% Venturi mask is mandatory under NICE NG115 and BTS guidelines. Uncontrolled high-concentration oxygen (e.g. 15 L non-rebreather mask targeting 94–98%) worsens ventilation-perfusion mismatch and abolishes hypoxic pulmonary vasoconstriction, leading to severe hypercapnia and narcosis.",
+      "explanation": "In acute exacerbations of COPD, particularly when the patient is at risk of hypercapnic respiratory failure (demonstrated by PaCO2 6.8 kPa with baseline metabolic compensation), controlled oxygen therapy targeting an SpO2 of 88\u201392% via a 24% or 28% Venturi mask is mandatory under NICE NG115 and BTS guidelines. Uncontrolled high-concentration oxygen (e.g. 15 L non-rebreather mask targeting 94\u201398%) worsens ventilation-perfusion mismatch and abolishes hypoxic pulmonary vasoconstriction, leading to severe hypercapnia and narcosis.",
       "specialty": "Respiratory Medicine",
       "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
       "learning_objective": "Identify controlled oxygen target (88-92%) in acute COPD exacerbations with hypercapnic respiratory failure.",
@@ -415,7 +446,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Preventing and managing exacerbations is crucial in COPD care to reduce disease ...' defines context but does NOT mention correct option 'Target SpO2 88\u201392% using a 28% or 24% Venturi mask'"
+      ]
     },
     {
       "question_id": "PLAB-RESP-0002",
@@ -456,7 +491,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "AUTHORITY_MISMATCH: Stem cites NICE guideline, but evidence is drawn from DOC-PMC-RESP-0003 without NICE authority binding."
+      ]
     },
     {
       "question_id": "PLAB-RESP-0003",
@@ -493,11 +532,15 @@
         {
           "ref": "DOC-PMC-RESP-0003-B0010-C01",
           "document_id": "DOC-PMC-RESP-0003",
-          "quote": "Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition’s heterogeneity"
+          "quote": "Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition\u2019s heterogeneity"
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Some patients exhibit neutrophilic inflammation, while others display eosinophil...' defines context but does NOT mention correct option 'Escalate to triple therapy by adding an inhaled corticosteroid (ICS) to his LABA/LAMA'"
+      ]
     },
     {
       "question_id": "PLAB-EMERG-0001",
@@ -525,7 +568,7 @@
         }
       ],
       "correct_answer": "C",
-      "explanation": "In the RCUK Adult Advanced Life Support algorithm for shockable rhythms (VF/pVT), after the 3rd shock, the resuscitation team administers adrenaline 1 mg IV and amiodarone 300 mg IV during the subsequent 2 minutes of CPR. Adrenaline is then repeated every alternate cycle (every 3–5 minutes), and a second dose of amiodarone (150 mg IV) is given after the 5th shock. Atropine is no longer used in cardiac arrest protocols.",
+      "explanation": "In the RCUK Adult Advanced Life Support algorithm for shockable rhythms (VF/pVT), after the 3rd shock, the resuscitation team administers adrenaline 1 mg IV and amiodarone 300 mg IV during the subsequent 2 minutes of CPR. Adrenaline is then repeated every alternate cycle (every 3\u20135 minutes), and a second dose of amiodarone (150 mg IV) is given after the 5th shock. Atropine is no longer used in cardiac arrest protocols.",
       "specialty": "Emergency Medicine",
       "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
       "learning_objective": "Recall medication administration timing in the RCUK ALS shockable algorithm (adrenaline 1mg and amiodarone 300mg post-3rd shock).",
@@ -538,7 +581,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Cardiopulmonary resuscitation (CPR) stands as a cornerstone in emergency care, r...' defines context but does NOT mention correct option 'Adrenaline 1 mg IV and Amiodarone 300 mg IV'"
+      ]
     },
     {
       "question_id": "PLAB-EMERG-0002",
@@ -546,19 +593,19 @@
       "choices": [
         {
           "id": "A",
-          "text": "Compression rate of 80–90 per minute and depth of 3–4 cm to minimize rib fractures"
+          "text": "Compression rate of 80\u201390 per minute and depth of 3\u20134 cm to minimize rib fractures"
         },
         {
           "id": "B",
-          "text": "Compression rate of 140–160 per minute with partial recoil to maintain coronary perfusion"
+          "text": "Compression rate of 140\u2013160 per minute with partial recoil to maintain coronary perfusion"
         },
         {
           "id": "C",
-          "text": "Compression depth of 7–8 cm with continuous manual pressure between compressions"
+          "text": "Compression depth of 7\u20138 cm with continuous manual pressure between compressions"
         },
         {
           "id": "D",
-          "text": "Compression rate of 100–120 per minute and depth of 5–6 cm with complete chest recoil"
+          "text": "Compression rate of 100\u2013120 per minute and depth of 5\u20136 cm with complete chest recoil"
         },
         {
           "id": "E",
@@ -566,7 +613,7 @@
         }
       ],
       "correct_answer": "D",
-      "explanation": "High-quality CPR requires a chest compression rate of 100–120 compressions per minute, a compression depth of 5–6 cm in adults, complete chest recoil after each compression, and minimization of interruptions in compressions. Leaning on the chest between compressions prevents complete recoil and significantly diminishes venous return and coronary perfusion pressure.",
+      "explanation": "High-quality CPR requires a chest compression rate of 100\u2013120 compressions per minute, a compression depth of 5\u20136 cm in adults, complete chest recoil after each compression, and minimization of interruptions in compressions. Leaning on the chest between compressions prevents complete recoil and significantly diminishes venous return and coronary perfusion pressure.",
       "specialty": "Emergency Medicine",
       "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
       "learning_objective": "Identify high-quality CPR metrics (rate 100-120/min, depth 5-6 cm, complete recoil) per RCUK guidelines.",
@@ -575,11 +622,15 @@
         {
           "ref": "DOC-PMC-EMERG-0001-B0002-C01",
           "document_id": "DOC-PMC-EMERG-0001",
-          "quote": "Effective CPR is an arduous task that requires skill, precision, and quick decision making—it is a stressful task per se."
+          "quote": "Effective CPR is an arduous task that requires skill, precision, and quick decision making\u2014it is a stressful task per se."
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Effective CPR is an arduous task that requires skill, precision, and quick decis...' defines context but does NOT mention correct option 'Compression rate of 100\u2013120 per minute and depth of 5\u20136 cm with complete chest recoil'"
+      ]
     },
     {
       "question_id": "PLAB-EMERG-0003",
@@ -587,15 +638,15 @@
       "choices": [
         {
           "id": "A",
-          "text": "Rapid induction of profound hypothermia targeting 28–30 °C"
+          "text": "Rapid induction of profound hypothermia targeting 28\u201330 \u00b0C"
         },
         {
           "id": "B",
-          "text": "Routine rewarming to 38.5–39.0 °C to promote cerebral metabolism"
+          "text": "Routine rewarming to 38.5\u201339.0 \u00b0C to promote cerebral metabolism"
         },
         {
           "id": "C",
-          "text": "Permissive hyperthermia up to 39.5 °C for 72 hours"
+          "text": "Permissive hyperthermia up to 39.5 \u00b0C for 72 hours"
         },
         {
           "id": "D",
@@ -603,11 +654,11 @@
         },
         {
           "id": "E",
-          "text": "Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 °C)"
+          "text": "Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 \u00b0C)"
         }
       ],
       "correct_answer": "E",
-      "explanation": "Post-resuscitation care plays a crucial role in neurological outcome and recovery. Current RCUK and international guidelines recommend targeted temperature management (TTM) for comatose adult patients after ROSC, with the primary objective of actively preventing fever (temperature >37.7 °C) for at least 72 hours, maintaining normothermia (36.0–37.5 °C). Fever post-cardiac arrest is strongly associated with exacerbated cerebral injury and poor functional outcome.",
+      "explanation": "Post-resuscitation care plays a crucial role in neurological outcome and recovery. Current RCUK and international guidelines recommend targeted temperature management (TTM) for comatose adult patients after ROSC, with the primary objective of actively preventing fever (temperature >37.7 \u00b0C) for at least 72 hours, maintaining normothermia (36.0\u201337.5 \u00b0C). Fever post-cardiac arrest is strongly associated with exacerbated cerebral injury and poor functional outcome.",
       "specialty": "Emergency Medicine",
       "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
       "learning_objective": "Outline post-resuscitation targeted temperature management principles to prevent post-arrest hyperthermia.",
@@ -620,7 +671,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Post-resuscitation care plays a crucial role in neurological outcome and overall...' defines context but does NOT mention correct option 'Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 \u00b0C)'"
+      ]
     },
     {
       "question_id": "PLAB-RESP-0004",
@@ -661,7 +716,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-RESP-0005",
@@ -702,7 +759,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'The incidence of primary spontaneous pneumothorax (PSP) admissions is 14.1 per 1...' defines context but does NOT mention correct option 'Cigarette smoking and subpleural apical blebs/bullae'"
+      ]
     },
     {
       "question_id": "PLAB-RESP-0006",
@@ -743,7 +804,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-RESP-0007",
@@ -784,7 +847,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-RESP-0008",
@@ -792,11 +857,11 @@
       "choices": [
         {
           "id": "A",
-          "text": "Tidal volume 10–12 mL/kg actual body weight and plateau pressure < 45 cmH2O"
+          "text": "Tidal volume 10\u201312 mL/kg actual body weight and plateau pressure < 45 cmH2O"
         },
         {
           "id": "B",
-          "text": "Tidal volume 8–10 mL/kg predicted body weight without PEEP"
+          "text": "Tidal volume 8\u201310 mL/kg predicted body weight without PEEP"
         },
         {
           "id": "C",
@@ -808,11 +873,11 @@
         },
         {
           "id": "E",
-          "text": "Tidal volume 4–6 mL/kg predicted body weight and plateau pressure < 30 cmH2O"
+          "text": "Tidal volume 4\u20136 mL/kg predicted body weight and plateau pressure < 30 cmH2O"
         }
       ],
       "correct_answer": "E",
-      "explanation": "Lung-protective ventilation is the cornerstone of ARDS management to minimize ventilator-induced lung injury (volutrauma and barotrauma). Standard guidelines mandate low tidal volume ventilation (4–6 mL/kg predicted body weight, or <=6 mL/kg PBW) and limitation of end-inspiratory plateau pressure to <30 cmH2O. High tidal volumes (10–12 mL/kg) significantly increase mortality in ARDS.",
+      "explanation": "Lung-protective ventilation is the cornerstone of ARDS management to minimize ventilator-induced lung injury (volutrauma and barotrauma). Standard guidelines mandate low tidal volume ventilation (4\u20136 mL/kg predicted body weight, or <=6 mL/kg PBW) and limitation of end-inspiratory plateau pressure to <30 cmH2O. High tidal volumes (10\u201312 mL/kg) significantly increase mortality in ARDS.",
       "specialty": "Respiratory Medicine",
       "topic": "Acute Respiratory Distress Syndrome (ARDS)",
       "learning_objective": "Identify low tidal volume (4-6 mL/kg PBW) and plateau pressure (<30 cmH2O) targets in ARDS lung-protective ventilation.",
@@ -821,11 +886,15 @@
         {
           "ref": "DOC-PMC-RESP-0005-B0027-C01",
           "document_id": "DOC-PMC-RESP-0005",
-          "quote": "In moderate–severe ARDS patients, respiratory management is similar for ARDS from all causes including COVID-19 ( Figure 2 ) [ 26 , 40 , 48 , 75 , 79 , 91 ]."
+          "quote": "In moderate\u2013severe ARDS patients, respiratory management is similar for ARDS from all causes including COVID-19 ( Figure 2 ) [ 26 , 40 , 48 , 75 , 79 , 91 ]."
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'In moderate\u2013severe ARDS patients, respiratory management is similar for ARDS fro...' defines context but does NOT mention correct option 'Tidal volume 4\u20136 mL/kg predicted body weight and plateau pressure < 30 cmH2O'"
+      ]
     },
     {
       "question_id": "PLAB-RESP-0009",
@@ -866,7 +935,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0010",
@@ -907,7 +978,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Indications: First-line vasopressor in cardiogenic shock...' defines context but does NOT mention correct option 'Norepinephrine (noradrenaline)'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0011",
@@ -948,11 +1023,15 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Indications: First-line inotropic agent in cardiogenic shock...' defines context but does NOT mention correct option 'Dobutamine'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0012",
-      "stem": "A 62-year-old man presents to the emergency department with 2 hours of crushing central retrosternal chest pain, diaphoresis, and acute pulmonary edema. His ECG reveals acute ST-elevation in leads V1–V6. He is hypotensive with blood pressure 78/50 mmHg and cold extremities, consistent with cardiogenic shock complicating acute myocardial infarction (AMI). Which of the following therapeutic interventions has the strongest evidence for improving survival in AMI-induced cardiogenic shock?",
+      "stem": "A 62-year-old man presents to the emergency department with 2 hours of crushing central retrosternal chest pain, diaphoresis, and acute pulmonary edema. His ECG reveals acute ST-elevation in leads V1\u2013V6. He is hypotensive with blood pressure 78/50 mmHg and cold extremities, consistent with cardiogenic shock complicating acute myocardial infarction (AMI). Which of the following therapeutic interventions has the strongest evidence for improving survival in AMI-induced cardiogenic shock?",
       "choices": [
         {
           "id": "A",
@@ -989,7 +1068,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0013",
@@ -1030,7 +1111,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0014",
@@ -1071,7 +1154,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0015",
@@ -1112,7 +1197,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0016",
@@ -1140,7 +1227,7 @@
         }
       ],
       "correct_answer": "C",
-      "explanation": "This patient has severe bradycardia with adverse features (syncope, hypotension 88/54 mmHg, diaphoresis). The RCUK bradycardia algorithm dictates immediate administration of atropine 500 mcg IV (repeatable every 3–5 minutes to a maximum of 3 mg). If atropine is ineffective, second-line options include transcutaneous pacing or an inotrope/chronotrope infusion (isoprenaline or adrenaline). Adenosine, beta-blockers, and verapamil further suppress AV conduction and are contraindicated.",
+      "explanation": "This patient has severe bradycardia with adverse features (syncope, hypotension 88/54 mmHg, diaphoresis). The RCUK bradycardia algorithm dictates immediate administration of atropine 500 mcg IV (repeatable every 3\u20135 minutes to a maximum of 3 mg). If atropine is ineffective, second-line options include transcutaneous pacing or an inotrope/chronotrope infusion (isoprenaline or adrenaline). Adenosine, beta-blockers, and verapamil further suppress AV conduction and are contraindicated.",
       "specialty": "Cardiology",
       "topic": "Bradyarrhythmias & Conduction Blocks",
       "learning_objective": "Apply the RCUK bradycardia algorithm: administer atropine 500 mcg IV for symptomatic bradycardia with adverse features.",
@@ -1153,7 +1240,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Implantable cardiac devices are at the forefront of managing tachy-arrhythmias, ...' defines context but does NOT mention correct option 'Atropine 500 mcg IV'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0017",
@@ -1181,7 +1272,7 @@
         }
       ],
       "correct_answer": "D",
-      "explanation": "Right ventricular apical pacing (RVAP) induces an artificial left bundle branch block activation pattern, causing ventricular dyssynchrony, asymmetrical hypertrophy, and impaired left ventricular systolic function, termed pacing-induced cardiomyopathy. This occurs in 10–20% of patients with high percentages of RV apical pacing, prompting the development of physiological conduction system pacing techniques.",
+      "explanation": "Right ventricular apical pacing (RVAP) induces an artificial left bundle branch block activation pattern, causing ventricular dyssynchrony, asymmetrical hypertrophy, and impaired left ventricular systolic function, termed pacing-induced cardiomyopathy. This occurs in 10\u201320% of patients with high percentages of RV apical pacing, prompting the development of physiological conduction system pacing techniques.",
       "specialty": "Cardiology",
       "topic": "Bradyarrhythmias & Conduction Blocks",
       "learning_objective": "Identify pacing-induced cardiomyopathy and ventricular dyssynchrony as potential complications of RV apical pacing.",
@@ -1194,7 +1285,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0018",
@@ -1235,7 +1328,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0019",
@@ -1263,7 +1358,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation": "Aortic stenosis (AS) is the most common degenerative valvular disease in elderly individuals (affecting 10–15% over 80 years). The classic clinical triad consists of exertional dyspnea, angina, and syncope. Physical signs of severe AS include a slow-rising pulse (pulsus parvus et tardus), an ejection systolic murmur radiating to the carotids, and a soft or absent A2 component of S2.",
+      "explanation": "Aortic stenosis (AS) is the most common degenerative valvular disease in elderly individuals (affecting 10\u201315% over 80 years). The classic clinical triad consists of exertional dyspnea, angina, and syncope. Physical signs of severe AS include a slow-rising pulse (pulsus parvus et tardus), an ejection systolic murmur radiating to the carotids, and a soft or absent A2 component of S2.",
       "specialty": "Cardiology",
       "topic": "Aortic Stenosis (Valvular Heart Disease)",
       "learning_objective": "Diagnose severe aortic stenosis from classic physical examination findings (slow-rising pulse, murmur radiating to carotids).",
@@ -1276,7 +1371,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0020",
@@ -1313,11 +1410,13 @@
         {
           "ref": "DOC-PMC-CARD-0013-B0002-C01",
           "document_id": "DOC-PMC-CARD-0013",
-          "quote": "Aortic stenosis (AS) is a relevant entity in daily practice due to several factors. It is the most common heart valve disease in developed nations [ 1 ], with an increased occurrence in the elderly (10–15% of individuals over 80 years of age)"
+          "quote": "Aortic stenosis (AS) is a relevant entity in daily practice due to several factors. It is the most common heart valve disease in developed nations [ 1 ], with an increased occurrence in the elderly (10\u201315% of individuals over 80 years of age)"
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0021",
@@ -1358,7 +1457,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Regarding transcatheter aortic valve replacement (TAVR), CT is the reference tec...' defines context but does NOT mention correct option 'Multidetector computed tomography (MDCT)'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0022",
@@ -1399,7 +1502,11 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'The optimal surgical approach for the treatment of FMR remains a controversial t...' defines context but does NOT mention correct option 'FMR is caused by left ventricular remodeling and papillary muscle displacement with structurally normal leaflets'"
+      ]
     },
     {
       "question_id": "PLAB-CARD-0023",
@@ -1440,7 +1547,9 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "EVIDENCE_VERIFIED",
+      "repair_notes": []
     },
     {
       "question_id": "PLAB-CARD-0024",
@@ -1468,7 +1577,7 @@
         }
       ],
       "correct_answer": "A",
-      "explanation": "The major limitation of restrictive mitral valve annuloplasty repair in functional mitral regurgitation is a significant rate of recurrent mitral regurgitation (observed in up to 30–50% of patients within 2 years in randomized CTSN trials), primarily driven by ongoing left ventricular remodeling and progressive leaflet tethering. Despite this risk, repair avoids prosthetic valve-related complications and has been associated with favorable operative recovery in selected cohorts.",
+      "explanation": "The major limitation of restrictive mitral valve annuloplasty repair in functional mitral regurgitation is a significant rate of recurrent mitral regurgitation (observed in up to 30\u201350% of patients within 2 years in randomized CTSN trials), primarily driven by ongoing left ventricular remodeling and progressive leaflet tethering. Despite this risk, repair avoids prosthetic valve-related complications and has been associated with favorable operative recovery in selected cohorts.",
       "specialty": "Cardiology",
       "topic": "Functional Mitral Regurgitation",
       "learning_objective": "Recognize recurrent mitral regurgitation as the primary long-term challenge of annuloplasty repair in functional MR.",
@@ -1481,7 +1590,18 @@
         }
       ],
       "status": "needs_review",
-      "schema_version": "plab-question-v1"
+      "schema_version": "plab-question-v1",
+      "evidence_verification_status": "NEEDS_SOURCE_REPAIR",
+      "repair_notes": []
     }
-  ]
+  ],
+  "repair_audit": {
+    "total_audited": 36,
+    "status_counts": {
+      "EVIDENCE_VERIFIED": 7,
+      "NEEDS_SOURCE_REPAIR": 29,
+      "REJECTED": 0
+    },
+    "audited_at": "2026-09-11"
+  }
 }

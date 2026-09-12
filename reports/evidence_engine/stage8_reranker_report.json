@@ -1,0 +1,1734 @@
+{
+  "benchmark": "PRODUCT_DEV_V2",
+  "benchmark_file": "evaluation\\evidence_engine\\product_dev_v2.json",
+  "n_queries": 120,
+  "reranker_model": "Qwen/Qwen3-Reranker-4B",
+  "reranker_revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+  "quantization": "bitsandbytes 4-bit NF4, double quant, float16 compute",
+  "evaluation_timestamp": "2026-09-11T12:12:47Z",
+  "scoring_elapsed_seconds": 962.33,
+  "mean_query_scoring_ms": 8019.4,
+  "metrics": {
+    "passage_hit_at_1": {
+      "count": 24,
+      "total": 120,
+      "rate": 0.2,
+      "pct": "20.00%",
+      "ci_95_wilson": [
+        0.1382,
+        0.2804
+      ]
+    },
+    "passage_hit_at_3": {
+      "count": 44,
+      "total": 120,
+      "rate": 0.36666666666666664,
+      "pct": "36.67%",
+      "ci_95_wilson": [
+        0.2858,
+        0.4558
+      ]
+    },
+    "passage_hit_at_5": {
+      "count": 62,
+      "total": 120,
+      "rate": 0.5166666666666667,
+      "pct": "51.67%",
+      "ci_95_wilson": [
+        0.4281,
+        0.6042
+      ]
+    },
+    "mrr": 0.3362,
+    "ndcg_at_10": 0.5045
+  },
+  "gates": {
+    "STAGE_8_STRUCTURED_RERANKER_GATE": {
+      "passage_hit_at_1": {
+        "count": 24,
+        "total": 120,
+        "rate": 0.2,
+        "pct": "20.00%",
+        "ci_95_wilson": [
+          0.1382,
+          0.2804
+        ]
+      },
+      "target_hit_at_1": 0.9,
+      "passed": false
+    }
+  },
+  "per_item_results": [
+    {
+      "query_id": "PRD-DEV2-0001",
+      "top1_chunk_id": "DOC-PMC-RENAL-0008-B-C0226",
+      "top1_score": -2.0625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0005",
+        "DOC-PMC-RENAL-0001-B-C0009"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0002",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0001",
+      "top1_score": 1.75,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0007",
+        "DOC-PMC-RENAL-0001-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0003",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0175",
+      "top1_score": 1.890625,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0007",
+        "DOC-PMC-RENAL-0001-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0004",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0008",
+      "top1_score": 3.609375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0005",
+        "DOC-PMC-RENAL-0001-B-C0009"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0005",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0001",
+      "top1_score": 3.5078125,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0011",
+        "DOC-PMC-RENAL-0001-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0006",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0015",
+      "top1_score": 7.984375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0005",
+        "DOC-PMC-RENAL-0001-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0007",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 4.2890625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0014",
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0009"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0008",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0015",
+      "top1_score": 5.5546875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0015",
+        "DOC-PMC-RENAL-0001-B-C0005",
+        "DOC-PMC-RENAL-0001-B-C0001"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0009",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0003",
+      "top1_score": 3.21875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0009",
+        "DOC-PMC-RENAL-0001-B-C0013",
+        "DOC-PMC-RENAL-0001-B-C0017"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0010",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0018",
+      "top1_score": 4.390625,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0018",
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0011",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 5.796875,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0009",
+        "DOC-PMC-RENAL-0001-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0012",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 3.9375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0005",
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0025"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0013",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0015",
+      "top1_score": 3.4609375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0001-B-C0001",
+        "DOC-PMC-RENAL-0001-B-C0026",
+        "DOC-PMC-RENAL-0001-B-C0009"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0014",
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": -1.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0003",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0015",
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": -1.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0016",
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": -1.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0007"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0017",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 7.25,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0018",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 7.25,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0019",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0043",
+      "top1_score": 6.1015625,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0007"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0020",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 7.5078125,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0021",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 6.3359375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0017",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0007"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0022",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 6.3359375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 5,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0018",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0023",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0020",
+      "top1_score": 5.859375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0020"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0024",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 6.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 11,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0021"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0025",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0025",
+      "top1_score": 3.1484375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0025",
+        "DOC-PMC-RENAL-0002-B-C0008"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0026",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0025",
+      "top1_score": 3.1484375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0026"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0027",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 7.6171875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 5,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0028",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0028",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 7.6171875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0030",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0020"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0029",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0045",
+      "top1_score": 3.34375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0032"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0030",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0045",
+      "top1_score": 3.34375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 5,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0033"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0031",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 6.6171875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0035",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0032",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0038",
+      "top1_score": 2.6796875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0003",
+        "DOC-PMC-RENAL-0002-B-C0037",
+        "DOC-PMC-RENAL-0002-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0033",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0038",
+      "top1_score": 2.6796875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0038",
+        "DOC-PMC-RENAL-0002-B-C0008"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0034",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 7.171875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 11,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0040"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0035",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 7.171875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0041",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0036",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0043"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0037",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0047"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0038",
+      "top1_chunk_id": "DOC-PMC-RENAL-0021-B-C0015",
+      "top1_score": -0.640625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0003",
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0048"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0039",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 6.65625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0007",
+        "DOC-PMC-RENAL-0002-B-C0053"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0040",
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 6.65625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 9,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0055",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0041",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0056",
+      "top1_score": 1.8125,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0005",
+        "DOC-PMC-RENAL-0002-B-C0056",
+        "DOC-PMC-RENAL-0002-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0042",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0043",
+      "top1_score": 6.953125,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0057",
+        "DOC-PMC-RENAL-0002-B-C0011",
+        "DOC-PMC-RENAL-0002-B-C0007"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0043",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0088",
+      "top1_score": 3.34375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0088",
+        "DOC-PMC-RENAL-0002-B-C0020",
+        "DOC-PMC-RENAL-0002-B-C0021"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0044",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0043",
+      "top1_score": 5.84375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0089",
+        "DOC-PMC-RENAL-0002-B-C0017",
+        "DOC-PMC-RENAL-0002-B-C0007"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0045",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0026",
+      "top1_score": 1.390625,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0017",
+        "DOC-PMC-RENAL-0002-B-C0008",
+        "DOC-PMC-RENAL-0002-B-C0090"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0046",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0024",
+      "top1_score": -0.125,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0006",
+        "DOC-PMC-RENAL-0002-B-C0093",
+        "DOC-PMC-RENAL-0002-B-C0008"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0047",
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0095",
+      "top1_score": 1.15625,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0002-B-C0095",
+        "DOC-PMC-RENAL-0002-B-C0020",
+        "DOC-PMC-RENAL-0002-B-C0021"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0048",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 6.71875,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0017",
+        "DOC-PMC-RENAL-0003-B-C0014",
+        "DOC-PMC-RENAL-0003-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0049",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0010",
+      "top1_score": 6.4140625,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0011",
+        "DOC-PMC-RENAL-0003-B-C0010",
+        "DOC-PMC-RENAL-0003-B-C0012"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0050",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 7.0234375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0011",
+        "DOC-PMC-RENAL-0003-B-C0010",
+        "DOC-PMC-RENAL-0003-B-C0012"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0051",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0010",
+      "top1_score": 6.4140625,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0011",
+        "DOC-PMC-RENAL-0003-B-C0010",
+        "DOC-PMC-RENAL-0003-B-C0012"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0052",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0004",
+      "top1_score": 5.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0023",
+        "DOC-PMC-RENAL-0003-B-C0014"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0053",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 4.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0023",
+        "DOC-PMC-RENAL-0003-B-C0014",
+        "DOC-PMC-RENAL-0003-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0054",
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 4.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 15,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0003-B-C0025",
+        "DOC-PMC-RENAL-0003-B-C0017",
+        "DOC-PMC-RENAL-0003-B-C0010"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0055",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.484375,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0003",
+        "DOC-PMC-RENAL-0004-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0056",
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0002",
+      "top1_score": 1.359375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0003",
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0057",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0001",
+      "top1_score": 6.2109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0007",
+        "DOC-PMC-RENAL-0004-B-C0013",
+        "DOC-PMC-RENAL-0004-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0058",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 7.03125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 12,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0017",
+        "DOC-PMC-RENAL-0004-B-C0009",
+        "DOC-PMC-RENAL-0004-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0059",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0011",
+      "top1_score": 6.671875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0011",
+        "DOC-PMC-RENAL-0004-B-C0019",
+        "DOC-PMC-RENAL-0004-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0060",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0001",
+      "top1_score": 6.4296875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0003",
+        "DOC-PMC-RENAL-0004-B-C0013"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0061",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0016",
+      "top1_score": 7.8203125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0015"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0062",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0016",
+      "top1_score": 7.8203125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0015",
+        "DOC-PMC-RENAL-0004-B-C0017",
+        "DOC-PMC-RENAL-0004-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0063",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0017",
+      "top1_score": 5.25,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0002",
+        "DOC-PMC-RENAL-0004-B-C0011",
+        "DOC-PMC-RENAL-0004-B-C0019"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0064",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0017",
+      "top1_score": 5.25,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 8,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0004-B-C0020"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0065",
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": -1.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0066",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.390625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0019",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0067",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.390625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0016",
+        "DOC-PMC-RENAL-0005-B-C0010"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0068",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.390625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0016",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0069",
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0015",
+      "top1_score": -1.109375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0010",
+        "DOC-PMC-RENAL-0005-B-C0039"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0070",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 4.484375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0016",
+        "DOC-PMC-RENAL-0005-B-C0015",
+        "DOC-PMC-RENAL-0005-B-C0003"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0071",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 4.484375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 13,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0016",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0072",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0026",
+      "top1_score": 6.1171875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0019",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0073",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 4.484375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 5,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0020",
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0074",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 4.484375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 9,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0021",
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0075",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0017",
+      "top1_score": 4.484375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0022",
+        "DOC-PMC-RENAL-0005-B-C0019"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0076",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0044",
+        "DOC-PMC-RENAL-0005-B-C0023",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0077",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 8,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0016",
+        "DOC-PMC-RENAL-0005-B-C0010",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0078",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0015",
+        "DOC-PMC-RENAL-0005-B-C0025"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0079",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0027",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0080",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 10,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0028"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0081",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 9,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0004",
+        "DOC-PMC-RENAL-0005-B-C0025",
+        "DOC-PMC-RENAL-0005-B-C0030"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0082",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0020",
+        "DOC-PMC-RENAL-0005-B-C0004",
+        "DOC-PMC-RENAL-0005-B-C0031"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0083",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0023",
+        "DOC-PMC-RENAL-0005-B-C0032",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0084",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.453125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0033",
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0085",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 3.546875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0019",
+        "DOC-PMC-RENAL-0005-B-C0034"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0086",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 2.7265625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0037",
+        "DOC-PMC-RENAL-0005-B-C0023",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0087",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 2.7265625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 7,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0038",
+        "DOC-PMC-RENAL-0005-B-C0023",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0088",
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0040",
+      "top1_score": 3.390625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0004",
+        "DOC-PMC-RENAL-0005-B-C0038",
+        "DOC-PMC-RENAL-0005-B-C0039"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0089",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 4.5703125,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0042",
+        "DOC-PMC-RENAL-0005-B-C0024",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0090",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0043",
+      "top1_score": 2.390625,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0044",
+        "DOC-PMC-RENAL-0005-B-C0023",
+        "DOC-PMC-RENAL-0005-B-C0024"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0091",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.953125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0045",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0092",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 3.65625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0020",
+        "DOC-PMC-RENAL-0005-B-C0051",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0093",
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0045",
+      "top1_score": 4.8203125,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 5,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0027",
+        "DOC-PMC-RENAL-0005-B-C0055",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0094",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0057",
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0095",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0057",
+        "DOC-PMC-RENAL-0005-B-C0058"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0096",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0015",
+        "DOC-PMC-RENAL-0005-B-C0059",
+        "DOC-PMC-RENAL-0005-B-C0005"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0097",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0004",
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0060"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0098",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0015",
+        "DOC-PMC-RENAL-0005-B-C0061"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0099",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0006",
+        "DOC-PMC-RENAL-0005-B-C0062",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0100",
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 6.9375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0063",
+        "DOC-PMC-RENAL-0005-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0101",
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0075",
+      "top1_score": -0.84375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0064",
+        "DOC-PMC-RENAL-0005-B-C0012"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0102",
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0075",
+      "top1_score": -0.84375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0005",
+        "DOC-PMC-RENAL-0005-B-C0010",
+        "DOC-PMC-RENAL-0005-B-C0065"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0103",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.90625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0005-B-C0003",
+        "DOC-PMC-RENAL-0005-B-C0004",
+        "DOC-PMC-RENAL-0005-B-C0066"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0104",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 1.046875,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0007",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0105",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0013",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0106",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0030",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0006"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0107",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0008",
+        "DOC-PMC-RENAL-0006-B-C0009",
+        "DOC-PMC-RENAL-0006-B-C0033"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0108",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0299",
+      "top1_score": -0.65625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0009",
+        "DOC-PMC-RENAL-0006-B-C0045",
+        "DOC-PMC-RENAL-0006-B-C0019"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0109",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0048",
+        "DOC-PMC-RENAL-0006-B-C0007",
+        "DOC-PMC-RENAL-0006-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0110",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0299",
+      "top1_score": -0.65625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0050",
+        "DOC-PMC-RENAL-0006-B-C0007",
+        "DOC-PMC-RENAL-0006-B-C0004"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0111",
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0020",
+      "top1_score": 0.734375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0009",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0052"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0112",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0060",
+      "top1_score": 2.0625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": 6,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0043",
+        "DOC-PMC-RENAL-0006-B-C0066",
+        "DOC-PMC-RENAL-0006-B-C0012"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0113",
+      "top1_chunk_id": "DOC-PMC-RENAL-0009-B-C0047",
+      "top1_score": 2.4765625,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": true,
+      "first_relevant_rank": 4,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0068",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0033"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0114",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0072",
+      "top1_score": 1.671875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0013",
+        "DOC-PMC-RENAL-0006-B-C0072",
+        "DOC-PMC-RENAL-0006-B-C0045"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0115",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0074",
+      "top1_score": 1.1875,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0013",
+        "DOC-PMC-RENAL-0006-B-C0074",
+        "DOC-PMC-RENAL-0006-B-C0057"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0116",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0075",
+      "top1_score": 1.5,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0013",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0075"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0117",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0076",
+      "top1_score": 1.5,
+      "is_hit_1": true,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 1,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0007",
+        "DOC-PMC-RENAL-0006-B-C0076",
+        "DOC-PMC-RENAL-0006-B-C0066"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0118",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0082",
+      "top1_score": 1.859375,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 3,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0050",
+        "DOC-PMC-RENAL-0006-B-C0080",
+        "DOC-PMC-RENAL-0006-B-C0072"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0119",
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0082",
+      "top1_score": 3.3046875,
+      "is_hit_1": false,
+      "is_hit_3": true,
+      "is_hit_5": true,
+      "first_relevant_rank": 2,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0050",
+        "DOC-PMC-RENAL-0006-B-C0066",
+        "DOC-PMC-RENAL-0006-B-C0081"
+      ]
+    },
+    {
+      "query_id": "PRD-DEV2-0120",
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 2.984375,
+      "is_hit_1": false,
+      "is_hit_3": false,
+      "is_hit_5": false,
+      "first_relevant_rank": null,
+      "semantic_support_chunk_ids": [
+        "DOC-PMC-RENAL-0006-B-C0093",
+        "DOC-PMC-RENAL-0006-B-C0004",
+        "DOC-PMC-RENAL-0006-B-C0013"
+      ]
+    }
+  ]
+}

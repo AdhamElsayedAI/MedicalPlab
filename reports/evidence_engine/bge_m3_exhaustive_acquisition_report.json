@@ -1,0 +1,1429 @@
+{
+  "benchmark": "PRODUCT_DEV_V2",
+  "benchmark_file": "evaluation\\evidence_engine\\product_dev_v2.json",
+  "n_queries": 120,
+  "retriever_model": "C:\\Users\\Adham Elsayed\\.cache\\huggingface\\hub\\models--BAAI--bge-m3\\snapshots\\5617a9f61b028005a4858fdac845db406aefb181",
+  "retriever_revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "total_corpus_passages_indexed": 2691,
+  "evaluation_timestamp": "2026-09-11T12:58:26Z",
+  "winning_mode": "hybrid",
+  "mode_comparison": {
+    "mode_a_colbert_alone": {
+      "semantic_recall": {
+        "recall_at_1": {
+          "count": 24,
+          "total": 120,
+          "rate": 0.2,
+          "pct": "20.00%",
+          "ci_95_wilson": [
+            0.1382,
+            0.2804
+          ]
+        },
+        "recall_at_5": {
+          "count": 63,
+          "total": 120,
+          "rate": 0.525,
+          "pct": "52.50%",
+          "ci_95_wilson": [
+            0.4363,
+            0.6122
+          ]
+        },
+        "recall_at_10": {
+          "count": 84,
+          "total": 120,
+          "rate": 0.7,
+          "pct": "70.00%",
+          "ci_95_wilson": [
+            0.6128,
+            0.7747
+          ]
+        },
+        "recall_at_20": {
+          "count": 92,
+          "total": 120,
+          "rate": 0.7666666666666667,
+          "pct": "76.67%",
+          "ci_95_wilson": [
+            0.6834,
+            0.8333
+          ]
+        },
+        "recall_at_50": {
+          "count": 102,
+          "total": 120,
+          "rate": 0.85,
+          "pct": "85.00%",
+          "ci_95_wilson": [
+            0.7753,
+            0.903
+          ]
+        },
+        "recall_at_100": {
+          "count": 105,
+          "total": 120,
+          "rate": 0.875,
+          "pct": "87.50%",
+          "ci_95_wilson": [
+            0.804,
+            0.9228
+          ]
+        },
+        "recall_at_200": {
+          "count": 111,
+          "total": 120,
+          "rate": 0.925,
+          "pct": "92.50%",
+          "ci_95_wilson": [
+            0.8636,
+            0.96
+          ]
+        }
+      },
+      "exact_recall": {
+        "recall_at_1": {
+          "count": 22,
+          "total": 120,
+          "rate": 0.18333333333333332,
+          "pct": "18.33%",
+          "ci_95_wilson": [
+            0.1243,
+            0.262
+          ]
+        },
+        "recall_at_5": {
+          "count": 55,
+          "total": 120,
+          "rate": 0.4583333333333333,
+          "pct": "45.83%",
+          "ci_95_wilson": [
+            0.3719,
+            0.5474
+          ]
+        },
+        "recall_at_10": {
+          "count": 76,
+          "total": 120,
+          "rate": 0.6333333333333333,
+          "pct": "63.33%",
+          "ci_95_wilson": [
+            0.5442,
+            0.7142
+          ]
+        },
+        "recall_at_20": {
+          "count": 88,
+          "total": 120,
+          "rate": 0.7333333333333333,
+          "pct": "73.33%",
+          "ci_95_wilson": [
+            0.6479,
+            0.8043
+          ]
+        },
+        "recall_at_50": {
+          "count": 100,
+          "total": 120,
+          "rate": 0.8333333333333334,
+          "pct": "83.33%",
+          "ci_95_wilson": [
+            0.7565,
+            0.8894
+          ]
+        },
+        "recall_at_100": {
+          "count": 101,
+          "total": 120,
+          "rate": 0.8416666666666667,
+          "pct": "84.17%",
+          "ci_95_wilson": [
+            0.7659,
+            0.8962
+          ]
+        },
+        "recall_at_200": {
+          "count": 106,
+          "total": 120,
+          "rate": 0.8833333333333333,
+          "pct": "88.33%",
+          "ci_95_wilson": [
+            0.8137,
+            0.9292
+          ]
+        }
+      },
+      "semantic_rank_distribution": {
+        "median": 5.0,
+        "p75": 16.75,
+        "p90": 136.70000000000033,
+        "max": 691,
+        "not_retrieved": 0
+      },
+      "exact_rank_distribution": {
+        "median": 7.0,
+        "p75": 23.25,
+        "p90": 283.4000000000001,
+        "max": 995,
+        "not_retrieved": 0
+      },
+      "elapsed_seconds": 98.59,
+      "mean_query_ms": 821.6
+    },
+    "mode_b_official_hybrid": {
+      "semantic_recall": {
+        "recall_at_1": {
+          "count": 21,
+          "total": 120,
+          "rate": 0.175,
+          "pct": "17.50%",
+          "ci_95_wilson": [
+            0.1174,
+            0.2528
+          ]
+        },
+        "recall_at_5": {
+          "count": 60,
+          "total": 120,
+          "rate": 0.5,
+          "pct": "50.00%",
+          "ci_95_wilson": [
+            0.4119,
+            0.5881
+          ]
+        },
+        "recall_at_10": {
+          "count": 90,
+          "total": 120,
+          "rate": 0.75,
+          "pct": "75.00%",
+          "ci_95_wilson": [
+            0.6656,
+            0.8189
+          ]
+        },
+        "recall_at_20": {
+          "count": 95,
+          "total": 120,
+          "rate": 0.7916666666666666,
+          "pct": "79.17%",
+          "ci_95_wilson": [
+            0.7105,
+            0.8547
+          ]
+        },
+        "recall_at_50": {
+          "count": 102,
+          "total": 120,
+          "rate": 0.85,
+          "pct": "85.00%",
+          "ci_95_wilson": [
+            0.7753,
+            0.903
+          ]
+        },
+        "recall_at_100": {
+          "count": 106,
+          "total": 120,
+          "rate": 0.8833333333333333,
+          "pct": "88.33%",
+          "ci_95_wilson": [
+            0.8137,
+            0.9292
+          ]
+        },
+        "recall_at_200": {
+          "count": 110,
+          "total": 120,
+          "rate": 0.9166666666666666,
+          "pct": "91.67%",
+          "ci_95_wilson": [
+            0.8534,
+            0.9541
+          ]
+        }
+      },
+      "exact_recall": {
+        "recall_at_1": {
+          "count": 18,
+          "total": 120,
+          "rate": 0.15,
+          "pct": "15.00%",
+          "ci_95_wilson": [
+            0.097,
+            0.2247
+          ]
+        },
+        "recall_at_5": {
+          "count": 54,
+          "total": 120,
+          "rate": 0.45,
+          "pct": "45.00%",
+          "ci_95_wilson": [
+            0.3639,
+            0.5392
+          ]
+        },
+        "recall_at_10": {
+          "count": 78,
+          "total": 120,
+          "rate": 0.65,
+          "pct": "65.00%",
+          "ci_95_wilson": [
+            0.5612,
+            0.7295
+          ]
+        },
+        "recall_at_20": {
+          "count": 92,
+          "total": 120,
+          "rate": 0.7666666666666667,
+          "pct": "76.67%",
+          "ci_95_wilson": [
+            0.6834,
+            0.8333
+          ]
+        },
+        "recall_at_50": {
+          "count": 100,
+          "total": 120,
+          "rate": 0.8333333333333334,
+          "pct": "83.33%",
+          "ci_95_wilson": [
+            0.7565,
+            0.8894
+          ]
+        },
+        "recall_at_100": {
+          "count": 103,
+          "total": 120,
+          "rate": 0.8583333333333333,
+          "pct": "85.83%",
+          "ci_95_wilson": [
+            0.7848,
+            0.9096
+          ]
+        },
+        "recall_at_200": {
+          "count": 105,
+          "total": 120,
+          "rate": 0.875,
+          "pct": "87.50%",
+          "ci_95_wilson": [
+            0.804,
+            0.9228
+          ]
+        }
+      },
+      "semantic_rank_distribution": {
+        "median": 5.5,
+        "p75": 10.5,
+        "p90": 141.0,
+        "max": 774,
+        "not_retrieved": 0
+      },
+      "exact_rank_distribution": {
+        "median": 6.5,
+        "p75": 17.25,
+        "p90": 233.20000000000044,
+        "max": 1133,
+        "not_retrieved": 0
+      },
+      "elapsed_seconds": 75.76,
+      "mean_query_ms": 631.3
+    }
+  },
+  "gates": {
+    "ACQUISITION_GATE_RECALL_AT_20": {
+      "target": 0.95,
+      "actual": 0.7916666666666666,
+      "passed": false
+    },
+    "ACQUISITION_GATE_RECALL_AT_50": {
+      "target": 0.98,
+      "actual": 0.85,
+      "passed": false
+    }
+  },
+  "miss_classification": {
+    "CORPUS_COVERAGE_FAILURE": 0,
+    "QREL_OR_QUERY_CONSTRUCTION_FAILURE": 0,
+    "MODEL_SEMANTIC_FAILURE": 14,
+    "misses_detail": [
+      {
+        "query_id": "PRD-DEV2-0014",
+        "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0002-B-C0003",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 180
+      },
+      {
+        "query_id": "PRD-DEV2-0015",
+        "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0002-B-C0005",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 228
+      },
+      {
+        "query_id": "PRD-DEV2-0016",
+        "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0002-B-C0006",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 228
+      },
+      {
+        "query_id": "PRD-DEV2-0038",
+        "query": "What clinical mechanisms and physiological findings characterize Discussion?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0002-B-C0048",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 282
+      },
+      {
+        "query_id": "PRD-DEV2-0056",
+        "query": "What clinical mechanisms and physiological findings characterize . Introduction?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0004-B-C0003",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 375
+      },
+      {
+        "query_id": "PRD-DEV2-0065",
+        "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0005-B-C0003",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 282
+      },
+      {
+        "query_id": "PRD-DEV2-0067",
+        "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0005-B-C0005",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 141
+      },
+      {
+        "query_id": "PRD-DEV2-0068",
+        "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0005-B-C0006",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 141
+      },
+      {
+        "query_id": "PRD-DEV2-0104",
+        "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Summary of evidence?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0004",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 208
+      },
+      {
+        "query_id": "PRD-DEV2-0105",
+        "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0013",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 774
+      },
+      {
+        "query_id": "PRD-DEV2-0106",
+        "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0030",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 436
+      },
+      {
+        "query_id": "PRD-DEV2-0108",
+        "query": "What clinical mechanisms and physiological findings characterize Commentary?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0045",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 120
+      },
+      {
+        "query_id": "PRD-DEV2-0109",
+        "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0048",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 383
+      },
+      {
+        "query_id": "PRD-DEV2-0111",
+        "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+        "gold_chunk_id": "DOC-PMC-RENAL-0006-B-C0052",
+        "category": "MODEL_SEMANTIC_FAILURE",
+        "reason": "Evidence is present in chunk but BGE-M3 multi-vector representation failed to rank within top 100.",
+        "actual_rank": 306
+      }
+    ]
+  },
+  "per_item_results": [
+    {
+      "query_id": "PRD-DEV2-0001",
+      "query": "Which signaling mechanisms promote tubulointerstitial fibrosis and progression in Renal Clinical Evidence?",
+      "first_semantic_rank": 30,
+      "first_exact_rank": 30,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0007",
+      "top1_score": 0.44165462255477905
+    },
+    {
+      "query_id": "PRD-DEV2-0002",
+      "query": "Which signaling mechanisms promote tubulointerstitial fibrosis and progression in . Inflammation and Cardiovascular Disease?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0006",
+      "top1_score": 0.5306364297866821
+    },
+    {
+      "query_id": "PRD-DEV2-0003",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in . Markers of Inflammation?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0006",
+      "top1_score": 0.5171915888786316
+    },
+    {
+      "query_id": "PRD-DEV2-0004",
+      "query": "What clinical mechanisms and physiological findings characterize . Markers of Inflammation?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0008",
+      "top1_score": 0.555730402469635
+    },
+    {
+      "query_id": "PRD-DEV2-0005",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in . RAAS and Vascular Inflammation?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.5415761470794678
+    },
+    {
+      "query_id": "PRD-DEV2-0006",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . RAAS and Vascular Inflammation?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0015",
+      "top1_score": 0.6636606454849243
+    },
+    {
+      "query_id": "PRD-DEV2-0007",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS and Vascular Inflammation?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.6949038505554199
+    },
+    {
+      "query_id": "PRD-DEV2-0008",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS Blockers and Vascular Inflammation?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.6810131669044495
+    },
+    {
+      "query_id": "PRD-DEV2-0009",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . (Pro)renin Receptor and Potential Inhibitors?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 0.6065883636474609
+    },
+    {
+      "query_id": "PRD-DEV2-0010",
+      "query": "What clinical mechanisms and physiological findings characterize . Angiotensin Converting Enzyme Inhibitors (ACEIs)?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0018",
+      "top1_score": 0.5977186560630798
+    },
+    {
+      "query_id": "PRD-DEV2-0011",
+      "query": "What clinical mechanisms and physiological findings characterize . RAAS and Vascular Remodeling?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.6234925985336304
+    },
+    {
+      "query_id": "PRD-DEV2-0012",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . RAAS and Vascular Remodeling?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.6937068104743958
+    },
+    {
+      "query_id": "PRD-DEV2-0013",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in . Perspective on RAAS Inhibition?",
+      "first_semantic_rank": 9,
+      "first_exact_rank": 9,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0002",
+      "top1_score": 0.6957334280014038
+    },
+    {
+      "query_id": "PRD-DEV2-0014",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "first_semantic_rank": 180,
+      "first_exact_rank": 180,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0045",
+      "top1_score": 0.49826937913894653
+    },
+    {
+      "query_id": "PRD-DEV2-0015",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "first_semantic_rank": 228,
+      "first_exact_rank": 228,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0045",
+      "top1_score": 0.49826937913894653
+    },
+    {
+      "query_id": "PRD-DEV2-0016",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "first_semantic_rank": 228,
+      "first_exact_rank": 378,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0045",
+      "top1_score": 0.49826937913894653
+    },
+    {
+      "query_id": "PRD-DEV2-0017",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Renal Clinical Evidence?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 11,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "top1_score": 0.5522360801696777
+    },
+    {
+      "query_id": "PRD-DEV2-0018",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Renal Clinical Evidence?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 1133,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "top1_score": 0.5522360801696777
+    },
+    {
+      "query_id": "PRD-DEV2-0019",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Characterization of human podocytes and hGEC?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 12,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0012",
+      "top1_score": 0.5893250107765198
+    },
+    {
+      "query_id": "PRD-DEV2-0020",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Culturing human podocytes and hGEC on the chip?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0013",
+      "top1_score": 0.6266039609909058
+    },
+    {
+      "query_id": "PRD-DEV2-0021",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 11,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 0.5675631761550903
+    },
+    {
+      "query_id": "PRD-DEV2-0022",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Structural characterization of GOAC?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0007",
+      "top1_score": 0.5675631761550903
+    },
+    {
+      "query_id": "PRD-DEV2-0023",
+      "query": "What clinical mechanisms and physiological findings characterize Permselectivity as functional measure of a working GOAC?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0024",
+      "top1_score": 0.6435476541519165
+    },
+    {
+      "query_id": "PRD-DEV2-0024",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Permselectivity as functional measure of a working GOAC?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0023",
+      "top1_score": 0.6517962217330933
+    },
+    {
+      "query_id": "PRD-DEV2-0025",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0025",
+      "top1_score": 0.66395103931427
+    },
+    {
+      "query_id": "PRD-DEV2-0026",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Puromycin aminonucleoside promotes albumin leakage in the GOAC?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0025",
+      "top1_score": 0.66395103931427
+    },
+    {
+      "query_id": "PRD-DEV2-0027",
+      "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 0.6919196844100952
+    },
+    {
+      "query_id": "PRD-DEV2-0028",
+      "query": "What clinical mechanisms and physiological findings characterize Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 0.6919196844100952
+    },
+    {
+      "query_id": "PRD-DEV2-0029",
+      "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 0.6880297660827637
+    },
+    {
+      "query_id": "PRD-DEV2-0030",
+      "query": "What factors determine glomerular permeability and protein excretion in Sera from individuals with MN shows albumin leakage in the GOAC?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0027",
+      "top1_score": 0.6880297660827637
+    },
+    {
+      "query_id": "PRD-DEV2-0031",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Modeling mechanism of MN injury in podocyte in the GOAC?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0045",
+      "top1_score": 0.616218626499176
+    },
+    {
+      "query_id": "PRD-DEV2-0032",
+      "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0037",
+      "top1_score": 0.6436409950256348
+    },
+    {
+      "query_id": "PRD-DEV2-0033",
+      "query": "What factors determine glomerular permeability and protein excretion in GOAC response specificity to sera from various CKD?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0037",
+      "top1_score": 0.6436409950256348
+    },
+    {
+      "query_id": "PRD-DEV2-0034",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0041",
+      "top1_score": 0.5704569816589355
+    },
+    {
+      "query_id": "PRD-DEV2-0035",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Establishing a model of diabetic nephropathy in the GOAC?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0041",
+      "top1_score": 0.5704569816589355
+    },
+    {
+      "query_id": "PRD-DEV2-0036",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Discussion?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 0.5613248944282532
+    },
+    {
+      "query_id": "PRD-DEV2-0037",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Discussion?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 285,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0003",
+      "top1_score": 0.5613248944282532
+    },
+    {
+      "query_id": "PRD-DEV2-0038",
+      "query": "What clinical mechanisms and physiological findings characterize Discussion?",
+      "first_semantic_rank": 282,
+      "first_exact_rank": 282,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0335",
+      "top1_score": 0.44409680366516113
+    },
+    {
+      "query_id": "PRD-DEV2-0039",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 29,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "top1_score": 0.5409935116767883
+    },
+    {
+      "query_id": "PRD-DEV2-0040",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Cells: isolation and culture?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "top1_score": 0.5409935116767883
+    },
+    {
+      "query_id": "PRD-DEV2-0041",
+      "query": "What clinical mechanisms and physiological findings characterize FACS and flow cytometry analysis?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0056",
+      "top1_score": 0.5470983982086182
+    },
+    {
+      "query_id": "PRD-DEV2-0042",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Microfluidic chip and cell seeding?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 11,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0001",
+      "top1_score": 0.6055521965026855
+    },
+    {
+      "query_id": "PRD-DEV2-0043",
+      "query": "What clinical mechanisms and physiological findings characterize Albumin permselectivity assay and inulin permeability assay?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0088",
+      "top1_score": 0.5884221792221069
+    },
+    {
+      "query_id": "PRD-DEV2-0044",
+      "query": "What cellular interactions and structural components maintain glomerular filtration integrity in Transwell establishment?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 11,
+      "top1_chunk_id": "DOC-PMC-RENAL-0018-B-C0001",
+      "top1_score": 0.5277376770973206
+    },
+    {
+      "query_id": "PRD-DEV2-0045",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in PAN injury?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 8,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0026",
+      "top1_score": 0.48021674156188965
+    },
+    {
+      "query_id": "PRD-DEV2-0046",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Glucose-mediated injury?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0002-B-C0093",
+      "top1_score": 0.549490213394165
+    },
+    {
+      "query_id": "PRD-DEV2-0047",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in Western blot analysis?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0015",
+      "top1_score": 0.48001033067703247
+    },
+    {
+      "query_id": "PRD-DEV2-0048",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in New insights from tubulopathies?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 0.5594866275787354
+    },
+    {
+      "query_id": "PRD-DEV2-0049",
+      "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_score": 0.5867136716842651
+    },
+    {
+      "query_id": "PRD-DEV2-0050",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Hypokalemic nephropathy?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 0.6157277822494507
+    },
+    {
+      "query_id": "PRD-DEV2-0051",
+      "query": "What clinical mechanisms and physiological findings characterize Hypokalemic nephropathy?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0012",
+      "top1_score": 0.5867136716842651
+    },
+    {
+      "query_id": "PRD-DEV2-0052",
+      "query": "What clinical mechanisms and physiological findings characterize Effects of dietary potassium in children?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0013",
+      "top1_score": 0.6278030872344971
+    },
+    {
+      "query_id": "PRD-DEV2-0053",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+      "first_semantic_rank": 17,
+      "first_exact_rank": 17,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 0.5555317401885986
+    },
+    {
+      "query_id": "PRD-DEV2-0054",
+      "query": "What physiological mechanisms govern potassium homeostasis and handling in Perspectives for potassium?",
+      "first_semantic_rank": 25,
+      "first_exact_rank": 25,
+      "top1_chunk_id": "DOC-PMC-RENAL-0003-B-C0001",
+      "top1_score": 0.5555317401885986
+    },
+    {
+      "query_id": "PRD-DEV2-0055",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Introduction?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6432174444198608
+    },
+    {
+      "query_id": "PRD-DEV2-0056",
+      "query": "What clinical mechanisms and physiological findings characterize . Introduction?",
+      "first_semantic_rank": 375,
+      "first_exact_rank": 552,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0026",
+      "top1_score": 0.5064623355865479
+    },
+    {
+      "query_id": "PRD-DEV2-0057",
+      "query": "What transport mechanism mediates tubular solute reabsorption in . Roles of PT Transport in Acid/Base Balance?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 13,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0004",
+      "top1_score": 0.6291042566299438
+    },
+    {
+      "query_id": "PRD-DEV2-0058",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Roles of PT Transport in Acid/Base Balance?",
+      "first_semantic_rank": 14,
+      "first_exact_rank": 14,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0001",
+      "top1_score": 0.6861079931259155
+    },
+    {
+      "query_id": "PRD-DEV2-0059",
+      "query": "What clinical mechanisms and physiological findings characterize . Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0010",
+      "top1_score": 0.6396826505661011
+    },
+    {
+      "query_id": "PRD-DEV2-0060",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in . Roles of Hyperinsulinemia in Hypertension Associated with Metabolic Syndrome?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0001",
+      "top1_score": 0.6289057731628418
+    },
+    {
+      "query_id": "PRD-DEV2-0061",
+      "query": "What clinical mechanisms and physiological findings characterize . Effects of Ang II on PT Transport?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0019",
+      "top1_score": 0.6283687949180603
+    },
+    {
+      "query_id": "PRD-DEV2-0062",
+      "query": "What clinical mechanisms and physiological findings characterize . Effects of Ang II on PT Transport?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0019",
+      "top1_score": 0.6283687949180603
+    },
+    {
+      "query_id": "PRD-DEV2-0063",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . Effects of Ang II on PT Transport?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0019",
+      "top1_score": 0.6327972412109375
+    },
+    {
+      "query_id": "PRD-DEV2-0064",
+      "query": "What pharmacological effects result from receptor blockade or pathway inhibition in . Effects of Ang II on PT Transport?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0019",
+      "top1_score": 0.6327972412109375
+    },
+    {
+      "query_id": "PRD-DEV2-0065",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "first_semantic_rank": 282,
+      "first_exact_rank": 913,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0045",
+      "top1_score": 0.49826937913894653
+    },
+    {
+      "query_id": "PRD-DEV2-0066",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "first_semantic_rank": 90,
+      "first_exact_rank": 281,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6172592043876648
+    },
+    {
+      "query_id": "PRD-DEV2-0067",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "first_semantic_rank": 141,
+      "first_exact_rank": 215,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6172592043876648
+    },
+    {
+      "query_id": "PRD-DEV2-0068",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Renal Clinical Evidence?",
+      "first_semantic_rank": 141,
+      "first_exact_rank": 152,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6172592043876648
+    },
+    {
+      "query_id": "PRD-DEV2-0069",
+      "query": "What clinical mechanisms and physiological findings characterize Renal Clinical Evidence?",
+      "first_semantic_rank": 23,
+      "first_exact_rank": 23,
+      "top1_chunk_id": "DOC-PMC-RENAL-0025-B-C0045",
+      "top1_score": 0.49826937913894653
+    },
+    {
+      "query_id": "PRD-DEV2-0070",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0020",
+      "top1_score": 0.6434482336044312
+    },
+    {
+      "query_id": "PRD-DEV2-0071",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 9,
+      "first_exact_rank": 9,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0020",
+      "top1_score": 0.6434482336044312
+    },
+    {
+      "query_id": "PRD-DEV2-0072",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 8,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0042",
+      "top1_score": 0.6493659019470215
+    },
+    {
+      "query_id": "PRD-DEV2-0073",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0020",
+      "top1_score": 0.6434482336044312
+    },
+    {
+      "query_id": "PRD-DEV2-0074",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0020",
+      "top1_score": 0.6434482336044312
+    },
+    {
+      "query_id": "PRD-DEV2-0075",
+      "query": "What clinical mechanisms and physiological findings characterize Mechanistic topography of acid-base exchange in the kidney?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0020",
+      "top1_score": 0.6434482336044312
+    },
+    {
+      "query_id": "PRD-DEV2-0076",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0077",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 9,
+      "first_exact_rank": 9,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0078",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0079",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "first_semantic_rank": 25,
+      "first_exact_rank": 25,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0034",
+      "top1_score": 0.6550320386886597
+    },
+    {
+      "query_id": "PRD-DEV2-0080",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 4,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0034",
+      "top1_score": 0.6550320386886597
+    },
+    {
+      "query_id": "PRD-DEV2-0081",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 8,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0034",
+      "top1_score": 0.6550320386886597
+    },
+    {
+      "query_id": "PRD-DEV2-0082",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 8,
+      "first_exact_rank": 8,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0083",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 12,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0084",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Proximal convoluted tubule?",
+      "first_semantic_rank": 10,
+      "first_exact_rank": 10,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0034",
+      "top1_score": 0.6550320386886597
+    },
+    {
+      "query_id": "PRD-DEV2-0085",
+      "query": "What clinical mechanisms and physiological findings characterize Proximal convoluted tubule?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0023",
+      "top1_score": 0.5482011437416077
+    },
+    {
+      "query_id": "PRD-DEV2-0086",
+      "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 0.5415948629379272
+    },
+    {
+      "query_id": "PRD-DEV2-0087",
+      "query": "What clinical mechanisms and physiological findings characterize Loop of Henle?",
+      "first_semantic_rank": 9,
+      "first_exact_rank": 9,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0040",
+      "top1_score": 0.5415948629379272
+    },
+    {
+      "query_id": "PRD-DEV2-0088",
+      "query": "What transport mechanism mediates tubular solute reabsorption in Loop of Henle?",
+      "first_semantic_rank": 4,
+      "first_exact_rank": 12,
+      "top1_chunk_id": "DOC-PMC-RENAL-0023-B-C0040",
+      "top1_score": 0.6362168788909912
+    },
+    {
+      "query_id": "PRD-DEV2-0089",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Loop of Henle?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0042",
+      "top1_score": 0.6931358575820923
+    },
+    {
+      "query_id": "PRD-DEV2-0090",
+      "query": "What clinical mechanisms and physiological findings characterize Distal convoluted tubule?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0044",
+      "top1_score": 0.5054149627685547
+    },
+    {
+      "query_id": "PRD-DEV2-0091",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Collecting tubules and collecting ducts?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 0.5640078186988831
+    },
+    {
+      "query_id": "PRD-DEV2-0092",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Collecting tubules and collecting ducts?",
+      "first_semantic_rank": 10,
+      "first_exact_rank": 10,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0046",
+      "top1_score": 0.6345639228820801
+    },
+    {
+      "query_id": "PRD-DEV2-0093",
+      "query": "What clinical mechanisms and physiological findings characterize Collecting tubules and collecting ducts?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0005-B-C0045",
+      "top1_score": 0.5813165903091431
+    },
+    {
+      "query_id": "PRD-DEV2-0094",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0095",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 18,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0096",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 26,
+      "first_exact_rank": 26,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0097",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 12,
+      "first_exact_rank": 12,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0098",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 21,
+      "first_exact_rank": 21,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0099",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0100",
+      "query": "How do renal tubular transporters mediate acid-base regulation and bicarbonate transport in Clinical manifestations of acid-base metabolism disorders?",
+      "first_semantic_rank": 52,
+      "first_exact_rank": 52,
+      "top1_chunk_id": "DOC-PMC-RENAL-0004-B-C0002",
+      "top1_score": 0.6239665746688843
+    },
+    {
+      "query_id": "PRD-DEV2-0101",
+      "query": "What clinical mechanisms and physiological findings characterize Conclusion?",
+      "first_semantic_rank": 6,
+      "first_exact_rank": 6,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0087",
+      "top1_score": 0.43071842193603516
+    },
+    {
+      "query_id": "PRD-DEV2-0102",
+      "query": "What clinical mechanisms and physiological findings characterize Conclusion?",
+      "first_semantic_rank": 7,
+      "first_exact_rank": 7,
+      "top1_chunk_id": "DOC-PMC-RENAL-0012-B-C0087",
+      "top1_score": 0.43071842193603516
+    },
+    {
+      "query_id": "PRD-DEV2-0103",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Conclusion?",
+      "first_semantic_rank": 87,
+      "first_exact_rank": 91,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.47214972972869873
+    },
+    {
+      "query_id": "PRD-DEV2-0104",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Summary of evidence?",
+      "first_semantic_rank": 208,
+      "first_exact_rank": 208,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0014",
+      "top1_score": 0.4421854317188263
+    },
+    {
+      "query_id": "PRD-DEV2-0105",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "first_semantic_rank": 774,
+      "first_exact_rank": 774,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.4601686894893646
+    },
+    {
+      "query_id": "PRD-DEV2-0106",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "first_semantic_rank": 436,
+      "first_exact_rank": 436,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.4601686894893646
+    },
+    {
+      "query_id": "PRD-DEV2-0107",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "first_semantic_rank": 46,
+      "first_exact_rank": 46,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.4601686894893646
+    },
+    {
+      "query_id": "PRD-DEV2-0108",
+      "query": "What clinical mechanisms and physiological findings characterize Commentary?",
+      "first_semantic_rank": 120,
+      "first_exact_rank": 280,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0171",
+      "top1_score": 0.44142627716064453
+    },
+    {
+      "query_id": "PRD-DEV2-0109",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "first_semantic_rank": 383,
+      "first_exact_rank": 383,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.4601686894893646
+    },
+    {
+      "query_id": "PRD-DEV2-0110",
+      "query": "What clinical mechanisms and physiological findings characterize Commentary?",
+      "first_semantic_rank": 67,
+      "first_exact_rank": 67,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0171",
+      "top1_score": 0.44142627716064453
+    },
+    {
+      "query_id": "PRD-DEV2-0111",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Commentary?",
+      "first_semantic_rank": 306,
+      "first_exact_rank": 709,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0019",
+      "top1_score": 0.4601686894893646
+    },
+    {
+      "query_id": "PRD-DEV2-0112",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Preoperative renal impairment?",
+      "first_semantic_rank": 16,
+      "first_exact_rank": 16,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0002",
+      "top1_score": 0.514010488986969
+    },
+    {
+      "query_id": "PRD-DEV2-0113",
+      "query": "What clinical mechanisms and physiological findings characterize Other risk factors?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0068",
+      "top1_score": 0.5178112983703613
+    },
+    {
+      "query_id": "PRD-DEV2-0114",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Liver transplantation?",
+      "first_semantic_rank": 9,
+      "first_exact_rank": 9,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0024",
+      "top1_score": 0.4693669378757477
+    },
+    {
+      "query_id": "PRD-DEV2-0115",
+      "query": "What clinical mechanisms and physiological findings characterize Lung surgery?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0074",
+      "top1_score": 0.4492673873901367
+    },
+    {
+      "query_id": "PRD-DEV2-0116",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Bariatric surgery?",
+      "first_semantic_rank": 5,
+      "first_exact_rank": 5,
+      "top1_chunk_id": "DOC-PMC-RENAL-0015-B-C0024",
+      "top1_score": 0.44981396198272705
+    },
+    {
+      "query_id": "PRD-DEV2-0117",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Colorectal surgery?",
+      "first_semantic_rank": 2,
+      "first_exact_rank": 2,
+      "top1_chunk_id": "DOC-PMC-RENAL-0014-B-C0014",
+      "top1_score": 0.45040011405944824
+    },
+    {
+      "query_id": "PRD-DEV2-0118",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Incidence of AKI in acute heart failure?",
+      "first_semantic_rank": 18,
+      "first_exact_rank": 18,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0209",
+      "top1_score": 0.5822772979736328
+    },
+    {
+      "query_id": "PRD-DEV2-0119",
+      "query": "What pathophysiological pathways drive acute tubular injury and cellular damage in Risk factors for AKI development in acute heart failure?",
+      "first_semantic_rank": 1,
+      "first_exact_rank": 1,
+      "top1_chunk_id": "DOC-PMC-RENAL-0006-B-C0081",
+      "top1_score": 0.6011694669723511
+    },
+    {
+      "query_id": "PRD-DEV2-0120",
+      "query": "How does the renin-angiotensin-aldosterone axis regulate vascular tone and renal remodeling in Summary of evidence?",
+      "first_semantic_rank": 3,
+      "first_exact_rank": 3,
+      "top1_chunk_id": "DOC-PMC-RENAL-0001-B-C0025",
+      "top1_score": 0.5416926145553589
+    }
+  ]
+}

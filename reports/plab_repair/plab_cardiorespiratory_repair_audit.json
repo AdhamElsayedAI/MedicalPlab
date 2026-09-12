@@ -1,0 +1,376 @@
+{
+  "batch_id": "cardiorespiratory_batch_1_v1",
+  "total_questions": 36,
+  "classification_summary": {
+    "EVIDENCE_VERIFIED": 7,
+    "NEEDS_SOURCE_REPAIR": 29,
+    "REJECTED": 0
+  },
+  "false_positive_citations_detected": 18,
+  "authority_mismatches_detected": 2,
+  "questions_detail": [
+    {
+      "question_id": "PLAB-CARD-0001",
+      "topic": "Hypertension (Essential & Secondary)",
+      "correct_answer": "A",
+      "correct_text": "Amlodipine 5 mg once daily",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Hypertension can be defined using specific systolic and diastolic blood pressure...' defines context but does NOT mention correct option 'Amlodipine 5 mg once daily'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0002",
+      "topic": "Hypertension (Essential & Secondary)",
+      "correct_answer": "B",
+      "correct_text": "Plasma aldosterone-to-renin ratio",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Hypertension can be divided into two major categories: essential (or primary) hy...' defines context but does NOT mention correct option 'Plasma aldosterone-to-renin ratio'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0003",
+      "topic": "Hypertension (Essential & Secondary)",
+      "correct_answer": "C",
+      "correct_text": "Add a calcium channel blocker (e.g. amlodipine 5 mg daily)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Although several countries and professional societies have guidelines on the top...' defines context but does NOT mention correct option 'Add a calcium channel blocker (e.g. amlodipine 5 mg daily)'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0004",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "correct_answer": "D",
+      "correct_text": "Direct-acting oral anticoagulant (DOAC, e.g. apixaban)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Several clinical risk scores have been developed to assess stroke risk in patien...' defines context but does NOT mention correct option 'Direct-acting oral anticoagulant (DOAC, e.g. apixaban)'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0005",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "correct_answer": "E",
+      "correct_text": "Bisoprolol",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Commonly used medications for rate control include atrio-ventricular (AV) nodal ...' defines context but does NOT mention correct option 'Bisoprolol'",
+        "AUTHORITY_MISMATCH: Stem cites NICE guideline, but evidence is drawn from DOC-PMC-CARD-0008 without NICE authority binding."
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0006",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "correct_answer": "A",
+      "correct_text": "Smoking cessation and reduction of alcohol intake",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0007",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "correct_answer": "B",
+      "correct_text": "Orthostatic hypotension",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0008",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "correct_answer": "C",
+      "correct_text": "Admit or urgently refer for specialist cardiovascular evaluation with telemetry/echocardiography",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Distinguishing between the cardiac and non-cardiac causes of syncope is critical...' defines context but does NOT mention correct option 'Admit or urgently refer for specialist cardiovascular evaluation with telemetry/echocardiography'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0009",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "correct_answer": "D",
+      "correct_text": "Carotid sinus syndrome",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0001",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "correct_answer": "E",
+      "correct_text": "Target SpO2 88\u201392% using a 28% or 24% Venturi mask",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Preventing and managing exacerbations is crucial in COPD care to reduce disease ...' defines context but does NOT mention correct option 'Target SpO2 88\u201392% using a 28% or 24% Venturi mask'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0002",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "correct_answer": "A",
+      "correct_text": "Combination long-acting beta2-agonist plus long-acting muscarinic antagonist (LABA + LAMA)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "AUTHORITY_MISMATCH: Stem cites NICE guideline, but evidence is drawn from DOC-PMC-RESP-0003 without NICE authority binding."
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0003",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "correct_answer": "B",
+      "correct_text": "Escalate to triple therapy by adding an inhaled corticosteroid (ICS) to his LABA/LAMA",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Some patients exhibit neutrophilic inflammation, while others display eosinophil...' defines context but does NOT mention correct option 'Escalate to triple therapy by adding an inhaled corticosteroid (ICS) to his LABA/LAMA'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-EMERG-0001",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "correct_answer": "C",
+      "correct_text": "Adrenaline 1 mg IV and Amiodarone 300 mg IV",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Cardiopulmonary resuscitation (CPR) stands as a cornerstone in emergency care, r...' defines context but does NOT mention correct option 'Adrenaline 1 mg IV and Amiodarone 300 mg IV'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-EMERG-0002",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "correct_answer": "D",
+      "correct_text": "Compression rate of 100\u2013120 per minute and depth of 5\u20136 cm with complete chest recoil",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Effective CPR is an arduous task that requires skill, precision, and quick decis...' defines context but does NOT mention correct option 'Compression rate of 100\u2013120 per minute and depth of 5\u20136 cm with complete chest recoil'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-EMERG-0003",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "correct_answer": "E",
+      "correct_text": "Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 \u00b0C)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Post-resuscitation care plays a crucial role in neurological outcome and overall...' defines context but does NOT mention correct option 'Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 \u00b0C)'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0004",
+      "topic": "Pneumothorax",
+      "correct_answer": "A",
+      "correct_text": "Conservative observation with clinical monitoring and outpatient follow-up",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0005",
+      "topic": "Pneumothorax",
+      "correct_answer": "B",
+      "correct_text": "Cigarette smoking and subpleural apical blebs/bullae",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'The incidence of primary spontaneous pneumothorax (PSP) admissions is 14.1 per 1...' defines context but does NOT mention correct option 'Cigarette smoking and subpleural apical blebs/bullae'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0006",
+      "topic": "Pneumothorax",
+      "correct_answer": "C",
+      "correct_text": "Conservative observation was non-inferior to interventional management and associated with lower recurrence and fewer adverse events",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0007",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "correct_answer": "D",
+      "correct_text": "Severe ARDS",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0008",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "correct_answer": "E",
+      "correct_text": "Tidal volume 4\u20136 mL/kg predicted body weight and plateau pressure < 30 cmH2O",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'In moderate\u2013severe ARDS patients, respiratory management is similar for ARDS fro...' defines context but does NOT mention correct option 'Tidal volume 4\u20136 mL/kg predicted body weight and plateau pressure < 30 cmH2O'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-RESP-0009",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "correct_answer": "A",
+      "correct_text": "Prone positioning for at least 16 consecutive hours daily",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0010",
+      "topic": "Cardiogenic Shock",
+      "correct_answer": "B",
+      "correct_text": "Norepinephrine (noradrenaline)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Indications: First-line vasopressor in cardiogenic shock...' defines context but does NOT mention correct option 'Norepinephrine (noradrenaline)'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0011",
+      "topic": "Cardiogenic Shock",
+      "correct_answer": "C",
+      "correct_text": "Dobutamine",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Indications: First-line inotropic agent in cardiogenic shock...' defines context but does NOT mention correct option 'Dobutamine'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0012",
+      "topic": "Cardiogenic Shock",
+      "correct_answer": "D",
+      "correct_text": "Emergent coronary revascularisation (primary percutaneous coronary intervention, PCI)",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0013",
+      "topic": "Infective Endocarditis (IE)",
+      "correct_answer": "E",
+      "correct_text": "Three sets of blood cultures obtained from separate venipuncture sites with >=30 minutes between sets",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0014",
+      "topic": "Infective Endocarditis (IE)",
+      "correct_answer": "A",
+      "correct_text": "Transoesophageal echocardiography (TEE)",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0015",
+      "topic": "Infective Endocarditis (IE)",
+      "correct_answer": "B",
+      "correct_text": "Antibiotic prophylaxis is NOT routinely recommended for dental procedures",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0016",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "correct_answer": "C",
+      "correct_text": "Atropine 500 mcg IV",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Implantable cardiac devices are at the forefront of managing tachy-arrhythmias, ...' defines context but does NOT mention correct option 'Atropine 500 mcg IV'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0017",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "correct_answer": "D",
+      "correct_text": "Pacing-induced cardiomyopathy due to ventricular dyssynchrony",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0018",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "correct_answer": "E",
+      "correct_text": "Lower risk of heart failure hospitalisation and new-onset atrial fibrillation",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0019",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "correct_answer": "A",
+      "correct_text": "Severe aortic stenosis",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0020",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "correct_answer": "B",
+      "correct_text": "Severe aortic stenosis",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0021",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "correct_answer": "C",
+      "correct_text": "Multidetector computed tomography (MDCT)",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'Regarding transcatheter aortic valve replacement (TAVR), CT is the reference tec...' defines context but does NOT mention correct option 'Multidetector computed tomography (MDCT)'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0022",
+      "topic": "Functional Mitral Regurgitation",
+      "correct_answer": "D",
+      "correct_text": "FMR is caused by left ventricular remodeling and papillary muscle displacement with structurally normal leaflets",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [
+        "FALSE_POSITIVE_CITATION: Cited quote 'The optimal surgical approach for the treatment of FMR remains a controversial t...' defines context but does NOT mention correct option 'FMR is caused by left ventricular remodeling and papillary muscle displacement with structurally normal leaflets'"
+      ],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0023",
+      "topic": "Functional Mitral Regurgitation",
+      "correct_answer": "E",
+      "correct_text": "Optimization of guideline-directed medical therapy for heart failure with reduced ejection fraction",
+      "status": "EVIDENCE_VERIFIED",
+      "repair_reasons": [],
+      "citations_audited": 1
+    },
+    {
+      "question_id": "PLAB-CARD-0024",
+      "topic": "Functional Mitral Regurgitation",
+      "correct_answer": "A",
+      "correct_text": "High rate of recurrent mitral regurgitation over long-term follow-up",
+      "status": "NEEDS_SOURCE_REPAIR",
+      "repair_reasons": [],
+      "citations_audited": 1
+    }
+  ]
+}
