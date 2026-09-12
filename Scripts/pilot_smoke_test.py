@@ -117,17 +117,23 @@ def run_smoke_test() -> bool:
     if temp_db.exists():
         temp_db.unlink()
     s1 = PLABPilotService.load_default(persistence_path=temp_db)
-    s1.start_review("PLAB-CARD-0001", "REV-001", "Dr. Jane Doe")
+    test_qid = "PLAB-CARD-0006"
+    s1.start_review(test_qid, "REV-001", "Dr. Jane Doe")
     findings = {d: ReviewFinding.PASS for d in ["clinical_correctness", "sba_unambiguity", "uk_alignment", "evidence_adequacy", "distractor_quality", "explanation_quality"]}
-    s1.submit_review("PLAB-CARD-0001", "REV-001", ReviewDecision.APPROVED, findings, "Excellent question", None)
+    s1.submit_review(test_qid, "REV-001", ReviewDecision.APPROVED, findings, "Excellent question", None)
     # Restart service with same persistence DB
     s2 = PLABPilotService.load_default(persistence_path=temp_db)
     check(12, "Reviewer decision persists across service restart in durable store",
-          s2.reviews["PLAB-CARD-0001"].reviewer_id == "REV-001" and s2.reviews["PLAB-CARD-0001"].final_decision == ReviewDecision.APPROVED)
+          s2.reviews[test_qid].reviewer_id == "REV-001" and s2.reviews[test_qid].final_decision == ReviewDecision.APPROVED)
 
-    # 13. Golden state persists after restart
+    # 13. Golden promotion status persists after restart (explicit promotion, not automatic on approval)
+    from dataclasses import replace
+    promoted_review = replace(s2.reviews[test_qid], golden_status=True)
+    s2.reviews[test_qid] = promoted_review
+    s2.persistence.save_review(promoted_review)
+    s3 = PLABPilotService.load_default(persistence_path=temp_db)
     check(13, "Golden promotion status persists across service restart in durable store",
-          s2.reviews["PLAB-CARD-0001"].golden_status is True and s2.is_golden("PLAB-CARD-0001") is True)
+          s3.reviews[test_qid].golden_status is True and s3.is_golden(test_qid) is True)
 
     # 14. no fake demo content returned
     resp14 = client.get("/api/v1/version")

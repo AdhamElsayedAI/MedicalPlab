@@ -4,10 +4,13 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from contextlib import nullcontext
+from dataclasses import asdict
 from pathlib import Path
 from typing import Any, Mapping
 
 from .governance import (
+    QuestionRevision,
     ReviewDecision,
     ReviewFinding,
     ReviewRecord,
@@ -16,7 +19,7 @@ from .governance import (
 
 
 class SQLitePilotPersistence:
-    """Durable SQLite persistence ensuring zero data loss on service restart."""
+    """Transactional local storage; callers must propagate storage failures."""
 
     def __init__(self, db_path: Path | str):
         self.db_path = Path(db_path)
@@ -79,8 +82,76 @@ class SQLitePilotPersistence:
                         editor_id TEXT NOT NULL,
                         created_at TEXT NOT NULL
                     );
+                    CREATE TABLE IF NOT EXISTS review_events (
+                        event_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        question_id TEXT NOT NULL,
+                        record_json TEXT NOT NULL,
+                        recorded_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+                    );
                     """
                 )
+                columns = {row[1] for row in conn.execute("PRAGMA table_info(attempts)")}
+                if "attempt_json" not in columns:
+                    conn.execute("ALTER TABLE attempts ADD COLUMN attempt_json TEXT")
+
+                rev_columns = {row[1] for row in conn.execute("PRAGMA table_info(revisions)")}
+                if rev_columns and ("version_number" not in rev_columns or "revision_id" not in rev_columns):
+                    conn.execute("ALTER TABLE revisions RENAME TO _revisions_old")
+                    conn.execute(
+                        """
+                        CREATE TABLE revisions (
+                            revision_id TEXT PRIMARY KEY,
+                            question_id TEXT NOT NULL,
+                            version_number INTEGER NOT NULL,
+                            changes_json TEXT NOT NULL,
+                            revised_payload_json TEXT NOT NULL,
+                            reason TEXT NOT NULL,
+                            editor_id TEXT NOT NULL,
+                            created_at TEXT NOT NULL
+                        );
+                        """
+                    )
+                    has_revised_questions = bool(
+                        conn.execute(
+                            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='revised_questions'"
+                        ).fetchone()
+                    )
+                    for row in conn.execute("SELECT * FROM _revisions_old").fetchall():
+                        row_dict = dict(row)
+                        qid = row_dict["question_id"]
+                        v = row_dict.get("version_number", row_dict.get("version", 1))
+                        rev_id = row_dict.get("revision_id") or f"{qid}:{v}"
+                        changes = row_dict.get("changes_json") or row_dict.get("changed_fields_json", "[]")
+                        reason = row_dict.get("reason") or row_dict.get("revision_reason", "")
+                        editor = row_dict.get("editor_id", "")
+                        created = row_dict.get("created_at", "")
+                        payload = row_dict.get("revised_payload_json")
+                        if not payload and has_revised_questions:
+                            p_row = conn.execute(
+                                "SELECT question_json FROM revised_questions WHERE question_id = ?",
+                                (qid,),
+                            ).fetchone()
+                            if p_row:
+                                payload = p_row[0]
+                        conn.execute(
+                            """
+                            INSERT OR REPLACE INTO revisions (
+                                revision_id, question_id, version_number, changes_json,
+                                revised_payload_json, reason, editor_id, created_at
+                            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                            """,
+                            (
+                                rev_id,
+                                qid,
+                                v,
+                                changes,
+                                payload or "{}",
+                                reason,
+                                editor,
+                                created,
+                            ),
+                        )
+                    conn.execute("DROP TABLE _revisions_old")
         finally:
             conn.close()
 
@@ -90,11 +161,11 @@ class SQLitePilotPersistence:
             with conn:
                 conn.execute(
                     """
-                    INSERT OR REPLACE INTO attempts (
+                    INSERT INTO attempts (
                         attempt_id, user_id, question_id, idempotency_key,
                         selected_option, correct_option, is_correct,
-                        response_json, submitted_at, response_time_ms
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        response_json, submitted_at, response_time_ms, attempt_json
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
                         str(attempt["attempt_id"]),
@@ -107,6 +178,7 @@ class SQLitePilotPersistence:
                         json.dumps(attempt.get("response", {}), ensure_ascii=False),
                         str(attempt.get("submitted_at", "")),
                         attempt.get("response_time_ms"),
+                        json.dumps(dict(attempt), ensure_ascii=False),
                     ),
                 )
         finally:
@@ -115,13 +187,14 @@ class SQLitePilotPersistence:
     def load_attempts(self) -> dict[tuple[str, str], dict[str, Any]]:
         conn = self._connect()
         try:
-            cur = conn.execute("SELECT * FROM attempts")
+            cur = conn.execute("SELECT * FROM attempts ORDER BY submitted_at, rowid")
             rows = cur.fetchall()
             result = {}
             for row in rows:
                 key = (row["user_id"], row["idempotency_key"])
                 resp = json.loads(row["response_json"]) if row["response_json"] else {}
                 result[key] = {
+                    **(json.loads(row["attempt_json"]) if row["attempt_json"] else {}),
                     "attempt_id": row["attempt_id"],
                     "user_id": row["user_id"],
                     "question_id": row["question_id"],
@@ -133,14 +206,17 @@ class SQLitePilotPersistence:
                     "response_time_ms": row["response_time_ms"],
                     "response": resp,
                 }
+                # Older records did not persist the complete attempt envelope.
+                result[key].setdefault("topic", resp.get("topic", "UNKNOWN_LEGACY_TOPIC"))
+                result[key].setdefault("question_version", resp.get("question_version"))
             return result
         finally:
             conn.close()
 
-    def save_review(self, review: ReviewRecord) -> None:
-        conn = self._connect()
+    def save_review(self, review: ReviewRecord, *, _connection: sqlite3.Connection | None = None) -> None:
+        conn = _connection or self._connect()
         try:
-            with conn:
+            with (conn if _connection is None else nullcontext()):
                 conn.execute(
                     """
                     INSERT OR REPLACE INTO reviews (
@@ -173,8 +249,13 @@ class SQLitePilotPersistence:
                         int(review.golden_status),
                     ),
                 )
+                conn.execute(
+                    "INSERT INTO review_events (question_id, record_json) VALUES (?, ?)",
+                    (review.question_id, json.dumps(asdict(review), ensure_ascii=False)),
+                )
         finally:
-            conn.close()
+            if _connection is None:
+                conn.close()
 
     def load_reviews(self) -> dict[str, ReviewRecord]:
         conn = self._connect()
@@ -208,28 +289,39 @@ class SQLitePilotPersistence:
         finally:
             conn.close()
 
-    def save_revision(self, revision: Any, revised_payload: Mapping[str, Any]) -> None:
-        conn = self._connect()
+    def save_revision(self, revision: QuestionRevision, revised_payload: Mapping[str, Any], *, _connection: sqlite3.Connection | None = None) -> None:
+        conn = _connection or self._connect()
         try:
-            with conn:
+            with (conn if _connection is None else nullcontext()):
                 conn.execute(
                     """
-                    INSERT OR REPLACE INTO revisions (
+                    INSERT INTO revisions (
                         revision_id, question_id, version_number, changes_json,
                         revised_payload_json, reason, editor_id, created_at
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
-                        getattr(revision, "revision_id", str(uuid.uuid4())),
+                        f"{revision.question_id}:{revision.version}",
                         revision.question_id,
-                        revision.version_number,
-                        json.dumps(revision.changes, ensure_ascii=False),
+                        revision.version,
+                        json.dumps(list(revision.changed_fields), ensure_ascii=False),
                         json.dumps(dict(revised_payload), ensure_ascii=False),
-                        revision.reason,
+                        revision.revision_reason,
                         revision.editor_id,
                         revision.created_at,
                     ),
                 )
+        finally:
+            if _connection is None:
+                conn.close()
+
+    def save_revision_and_review(self, revision: QuestionRevision, payload: Mapping[str, Any], review: ReviewRecord) -> None:
+        """Commit edited content and invalidation of old approval together."""
+        conn = self._connect()
+        try:
+            with conn:
+                self.save_revision(revision, payload, _connection=conn)
+                self.save_review(review, _connection=conn)
         finally:
             conn.close()
 

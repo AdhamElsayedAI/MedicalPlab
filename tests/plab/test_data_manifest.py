@@ -13,7 +13,7 @@ class TestDataManifest(unittest.TestCase):
         self.assertEqual(report.document_count, 13)
         self.assertEqual(report.chunk_count, 817)
         self.assertEqual(report.question_count, 36)
-        self.assertEqual(report.batch_version, "cardiorespiratory_batch_1_v1")
+        self.assertEqual(report.batch_version, "cardiorespiratory_batch_1_source_audit_v2")
         self.assertEqual(report.snapshot_id, "medicalplab-cardiorespiratory-corpus-v1")
 
 

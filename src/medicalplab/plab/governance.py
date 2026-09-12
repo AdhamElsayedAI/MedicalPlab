@@ -208,6 +208,10 @@ def evaluate_golden_promotion(
     uk_reconciliation_acceptable: bool,
 ) -> PromotionResult:
     errors: list[str] = []
+    if review.question_id != question.question_id or question_payload.get("question_id") != question.question_id:
+        errors.append("review_question_mismatch")
+    if question_payload.get("evidence_verification_status") in {"NEEDS_SOURCE_REPAIR", "REJECTED", "SOURCE_REQUIRED"}:
+        errors.append("source_repair_required")
     validation_errors = validate_plab_question(question, evidence_texts)
     if validation_errors or tuple(choice.id for choice in question.choices) != PLAB_OPTION_KEYS:
         errors.append("automated_validation_failed")

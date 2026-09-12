@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import hashlib
 import json
+from copy import deepcopy
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
@@ -46,7 +48,7 @@ def create_golden_dataset_freeze(
 
     Fails closed if 0 questions are golden.
     """
-    golden_qids = [qid for qid in service.questions if service.is_golden(qid)]
+    golden_qids = sorted(qid for qid in service.questions if service.is_golden(qid))
     if not golden_qids:
         raise ValueError(
             "CANNOT_FREEZE_EMPTY_DATASET: 0 questions have satisfied the Golden promotion gate. "
@@ -68,7 +70,7 @@ def create_golden_dataset_freeze(
         timestamps[qid] = review.reviewed_at or "UNKNOWN"
         frozen_items.append(
             {
-                **dict(q),
+                **deepcopy(q),
                 "question_version": review.question_version,
                 "question_content_sha256": review.question_content_sha256,
                 "reviewer_id": review.reviewer_id,
@@ -80,12 +82,15 @@ def create_golden_dataset_freeze(
 
     payload_for_hashing = {
         "golden_dataset_id": GOLDEN_DATASET_ID,
-        "source_batch_id": SOURCE_BATCH_ID,
+        "source_batch_id": service.batch_version,
         "corpus_snapshot_id": CORPUS_SNAPSHOT_ID,
         "golden_count": len(golden_qids),
         "question_ids": sorted(golden_qids),
         "versions": versions,
         "hashes": hashes,
+        "reviewer_ids": reviewers,
+        "review_timestamps": timestamps,
+        "golden_questions": frozen_items,
     }
     freeze_sha = hashlib.sha256(
         json.dumps(payload_for_hashing, sort_keys=True, ensure_ascii=False).encode("utf-8")
@@ -93,7 +98,7 @@ def create_golden_dataset_freeze(
 
     return GoldenDatasetFreeze(
         golden_dataset_id=GOLDEN_DATASET_ID,
-        source_batch_id=SOURCE_BATCH_ID,
+        source_batch_id=service.batch_version,
         corpus_snapshot_id=CORPUS_SNAPSHOT_ID,
         created_at=datetime.now(timezone.utc).isoformat(),
         golden_count=len(golden_qids),
@@ -107,3 +112,12 @@ def create_golden_dataset_freeze(
         freeze_sha256=freeze_sha,
         golden_questions=frozen_items,
     )
+
+
+def write_freeze(freeze: GoldenDatasetFreeze, destination: Path) -> str:
+    """Publish a new freeze artifact; never replace a previous freeze record."""
+    data = (json.dumps(freeze.to_dict(), ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode("utf-8")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with destination.open("xb") as stream:
+        stream.write(data)
+    return hashlib.sha256(data).hexdigest()

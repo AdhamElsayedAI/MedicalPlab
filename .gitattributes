@@ -10,3 +10,5 @@
 *.bat text eol=crlf
 *.cmd text eol=crlf
 Data/raw/renal_v1/*.xml -text
+# Frozen/versioned evidence is hashed as bytes, without checkout conversion.
+Data/questions/versions/*.json -text

@@ -1,8 +1,8 @@
 """Test suite validating the Cardiorespiratory PLAB Question Batch 1.
 
 Ensures that all 36 questions in Data/questions/cardiorespiratory_batch_1.json
-adhere strictly to the PLAB 1 five-option SBA contract, pass all validation gates,
-are 100% grounded in verified corpus chunks, and cover all 12 UK topics.
+adhere to the five-option SBA contract, contain literal citation anchors,
+and cover all 12 topics. These checks do not establish clinical entailment.
 """
 
 from collections import Counter
@@ -82,7 +82,10 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
         with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
             manifest = json.load(f)
 
-        actual_sha256 = hashlib.sha256(BATCH_PATH.read_bytes()).hexdigest()
+        # The v1 manifest belongs to the original frozen bytes, not the later
+        # source-audit checkpoint that was historically written over its path.
+        frozen_v1 = PROJECT_ROOT / "Data/questions/versions/cardiorespiratory_batch_1_frozen_v1.json"
+        actual_sha256 = hashlib.sha256(frozen_v1.read_bytes()).hexdigest()
         self.assertEqual(manifest["batch_file_sha256"], actual_sha256)
         self.assertEqual(manifest["total_questions"], len(self.batch_data["questions"]))
         self.assertEqual(
@@ -90,6 +93,16 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
             [question["question_id"] for question in self.batch_data["questions"]],
         )
         self.assertEqual(manifest["human_review_status"], "PENDING")
+        self.assertFalse(manifest["golden_dataset_status"])
+
+    def test_versioned_source_audit_matches_its_own_manifest(self):
+        path = PROJECT_ROOT / "Data/metadata/cardiorespiratory_batch_1_source_audit_v2.manifest.json"
+        manifest = json.loads(path.read_text(encoding="utf-8"))
+        data = (PROJECT_ROOT / manifest["batch_file"]).read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(), manifest["batch_file_sha256"])
+        batch = json.loads(data)
+        self.assertEqual(batch["questions"], self.batch_data["questions"])
+        self.assertEqual(batch["lineage"]["clinician_review_status"], "PENDING")
         self.assertFalse(manifest["golden_dataset_status"])
 
     def test_all_12_topics_represented_equally(self):

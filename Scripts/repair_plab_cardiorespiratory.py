@@ -14,10 +14,12 @@ Classifies every question into:
 """
 
 import hashlib
+import argparse
 import json
 import re
 import sys
 from pathlib import Path
+from datetime import datetime, timezone
 
 _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT / "src"))
@@ -27,7 +29,6 @@ from medicalplab.evidence_engine.models import PlabVerificationStatus, Verificat
 
 INPUT_PATH = _ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
 REPORTS_DIR = _ROOT / "reports" / "plab_repair"
-REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def audit_plab_question(q: dict, verifier: CentralClaimVerifier) -> dict:
@@ -105,6 +106,10 @@ def audit_plab_question(q: dict, verifier: CentralClaimVerifier) -> dict:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Create a new AI-only source audit; never modify a source batch.")
+    parser.add_argument("--output-dir", type=Path, required=True, help="New version/run directory")
+    args = parser.parse_args()
+    args.output_dir.mkdir(parents=True, exist_ok=False)
     print(f"Loading {INPUT_PATH.name}...")
     data = json.loads(INPUT_PATH.read_bytes())
     questions = data.get("questions", [])
@@ -131,9 +136,13 @@ def main():
     data["repair_audit"] = {
         "total_audited": len(questions),
         "status_counts": status_counts,
-        "audited_at": "2026-09-11"
+        "audited_at": datetime.now(timezone.utc).isoformat(),
+        "review_type": "AI_ENGINEERING_ONLY",
+        "clinician_review_status": "PENDING",
+        "source_batch_sha256": hashlib.sha256(INPUT_PATH.read_bytes()).hexdigest(),
     }
-    INPUT_PATH.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    with (args.output_dir / "candidate_batch.json").open("x", encoding="utf-8", newline="\n") as stream:
+        stream.write(json.dumps(data, indent=2) + "\n")
 
     # Generate audit report
     report = {
@@ -149,7 +158,8 @@ def main():
         "questions_detail": audited_questions
     }
 
-    out_report = REPORTS_DIR / "plab_cardiorespiratory_repair_audit.json"
+    report["provenance"] = data["repair_audit"]
+    out_report = args.output_dir / "plab_cardiorespiratory_repair_audit.json"
     out_report.write_text(json.dumps(report, indent=2), encoding="utf-8")
     sha = hashlib.sha256(out_report.read_bytes()).hexdigest()
     (out_report.with_suffix(".json.sha256")).write_text(f"{sha}  {out_report.name}", encoding="utf-8")

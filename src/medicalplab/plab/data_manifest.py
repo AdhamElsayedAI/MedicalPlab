@@ -8,7 +8,8 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
-EXPECTED_BATCH_HASH = "7fbf3183de74df9490c9a2ce5f7b837099b536d76a2365e73abe0c0809104879"
+ACTIVE_BATCH_PATH = "questions/versions/cardiorespiratory_batch_1_source_audit_v2.json"
+EXPECTED_BATCH_HASH = "3351e9b7a70c0dfc83eb3927f0258f80efb273c3e37a08ab9714419f5239eeca"
 EXPECTED_QUEUE_HASH = "11a9c20dd80209243ac791f41b3d2a07f76e8f64fed82e9e1e52024cdef39a26"
 EXPECTED_SNAPSHOT_HASH = "ff9497c744fe5c31813281a042ce30cc4bfa51aee59d3ed0adcede03ea971db5"
 EXPECTED_DOCUMENT_COUNT = 13
@@ -98,7 +99,7 @@ def verify_production_data_manifest(data_root: Path | str | None = None) -> Data
         except Exception as exc:
             blockers.append(f"CORPUS_SNAPSHOT_INVALID: {exc}")
 
-    batch_file = root / "questions" / "cardiorespiratory_batch_1.json"
+    batch_file = root / ACTIVE_BATCH_PATH
     if not batch_file.exists():
         blockers.append("QUESTION_BATCH_MISSING")
     else:

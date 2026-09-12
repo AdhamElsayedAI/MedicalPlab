@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import json
 import os
+import sqlite3
 import time
 import uuid
 from collections import Counter, defaultdict
-from dataclasses import asdict, replace
+from dataclasses import asdict
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Mapping
@@ -26,6 +27,7 @@ from .governance import (
 )
 from .models import PLABCitation, PLABChoice, PLABQuestion, PLABQuestionStatus
 from .persistence import SQLitePilotPersistence
+from .data_manifest import ACTIVE_BATCH_PATH, verify_production_data_manifest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -181,9 +183,12 @@ class PLABPilotService:
         enable_persistence: bool = True,
     ) -> "PLABPilotService":
         data_root = Path(os.environ.get("MEDICALPLAB_DATA_ROOT", str(PROJECT_ROOT / "Data")))
-        batch_path = data_root / "questions" / "cardiorespiratory_batch_1.json"
+        batch_path = data_root / ACTIVE_BATCH_PATH
         queue_path = data_root / "questions" / "cardiorespiratory_batch_1_review_queue.json"
         snapshot_path = data_root / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
+        integrity = verify_production_data_manifest(data_root)
+        if not integrity.is_valid:
+            raise PLABProductError("PLAB_CONTENT_UNAVAILABLE", "PLAB data integrity validation failed: " + ",".join(integrity.blockers), 503)
         try:
             batch = json.loads(batch_path.read_text(encoding="utf-8"))
             queue = json.loads(queue_path.read_text(encoding="utf-8"))
@@ -210,10 +215,10 @@ class PLABPilotService:
             db_file = Path(persistence_path) if persistence_path else data_root / "persistence" / "pilot_store.db"
             try:
                 persistence = SQLitePilotPersistence(db_file)
-            except Exception:
-                persistence = None
+            except (OSError, sqlite3.Error) as exc:
+                raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "PLAB storage could not be initialized.", 503) from exc
 
-        instance = cls(batch["questions"], queue["queue"], chunks, str(queue["batch_version"]), preview_qa, persistence=persistence)
+        instance = cls(batch["questions"], queue["queue"], chunks, str(batch["batch_version"]), preview_qa, persistence=persistence)
 
         if persistence:
             try:
@@ -230,8 +235,8 @@ class PLABPilotService:
 
                 persisted_attempts = persistence.load_attempts()
                 instance.attempts.update(persisted_attempts)
-            except Exception:
-                pass
+            except (OSError, sqlite3.Error, ValueError, KeyError, TypeError) as exc:
+                raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "PLAB persisted state could not be loaded.", 503) from exc
 
         return instance
 
@@ -245,6 +250,9 @@ class PLABPilotService:
             if not chunk or chunk["document_id"] != str(citation["document_id"]):
                 citation_resolves = False
                 continue
+            # Bind each quote to its own cited chunk, not any other citation.
+            if " ".join(str(citation["quote"]).casefold().split()) not in " ".join(chunk["text"].casefold().split()):
+                citation_resolves = False
             evidence_texts.append(chunk["text"])
         uk_acceptable = review.uk_alignment is ReviewFinding.PASS
         return evaluate_golden_promotion(
@@ -296,7 +304,7 @@ class PLABPilotService:
                 raise PLABProductError("QUESTION_NOT_FOUND", "Question not found.", 404)
             if not self._is_available(question_id):
                 raise PLABProductError("QUESTION_NOT_AVAILABLE", "Question is not approved for student use.", 403)
-            if selected_option not in "ABCDE":
+            if selected_option not in {"A", "B", "C", "D", "E"}:
                 raise PLABProductError("INVALID_OPTION", "Selected option must be A, B, C, D, or E.", 422)
             if not idempotency_key.strip():
                 raise PLABProductError("IDEMPOTENCY_KEY_REQUIRED", "An idempotency key is required.", 422)
@@ -316,6 +324,7 @@ class PLABPilotService:
             attempt = {
                 "attempt_id": attempt_id,
                 "user_id": user_id,
+                "idempotency_key": idempotency_key.strip(),
                 "question_id": question_id,
                 "question_version": review.question_version,
                 "batch_version": self.batch_version,
@@ -344,12 +353,19 @@ class PLABPilotService:
                 "content_mode": "GOLDEN" if self.is_golden(question_id) else "PREVIEW_QA",
             }
             attempt["response"] = response
-            self.attempts[key] = attempt
             if self.persistence:
                 try:
                     self.persistence.save_attempt(attempt)
-                except Exception:
-                    pass
+                except sqlite3.IntegrityError as exc:
+                    # Another worker may have committed the same retry key.
+                    saved = self.persistence.load_attempts().get(key)
+                    if saved and saved["question_id"] == question_id and saved["selected_option"] == selected_option:
+                        self.attempts[key] = saved
+                        return dict(saved["response"])
+                    raise PLABProductError("IDEMPOTENCY_CONFLICT", "Submission conflicts with a persisted attempt.", 409) from exc
+                except (OSError, sqlite3.Error) as exc:
+                    raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "Attempt was not saved.", 503) from exc
+            self.attempts[key] = attempt
             self.telemetry.attempts_submitted += 1
             self.telemetry.correct_attempts += int(is_correct)
             self.telemetry.topic_distribution[str(payload["topic"])] += 1
@@ -404,12 +420,13 @@ class PLABPilotService:
     def start_review(self, question_id: str, reviewer_id: str, reviewer_name: str | None = None) -> dict[str, object]:
         if question_id not in self.reviews:
             raise PLABProductError("QUESTION_NOT_FOUND", "Question not found.", 404)
-        self.reviews[question_id] = self.reviews[question_id].start(reviewer_id, reviewer_name)
+        started = self.reviews[question_id].start(reviewer_id, reviewer_name)
         if self.persistence:
             try:
-                self.persistence.save_review(self.reviews[question_id])
-            except Exception:
-                pass
+                self.persistence.save_review(started)
+            except (OSError, sqlite3.Error) as exc:
+                raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "Review was not saved.", 503) from exc
+        self.reviews[question_id] = started
         return self.review_status(question_id)
 
     def submit_review(
@@ -430,17 +447,14 @@ class PLABPilotService:
             decided = record.decide(decision, findings, comments, revision_notes)
         except ValueError as exc:
             raise PLABProductError(str(exc), "Review decision failed validation.", 422) from exc
-        self.reviews[question_id] = decided
-        if decision is ReviewDecision.APPROVED:
-            promotion = self._promotion(question_id)
-            if not promotion.promoted:
-                raise PLABProductError("GOLDEN_PROMOTION_FAILED", ",".join(promotion.error_codes), 409)
-            self.reviews[question_id] = replace(decided, golden_status=True)
+        # Clinical approval and publication are distinct actions. An explicit
+        # promotion must recheck the current content and evidence before release.
         if self.persistence:
             try:
-                self.persistence.save_review(self.reviews[question_id])
-            except Exception:
-                pass
+                self.persistence.save_review(decided)
+            except (OSError, sqlite3.Error) as exc:
+                raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "Review decision was not saved.", 503) from exc
+        self.reviews[question_id] = decided
         return self.review_status(question_id)
 
     def revise_question(
@@ -460,9 +474,7 @@ class PLABPilotService:
             _question_model(merged)
         except (ValueError, KeyError, TypeError) as exc:
             raise PLABProductError("INVALID_REVISION", str(exc), 422) from exc
-        self.questions[question_id] = merged
-        self.revisions[question_id].append(asdict(revision))
-        self.reviews[question_id] = ReviewRecord(
+        revised_review = ReviewRecord(
             question_id=question_id,
             question_version=revision.version,
             question_content_sha256=revision.content_sha256,
@@ -471,10 +483,12 @@ class PLABPilotService:
         )
         if self.persistence:
             try:
-                self.persistence.save_revision(revision, merged)
-                self.persistence.save_review(self.reviews[question_id])
-            except Exception:
-                pass
+                self.persistence.save_revision_and_review(revision, merged, revised_review)
+            except (OSError, sqlite3.Error) as exc:
+                raise PLABProductError("PLAB_STORAGE_UNAVAILABLE", "Question revision was not saved.", 503) from exc
+        self.questions[question_id] = merged
+        self.revisions[question_id].append(asdict(revision))
+        self.reviews[question_id] = revised_review
         return self.review_status(question_id)
 
     def review_status(self, question_id: str) -> dict[str, object]:
