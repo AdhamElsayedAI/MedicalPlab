@@ -6,6 +6,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = ROOT / "configs" / "qwen4b_domain_adaptation.json"
+AUTHORIZED_REVISION = "5cf2132abc99cad020ac570b19d031efec650f2b"
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
@@ -16,8 +17,10 @@ def load_config(path: str | Path | None = None) -> dict[str, Any]:
     cfg = json.loads(p.read_text(encoding="utf-8"))
     if cfg["model"]["id"] != "Qwen/Qwen3-Embedding-4B":
         raise ValueError("AUTHORIZED_MODEL_MISMATCH")
-    if not re.fullmatch(r"[0-9a-f]{40}", cfg["model"]["revision"]):
-        raise ValueError("MODEL_REVISION_MUST_BE_PINNED_SHA")
+    if cfg["model"]["revision"] != AUTHORIZED_REVISION:
+        raise ValueError("AUTHORIZED_MODEL_REVISION_MISMATCH")
+    if cfg["model"].get("tokenizer_revision") != AUTHORIZED_REVISION:
+        raise ValueError("AUTHORIZED_TOKENIZER_REVISION_MISMATCH")
     return cfg
 
 
@@ -69,6 +72,9 @@ def resolve_corpus_dir(cfg:dict[str,Any])->Path:
     for legacy in data.get("legacy_corpus_dirs", []):
         if p.resolve() == root_path(legacy).resolve():
             raise RuntimeError(f"LEGACY_CORPUS_FORBIDDEN path={p}")
+    expected = data.get("corpus_sha256_tree")
+    if expected and sha256_tree(p) != expected:
+        raise RuntimeError("LOCKED_CORPUS_SHA_MISMATCH")
     return p
 
 def load_chunks(corpus_dir:Path)->tuple[dict[str,dict[str,Any]],list[str]]:
@@ -76,9 +82,26 @@ def load_chunks(corpus_dir:Path)->tuple[dict[str,dict[str,Any]],list[str]]:
     for p in sorted(corpus_dir.glob("*.chunks.json")):
         obj=json.loads(p.read_text(encoding="utf-8")); title=obj.get("document_title") or obj.get("title") or obj.get("document_id")
         for ch in obj.get("chunks",[]):
-            cid=ch["chunk_id"]; ch=dict(ch); ch.setdefault("document_id",obj.get("document_id")); ch.setdefault("document_title",title); chunks[cid]=ch; ordered.append(cid)
+            cid=ch["chunk_id"]
+            if not isinstance(cid, str) or not cid.strip():
+                raise ValueError(f"INVALID_CHUNK_ID file={p.name}")
+            if cid in chunks:
+                raise ValueError(f"DUPLICATE_CHUNK_ID id={cid}")
+            ch=dict(ch); ch.setdefault("document_id",obj.get("document_id")); ch.setdefault("document_title",title)
+            if not isinstance(ch.get("text"), str) or not ch["text"].strip():
+                raise ValueError(f"EMPTY_CHUNK_TEXT id={cid}")
+            if not isinstance(ch.get("document_id"), str) or not ch["document_id"].strip():
+                raise ValueError(f"MISSING_CHUNK_DOCUMENT id={cid}")
+            chunks[cid]=ch; ordered.append(cid)
     if not chunks: raise ValueError("EMPTY_CORPUS")
     return chunks,ordered
+
+
+def literal_span_in_text(span: str, text: str) -> bool:
+    """Whitespace-only normalization; preserve signs, punctuation and negation."""
+    normalized_span = " ".join(span.split())
+    normalized_text = " ".join(text.split())
+    return bool(normalized_span and normalized_text and normalized_span in normalized_text)
 
 def verify_product_dev_sha(cfg:dict[str,Any])->str:
     p=root_path(cfg["data"]["product_dev_v3"]); actual=sha256_file(p); expected=cfg["data"]["product_dev_v3_sha256"]

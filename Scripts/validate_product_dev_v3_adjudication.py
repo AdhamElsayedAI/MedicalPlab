@@ -7,10 +7,11 @@ from collections import Counter
 from pathlib import Path
 
 from qwen4b_adaptation_common import (
-    atomic_json,
     load_chunks,
     load_config,
-    normalize_text,
+    literal_span_in_text,
+    canonical_json_bytes,
+    sha256_file,
     resolve_corpus_dir,
     root_path,
     sha256_tree,
@@ -18,6 +19,7 @@ from qwen4b_adaptation_common import (
 )
 
 ALLOWED_DECISIONS = {"KEEP", "REPAIR", "REJECT"}
+SYNTHETIC_PROVENANCE = {"BLUEPRINT_EXPANSION_SPEC", "BLUEPRINT_TARGETED_FILL"}
 
 
 def _split_ids(value: str) -> list[str]:
@@ -25,14 +27,7 @@ def _split_ids(value: str) -> list[str]:
 
 
 def _span_in_chunks(span: str, chunk_ids: list[str], chunks: dict) -> bool:
-    s = normalize_text(span)
-    if not s:
-        return False
-    for cid in chunk_ids:
-        text = normalize_text(chunks[cid].get("text", ""))
-        if s in text or text in s:
-            return True
-    return False
+    return any(literal_span_in_text(span, chunks[cid].get("text", "")) for cid in chunk_ids)
 
 
 def validate(cfg: dict, manifest_path: Path) -> dict:
@@ -40,6 +35,11 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
     corpus_dir = resolve_corpus_dir(cfg)
     corpus_sha = sha256_tree(corpus_dir)
     chunks, _ = load_chunks(corpus_dir)
+    originals = {
+        item["query_id"]: item
+        for item in json.loads(root_path(cfg["data"]["product_dev_v3"]).read_text(encoding="utf-8"))
+        if item.get("provenance") in SYNTHETIC_PROVENANCE
+    }
 
     summary_path = root_path(cfg["outputs"]["root"]) / "product_dev_v3_reconstruction" / "summary.json"
     if not summary_path.exists():
@@ -56,7 +56,9 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
     with manifest_path.open("r", encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
 
-    expected_n = int(reconstruction.get("selected_item_n", 31))
+    expected_n = len(originals)
+    if reconstruction.get("selected_item_n") != expected_n:
+        raise RuntimeError("RECONSTRUCTION_ITEM_COUNT_MISMATCH")
     if len(rows) != expected_n:
         raise RuntimeError(f"ADJUDICATION_ROW_COUNT_MISMATCH expected={expected_n} actual={len(rows)}")
 
@@ -70,10 +72,11 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
         decision = (row.get("review_decision") or "").strip().upper()
         reviewer = (row.get("reviewer") or "").strip()
         notes = (row.get("review_notes") or "").strip()
-        original_doc = (row.get("declared_gold_document_id") or "").strip()
-        declared_present = (row.get("declared_document_present_in_locked_corpus") or "").strip().lower() in {"true", "1", "yes"}
-        original_exact = _split_ids(row.get("original_exact_gold_chunk_ids") or "")
-        original_semantic = _split_ids(row.get("original_semantic_support_chunk_ids") or "")
+        original = originals.get(qid, {})
+        original_doc = original.get("gold_document_id", "")
+        declared_present = any(ch["document_id"] == original_doc for ch in chunks.values())
+        original_exact = original.get("exact_gold_chunk_ids", [])
+        original_semantic = original.get("semantic_support_chunk_ids", [])
         corrected_doc = (row.get("correct_gold_document_id") or "").strip()
         corrected_exact = _split_ids(row.get("correct_exact_gold_chunk_ids") or "")
         corrected_semantic = _split_ids(row.get("correct_semantic_support_chunk_ids") or "")
@@ -85,6 +88,17 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
         elif qid in seen:
             row_errors.append("DUPLICATE_QUERY_ID")
         seen.add(qid)
+        if qid not in originals:
+            row_errors.append("UNKNOWN_QUERY_ID")
+        elif (
+            row.get("declared_gold_document_id", "").strip() != original_doc
+            or _split_ids(row.get("original_exact_gold_chunk_ids", "")) != original_exact
+            or _split_ids(row.get("original_semantic_support_chunk_ids", "")) != original_semantic
+            or row.get("query") != original.get("query")
+            or row.get("canonical_claim") != original.get("canonical_claim")
+            or row.get("provenance") != original.get("provenance")
+        ):
+            row_errors.append("IMMUTABLE_SOURCE_FIELDS_CHANGED")
 
         if decision not in ALLOWED_DECISIONS:
             row_errors.append("DECISION_MUST_BE_KEEP_REPAIR_OR_REJECT")
@@ -92,6 +106,9 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
             row_errors.append("REVIEWER_REQUIRED")
         if not notes:
             row_errors.append("REVIEW_NOTES_REQUIRED")
+        support_status = (row.get("source_support_status") or "").strip().upper()
+        if support_status != ("SUPPORTED" if decision in {"KEEP", "REPAIR"} else "UNSUPPORTED"):
+            row_errors.append("SOURCE_SUPPORT_STATUS_INCONSISTENT")
 
         if decision == "KEEP":
             if not declared_present:
@@ -99,6 +116,13 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
             missing = [cid for cid in original_exact + original_semantic if cid not in chunks]
             if missing:
                 row_errors.append("KEEP_FORBIDDEN_ORIGINAL_CHUNK_IDS_MISSING:" + ";".join(sorted(set(missing))))
+            if not original_exact or not original_semantic:
+                row_errors.append("KEEP_REQUIRES_NONEMPTY_QRELS")
+            if not missing:
+                if any(chunks[cid]["document_id"] != original_doc for cid in original_exact + original_semantic):
+                    row_errors.append("KEEP_CHUNK_DOCUMENT_MISMATCH")
+                if not _span_in_chunks(original.get("evidence_span", ""), original_semantic, chunks):
+                    row_errors.append("KEEP_EVIDENCE_SPAN_NOT_LITERAL")
             if any([corrected_doc, corrected_exact, corrected_semantic, corrected_span]):
                 row_errors.append("KEEP_MUST_NOT_SUPPLY_REPAIR_FIELDS")
 
@@ -143,10 +167,15 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
                 "correct_evidence_span": corrected_span or None,
             })
 
+    if seen != set(originals):
+        errors.append({"errors": ["ADJUDICATION_QUERY_ID_SET_MISMATCH"], "missing_query_ids": sorted(set(originals) - seen)})
     complete = len(errors) == 0 and len(validated) == expected_n
     result = {
         "status": "PRODUCT_DEV_V3_ADJUDICATION_VALIDATION_COMPLETE" if complete else "PRODUCT_DEV_V3_ADJUDICATION_VALIDATION_FAILED",
         "benchmark_sha256": product_sha,
+        "manifest_sha256": sha256_file(manifest_path),
+        "review_validation_scope": "STRUCTURE_AND_LITERAL_PROVENANCE_ONLY",
+        "clinician_review_status": "NOT_ESTABLISHED_BY_THIS_VALIDATOR",
         "locked_corpus_path": str(corpus_dir),
         "locked_corpus_sha256_tree": corpus_sha,
         "expected_item_n": expected_n,
@@ -165,8 +194,15 @@ def validate(cfg: dict, manifest_path: Path) -> dict:
         "next_state": "READY_FOR_VERSIONED_BENCHMARK_RECONSTRUCTION" if complete else "COMPLETE_BLIND_SOURCE_GROUNDED_ADJUDICATION",
     }
 
-    out = root_path(cfg["outputs"]["root"]) / "product_dev_v3_reconstruction" / "adjudication_validation.json"
-    atomic_json(out, result)
+    out = root_path(cfg["outputs"]["root"]) / "adjudication_validations" / (result["manifest_sha256"] + ".json")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    data = canonical_json_bytes(result)
+    if out.exists():
+        if out.read_bytes() != data:
+            raise FileExistsError(f"VALIDATION_ARTIFACT_ALREADY_EXISTS path={out}")
+    else:
+        with out.open("xb") as stream:
+            stream.write(data)
     print(json.dumps({k: v for k, v in result.items() if k not in {"errors", "validated_decisions"}}, indent=2))
     if errors:
         print(json.dumps({"errors": errors[:20]}, indent=2))

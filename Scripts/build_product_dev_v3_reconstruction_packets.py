@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import shutil
 from collections import defaultdict
 from pathlib import Path
 
@@ -48,7 +47,7 @@ def _doc_chunks(chunks: dict, ordered: list[str]) -> dict[str, list[dict]]:
     return grouped
 
 
-def build(cfg: dict) -> dict:
+def build(cfg: dict, output_dir: Path | None = None) -> dict:
     product_sha = verify_product_dev_sha(cfg)
     corpus_dir = resolve_corpus_dir(cfg)
     chunks, ordered = load_chunks(corpus_dir)
@@ -72,11 +71,11 @@ def build(cfg: dict) -> dict:
     if len(selected) != 31:
         raise RuntimeError(f"EXPECTED_31_SYNTHETIC_RECONSTRUCTION_ITEMS actual={len(selected)}")
 
-    out_root = root_path(cfg["outputs"]["root"]) / "product_dev_v3_reconstruction"
+    out_root = output_dir or root_path(cfg["outputs"]["root"]) / "product_dev_v3_reconstruction"
     packets_dir = out_root / "packets"
-    if out_root.exists():
-        shutil.rmtree(out_root)
-    packets_dir.mkdir(parents=True, exist_ok=True)
+    # Review decisions are evidence. Never erase them when regenerating packets.
+    out_root.mkdir(parents=True, exist_ok=False)
+    packets_dir.mkdir()
 
     manifest_rows = []
     missing_declared_docs = []
@@ -136,7 +135,7 @@ def build(cfg: dict) -> dict:
                 "original_semantic_support_chunk_ids": ";".join(str(x) for x in it.get("semantic_support_chunk_ids", [])),
                 "hard_integrity_flags": ";".join(row.get("hard_integrity_flags", [])),
                 "provenance_alignment_flags": ";".join(row.get("provenance_alignment_flags", [])),
-                "packet_path": str(packet_path.relative_to(root_path("."))).replace("\\", "/"),
+                "packet_path": str(packet_path.relative_to(out_root)).replace("\\", "/"),
                 "review_decision": "",
                 "source_support_status": "",
                 "correct_gold_document_id": "",
@@ -204,5 +203,6 @@ def build(cfg: dict) -> dict:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", required=True)
+    ap.add_argument("--output-dir", type=Path, help="New directory; existing directories are never overwritten")
     args = ap.parse_args()
-    build(load_config(args.config))
+    build(load_config(args.config), args.output_dir)
