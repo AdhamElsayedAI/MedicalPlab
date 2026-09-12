@@ -218,23 +218,65 @@ def _reason_counts(excluded):
     return dict(sorted(c.items()))
 
 
+def _write_empty_report(cfg, train, before, excluded, sources, sanitized, semantic_status, lexical_clean_n):
+    report = {
+        "status": "TRAIN_FIREWALL_EMPTY",
+        "input_n": len(train),
+        "lexical_clean_n": lexical_clean_n,
+        "clean_n": 0,
+        "excluded_n": len(excluded),
+        "excluded": excluded,
+        "exclusion_reason_counts": _reason_counts(excluded),
+        "sanitized_record_n": len(sanitized),
+        "removed_hard_negative_n": sum(x["removed_hard_negative_count"] for x in sanitized),
+        "sanitized_hard_negatives": sanitized,
+        "eval_sources": sources,
+        "input_train_sha256": before,
+        "train_sha256": None,
+        "semantic_check": semantic_status,
+        "input_train_preserved": True,
+    }
+    atomic_json(root_path(cfg["data"]["firewall_report"]), report)
+    return report
+
+
 def run(cfg, skip_semantic=False):
     train_path = root_path(cfg["data"]["train_output"])
     train = json.loads(train_path.read_text(encoding="utf-8"))
     before = sha256_file(train_path)
     clean, excluded, sources, sanitized = lexical_firewall(train, cfg)
-    semantic_ex = []
-    semantic_status = "SKIPPED" if skip_semantic else "QWEN4B_COSINE"
+    lexical_clean_n = len(clean)
+
     if not clean:
-        semantic_status = "NOT_RUN_EMPTY_AFTER_LEXICAL"
-    elif not skip_semantic:
+        _write_empty_report(
+            cfg, train, before, excluded, sources, sanitized,
+            "NOT_RUN_EMPTY_AFTER_LEXICAL", lexical_clean_n,
+        )
+        raise RuntimeError(
+            f"TRAIN_FIREWALL_EMPTY: lexical/provenance firewall removed all {len(train)} TRAIN items; "
+            f"original train artifact preserved"
+        )
+
+    semantic_status = "SKIPPED" if skip_semantic else "QWEN4B_COSINE"
+    if not skip_semantic:
         clean, semantic_ex = semantic_check(clean, cfg)
         excluded.extend(semantic_ex)
 
+    if not clean:
+        _write_empty_report(
+            cfg, train, before, excluded, sources, sanitized,
+            semantic_status, lexical_clean_n,
+        )
+        raise RuntimeError(
+            f"TRAIN_FIREWALL_EMPTY: semantic firewall removed all {lexical_clean_n} lexical-clean TRAIN items; "
+            f"original train artifact preserved"
+        )
+
     clean_sha = atomic_json(train_path, clean)
     report = {
-        "status": "PASS" if clean else "FAIL",
+        "status": "PASS",
         "input_n": len(train),
+        "lexical_clean_n": lexical_clean_n,
         "clean_n": len(clean),
         "excluded_n": len(excluded),
         "excluded": excluded,
@@ -246,10 +288,9 @@ def run(cfg, skip_semantic=False):
         "input_train_sha256": before,
         "train_sha256": clean_sha,
         "semantic_check": semantic_status,
+        "input_train_preserved": False,
     }
     atomic_json(root_path(cfg["data"]["firewall_report"]), report)
-    if not clean:
-        raise RuntimeError("FIREWALL_REMOVED_ALL_TRAIN_ITEMS")
     return report
 
 
