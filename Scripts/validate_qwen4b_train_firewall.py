@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse, json, re
 from collections import Counter
+from pathlib import Path
 from typing import Any
 from qwen4b_adaptation_common import ROOT, load_config, root_path, normalize_text, jaccard, atomic_json, sha256_file
 
@@ -16,11 +17,86 @@ def walk_records(obj: Any):
             yield from walk_records(v)
 
 
+def _gold_ids(r: dict[str, Any]) -> tuple[str, ...]:
+    vals = []
+    for k in ("gold_chunk_ids", "exact_gold_chunk_ids", "semantic_support_chunk_ids", "gold_passage_ids"):
+        v = r.get(k, [])
+        if isinstance(v, list):
+            vals.extend(str(x) for x in v if x)
+        elif v:
+            vals.append(str(v))
+    return tuple(sorted(set(vals)))
+
+
+def _training_signature(r: dict[str, Any]) -> tuple[str, str, tuple[str, ...]]:
+    query = next((r.get(k) for k in ("query", "question", "stem") if isinstance(r.get(k), str) and r.get(k).strip()), "")
+    claim = next((r.get(k) for k in ("canonical_claim", "atomic_claim", "claim") if isinstance(r.get(k), str) and r.get(k).strip()), "")
+    return normalize_text(query), normalize_text(claim), _gold_ids(r)
+
+
+def _approved_source_signatures(cfg) -> set[tuple[str, str, tuple[str, ...]]]:
+    src = root_path(cfg["data"]["source_pool"])
+    try:
+        obj = json.loads(src.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise RuntimeError(f"KNOWN_TRAINING_SOURCE_POOL_UNREADABLE path={src}") from e
+    sigs = {
+        _training_signature(r)
+        for r in walk_records(obj)
+        if _training_signature(r)[0]
+    }
+    if not sigs:
+        raise RuntimeError(f"KNOWN_TRAINING_SOURCE_POOL_EMPTY path={src}")
+    return sigs
+
+
+def validated_known_training_artifacts(cfg):
+    configured = cfg["data"].get("known_training_artifacts", [])
+    if not configured:
+        return []
+    approved = _approved_source_signatures(cfg)
+    validated = []
+    for rel in configured:
+        rel_path = Path(str(rel))
+        if rel_path.is_absolute() or ".." in rel_path.parts:
+            raise RuntimeError(f"KNOWN_TRAINING_ARTIFACT_PATH_INVALID path={rel}")
+        p = ROOT / rel_path
+        if not p.is_file():
+            raise RuntimeError(f"KNOWN_TRAINING_ARTIFACT_MISSING path={rel}")
+        try:
+            obj = json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            raise RuntimeError(f"KNOWN_TRAINING_ARTIFACT_UNREADABLE path={rel}") from e
+        records = [
+            r for r in walk_records(obj)
+            if any(isinstance(r.get(k), str) and r.get(k).strip() for k in ("query", "question", "stem"))
+        ]
+        if not records:
+            raise RuntimeError(f"KNOWN_TRAINING_ARTIFACT_EMPTY path={rel}")
+        for r in records:
+            qid = str(r.get("query_id", "")).strip()
+            if "-TRN-" not in qid.upper():
+                raise RuntimeError(
+                    f"KNOWN_TRAINING_ARTIFACT_VALIDATION_FAILED path={rel} query_id={qid or '<missing>'} reason=NON_TRAIN_ID"
+                )
+            sig = _training_signature(r)
+            if sig not in approved:
+                raise RuntimeError(
+                    f"KNOWN_TRAINING_ARTIFACT_VALIDATION_FAILED path={rel} query_id={qid} reason=NOT_IN_APPROVED_SOURCE_POOL"
+                )
+        validated.append(p)
+    return validated
+
+
 def eval_files(cfg):
     files = set()
     for pat in cfg["data"]["forbidden_eval_globs"]:
         files.update(ROOT.glob(pat))
-    return sorted(p for p in files if p.is_file() and p.suffix == ".json")
+    known_training = {p.resolve() for p in validated_known_training_artifacts(cfg)}
+    return sorted(
+        p for p in files
+        if p.is_file() and p.suffix == ".json" and p.resolve() not in known_training
+    )
 
 
 def extract_eval(cfg):
@@ -218,6 +294,10 @@ def _reason_counts(excluded):
     return dict(sorted(c.items()))
 
 
+def _ignored_training_artifacts(cfg):
+    return [str(p.relative_to(ROOT)) for p in validated_known_training_artifacts(cfg)]
+
+
 def _write_empty_report(cfg, train, before, excluded, sources, sanitized, semantic_status, lexical_clean_n):
     report = {
         "status": "TRAIN_FIREWALL_EMPTY",
@@ -231,6 +311,7 @@ def _write_empty_report(cfg, train, before, excluded, sources, sanitized, semant
         "removed_hard_negative_n": sum(x["removed_hard_negative_count"] for x in sanitized),
         "sanitized_hard_negatives": sanitized,
         "eval_sources": sources,
+        "validated_training_artifacts_ignored": _ignored_training_artifacts(cfg),
         "input_train_sha256": before,
         "train_sha256": None,
         "semantic_check": semantic_status,
@@ -285,6 +366,7 @@ def run(cfg, skip_semantic=False):
         "removed_hard_negative_n": sum(x["removed_hard_negative_count"] for x in sanitized),
         "sanitized_hard_negatives": sanitized,
         "eval_sources": sources,
+        "validated_training_artifacts_ignored": _ignored_training_artifacts(cfg),
         "input_train_sha256": before,
         "train_sha256": clean_sha,
         "semantic_check": semantic_status,

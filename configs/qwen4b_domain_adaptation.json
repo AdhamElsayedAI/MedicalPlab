@@ -49,6 +49,9 @@
     "baseline_report": "reports/evidence_engine/product_dev_v3_qwen4b_rrf_report.json",
     "train_output": "artifacts/qwen4b_domain_adaptation/train.json",
     "firewall_report": "artifacts/qwen4b_domain_adaptation/firewall_report.json",
+    "known_training_artifacts": [
+      "evaluation/renal/v7/renal-train-dev-v7.json"
+    ],
     "forbidden_eval_globs": [
       "evaluation/evidence_engine/product_dev_v*.json",
       "evaluation/evidence_engine/final_product_test.json",
