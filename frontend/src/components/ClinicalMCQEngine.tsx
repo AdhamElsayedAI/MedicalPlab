@@ -35,18 +35,25 @@ export const ClinicalMCQEngine: React.FC<ClinicalMCQEngineProps> = ({
   onNavigateToTutor,
   onAttemptCompleted,
 }) => {
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(75);
-  const [timerActive, setTimerActive] = useState(true);
-
-  useEffect(() => {
+  const [currentIdx, setCurrentIdx] = useState(() => {
+    if (initialQuestionId) {
+      const idx = PLAB_QUESTIONS.findIndex((q) => q.id === initialQuestionId);
+      if (idx !== -1) return idx;
+    }
+    return 0;
+  });
+  const [prevInitialId, setPrevInitialId] = useState(initialQuestionId);
+  if (initialQuestionId !== prevInitialId) {
+    setPrevInitialId(initialQuestionId);
     if (initialQuestionId) {
       const idx = PLAB_QUESTIONS.findIndex((q) => q.id === initialQuestionId);
       if (idx !== -1) setCurrentIdx(idx);
     }
-  }, [initialQuestionId]);
+  }
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(75);
+  const [timerActive, setTimerActive] = useState(true);
 
   const currentQ: PLABQuestion = PLAB_QUESTIONS[currentIdx] || PLAB_QUESTIONS[0];
 

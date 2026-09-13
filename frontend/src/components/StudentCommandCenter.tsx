@@ -61,7 +61,7 @@ export const StudentCommandCenter: React.FC<StudentCommandCenterProps> = ({
             </div>
             <h2 className="section-header">Learning Dashboard</h2>
           </div>
-          <p className="section-subtext">Welcome back, {profile.studentName}. Here's your clinical progress.</p>
+          <p className="section-subtext">Welcome back, {profile.studentName}. Here&apos;s your clinical progress.</p>
         </div>
 
         <div className="flex items-center gap-2.5">

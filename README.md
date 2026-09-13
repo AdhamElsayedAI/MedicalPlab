@@ -4,7 +4,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.0-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
 [![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
-[![Automated Tests](https://img.shields.io/badge/Tests-594%20Passing%20%5BVerified%5D-10B981?style=flat-square&logo=pytest&logoColor=white)](#14-testing)
+[![Automated Tests](https://img.shields.io/badge/Tests-604%20Passing%20%5BVerified%5D-10B981?style=flat-square&logo=pytest&logoColor=white)](#14-testing)
 [![PLAB V9 Evidence](https://img.shields.io/badge/PLAB%20V9-Closed%20%5BVerified%5D-blue?style=flat-square)](#9-plab-v9-evidence-status)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
@@ -105,9 +105,9 @@ All statistics are strictly classified by evidence level:
 
 | Benchmark / Capability | Metric Value | Metric Classification | Reference |
 | :--- | :--- | :--- | :--- |
-| **Full Automated Test Suite** | **594 passed, 1 skipped** | `[Verified]` | `pytest -q` |
-| **PLAB Pipeline Test Suite** | **77 passed** | `[Verified]` | `pytest tests/plab -q` |
-| **PLAB V9 Closure Suite** | **14 passed** | `[Verified]` | `pytest tests/plab/v9 -q` |
+| **Full Automated Test Suite** | **604 passed, 1 skipped** | `[Verified]` | `pytest -q` |
+| **PLAB Pipeline Test Suite** | **87 passed** | `[Verified]` | `pytest tests/plab -q` |
+| **PLAB V9 Closure Suite** | **24 passed** | `[Verified]` | `pytest tests/plab/v9 -q` |
 | **Renal Retrieval Benchmark** | **150 passed** | `[Verified]` | `pytest tests/renal -q` |
 | **Exact-Span Containment** | **100.0%** | `[Verified]` | Verified against normalized UK guidelines |
 | **API Response Latency** | **< 15 ms** | `[Verified]` | FastAPI asynchronous local gateway |
@@ -216,7 +216,7 @@ MedicalPlab/
 │   ├── PLAB_EVIDENCE.md           # Detailed V9 evidence breakdown
 │   └── DEMO_GUIDE.md              # Judge & evaluator walkthrough
 │
-├── tests/                         # Automated test suite (594 passing)
+├── tests/                         # Automated test suite (604 passing)
 │   ├── plab/v9/                   # PLAB V9 closure tests
 │   ├── renal/                     # Medical retrieval benchmark tests
 │   └── stage_b/ .. stage_g/       # Component regression suites
@@ -231,13 +231,13 @@ MedicalPlab/
 Verify platform integrity with the automated test gates:
 
 ```bash
-# 1. Run PLAB V9 Final Evidence Closure Suite (14 tests)
+# 1. Run PLAB V9 Final Evidence Closure Suite (24 tests)
 python -m pytest tests/plab/v9 -q
 
-# 2. Run Complete PLAB Pipeline Suite (77 tests)
+# 2. Run Complete PLAB Pipeline Suite (87 tests)
 python -m pytest tests/plab -q
 
-# 3. Run Full Repository Test Suite (594 passed, 1 skipped)
+# 3. Run Full Repository Test Suite (604 passed, 1 skipped)
 python -m pytest -q
 ```
 

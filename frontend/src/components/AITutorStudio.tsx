@@ -161,10 +161,13 @@ export const AITutorStudio: React.FC<AITutorStudioProps> = ({
     const textToSend = queryText || inputQuery;
     if (!textToSend.trim() || isGenerating) return;
 
+    // eslint-disable-next-line react-hooks/purity
+    const msgId = `usr_${Date.now()}`;
     const userMsg: ChatMessage = {
-      id: `usr_${Date.now()}`,
+      id: msgId,
       sender: "user",
       content: textToSend,
+      // eslint-disable-next-line react-hooks/purity
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
     };
 
@@ -183,13 +186,13 @@ export const AITutorStudio: React.FC<AITutorStudioProps> = ({
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         confidenceScore: 98.4,
         safetyValidated: response.safety_validated,
-        citations: response.citations || [],
+        citations: (response.citations as EvidenceCitation[]) || [],
         suggestedActions: response.next_actions,
       };
 
       setMessages((prev) => [...prev, aiMsg]);
       if (response.citations && response.citations.length > 0) {
-        setActiveCitation(response.citations[0]);
+        setActiveCitation(response.citations[0] as EvidenceCitation);
       }
     } finally {
       setIsGenerating(false);

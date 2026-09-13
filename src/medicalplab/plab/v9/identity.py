@@ -92,6 +92,19 @@ CANONICAL_ORGANIZATIONS: Dict[str, OrganizationIdentity] = {
         ],
         approved_hosts=["thorax.bmj.com", "www.bmj.com"],
     ),
+    "ORG-SIGN": OrganizationIdentity(
+        organization_id="ORG-SIGN",
+        canonical_name="Scottish Intercollegiate Guidelines Network",
+        aliases=[
+            "SIGN",
+            "Scottish Intercollegiate Guidelines Network",
+        ],
+        roles=[
+            OrganizationRole.ISSUING_ORGANIZATION.value,
+            OrganizationRole.AUTHORITATIVE_HOST.value,
+        ],
+        approved_hosts=["www.sign.ac.uk", "sign.ac.uk"],
+    ),
 }
 
 # Approved authoritative clinical hosts
