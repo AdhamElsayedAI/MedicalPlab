@@ -109,6 +109,8 @@ COMPARATOR_MAP: list[tuple[str, str]] = [
 NEGATION_PATTERNS: list[str] = [
     r"\bnot\b",
     r"\bno\b",
+    r"\bneither\b",
+    r"\bnor\b",
     r"\bwithout\b",
     r"\babsence of\b",
     r"\bnon-",

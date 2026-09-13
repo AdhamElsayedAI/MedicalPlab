@@ -19,110 +19,97 @@ from medicalplab.evidence_engine.models import QueryRepresentation, RetrievedCan
 
 logger = logging.getLogger(__name__)
 
+RERANKER_06B_ID = "Qwen/Qwen3-Reranker-0.6B"
+RERANKER_06B_REV = "e61197ed45024b0ed8a2d74b80b4d909f1255473"
+
 RERANKER_4B_ID = "Qwen/Qwen3-Reranker-4B"
 RERANKER_4B_REV = "22e683669bc0f0bd69640a1354a6d0aebcfeede5"
 
-STRUCTURED_RERANK_PROMPT = (
-    "Instruct: Given a medical education or clinical licensing query, determine whether the "
-    "following candidate reference passage contains direct, factual clinical evidence "
-    "supporting the medical claim or correct answer.\n"
-    "Query: {query}\n"
-    "Candidate Evidence:\n"
-    "Document: {doc_title}\n"
-    "Section: {section_path}\n"
-    "Text: {text}"
+MEDICAL_RERANKER_INSTRUCTION = (
+    "Instruct: Determine whether the evidence passage directly supports the exact "
+    "medical proposition requested in the query. Topical relevance without direct "
+    "claim support is non-support.\nQuery: "
 )
 
 
 class EvidenceReranker:
-    """Structured medical claim reranker with 4-bit quantization support."""
+    """Structured medical claim reranker with graceful fallback."""
 
     def __init__(
         self,
         model: Any = None,
-        model_id: str = RERANKER_4B_ID,
-        revision: str = RERANKER_4B_REV,
-        device: str = "cuda",
-        load_in_4bit: bool = True,
+        model_id: str = RERANKER_06B_ID,
+        revision: str = RERANKER_06B_REV,
+        device: str = "auto",
+        load_in_4bit: bool = False,
     ):
         self.model = model
         self.model_id = model_id
         self.revision = revision
         self.device = device
         self.load_in_4bit = load_in_4bit
+        self.is_degraded: bool = False
+        self.tokenizer = None
 
     def load_model(self):
-        """Load reranker with NF4 quantization if not already supplied."""
+        """Load reranker model with graceful fallback on resource or environment failure."""
         if self.model is not None:
             return self.model
 
         try:
             import torch
             from sentence_transformers import CrossEncoder
-            from transformers import BitsAndBytesConfig
 
-            bnb_config = None
-            if self.load_in_4bit and torch.cuda.is_available():
-                bnb_config = BitsAndBytesConfig(
-                    load_in_4bit=True,
-                    bnb_4bit_quant_type="nf4",
-                    bnb_4bit_compute_dtype=torch.float16,
-                    bnb_4bit_use_double_quant=True,
-                )
+            device_str = "cuda" if (self.device == "cuda" or (self.device == "auto" and torch.cuda.is_available())) else "cpu"
+            logger.info(f"Loading CrossEncoder for {self.model_id} on {device_str}...")
 
-            logger.info(f"Loading CrossEncoder for {self.model_id} (revision {self.revision[:10]})...")
-            model_kwargs = {
-                "quantization_config": bnb_config,
-                "device_map": "auto",
-                "torch_dtype": torch.float16,
-            }
             self.model = CrossEncoder(
                 self.model_id,
                 revision=self.revision,
-                model_kwargs=model_kwargs,
+                device=device_str,
                 trust_remote_code=True,
             )
             logger.info("CrossEncoder loaded successfully.")
+            self.is_degraded = False
             return self.model
         except Exception as e:
-            logger.warning(f"CrossEncoder with model_kwargs failed ({e}), attempting AutoModel...")
-            import torch
-            from transformers import AutoModelForSequenceClassification, AutoTokenizer, BitsAndBytesConfig
+            logger.warning(f"CrossEncoder loading failed ({e}), attempting AutoModel...")
+            try:
+                import torch
+                from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-            bnb_config = None
-            if self.load_in_4bit and torch.cuda.is_available():
-                bnb_config = BitsAndBytesConfig(
-                    load_in_4bit=True,
-                    bnb_4bit_quant_type="nf4",
-                    bnb_4bit_compute_dtype=torch.float16,
-                    bnb_4bit_use_double_quant=True,
+                device_str = "cuda" if torch.cuda.is_available() else "cpu"
+                self.tokenizer = AutoTokenizer.from_pretrained(
+                    self.model_id,
+                    revision=self.revision,
+                    trust_remote_code=True,
                 )
-
-            self.tokenizer = AutoTokenizer.from_pretrained(
-                self.model_id,
-                revision=self.revision,
-                trust_remote_code=True,
-            )
-
-            kwargs = {
-                "revision": self.revision,
-                "trust_remote_code": True,
-            }
-            if bnb_config is not None:
-                kwargs["quantization_config"] = bnb_config
-                kwargs["device_map"] = "auto"
-                kwargs["torch_dtype"] = torch.float16
-
-            self.model = AutoModelForSequenceClassification.from_pretrained(self.model_id, **kwargs)
-            self.model.eval()
-            logger.info("AutoModel reranker loaded successfully.")
-            return self.model
+                self.model = AutoModelForSequenceClassification.from_pretrained(
+                    self.model_id,
+                    revision=self.revision,
+                    trust_remote_code=True,
+                ).to(device_str)
+                self.model.eval()
+                self.is_degraded = False
+                logger.info("AutoModel reranker loaded successfully.")
+                return self.model
+            except Exception as e2:
+                logger.warning(f"Neural reranker unavailable ({e2}). Entering CANONICAL_DEGRADED mode.")
+                self.is_degraded = True
+                self.model = None
+                return None
 
     def build_pair_prompt(self, query: str, candidate: RetrievedCandidate) -> tuple[str, str]:
-        """Construct structured prompt pair for cross-encoder scoring without double-prompt defect."""
+        """Construct structured prompt pair for cross-encoder scoring."""
+        inst_query = MEDICAL_RERANKER_INSTRUCTION + query
         sec_path = " > ".join(candidate.section_path) if candidate.section_path else candidate.heading or "General"
-        passage_text = f"{candidate.doc_title} | {sec_path} | {candidate.heading}\n{candidate.text}"
-        return query, passage_text
+        passage_text = (
+            f"Title: {candidate.doc_title}\n"
+            f"Section Path: {sec_path}\n"
+            f"Heading: {candidate.heading}\n"
+            f"Evidence: {candidate.text}"
+        )
+        return inst_query, passage_text
 
     def rerank(
         self,
@@ -140,8 +127,15 @@ class EvidenceReranker:
         else:
             query_str = str(query)
 
-        if self.model is None:
+        if self.model is None and not self.is_degraded:
             self.load_model()
+
+        if self.is_degraded or self.model is None:
+            # CANONICAL_DEGRADED: candidates preserve fused score ordering with tie breaking
+            ranked = sorted(candidates, key=lambda c: (c.fused_score, c.chunk_id), reverse=True)
+            for c in ranked:
+                c.rerank_score = c.fused_score
+            return ranked[:top_k] if top_k is not None else ranked
 
         # Build pair inputs
         pairs = [self.build_pair_prompt(query_str, cand) for cand in candidates]
@@ -206,3 +200,6 @@ class EvidenceReranker:
             logger.info("Reranker VRAM cleaned up.")
         except Exception:
             pass
+
+
+NeuralEvidenceReranker = EvidenceReranker

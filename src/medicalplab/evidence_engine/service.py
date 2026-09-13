@@ -60,6 +60,7 @@ class SharedEvidenceEngineV2:
     def process_and_retrieve(
         self,
         query: str | QueryRepresentation,
+        mode: str = "TUTOR",
         top_candidates: int = 50,
         rerank_top_k: int = 25,
     ) -> tuple[QueryRepresentation, list[str], list[RetrievedCandidate]]:
@@ -120,12 +121,14 @@ class SharedEvidenceEngineV2:
         self,
         query: str,
         claims_to_verify: Sequence[str | dict[str, Any]] | None = None,
+        mode: str = "TUTOR",
         top_candidates: int = 50,
         rerank_top_k: int = 25,
     ) -> EvidencePacket:
-        """Complete end-to-end evidence packet generation."""
+        """Complete end-to-end evidence packet generation under canonical mode policy."""
         q_rep, routed_doc_ids, candidates = self.process_and_retrieve(
             query=query,
+            mode=mode,
             top_candidates=top_candidates,
             rerank_top_k=rerank_top_k,
         )
@@ -137,15 +140,50 @@ class SharedEvidenceEngineV2:
         if claims_to_verify and top_passage:
             claim_results = self.verify_claims_against_evidence(claims_to_verify, top_passage)
 
-        # Safety / Abstention Gate
+        # Safety & Abstention Gate
         abstain = False
         abstain_reason = None
+        is_degraded = getattr(self.reranker, "is_degraded", False)
+
         if not candidates:
             abstain = True
             abstain_reason = "NO_CANDIDATES_RETRIEVED"
-        elif top_passage and top_passage.rerank_score < -15.0 and top_passage.fused_score < 0.01:
-            abstain = True
-            abstain_reason = "CONFIDENCE_BELOW_RELIABILITY_THRESHOLD"
+        elif top_passage is not None:
+            # Calibrated abstention: A query without verified support must fail closed
+            if not is_degraded:
+                # Cross-encoder outputs logits; score < 0.0 indicates negative class (non-relevant)
+                if top_passage.rerank_score < 0.0:
+                    abstain = True
+                    abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
+            else:
+                q_terms = set(self.retriever._tokenize(q_rep.canonical_query or q_rep.original_query))
+                top_text_terms = set(self.retriever._tokenize(f"{top_passage.doc_title} {top_passage.heading} {top_passage.text}"))
+                overlap = len(q_terms.intersection(top_text_terms))
+                if overlap == 0 or top_passage.fused_score < 0.01:
+                    abstain = True
+                    abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
+
+            # If claim was verified and contradicted or polarity mismatch triggered
+            if claim_results:
+                for cr in claim_results:
+                    if cr.state == VerificationState.CONTRADICTED:
+                        abstain = True
+                        abstain_reason = "CLAIM_CONTRADICTED_BY_EVIDENCE"
+                        break
+                    if cr.is_high_risk and cr.state != VerificationState.SUPPORTED:
+                        abstain = True
+                        abstain_reason = "HIGH_RISK_CLAIM_UNSUPPORTED"
+                        break
+
+        # Apply mode policy constraints
+        if mode == "PLAB":
+            # PLAB strict boundary: never bypass clinician review or claim sufficiency
+            if top_passage and top_passage.fused_score < 0.01 and not claim_results:
+                abstain = True
+                abstain_reason = "PLAB_EVIDENCE_INSUFFICIENT"
+        elif mode == "UNI":
+            # Educational mode: educational explanation policy
+            pass
 
         return EvidencePacket(
             query=q_rep,
@@ -155,4 +193,10 @@ class SharedEvidenceEngineV2:
             claim_verifications=claim_results,
             abstain=abstain,
             abstain_reason=abstain_reason,
+            retrieval_mode=mode,
+            is_degraded=is_degraded,
         )
+
+
+# Canonical alias for MedicalPlab Evidence Engine V1
+CanonicalEvidenceEngine = SharedEvidenceEngineV2

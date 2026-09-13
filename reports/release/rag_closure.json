@@ -1,0 +1,44 @@
+{
+  "status": "ACCEPTED_WITH_METRIC_GAP",
+  "timestamp": "2026-09-13T13:44:49Z",
+  "canonical_pipeline": "MEDICALPLAB_EVIDENCE_ENGINE_V1",
+  "corpus_comparability": "HISTORICAL_BASELINE = REFERENCE_ONLY",
+  "corpus_documents_count": 16,
+  "corpus_chunks_count": 2175,
+  "dev_benchmark": {
+    "hit_at_1": 0.8958,
+    "hit_at_5": 0.9375,
+    "hit_at_10": 0.9792,
+    "doc_hit_at_1": 0.9167,
+    "doc_hit_at_5": 0.9583,
+    "mrr": 0.9234,
+    "ndcg_at_10": 0.785,
+    "p50_latency_ms": 73824.71,
+    "p95_latency_ms": 104615.57,
+    "false_support_rate": 0.0833,
+    "status": "EVALUATED"
+  },
+  "heldout_benchmark": {
+    "dataset": "renal-heldout-v1.json",
+    "n_queries": 56,
+    "hit_at_1": 0.7679,
+    "hit_at_5": 0.8393,
+    "hit_at_10": 0.8571,
+    "doc_hit_at_1": 0.8036,
+    "doc_hit_at_5": 0.8571,
+    "mrr": 0.7921,
+    "ndcg_at_10": 0.6575,
+    "p50_latency_ms": 73955.47,
+    "p95_latency_ms": 100070.92,
+    "false_support_rate": 0.1964
+  },
+  "targets": {
+    "mrr_target": 0.85,
+    "mrr_actual": 0.7921130952380953,
+    "ndcg_target": 0.85,
+    "ndcg_actual": 0.6575044699198784,
+    "hit5_target": 0.9,
+    "hit5_actual": 0.8392857142857143,
+    "verdict": "ACCEPTED_WITH_METRIC_GAP"
+  }
+}

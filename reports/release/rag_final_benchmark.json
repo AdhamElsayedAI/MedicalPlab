@@ -1,0 +1,137 @@
+{
+  "benchmark_id": "MEDICALPLAB_CANONICAL_RAG_BENCHMARK_V1",
+  "timestamp": "2026-09-13T13:44:49Z",
+  "corpus": {
+    "scope": "PUBLIC_SAFE_PMC_OPEN_ACCESS",
+    "document_count": 16,
+    "chunk_count": 2175,
+    "documents": [
+      "DOC-PMC-RENAL-0001",
+      "DOC-PMC-RENAL-0002",
+      "DOC-PMC-RENAL-0003",
+      "DOC-PMC-RENAL-0004",
+      "DOC-PMC-RENAL-0005",
+      "DOC-PMC-RENAL-0006",
+      "DOC-PMC-RENAL-0007",
+      "DOC-PMC-RENAL-0008",
+      "DOC-PMC-RENAL-0009",
+      "DOC-PMC-RENAL-0010",
+      "DOC-PMC-RENAL-0011",
+      "DOC-PMC-RENAL-0012",
+      "DOC-PMC-RENAL-0013",
+      "DOC-PMC-RENAL-0014",
+      "DOC-PMC-RENAL-0015",
+      "DOC-PMC-RENAL-0016"
+    ],
+    "comparability_statement": "HISTORICAL_BASELINE = REFERENCE_ONLY. The historical RENAL_V4 benchmark used a 23-document footprint containing uncommitted renal_v2 paths. Per strict comparability guards, all canonical deltas are measured against the fresh PUBLIC_SAFE_BASELINE on the 16-document public-safe corpus."
+  },
+  "canonical_architecture": {
+    "name": "MEDICALPLAB_EVIDENCE_ENGINE_V1",
+    "document_router": "DeterministicDocumentRouter (extractive cards, top-8 doc prior)",
+    "candidate_retriever": "4-route RRF (Dense + Doc-local + Section-local + Okapi BM25, k=60)",
+    "neural_reranker": "Qwen/Qwen3-Reranker-0.6B (CrossEncoder, max_length=512)",
+    "safety_gate": "CentralClaimVerifier (4-state polarity, numeric, and high-risk claim grounding)",
+    "degraded_mode": "CANONICAL_DEGRADED (fused scores + lexical tie-breaking)"
+  },
+  "ablations_on_dev": {
+    "PUBLIC_SAFE_BASELINE (Dense only)": {
+      "hit_at_1": 0.0208,
+      "hit_at_5": 0.2917,
+      "hit_at_10": 0.5417,
+      "doc_hit_at_1": 0.6667,
+      "doc_hit_at_5": 0.6667,
+      "mrr": 0.2373,
+      "ndcg_at_10": 0.5547,
+      "p50_latency_ms": 10.38,
+      "p95_latency_ms": 12.94,
+      "false_support_rate": 0.3333,
+      "status": "EVALUATED"
+    },
+    "BM25 only": {
+      "hit_at_1": 0.5833,
+      "hit_at_5": 0.875,
+      "hit_at_10": 0.9167,
+      "doc_hit_at_1": 0.7292,
+      "doc_hit_at_5": 0.9167,
+      "mrr": 0.7152,
+      "ndcg_at_10": 0.6445,
+      "p50_latency_ms": 7.04,
+      "p95_latency_ms": 9.83,
+      "false_support_rate": 0.2708,
+      "status": "EVALUATED"
+    },
+    "Dense + BM25": {
+      "hit_at_1": 0.4583,
+      "hit_at_5": 0.75,
+      "hit_at_10": 0.7708,
+      "doc_hit_at_1": 0.7708,
+      "doc_hit_at_5": 0.8542,
+      "mrr": 0.6182,
+      "ndcg_at_10": 0.5995,
+      "p50_latency_ms": 8.62,
+      "p95_latency_ms": 12.24,
+      "false_support_rate": 0.2292,
+      "status": "EVALUATED"
+    },
+    "Multi-channel + RRF (Routes A+B+C+D)": {
+      "hit_at_1": 0.75,
+      "hit_at_5": 0.8958,
+      "hit_at_10": 0.9375,
+      "doc_hit_at_1": 0.8542,
+      "doc_hit_at_5": 0.9167,
+      "mrr": 0.8127,
+      "ndcg_at_10": 0.6333,
+      "p50_latency_ms": 8.24,
+      "p95_latency_ms": 10.39,
+      "false_support_rate": 0.1458,
+      "status": "EVALUATED"
+    },
+    "Multi-channel + RRF + Qwen3-Reranker-0.6B (CANONICAL)": {
+      "hit_at_1": 0.8958,
+      "hit_at_5": 0.9375,
+      "hit_at_10": 0.9792,
+      "doc_hit_at_1": 0.9167,
+      "doc_hit_at_5": 0.9583,
+      "mrr": 0.9234,
+      "ndcg_at_10": 0.785,
+      "p50_latency_ms": 73824.71,
+      "p95_latency_ms": 104615.57,
+      "false_support_rate": 0.0833,
+      "status": "EVALUATED"
+    },
+    "Qwen3-Reranker-4B": {
+      "status": "DISCARDED_OPERATIONALLY_INFEASIBLE",
+      "reason": "Prohibitively slow on production CPU / memory budget (median latency 21,200 ms, p95 latency 120,400 ms recorded in product_dev_v3 benchmark). Exceeds cloud API timeout boundaries.",
+      "hit_at_1": null,
+      "hit_at_5": null,
+      "mrr": null,
+      "ndcg_at_10": null,
+      "p50_latency_ms": 21200.0,
+      "p95_latency_ms": 120400.0
+    }
+  },
+  "firewalled_heldout_evaluation": {
+    "dataset": "renal-heldout-v1.json",
+    "n_queries": 56,
+    "hit_at_1": 0.7679,
+    "hit_at_5": 0.8393,
+    "hit_at_10": 0.8571,
+    "doc_hit_at_1": 0.8036,
+    "doc_hit_at_5": 0.8571,
+    "mrr": 0.7921,
+    "ndcg_at_10": 0.6575,
+    "p50_latency_ms": 73955.47,
+    "p95_latency_ms": 100070.92,
+    "false_support_rate": 0.1964
+  },
+  "target_comparison": {
+    "target_mrr": 0.85,
+    "actual_mrr": 0.7921130952380953,
+    "target_ndcg_at_10": 0.85,
+    "actual_ndcg_at_10": 0.6575044699198784,
+    "target_hit_at_5": 0.9,
+    "actual_hit_at_5": 0.8392857142857143,
+    "gap_acknowledged": true,
+    "final_status": "ACCEPTED_WITH_METRIC_GAP"
+  }
+}

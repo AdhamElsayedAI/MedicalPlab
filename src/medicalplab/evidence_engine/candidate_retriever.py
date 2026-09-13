@@ -9,6 +9,7 @@ Implements multi-channel four-route candidate retrieval:
 - Fusion: Weighted Reciprocal Rank Fusion (RRF k=60) producing fused candidate rankings
 """
 
+import hashlib
 import json
 import logging
 import math
@@ -57,22 +58,38 @@ class CandidateRetriever:
 
         self._load_corpus()
 
+    def _resolve_chunks_dir(self) -> Path:
+        """Dynamically resolve the chunks directory from available candidates."""
+        candidates = [
+            self.data_root / "experiments" / "renal" / "chunking" / "B_400_10pct_overlap",
+            self.data_root / "experiments" / "renal_v2" / "chunking" / "B_400_overlap",
+            self.data_root / "processed" / "renal_v1",
+            self.data_root / "experiments" / "renal" / "chunking" / "C_section_aware",
+        ]
+        for c in candidates:
+            if c.exists() and any(c.glob("*.chunks.json")):
+                return c
+        return candidates[0]
+
     def _tokenize(self, text: str) -> list[str]:
         """Extractive tokenization for lexical indexing."""
         return [w for w in re.findall(r"[a-zA-Z0-9]+", text.lower()) if len(w) > 2]
 
     def _load_corpus(self):
         """Load all chunks, build document/section index mappings, and construct BM25 index."""
-        chunks_dir = self.data_root / "experiments" / "renal_v2" / "chunking" / "B_400_overlap"
+        chunks_dir = self._resolve_chunks_dir()
         chunks = {}
         ordered_ids = []
 
-        for p in sorted(chunks_dir.glob("*.chunks.json")):
+        chunk_files = sorted(chunks_dir.glob("*.chunks.json")) if chunks_dir.exists() else []
+        for p in chunk_files:
             file_data = json.loads(p.read_bytes())
             doc_id = file_data.get("document_id")
             for ch in file_data.get("chunks", []):
                 cid = ch.get("chunk_id")
                 ch["document_id"] = doc_id
+                if not ch.get("doc_title") and doc_id in self.router.cards:
+                    ch["doc_title"] = self.router.cards[doc_id].title
                 chunks[cid] = ch
                 ordered_ids.append(cid)
 
@@ -110,13 +127,18 @@ class CandidateRetriever:
         self.tf = {cid: Counter(corpus_tokens[cid]) for cid in self.ordered_chunk_ids}
 
         logger.info(
-            f"Loaded {len(self.chunks)} corpus chunks across {len(self.doc_to_chunk_indices)} documents. "
+            f"Loaded {len(self.chunks)} corpus chunks across {len(self.doc_to_chunk_indices)} documents from {chunks_dir}. "
             f"BM25 index built (vocab size: {len(self.idf)})."
         )
 
     def ensure_corpus_embeddings(self, embedding_dim: int | None = None) -> np.ndarray | None:
-        """Compute or load normalized corpus embeddings."""
-        cache_file = self.cache_dir / f"corpus_embeddings_{len(self.ordered_chunk_ids)}.npy"
+        """Compute or load normalized corpus embeddings with cache integrity."""
+        if not self.ordered_chunk_ids:
+            return None
+
+        # Hash chunk IDs to guarantee cache integrity
+        corpus_hash = hashlib.sha256("".join(self.ordered_chunk_ids).encode("utf-8")).hexdigest()[:12]
+        cache_file = self.cache_dir / f"corpus_embeddings_{len(self.ordered_chunk_ids)}_{corpus_hash}.npy"
 
         if cache_file.exists() and self.corpus_embeddings is None:
             try:
@@ -128,13 +150,24 @@ class CandidateRetriever:
             except Exception as e:
                 logger.warning(f"Could not load cached embeddings: {e}")
 
+        # Check existing fallback cache
+        legacy_cache = self.cache_dir / f"corpus_embeddings_{len(self.ordered_chunk_ids)}.npy"
+        if legacy_cache.exists() and self.corpus_embeddings is None:
+            try:
+                embs = np.load(legacy_cache)
+                if len(embs) == len(self.ordered_chunk_ids):
+                    self.corpus_embeddings = embs
+                    return self.corpus_embeddings
+            except Exception:
+                pass
+
         if self.corpus_embeddings is None and self.embedder is not None:
             logger.info("Computing dense embeddings for all corpus chunks...")
             texts = [
                 f"{self.chunks[cid].get('doc_title', '')} | {self.chunks[cid].get('heading', '')}\n{self.chunks[cid].get('text', '')}"
                 for cid in self.ordered_chunk_ids
             ]
-            embs = self.embedder.encode(texts, batch_size=4, show_progress_bar=True)
+            embs = self.embedder.encode(texts, batch_size=8, show_progress_bar=False)
             embs = np.asarray(embs, dtype=np.float32)
             norms = np.linalg.norm(embs, axis=1, keepdims=True)
             norms[norms == 0] = 1.0
@@ -303,7 +336,7 @@ class CandidateRetriever:
                 score += w_d / (RRF_K + route_d_candidates[cid][0])
             fused_scores[cid] = score
 
-        sorted_cids = sorted(all_candidate_ids, key=lambda c: fused_scores[c], reverse=True)[:top_k]
+        sorted_cids = sorted(all_candidate_ids, key=lambda c: (fused_scores[c], c), reverse=True)[:top_k]
 
         candidates = []
         for cid in sorted_cids:

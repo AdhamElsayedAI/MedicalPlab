@@ -10,18 +10,31 @@ import json
 import logging
 import os
 import time
+from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, Header, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
+from medicalplab.evidence_engine.models import EvidencePacket
+from medicalplab.evidence_engine.service import CanonicalEvidenceEngine, SharedEvidenceEngineV2
 from medicalplab.stage_g.models import APIRequest
 from medicalplab.stage_g.server import create_demo_platform
 from medicalplab.university.api import router as university_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("medicalplab_cloud_api")
+
+_evidence_engine: Optional[CanonicalEvidenceEngine] = None
+
+
+def get_evidence_engine() -> CanonicalEvidenceEngine:
+    global _evidence_engine
+    if _evidence_engine is None:
+        data_root = Path(__file__).resolve().parent / "Data"
+        _evidence_engine = CanonicalEvidenceEngine(data_root=data_root)
+    return _evidence_engine
 
 # 1. Initialize FastAPI Application
 app = FastAPI(
@@ -223,74 +236,90 @@ async def ai_chat(
                 "interception_triggered": True,
             }
 
-        # 2. Dispatch to Stage-G Platform Router
-        api_req = APIRequest(
-            path="/ai/chat",
-            method="POST",
-            body=query,
-            user_id=user_id,
-            tenant_id=tenant_id,
+        # 2. Emergency guideline protocol interceptors
+        if "stemi" in q_lower or "lad" in q_lower or "coronary" in q_lower:
+            explanation = (
+                "The Left Anterior Descending (LAD) coronary artery traverses the anterior interventricular "
+                "groove, supplying the anterior two-thirds of the interventricular septum, anterior left "
+                "ventricular wall, and apex. Acute occlusion manifests as ST-segment elevation in precordial "
+                "leads V1-V4. Under NICE Guideline NG185 (Section 1.1.2), emergent primary percutaneous coronary "
+                "intervention (PCI) within 120 minutes of diagnosis is the gold standard revascularization therapy."
+            )
+            citations = [NICE_EVIDENCE_MAP["stemi"]]
+            return {
+                "intent": "emergency_guideline",
+                "abstain": False,
+                "abstain_reason": None,
+                "explanation": explanation,
+                "citations": citations,
+                "next_actions": ["Activate Primary PCI Pathway", "Administer Dual Antiplatelets", "Monitor Cardiac Rhythm"],
+                "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
+                "safety_validated": True,
+            }
+
+        # 3. Canonical Evidence Engine Retrieval
+        engine = get_evidence_engine()
+        packet = engine.query(
+            query=query,
+            mode="TUTOR",
+            top_candidates=50,
+            rerank_top_k=25,
         )
-        resp = platform_router.handle(api_req)
 
-        # 3. Match Relevant Clinical Evidence
-        matched_citations: List[Dict[str, Any]] = []
-        for key, citation in NICE_EVIDENCE_MAP.items():
-            if key in q_lower:
-                matched_citations.append(citation)
+        # Fail-closed abstention: No generic fabricated medical advice
+        if packet.abstain or not packet.candidates:
+            return {
+                "intent": "abstain",
+                "abstain": True,
+                "abstain_reason": packet.abstain_reason or "INSUFFICIENT_RETRIEVAL_SUPPORT",
+                "explanation": (
+                    f"I must abstain from providing clinical guidance on '{query}'. "
+                    f"No verified, high-confidence evidence was retrieved from the accredited medical corpus "
+                    f"(reason: {packet.abstain_reason or 'INSUFFICIENT_RETRIEVAL_SUPPORT'}). "
+                    "Under clinical safety policy, ungrounded medical guidance is withheld to prevent patient harm."
+                ),
+                "citations": [],
+                "next_actions": [
+                    "Consult accredited NHS clinical guidelines or senior clinician",
+                    "Refine query with specific clinical terms",
+                ],
+                "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
+                "safety_validated": True,
+                "is_degraded": packet.is_degraded,
+                "retrieval_mode": packet.retrieval_mode,
+                "packet": packet.to_dict(),
+            }
 
-        if not matched_citations:
-            matched_citations.append(NICE_EVIDENCE_MAP["stemi"])
-
-        # 4. Parse & Enrich Response
-        if resp.status_code == 200:
-            try:
-                resp_data = json.loads(resp.body)
-                raw_exp = resp_data.get("explanation", "")
-                if "AI assistant response for:" in raw_exp or not raw_exp:
-                    # Provide rich grounded explanation if fallback text was present
-                    if "lad" in q_lower or "stemi" in q_lower or "coronary" in q_lower:
-                        explanation = (
-                            "The Left Anterior Descending (LAD) coronary artery traverses the anterior interventricular "
-                            "groove, supplying the anterior two-thirds of the interventricular septum, anterior left "
-                            "ventricular wall, and apex. Acute occlusion manifests as ST-segment elevation in precordial "
-                            "leads V1-V4. Under NICE Guideline NG185 (Section 1.1.2), emergent primary percutaneous coronary "
-                            "intervention (PCI) within 120 minutes of diagnosis is the gold standard revascularization therapy."
-                        )
-                    elif "hypertension" in q_lower or "blood pressure" in q_lower:
-                        explanation = (
-                            "According to NICE Guideline NG136, initial pharmacological management for stage 2 hypertension "
-                            "depends on patient age and ethnicity: offer an ACE inhibitor or ARB to non-black patients aged under 55; "
-                            "offer a calcium channel blocker (CCB) to patients aged 55 and over or adults of African or Caribbean family origin."
-                        )
-                    else:
-                        explanation = (
-                            f"Clinical Analysis for '{query}': Under NICE clinical guidelines and accredited protocols, "
-                            "management requires systematic differential diagnosis, objective biomarker verification, "
-                            "and guideline-anchored therapeutic intervention."
-                        )
-                else:
-                    explanation = raw_exp
-
-                intent = resp_data.get("intent", "teaching")
-                next_actions = resp_data.get("next_actions", ["Review Guideline", "Test Understanding"])
-            except Exception:
-                explanation = f"Clinical guidance regarding '{query}' based on NICE clinical evidence."
-                intent = "teaching"
-                next_actions = ["Review Clinical Guidelines", "Attempt Case Scenario"]
-        else:
-            explanation = f"Clinical consultation for: {query}"
-            intent = "teaching"
-            next_actions = ["Review Guidelines"]
-
-        latency_ms = round((time.perf_counter() - start_time) * 1000.0, 2)
+        # Grounded evidence packet response
+        top_cands = packet.candidates[:3]
+        citations = [
+            {
+                "title": cand.doc_title or cand.document_id,
+                "ref": f"{cand.document_id}:{cand.chunk_id}",
+                "quote": cand.text[:280] + "..." if len(cand.text) > 280 else cand.text,
+                "section": " > ".join(cand.section_path) if cand.section_path else cand.heading,
+                "score": round(cand.rerank_score or cand.fused_score, 4),
+            }
+            for cand in top_cands
+        ]
+        top_cand = top_cands[0]
+        heading_str = f" ({top_cand.heading})" if top_cand.heading else ""
+        explanation = (
+            f"Grounded clinical evidence from {top_cand.doc_title or top_cand.document_id}{heading_str}:\n\n"
+            f"{top_cand.text.strip()}"
+        )
         return {
-            "intent": intent,
+            "intent": "clinical_guidance",
+            "abstain": False,
+            "abstain_reason": None,
             "explanation": explanation,
-            "citations": matched_citations,
-            "next_actions": next_actions,
-            "latency_ms": latency_ms,
+            "citations": citations,
+            "next_actions": ["Review Grounded Evidence", "Correlate with Clinical Presentation"],
+            "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
             "safety_validated": True,
+            "is_degraded": packet.is_degraded,
+            "retrieval_mode": packet.retrieval_mode,
+            "packet": packet.to_dict(),
         }
 
     except Exception as ex:
@@ -299,6 +328,39 @@ async def ai_chat(
             status_code=500,
             content={"error": f"AI Processing Error: {str(ex)}"},
         )
+
+
+# --------------------------------------------------------------------------
+# Direct Evidence Engine Retrieval Endpoint
+# --------------------------------------------------------------------------
+@app.post("/api/v1/evidence/query")
+async def evidence_query_endpoint(request: Request):
+    """Direct query endpoint for Canonical Evidence Engine (V1)."""
+    start_time = time.perf_counter()
+    body_bytes = await request.body()
+    try:
+        body_json = json.loads(body_bytes.decode("utf-8")) if body_bytes else {}
+    except Exception:
+        body_json = {}
+    query_text = body_json.get("query", "").strip()
+    if not query_text:
+        return JSONResponse(status_code=400, content={"error": "Missing 'query' parameter in request body"})
+    claims = body_json.get("claims_to_verify")
+    top_k = int(body_json.get("top_candidates", 10))
+    rerank_k = int(body_json.get("rerank_top_k", 5))
+    mode = str(body_json.get("mode", "TUTOR"))
+
+    engine = get_evidence_engine()
+    packet = engine.query(
+        query=query_text,
+        claims_to_verify=claims,
+        mode=mode,
+        top_candidates=top_k,
+        rerank_top_k=rerank_k,
+    )
+    res = packet.to_dict()
+    res["latency_ms"] = round((time.perf_counter() - start_time) * 1000.0, 2)
+    return res
 
 
 # --------------------------------------------------------------------------

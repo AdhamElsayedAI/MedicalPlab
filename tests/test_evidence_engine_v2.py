@@ -49,7 +49,7 @@ class TestDocumentRouting:
         router = DeterministicDocumentRouter(data_root=_ROOT / "Data")
         cards = router.build_or_load_cards()
 
-        assert len(cards) >= 20
+        assert len(cards) >= 16
         for doc_id, card in cards.items():
             assert isinstance(card, DocumentCard)
             assert card.document_id == doc_id
@@ -149,7 +149,7 @@ class TestSharedEvidenceEngineV2:
 
         engine = SharedEvidenceEngineV2(data_root=_ROOT / "Data")
         assert engine.router is not None
-        assert len(engine.router.cards) >= 20
+        assert len(engine.router.cards) >= 16
 
         # Query without deep models loaded (uses BM25 + deterministic routing)
         packet = engine.query(
@@ -157,8 +157,8 @@ class TestSharedEvidenceEngineV2:
             claims_to_verify=[
                 "Bartter syndrome involves impaired loop of Henle sodium-potassium-chloride cotransport."
             ],
-            top_candidates=10,
-            rerank_top_k=5,
+            top_candidates=50,
+            rerank_top_k=25,
         )
         assert isinstance(packet, EvidencePacket)
         assert packet.query.original_query == "What causes hypokalemia in Bartter syndrome?"

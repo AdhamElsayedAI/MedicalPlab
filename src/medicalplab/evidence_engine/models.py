@@ -97,6 +97,21 @@ class RetrievedCandidate:
         )
 
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "chunk_id": self.chunk_id,
+            "document_id": self.document_id,
+            "section_path": self.section_path,
+            "heading": self.heading,
+            "text": self.text,
+            "doc_title": self.doc_title,
+            "fused_score": self.fused_score,
+            "channel_ranks": self.channel_ranks,
+            "channel_scores": self.channel_scores,
+            "rerank_score": self.rerank_score,
+        }
+
+
 @dataclass
 class ClaimVerificationResult:
     """Grounding outcome for an individual atomic clinical proposition."""
@@ -112,6 +127,21 @@ class ClaimVerificationResult:
     veto_flags: list[str] = field(default_factory=list)
     is_high_risk: bool = False
 
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "claim_id": self.claim_id,
+            "claim_text": self.claim_text,
+            "state": self.state.value if hasattr(self.state, "value") else str(self.state),
+            "confidence": self.confidence,
+            "cited_chunk_id": self.cited_chunk_id,
+            "cited_document_id": self.cited_document_id,
+            "cited_section": self.cited_section,
+            "evidence_span": self.evidence_span,
+            "rationale": self.rationale,
+            "veto_flags": self.veto_flags,
+            "is_high_risk": self.is_high_risk,
+        }
+
 
 @dataclass
 class EvidencePacket:
@@ -123,3 +153,25 @@ class EvidencePacket:
     claim_verifications: list[ClaimVerificationResult] = field(default_factory=list)
     abstain: bool = False
     abstain_reason: str | None = None
+    retrieval_mode: str = "TUTOR"
+    is_degraded: bool = False
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "query": {
+                "original_query": self.query.original_query,
+                "canonical_query": self.query.canonical_query,
+                "neutral_target": self.query.neutral_target,
+                "has_negation": self.query.has_negation,
+                "detected_entities": self.query.detected_entities,
+                "transformations": self.query.transformations,
+            },
+            "routed_document_ids": self.routed_document_ids,
+            "candidates": [c.to_dict() for c in self.candidates],
+            "top_passage": self.top_passage.to_dict() if self.top_passage else None,
+            "claim_verifications": [v.to_dict() for v in self.claim_verifications],
+            "abstain": self.abstain,
+            "abstain_reason": self.abstain_reason,
+            "retrieval_mode": self.retrieval_mode,
+            "is_degraded": self.is_degraded,
+        }
