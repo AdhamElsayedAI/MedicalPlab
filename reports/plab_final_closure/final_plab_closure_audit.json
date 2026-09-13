@@ -1,0 +1,199 @@
+{
+  "action_counts": {
+    "PRESERVE_AFTER_REVALIDATION": 4,
+    "QUARANTINE": 24,
+    "REPAIR": 6,
+    "REWRITE": 2
+  },
+  "audit_version": "7.0.0",
+  "canary": {
+    "false_support_count": 0,
+    "fixtures": [
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "Broad CCB evidence mapped to amlodipine 5 mg once daily.",
+        "question_id": "PLAB-CARD-0001"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "Cardioversion evidence mapped to a combined lifestyle answer.",
+        "question_id": "PLAB-CARD-0006"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "COPD diagnosis evidence mapped to triple-therapy escalation.",
+        "question_id": "PLAB-RESP-0003"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "A tidal-volume-only span mapped to tidal volume plus plateau pressure.",
+        "question_id": "PLAB-RESP-0008"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "The unrelated PMC10056781 olive-fruit-fly article was declared a cardiogenic-shock source.",
+        "question_id": "PLAB-CARD-0010"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "Dental-prophylaxis guidance was mapped to a blood-culture protocol.",
+        "question_id": "PLAB-CARD-0013"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "A topic-related citation lacked an exact TEE indication span.",
+        "question_id": "PLAB-CARD-0014"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "An acute atropine algorithm was mapped to chronic pacing cardiomyopathy.",
+        "question_id": "PLAB-CARD-0017"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "A topic-related citation lacked exact comparative pacing-outcome support.",
+        "question_id": "PLAB-CARD-0018"
+      },
+      {
+        "actual_final_validator_result": "FAIL",
+        "expected_failure": true,
+        "failure_reason": "The historical question/version/evidence mapping is not present in the V7 grounded claim matrix.",
+        "historical_bad_mapping": "A generic temperature-control statement was mapped to an exact <=37.5 C threshold.",
+        "question_id": "PLAB-EMERG-0003"
+      }
+    ],
+    "fn": 0,
+    "fp": 0,
+    "tn": 10,
+    "tp": 12
+  },
+  "closure_status": "PASS_WITH_CLINICAL_BLOCKERS",
+  "historical_integrity": {
+    "all_unchanged": true,
+    "artifacts": [
+      {
+        "current_sha256": "7fbf3183de74df9490c9a2ce5f7b837099b536d76a2365e73abe0c0809104879",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_frozen_v1.json",
+        "unchanged": true,
+        "v6_base_sha256": "7fbf3183de74df9490c9a2ce5f7b837099b536d76a2365e73abe0c0809104879"
+      },
+      {
+        "current_sha256": "3351e9b7a70c0dfc83eb3927f0258f80efb273c3e37a08ab9714419f5239eeca",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_source_audit_v2.json",
+        "unchanged": true,
+        "v6_base_sha256": "3351e9b7a70c0dfc83eb3927f0258f80efb273c3e37a08ab9714419f5239eeca"
+      },
+      {
+        "current_sha256": "180c4512a2886a4bfc85c45f2c9c773dd1831b42a3b658fcc4000800d888ae80",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_clinical_readiness_v3.json",
+        "unchanged": true,
+        "v6_base_sha256": "180c4512a2886a4bfc85c45f2c9c773dd1831b42a3b658fcc4000800d888ae80"
+      },
+      {
+        "current_sha256": "544f74b048a777b6e0b8984f7eee387218633099ad5f2bb441e15b40be87f0e8",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_clinical_readiness_v4.json",
+        "unchanged": true,
+        "v6_base_sha256": "544f74b048a777b6e0b8984f7eee387218633099ad5f2bb441e15b40be87f0e8"
+      },
+      {
+        "current_sha256": "ab69b5a349382444ca0e4e842544294f50ffc328d5d076048ef6eeb1695357ea",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_clinical_readiness_v5.json",
+        "unchanged": true,
+        "v6_base_sha256": "ab69b5a349382444ca0e4e842544294f50ffc328d5d076048ef6eeb1695357ea"
+      },
+      {
+        "current_sha256": "4f188b55832be074596611767801267f530178d4cec4df92306542b81219e7ec",
+        "path": "Data/questions/versions/cardiorespiratory_batch_1_clinical_readiness_v6.json",
+        "unchanged": true,
+        "v6_base_sha256": "4f188b55832be074596611767801267f530178d4cec4df92306542b81219e7ec"
+      }
+    ],
+    "forensic_branches": {
+      "plab-v3-disputed": "ac6777abd8bb4b1f55fc32aa6a17a1bde5e23268",
+      "plab-v4-disputed": "b2cd4537492a9169bce5502ecf7956a441e1b1c9",
+      "plab-v5-disputed": "654fe652e8606114443ce1fc1ed3638e9f1c5bbf"
+    },
+    "trusted_ancestor": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+    "v6_base_commit": "442ebeb914373415f8b4a4c4761c651e9420a18d"
+  },
+  "original_v6_grounded": {
+    "downgrade_reasons": {
+      "PLAB-CARD-0019": "Physical signs support aortic stenosis but do not autonomously establish haemodynamic severity; V6 mapped them to an unrelated intervention-threshold span.",
+      "PLAB-CARD-0020": "V6 used inconsistent > versus >= operators and treated multiple severe-AS measures as a single conjunction; exact current criteria need a new source-led rewrite.",
+      "PLAB-CARD-0021": "CT is central to TAVI planning, but the categorical 'gold standard reference technique' wording and full pre-procedural scope need clinician review.",
+      "PLAB-RESP-0007": "The V6 FICM/ICS representation invented the Berlin thresholds; the current official ICS summary used here does not state the complete Berlin classification."
+    },
+    "downgraded": [
+      "PLAB-CARD-0019",
+      "PLAB-CARD-0020",
+      "PLAB-CARD-0021",
+      "PLAB-RESP-0007"
+    ],
+    "remained_grounded": 9,
+    "total": 13
+  },
+  "original_v6_quarantined": {
+    "remain_blocked": 20,
+    "resolved": [
+      "PLAB-CARD-0008",
+      "PLAB-CARD-0015",
+      "PLAB-RESP-0008"
+    ],
+    "resolved_count": 3,
+    "total": 23
+  },
+  "r3_status": "PASS_FAIL_CLOSED_NO_AUTONOMOUS_APPROVAL",
+  "r4_status": "NOT_PRESENT",
+  "remaining_ambiguity_blockers_in_eligible_items": 0,
+  "remaining_blocker_distribution": {
+    "E_AUTHORITATIVE_SOURCE_CONFLICT": 5,
+    "F_HUMAN_CLINICAL_JUDGMENT_REQUIRED": 7,
+    "G_LICENSING_BLOCKER": 4,
+    "H_NO_AUTHORITATIVE_EVIDENCE": 6,
+    "I_UNSAFE_OR_INVALID_QUESTION": 2
+  },
+  "remaining_engineering_blockers": 0,
+  "remaining_source_currentness_blockers_in_eligible_items": 0,
+  "remaining_uncovered_decisive_fragments_all_items": "NOT_RECOMPUTED_FOR_BLOCKED_ITEMS; BLOCKER_PRECEDES_ELIGIBILITY",
+  "remaining_uncovered_decisive_fragments_in_eligible_items": 0,
+  "remaining_unsupported_decisive_claims_all_items": 24,
+  "remaining_unsupported_decisive_claims_in_eligible_items": 0,
+  "report_type": "FINAL_PLAB_CLOSURE_AUDIT",
+  "scope_confirmation": {
+    "clinician_approval_fabricated": false,
+    "disputed_artifact_changed": false,
+    "golden_promotion": false,
+    "model_training": false,
+    "new_scope_started": false,
+    "plab_automation_closed": true,
+    "push_performed": false,
+    "rag_work": false
+  },
+  "summary": {
+    "clinician_review_required": 12,
+    "deferred": 0,
+    "quarantined": 24,
+    "rejected": 0,
+    "source_grounded": 12,
+    "total_questions": 36
+  },
+  "timestamp": "2026-09-13T12:00:00+03:00"
+}

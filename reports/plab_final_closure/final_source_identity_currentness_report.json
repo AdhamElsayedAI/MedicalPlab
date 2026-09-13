@@ -1,0 +1,267 @@
+{
+  "audit_version": "7.0.0",
+  "report_type": "FINAL_SOURCE_IDENTITY_CURRENTNESS_REPORT",
+  "sources": [
+    {
+      "canonical_identifier": "NG196",
+      "canonical_organization": "National Institute for Health and Care Excellence",
+      "canonical_title": "Atrial fibrillation: diagnosis and management",
+      "canonical_url": "https://www.nice.org.uk/guidance/ng196/chapter/recommendations",
+      "currentness_basis": "Active NICE recommendations page retrieved from the publisher; no replacement guideline is identified on that page.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2021 current recommendations",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Offer anticoagulation with a direct-acting oral anticoagulant to people with atrial fibrillation and a CHA2DS2-VASc score of 2 or above, taking into account the risk of bleeding.",
+          "exact_text_sha256": "bab6f9943678f22aeb63c4e42de75c6bccddbbe6bff8f43b91c13765c5d0720e",
+          "span_id": "NG196-1.6.3"
+        },
+        {
+          "exact_text": "Offer either a standard beta-blocker or a rate-limiting calcium-channel blocker as initial rate-control monotherapy to people with atrial fibrillation.",
+          "exact_text_sha256": "c92138bcc4082c4d5dc5783015cf362ad7d92eeccd4f0284d483cdb71ec34e64",
+          "span_id": "NG196-1.7.2"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "630c526278f119684821fad51a7c00f2bf25bb26811c1d8b91b1308e688639c4",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "caa9dedff7d940170ef29854b19c962c6c718f1872c7f2cb828d9488d33f694a",
+      "representation_text": "Offer anticoagulation with a direct-acting oral anticoagulant to people with atrial fibrillation and a CHA2DS2-VASc score of 2 or above, taking into account the risk of bleeding.\nOffer either a standard beta-blocker or a rate-limiting calcium-channel blocker as initial rate-control monotherapy to people with atrial fibrillation.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-NICE-NG196-V7"
+    },
+    {
+      "canonical_identifier": "NG115",
+      "canonical_organization": "National Institute for Health and Care Excellence",
+      "canonical_title": "Chronic obstructive pulmonary disease in over 16s: diagnosis and management",
+      "canonical_url": "https://www.nice.org.uk/guidance/ng115/chapter/Recommendations",
+      "currentness_basis": "Active NICE recommendations page retrieved from the publisher.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2018 recommendations, amended 2019",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Offer LAMA+LABA to people who have spirometrically confirmed COPD, do not have asthmatic features or features suggesting steroid responsiveness, and remain breathless or have exacerbations despite a short-acting bronchodilator.",
+          "exact_text_sha256": "e56e3e6a2219588c69e9a71802b97b3fe629a019296cb2421a56b5310cb7149f",
+          "span_id": "NG115-1.2.10"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "93358ecbd2713c8293390b5e99f945b4934c0ad1c3bcb23f853dc6c799e4fef5",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "e56e3e6a2219588c69e9a71802b97b3fe629a019296cb2421a56b5310cb7149f",
+      "representation_text": "Offer LAMA+LABA to people who have spirometrically confirmed COPD, do not have asthmatic features or features suggesting steroid responsiveness, and remain breathless or have exacerbations despite a short-acting bronchodilator.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-NICE-NG115-V7"
+    },
+    {
+      "canonical_identifier": "CG109",
+      "canonical_organization": "National Institute for Health and Care Excellence",
+      "canonical_title": "Transient loss of consciousness ('blackouts') in over 16s",
+      "canonical_url": "https://www.nice.org.uk/guidance/cg109/chapter/Recommendations",
+      "currentness_basis": "The official NICE page identifies the 2023 update and remains the active recommendation set.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2010, last updated 21 November 2023",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Refer urgently for cardiovascular assessment, with the referral reviewed and prioritised by an appropriate specialist within 24 hours, anyone with transient loss of consciousness during exertion or a family history of sudden cardiac death in a person younger than 40 years.",
+          "exact_text_sha256": "dc4b5bd089f3ad7b66de913f33d5aef9cf93156c7425a64ba9427841bc7c514d",
+          "span_id": "CG109-1.1.4.2"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "70c70fea073bb5758985430116a53b67fc659a0cb1800eb740e24afdc71a990c",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "dc4b5bd089f3ad7b66de913f33d5aef9cf93156c7425a64ba9427841bc7c514d",
+      "representation_text": "Refer urgently for cardiovascular assessment, with the referral reviewed and prioritised by an appropriate specialist within 24 hours, anyone with transient loss of consciousness during exertion or a family history of sudden cardiac death in a person younger than 40 years.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-NICE-CG109-V7"
+    },
+    {
+      "canonical_identifier": "CG64",
+      "canonical_organization": "National Institute for Health and Care Excellence",
+      "canonical_title": "Prophylaxis against infective endocarditis",
+      "canonical_url": "https://www.nice.org.uk/guidance/cg64/chapter/recommendations",
+      "currentness_basis": "Active NICE recommendations include the December 2024 clarification for dental procedures.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2008, updated 2016 and clarified December 2024",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Antibiotic prophylaxis against infective endocarditis is not recommended routinely for people undergoing dental procedures.",
+          "exact_text_sha256": "49a77837358c14c4559f5bc4d047fe426919361c1d22b1335231b7ce0c27863f",
+          "span_id": "CG64-1.1.3"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "b6ed1ff9ced066da14d65c20a1495aeca3a012c79d476abc912d941ca2b30a78",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "49a77837358c14c4559f5bc4d047fe426919361c1d22b1335231b7ce0c27863f",
+      "representation_text": "Antibiotic prophylaxis against infective endocarditis is not recommended routinely for people undergoing dental procedures.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-NICE-CG64-V7"
+    },
+    {
+      "canonical_identifier": "RCUK-ALS-2025",
+      "canonical_organization": "Resuscitation Council UK",
+      "canonical_title": "Adult advanced life support Guidelines",
+      "canonical_url": "https://www.resus.org.uk/cy/node/36438",
+      "currentness_basis": "Official RCUK 2025 guideline page; it supersedes the 2021 edition.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2025",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Give adrenaline 1 mg after the third shock for adult patients in cardiac arrest with a shockable rhythm, and give amiodarone 300 mg IV after a total of three shocks.",
+          "exact_text_sha256": "ef1c71f70610bd8ccbb938a0c955128931c9febd9aff7e712296829d6e8cc95b",
+          "span_id": "RCUK-ALS-VF-DRUGS"
+        },
+        {
+          "exact_text": "If bradycardia is accompanied by adverse signs, give atropine 500 micrograms IV and, if necessary, repeat every 3-5 minutes to a total of 3 mg.",
+          "exact_text_sha256": "df55f9a6ece2f41bf25c41f603b96529e3c6eb69b34675055d2d5efd3ed65729",
+          "span_id": "RCUK-ALS-BRADY"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "3b40ced8a9140ffcbc700ff9faafe044ced473780a4f3aa2cec308930d97e3ad",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "c832e72504e123d224a7fee8d99f8ac7638757efdec2050b43ecc5f60d63aa15",
+      "representation_text": "Give adrenaline 1 mg after the third shock for adult patients in cardiac arrest with a shockable rhythm, and give amiodarone 300 mg IV after a total of three shocks.\nIf bradycardia is accompanied by adverse signs, give atropine 500 micrograms IV and, if necessary, repeat every 3-5 minutes to a total of 3 mg.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-RCUK-ALS-2025-V7"
+    },
+    {
+      "canonical_identifier": "RCUK-BLS-2025",
+      "canonical_organization": "Resuscitation Council UK",
+      "canonical_title": "Adult basic life support Guidelines",
+      "canonical_url": "https://www.resus.org.uk/cy/node/36437",
+      "currentness_basis": "Official RCUK 2025 guideline page; it supersedes the 2021 edition.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2025",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Compress the chest at a rate of 100-120 per minute, to a depth of at least 5 cm but not more than 6 cm, allowing complete chest recoil.",
+          "exact_text_sha256": "d2244560a73480fb2994634fbca9b4b901ecb080bfc05af6a6b3640c2c12a0dc",
+          "span_id": "RCUK-BLS-COMPRESSIONS"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "089205bb086fb4fbc2693a4db05bea6f125a3d9c1f58ae56597d047ccffaed6b",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "d2244560a73480fb2994634fbca9b4b901ecb080bfc05af6a6b3640c2c12a0dc",
+      "representation_text": "Compress the chest at a rate of 100-120 per minute, to a depth of at least 5 cm but not more than 6 cm, allowing complete chest recoil.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-RCUK-BLS-2025-V7"
+    },
+    {
+      "canonical_identifier": "BTS-OXYGEN-2017",
+      "canonical_organization": "British Thoracic Society",
+      "canonical_title": "BTS Guideline for oxygen use in healthcare and emergency settings",
+      "canonical_url": "https://www.brit-thoracic.org.uk/clinical-resources/guidelines/emergency-oxygen/",
+      "currentness_basis": "The publisher page states that an interim update was not required; a replacement guideline remains in development.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2017 with December 2019 update statement",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "For those with known COPD, or other known risk factors for hypercapnic respiratory failure, a target saturation range of 88-92% is suggested, pending the availability of blood gas results.",
+          "exact_text_sha256": "32e9eca42f348614275e84ae44517bbd478110be4910f3b0f0bdbdb39432c844",
+          "span_id": "BTS-OXYGEN-COPD"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "9b011068931a8bcbc942a56b66f692da8bc630f3d28548f2804966e1fe5b41c7",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "32e9eca42f348614275e84ae44517bbd478110be4910f3b0f0bdbdb39432c844",
+      "representation_text": "For those with known COPD, or other known risk factors for hypercapnic respiratory failure, a target saturation range of 88-92% is suggested, pending the availability of blood gas results.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-BTS-OXYGEN-2017-V7"
+    },
+    {
+      "canonical_identifier": "BTS-PLEURAL-2023",
+      "canonical_organization": "British Thoracic Society",
+      "canonical_title": "British Thoracic Society Guideline for pleural disease",
+      "canonical_url": "https://www.brit-thoracic.org.uk/document-library/guidelines/pleural-disease/pleural-disease-full-supplement/",
+      "currentness_basis": "Current BTS pleural guideline; the 2026 BTS quality standard derives from it and does not supersede it.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "2023",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Conservative management can be considered for the treatment of minimally symptomatic or asymptomatic primary spontaneous pneumothorax in adults regardless of size.",
+          "exact_text_sha256": "efe60b384d932feae69f81ccf608cc3fb83d5633e9239c9395e3c928f08846a6",
+          "span_id": "BTS-PLEURAL-PSP"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "1b4a12871afa7fe182faa5dde24b0309d9db74dd8c757377b5439ef5b69bd9f7",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "efe60b384d932feae69f81ccf608cc3fb83d5633e9239c9395e3c928f08846a6",
+      "representation_text": "Conservative management can be considered for the treatment of minimally symptomatic or asymptomatic primary spontaneous pneumothorax in adults regardless of size.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-BTS-PLEURAL-2023-V7"
+    },
+    {
+      "canonical_identifier": "FICM-ICS-ARDS-2018",
+      "canonical_organization": "Intensive Care Society / Faculty of Intensive Care Medicine",
+      "canonical_title": "ARDS Guideline",
+      "canonical_url": "https://ics.ac.uk/resource/ards-guideline.html",
+      "currentness_basis": "The current official ICS ARDS guideline page; no newer replacement is identified by the publisher.",
+      "currentness_status": "CURRENT_VERIFIED",
+      "edition": "1 July 2018",
+      "edition_verification_status": "EDITION_VERIFIED",
+      "evidence_spans": [
+        {
+          "exact_text": "Where mechanical ventilation is required, the use of low tidal volumes (< 6 ml/kg ideal body weight) and airway pressures (plateau pressure < 30 cmH2O) was recommended.",
+          "exact_text_sha256": "28e12ddffee3e99831d3cac935404cdf856c79b2de43c35adaf43f2d8825bb60",
+          "span_id": "ICS-ARDS-VENTILATION"
+        },
+        {
+          "exact_text": "For patients with moderate/severe ARDS (PF ratio < 20kPa), prone positioning was recommended for at least 12 hours per day.",
+          "exact_text_sha256": "e4580e52f7701a21abd2d881665dfff867c54f6124a2f272cfc4d812d6bcff65",
+          "span_id": "ICS-ARDS-PRONE"
+        }
+      ],
+      "http_status": 200,
+      "identity_status": "IDENTITY_VERIFIED",
+      "raw_response_sha256": "2fc89858ee4d33b96116f16eb4d7b0306403af144ae5843dc269a313e0b5ce2c",
+      "representation_origin": "EXTERNALLY_RETRIEVED_PRIMARY_SOURCE_EXCERPT",
+      "representation_scope": "ONLY_THE_EXACT_SPANS_USED_BY_FINAL_GROUNDED_CLAIMS",
+      "representation_sha256": "bafb99975d00056c0f6ea06de17fa84266c418ed8cd5521ddc06d600d9a23b4a",
+      "representation_text": "Where mechanical ventilation is required, the use of low tidal volumes (< 6 ml/kg ideal body weight) and airway pressures (plateau pressure < 30 cmH2O) was recommended.\nFor patients with moderate/severe ARDS (PF ratio < 20kPa), prone positioning was recommended for at least 12 hours per day.",
+      "retrieval_method": "LIVE_PRIMARY_SOURCE_HTTP_AND_TEXT_EXTRACTION",
+      "retrieved_at": "2026-09-13T12:00:00+03:00",
+      "source_id": "SRC-ICS-ARDS-2018-V7"
+    }
+  ],
+  "timestamp": "2026-09-13T12:00:00+03:00",
+  "unknown_currentness_for_required_high_risk_guidance": 0,
+  "unknown_source_identity": 0
+}
