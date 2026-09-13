@@ -81,44 +81,42 @@ graph TD
 
 ## 3. Backend Cloud Deployment Guide
 
-### Option A: Render (Preferred 1-Click / Blueprint Deployment)
+### 3.1. Deploying on Render (Blueprint Deployment)
 
-The repository includes a ready-to-use [`render.yaml`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/render.yaml) Blueprint:
+The repository includes a ready-to-use [`render.yaml`](render.yaml) Blueprint:
 
-1. **Sign in to Render:** Go to [https://dashboard.render.com](https://dashboard.render.com).
-2. **New Web Service:** Click **New +** $\to$ **Web Service**.
-3. **Connect Repository:** Select `https://github.com/AdhamElsayedAI/MedicalPlab`.
-4. **Configure Settings:**
-   - **Name:** `medicalplab-api`
-   - **Language / Runtime:** `Python`
-   - **Branch:** `main`
-   - **Root Directory:** *(leave blank for repository root)*
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Health Check Path:** `/health`
-5. **Environment Variables:**
-   - Add `ALLOWED_ORIGINS`: `https://medical-plab.vercel.app,http://localhost:3000`
-6. **Deploy:** Click **Create Web Service**.
-7. Once deployed, copy your assigned Render URL (e.g. `https://medicalplab-api.onrender.com`).
+The repository includes a ready-to-use [`render.yaml`](render.yaml) Blueprint:
 
----
+```yaml
+services:
+  - type: web
+    name: medicalplab-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+      - key: ALLOWED_ORIGINS
+        value: https://medical-plab.vercel.app,http://localhost:3000
+```
 
-### Option B: Railway Deployment
+### 3.2. Deploying on Railway
 
-1. Go to [https://railway.app](https://railway.app) $\to$ **New Project** $\to$ **Deploy from GitHub repo**.
-2. Select `AdhamElsayedAI/MedicalPlab`.
-3. Railway automatically detects [`Procfile`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/Procfile) and [`requirements.txt`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/requirements.txt):
-   ```
+1. Install Railway CLI: `npm i -g @railway/cli`
+2. Initialize project: `railway init`
+3. Railway automatically detects [`Procfile`](Procfile) and [`requirements.txt`](requirements.txt):
+   ```text
    web: uvicorn main:app --host 0.0.0.0 --port $PORT
    ```
-4. In Settings $\to$ **Networking**, click **Generate Domain**.
-5. Copy the generated domain (e.g. `https://medicalplab-api-production.up.railway.app`).
+4. Set environment variables via Railway Dashboard:
+   - `ALLOWED_ORIGINS`: `https://medical-plab.vercel.app,http://localhost:3000`
+   - `PORT`: `8000`
+5. Deploy: `railway up`
 
----
+### 3.3. Deploying via Docker (Any Container Host)
 
-### Option C: Docker Containerized Deployment (Fly.io / AWS / GCP)
-
-The repository includes a multi-stage production [`Dockerfile`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/Dockerfile):
+The repository includes a multi-stage production [`Dockerfile`](Dockerfile):
 
 ```bash
 # Build Docker image

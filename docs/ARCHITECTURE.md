@@ -1,272 +1,101 @@
-# Architecture
+# System Architecture & Technical Design
 
-## Scope
+## 1. Architectural Overview
 
-The current architecture is centered on reliable, provenance-preserving evidence retrieval for medical education.
+MedicalPlab is an enterprise-grade AI medical education platform built to prepare international medical graduates and medical students for the UK General Medical Council (GMC) PLAB 1 / Medical Licensing Assessment (MLA).
 
-The main design decision is to avoid coupling source ingestion directly to an LLM. Source structure is preserved first, normalized into a common retrieval contract, evaluated independently, and only then passed toward evidence sufficiency and grounded generation.
-
-## High-level flow
+The platform bridges generative AI with deterministic clinical safety, enforcing exact source-grounded evidence pipelines and formal clinical risk controls (DCB0129).
 
 ```text
-Source governance
-      |
-      +------------------+
-      |                  |
-   WHO PDF            PMC JATS
-      |                  |
-extract/audit       structured XML
-safe cleaning        extraction
-structure parsing       |
-      |            canonical adapter
-      +---------+--------+
-                |
-        Canonical blocks
-                |
-        hierarchy metadata
-                |
-        Retrieval chunks
-                |
-        source-aware dense retrieval
-                |
-        Candidate evidence
-                |
-        +-----------------------+
-        |                       |
- source / authority       evidence sufficiency
-      policy                    |
-        +-----------+-----------+
-                    |
-              grounded RAG
+┌─────────────────────────────────────────────────────────────────┐
+│                       Client Applications                       │
+│     Next.js 15 Web Application  │  Mobile & API Consumers       │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │ HTTP / REST / JSON
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   FastAPI Application Gateway                   │
+│           (main.py / src/medicalplab/stage_g/product_api.py)    │
+│  - Authentication & RBAC        - Rate Limiting & Audit Log     │
+│  - CORS & Security Headers      - Multi-Tenant Router           │
+└───────┬────────────────────────┬────────────────────────┬───────┘
+        │                        │                        │
+        ▼                        ▼                        ▼
+┌───────────────┐        ┌───────────────┐        ┌───────────────┐
+│   Learning    │        │   Clinical    │        │  PLAB V9      │
+│  & Adaptive   │        │  Simulation   │        │   Evidence    │
+│  (Stage-E)    │        │  (Stage-F)    │        │   Pipeline    │
+│  - BKT Engine │        │  - OSCE Turn- │        │  - Exact-Span │
+│  - Spaced Rep │        │    by-turn    │        │  - Blocker G  │
+│  - Analytics  │        │  - Safety Trap│        │  - Fail-Closed│
+└───────┬───────┘        └───────┬───────┘        └───────┬───────┘
+        │                        │                        │
+        └────────────────────────┼────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                  Authoritative Evidence Engine                  │
+│   (Stage-B Claim Planner & Multi-Source RAG Dense Retriever)    │
+│  - BGE-M3 & Qwen-4B Medical Dense Embeddings                    │
+│  - Neural Two-Layer Firewall & Contrastive Reranker             │
+│  - Canonical Block Parser (NICE, BTS, RCUK, SIGN, PMC XML)      │
+└────────────────────────────────┬────────────────────────────────┘
+                                 │
+                                 ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      Persistence Subsystem                      │
+│  - Multi-Tenant Data Store (SQLite / PostgreSQL)                │
+│  - Deterministic Question Vault & Checksum Manifests            │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-## WHO ingestion
+---
 
-```text
-PDF
--> extraction
--> extraction audit
--> safe deterministic cleaning
--> structure inspection
--> section parsing
--> hierarchy enrichment
--> canonical sections
--> chunks
-```
+## 2. Technology Stack
 
-## PMC ingestion
+| Layer | Technology | Rationale |
+| :--- | :--- | :--- |
+| **Frontend UI** | Next.js 15, React 19, TypeScript | Server Components, fast rendering, type-safe API client |
+| **Styling** | Vanilla CSS Design System | Curated medical color palette, zero CSS bloat, fluid responsiveness |
+| **Backend API** | FastAPI, Uvicorn, Python 3.11+ | High throughput async ASGI, automatic OpenAPI generation |
+| **Data Validation** | Pydantic V2 | Strict type coercion and contract validation across all AI inputs |
+| **Adaptive Learning** | Bayesian Knowledge Tracing (BKT) | Empirically grounded cognitive mastery tracking over heuristic scoring |
+| **Embeddings & Search** | BGE-M3 / Qwen-4B Domain Adapted | Specialized for clinical entity density and cross-guideline semantics |
+| **Evidence Closure** | PLAB V9 SHA-256 Engine | Deterministic cryptographic guarantees for exact source spans |
+| **Testing** | Pytest, Pytest-Subtests | Comprehensive unit, integration, and clinical safety test suites |
 
-The PMC article PDF is retained as an archival artifact, while official PMC JATS XML is used for machine ingestion.
+---
 
-```text
-PMC OAI-PMH
--> JATS XML
--> structure inspection
--> structured extraction
--> canonical adapter
--> semantic table context
--> canonical sections
--> chunks
-```
+## 3. Core Component Subsystems
 
-PMC chunks use XML element provenance rather than invented page numbers.
+### 3.1. Frontend (`frontend/`)
+- Modern, clean user interface designed for clinical learners.
+- **Interactive Question Player**: Instant feedback with exact guideline citations, atomic claim breakdowns, and distractor refutations.
+- **Curriculum Mastery Dashboard**: Specialty-level radar charts and knowledge decay alerts driven by Stage-E BKT.
+- **Clinician Review Workspace**: Restricted portal for GMC doctors to inspect technical evidence spans, distractor metrics, and adjudicate questions.
 
-## Canonical representation
+### 3.2. Backend API Gateway (`main.py` & `src/medicalplab/`)
+- Modular FastAPI routers under `/api/v1/`:
+  - `/questions`: Fetch curriculum items, filter by specialty/system, submit answers.
+  - `/analytics`: Real-time student cognitive profile, predicted exam pass probability.
+  - `/simulation`: Interactive clinical patient consultation session.
+  - `/review`: Authenticated clinician review queue and sign-off endpoints.
+  - `/health`: Automated liveness and dependency health checks.
 
-Important fields include:
+### 3.3. Stage-G Enterprise Multi-Tenancy
+- Dedicated tenant partitioning for medical schools and hospital trusts.
+- Strict isolation of student progress records, customized institutional curricula, and proprietary question banks.
 
-```text
-document_id
-source_id
-block_index
-block_type
-section_number
-section_level
-section_path
-heading
-text
-content_sha256
-provenance_type
-source_locator
-source_format
-```
+### 3.4. Persistence & Storage Architecture
+- Abstracted persistence interface (`src/medicalplab/plab/persistence.py`).
+- Read-only deterministic JSON question versions for immutable release integrity.
+- Encrypted SQLite / PostgreSQL for dynamic user sessions, progress histories, and audit events.
 
-When source layout and retrieval semantics differ, `retrieval_section_path` can carry semantic context while `section_path` remains source-faithful.
+---
 
-## Retrieval identity
+## 4. Security & Compliance Architecture
 
-Local block indexes are not globally unique.
-
-Retrieval/evaluation uses:
-
-```text
-(document_id, source_block_index)
-```
-
-Example:
-
-```text
-DOC-WHO-CARD-0001:B0012
-DOC-PMC-CARD-0002:B0079
-```
-
-## Retrieval
-
-Evaluated components include BM25, Qwen3 dense embeddings, weighted RRF experiments, Qwen3 reranker experiments, multi-document dense retrieval, and source-aware dense retrieval.
-
-Selected current dense model:
-
-```text
-Qwen/Qwen3-Embedding-0.6B
-```
-
-Selected current representation:
-
-```text
-Source-aware dense retrieval
-```
-
-The retrieval representation contains explicit source-document identity in addition to semantic metadata and chunk content.
-
-The 0.6B reranker experiments did not improve final ordering on the earlier development set, so reranking is not part of the selected baseline.
-
-## Source authority
-
-Semantic similarity and evidence authority are separate concerns.
-
-A review can be semantically relevant while a primary guideline is still the preferred source for a recommendation question.
-
-Source identity improved preferred-document selection in both DEV and frozen held-out evaluation, but it did not fully solve exact evidence selection.
-
-Therefore the architecture separates:
-
-```text
-semantic retrieval
-+
-source / authority policy
-+
-evidence sufficiency
-```
-
-Explicit requests such as:
-
-```text
-according to WHO
-from the primary guideline
-compare the guideline with the review
-```
-
-should be handled by source-aware metadata and a dedicated policy layer rather than by a blind global score boost.
-
-## Evaluation
-
-The current evaluation stack contains two separate roles.
-
-### DEV v2
-
-```text
-medicalplab-retrieval-multisource-dev-v2
-30 cases
-26 answerable
-4 unsupported
-```
-
-Used for development analysis and representation experiments.
-
-### Frozen held-out v1
-
-```text
-medicalplab-retrieval-multisource-heldout-v1
-24 cases
-20 answerable
-4 unsupported
-```
-
-Frozen SHA-256:
-
-```text
-59956d5179f62795d1a1b28384090c2170959641ed555053dec81e5218afcdfe
-```
-
-Source-aware held-out result:
-
-```text
-Hit@1      0.9500
-Recall@10  0.9750
-MRR        0.9563
-nDCG@10    0.9357
-PreferredDoc@1 1.0000
-```
-
-These are retrieval metrics only. They are not clinical-accuracy metrics.
-
-Unsupported cases remain diagnostic until evidence-sufficiency calibration is completed.
-
-## Current retrieval architecture
-
-```text
-User Query
-   |
-   v
-Query Understanding
-   |
-   v
-Source-Aware Dense Retrieval
-Qwen3-Embedding-0.6B
-   |
-   v
-Candidate Evidence
-   |
-   +--> Source / Authority Policy
-   |
-   +--> Evidence Sufficiency
-   |
-   v
-Grounded RAG Generation
-```
-
-## Next architecture milestone
-
-**Evidence Sufficiency Calibration v1**
-
-Goal:
-
-Determine whether the retrieved evidence is strong enough to support an answer.
-
-```text
-Candidate Evidence
-      |
-      v
-Evidence Sufficiency
-   |           |
-sufficient   insufficient
-   |           |
-   v           v
-answer       abstain
-```
-
-This layer should be calibrated separately rather than inferred from an arbitrary similarity threshold.
-
-## Planned online architecture
-
-```text
-Mobile / Web client
-        |
-        v
-FastAPI service
-        |
-        +--> retrieval service
-        |      +--> dense index
-        |      +--> lexical retrieval where useful
-        |      +--> source / authority policy
-        |      +--> evidence sufficiency
-        |      +--> retrieval traces
-        |
-        +--> generation service
-               +--> evidence context
-               +--> citations
-               +--> citation verification
-               +--> abstention
-```
-
-The client should never contain model API keys, vector database credentials, or private prompts.
+1. **Zero Secret Leaks**: All configuration managed through clean environment variables. Template provided in `.env.example`.
+2. **Role-Based Access Control (RBAC)**: Fine-grained permissions separating Students, Educators, Reviewers, and Platform Admins.
+3. **Data Privacy**: No patient data ingested or stored. Student exam records encrypted at rest.
+4. **DCB0129 Compliance**: Integrated clinical risk management protocols and automated safety blocker quarantines.

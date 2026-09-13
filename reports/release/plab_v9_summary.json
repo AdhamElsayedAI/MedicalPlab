@@ -1,0 +1,47 @@
+{
+  "schema_version": "9.0.0",
+  "closure_status": "PASS_WITH_CLINICAL_BLOCKERS",
+  "canonical_evidence_vault": {
+    "branch": "plab-evidence-final-v9",
+    "commit_sha": "f62b3965c0d0f10e3c636e262365e0886c61cee8",
+    "parent_sha": "230dd671df4cd9ea7138872770613ea2302f78d4"
+  },
+  "public_packaging": {
+    "submission_branch": "hackathon-submission-clean-v1",
+    "safe_base_commit": "c3697bb9e3ecb5c81ae7121501e9052bda3388f8",
+    "redistribution_status": "PRIVATE_EVIDENCE_ONLY",
+    "explanation": "Raw third-party publisher HTML/PDF snapshots and full normalized texts are preserved in the immutable private evidence vault. Public repository distribution is cleanly separated and blocked to respect copyright."
+  },
+  "question_summary": {
+    "total_questions": 36,
+    "source_grounded": 12,
+    "clinician_review_required": 12,
+    "quarantined": 24,
+    "deferred": 0,
+    "rejected": 0
+  },
+  "governance_metrics": {
+    "clinician_approved": 0,
+    "golden_eligible": 0,
+    "golden": 0,
+    "note": "AI is strictly prohibited from granting clinical approval. All 12 evidence-supported questions await licensed human clinician sign-off."
+  },
+  "technical_integrity": {
+    "remaining_engineering_blockers": 0,
+    "remaining_source_identity_blockers_in_eligible_items": 0,
+    "remaining_source_currentness_blockers_in_eligible_items": 0,
+    "remaining_unsupported_decisive_claims_in_eligible_items": 0,
+    "remaining_uncovered_decisive_fragments_in_eligible_items": 0,
+    "remaining_exact_span_integrity_errors": 0,
+    "remaining_hash_integrity_errors": 0,
+    "remaining_ambiguity_blockers_in_eligible_items": 0,
+    "false_support_count": 0
+  },
+  "quarantine_breakdown": {
+    "E_AUTHORITATIVE_SOURCE_CONFLICT": 5,
+    "F_HUMAN_CLINICAL_JUDGMENT_REQUIRED": 7,
+    "G_LICENSING_BLOCKER": 4,
+    "H_NO_AUTHORITATIVE_EVIDENCE": 6,
+    "I_UNSAFE_OR_INVALID_QUESTION": 2
+  }
+}

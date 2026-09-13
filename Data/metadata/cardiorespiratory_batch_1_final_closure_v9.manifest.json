@@ -1,0 +1,18 @@
+{
+  "schema_version": "9.0.0",
+  "parent_commit_sha": "230dd671df4cd9ea7138872770613ea2302f78d4",
+  "closure_timestamp": "2026-09-13T12:00:00+00:00",
+  "closure_status": "PASS_WITH_CLINICAL_BLOCKERS",
+  "checkpoint_file": "cardiorespiratory_batch_1_final_closure_v9.json",
+  "checkpoint_sha256": "8ba1085dcba4cb63eb1ae390fbaed5a996dc833ba64eb9dde302972999a31a18",
+  "checkpoint_byte_length": 241472,
+  "summary": {
+    "total_questions": 36,
+    "source_grounded": 12,
+    "clinician_review_required": 12,
+    "quarantined": 24,
+    "deferred": 0,
+    "rejected": 0
+  },
+  "redistribution_status": "PRIVATE_EVIDENCE_ONLY"
+}

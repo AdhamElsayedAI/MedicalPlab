@@ -218,7 +218,7 @@ If credit card verification on cloud providers is unavailable (e.g. payment fail
    git remote add space https://huggingface.co/spaces/<YOUR_HF_USERNAME>/medicalplab-api
    git push space main
    ```
-4. Hugging Face builds the included [`Dockerfile`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/Dockerfile).
+4. Hugging Face builds the included [`Dockerfile`](Dockerfile).
 5. Your public HTTPS endpoint is immediately live at:
    `https://<YOUR_HF_USERNAME>-medicalplab-api.hf.space`
 6. Test your live endpoint:
@@ -268,7 +268,7 @@ Once you have your production URL (e.g. `https://medicalplab-api-xxxxxxx-uc.a.ru
 ## 7. Production Reliability & Resiliency Features
 
 1. **Client-Side Timeout & AbortController:**
-   The frontend API client ([`frontend/src/lib/api-client.ts`](file:///c:/Users/Adham%20Elsayed/Downloads/MedicalPlab-dev/MedicalPlab-dev/frontend/src/lib/api-client.ts)) features a 15-second request timeout. If the backend cold-starts or network latency spikes, the client catches the abort signal and seamlessly degrades to offline clinical reasoning. The user interface never freezes or errors.
+   The frontend API client ([`frontend/src/lib/api-client.ts`](frontend/src/lib/api-client.ts)) features a 15-second request timeout. If the backend cold-starts or network latency spikes, the client catches the abort signal and seamlessly degrades to offline clinical reasoning. The user interface never freezes or errors.
 2. **Dynamic Port Binding:**
    The Docker container binds dynamically to `0.0.0.0:${PORT:-8080}`, ensuring seamless operation across Google Cloud Run (`8080`), Hugging Face Spaces (`7860`), or local dev (`8000`).
 3. **Structured Telemetry & Latency Monitoring:**

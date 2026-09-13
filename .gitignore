@@ -24,9 +24,21 @@ env/
 
 # Medical data and local databases
 Data/
+Data/sources/
+Data/private_evidence/
+Data/sources/private/
+*.local-evidence.*
+Data/persistence/*.db
+Data/persistence/*.sqlite
+Data/persistence/*.sqlite3
 *.db
 *.sqlite
 *.sqlite3
+
+# Local audit and debugging helpers
+final_plab_v9_audit*.py
+audit_v8_receipts*.py
+diagnose_v8_normalized_hashes*.py
 
 # Caches / notebooks
 .cache/
@@ -52,7 +64,6 @@ evaluation/audits/evidence_sufficiency_negative_label_audit_candidates_v1.md
 .qwen4b_env/
 artifacts/qwen4b_domain_adaptation/
 bundle_fix/
-bundle_fix/
 *.zip
 
 # Node / Next.js
@@ -63,3 +74,4 @@ node_modules/
 .pytest_tmp/
 .pytest_temp/
 scratch/
+

@@ -2,6 +2,9 @@ import importlib.util, json, sys
 from collections.abc import Mapping
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]; S=ROOT/'Scripts'; sys.path.insert(0,str(S))
+RENAL_ENV = ROOT / ".renal_env"
+if RENAL_ENV.exists() and str(RENAL_ENV) not in sys.path:
+    sys.path.insert(0, str(RENAL_ENV))
 from qwen4b_adaptation_common import normalize_text, jaccard, canonical_json_bytes, sha256_bytes
 from build_qwen4b_retrieval_train import FORBIDDEN_SOURCE_TOKENS, negative_category
 
