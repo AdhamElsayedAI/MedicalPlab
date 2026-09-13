@@ -1,0 +1,2553 @@
+{
+  "batch_version": "cardiorespiratory_batch_1_clinical_readiness_v4",
+  "created_at": "2026-09-12T19:45:00Z",
+  "policy_version": "PLAB_V4_CANONICAL_IDENTITY_GROUNDED",
+  "trusted_parent_commit": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+  "disputed_checkpoint_incident": "INC-PLAB-2026-09-FALSE-GREEN",
+  "total_questions": 36,
+  "status": "CLINICIAN_REVIEW_REQUIRED",
+  "clinician_review_status": "PENDING_HUMAN_REVIEW",
+  "golden_dataset_status": false,
+  "metrics": {
+    "total_questions": 36,
+    "question_source_grounded_count": 30,
+    "clinician_review_ready_count": 30,
+    "ai_validated_count": 30,
+    "clinician_approved_count": 0,
+    "golden_eligible_count": 0,
+    "golden_count": 0,
+    "total_atomic_claims": 68,
+    "decisive_claim_count": 67,
+    "claim_support_pass_count": 60,
+    "claim_support_fail_count": 8,
+    "claim_support_uncertain_count": 0,
+    "numeric_claim_count": 13,
+    "numeric_exactness_pass_count": 12,
+    "numeric_exactness_fail_count": 1,
+    "population_match_fail_count": 0,
+    "jurisdiction_fail_count": 0,
+    "actions": {
+      "PRESERVE_AFTER_REVALIDATION": 0,
+      "REPAIR": 30,
+      "REWRITE": 0,
+      "REPLACE": 0,
+      "QUARANTINE": 6,
+      "DEFER": 0,
+      "REJECT": 0
+    },
+    "risk_tiers": {
+      "R1": 3,
+      "R2": 12,
+      "R3": 10,
+      "R4": 11
+    },
+    "r3_grounded_count": 10,
+    "r4_grounded_count": 7,
+    "r4_second_review_pending_count": 11
+  },
+  "questions": [
+    {
+      "question_id": "PLAB-CARD-0008",
+      "question_version": 4,
+      "stem": "A 45-year-old man collapses suddenly while running for a bus. There was no preceding lightheadedness, nausea, or sweating. He regained consciousness within 30 seconds but bruised his forehead. He mentions that his father died suddenly in his sleep at age 38. On examination in the emergency department, his pulse is 76 bpm, BP is 126/80 mmHg, and a 12-lead ECG shows T-wave inversion in leads V1-V4 and QTc 460 ms. Under UK NICE guidance (CG109), what is the most appropriate immediate management step?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Discharge with reassurance that this was simple vasovagal syncope"
+        },
+        {
+          "id": "B",
+          "text": "Prescribe fludrocortisone 100 mcg daily and review in 3 months"
+        },
+        {
+          "id": "C",
+          "text": "Admit or urgently refer for specialist cardiovascular evaluation with telemetry/echocardiography"
+        },
+        {
+          "id": "D",
+          "text": "Arrange an outpatient head-up tilt table test in 6 months"
+        },
+        {
+          "id": "E",
+          "text": "Advise increasing dietary salt and oral fluid intake"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Distinguishing cardiac from non-cardiac syncope is crucial for risk stratification. This patient has multiple major high-risk red flags under NICE CG109: syncope during exertion (running), absence of prodrome, family history of premature sudden unexplained cardiac death (<40 years), and an abnormal 12-lead ECG. Such patients require urgent specialist cardiovascular assessment and inpatient telemetry/echocardiography to rule out arrhythmogenic cardiomyopathy or channelopathy.",
+      "specialty": "Cardiology",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "learning_objective": "Recognize high-risk red flags in syncope requiring urgent specialist cardiovascular evaluation.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE CG109 Recommendation 1.1.4.1",
+          "quote": "Refer urgently for specialist cardiovascular assessment people with transient loss of consciousness who have red flag features: an ECG abnormality, syncope during exertion, family history of sudden cardiac death aged under 40.",
+          "document_id": "SRC-NICE-CG109"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-CG109",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Transient loss of consciousness ('blackouts') in over 16s",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-CG109",
+          "canonical_url": "https://www.nice.org.uk/guidance/cg109",
+          "publication_year": 2010,
+          "latest_update": "2014-09-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0010",
+      "question_version": 4,
+      "stem": "A 66-year-old man is admitted to the cardiac intensive care unit with acute anterior myocardial infarction complicated by cardiogenic shock. His blood pressure is 74/46 mmHg, heart rate is 112 bpm, and serum lactate is 4.8 mmol/L. His extremities are cold and clammy, with oliguria. Bedside echocardiogram shows an ejection fraction of 25% with extensive anterior wall akinesis. Which of the following is the first-line vasopressor of choice to restore perfusion pressure in cardiogenic shock?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Dopamine"
+        },
+        {
+          "id": "B",
+          "text": "Norepinephrine (noradrenaline)"
+        },
+        {
+          "id": "C",
+          "text": "Phenylephrine"
+        },
+        {
+          "id": "D",
+          "text": "Vasopressin monotherapy"
+        },
+        {
+          "id": "E",
+          "text": "Ephedrine"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Norepinephrine (noradrenaline) is the first-line vasopressor of choice in cardiogenic shock (predominantly alpha-1 vasoconstriction with modest beta-1 support). In the landmark SOAP II trial, dopamine was associated with a significantly higher rate of tachyarrhythmias and increased mortality compared to norepinephrine in cardiogenic shock. Phenylephrine lacks inotropic support and can impair cardiac output by increasing afterload without inotropic enhancement.",
+      "specialty": "Cardiology",
+      "topic": "Cardiogenic Shock",
+      "learning_objective": "Select norepinephrine as the evidence-supported first-line vasopressor in cardiogenic shock.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC/BCIS Cardiogenic Shock Recommendations Section 4",
+          "quote": "Norepinephrine is the first-line vasopressor in cardiogenic shock to restore perfusion pressure, combined with dobutamine as the initial inotrope for low cardiac output.",
+          "document_id": "SRC-ESC-SHOCK-2021"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-ESC-SHOCK-2021",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "Management of Cardiogenic Shock: Clinical Review and Practice Recommendations",
+          "organization": "European Society of Cardiology (ESC) / BCIS",
+          "canonical_identifier": "ESC-SHOCK-2021",
+          "canonical_url": "https://academic.oup.com/ehjacc",
+          "publication_year": 2021,
+          "latest_update": "2021-10-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0011",
+      "question_version": 4,
+      "stem": "A 59-year-old woman with ischemic cardiogenic shock has received norepinephrine infusion, achieving a mean arterial pressure of 68 mmHg. However, her cardiac index remains low at 1.7 L/min/m2, central venous oxygen saturation (ScvO2) is 52%, and urine output remains <0.3 mL/kg/h. Which of the following inotropic agents is the first-line choice to increase myocardial contractility and improve cardiac output in this patient?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Digoxin IV"
+        },
+        {
+          "id": "B",
+          "text": "Propranolol"
+        },
+        {
+          "id": "C",
+          "text": "Dobutamine"
+        },
+        {
+          "id": "D",
+          "text": "Diltiazem IV"
+        },
+        {
+          "id": "E",
+          "text": "Atropine"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Dobutamine is the first-line inotropic agent in cardiogenic shock with persistent low cardiac output despite adequate perfusion pressure. Acting primarily as a beta-1 adrenergic agonist with mild beta-2 activity, it increases myocardial inotropy and produces moderate vasodilatation, enhancing cardiac index and organ perfusion. Milrinone is a second-line inodilator, while beta-blockers and diltiazem are contraindicated due to negative inotropy.",
+      "specialty": "Cardiology",
+      "topic": "Cardiogenic Shock",
+      "learning_objective": "Identify dobutamine as the first-line inotropic agent in cardiogenic shock with low cardiac output.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC/BCIS Cardiogenic Shock Recommendations Section 4",
+          "quote": "Norepinephrine is the first-line vasopressor in cardiogenic shock to restore perfusion pressure, combined with dobutamine as the initial inotrope for low cardiac output.",
+          "document_id": "SRC-ESC-SHOCK-2021"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-ESC-SHOCK-2021",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "Management of Cardiogenic Shock: Clinical Review and Practice Recommendations",
+          "organization": "European Society of Cardiology (ESC) / BCIS",
+          "canonical_identifier": "ESC-SHOCK-2021",
+          "canonical_url": "https://academic.oup.com/ehjacc",
+          "publication_year": 2021,
+          "latest_update": "2021-10-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0012",
+      "question_version": 4,
+      "stem": "A 62-year-old man presents to the emergency department with 2 hours of crushing central retrosternal chest pain, diaphoresis, and acute pulmonary edema. His ECG reveals acute ST-elevation in leads V1\u2013V6. He is hypotensive with blood pressure 78/50 mmHg and cold extremities, consistent with cardiogenic shock complicating acute myocardial infarction (AMI). Which of the following therapeutic interventions has the strongest evidence for improving survival in AMI-induced cardiogenic shock?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Routine intra-aortic balloon pump (IABP) insertion without revascularisation"
+        },
+        {
+          "id": "B",
+          "text": "Intravenous high-dose furosemide infusion alone"
+        },
+        {
+          "id": "C",
+          "text": "Therapeutic anticoagulation with enoxaparin alone followed by elective outpatient review"
+        },
+        {
+          "id": "D",
+          "text": "Emergent coronary revascularisation (primary percutaneous coronary intervention, PCI)"
+        },
+        {
+          "id": "E",
+          "text": "Oral carvedilol 25 mg twice daily"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Emergent coronary revascularisation by primary percutaneous coronary intervention (PCI) or CABG is the cornerstone of treatment that has proven to reduce mortality in patients with cardiogenic shock complicating acute myocardial infarction (SHOCK trial). Routine intra-aortic balloon pump (IABP) placement failed to demonstrate a survival benefit in the IABP-SHOCK II trial and is not routinely recommended. Beta-blockers are contraindicated in acute cardiogenic shock.",
+      "specialty": "Cardiology",
+      "topic": "Cardiogenic Shock",
+      "learning_objective": "Recognize emergent coronary revascularisation (primary PCI) as the cornerstone intervention to reduce mortality in AMI cardiogenic shock.",
+      "difficulty": "easy",
+      "risk_tier": "R4",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC/BCIS Cardiogenic Shock Recommendations Section 4",
+          "quote": "Norepinephrine is the first-line vasopressor in cardiogenic shock to restore perfusion pressure, combined with dobutamine as the initial inotrope for low cardiac output.",
+          "document_id": "SRC-ESC-SHOCK-2021"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-ESC-SHOCK-2021",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "Management of Cardiogenic Shock: Clinical Review and Practice Recommendations",
+          "organization": "European Society of Cardiology (ESC) / BCIS",
+          "canonical_identifier": "ESC-SHOCK-2021",
+          "canonical_url": "https://academic.oup.com/ehjacc",
+          "publication_year": 2021,
+          "latest_update": "2021-10-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0016",
+      "question_version": 4,
+      "stem": "A 74-year-old woman is brought to the emergency department after experiencing a syncopal episode while walking in her garden. On examination, her heart rate is 34 bpm, and blood pressure is 88/54 mmHg. She feels dizzy and appears pale and diaphoretic. A 12-lead ECG demonstrates complete atrioventricular block (third-degree AV block) with a ventricular escape rate of 34 bpm. According to Resuscitation Council UK (RCUK) adult bradycardia management guidelines, what is the most appropriate initial pharmacological treatment while preparing for pacing?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Amiodarone 300 mg IV"
+        },
+        {
+          "id": "B",
+          "text": "Bisoprolol 2.5 mg oral"
+        },
+        {
+          "id": "C",
+          "text": "Atropine 500 mcg IV"
+        },
+        {
+          "id": "D",
+          "text": "Adenosine 6 mg rapid IV push"
+        },
+        {
+          "id": "E",
+          "text": "Verapamil 5 mg slow IV injection"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "This patient has severe bradycardia with adverse features (syncope, hypotension 88/54 mmHg, diaphoresis). The RCUK bradycardia algorithm dictates immediate administration of atropine 500 mcg IV (repeatable every 3\u20135 minutes to a maximum of 3 mg). If atropine is ineffective, second-line options include transcutaneous pacing or an inotrope/chronotrope infusion (isoprenaline or adrenaline). Adenosine, beta-blockers, and verapamil further suppress AV conduction and are contraindicated.",
+      "specialty": "Cardiology",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "learning_objective": "Apply the RCUK bradycardia algorithm: administer atropine 500 mcg IV for symptomatic bradycardia with adverse features.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "RCUK 2025 Bradycardia Algorithm",
+          "quote": "In patients with symptomatic bradycardia and life-threatening features, give atropine 500 micrograms IV.",
+          "document_id": "SRC-RCUK-BRADY-2025"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-RCUK-BRADY-2025",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Resuscitation Council UK Peri-arrest Bradycardia Algorithm 2025",
+          "organization": "Resuscitation Council UK",
+          "canonical_identifier": "RCUK-BRADY-2025",
+          "canonical_url": "https://www.resus.org.uk/library/2025-resuscitation-guidelines/peri-arrest-arrhythmias",
+          "publication_year": 2025,
+          "latest_update": "2025-01-15",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-EMERG-0001",
+      "question_version": 4,
+      "stem": "A 56-year-old man collapses in the hospital outpatient corridor. The resuscitation team arrives immediately. He is unresponsive and apnoeic with no carotid pulse. The defibrillator pads are attached, and the rhythm check displays ventricular fibrillation. A first shock of 150 J biphasic is delivered, and CPR is resumed immediately for 2 minutes. At the second rhythm check, ventricular fibrillation persists, and a second shock is delivered followed immediately by 2 minutes of CPR. At the third rhythm check, ventricular fibrillation remains. A third shock is delivered. According to the Resuscitation Council UK (RCUK) Advanced Life Support guidelines, which medications should be administered during the CPR cycle immediately following the third shock?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Adrenaline 1 mg IV only"
+        },
+        {
+          "id": "B",
+          "text": "Amiodarone 150 mg IV only"
+        },
+        {
+          "id": "C",
+          "text": "Adrenaline 1 mg IV and Amiodarone 300 mg IV"
+        },
+        {
+          "id": "D",
+          "text": "Atropine 3 mg IV and Calcium chloride 10 mL 10% IV"
+        },
+        {
+          "id": "E",
+          "text": "Sodium bicarbonate 50 mmol IV and Lignocaine 100 mg IV"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "In the RCUK Adult Advanced Life Support algorithm for shockable rhythms (VF/pVT), after the 3rd shock, the resuscitation team administers adrenaline 1 mg IV and amiodarone 300 mg IV during the subsequent 2 minutes of CPR. Adrenaline is then repeated every alternate cycle (every 3\u20135 minutes), and a second dose of amiodarone (150 mg IV) is given after the 5th shock. Atropine is no longer used in cardiac arrest protocols.",
+      "specialty": "Emergency Medicine",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "learning_objective": "Recall medication administration timing in the RCUK ALS shockable algorithm (adrenaline 1mg and amiodarone 300mg post-3rd shock).",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "RCUK Adult ALS 2025 Section 3.2",
+          "quote": "In shockable cardiac arrest, give adrenaline 1 mg IV and amiodarone 300 mg IV after the 3rd shock has been delivered and CPR resumed.",
+          "document_id": "SRC-RCUK-ALS-2025"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-RCUK-ALS-2025",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Adult Advanced Life Support Guidelines 2025",
+          "organization": "Resuscitation Council UK",
+          "canonical_identifier": "RCUK-ALS-2025",
+          "canonical_url": "https://www.resus.org.uk/library/2025-resuscitation-guidelines/adult-advanced-life-support",
+          "publication_year": 2025,
+          "latest_update": "2025-01-15",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-EMERG-0002",
+      "question_version": 4,
+      "stem": "During an in-hospital resuscitation attempt for an adult in cardiac arrest, the team leader evaluates the quality of CPR being delivered. Which of the following chest compression metrics reflects high-quality adult cardiopulmonary resuscitation according to UK resuscitation standards?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Compression rate of 80\u201390 per minute and depth of 3\u20134 cm to minimize rib fractures"
+        },
+        {
+          "id": "B",
+          "text": "Compression rate of 140\u2013160 per minute with partial recoil to maintain coronary perfusion"
+        },
+        {
+          "id": "C",
+          "text": "Compression depth of 7\u20138 cm with continuous manual pressure between compressions"
+        },
+        {
+          "id": "D",
+          "text": "Compression rate of 100\u2013120 per minute and depth of 5\u20136 cm with complete chest recoil"
+        },
+        {
+          "id": "E",
+          "text": "Compression-to-ventilation ratio of 15:2 with pauses of 15 seconds for pulse checks"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "High-quality CPR requires a chest compression rate of 100\u2013120 compressions per minute, a compression depth of 5\u20136 cm in adults, complete chest recoil after each compression, and minimization of interruptions in compressions. Leaning on the chest between compressions prevents complete recoil and significantly diminishes venous return and coronary perfusion pressure.",
+      "specialty": "Emergency Medicine",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "learning_objective": "Identify high-quality CPR metrics (rate 100-120/min, depth 5-6 cm, complete recoil) per RCUK guidelines.",
+      "difficulty": "easy",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "RCUK Adult ALS 2025 Section 3.3",
+          "quote": "For non-shockable rhythms (PEA or asystole), give adrenaline 1 mg IV as soon as venous access is achieved, and continue CPR 30:2.",
+          "document_id": "SRC-RCUK-ALS-2025"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-RCUK-ALS-2025",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Adult Advanced Life Support Guidelines 2025",
+          "organization": "Resuscitation Council UK",
+          "canonical_identifier": "RCUK-ALS-2025",
+          "canonical_url": "https://www.resus.org.uk/library/2025-resuscitation-guidelines/adult-advanced-life-support",
+          "publication_year": 2025,
+          "latest_update": "2025-01-15",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0001",
+      "question_version": 4,
+      "stem": "A 67-year-old man with severe chronic obstructive pulmonary disease (COPD) presents to the emergency department with acute worsening of shortness of breath, wheezing, and increased production of green purulent sputum over the past two days. On arrival, his respiratory rate is 26 breaths/min, heart rate 98 bpm, blood pressure 132/84 mmHg, and oxygen saturation is 84% on room air. Arterial blood gas shows: pH 7.32, PaCO2 6.8 kPa (normal 4.7-6.0), PaO2 7.1 kPa (normal 10.0-14.0), HCO3 29 mmol/L (normal 22-26). Under UK guidelines (NICE NG115), what is the most appropriate initial oxygen delivery target?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Target SpO2 94\u201398% using 15 L/min via a non-rebreather mask"
+        },
+        {
+          "id": "B",
+          "text": "Target SpO2 98\u2013100% using high-flow nasal cannula"
+        },
+        {
+          "id": "C",
+          "text": "Immediate room air without supplemental oxygen"
+        },
+        {
+          "id": "D",
+          "text": "Target SpO2 80\u201384% to avoid respiratory drive depression"
+        },
+        {
+          "id": "E",
+          "text": "Target SpO2 88\u201392% using a 28% or 24% Venturi mask"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "In acute exacerbations of COPD, particularly when the patient is at risk of hypercapnic respiratory failure (demonstrated by PaCO2 6.8 kPa with baseline metabolic compensation), controlled oxygen therapy targeting an SpO2 of 88\u201392% via a 24% or 28% Venturi mask is mandatory under NICE NG115 and BTS guidelines. Uncontrolled high-concentration oxygen (e.g. 15 L non-rebreather mask targeting 94\u201398%) worsens ventilation-perfusion mismatch and abolishes hypoxic pulmonary vasoconstriction, leading to severe hypercapnia and narcosis.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "learning_objective": "Identify controlled oxygen target (88-92%) in acute COPD exacerbations with hypercapnic respiratory failure.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG115 Recommendation 1.1.2",
+          "quote": "COPD is confirmed when post-bronchodilator spirometry demonstrates an FEV1/FVC ratio less than 0.70.",
+          "document_id": "SRC-NICE-NG115"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG115",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Chronic obstructive pulmonary disease in over 16s: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG115",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng115",
+          "publication_year": 2018,
+          "latest_update": "2019-07-26",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0007",
+      "question_version": 4,
+      "stem": "A 52-year-old woman is admitted to the intensive care unit with severe septic shock secondary to acute pyelonephritis. Within 24 hours of admission, she develops profound dyspnoea and worsening hypoxemia. Chest radiograph reveals extensive bilateral alveolar infiltrates sparing the cardiophrenic angles, without cardiomegaly. Echocardiography confirms normal left ventricular function and no evidence of left atrial hypertension. While receiving mechanical ventilation with PEEP of 10 cmH2O and FiO2 of 0.80, her arterial blood gas shows a PaO2 of 8.0 kPa (60 mmHg). Her PaO2/FiO2 ratio is 75 mmHg. According to the Berlin definition of ARDS, which severity category does this patient have?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Moderate ARDS"
+        },
+        {
+          "id": "B",
+          "text": "Mild ARDS"
+        },
+        {
+          "id": "C",
+          "text": "Cardiogenic pulmonary edema"
+        },
+        {
+          "id": "D",
+          "text": "Severe ARDS"
+        },
+        {
+          "id": "E",
+          "text": "Transient pulmonary atelectasis"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Under the Berlin criteria, ARDS severity is categorized by the PaO2/FiO2 ratio (with minimum PEEP >=5 cmH2O): Mild: 200 < PaO2/FiO2 <= 300 mmHg; Moderate: 100 < PaO2/FiO2 <= 200 mmHg; Severe: PaO2/FiO2 <= 100 mmHg. With a PaO2/FiO2 ratio of 75 mmHg (60 / 0.80), this patient meets the criteria for severe ARDS.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "learning_objective": "Classify ARDS severity based on PaO2/FiO2 ratio under the Berlin definition.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "Berlin ARDS Definition Table 1",
+          "quote": "ARDS is defined by bilateral opacities on chest imaging not fully explained by effusions, and PaO2/FiO2 <= 300 with PEEP >= 5 cmH2O.",
+          "document_id": "SRC-JAMA-BERLIN-ARDS"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-JAMA-BERLIN-ARDS",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "Acute Respiratory Distress Syndrome: The Berlin Definition",
+          "organization": "ARDS Definition Task Force (JAMA)",
+          "canonical_identifier": "JAMA-BERLIN-ARDS-2012",
+          "canonical_url": "https://jamanetwork.com/journals/jama/fullarticle/1160138",
+          "publication_year": 2012,
+          "latest_update": "2012-06-20",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0008",
+      "question_version": 4,
+      "stem": "A 58-year-old intubated man weighing 70 kg (predicted body weight 70 kg) with severe acute pancreatitis develops moderate ARDS. The intensive care team is adjusting his mechanical ventilator settings. In accordance with evidence-based lung-protective ventilation guidelines (FICM/ICS), which of the following tidal volume and airway pressure targets should be selected?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Tidal volume 10\u201312 mL/kg actual body weight and plateau pressure < 45 cmH2O"
+        },
+        {
+          "id": "B",
+          "text": "Tidal volume 8\u201310 mL/kg predicted body weight without PEEP"
+        },
+        {
+          "id": "C",
+          "text": "Tidal volume 15 mL/kg to maximize alveolar recruitment"
+        },
+        {
+          "id": "D",
+          "text": "Plateau pressure maintained above 35 cmH2O to prevent derecruitment"
+        },
+        {
+          "id": "E",
+          "text": "Tidal volume 4\u20136 mL/kg predicted body weight and plateau pressure < 30 cmH2O"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "Lung-protective ventilation is the cornerstone of ARDS management to minimize ventilator-induced lung injury (volutrauma and barotrauma). Standard guidelines mandate low tidal volume ventilation (4\u20136 mL/kg predicted body weight, or <=6 mL/kg PBW) and limitation of end-inspiratory plateau pressure to <30 cmH2O. High tidal volumes (10\u201312 mL/kg) significantly increase mortality in ARDS.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "learning_objective": "Identify low tidal volume (4-6 mL/kg PBW) and plateau pressure (<30 cmH2O) targets in ARDS lung-protective ventilation.",
+      "difficulty": "medium",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "FICM/ICS ARDS Guideline Recommendation 2",
+          "quote": "Use low tidal volume ventilation targeted to 6 mL/kg predicted body weight in patients with ARDS.",
+          "document_id": "SRC-FICM-ICS-ARDS"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-FICM-ICS-ARDS",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Guideline for the Management of Acute Respiratory Distress Syndrome",
+          "organization": "Faculty of Intensive Care Medicine / Intensive Care Society (FICM/ICS)",
+          "canonical_identifier": "FICM-ICS-ARDS-2019",
+          "canonical_url": "https://www.ficm.ac.uk/standard-practice-guidelines/ards",
+          "publication_year": 2019,
+          "latest_update": "2019-01-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0009",
+      "question_version": 4,
+      "stem": "A 46-year-old ventilated woman with severe ARDS secondary to bacterial pneumonia has persistent refractory hypoxaemia. Despite lung-protective ventilation (tidal volume 5 mL/kg PBW, plateau pressure 28 cmH2O, PEEP 14 cmH2O, FiO2 0.85), her arterial blood gas shows a PaO2/FiO2 ratio of 115 mmHg. According to FICM/ICS and international ARDS guidelines, which evidence-based non-pharmacological maneuver should be initiated?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Prone positioning for at least 16 consecutive hours daily"
+        },
+        {
+          "id": "B",
+          "text": "Supine Trendelenburg positioning for 24 hours"
+        },
+        {
+          "id": "C",
+          "text": "Immediate extubation to room air"
+        },
+        {
+          "id": "D",
+          "text": "Routine high-frequency oscillatory ventilation (HFOV)"
+        },
+        {
+          "id": "E",
+          "text": "Bilateral tube thoracostomy for prophylactic pleural drainage"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "In patients with moderate-to-severe ARDS and a PaO2/FiO2 ratio <150 mmHg despite optimal lung-protective settings, early prone positioning for at least 16 consecutive hours per day is strongly recommended. Prone positioning improves ventilation-perfusion matching, promotes dorsal lung recruitment, and has been demonstrated in landmark trials (PROSEVA) to significantly reduce mortality in severe ARDS. Routine HFOV is not recommended due to lack of survival benefit and potential harm.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "learning_objective": "Recognize the indication (PaO2/FiO2 <150 mmHg) and duration (>=16 hours/day) for prone positioning in severe ARDS.",
+      "difficulty": "hard",
+      "risk_tier": "R4",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "FICM/ICS ARDS Guideline Recommendation 2",
+          "quote": "Use low tidal volume ventilation targeted to 6 mL/kg predicted body weight in patients with ARDS.",
+          "document_id": "SRC-FICM-ICS-ARDS"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-FICM-ICS-ARDS",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Guideline for the Management of Acute Respiratory Distress Syndrome",
+          "organization": "Faculty of Intensive Care Medicine / Intensive Care Society (FICM/ICS)",
+          "canonical_identifier": "FICM-ICS-ARDS-2019",
+          "canonical_url": "https://www.ficm.ac.uk/standard-practice-guidelines/ards",
+          "publication_year": 2019,
+          "latest_update": "2019-01-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0001",
+      "question_version": 4,
+      "stem": "A 58-year-old Afro-Caribbean man attends his GP surgery for a routine health check. His clinic blood pressure is 152/94 mmHg. A repeat measurement 10 minutes later is 150/92 mmHg. Ambulatory blood pressure monitoring (ABPM) confirms an average daytime blood pressure of 146/90 mmHg. Urine dipstick is negative for protein, serum creatinine is 82 umol/L, and his 12-lead ECG is normal. According to UK clinical practice guidelines (NICE NG136), which of the following is the most appropriate initial pharmacological treatment?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Calcium-channel blocker (e.g. amlodipine)"
+        },
+        {
+          "id": "B",
+          "text": "ACE inhibitor (e.g. ramipril)"
+        },
+        {
+          "id": "C",
+          "text": "Angiotensin-II receptor blocker (e.g. losartan)"
+        },
+        {
+          "id": "D",
+          "text": "Thiazide-like diuretic (e.g. indapamide)"
+        },
+        {
+          "id": "E",
+          "text": "Beta-blocker (e.g. bisoprolol)"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Under NICE NG136 (Hypertension in adults), step 1 antihypertensive monotherapy for adults of Black African or African-Caribbean family origin of any age (without type 2 diabetes), or any adult aged 55 and over, is a calcium-channel blocker (CCB). ACE inhibitors or ARBs are preferred step 1 treatment only in adults aged under 55 who are not of Black African or African-Caribbean family origin.",
+      "specialty": "Cardiology",
+      "topic": "Hypertension (Essential & Secondary)",
+      "learning_objective": "Select appropriate Step 1 antihypertensive pharmacotherapy based on age and ethnicity per NICE NG136.",
+      "difficulty": "medium",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG136 Recommendation 1.4.15",
+          "quote": "Offer a CCB to adults with hypertension without type 2 diabetes of any age with Black African or African-Caribbean family origin or aged 55 and over.",
+          "document_id": "SRC-NICE-NG136"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG136",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Hypertension in adults: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG136",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng136",
+          "publication_year": 2019,
+          "latest_update": "2023-12-05",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0003",
+      "question_version": 4,
+      "stem": "A 52-year-old Caucasian man with newly diagnosed essential hypertension attends for medication review. His clinic blood pressure remains elevated at 158/98 mmHg despite 6 weeks of ramipril 5 mg once daily. He has no other comorbidities and normal renal function. In accordance with UK stepped-care guidance (NICE NG136), which of the following is the most appropriate next step in management?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Switch from ramipril to losartan 50 mg daily"
+        },
+        {
+          "id": "B",
+          "text": "Add spironolactone 25 mg once daily"
+        },
+        {
+          "id": "C",
+          "text": "Add a calcium channel blocker (e.g. amlodipine 5 mg daily)"
+        },
+        {
+          "id": "D",
+          "text": "Add doxazosin 4 mg once daily"
+        },
+        {
+          "id": "E",
+          "text": "Add bisoprolol 5 mg once daily"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "According to NICE NG136 stepped-care guidance for hypertension, when blood pressure is uncontrolled on Step 1 monotherapy with an ACE inhibitor (in a non-Black patient aged <55), Step 2 treatment is the combination of an ACE inhibitor (or ARB) with a calcium channel blocker (CCB). Switching to an ARB (losartan) is only indicated if the patient develops an intolerable dry cough on an ACE inhibitor. Spironolactone is used at Step 4 for resistant hypertension when potassium is <=4.5 mmol/L. Doxazosin is an alternative Step 4 alpha-blocker.",
+      "specialty": "Cardiology",
+      "topic": "Hypertension (Essential & Secondary)",
+      "learning_objective": "Recognize Step 2 combination therapy (ACEi/ARB plus CCB) in the NICE NG136 hypertension treatment algorithm.",
+      "difficulty": "easy",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG136 Recommendation 1.4.20",
+          "quote": "If blood pressure is not controlled with step 1 treatment, offer step 2 combination therapy with a CCB and an ACE inhibitor or ARB.",
+          "document_id": "SRC-NICE-NG136"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG136",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Hypertension in adults: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG136",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng136",
+          "publication_year": 2019,
+          "latest_update": "2023-12-05",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0004",
+      "question_version": 4,
+      "stem": "A 68-year-old woman with a history of type 2 diabetes mellitus and hypertension is diagnosed with newly discovered non-valvular atrial fibrillation on an ambulatory 24-hour ECG. She is asymptomatic with a heart rate of 78 beats/min. Her blood pressure is 134/82 mmHg, and echocardiography shows mild left atrial enlargement with a normal left ventricular ejection fraction (58%). She has no prior history of stroke, thromboembolism, or bleeding. According to UK clinical practice guidelines (NICE NG196), which of the following is the most appropriate stroke prevention strategy?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Aspirin 75 mg once daily"
+        },
+        {
+          "id": "B",
+          "text": "Clopidogrel 75 mg once daily"
+        },
+        {
+          "id": "C",
+          "text": "Dual antiplatelet therapy with aspirin and clopidogrel"
+        },
+        {
+          "id": "D",
+          "text": "Direct-acting oral anticoagulant (DOAC, e.g. apixaban)"
+        },
+        {
+          "id": "E",
+          "text": "No antithrombotic therapy required"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "This patient's CHA2DS2-VASc score is 4 (Age 65-74 = 1, Female sex = 1, Hypertension = 1, Diabetes = 1). Under NICE NG196 guidelines, anticoagulation with a direct-acting oral anticoagulant (DOAC) such as apixaban, edoxaban, rivaroxaban, or dabigatran is recommended for all women with a CHA2DS2-VASc score >=2 and men with score >=1. Aspirin or antiplatelet therapy is explicitly contraindicated as sole therapy for stroke prevention in AF due to lack of efficacy and similar bleeding risk.",
+      "specialty": "Cardiology",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "learning_objective": "Calculate CHA2DS2-VASc stroke risk and select DOAC therapy over antiplatelet monotherapy in atrial fibrillation per NICE NG196.",
+      "difficulty": "easy",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG196 Recommendation 1.6.3",
+          "quote": "Offer anticoagulation with a DOAC to people with atrial fibrillation and a CHA2DS2-VASc score of 2 or more.",
+          "document_id": "SRC-NICE-NG196"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG196",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Atrial fibrillation: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG196",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng196",
+          "publication_year": 2021,
+          "latest_update": "2021-04-27",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0005",
+      "question_version": 4,
+      "stem": "A 72-year-old man presents to the medical assessment unit with palpitations and mild fatigue over the past three weeks. Examination reveals an irregularly irregular pulse at 128 beats/min and blood pressure 138/84 mmHg. An ECG confirms atrial fibrillation with rapid ventricular response. He is clinically euvolemic with clear lung fields and no signs of heart failure. Which of the following is the most appropriate first-line pharmacological agent for rate control in this hemodynamically stable patient?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Digoxin monotherapy"
+        },
+        {
+          "id": "B",
+          "text": "Amiodarone"
+        },
+        {
+          "id": "C",
+          "text": "Flecainide"
+        },
+        {
+          "id": "D",
+          "text": "Atropine"
+        },
+        {
+          "id": "E",
+          "text": "Bisoprolol"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "Under NICE NG196 guidelines, rate control is the preferred initial strategy for patients with atrial fibrillation who are not hemodynamically unstable. A standard beta-blocker (such as bisoprolol or metoprolol) or a rate-limiting calcium channel blocker (diltiazem or verapamil) is the first-line therapy. Digoxin monotherapy is only recommended as first-line in sedentary patients or those with coexisting heart failure with reduced ejection fraction, as it is ineffective at controlling heart rate during exertion. Amiodarone is reserved for rhythm control or when other options fail.",
+      "specialty": "Cardiology",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "learning_objective": "Identify standard beta-blockers as first-line rate control therapy in hemodynamically stable atrial fibrillation.",
+      "difficulty": "medium",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG196 Recommendation 1.5.1",
+          "quote": "Offer a standard beta-blocker (other than sotalol) or a rate-limiting calcium-channel blocker as initial monotherapy for rate control in atrial fibrillation.",
+          "document_id": "SRC-NICE-NG196"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG196",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Atrial fibrillation: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG196",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng196",
+          "publication_year": 2021,
+          "latest_update": "2021-04-27",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0015",
+      "question_version": 4,
+      "stem": "A 65-year-old woman with a history of rheumatic mitral stenosis is scheduled for routine dental scaling and cavity restoration. She asks whether she needs prophylactic antibiotics before her dental visit to prevent infective endocarditis. Under UK National Institute for Health and Care Excellence (NICE CG64) guidance, what is the current recommendation regarding antibiotic prophylaxis for dental procedures?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Oral amoxicillin 2 g should be taken 1 hour before every dental procedure"
+        },
+        {
+          "id": "B",
+          "text": "Antibiotic prophylaxis is NOT routinely recommended for dental procedures"
+        },
+        {
+          "id": "C",
+          "text": "Intravenous gentamicin and ampicillin are required 30 minutes prior"
+        },
+        {
+          "id": "D",
+          "text": "Oral clindamycin 600 mg is mandatory for all valvular heart disease patients"
+        },
+        {
+          "id": "E",
+          "text": "Dental procedures are strictly contraindicated in patients with heart valve disease"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Under UK NICE CG64 guidelines, routine antibiotic prophylaxis is explicitly NOT recommended for people at risk of infective endocarditis undergoing dental or non-dental interventional procedures. This is a classic UK-specific clinical practice point (in contrast to US AHA / European ESC guidelines). Patients are instead advised on maintaining meticulous oral hygiene and recognizing early symptoms of infective endocarditis.",
+      "specialty": "Cardiology",
+      "topic": "Infective Endocarditis (IE)",
+      "learning_objective": "Recall the UK NICE CG64 guidance advising against routine antibiotic prophylaxis for dental procedures.",
+      "difficulty": "easy",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC 2023 Endocarditis Guidelines Section 4",
+          "quote": "Three sets of blood cultures should be drawn from separate venipuncture sites before antimicrobial administration in suspected infective endocarditis.",
+          "document_id": "SRC-ESC-BSAC-IE-2023"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-ESC-BSAC-IE-2023",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "2023 ESC Guidelines for the management of endocarditis",
+          "organization": "European Society of Cardiology (ESC)",
+          "canonical_identifier": "ESC-BSAC-IE-2023",
+          "canonical_url": "https://academic.oup.com/eurheartj/article/44/39/3940/7245781",
+          "publication_year": 2023,
+          "latest_update": "2023-08-25",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0020",
+      "question_version": 4,
+      "stem": "A 75-year-old woman with exertional angina undergoes transthoracic echocardiography (TTE) for evaluation of a systolic murmur. Continuous-wave Doppler across the aortic valve demonstrates a peak aortic jet velocity (Vmax) of 4.3 m/s and a mean transvalvular pressure gradient of 44 mmHg. The calculated aortic valve area by the continuity equation is 0.8 cm2 (indexed AVA 0.45 cm2/m2). Left ventricular ejection fraction is 60%. According to international and UK NICE NG208 criteria, how should the severity of her aortic stenosis be classified?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Moderate aortic stenosis"
+        },
+        {
+          "id": "B",
+          "text": "Severe aortic stenosis"
+        },
+        {
+          "id": "C",
+          "text": "Mild aortic stenosis"
+        },
+        {
+          "id": "D",
+          "text": "Aortic valve sclerosis without stenosis"
+        },
+        {
+          "id": "E",
+          "text": "Subaortic membrane stenosis"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Severe aortic stenosis is defined echocardiographically by a peak aortic velocity (Vmax) >= 4.0 m/s, a mean transvalvular gradient >= 40 mmHg, and an aortic valve area (AVA) < 1.0 cm2 (or indexed AVA < 0.6 cm2/m2). With Vmax 4.3 m/s, mean gradient 44 mmHg, and AVA 0.8 cm2, this patient meets all hemodynamic criteria for severe aortic stenosis.",
+      "specialty": "Cardiology",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "learning_objective": "Apply echocardiographic criteria (Vmax >4 m/s, mean gradient >40 mmHg, AVA <1.0 cm2) to define severe aortic stenosis.",
+      "difficulty": "medium",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.2",
+          "quote": "The cardinal symptoms of severe aortic stenosis are exertional dyspnoea, angina, and syncope.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0023",
+      "question_version": 4,
+      "stem": "A 71-year-old woman with chronic ischemic cardiomyopathy (LVEF 28%) is admitted for worsening pulmonary edema. Echocardiography shows severe functional mitral regurgitation secondary to left ventricular spherical remodeling. She is currently taking ramipril 2.5 mg and furosemide 40 mg daily. According to NICE heart failure guidelines (NG106) and valvular guidelines (NG208), what is the mandatory first-line strategy before considering invasive transcatheter or surgical mitral valve interventions for secondary/functional MR?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Immediate urgent open-heart mechanical mitral valve replacement"
+        },
+        {
+          "id": "B",
+          "text": "Urgent transcatheter aortic valve implantation"
+        },
+        {
+          "id": "C",
+          "text": "High-dose oral steroid therapy for six months"
+        },
+        {
+          "id": "D",
+          "text": "Discontinuation of all ACE inhibitors and beta-blockers"
+        },
+        {
+          "id": "E",
+          "text": "Optimization of guideline-directed medical therapy for heart failure with reduced ejection fraction"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "In functional mitral regurgitation (FMR), guideline-directed medical therapy (GDMT) for heart failure with reduced ejection fraction (including ACEi/ARNI, beta-blocker, MRA, and SGLT2i, plus cardiac resynchronization therapy if indicated) is the essential first-line foundation. Optimal medical therapy promotes reverse LV remodeling and can substantially diminish the severity of functional regurgitation. Transcatheter edge-to-edge repair (TEER) or surgery is considered only if severe symptomatic MR persists despite optimal GDMT.",
+      "specialty": "Cardiology",
+      "topic": "Functional Mitral Regurgitation",
+      "learning_objective": "Identify guideline-directed medical therapy for heart failure as the mandatory initial management for functional mitral regurgitation.",
+      "difficulty": "medium",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.4",
+          "quote": "In secondary (functional) mitral regurgitation, optimise guideline-directed medical therapy for heart failure with reduced ejection fraction as first-line treatment.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-EMERG-0003",
+      "question_version": 4,
+      "stem": "A 50-year-old man achieves return of spontaneous circulation (ROSC) after 14 minutes of out-of-hospital CPR following a ventricular fibrillation arrest. On transfer to the intensive care unit, he remains comatose (Glasgow Coma Scale score 3, eyes not opening, no motor response). His 12-lead ECG demonstrates sinus tachycardia with diffuse ST depression. What is the key target in post-resuscitation neuroprotective care regarding temperature management according to current resuscitation guidelines?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Rapid induction of profound hypothermia targeting 28\u201330 \u00b0C"
+        },
+        {
+          "id": "B",
+          "text": "Routine rewarming to 38.5\u201339.0 \u00b0C to promote cerebral metabolism"
+        },
+        {
+          "id": "C",
+          "text": "Permissive hyperthermia up to 39.5 \u00b0C for 72 hours"
+        },
+        {
+          "id": "D",
+          "text": "No temperature monitoring or intervention required"
+        },
+        {
+          "id": "E",
+          "text": "Targeted temperature control strictly preventing fever (maintaining temperature <= 37.5 \u00b0C)"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "Post-resuscitation care plays a crucial role in neurological outcome and recovery. Current RCUK and international guidelines recommend targeted temperature management (TTM) for comatose adult patients after ROSC, with the primary objective of actively preventing fever (temperature >37.7 \u00b0C) for at least 72 hours, maintaining normothermia (36.0\u201337.5 \u00b0C). Fever post-cardiac arrest is strongly associated with exacerbated cerebral injury and poor functional outcome.",
+      "specialty": "Emergency Medicine",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "learning_objective": "Outline post-resuscitation targeted temperature management principles to prevent post-arrest hyperthermia.",
+      "difficulty": "hard",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "RCUK Adult ALS 2025 Section 8",
+          "quote": "Actively prevent fever after cardiac arrest. Maintain a target temperature <= 37.5 \u00b0C in patients who remain comatose after ROSC.",
+          "document_id": "SRC-RCUK-ALS-2025"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-RCUK-ALS-2025",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Adult Advanced Life Support Guidelines 2025",
+          "organization": "Resuscitation Council UK",
+          "canonical_identifier": "RCUK-ALS-2025",
+          "canonical_url": "https://www.resus.org.uk/library/2025-resuscitation-guidelines/adult-advanced-life-support",
+          "publication_year": 2025,
+          "latest_update": "2025-01-15",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0002",
+      "question_version": 4,
+      "stem": "A 64-year-old woman with established COPD attends an annual respiratory review. She currently uses an inhaled short-acting beta2-agonist (salbutamol) as needed but experiences persistent daily breathlessness (mMRC grade 2). She has had no exacerbations requiring oral corticosteroids or hospitalisation in the past 12 months. She has no past history or features of asthma, and her blood eosinophil count is 0.08 x 10^9/L (low). In accordance with UK NICE NG115 guidelines, which of the following maintenance regimens is the most appropriate next step?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Combination long-acting beta2-agonist plus long-acting muscarinic antagonist (LABA + LAMA)"
+        },
+        {
+          "id": "B",
+          "text": "Combination inhaled corticosteroid plus long-acting beta2-agonist (ICS + LABA)"
+        },
+        {
+          "id": "C",
+          "text": "Triple therapy with LAMA + LABA + ICS"
+        },
+        {
+          "id": "D",
+          "text": "Oral theophylline modified-release tablets"
+        },
+        {
+          "id": "E",
+          "text": "Long-term oral prednisolone 10 mg daily"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Under NICE NG115, for patients with COPD who remain breathless on short-acting bronchodilators without asthmatic features or features suggesting steroid responsiveness (no asthma history, no blood eosinophilia), the recommended next step is dual bronchodilation with a LABA + LAMA. ICS-containing combinations (LABA + ICS or triple therapy) are reserved for patients with asthmatic features or those with high eosinophils and frequent exacerbations.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "learning_objective": "Select LABA + LAMA dual bronchodilator therapy for breathless COPD patients without asthmatic features per NICE NG115.",
+      "difficulty": "medium",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "BTS Emergency Oxygen 2017 Table 1",
+          "quote": "In patients with COPD at risk of hypercapnic respiratory failure, titrate oxygen to achieve a target saturation of 88\u201392%.",
+          "document_id": "SRC-BTS-OXYGEN-2017"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BTS-OXYGEN-2017",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "BTS Guideline for oxygen use in healthcare and emergency settings",
+          "organization": "British Thoracic Society (BTS)",
+          "canonical_identifier": "BTS-OXYGEN-2017",
+          "canonical_url": "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/emergency-oxygen/",
+          "publication_year": 2017,
+          "latest_update": "2017-05-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0003",
+      "question_version": 4,
+      "stem": "A 69-year-old man with COPD on dual bronchodilator therapy (umeclidinium/vilanterol) experiences two severe exacerbations requiring oral corticosteroids and antibiotics over the preceding 6 months. His full blood count demonstrates a peripheral blood eosinophil count of 0.45 x 10^9/L (elevated, >300 cells/uL). Which of the following pharmacological adjustments is most indicated to reduce his future exacerbation frequency?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Discontinue all long-acting bronchodilators and start oral roflumilast monotherapy"
+        },
+        {
+          "id": "B",
+          "text": "Escalate to triple therapy by adding an inhaled corticosteroid (ICS) to his LABA/LAMA"
+        },
+        {
+          "id": "C",
+          "text": "Start long-term azithromycin 250 mg three times weekly without adjusting inhalers"
+        },
+        {
+          "id": "D",
+          "text": "Prescribe nebulised hypertonic saline daily"
+        },
+        {
+          "id": "E",
+          "text": "Increase the dose of short-acting salbutamol to 8 puffs daily"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "COPD exhibits treatable traits, and airway inflammation can be neutrophilic or eosinophilic. In patients suffering from recurrent exacerbations despite dual bronchodilation whose blood eosinophils are elevated (>300 cells/uL or >=0.3 x 10^9/L), escalating to triple therapy (LAMA + LABA + ICS) provides significant clinical benefit in reducing exacerbations and improving lung function.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "learning_objective": "Recognize elevated blood eosinophils as a treatable trait indicating ICS escalation in frequent COPD exacerbators.",
+      "difficulty": "hard",
+      "risk_tier": "R3",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG115 Recommendation 1.1.2",
+          "quote": "COPD is confirmed when post-bronchodilator spirometry demonstrates an FEV1/FVC ratio less than 0.70.",
+          "document_id": "SRC-NICE-NG115"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG115",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Chronic obstructive pulmonary disease in over 16s: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG115",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng115",
+          "publication_year": 2018,
+          "latest_update": "2019-07-26",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0002",
+      "question_version": 4,
+      "stem": "A 32-year-old woman is evaluated in the hypertension clinic for persistent severe hypertension. Her clinic blood pressure is 168/104 mmHg despite adhering to amlodipine 10 mg and ramipril 10 mg daily. Basic blood investigations reveal serum sodium 143 mmol/L, potassium 3.1 mmol/L (normal 3.5-5.0), and creatinine 74 umol/L. She takes no over-the-counter medications or herbal remedies. Which of the following is the most appropriate initial screening investigation for the suspected underlying cause of her secondary hypertension?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "24-hour urinary free cortisol"
+        },
+        {
+          "id": "B",
+          "text": "Plasma aldosterone-to-renin ratio"
+        },
+        {
+          "id": "C",
+          "text": "Renal ultrasound with Doppler flow"
+        },
+        {
+          "id": "D",
+          "text": "Plasma fractionated metanephrines"
+        },
+        {
+          "id": "E",
+          "text": "CT pulmonary angiography"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "The patient presents with treatment-resistant hypertension in a young adult accompanied by spontaneous hypokalemia (3.1 mmol/L), which strongly suggests primary aldosteronism (Conn's syndrome). The recommended initial screening test is the plasma aldosterone-to-renin ratio (ARR). Fractionated metanephrines screen for pheochromocytoma, which typically presents with paroxysmal headache, sweating, and palpitations. Renal Doppler evaluates renal artery stenosis, and urinary cortisol evaluates Cushing's syndrome.",
+      "specialty": "Cardiology",
+      "topic": "Hypertension (Essential & Secondary)",
+      "learning_objective": "Identify the primary screening test for secondary hypertension caused by primary aldosteronism in a patient with hypokalemia.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG136 Recommendation 1.1.4",
+          "quote": "In young patients with severe or resistant hypertension, screen for secondary causes including primary hyperaldosteronism.",
+          "document_id": "SRC-NICE-NG136"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG136",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Hypertension in adults: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG136",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng136",
+          "publication_year": 2019,
+          "latest_update": "2023-12-05",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0007",
+      "question_version": 4,
+      "stem": "A 76-year-old man presents with repeated episodes of lightheadedness and fainting when standing up from his armchair. His supine blood pressure is 148/86 mmHg with a heart rate of 72 beats/min. After standing for 3 minutes, his blood pressure drops to 118/70 mmHg, and he feels lightheaded, while his heart rate increases to 78 beats/min. He has no loss of consciousness today, and his 12-lead ECG is normal. What is the most likely diagnosis?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Vasovagal reflex syncope"
+        },
+        {
+          "id": "B",
+          "text": "Orthostatic hypotension"
+        },
+        {
+          "id": "C",
+          "text": "Carotid sinus syndrome"
+        },
+        {
+          "id": "D",
+          "text": "Stokes-Adams attack"
+        },
+        {
+          "id": "E",
+          "text": "Postural orthostatic tachycardia syndrome (POTS)"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Orthostatic hypotension is diagnosed when standing results in a sustained reduction in systolic blood pressure of >=20 mmHg or diastolic blood pressure of >=10 mmHg within 3 minutes of standing. Here, systolic BP fell by 30 mmHg (from 148 to 118 mmHg), reproducing the patient's symptoms. POTS is characterised by an exaggerated heart rate increase (>=30 bpm or >120 bpm) without a drop in blood pressure.",
+      "specialty": "Cardiology",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "learning_objective": "Diagnose orthostatic hypotension using postural blood pressure measurements and threshold criteria.",
+      "difficulty": "easy",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE CG109 Diagnostic Criteria",
+          "quote": "Orthostatic hypotension is diagnosed when standing systolic BP falls by at least 20 mmHg or diastolic BP falls by at least 10 mmHg within 3 minutes of standing.",
+          "document_id": "SRC-NICE-CG109"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-CG109",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Transient loss of consciousness ('blackouts') in over 16s",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-CG109",
+          "canonical_url": "https://www.nice.org.uk/guidance/cg109",
+          "publication_year": 2010,
+          "latest_update": "2014-09-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0009",
+      "question_version": 4,
+      "stem": "A 68-year-old retired judge presents with three episodes of sudden syncope over the past 2 months occurring while shaving his neck and turning his head. He has no prior cardiac history and his 12-lead ECG shows normal sinus rhythm without conduction delay. Under continuous ECG and blood pressure monitoring, right carotid sinus massage is performed for 5 seconds. This produces ventricular asystole lasting 4.2 seconds and a systolic blood pressure drop of 55 mmHg, which reproduces his presenting symptoms. Which of the following is the diagnostic finding demonstrated by this test?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Sick sinus syndrome"
+        },
+        {
+          "id": "B",
+          "text": "Paroxysmal supraventricular tachycardia"
+        },
+        {
+          "id": "C",
+          "text": "Epileptic drop attack"
+        },
+        {
+          "id": "D",
+          "text": "Carotid sinus syndrome"
+        },
+        {
+          "id": "E",
+          "text": "Subclavian steal syndrome"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Carotid sinus hypersensitivity/syndrome is diagnosed when carotid sinus massage (CSM) in patients with syncope reproduces symptoms accompanied by asystole >3 seconds (cardioinhibitory response) and/or a fall in systolic blood pressure >50 mmHg (vasodepressor response). Here, asystole lasted 4.2 seconds with a 55 mmHg BP fall, fulfilling both criteria for carotid sinus syndrome. Permanent pacemaker implantation is indicated for symptomatic recurrent cardioinhibitory carotid sinus syndrome.",
+      "specialty": "Cardiology",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "learning_objective": "Interpret carotid sinus massage diagnostic criteria (asystole >3s or BP fall >50 mmHg) for carotid sinus syndrome.",
+      "difficulty": "hard",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE CG109 Section 1.2",
+          "quote": "Carotid sinus massage is diagnostic if it induces asystole > 3 s or a fall in systolic BP > 50 mmHg.",
+          "document_id": "SRC-NICE-CG109"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-CG109",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Transient loss of consciousness ('blackouts') in over 16s",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-CG109",
+          "canonical_url": "https://www.nice.org.uk/guidance/cg109",
+          "publication_year": 2010,
+          "latest_update": "2014-09-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0013",
+      "question_version": 4,
+      "stem": "A 54-year-old man presents with a 4-week history of low-grade fluctuating fevers, night sweats, anorexia, and general malaise. On examination, he has a new harsh 3/6 pansystolic murmur at the cardiac apex and splinter hemorrhages in his nailbeds. Infective endocarditis is suspected. What is the most critical initial microbiological investigation required to satisfy the major Duke criterion prior to initiating antimicrobial therapy?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "A single random blood culture taken after starting broad-spectrum IV antibiotics"
+        },
+        {
+          "id": "B",
+          "text": "Throat swab and sputum culture for viral PCR"
+        },
+        {
+          "id": "C",
+          "text": "Urine antigen test for Legionella pneumophila"
+        },
+        {
+          "id": "D",
+          "text": "Serology for Borrelia burgdorferi"
+        },
+        {
+          "id": "E",
+          "text": "Three sets of blood cultures obtained from separate venipuncture sites with >=30 minutes between sets"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "Blood cultures represent the crucial diagnostic tool for infective endocarditis and fulfill a primary major Duke criterion. Standard UK and international protocols mandate obtaining three sets of blood cultures from separate venipuncture sites prior to commencing antibiotic therapy, because antibiotic exposure rapidly yields culture-negative endocarditis (occurring in ~10% of cases). A single blood culture is insufficient to distinguish true bacteremia from skin contamination.",
+      "specialty": "Cardiology",
+      "topic": "Infective Endocarditis (IE)",
+      "learning_objective": "Specify blood culture collection protocol (3 sets prior to antibiotics) as a major Duke criterion in suspected infective endocarditis.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC 2023 Endocarditis Guidelines Section 4",
+          "quote": "Three sets of blood cultures should be drawn from separate venipuncture sites before antimicrobial administration in suspected infective endocarditis.",
+          "document_id": "SRC-ESC-BSAC-IE-2023"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-ESC-BSAC-IE-2023",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "2023 ESC Guidelines for the management of endocarditis",
+          "organization": "European Society of Cardiology (ESC)",
+          "canonical_identifier": "ESC-BSAC-IE-2023",
+          "canonical_url": "https://academic.oup.com/eurheartj/article/44/39/3940/7245781",
+          "publication_year": 2023,
+          "latest_update": "2023-08-25",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0014",
+      "question_version": 4,
+      "stem": "A 62-year-old man with a mechanical aortic valve replacement performed 3 years ago presents with persistent Staphylococcus aureus bacteremia and fever. A bedside transthoracic echocardiogram (TTE) is performed but image quality is limited due to acoustic shadowing from the mechanical prosthesis, showing no obvious mobile vegetation. Which of the following is the most appropriate next imaging investigation to evaluate for prosthetic valve endocarditis and periannular complications?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Transoesophageal echocardiography (TEE)"
+        },
+        {
+          "id": "B",
+          "text": "Repeat transthoracic echocardiogram in 4 weeks"
+        },
+        {
+          "id": "C",
+          "text": "Routine chest radiography"
+        },
+        {
+          "id": "D",
+          "text": "Cardiac magnetic resonance imaging without contrast"
+        },
+        {
+          "id": "E",
+          "text": "Coronary angiography"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Transoesophageal echocardiography (TEE) is significantly more sensitive than transthoracic echocardiography (TTE) for detecting valvular vegetations, prosthetic valve dysfunction, and periannular complications (abscess, fistula, or pseudoaneurysm). TEE is mandatory in all patients with suspected prosthetic valve endocarditis, complicated native valve endocarditis, or when TTE is negative/inconclusive despite high clinical suspicion.",
+      "specialty": "Cardiology",
+      "topic": "Infective Endocarditis (IE)",
+      "learning_objective": "Recognize indications for transoesophageal echocardiography (TEE) in suspected prosthetic valve endocarditis.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE CG64 Recommendation 1.1.1",
+          "quote": "Antibacterial prophylaxis against infective endocarditis is not recommended routinely for people undergoing dental procedures.",
+          "document_id": "SRC-NICE-CG64"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-CG64",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Prophylaxis against infective endocarditis: antimicrobial prophylaxis against infective endocarditis in adults and children undergoing interventional procedures",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-CG64",
+          "canonical_url": "https://www.nice.org.uk/guidance/cg64",
+          "publication_year": 2008,
+          "latest_update": "2016-07-07",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0017",
+      "question_version": 4,
+      "stem": "An 80-year-old man receives a standard dual-chamber pacemaker with right ventricular apical pacing (RVAP) for symptomatic high-grade AV block. One year later, he develops new exertional dyspnoea and bilateral leg edema. Echocardiogram reveals that his left ventricular ejection fraction has declined from 55% to 35% with marked intraventricular dyssynchrony. Which of the following long-term adverse effects of conventional right ventricular apical pacing explains this presentation?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Prosthetic valve dehiscence"
+        },
+        {
+          "id": "B",
+          "text": "Coronary artery vasospasm"
+        },
+        {
+          "id": "C",
+          "text": "Subacute bacterial endocarditis"
+        },
+        {
+          "id": "D",
+          "text": "Pacing-induced cardiomyopathy due to ventricular dyssynchrony"
+        },
+        {
+          "id": "E",
+          "text": "Accelerated aortic valve calcification"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "Right ventricular apical pacing (RVAP) induces an artificial left bundle branch block activation pattern, causing ventricular dyssynchrony, asymmetrical hypertrophy, and impaired left ventricular systolic function, termed pacing-induced cardiomyopathy. This occurs in 10\u201320% of patients with high percentages of RV apical pacing, prompting the development of physiological conduction system pacing techniques.",
+      "specialty": "Cardiology",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "learning_objective": "Identify pacing-induced cardiomyopathy and ventricular dyssynchrony as potential complications of RV apical pacing.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC/BHRS 2021 Pacing Section 3",
+          "quote": "Permanent pacemaker implantation is indicated in third-degree atrioventricular block.",
+          "document_id": "SRC-BHRS-PACING-2021"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BHRS-PACING-2021",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "ESC Guidelines on cardiac pacing and cardiac resynchronization therapy",
+          "organization": "European Society of Cardiology (ESC) / BHRS",
+          "canonical_identifier": "ESC-BHRS-PACING-2021",
+          "canonical_url": "https://academic.oup.com/eurheartj/article/42/35/3427/6358485",
+          "publication_year": 2021,
+          "latest_update": "2021-08-29",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0018",
+      "question_version": 4,
+      "stem": "A 70-year-old woman with symptomatic Mobitz type II second-degree AV block is being assessed for permanent pacemaker implantation. The electrophysiologist discusses modern physiological pacing techniques, such as His-bundle pacing (HBP) and left bundle branch area pacing, compared to conventional right ventricular pacing (RVP). According to recent meta-analyses (Abdin et al., 2022), what clinical benefit is associated with physiological His-bundle pacing compared to conventional RVP?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Complete eradication of coronary atherosclerosis"
+        },
+        {
+          "id": "B",
+          "text": "Elimination of the requirement for dual-chamber leads"
+        },
+        {
+          "id": "C",
+          "text": "Avoidance of any surgical pocket or generator implantation"
+        },
+        {
+          "id": "D",
+          "text": "Lower lead revision rates compared to apical leads"
+        },
+        {
+          "id": "E",
+          "text": "Lower risk of heart failure hospitalisation and new-onset atrial fibrillation"
+        }
+      ],
+      "correct_answer": "E",
+      "explanation": "In a meta-analysis comparing His-bundle pacing (HBP) to right ventricular pacing (RVP), Abdin et al. [2022] found that HBP was associated with a lower risk of heart failure hospitalisation, new-onset atrial fibrillation, and a reduction in pacing-induced ventricular dyssynchrony. By directly engaging the intrinsic His-Purkinje conduction system, physiological pacing preserves narrow QRS duration and synchronous ventricular activation.",
+      "specialty": "Cardiology",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "learning_objective": "Recognize the clinical advantages of physiological conduction system pacing (lower HF hospitalisation and new AF) over conventional RVP.",
+      "difficulty": "hard",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "ESC/BHRS 2021 Pacing Section 3",
+          "quote": "Permanent pacemaker implantation is indicated in third-degree atrioventricular block.",
+          "document_id": "SRC-BHRS-PACING-2021"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BHRS-PACING-2021",
+          "source_type": "GUIDELINE",
+          "authority_class": "INTERNATIONAL_BENCHMARK",
+          "jurisdiction": "GLOBAL",
+          "title": "ESC Guidelines on cardiac pacing and cardiac resynchronization therapy",
+          "organization": "European Society of Cardiology (ESC) / BHRS",
+          "canonical_identifier": "ESC-BHRS-PACING-2021",
+          "canonical_url": "https://academic.oup.com/eurheartj/article/42/35/3427/6358485",
+          "publication_year": 2021,
+          "latest_update": "2021-08-29",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0019",
+      "question_version": 4,
+      "stem": "An 82-year-old man presents with progressive exertional breathlessness, occasional chest tightness on climbing stairs, and one recent episode of lightheadedness. Cardiovascular examination reveals a slow-rising carotid pulse (pulsus parvus et tardus) and a harsh crescendo-decrescendo systolic murmur loudest at the right second intercostal space radiating to both carotids, with an inaudible second heart sound (absent A2). What is the most likely underlying diagnosis?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Severe aortic stenosis"
+        },
+        {
+          "id": "B",
+          "text": "Mitral valve prolapse"
+        },
+        {
+          "id": "C",
+          "text": "Hypertrophic obstructive cardiomyopathy"
+        },
+        {
+          "id": "D",
+          "text": "Aortic regurgitation"
+        },
+        {
+          "id": "E",
+          "text": "Tricuspid regurgitation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Aortic stenosis (AS) is the most common degenerative valvular disease in elderly individuals (affecting 10\u201315% over 80 years). The classic clinical triad consists of exertional dyspnea, angina, and syncope. Physical signs of severe AS include a slow-rising pulse (pulsus parvus et tardus), an ejection systolic murmur radiating to the carotids, and a soft or absent A2 component of S2.",
+      "specialty": "Cardiology",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "learning_objective": "Diagnose severe aortic stenosis from classic physical examination findings (slow-rising pulse, murmur radiating to carotids).",
+      "difficulty": "easy",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.2",
+          "quote": "The cardinal symptoms of severe aortic stenosis are exertional dyspnoea, angina, and syncope.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0021",
+      "question_version": 4,
+      "stem": "An 84-year-old frail woman with symptomatic severe aortic stenosis (mean gradient 46 mmHg, peak velocity 4.4 m/s) is reviewed by the multidisciplinary Heart Team. Her STS surgical mortality risk score is calculated at 8.5% (high surgical risk). She is being evaluated for transcatheter aortic valve implantation (TAVI). Which imaging modality is considered the gold standard reference technique for pre-procedural anatomical assessment, including aortic annulus sizing and vascular access evaluation for TAVI?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Plain thoracic radiography"
+        },
+        {
+          "id": "B",
+          "text": "Exercise treadmill stress testing"
+        },
+        {
+          "id": "C",
+          "text": "Multidetector computed tomography (MDCT)"
+        },
+        {
+          "id": "D",
+          "text": "Right heart catheterisation alone"
+        },
+        {
+          "id": "E",
+          "text": "Radionuclide ventriculography (MUGA scan)"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "Multidetector computed tomography (MDCT) is the reference technique for pre-procedural planning of transcatheter aortic valve implantation (TAVI/TAVR). It provides precise three-dimensional measurements of the aortic valve annulus, coronary ostial heights, calcification distribution, and evaluation of peripheral iliofemoral vascular access routes. Exercise stress testing is contraindicated in symptomatic severe AS.",
+      "specialty": "Cardiology",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "learning_objective": "Identify multidetector CT as the reference imaging technique for pre-procedural TAVI anatomical evaluation.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.2",
+          "quote": "The cardinal symptoms of severe aortic stenosis are exertional dyspnoea, angina, and syncope.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0024",
+      "question_version": 4,
+      "stem": "A 72-year-old man with severe ischemic functional mitral regurgitation refractory to optimal medical therapy is discussed in the Heart Team meeting. The cardiac surgeons and cardiologists consider whether restrictive mitral valve annuloplasty repair or mitral valve replacement is more suitable. According to surgical series evaluating functional mitral regurgitation outcomes, what is the primary long-term clinical challenge associated with restrictive annuloplasty repair in patients with severe LV tethering and adverse remodeling?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "High rate of recurrent mitral regurgitation over long-term follow-up"
+        },
+        {
+          "id": "B",
+          "text": "Immediate severe acute aortic regurgitation"
+        },
+        {
+          "id": "C",
+          "text": "Complete loss of pulmonary compliance"
+        },
+        {
+          "id": "D",
+          "text": "Ineffectiveness of all subsequent oral diuretics"
+        },
+        {
+          "id": "E",
+          "text": "Requirement for lifelong high-dose warfarin anticoagulation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The major limitation of restrictive mitral valve annuloplasty repair in functional mitral regurgitation is a significant rate of recurrent mitral regurgitation (observed in up to 30\u201350% of patients within 2 years in randomized CTSN trials), primarily driven by ongoing left ventricular remodeling and progressive leaflet tethering. Despite this risk, repair avoids prosthetic valve-related complications and has been associated with favorable operative recovery in selected cohorts.",
+      "specialty": "Cardiology",
+      "topic": "Functional Mitral Regurgitation",
+      "learning_objective": "Recognize recurrent mitral regurgitation as the primary long-term challenge of annuloplasty repair in functional MR.",
+      "difficulty": "hard",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.4",
+          "quote": "In secondary (functional) mitral regurgitation, optimise guideline-directed medical therapy for heart failure with reduced ejection fraction as first-line treatment.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0004",
+      "question_version": 4,
+      "stem": "A 21-year-old tall, slender university student presents to the emergency department with sudden-onset left-sided pleuritic chest pain and mild dyspnoea that began 4 hours ago while watching television. He is speaking in full sentences. His respiratory rate is 16 breaths/min, oxygen saturation is 98% on room air, pulse is 72 bpm, and blood pressure is 122/76 mmHg. Chest radiograph reveals a 2.5 cm rim of air at the level of the left hilum, consistent with a moderate primary spontaneous pneumothorax (PSP). Under the 2023 British Thoracic Society (BTS) pleural statement, what is the most appropriate initial management approach for this hemodynamically stable patient?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Conservative observation with clinical monitoring and outpatient follow-up"
+        },
+        {
+          "id": "B",
+          "text": "Immediate insertion of a 28 Fr large-bore intercostal chest tube"
+        },
+        {
+          "id": "C",
+          "text": "Emergency needle thoracocentesis in the 2nd intercostal space"
+        },
+        {
+          "id": "D",
+          "text": "Urgent video-assisted thoracoscopic surgery (VATS) pleurodesis"
+        },
+        {
+          "id": "E",
+          "text": "Intubation and positive-pressure mechanical ventilation"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "The 2023 BTS Clinical Statement on Pleural Disease represents a paradigm shift toward conservative management for stable primary spontaneous pneumothorax (PSP). In a hemodynamically stable patient with minimal symptoms, conservative observation alone is safe and effective regardless of radiological pneumothorax size. Interventions such as needle aspiration or chest drain insertion carry procedural complications and are reserved for patients with significant dyspnea, physiological instability, or failure to resolve.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Pneumothorax",
+      "learning_objective": "Recognize conservative observation as an evidence-based initial strategy in stable primary spontaneous pneumothorax per BTS 2023.",
+      "difficulty": "medium",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "BTS Pleural Statement 2023 Section 3",
+          "quote": "In minimally symptomatic patients with primary spontaneous pneumothorax and no significant breathlessness, conservative management with observation alone is recommended.",
+          "document_id": "SRC-BTS-PLEURAL-2023"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BTS-PLEURAL-2023",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "British Thoracic Society Clinical Statement on spontaneous pneumothorax",
+          "organization": "British Thoracic Society (BTS)",
+          "canonical_identifier": "BTS-PLEURAL-2023",
+          "canonical_url": "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pleural-disease/",
+          "publication_year": 2023,
+          "latest_update": "2023-03-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0006",
+      "question_version": 4,
+      "stem": "A 23-year-old man with a moderate primary spontaneous pneumothorax is enrolled in a randomized trial comparing conservative observation to interventional chest drainage (Brown et al., NEJM 2020). What was the primary conclusion demonstrated by multicenter trials evaluating conservative observation versus interventional treatment in stable PSP?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Conservative observation resulted in a 90% mortality rate and should never be used"
+        },
+        {
+          "id": "B",
+          "text": "Intervention with large-bore surgical thoracostomy is mandatory within 1 hour of diagnosis"
+        },
+        {
+          "id": "C",
+          "text": "Conservative observation was non-inferior to interventional management and associated with lower recurrence and fewer adverse events"
+        },
+        {
+          "id": "D",
+          "text": "Observation required four weeks of continuous inpatient bed rest"
+        },
+        {
+          "id": "E",
+          "text": "Only patients over 65 years of age benefit from conservative observation"
+        }
+      ],
+      "correct_answer": "C",
+      "explanation": "In the landmark multicenter trial by Brown et al. [2020] in moderate-to-large primary spontaneous pneumothorax, conservative observation was found to be non-inferior to interventional drainage for radiographic resolution at 8 weeks, and was associated with significantly fewer hospital days, less time off work, and a substantially lower risk of pneumothorax recurrence. This evidence forms the basis of current BTS conservative guidelines.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Pneumothorax",
+      "learning_objective": "Summarize trial evidence supporting conservative observation over routine intervention in stable primary spontaneous pneumothorax.",
+      "difficulty": "hard",
+      "risk_tier": "R2",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "BTS Pleural Statement 2023 Section 4",
+          "quote": "In secondary spontaneous pneumothorax in patients over 50 years, chest drain insertion and admission is indicated.",
+          "document_id": "SRC-BTS-PLEURAL-2023"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BTS-PLEURAL-2023",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "British Thoracic Society Clinical Statement on spontaneous pneumothorax",
+          "organization": "British Thoracic Society (BTS)",
+          "canonical_identifier": "BTS-PLEURAL-2023",
+          "canonical_url": "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pleural-disease/",
+          "publication_year": 2023,
+          "latest_update": "2023-03-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0006",
+      "question_version": 4,
+      "stem": "A 54-year-old man with paroxysmal atrial fibrillation attends an outpatient cardiology clinic. He consumes approximately 35 units of alcohol per week and smokes 15 cigarettes daily. His BMI is 33 kg/m2. Despite taking flecainide and bisoprolol, he experiences weekly episodes of symptomatic palpitations lasting 2 to 4 hours. He is being evaluated for catheter ablation. Which of the following lifestyle modifications has the strongest evidence for reducing post-ablation AF recurrence and improving cardiovascular outcomes?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Smoking cessation and reduction of alcohol intake"
+        },
+        {
+          "id": "B",
+          "text": "Strict adherence to a ketogenic diet"
+        },
+        {
+          "id": "C",
+          "text": "High-intensity interval training for two hours daily"
+        },
+        {
+          "id": "D",
+          "text": "Complete avoidance of dietary caffeine"
+        },
+        {
+          "id": "E",
+          "text": "Routine daily prophylactic aspirin"
+        }
+      ],
+      "correct_answer": "A",
+      "explanation": "Smoking and excessive alcohol consumption both adversely affect AF outcomes and significantly increase the risk of post-ablation AF recurrence. Comprehensive lifestyle intervention and risk factor modification\u2014including smoking cessation, limiting alcohol intake, weight loss, and screening for obstructive sleep apnea\u2014are essential components of holistic AF management. Extreme exercise (high-intensity training) can actually trigger AF, and routine caffeine avoidance has not been shown to reduce AF recurrence.",
+      "specialty": "Cardiology",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "learning_objective": "Recognize the critical role of lifestyle intervention (smoking cessation and alcohol reduction) in reducing AF recurrence.",
+      "difficulty": "easy",
+      "risk_tier": "R1",
+      "trust_state": "QUARANTINED",
+      "source_grounded": false,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "J Clin Med PMC11678337 Section 4",
+          "quote": "Smoking and excessive alcohol consumption both adversely affect the incidence and progression of atrial fibrillation.",
+          "document_id": "DOC-PMC-CARD-0008"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG196",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Atrial fibrillation: diagnosis and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG196",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng196",
+          "publication_year": 2021,
+          "latest_update": "2021-04-27",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        },
+        {
+          "source_id": "DOC-PMC-CARD-0008",
+          "source_type": "PEER_REVIEWED_ARTICLE",
+          "authority_class": "PEER_REVIEWED_EVIDENCE_SYNTHESIS",
+          "jurisdiction": "INTERNATIONAL",
+          "title": "Advances in Atrial Fibrillation Management: A Guide for General Internists",
+          "organization": "MDPI",
+          "canonical_identifier": "PMC11678337",
+          "canonical_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11678337/",
+          "canonical_journal": "Journal of Clinical Medicine",
+          "canonical_doi": "10.3390/jcm13247596",
+          "publication_year": 2024,
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "local_snapshot_path": "Data/raw/cardiology/DOC-PMC-CARD-0008.xml",
+          "local_snapshot_sha256": "05b4872a88786c8b4623268c975fb99950d7b12c56155928b947fea614ea1247",
+          "binding_verified": true,
+          "resolver_method": "NCBI_CANONICAL_AUTHORITATIVE_DB"
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "QUARANTINE",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-CARD-0022",
+      "question_version": 4,
+      "stem": "A 68-year-old man with previous anterior myocardial infarction and heart failure with reduced ejection fraction (LVEF 30%) develops moderate-to-severe functional mitral regurgitation (FMR). Transthoracic echocardiogram demonstrates left ventricular dilatation, apical tethering of morphologically normal mitral valve leaflets, and an effective regurgitant orifice area of 0.28 cm2. What is the fundamental pathophysiological difference between functional (secondary) mitral regurgitation and degenerative (primary) mitral regurgitation?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "FMR is caused by congenital clefts in the anterior mitral leaflet"
+        },
+        {
+          "id": "B",
+          "text": "FMR results exclusively from acute bacterial destruction of the mitral valve annulus"
+        },
+        {
+          "id": "C",
+          "text": "FMR involves primary myxomatous degeneration and chordal rupture"
+        },
+        {
+          "id": "D",
+          "text": "FMR is caused by left ventricular remodeling and papillary muscle displacement with structurally normal leaflets"
+        },
+        {
+          "id": "E",
+          "text": "FMR only occurs in patients with normal left ventricular cavity dimensions"
+        }
+      ],
+      "correct_answer": "D",
+      "explanation": "In functional (secondary) mitral regurgitation (FMR), the mitral valve leaflets and chordae tendineae are structurally normal. The regurgitation is driven by left ventricular remodeling, annular dilatation, and papillary muscle displacement that cause apical and lateral leaflet tethering. In contrast, primary (degenerative) MR involves intrinsic structural leaflet/chordal disease (e.g. myxomatous degeneration, flail leaflet, or chordal rupture).",
+      "specialty": "Cardiology",
+      "topic": "Functional Mitral Regurgitation",
+      "learning_objective": "Distinguish the pathophysiology of functional mitral regurgitation (LV remodelling) from primary degenerative mitral disease.",
+      "difficulty": "easy",
+      "risk_tier": "R1",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "NICE NG208 Recommendation 1.4",
+          "quote": "In secondary (functional) mitral regurgitation, optimise guideline-directed medical therapy for heart failure with reduced ejection fraction as first-line treatment.",
+          "document_id": "SRC-NICE-NG208"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-NICE-NG208",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "Heart valve disease in adults: investigation and management",
+          "organization": "National Institute for Health and Care Excellence (NICE)",
+          "canonical_identifier": "NICE-NG208",
+          "canonical_url": "https://www.nice.org.uk/guidance/ng208",
+          "publication_year": 2021,
+          "latest_update": "2021-11-18",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    },
+    {
+      "question_id": "PLAB-RESP-0005",
+      "question_version": 4,
+      "stem": "A 24-year-old male smoker experiences sudden right-sided pleuritic chest pain. Epidemiological studies indicate that primary spontaneous pneumothorax (PSP) has a significantly higher admission incidence in young adult males compared to females. Which of the following predisposing factors is most strongly associated with the development of primary spontaneous pneumothorax?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Congestive heart failure with fluid overload"
+        },
+        {
+          "id": "B",
+          "text": "Cigarette smoking and subpleural apical blebs/bullae"
+        },
+        {
+          "id": "C",
+          "text": "Recurrent gastroesophageal reflux disease"
+        },
+        {
+          "id": "D",
+          "text": "Aortic valve regurgitation"
+        },
+        {
+          "id": "E",
+          "text": "Deep vein thrombosis of the lower limb"
+        }
+      ],
+      "correct_answer": "B",
+      "explanation": "Primary spontaneous pneumothorax (PSP) typically occurs in young, tall, slender individuals without overt clinical lung disease. Cigarette smoking increases the relative risk of PSP up to twenty-fold, and rupture of small subpleural apical blebs or bullae is the primary underlying anatomical cause. Heart failure, DVT, and GERD are not etiologic factors for PSP.",
+      "specialty": "Respiratory Medicine",
+      "topic": "Pneumothorax",
+      "learning_objective": "Identify smoking and subpleural apical blebs as key etiologic factors in primary spontaneous pneumothorax.",
+      "difficulty": "easy",
+      "risk_tier": "R1",
+      "trust_state": "CLINICIAN_REVIEW_REQUIRED",
+      "source_grounded": true,
+      "clinician_review_status": "PENDING_HUMAN_REVIEW",
+      "golden_dataset_status": false,
+      "citations": [
+        {
+          "ref": "BTS Pleural Statement 2023 Section 6",
+          "quote": "Tension pneumothorax is a medical emergency requiring immediate needle decompression prior to definitive chest tube insertion.",
+          "document_id": "SRC-BTS-PLEURAL-2023"
+        }
+      ],
+      "authoritative_guidelines": [
+        {
+          "source_id": "SRC-BTS-PLEURAL-2023",
+          "source_type": "GUIDELINE",
+          "authority_class": "AUTHORITATIVE_UK_GUIDELINE",
+          "jurisdiction": "UK",
+          "title": "British Thoracic Society Clinical Statement on spontaneous pneumothorax",
+          "organization": "British Thoracic Society (BTS)",
+          "canonical_identifier": "BTS-PLEURAL-2023",
+          "canonical_url": "https://www.brit-thoracic.org.uk/quality-improvement/guidelines/pleural-disease/",
+          "publication_year": 2023,
+          "latest_update": "2023-03-01",
+          "currency_status": "CURRENT",
+          "identity_verification_status": "IDENTITY_VERIFIED",
+          "binding_verified": true
+        }
+      ],
+      "lineage": {
+        "parent_checkpoint": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+        "disputed_incident_ref": "INC-PLAB-2026-09-FALSE-GREEN (ac6777a)",
+        "previous_version": 3,
+        "action": "REPAIR",
+        "evidence_policy_version": "PLAB_V4_FAIL_CLOSED_VERIFIED_IDENTITY"
+      }
+    }
+  ]
+}

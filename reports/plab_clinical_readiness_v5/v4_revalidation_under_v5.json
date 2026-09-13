@@ -1,0 +1,1873 @@
+{
+  "report_type": "V4_REVALIDATION_UNDER_V5_ORACLE",
+  "timestamp": "2026-09-12T17:30:28.355876+00:00",
+  "total_v4_questions_evaluated": 36,
+  "v4_claimed_grounded_count": 30,
+  "v5_grounded_count": 0,
+  "v5_quarantined_count": 36,
+  "v4_false_positives_invalidated_count": 30,
+  "known_v4_false_positives_audited": 9,
+  "known_v4_false_positives_passed": 0,
+  "validation_oracle_verdict": "V4_INVALIDATION_PROVEN_FAIL_CLOSED",
+  "detailed_results": [
+    {
+      "question_id": "PLAB-CARD-0008",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0008-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'On examination in the emergency department, his pulse is 76 ...' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'Under UK NICE guidance (CG109), what is the most appropriate...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0008-01",
+          "claim_text": "Syncope during exertion, absence of prodrome, family history of premature sudden cardiac death, and abnormal ECG are major high-risk red flags requiring urgent specialist cardiovascular admission or 24-hour evaluation.",
+          "evidence_quote": "Refer urgently for specialist cardiovascular assessment within 24 hours people with TLoC who have red flag features: syncope during exertion, family history of sudden cardiac death, abnormal ECG.",
+          "source_id": "NICE-CG109-2010-REV2014",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0008-02",
+          "claim_text": "Discharging patients with exertional syncope and family history of sudden unexplained death carries high risk of fatal ventricular arrhythmia.",
+          "evidence_quote": "Distinguishing between the cardiac and non-cardiac causes of syncope is critical to performing proper risk stratification and guiding diagnostic and therapeutic management.",
+          "source_id": "PMC-SYNCOPE-REV-2022",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0010",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0010-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0010-01",
+          "claim_text": "Norepinephrine (noradrenaline) is the first-line vasopressor of choice to restore systemic perfusion pressure in cardiogenic shock.",
+          "evidence_quote": "Indications: First-line vasopressor in cardiogenic shock",
+          "source_id": "PMC-SHOCK-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0010-02",
+          "claim_text": "Dopamine is associated with significantly higher rates of arrhythmic events and increased mortality compared to norepinephrine in cardiogenic shock.",
+          "evidence_quote": "Dopamine is associated with a higher risk of arrhythmic events and increased mortality in patients with cardiogenic shock.",
+          "source_id": "ESC-SHOCK-2021",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0011",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0011-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0011-01",
+          "claim_text": "Dobutamine is the first-line inotropic agent of choice to increase myocardial contractility and cardiac output in cardiogenic shock with persistent low perfusion.",
+          "evidence_quote": "Indications: First-line inotropic agent in cardiogenic shock",
+          "source_id": "PMC-SHOCK-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0011-02",
+          "claim_text": "Beta-blockers and calcium channel blockers possess negative inotropic effects and are strictly contraindicated in acute decompensated cardiogenic shock.",
+          "evidence_quote": "Beta-blockers and negative inotropes are contraindicated in acute cardiogenic shock.",
+          "source_id": "ESC-SHOCK-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0012",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0012-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'A 62-year-old man presents to the emergency department with ...' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'His ECG reveals acute ST-elevation in leads V1\u2013V6....' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0012-01",
+          "claim_text": "Emergent coronary revascularisation (primary PCI or emergent CABG) is the cornerstone treatment proven to reduce mortality in AMI-induced cardiogenic shock.",
+          "evidence_quote": "The cornerstone of treatment that improved CS prognosis in AMI patients is emergent coronary revascularization (or Percutaneous Coronary Intervention PCI) in patients with coronary",
+          "source_id": "PMC-SHOCK-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0016",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0016-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0016-01",
+          "claim_text": "In adult patients with symptomatic bradycardia and adverse features (hypotension, syncope, diaphoresis), the initial first-line pharmacological treatment is atropine 500 mcg IV.",
+          "evidence_quote": "If adverse features are present (shock, syncope, myocardial ischaemia, severe heart failure), give atropine 500 mcg IV.",
+          "source_id": "RCUK-BRADY-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0016-02",
+          "claim_text": "AV nodal blocking agents (beta-blockers, verapamil, adenosine) further impair AV conduction and are strictly contraindicated in complete heart block.",
+          "evidence_quote": "Do not give AV nodal blocking agents in second degree Mobitz II or complete heart block.",
+          "source_id": "RCUK-BRADY-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-EMERG-0001",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-EMERG-0001-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-EMERG-0001-01",
+          "claim_text": "In adult cardiac arrest with refractory shockable rhythm (VF/pVT), adrenaline 1 mg IV and amiodarone 300 mg IV should be administered after the third shock during active CPR.",
+          "evidence_quote": "Give adrenaline 1 mg IV and amiodarone 300 mg IV after the third shock once chest compressions have resumed.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-EMERG-0001-02",
+          "claim_text": "Adrenaline 1 mg IV is subsequently repeated every alternate CPR cycle (every 3 to 5 minutes), and a second dose of amiodarone (150 mg IV) is given after the fifth shock.",
+          "evidence_quote": "Repeat adrenaline 1 mg every alternate cycle of CPR (every 3-5 min). Give a further dose of amiodarone 150 mg after five shocks.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-EMERG-0001-03",
+          "claim_text": "Atropine is no longer recommended in cardiac arrest protocols and has no role in ventricular fibrillation.",
+          "evidence_quote": "Atropine is not recommended for routine use in asystole or PEA and has no role in VF/pVT.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "CONTRADICTION",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "POLARITY_CONTRADICTION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-EMERG-0002",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 2,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-EMERG-0002-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Decisive claim 'CLM-EMERG-0002-02' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-EMERG-0002-01",
+          "claim_text": "Adult chest compressions should be delivered at a rate of 100 to 120 compressions per minute.",
+          "evidence_quote": "Compress the chest at a rate of 100-120 min-1 with a depth of 5-6 cm for the average adult.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-EMERG-0002-02",
+          "claim_text": "Adult chest compression depth must be 5 to 6 cm in average adults.",
+          "evidence_quote": "with a depth of 5-6 cm for the average adult",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-EMERG-0002-03",
+          "claim_text": "Rescuers must allow complete chest wall recoil after each compression, avoiding leaning on the chest.",
+          "evidence_quote": "Allow the chest to recoil completely after each compression; do not lean on the chest.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0001",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0001-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Stem proposition 'Arterial blood gas shows: pH 7.32, PaCO2 6.8 kPa (normal 4.7...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0001-01",
+          "claim_text": "In acute exacerbations of COPD with or at risk of hypercapnic respiratory failure, oxygen therapy should target an SpO2 of 88% to 92%.",
+          "evidence_quote": "In people with an acute exacerbation of COPD at risk of hypercapnic respiratory failure, aim for a target SpO2 of 88% to 92% until arterial blood gases have been checked.",
+          "source_id": "NICE-NG115-2018-UPD2019",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0001-02",
+          "claim_text": "Controlled oxygen delivery using a 24% or 28% Venturi mask is the initial method of choice to prevent worsening hypercapnia.",
+          "evidence_quote": "Initial delivery should be via a 24% or 28% Venturi mask.",
+          "source_id": "BTS-OXYGEN-2017",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0001-03",
+          "claim_text": "High-concentration uncontrolled oxygen (e.g. 15 L non-rebreather mask targeting 94-98%) causes worsening V/Q mismatch and fatal respiratory acidosis.",
+          "evidence_quote": "High concentration oxygen therapy can cause worsening hypercapnia in patients with exacerbations of COPD.",
+          "source_id": "BTS-OXYGEN-2017",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0007",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0007-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'Within 24 hours of admission, she develops profound dyspnoea...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0007-01",
+          "claim_text": "According to the Berlin definition, severe ARDS is defined by a PaO2/FiO2 ratio <= 100 mmHg with PEEP >= 5 cmH2O.",
+          "evidence_quote": "Severe: PaO2/FiO2 <= 100 mmHg with PEEP >= 5 cmH2O (or CPAP >= 5 cmH2O).",
+          "source_id": "BERLIN-ARDS-2012",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0007-02",
+          "claim_text": "In this patient, PaO2 of 8.0 kPa (60 mmHg) on FiO2 0.80 yields a PaO2/FiO2 ratio of 75 mmHg, meeting severe ARDS criteria.",
+          "evidence_quote": "quantified by the ratio of arterial partial pressure of oxygen (PaO 2 ) to the fraction of inspired oxygen (FiO 2 ) as per the Berlin criteria",
+          "source_id": "BERLIN-ARDS-2012",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0008",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0008-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0008-01",
+          "claim_text": "Lung-protective mechanical ventilation in ARDS requires tidal volumes of 4 to 6 mL/kg predicted body weight.",
+          "evidence_quote": "In patients with ARDS, use low tidal volume ventilation (target 4-6 mL/kg predicted body weight) and keep end-inspiratory plateau pressure < 30 cmH2O.",
+          "source_id": "FICM-ICS-ARDS-2019",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0008-02",
+          "claim_text": "End-inspiratory plateau pressure must be maintained strictly below 30 cmH2O to minimize volutrauma and barotrauma.",
+          "evidence_quote": "keep end-inspiratory plateau pressure < 30 cmH2O.",
+          "source_id": "FICM-ICS-ARDS-2019",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "OPERATOR_MISMATCH"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0009",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0009-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0009-01",
+          "claim_text": "In patients with severe ARDS and PaO2/FiO2 < 150 mmHg despite lung-protective settings, prone positioning for at least 16 consecutive hours daily is strongly recommended.",
+          "evidence_quote": "In patients with severe ARDS (PaO2/FiO2 < 150 mmHg), prone positioning for at least 16 consecutive hours per day is strongly recommended to reduce mortality.",
+          "source_id": "FICM-ICS-ARDS-2019",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0009-02",
+          "claim_text": "Prone positioning significantly reduces mortality in severe ARDS by improving dorsal lung recruitment and ventilation-perfusion matching.",
+          "evidence_quote": "is strongly recommended to reduce mortality.",
+          "source_id": "FICM-ICS-ARDS-2019",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0001",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 2,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0001-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Decisive claim 'CLM-CARD-0001-02' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, SPECIFICITY_MONOTONICITY_VIOLATION",
+          "Stem proposition 'His clinic blood pressure is 152/94 mmHg....' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'A repeat measurement 10 minutes later is 150/92 mmHg....' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'Ambulatory blood pressure monitoring (ABPM) confirms an aver...' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'Urine dipstick is negative for protein, serum creatinine is ...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0001-01",
+          "claim_text": "Adults of Black African or African-Caribbean family origin without type 2 diabetes should be offered a CCB as step 1 antihypertensive monotherapy.",
+          "evidence_quote": "Offer a CCB to adults with hypertension without type 2 diabetes of any age with Black African or African-Caribbean family origin",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0001-02",
+          "claim_text": "Amlodipine 5 mg once daily is a standard first-line dihydropyridine calcium channel blocker in UK primary care practice.",
+          "evidence_quote": "Offer a CCB to adults with hypertension without type 2 diabetes",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "SPECIFICITY_MONOTONICITY_VIOLATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0001-03",
+          "claim_text": "ACE inhibitors or ARBs are preferred Step 1 treatment only for adults aged under 55 who are not of Black African or African-Caribbean family origin.",
+          "evidence_quote": "Offer an ACE inhibitor or an ARB to adults aged under 55 who are not of Black African or African-Caribbean family origin",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0003",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0003-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0003-01",
+          "claim_text": "If blood pressure is uncontrolled on Step 1 ACE inhibitor monotherapy, NICE NG136 Step 2 guidance recommends adding a calcium channel blocker (CCB).",
+          "evidence_quote": "If hypertension is not controlled in adults taking step 1 treatment, offer step 2 treatment: CCB in combination with an ACE inhibitor or ARB",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0003-02",
+          "claim_text": "Spironolactone is reserved for Step 4 resistant hypertension with potassium <= 4.5 mmol/L and is not indicated at Step 2.",
+          "evidence_quote": "For resistant hypertension at step 4, confirm elevated clinic BP and consider low-dose spironolactone.",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0004",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0004-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, SPECIFICITY_MONOTONICITY_VIOLATION",
+          "Stem proposition 'She is asymptomatic with a heart rate of 78 beats/min....' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0004-01",
+          "claim_text": "Anticoagulation with a DOAC (apixaban, edoxaban, rivaroxaban, or dabigatran) is recommended for women with atrial fibrillation and a CHA2DS2-VASc score of 2 or more.",
+          "evidence_quote": "Offer anticoagulation with a DOAC to people with atrial fibrillation and a CHA2DS2-VASc score of 2 or above in women",
+          "source_id": "NICE-NG196-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "SPECIFICITY_MONOTONICITY_VIOLATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0004-02",
+          "claim_text": "Antiplatelet monotherapy (aspirin or clopidogrel) is ineffective for stroke prevention in atrial fibrillation and should not be offered solely for this indication.",
+          "evidence_quote": "Do not offer stroke prevention therapy with aspirin or other antiplatelet agents to people with atrial fibrillation.",
+          "source_id": "NICE-NG196-2021",
+          "support_status": "CONTRADICTION",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "POLARITY_CONTRADICTION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0005",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0005-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, SPECIFICITY_MONOTONICITY_VIOLATION",
+          "Stem proposition 'Examination reveals an irregularly irregular pulse at 128 be...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0005-01",
+          "claim_text": "A standard beta-blocker (such as bisoprolol) is the recommended initial pharmacological therapy for ventricular rate control in hemodynamically stable atrial fibrillation.",
+          "evidence_quote": "Offer a standard beta-blocker or a rate-limiting calcium-channel blocker as initial monotherapy to people with atrial fibrillation who need rate control",
+          "source_id": "NICE-NG196-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "SPECIFICITY_MONOTONICITY_VIOLATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0005-02",
+          "claim_text": "Digoxin monotherapy is only recommended as first-line rate control in sedentary individuals with non-paroxysmal AF or coexisting heart failure with reduced ejection fraction.",
+          "evidence_quote": "Only consider digoxin monotherapy for people who are sedentary or have heart failure.",
+          "source_id": "NICE-NG196-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0015",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0015-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, POLARITY_CONTRADICTION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0015-01",
+          "claim_text": "Under UK NICE CG64 guidelines, antibiotic prophylaxis against infective endocarditis is NOT routinely recommended for people undergoing dental procedures.",
+          "evidence_quote": "Antibiotic prophylaxis against infective endocarditis is not recommended routinely for people undergoing dental procedures.",
+          "source_id": "NICE-CG64-2008-UPD2016",
+          "support_status": "CONTRADICTION",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "POLARITY_CONTRADICTION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0015-02",
+          "claim_text": "Patients at risk of infective endocarditis should receive advice on maintaining oral hygiene and recognizing early symptoms rather than prophylactic antibiotics.",
+          "evidence_quote": "Offer people at increased risk of infective endocarditis clear advice on the importance of maintaining good oral health.",
+          "source_id": "NICE-CG64-2008-UPD2016",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0020",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0020-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0020-01",
+          "claim_text": "Severe aortic stenosis is defined by echocardiography as a peak aortic velocity >= 4.0 m/s, a mean transvalvular gradient >= 40 mmHg, and an aortic valve area < 1.0 cm2.",
+          "evidence_quote": "Echocardiographic criteria for severe aortic stenosis: peak aortic velocity >= 4.0 m/s, mean transvalvular gradient >= 40 mmHg, and aortic valve area < 1.0 cm2.",
+          "source_id": "NICE-NG208-2021",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0020-02",
+          "claim_text": "With peak velocity 4.3 m/s, mean gradient 44 mmHg, and valve area 0.8 cm2, the patient meets all three hemodynamic criteria for severe aortic stenosis.",
+          "evidence_quote": "Echocardiographic criteria for severe aortic stenosis: peak aortic velocity >= 4.0 m/s, mean transvalvular gradient >= 40 mmHg, and aortic valve area < 1.0 cm2.",
+          "source_id": "ESC-VHD-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "VALUE_MISMATCH"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0023",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0023-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'She is currently taking ramipril 2.5 mg and furosemide 40 mg...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0023-01",
+          "claim_text": "Optimization of guideline-directed medical therapy (GDMT) for heart failure with reduced ejection fraction is the mandatory first-line foundation in functional mitral regurgitation before invasive interventions.",
+          "evidence_quote": "Current guidelines suggest that the surgical approach has to be tailored to the individual patient.",
+          "source_id": "NICE-NG106-2018",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-EMERG-0003",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-EMERG-0003-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Stem proposition 'His 12-lead ECG demonstrates sinus tachycardia with diffuse ...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-EMERG-0003-01",
+          "claim_text": "In comatose adult patients following ROSC, temperature control should actively prevent fever (temperature > 37.7 \u00c2\u00b0C, maintaining <= 37.5 \u00c2\u00b0C) for at least 72 hours.",
+          "evidence_quote": "Actively prevent fever (temperature > 37.7 \u00c2\u00b0C) in comatose patients after ROSC for at least 72 hours.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-EMERG-0003-02",
+          "claim_text": "Permissive hyperthermia or uncontrolled fever post-cardiac arrest accelerates secondary brain injury and worsens neurological outcome.",
+          "evidence_quote": "Fever post-cardiac arrest is associated with worse neurological outcome.",
+          "source_id": "RCUK-ALS-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0002",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0002-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, POLARITY_CONTRADICTION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0002-01",
+          "claim_text": "For people with COPD who have persistent breathlessness on SABA without asthmatic features or steroid responsiveness, dual bronchodilation with LABA + LAMA is the recommended first-line maintenance step.",
+          "evidence_quote": "Offer LABA plus LAMA to people who have breathlessness or exacerbations despite using short-acting bronchodilators, and do not have features of asthma.",
+          "source_id": "NICE-NG115-2018-UPD2019",
+          "support_status": "CONTRADICTION",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "POLARITY_CONTRADICTION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0002-02",
+          "claim_text": "Inhaled corticosteroids (ICS) are not indicated in patients without asthmatic features or elevated blood eosinophils.",
+          "evidence_quote": "Do not offer an ICS in combination with a LABA to people with COPD unless they have features of asthma or asthmatic traits.",
+          "source_id": "NICE-NG115-2018-UPD2019",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0003",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0003-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0003-01",
+          "claim_text": "In patients with COPD taking LABA+LAMA who suffer recurrent exacerbations and have elevated blood eosinophils (> 300 cells/uL or >= 0.3 x 10^9/L), escalating to triple therapy by adding an ICS is indicated.",
+          "evidence_quote": "For people with COPD who are taking a LABA plus LAMA and have a severe exacerbation or at least 2 moderate exacerbations within a year, consider adding an ICS.",
+          "source_id": "NICE-NG115-2018-UPD2019",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0003-02",
+          "claim_text": "Peripheral eosinophilia is a verified biomarker predicting exacerbation reduction with inhaled corticosteroid therapy in COPD.",
+          "evidence_quote": "Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition\u00e2\u20ac\u2122s heterogeneity",
+          "source_id": "PMC-COPD-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0002",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0002-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0002-01",
+          "claim_text": "The plasma aldosterone-to-renin ratio (ARR) is the recommended initial screening test for primary aldosteronism in patients with severe hypertension and hypokalemia.",
+          "evidence_quote": "In young patients with severe or resistant hypertension and spontaneous hypokalemia, primary aldosteronism should be screened with the plasma aldosterone-to-renin ratio.",
+          "source_id": "PMC-HTN-REV-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0002-02",
+          "claim_text": "Spontaneous hypokalemia (< 3.5 mmol/L) in a young adult with resistant hypertension strongly raises clinical suspicion of mineralocorticoid excess.",
+          "evidence_quote": "Hypertension can be divided into two major categories: essential (or primary) hypertension and secondary hypertension",
+          "source_id": "NICE-NG136-2019-UPD2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0007",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0007-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Stem proposition 'He has no loss of consciousness today, and his 12-lead ECG i...' contains decisive clinical entities but lacks an atomic claim.",
+          "Stem proposition 'What is the most likely diagnosis?...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0007-01",
+          "claim_text": "Orthostatic hypotension is diagnosed by a sustained reduction in systolic BP >= 20 mmHg or diastolic BP >= 10 mmHg within 3 minutes of standing.",
+          "evidence_quote": "Orthostatic hypotension is diagnosed when standing results in a sustained reduction in systolic blood pressure of >= 20 mmHg or diastolic blood pressure of >= 10 mmHg within 3 minutes of standing.",
+          "source_id": "NICE-CG109-2010-REV2014",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0007-02",
+          "claim_text": "In this patient, a 30 mmHg systolic blood pressure fall (from 148 to 118 mmHg) reproduces symptoms, confirming orthostatic hypotension.",
+          "evidence_quote": "Orthostatic syncope refers to a TLOC resulting from a postural decrease in BP. It can occur with or without premonitory symptoms (e.g., dizziness, asthenia, fatigue, palpitations, sweating, visual and",
+          "source_id": "PMC-SYNCOPE-REV-2022",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0009",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0009-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'Which of the following is the diagnostic finding demonstrate...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0009-01",
+          "claim_text": "Asystole > 3 seconds and/or a fall in systolic blood pressure > 50 mmHg after carotid sinus massage (CSM) reproducing symptoms diagnoses carotid sinus syndrome.",
+          "evidence_quote": "Asystole > 3 s and/or a fall in BP > 50 mmHg after CSM suggests carotid sinus syndrome [ 68 ].",
+          "source_id": "PMC-SYNCOPE-REV-2022",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0013",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0013-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, OPERATOR_MISMATCH"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0013-01",
+          "claim_text": "Prior to initiating antimicrobial therapy in suspected infective endocarditis, three sets of blood cultures should be obtained from separate venipuncture sites with intervals of >=30 minutes.",
+          "evidence_quote": "At least three sets of blood cultures should be obtained from peripheral venipuncture sites separated by at least 30 minutes before starting antibiotic therapy.",
+          "source_id": "ESC-BSAC-IE-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "OPERATOR_MISMATCH"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0013-02",
+          "claim_text": "Blood cultures represent a major Duke criterion for diagnosing infective endocarditis.",
+          "evidence_quote": "Blood cultures represent a crucial diagnostic tool for the identification and treatment of infective endocarditis. Moreover, they fulfill a primary criterion established by the Duke criteria.",
+          "source_id": "PMC-IE-REV-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0014",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0014-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0014-01",
+          "claim_text": "Transoesophageal echocardiography (TEE) is indicated when TTE is non-diagnostic or in prosthetic valve endocarditis to detect vegetations and periannular complications.",
+          "evidence_quote": "In the case where transesophageal echocardiography (TEE) is more sensitive than transthoracic echocardiography (TTE) for identifying valvular vegetations and periannular complications of NVE, TEE should be employed as the initial diagnostic tool.",
+          "source_id": "PMC-IE-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0017",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0017-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0017-01",
+          "claim_text": "Right ventricular apical pacing (RVAP) induces ventricular dyssynchrony, leading to pacing-induced cardiomyopathy and impaired left ventricular systolic function.",
+          "evidence_quote": "Right ventricular apical pacing (RVAP) is the most common ventricular pacing site. However, it can be associated with ventricular desynchrony, pacing induced cardiomyopathy and impaired ventricular function [ 1 ].",
+          "source_id": "PMC-PACING-REV-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0018",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0018-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0018-01",
+          "claim_text": "His-bundle pacing (HBP) is associated with a significantly lower risk of heart failure hospitalisation and new-onset atrial fibrillation compared to conventional right ventricular pacing.",
+          "evidence_quote": "In a 2022 meta-analysis comparing HBP to right ventricular pacing (RVP), Abdin et al . [ 13 ] found that HBP was associated with a lower risk of heart failure hospitalisation, new AF",
+          "source_id": "PMC-PACING-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0019",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0019-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE",
+          "Stem proposition 'What is the most likely underlying diagnosis?...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0019-01",
+          "claim_text": "Exertional dyspnea, angina, and syncope combined with a slow-rising pulse (pulsus parvus et tardus) and a harsh crescendo-decrescendo systolic murmur radiating to the carotids indicate severe aortic stenosis.",
+          "evidence_quote": "Classic symptoms of severe aortic stenosis include breathlessness, chest pain, and syncope on exertion, with physical signs of slow-rising carotid pulse and ejection systolic murmur radiating to carotids.",
+          "source_id": "NICE-NG208-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0021",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0021-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0021-01",
+          "claim_text": "Multidetector computed tomography (MDCT) is the gold-standard reference technique for pre-procedural planning, annular sizing, and vascular access evaluation for TAVI.",
+          "evidence_quote": "Regarding transcatheter aortic valve replacement (TAVR), CT is the reference technique for procedural planning.",
+          "source_id": "PMC-AS-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-CARD-0021-02",
+          "claim_text": "Exercise stress testing is contraindicated in patients with symptomatic severe aortic stenosis due to risk of sudden syncope and cardiac arrest.",
+          "evidence_quote": "Do not perform exercise testing in patients with symptomatic severe aortic stenosis.",
+          "source_id": "NICE-NG208-2021",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0024",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0024-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0024-01",
+          "claim_text": "The primary long-term clinical challenge associated with restrictive mitral valve annuloplasty repair in functional mitral regurgitation is a high rate of recurrent mitral regurgitation.",
+          "evidence_quote": "Despite concerns that the presumed high MR recurrence rate has a negative impact on survival, several studies reported a higher survival rate in patients who underwent MV repair for functional MR",
+          "source_id": "PMC-FMR-REV-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0004",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0004-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Stem proposition 'His respiratory rate is 16 breaths/min, oxygen saturation is...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0004-01",
+          "claim_text": "In hemodynamically stable patients with primary spontaneous pneumothorax and minimal symptoms, conservative observation with clinical monitoring and outpatient follow-up is the recommended first-line approach.",
+          "evidence_quote": "In patients with primary spontaneous pneumothorax who are minimally symptomatic and hemodynamically stable, conservative observation without pleural drainage is recommended.",
+          "source_id": "BTS-PLEURAL-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0004-02",
+          "claim_text": "Interventional procedures such as needle aspiration or chest drains carry procedural complication risks and are reserved for clinically unstable or significantly dyspneic patients.",
+          "evidence_quote": "Several studies indicate that observation alone is sufficient for the management of stable pneumothorax.",
+          "source_id": "PMC-PNEUMO-MA-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0006",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0006-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION, DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0006-01",
+          "claim_text": "In randomized trials (Brown et al. NEJM 2020), conservative observation of primary spontaneous pneumothorax was non-inferior to interventional management.",
+          "evidence_quote": "Conservative management was non-inferior to interventional management for radiographic resolution within 8 weeks, with substantially fewer adverse events and lower recurrence rates.",
+          "source_id": "BTS-PLEURAL-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0006-02",
+          "claim_text": "Conservative observation demonstrated lower risk of recurrence and fewer procedural adverse events compared to initial interventional chest tube drainage.",
+          "evidence_quote": "For PSP, Brown et al. [ 11 ] evaluated the observation approach in comparison to interventional treatment. It was a multicenter, open-label, non-inferiority trial.",
+          "source_id": "PMC-PNEUMO-MA-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "DECISIVE_ENTITIES_MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0006",
+      "v4_status": {
+        "source_grounded": false,
+        "trust_state": "QUARANTINED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0006-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION",
+          "Stem proposition 'Despite taking flecainide and bisoprolol, he experiences wee...' contains decisive clinical entities but lacks an atomic claim."
+        ]
+      },
+      "is_v4_false_positive_invalidated": false,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0006-01",
+          "claim_text": "Smoking and excessive alcohol consumption both adversely affect AF outcomes and significantly increase the risk of post-ablation AF recurrence.",
+          "evidence_quote": "Smoking and excessive alcohol consumption both adversely affect AF outcomes. Smoking is associated with an increased risk for post-ablation AF recurrence and worse cardiovascular outcomes in patients",
+          "source_id": "PMC-AF-REV-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-CARD-0022",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-CARD-0022-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-CARD-0022-01",
+          "claim_text": "Functional (secondary) mitral regurgitation is characterized by structurally normal mitral valve leaflets and chordae, with regurgitation caused by LV remodeling and papillary muscle displacement causing leaflet tethering.",
+          "evidence_quote": "In functional mitral regurgitation, the valve leaflets and chordae are structurally normal, with regurgitation resulting from LV remodeling, annular dilation, and papillary muscle displacement.",
+          "source_id": "ESC-VHD-2021",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        }
+      ]
+    },
+    {
+      "question_id": "PLAB-RESP-0005",
+      "v4_status": {
+        "source_grounded": true,
+        "trust_state": "CLINICIAN_REVIEW_REQUIRED"
+      },
+      "v5_status": {
+        "source_grounded": false,
+        "clinician_review_ready": false,
+        "trust_state": "QUARANTINED",
+        "action_recommendation": "QUARANTINE",
+        "decisive_claims_total": 1,
+        "decisive_claims_passed": 0,
+        "blocking_reasons": [
+          "Source identity failed for '': Failed to reach official publisher: unknown url type: ''",
+          "Guideline currency policy failed for '': Guideline currency status for '' is not in authoritative official succession records.",
+          "Missing verified source representation on disk for ''. No span verification possible.",
+          "Decisive claim 'CLM-RESP-0005-01' failed: SOURCE_NOT_RESOLVED, CURRENCY_CHECK_FAILED, MISSING_SOURCE_REPRESENTATION, NO_VERIFIED_SOURCE_REPRESENTATION"
+        ]
+      },
+      "is_v4_false_positive_invalidated": true,
+      "evaluated_claims": [
+        {
+          "claim_id": "CLM-RESP-0005-01",
+          "claim_text": "Cigarette smoking and the presence of subpleural apical blebs or bullae are the primary predisposing factors for primary spontaneous pneumothorax.",
+          "evidence_quote": "Primary spontaneous pneumothorax occurs in individuals without overt lung disease, strongly associated with cigarette smoking and the rupture of subpleural blebs.",
+          "source_id": "BTS-PLEURAL-2023",
+          "support_status": "DIRECT_SUPPORT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION"
+          ],
+          "final_pass": false
+        },
+        {
+          "claim_id": "CLM-RESP-0005-02",
+          "claim_text": "Primary spontaneous pneumothorax predominantly affects young adult males without pre-existing chronic clinical lung disease.",
+          "evidence_quote": "The incidence of primary spontaneous pneumothorax (PSP) admissions is 14.1 per 100,000 people age 15 years and older, with a higher rate for males (20.8) than females (7.6)",
+          "source_id": "PMC-PNEUMO-MA-2023",
+          "support_status": "EVIDENCE_INSUFFICIENT",
+          "reasons": [
+            "SOURCE_NOT_RESOLVED",
+            "CURRENCY_CHECK_FAILED",
+            "MISSING_SOURCE_REPRESENTATION",
+            "NO_VERIFIED_SOURCE_REPRESENTATION",
+            "MISSING_IN_EVIDENCE"
+          ],
+          "final_pass": false
+        }
+      ]
+    }
+  ]
+}

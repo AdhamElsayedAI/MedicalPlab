@@ -1,0 +1,21 @@
+{
+  "manifest_type": "V6_REPRODUCIBILITY_MANIFEST",
+  "timestamp": "2026-09-12T18:26:44.728582+00:00",
+  "environment": {
+    "python_version": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "git_commit": "2781a0a55bdbb6f8fa8f8ee402a37637220a29b5",
+    "branch": "plab-evidence-final-v6"
+  },
+  "inputs": {
+    "cardiorespiratory_batch_1_frozen_v1.json": "7fbf3183de74df9490c9a2ce5f7b837099b536d76a2365e73abe0c0809104879",
+    "external_source_verification_receipts.jsonl": "2a35717ded15102c436187e83d709e34d8a3536aa76e3e81b21003f20b72f1fd"
+  },
+  "outputs": {
+    "cardiorespiratory_batch_1_clinical_readiness_v6.json": "4f188b55832be074596611767801267f530178d4cec4df92306542b81219e7ec",
+    "cardiorespiratory_batch_1_clinical_readiness_v6.manifest.json": "69c890374663c7d2a68220415b2a386b76b83a03c9c304e59d89588440ae7bd9",
+    "atomic_claim_evidence_matrix_v6.json": "1d2c4b1b3debff9313add890e54e74b4cd57fcd8bccd02738df62972e1e65b8d",
+    "clinician_review_package_v6.json": "d40253a633aaa33ec9936724b943a5fdd7ef7d2ef203ec7fe3cc147efb6980ef",
+    "complete_revalidation_audit_v6.json": "80deec16e3ea92720c48b5e014cd445be190e440a6dc0b44570c718df96df3dc"
+  }
+}

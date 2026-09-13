@@ -1,0 +1,14 @@
+{
+  "manifest_version": "6.0.0",
+  "file_name": "cardiorespiratory_batch_1_clinical_readiness_v6.json",
+  "sha256": "4f188b55832be074596611767801267f530178d4cec4df92306542b81219e7ec",
+  "record_count": 36,
+  "passed_count": 13,
+  "quarantined_count": 23,
+  "golden_count": 0,
+  "clinician_approved_count": 0,
+  "golden_eligible": 0,
+  "max_trust_state": "CLINICIAN_REVIEW_REQUIRED",
+  "timestamp": "2026-09-12T18:26:44.728582+00:00",
+  "governance_lock": "LOCKED_NON_GOLDEN_FAIL_CLOSED"
+}
