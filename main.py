@@ -18,6 +18,7 @@ from fastapi.responses import JSONResponse
 
 from medicalplab.stage_g.models import APIRequest
 from medicalplab.stage_g.server import create_demo_platform
+from medicalplab.university.api import router as university_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("medicalplab_cloud_api")
@@ -32,6 +33,7 @@ app = FastAPI(
 )
 
 APP_START_TIME = time.time()
+app.include_router(university_router)
 
 # 2. Configure CORS
 # Pull allowed origins from environment variable or default to Vercel and local origins

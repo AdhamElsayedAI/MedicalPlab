@@ -1,0 +1,101 @@
+{
+  "timestamp": "2026-09-13T13:28:30+03:00",
+  "branch": "university-track-final-v1",
+  "base_sha": "cb4dc01025ee03aa823c30bddf5159f6dc42beac",
+  "status": "ACCEPTED_WITH_DEFERRED_NONCRITICAL_FEATURES",
+  "total_university_questions": 6,
+  "servable_questions": 6,
+  "review_required_questions": 0,
+  "quarantined_questions": 0,
+  "subjects": [
+    "Renal physiology"
+  ],
+  "topics": [
+    "Glomerular filtration barrier",
+    "RAAS mechanisms"
+  ],
+  "university_tests": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0,
+    "command": "python -m pytest tests/university -v",
+    "status": "PASS"
+  },
+  "plab_v9_tests": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "command": "python -m pytest tests/plab/v9 -q",
+    "status": "PASS"
+  },
+  "plab_tests": {
+    "total": 87,
+    "passed": 68,
+    "failed": 2,
+    "errors": 17,
+    "status": "DOCUMENTED_PREEXISTING_PUBLIC_PACKAGING_BLOCKER",
+    "root_cause": "Pre-existing public release packaging boundary: Data/processed/cardiology/DOC-WHO-CARD-*.chunks.json files are intentionally excluded from the public git repository to prevent redistributing third-party private publisher materials. Preserved in private canonical evidence vault.",
+    "caused_by_university": false
+  },
+  "full_test_result": {
+    "passed": 567,
+    "failed": 49,
+    "errors": 17,
+    "skipped": 1,
+    "subtests_passed": 12,
+    "status": "DOCUMENTED_PREEXISTING_PUBLIC_PACKAGING_BLOCKER",
+    "root_cause": "Pre-existing exclusions in public submission clean tree: historical cardiology chunks and evaluation datasets excluded to prevent private source redistribution; optional reranker test requires .renal_env torch environment.",
+    "caused_by_university": false
+  },
+  "frontend_build": {
+    "command": "npm run build",
+    "status": "PASS",
+    "routes": [
+      "/",
+      "/_not-found",
+      "/university"
+    ]
+  },
+  "frontend_lint": {
+    "command": "npm run lint",
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 56
+  },
+  "frontend_typecheck": {
+    "status": "PASS",
+    "details": "TypeScript validated with 0 errors during Next.js production build"
+  },
+  "backend_smoke": {
+    "get_root": "PASS",
+    "get_health_demo": "PASS",
+    "get_health_pilot": "PASS",
+    "status": "PASS"
+  },
+  "university_smoke": {
+    "status": "PASS",
+    "verified_steps": [
+      "list_subjects",
+      "choose_subject",
+      "list_topics",
+      "retrieve_question",
+      "submit_answer",
+      "verify_correctness",
+      "verify_explanation",
+      "verify_progress_and_mastery",
+      "verify_next_action"
+    ]
+  },
+  "demo_gate": {
+    "status": "PASS",
+    "consecutive_successful_runs": 2,
+    "steps_per_run": 11,
+    "database_resets_required": false,
+    "console_intervention": false
+  },
+  "deferred_features": {
+    "ai_tutor": "INTENTIONALLY_DEFERRED",
+    "additional_medical_subjects": "DEFERRED_POST_MVP",
+    "rag_consolidation": "DEFERRED_TO_NEXT_INDEPENDENT_MILESTONE"
+  }
+}

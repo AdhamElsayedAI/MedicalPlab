@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { CyberHUDNav } from "@/components/CyberHUDNav";
 import { AIIntelligenceHUD } from "@/components/AIIntelligenceHUD";
 import { HeroExperience } from "@/components/HeroExperience";
@@ -117,6 +118,18 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1 pb-16">
+        {(currentMode === "landing" || currentMode === "command_center") && (
+          <section aria-label="Choose your learning track" className="max-w-7xl mx-auto px-6 pt-8 grid sm:grid-cols-2 gap-4">
+            <Link href="/university" className="med-card p-6 block hover:border-sky-400">
+              <h2 className="text-xl font-bold text-sky-300">University Learning →</h2>
+              <p className="text-slate-300 mt-2">Undergraduate medical education. Study foundational concepts, practise questions, and track your progress.</p>
+            </Link>
+            <button onClick={() => setCurrentMode("quiz")} className="med-card p-6 text-left hover:border-sky-400">
+              <h2 className="text-xl font-bold text-sky-300">PLAB / Licensing Preparation →</h2>
+              <p className="text-slate-300 mt-2">UK licensing exam preparation. Separate questions, progress, and clinical review policy.</p>
+            </button>
+          </section>
+        )}
         {currentMode === "landing" && (
           <HeroExperience
             onLaunchMode={setCurrentMode}

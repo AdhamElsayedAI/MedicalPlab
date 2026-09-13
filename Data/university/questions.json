@@ -1,0 +1,182 @@
+[
+  {
+    "id": "UNI-RENAL-001",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "RAAS mechanisms",
+    "stem": "In the renin-angiotensin pathway, which substrate does active renin cleave to form angiotensin I?",
+    "options": {
+      "A": "Angiotensinogen",
+      "B": "Angiotensin II",
+      "C": "Aldosterone",
+      "D": "Albumin"
+    },
+    "correct_answer": "A",
+    "explanation": "Renin acts on angiotensinogen to form angiotensin I. ACE then converts angiotensin I to angiotensin II; these are distinct steps in the pathway.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0001",
+      "chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+      "title": "The Renin-Angiotensin-aldosterone system in vascular inflammation and remodeling.",
+      "authors": "Pacurari M, Kafoury R, Tchounwou PB, Ndebele K.",
+      "url": "https://europepmc.org/article/PMC/PMC3997861",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "excerpt": "Active renin acts upon its substrate, angiotensinogen, to generate angiotensin I (Ang I). Ang I is cleaved by angiotensin-converting enzyme (ACE) resulting in physiologically active angiotensin II (Ang II). Ang II, the main effector of the RAAS, mediates its effects via type 1 Ang II receptor (AT1R).",
+      "excerpt_sha256": "abe7eb3c4e72891e0d54c60d86945da5b76fb1d8da3903734ce579072265cb81"
+    }
+  },
+  {
+    "id": "UNI-RENAL-002",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "RAAS mechanisms",
+    "stem": "Which enzyme converts angiotensin I into angiotensin II?",
+    "options": {
+      "A": "Renin",
+      "B": "Angiotensin-converting enzyme (ACE)",
+      "C": "Pepsin",
+      "D": "Amylase"
+    },
+    "correct_answer": "B",
+    "explanation": "ACE cleaves angiotensin I to produce angiotensin II. Renin acts earlier, on angiotensinogen.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0001",
+      "chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+      "title": "The Renin-Angiotensin-aldosterone system in vascular inflammation and remodeling.",
+      "authors": "Pacurari M, Kafoury R, Tchounwou PB, Ndebele K.",
+      "url": "https://europepmc.org/article/PMC/PMC3997861",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "excerpt": "Active renin acts upon its substrate, angiotensinogen, to generate angiotensin I (Ang I). Ang I is cleaved by angiotensin-converting enzyme (ACE) resulting in physiologically active angiotensin II (Ang II). Ang II, the main effector of the RAAS, mediates its effects via type 1 Ang II receptor (AT1R).",
+      "excerpt_sha256": "abe7eb3c4e72891e0d54c60d86945da5b76fb1d8da3903734ce579072265cb81"
+    }
+  },
+  {
+    "id": "UNI-RENAL-003",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "RAAS mechanisms",
+    "stem": "Which receptor mediates the main classical effects of angiotensin II in the RAAS pathway described here?",
+    "options": {
+      "A": "Insulin receptor",
+      "B": "Nicotinic acetylcholine receptor",
+      "C": "Type 1 angiotensin II receptor (AT1R)",
+      "D": "Thyroid hormone receptor"
+    },
+    "correct_answer": "C",
+    "explanation": "The classical RAAS pathway links angiotensin II to AT1R. This question concerns that pathway; it does not imply that angiotensin II has no other receptor interactions.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0001",
+      "chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+      "title": "The Renin-Angiotensin-aldosterone system in vascular inflammation and remodeling.",
+      "authors": "Pacurari M, Kafoury R, Tchounwou PB, Ndebele K.",
+      "url": "https://europepmc.org/article/PMC/PMC3997861",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "excerpt": "Active renin acts upon its substrate, angiotensinogen, to generate angiotensin I (Ang I). Ang I is cleaved by angiotensin-converting enzyme (ACE) resulting in physiologically active angiotensin II (Ang II). Ang II, the main effector of the RAAS, mediates its effects via type 1 Ang II receptor (AT1R).",
+      "excerpt_sha256": "abe7eb3c4e72891e0d54c60d86945da5b76fb1d8da3903734ce579072265cb81"
+    }
+  },
+  {
+    "id": "UNI-RENAL-004",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "Glomerular filtration barrier",
+    "stem": "Which pair of cell types forms the two cellular sides of the glomerular filtration barrier?",
+    "options": {
+      "A": "Hepatocytes and cholangiocytes",
+      "B": "Osteoblasts and osteoclasts",
+      "C": "Neurons and astrocytes",
+      "D": "Fenestrated endothelial cells and podocytes"
+    },
+    "correct_answer": "D",
+    "explanation": "The filtration barrier includes fenestrated glomerular endothelium and podocytes. A glomerular basement membrane separates these cellular layers.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0002",
+      "chunk_id": "DOC-PMC-RENAL-0002-B0004-C01",
+      "title": "A glomerulus-on-a-chip to recapitulate the human glomerular filtration barrier.",
+      "authors": "Petrosyan A, Cravedi P, Villani V, Angeletti A, Manrique J, Renieri A, De Filippo RE, Perin L, Da Sacco S.",
+      "url": "https://europepmc.org/article/PMC/PMC6692336",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "excerpt": "The main function of the glomeruli is to filter fluids and electrolytes from the blood, while retaining plasma proteins 3 . This activity happens at the level of the glomerular filtration barrier (GFB) and is coordinated by the interaction of two highly specialized glomerular cells (the fenestrated endothelium and the podocytes), which are separated by a thin layer of glomerular basement membrane (GBM 4 ).",
+      "excerpt_sha256": "e1618f49db868d26f4d496cf3ca3f42ddc282fb5ed09aacce1a55e4c28b90ba9"
+    }
+  },
+  {
+    "id": "UNI-RENAL-005",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "Glomerular filtration barrier",
+    "stem": "What lies between the fenestrated endothelium and podocytes in the glomerular filtration barrier?",
+    "options": {
+      "A": "Glomerular basement membrane",
+      "B": "Articular cartilage",
+      "C": "Myelin sheath",
+      "D": "Epidermal keratin layer"
+    },
+    "correct_answer": "A",
+    "explanation": "The glomerular basement membrane lies between the endothelial cells and podocytes. Together these components form the filtration barrier.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0002",
+      "chunk_id": "DOC-PMC-RENAL-0002-B0004-C01",
+      "title": "A glomerulus-on-a-chip to recapitulate the human glomerular filtration barrier.",
+      "authors": "Petrosyan A, Cravedi P, Villani V, Angeletti A, Manrique J, Renieri A, De Filippo RE, Perin L, Da Sacco S.",
+      "url": "https://europepmc.org/article/PMC/PMC6692336",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "excerpt": "The main function of the glomeruli is to filter fluids and electrolytes from the blood, while retaining plasma proteins 3 . This activity happens at the level of the glomerular filtration barrier (GFB) and is coordinated by the interaction of two highly specialized glomerular cells (the fenestrated endothelium and the podocytes), which are separated by a thin layer of glomerular basement membrane (GBM 4 ).",
+      "excerpt_sha256": "e1618f49db868d26f4d496cf3ca3f42ddc282fb5ed09aacce1a55e4c28b90ba9"
+    }
+  },
+  {
+    "id": "UNI-RENAL-006",
+    "track": "university",
+    "subject": "Renal physiology",
+    "topic": "Glomerular filtration barrier",
+    "stem": "Which statement best describes normal glomerular filtration at a foundational level?",
+    "options": {
+      "A": "It selectively empties plasma proteins into urine",
+      "B": "It filters fluid and electrolytes while retaining plasma proteins",
+      "C": "It produces bile from circulating lipids",
+      "D": "It converts urea into red blood cells"
+    },
+    "correct_answer": "B",
+    "explanation": "Glomeruli filter fluid and electrolytes from blood while retaining plasma proteins. The filtration barrier supports this selective function.",
+    "difficulty": "easy",
+    "content_kind": "EDUCATIONAL_BASIC_SCIENCE",
+    "status": "VERIFIED_EDUCATIONAL",
+    "review_reason": "Structurally audited and answer/explanation checked against the attached public source passage. Educational verification only; no human clinician approval.",
+    "evidence": {
+      "document_id": "DOC-PMC-RENAL-0002",
+      "chunk_id": "DOC-PMC-RENAL-0002-B0004-C01",
+      "title": "A glomerulus-on-a-chip to recapitulate the human glomerular filtration barrier.",
+      "authors": "Petrosyan A, Cravedi P, Villani V, Angeletti A, Manrique J, Renieri A, De Filippo RE, Perin L, Da Sacco S.",
+      "url": "https://europepmc.org/article/PMC/PMC6692336",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "excerpt": "The main function of the glomeruli is to filter fluids and electrolytes from the blood, while retaining plasma proteins 3 . This activity happens at the level of the glomerular filtration barrier (GFB) and is coordinated by the interaction of two highly specialized glomerular cells (the fenestrated endothelium and the podocytes), which are separated by a thin layer of glomerular basement membrane (GBM 4 ).",
+      "excerpt_sha256": "e1618f49db868d26f4d496cf3ca3f42ddc282fb5ed09aacce1a55e4c28b90ba9"
+    }
+  }
+]
