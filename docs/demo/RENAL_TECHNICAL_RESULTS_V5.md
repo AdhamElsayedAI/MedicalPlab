@@ -140,7 +140,7 @@ To prevent intra-query candidate leakage, splitting was performed strictly by Qu
 - **Median Best Relevant Rank:** **1.0**
 
 ### Model Freezing
-The P3 parameters were frozen into [reports/renal_v5/renal_v5_p3_model_specification.json](file:///c:/Users/Adham%20Elsayed/Desktop/AdhamElsayedAI/MedicalPlab/reports/renal_v5/renal_v5_p3_model_specification.json) (SHA-256: `dff886928cd59745b7063590c124dbb5f4eabba39b104f904da77ef272365d55`):
+The P3 parameters were frozen into [reports/renal_v5/renal_v5_p3_model_specification.json](../../reports/renal_v5/renal_v5_p3_model_specification.json) (SHA-256: `dff886928cd59745b7063590c124dbb5f4eabba39b104f904da77ef272365d55`):
 - `w_dense_combined` = $+2.2092$
 - `w_bm25_sparse` = $+0.9713$
 - `w_section_centroid` = $-1.1760$

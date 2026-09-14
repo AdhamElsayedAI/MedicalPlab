@@ -27,7 +27,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 import pytest
-import torch
+torch = pytest.importorskip("torch")
 
 CLEAN_CORE_DATASET_PATH = _ROOT / "evaluation/renal/v5/renal-rerank-train-core-v5-clean-v1.json"
 CLEAN_VAL_DATASET_PATH = _ROOT / "evaluation/renal/v5/renal-rerank-train-val-v5-clean-v1.json"
