@@ -3,9 +3,9 @@ MedicalPlab Shared Evidence Engine V2 — Service Orchestration
 ============================================================
 Coordinates the end-to-end evidence lifecycle:
 1. Query Representation (original, canonical, neutral target).
-2. Deterministic Document Routing (23 extractive document cards).
-3. 4-Route Candidate Retrieval (Global dense, Doc-local, Section-local, BM25) + RRF.
-4. Structured Medical Cross-Encoder Reranking (Qwen3-Reranker-4B NF4).
+2. Deterministic Document Routing (16 extractive document cards).
+3. 4-Route Candidate Retrieval (Global dense, Doc-local, Section-local, BM25F) + RRF.
+4. Structured Medical Cross-Encoder Reranking (Qwen3-Reranker-0.6B).
 5. Central Claim-Evidence Verification & Veto Checks (CentralClaimVerifier).
 6. EvidencePacket compilation for Course Learning, PLAB, Tutor, and Clinical Reasoning.
 """
@@ -28,6 +28,10 @@ from medicalplab.evidence_engine.query_representation import ClinicalQueryProces
 from medicalplab.evidence_engine.reranker import EvidenceReranker
 
 logger = logging.getLogger(__name__)
+
+ARCHITECTURE_ID = "MEDICALPLAB_EVIDENCE_ENGINE_V1_1"
+MIN_RERANK_SUPPORT_SCORE = 7.0
+MIN_RETRIEVAL_CHANNEL_AGREEMENT = 2
 
 
 class SharedEvidenceEngineV2:
@@ -135,7 +139,7 @@ class SharedEvidenceEngineV2:
 
         top_passage = candidates[0] if candidates else None
 
-        # Verify claims if provided
+        # Verify explicit claims if provided.
         claim_results = []
         if claims_to_verify and top_passage:
             claim_results = self.verify_claims_against_evidence(claims_to_verify, top_passage)
@@ -149,31 +153,55 @@ class SharedEvidenceEngineV2:
             abstain = True
             abstain_reason = "NO_CANDIDATES_RETRIEVED"
         elif top_passage is not None:
-            # Calibrated abstention: A query without verified support must fail closed
-            if not is_degraded:
-                # Cross-encoder outputs logits; score < 0.0 indicates negative class (non-relevant)
-                if top_passage.rerank_score < 0.0:
-                    abstain = True
-                    abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
-            else:
-                q_terms = set(self.retriever._tokenize(q_rep.canonical_query or q_rep.original_query))
-                top_text_terms = set(self.retriever._tokenize(f"{top_passage.doc_title} {top_passage.heading} {top_passage.text}"))
-                overlap = len(q_terms.intersection(top_text_terms))
-                if overlap == 0 or top_passage.fused_score < 0.01:
-                    abstain = True
-                    abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
+            # Source eligibility is independent of retrieval relevance.
+            source_eligible = (
+                top_passage.document_id in self.router.cards
+                and top_passage.chunk_id in self.retriever.chunks
+                and self.retriever.chunks[top_passage.chunk_id].get("document_id") == top_passage.document_id
+            )
+            if not source_eligible:
+                abstain = True
+                abstain_reason = "INELIGIBLE_EVIDENCE_SOURCE"
 
-            # If claim was verified and contradicted or polarity mismatch triggered
-            if claim_results:
-                for cr in claim_results:
-                    if cr.state == VerificationState.CONTRADICTED:
-                        abstain = True
-                        abstain_reason = "CLAIM_CONTRADICTED_BY_EVIDENCE"
-                        break
-                    if cr.is_high_risk and cr.state != VerificationState.SUPPORTED:
-                        abstain = True
-                        abstain_reason = "HIGH_RISK_CLAIM_UNSUPPORTED"
-                        break
+            # DEV-only calibration requires a high direct-support score and
+            # agreement from at least two distinct candidate channels.
+            channel_agreement = len(top_passage.channel_ranks)
+            if not abstain and not is_degraded:
+                if (
+                    top_passage.rerank_score < MIN_RERANK_SUPPORT_SCORE
+                    or channel_agreement < MIN_RETRIEVAL_CHANNEL_AGREEMENT
+                ):
+                    abstain = True
+                    abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
+            elif not abstain and (
+                top_passage.fused_score < 0.01
+                or channel_agreement < MIN_RETRIEVAL_CHANNEL_AGREEMENT
+            ):
+                abstain = True
+                abstain_reason = "LOW_RETRIEVAL_CONFIDENCE"
+
+            # The reranker is explicitly prompted for direct proposition
+            # support, not topical relevance. In degraded mode that claim-level
+            # signal is unavailable, so query-only serving fails closed.
+            if not claim_results and is_degraded:
+                abstain = True
+                abstain_reason = "CLAIM_SUPPORT_UNAVAILABLE"
+
+            # Explicit answer claims require complete verifier support. Partial
+            # or ambiguous support is never sufficient for product serving.
+            for result in claim_results:
+                if result.state == VerificationState.CONTRADICTED:
+                    abstain = True
+                    abstain_reason = "CLAIM_CONTRADICTED_BY_EVIDENCE"
+                    break
+                if result.state != VerificationState.SUPPORTED:
+                    abstain = True
+                    abstain_reason = (
+                        "HIGH_RISK_CLAIM_UNSUPPORTED"
+                        if result.is_high_risk
+                        else "CLAIM_NOT_DIRECTLY_SUPPORTED"
+                    )
+                    break
 
         # Apply mode policy constraints
         if mode == "PLAB":
@@ -198,5 +226,5 @@ class SharedEvidenceEngineV2:
         )
 
 
-# Canonical alias for MedicalPlab Evidence Engine V1
+# Canonical alias for MedicalPlab Evidence Engine V1.1
 CanonicalEvidenceEngine = SharedEvidenceEngineV2

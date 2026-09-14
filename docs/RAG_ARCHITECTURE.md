@@ -1,164 +1,92 @@
 # MedicalPlab Canonical RAG / Evidence Engine Architecture
-**Canonical Engine Identifier:** `MEDICALPLAB_EVIDENCE_ENGINE_V1`  
-**Status:** Canonical Production Standard  
-**Corpus Scope:** 16-Document Public-Safe PMC Open-Access Corpus (`DOC-PMC-RENAL-0001` through `DOC-PMC-RENAL-0016`)  
-**Corpus Footprint:** 2,175 chunks (`B_400_10pct_overlap`) / 2,192 chunks (`C_section_aware`)  
 
----
+**Canonical engine:** `MEDICALPLAB_EVIDENCE_ENGINE_V1_1`
 
-## 1. Executive Summary & Architectural Invariants
+**Base architecture commit:** `40b1efa52a3c66b273bc9a162d0023eed26d4102`
 
-`MEDICALPLAB_EVIDENCE_ENGINE_V1` represents the unified, single-canonical retrieval, reranking, and verification engine powering MedicalPlab's AI Tutor, University examination reasoning, and PLAB SBA evidence verification.
+**Status:** frozen after DEV-only V2 optimization and product safety closure
 
-### Core Architectural Invariants
-1. **Deterministic Public Corpus:** Zero runtime dependency on legacy private directories (`renal_v2`). The runtime dynamically and deterministically resolves the reproducible 16-document PMC open-access corpus.
-2. **Corpus Comparability Firewall:** `HISTORICAL_BASELINE = REFERENCE_ONLY`. Historical 23-document metrics are recorded for reference only and never conflated with the 16-document public-safe corpus.
-3. **Multi-Channel Hybrid Fusion:** Candidate retrieval combines global dense embeddings, document-local routing priors, section-heading overlap, and whole-corpus Okapi BM25 through Reciprocal Rank Fusion (RRF, $k=60$) with lexicographic tie-breaking.
-4. **End-Metric Neural Cross-Encoding:** Production reranking is driven by `Qwen/Qwen3-Reranker-0.6B`, providing sub-2.5s CPU latency while achieving superior ranking precision over bi-encoder scoring. `Qwen3-Reranker-4B` is formally documented as discarded for production due to prohibitive latency (p50: 21.2s, p95: 120.4s).
-5. **Calibrated Fail-Closed Abstention:** Clinical safety prohibits ungrounded medical advice. If retrieved evidence has low confidence, contradiction, or high-risk numerical discrepancies, the engine emits `abstain: True` with structured reasons (`LOW_RETRIEVAL_CONFIDENCE`, `CLAIM_CONTRADICTED_BY_EVIDENCE`, `HIGH_RISK_CLAIM_UNSUPPORTED`).
-6. **Elimination of Hard-Coded Fallbacks:** The legacy mock fallback in `/ai/chat` (which previously returned static STEMI citations or generic advice) has been completely replaced by real `EvidencePacket` generation.
+**Final-holdout status:** `NO_UNSPENT_UNBIASED_FINAL_HOLDOUT_AVAILABLE`
 
----
+## Runtime contract
 
-## 2. End-to-End Pipeline Architecture
+The canonical path is:
 
-```mermaid
-flowchart TD
-    subgraph QueryIngestion["1. Clinical Query Ingestion"]
-        Q_IN["Clinical Query / Vignette"] --> QP["ClinicalQueryProcessor"]
-        QP --> Q_ORIG["Original Query"]
-        QP --> Q_CANON["Canonical Query (Acronym/Spelling)"]
-        QP --> Q_NEUT["Neutral Target (De-biased)"]
-        QP --> Q_NEG["Strict Negation Detection"]
-    end
+`ClinicalQueryProcessor -> DeterministicDocumentRouter -> CandidateRetriever -> EvidenceReranker -> serving/claim gate -> EvidencePacket`
 
-    subgraph RoutingStage["2. Document Prior Routing"]
-        Q_CANON --> DR["DeterministicDocumentRouter"]
-        DOC_CARDS[("16 Extractive Document Cards")] --> DR
-        DR --> ROUTED_DOCS["Top-8 Routed Document IDs"]
-    end
+Both `POST /ai/chat` and `POST /api/v1/evidence/query` use this engine. `/ai/chat` returns only the single top passage that passed the serving gate. It has no hard-coded NICE evidence map or specialty-specific prose bypass. The direct evidence endpoint exposes the packet for inspection; it is not an assertion that every candidate is supported.
 
-    subgraph CandidateRetrieval["3. Multi-Channel Candidate Retrieval"]
-        Q_NEUT --> RET["CandidateRetriever"]
-        ROUTED_DOCS --> RET
-        CORPUS[("2,175 Chunks (16 PMC Docs)")] --> RET
-        
-        RET --> R_A["Route A: Global Dense Embedding"]
-        RET --> R_B["Route B: Doc-Local Prior (Top-8 Docs)"]
-        RET --> R_C["Route C: Section-Heading Overlap"]
-        RET --> R_D["Route D: Whole-Corpus Okapi BM25"]
-        
-        R_A --> RRF["Reciprocal Rank Fusion (k=60)"]
-        R_B --> RRF
-        R_C --> RRF
-        R_D --> RRF
-        RRF --> FUSED_CANDS["Top-50 Fused Candidates (Deterministic Tie-Break)"]
-    end
+## Frozen corpus
 
-    subgraph RerankingStage["4. Neural Passage Cross-Encoding"]
-        FUSED_CANDS --> RERANK["EvidenceReranker (Qwen3-Reranker-0.6B)"]
-        Q_CANON --> RERANK
-        RERANK -->|Success| RANKED_CANDS["Reranked Candidates (Logit Scored)"]
-        RERANK -->|Fallback / Degraded| DEGRADED["CANONICAL_DEGRADED (Fused Score Sort)"]
-    end
+| Field | Frozen value |
+|---|---|
+| Corpus | 16 public-safe PMC open-access renal documents |
+| Chunk directory | `Data/experiments/renal/chunking/B_400_10pct_overlap` |
+| Chunking | approximately 400-token chunks, 10% overlap |
+| Chunk count | 2,175 |
+| Corpus SHA-256 | `edbd4e13f56120b9fdb53a100de1b3777ac99e025f8edb739b8a2dc17989c5be` |
+| Hash definition | SHA-256 over the sorted stream of chunk filenames and bytes, NUL-delimited |
+| Private sources | prohibited |
 
-    subgraph SafetyGate["5. Calibrated Safety & Claim Verification"]
-        RANKED_CANDS --> SG{"Calibrated Safety Gate"}
-        DEGRADED --> SG
-        SG -->|Logit < 0.0 or No Overlap| ABSTAIN["Fail-Closed Abstention (abstain: True)"]
-        SG -->|Logit >= 0.0 & Supported| VERIF["CentralClaimVerifier (4-State Check)"]
-        VERIF -->|Contradiction / Numeric Veto| ABSTAIN
-        VERIF -->|Grounding Validated| PACKET["EvidencePacket (Validated)"]
-    end
+## Query and retrieval configuration
 
-    subgraph ProductEgress["6. Downstream Product Endpoints"]
-        PACKET --> CHAT["/ai/chat (Grounded Socratic Tutor)"]
-        PACKET --> DIRECT["/api/v1/evidence/query (Structured RAG API)"]
-        PACKET --> UNI["University Track (/university/*)"]
-        PACKET --> PLAB["PLAB SBA Verification Pipeline"]
-        ABSTAIN --> CHAT
-        ABSTAIN --> DIRECT
-    end
+`ClinicalQueryProcessor` preserves negation and clinically material context while applying deterministic spelling/acronym normalization and producing original, canonical, and neutral-target representations.
 
-    style Q_IN fill:#f9f,stroke:#333,stroke-width:2px
-    style PACKET fill:#dfd,stroke:#2b2,stroke-width:2px
-    style ABSTAIN fill:#fdd,stroke:#b22,stroke-width:2px
-```
+The candidate stage supports four route types. In the default product construction no embedding model is injected, so global-dense scoring is inactive; this is recorded explicitly rather than claiming a model that the canonical service does not load. The active runtime signals are deterministic document-local routing, heading-local section matching, and field-aware BM25. The optional embedding hook remains available for a separately evaluated caller configuration.
 
----
+| Setting | V1.1 value |
+|---|---:|
+| Embedding model/revision in default runtime | none / not applicable |
+| BM25 title weight | 1.0 |
+| BM25 heading weight | 2.0 |
+| BM25 body weight | 1.0 |
+| BM25 `k1` / `b` | 1.5 / 0.75 |
+| Full section-path scoring | disabled |
+| Heading overlap bonus | 0.05 |
+| Methods/Results/References penalty | 1.0 (no penalty) |
+| RRF `k` | 60 |
+| RRF A/B/C/D weights | 1.0 / 1.3 / 1.1 / 1.3 |
+| Candidate depth | 50 |
+| Reranker depth | 25 |
 
-## 3. Component Details & Design Rationale
+Candidate recall on the 99-query in-corpus DEV pool was 0.8384, 0.9192, 0.9394, 0.9697, 0.9798, and 0.9798 at depths 10, 20, 30, 50, 75, and 100. Depth 50 is the smallest operational point before the final one-point gain and the complete plateau from 75 to 100.
 
-### 3.1. Clinical Query Representation (`ClinicalQueryProcessor`)
-Transforms clinical vignettes into three explicit representations:
-- **`original_query`**: Verbatim clinical question.
-- **`canonical_query`**: Normalizes British vs American spelling (`hypokalaemia` $\to$ `hypokalemia`), expands acronyms (`RAAS` $\to$ `renin-angiotensin-aldosterone system`), and identifies clinical comparators ($\ge, \le$).
-- **`neutral_target`**: Removes vignette formulaic fluff (*"A 45-year-old male presents with..."*) to prevent answer leakage while preserving numbers, units, and polarity.
-- **`has_negation`**: Detects clinical negation markers (`not`, `no`, `neither`, `nor`, `without`, `absence of`, `contraindicated`).
+## Reranker
 
-### 3.2. Deterministic Document Router (`DeterministicDocumentRouter`)
-Scores 16 deterministic, extractive document cards built from PMC open-access papers:
-- Each card incorporates the document title, authority authors, DOI, license (`CC BY`), section headings, and abstract snippet.
-- No generative hallucinations: cards are strictly extractive.
-- Outputs the top-8 routed documents to supply priors to downstream channels.
+| Field | Frozen value |
+|---|---|
+| Model | `Qwen/Qwen3-Reranker-0.6B` |
+| Revision | `e61197ed45024b0ed8a2d74b80b4d909f1255473` |
+| Input | canonical query paired with title, section path, heading, and evidence text |
+| Instruction | require direct support for the exact proposition; topical relevance alone is non-support |
+| 4B model | rejected; not reconsidered or loaded |
 
-### 3.3. Multi-Channel Retrieval & Reciprocal Rank Fusion (`CandidateRetriever`)
-Candidate retrieval combines diverse signals across four routes:
-- **Route A (Global Dense):** Cosine similarity against chunk embeddings.
-- **Route B (Doc-Local Prior):** Extracts top chunks filtered by the top-8 routed documents ($w=1.5$).
-- **Route C (Section-Local):** Matches heading and section hierarchy tokens with query concepts ($w=1.0$).
-- **Route D (Corpus Okapi BM25):** Full-vocabulary BM25 scoring across all 2,175 chunks ($w=1.2$, $k_1=1.5, b=0.75$).
-- **RRF Equation:**
-  $$\text{RRF Score}(c) = \sum_{r \in \{A, B, C, D\}} \frac{w_r}{60 + \text{rank}_r(c)}$$
-- **Tie-Breaking:** Deterministic tie-breaking on `(fused_score, chunk_id)` ensures zero non-deterministic rank oscillation.
+The DEV ablation reused the same structured reranker input for all configurations. No prompt change had independent DEV justification.
 
-### 3.4. Neural Passage Cross-Encoder (`EvidenceReranker`)
-- **Model:** `Qwen/Qwen3-Reranker-0.6B` (`e61197ed45024b0ed8a2d74b80b4d909f1255473`).
-- **Input Representation:**
-  ```text
-  Instruct: Determine whether the evidence passage directly supports the exact medical proposition requested in the query. Topical relevance without direct claim support is non-support.
-  Query: {canonical_query}
-  Title: {doc_title}
-  Section Path: {section_path}
-  Heading: {heading}
-  Evidence: {passage_text}
-  ```
-- **Operational Feasibility:** Evaluates 25 candidate passages in ~2.3 seconds on CPU.
-- **Degraded Fallback:** If deep neural models fail or are omitted, the engine enters `CANONICAL_DEGRADED` mode, preserving multi-channel fused ranking without crashing.
+## Fail-closed product-serving gate
 
-### 3.5. Central Claim Verifier (`CentralClaimVerifier`)
-Applies four-state grounding (`SUPPORTED`, `PARTIALLY_SUPPORTED`, `CONTRADICTED`, `NOT_SUPPORTED`) with deterministic safety vetoes:
-- **Polarity Contradiction Veto:** Rejects claims whose affirmative/negative polarity clashes with evidence.
-- **Numeric Discrepancy Veto:** Rejects claims containing conflicting dosages, lab values, or percentages.
-- **High-Risk Guard:** Claims involving dosages, administration routes, or acute contraindications fail closed unless strongly verified.
+A query-only response is eligible only when all of the following hold:
 
----
+1. The top document and chunk exist in the public corpus and their stored provenance agrees.
+2. Neural reranker direct-support score is at least 7.0.
+3. The top passage appears in at least two distinct retrieval channels.
+4. The neural reranker is available. Degraded query-only operation abstains with `CLAIM_SUPPORT_UNAVAILABLE`.
 
-## 4. Product Integration & API Contracts
+When explicit answer claims are supplied, every claim must be `SUPPORTED`. `PARTIALLY_SUPPORTED`, `NOT_SUPPORTED`, contradiction, numeric mismatch, polarity mismatch, and unsupported high-risk claims all fail closed. Typical reasons include `LOW_RETRIEVAL_CONFIDENCE`, `INELIGIBLE_EVIDENCE_SOURCE`, `CLAIM_NOT_DIRECTLY_SUPPORTED`, `CLAIM_CONTRADICTED_BY_EVIDENCE`, and `HIGH_RISK_CLAIM_UNSUPPORTED`.
 
-### 4.1. Socratic AI Chat (`POST /ai/chat`)
-- **Supported Clinical Query:** Invokes `CanonicalEvidenceEngine`, returns real citations with chunk provenance, and provides clinical explanation grounded in the top passage.
-- **Safety Interception:** Detects life-threatening emergencies (e.g., ACE inhibitors in pregnancy, nitrates in RV infarction) and immediately responds with clinical interception warnings.
-- **Unsupported Query:** Returns fail-closed response (`abstain: True`, `abstain_reason: LOW_RETRIEVAL_CONFIDENCE`), eliminating fabricated advice.
+The production-path DEV safety run served 0/37 deliberately unservable cases (19 labeled unsupported plus 18 current-corpus source gaps). This is `PRODUCT_SERVED_FALSE_SUPPORT = 0`, distinct from historical retrieval-ranking errors. The same run served a known supported RAAS query from an eligible source.
 
-### 4.2. Direct Evidence API (`POST /api/v1/evidence/query`)
-Allows direct querying of the canonical evidence engine:
-```json
-{
-  "query": "What causes hypokalemia in Bartter syndrome?",
-  "top_candidates": 50,
-  "rerank_top_k": 25,
-  "mode": "TUTOR"
-}
-```
-Returns complete serialized `EvidencePacket` with routed document IDs, candidate ranks, and claim verification results.
+## DEV-only evaluation and limitations
 
----
+Selection used `renal-dev-v1` plus `renal-dev-v2` only. Of 69 answerable DEV-v2 queries, 51 have gold documents in the current 16-document corpus; the other 18 are reported as `SOURCE_GAP` and excluded from ranking metrics, never deleted or relabeled. Five deterministic SHA-256 query-ID folds were used to check stability.
 
-## 5. Mode Policy Separation
+On the comparable 99-query pool, V1.1 improved over the exact V1 retrieval configuration:
 
-| Mode | Target User | Rerank Depth | Verification Rigor | Policy Invariant |
-| :--- | :--- | :---: | :---: | :--- |
-| **`TUTOR`** | Medical Student / Clinician | Top 25 | Standard 4-State | Provides grounded explanation with citations; abstains on low confidence. |
-| **`UNI`** | Undergraduate University Track | Top 25 | Educational Prior | Isolated to undergraduate curriculum; cannot mutate or approve PLAB items. |
-| **`PLAB`** | GMC PLAB Exam Verification | Top 25 | Strict Clinician Gate | Fail-closed quarantine; requires clinician review sign-off before item release. |
+| Configuration | Hit@1 | Hit@5 | MRR | nDCG@10 |
+|---|---:|---:|---:|---:|
+| Exact V1 | 0.6768 | 0.7879 | 0.7476 | 0.6417 |
+| V1.1 BM25F + bounded RRF | 0.7576 | 0.8485 | 0.8144 | 0.7061 |
+
+MRR improved in every deterministic fold. Full section-path scoring and soft section-noise penalties were rejected because they did not add stable post-rerank value. The DEV stretch targets were not all met, so release status is `ACCEPTED_WITH_METRIC_GAP`.
+
+All V2 holdout and safety-v2 datasets are spent. Any score on them must be labeled `DIAGNOSTIC_REEVALUATION_ONLY`; none was rerun for this closure. This release therefore makes no fresh unbiased final-holdout claim.

@@ -84,7 +84,8 @@ class TestMultiRouteRetrievalAndRRF:
         )
         assert isinstance(packet, EvidencePacket)
         assert len(packet.candidates) > 0
-        assert packet.abstain is False
+        assert packet.abstain is True
+        assert packet.abstain_reason == "CLAIM_SUPPORT_UNAVAILABLE"
         assert packet.is_degraded is True
         assert packet.retrieval_mode == "TUTOR"
 
@@ -108,7 +109,11 @@ class TestCalibratedAbstention:
             rerank_top_k=5,
         )
         assert packet.abstain is True
-        assert packet.abstain_reason in ("LOW_RETRIEVAL_CONFIDENCE", "NO_CANDIDATES_RETRIEVED")
+        assert packet.abstain_reason in (
+            "LOW_RETRIEVAL_CONFIDENCE",
+            "NO_CANDIDATES_RETRIEVED",
+            "CLAIM_SUPPORT_UNAVAILABLE",
+        )
 
     def test_contradicted_claim_triggers_abstain(self):
         engine = CanonicalEvidenceEngine(data_root=_ROOT / "Data")

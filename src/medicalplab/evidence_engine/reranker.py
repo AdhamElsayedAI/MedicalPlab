@@ -1,11 +1,11 @@
 """
 MedicalPlab Shared Evidence Engine V2 — Evidence Reranker
 =========================================================
-Implements structured medical claim reranking using Qwen3-Reranker-4B
-under NF4 (4-bit) quantization on RTX 3060 6GB.
+Implements structured medical claim reranking using Qwen3-Reranker-0.6B.
 - Structured medical claim prompt format
 - Hierarchical document + section path context injection
 - Deterministic score extraction and candidate sorting
+- Fail-closed degraded mode when neural inference is unavailable
 """
 
 import gc

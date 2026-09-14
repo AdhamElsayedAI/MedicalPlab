@@ -11,7 +11,7 @@ import logging
 import os
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Optional
 
 from fastapi import FastAPI, Header, HTTPException, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
@@ -98,41 +98,6 @@ async def global_exception_handler(request: Request, exc: Exception):
 # 3. Instantiate Stage-G Platform Router
 platform_router = create_demo_platform()
 
-# Clinical evidence database for high-yield guideline citations
-NICE_EVIDENCE_MAP: Dict[str, Dict[str, Any]] = {
-    "stemi": {
-        "title": "NICE Guideline NG185: Acute Coronary Syndromes Management",
-        "ref": "NICE-NG185:Sec 1.2.4",
-        "quote": "Offer 300 mg aspirin immediately to people with suspected acute coronary syndrome unless contraindicated.",
-        "url": "https://www.nice.org.uk/guidance/ng185",
-    },
-    "lad": {
-        "title": "NICE Guideline NG185: Revascularisation in STEMI",
-        "ref": "NICE-NG185:Sec 1.1.2",
-        "quote": "Offer primary percutaneous coronary intervention (PCI) within 120 minutes of diagnosis for acute ST-segment elevation myocardial infarction.",
-        "url": "https://www.nice.org.uk/guidance/ng185",
-    },
-    "hypertension": {
-        "title": "NICE Guideline NG136: Hypertension in Adults",
-        "ref": "NICE-NG136:Sec 1.4.1",
-        "quote": "Offer an ACE inhibitor or ARB as first-line treatment to adults aged under 55 with type 2 diabetes or hypertension of European family origin.",
-        "url": "https://www.nice.org.uk/guidance/ng136",
-    },
-    "pregnancy": {
-        "title": "NICE Guideline CG127: Hypertension in Pregnancy",
-        "ref": "NICE-CG127:Sec 1.4.3",
-        "quote": "Do not offer ACE inhibitors or ARBs in pregnant women due to high risk of congenital malformations, fetal renal failure, and oligohydramnios.",
-        "url": "https://www.nice.org.uk/guidance/cg127",
-    },
-    "asthma": {
-        "title": "NICE Guideline NG80: Asthma Diagnosis and Monitoring",
-        "ref": "NICE-NG80:Sec 1.3",
-        "quote": "Non-selective beta-blockers are contraindicated in patients with active asthma or history of severe bronchospasm.",
-        "url": "https://www.nice.org.uk/guidance/ng80",
-    },
-}
-
-
 # --------------------------------------------------------------------------
 # Health Check Endpoint (Required by Cloud Platforms & DevOps Standard)
 # --------------------------------------------------------------------------
@@ -194,70 +159,9 @@ async def ai_chat(
                 content={"error": "Missing 'query' parameter in request body"},
             )
 
-        q_lower = query.lower()
-
-        # 1. Safety Interception Scan
-        if "ace" in q_lower and ("pregnancy" in q_lower or "pregnant" in q_lower):
-            explanation = (
-                "[CLINICAL SAFETY INTERCEPTION] ACE inhibitors and Angiotensin Receptor Blockers (ARBs) "
-                "are strictly contraindicated during pregnancy under NICE Guideline CG127. "
-                "Exposure during the second and third trimesters carries grave teratogenic risks, including "
-                "fetal renal dysgenesis, oligohydramnios, neonatal anuria, and skull hypoplasia. "
-                "First-line alternatives recommended by NICE: Labetalol (first-line), modified-release Nifedipine, "
-                "or Methyldopa."
-            )
-            citations = [NICE_EVIDENCE_MAP["pregnancy"]]
-            return {
-                "intent": "safety_interception",
-                "explanation": explanation,
-                "citations": citations,
-                "next_actions": ["Review NICE CG127", "Prescribe Labetalol Alternative", "Assess Gestational Age"],
-                "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
-                "safety_validated": True,
-                "interception_triggered": True,
-            }
-
-        if "nitrate" in q_lower and ("rv" in q_lower or "right ventricular" in q_lower or "inferior" in q_lower):
-            explanation = (
-                "[CLINICAL SAFETY INTERCEPTION] Nitrates (e.g. sublingual GTN) are contraindicated in acute inferior "
-                "STEMI with right ventricular infarction. Right ventricular output is profoundly preload-dependent; "
-                "nitrate-induced venodilation precipitates catastrophic hemodynamic collapse and refractory hypotension. "
-                "Under NICE NG185 and ESC protocols: Immediately withhold nitrates, establish dual large-bore IV access, "
-                "and administer an intravenous isotonic crystalloid fluid challenge."
-            )
-            citations = [NICE_EVIDENCE_MAP["stemi"]]
-            return {
-                "intent": "safety_interception",
-                "explanation": explanation,
-                "citations": citations,
-                "next_actions": ["Withhold Nitrates", "Administer IV Fluid Challenge", "Perform Right-Sided ECG V4R"],
-                "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
-                "safety_validated": True,
-                "interception_triggered": True,
-            }
-
-        # 2. Emergency guideline protocol interceptors
-        if "stemi" in q_lower or "lad" in q_lower or "coronary" in q_lower:
-            explanation = (
-                "The Left Anterior Descending (LAD) coronary artery traverses the anterior interventricular "
-                "groove, supplying the anterior two-thirds of the interventricular septum, anterior left "
-                "ventricular wall, and apex. Acute occlusion manifests as ST-segment elevation in precordial "
-                "leads V1-V4. Under NICE Guideline NG185 (Section 1.1.2), emergent primary percutaneous coronary "
-                "intervention (PCI) within 120 minutes of diagnosis is the gold standard revascularization therapy."
-            )
-            citations = [NICE_EVIDENCE_MAP["stemi"]]
-            return {
-                "intent": "emergency_guideline",
-                "abstain": False,
-                "abstain_reason": None,
-                "explanation": explanation,
-                "citations": citations,
-                "next_actions": ["Activate Primary PCI Pathway", "Administer Dual Antiplatelets", "Monitor Cardiac Rhythm"],
-                "latency_ms": round((time.perf_counter() - start_time) * 1000.0, 2),
-                "safety_validated": True,
-            }
-
-        # 3. Canonical Evidence Engine Retrieval
+        # All medical queries use the canonical evidence engine. Unsupported
+        # specialties fail closed; no hard-coded guideline prose bypasses the
+        # source, retrieval, or claim-support gates.
         engine = get_evidence_engine()
         packet = engine.query(
             query=query,
@@ -291,7 +195,9 @@ async def ai_chat(
             }
 
         # Grounded evidence packet response
-        top_cands = packet.candidates[:3]
+        # Only the top passage has passed the product-serving gate. Do not
+        # expose lower-ranked candidates as if they had also been validated.
+        top_cands = [packet.top_passage]
         citations = [
             {
                 "title": cand.doc_title or cand.document_id,
@@ -335,7 +241,7 @@ async def ai_chat(
 # --------------------------------------------------------------------------
 @app.post("/api/v1/evidence/query")
 async def evidence_query_endpoint(request: Request):
-    """Direct query endpoint for Canonical Evidence Engine (V1)."""
+    """Direct query endpoint for Canonical Evidence Engine V1.1 inspection."""
     start_time = time.perf_counter()
     body_bytes = await request.body()
     try:

@@ -166,5 +166,9 @@ class TestSharedEvidenceEngineV2:
         assert len(packet.candidates) > 0
         assert packet.top_passage is not None
         assert len(packet.claim_verifications) == 1
-        assert packet.abstain is False
-
+        assert packet.abstain is True
+        assert packet.abstain_reason in {
+            "CLAIM_NOT_DIRECTLY_SUPPORTED",
+            "HIGH_RISK_CLAIM_UNSUPPORTED",
+            "LOW_RETRIEVAL_CONFIDENCE",
+        }

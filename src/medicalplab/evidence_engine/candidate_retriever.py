@@ -15,6 +15,7 @@ import logging
 import math
 import re
 from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -28,6 +29,36 @@ logger = logging.getLogger(__name__)
 RRF_K = 60
 
 
+@dataclass(frozen=True)
+class RetrievalConfig:
+    """Auditable retrieval controls used by production and DEV ablations."""
+
+    use_field_aware_bm25: bool = True
+    bm25_title_weight: float = 1.0
+    bm25_heading_weight: float = 2.0
+    bm25_body_weight: float = 1.0
+    use_full_section_path: bool = False
+    section_overlap_bonus: float = 0.05
+    noise_section_penalty: float = 1.0
+    rrf_k: int = RRF_K
+    rrf_weights: tuple[float, float, float, float] = (1.0, 1.3, 1.1, 1.3)
+
+    @classmethod
+    def v1(cls) -> "RetrievalConfig":
+        """Exact canonical V1 retrieval settings for controlled comparison."""
+        return cls(
+            use_field_aware_bm25=False,
+            bm25_title_weight=1.0,
+            bm25_heading_weight=3.0,
+            bm25_body_weight=1.0,
+            use_full_section_path=False,
+            section_overlap_bonus=0.05,
+            noise_section_penalty=1.0,
+            rrf_k=RRF_K,
+            rrf_weights=(1.0, 1.5, 1.0, 1.2),
+        )
+
+
 class CandidateRetriever:
     """Four-route multi-channel candidate retriever with reciprocal rank fusion."""
 
@@ -37,17 +68,20 @@ class CandidateRetriever:
         embedder: Any = None,
         router: DeterministicDocumentRouter | None = None,
         cache_dir: Path | str | None = None,
+        config: RetrievalConfig | None = None,
     ):
         self.data_root = Path(data_root)
         self.embedder = embedder
         self.router = router or DeterministicDocumentRouter(self.data_root)
         self.cache_dir = Path(cache_dir) if cache_dir else (self.data_root.parent / ".cache" / "evidence_engine")
+        self.config = config or RetrievalConfig()
         self.cache_dir.mkdir(parents=True, exist_ok=True)
 
         self.chunks: dict[str, dict[str, Any]] = {}
         self.ordered_chunk_ids: list[str] = []
         self.doc_to_chunk_indices: dict[str, list[int]] = {}
         self.section_to_chunk_indices: dict[tuple[str, str], list[int]] = {}
+        self.section_path_to_chunk_indices: dict[tuple[str, tuple[str, ...]], list[int]] = {}
         self.corpus_embeddings: np.ndarray | None = None
 
         # BM25 index data structures
@@ -55,6 +89,9 @@ class CandidateRetriever:
         self.avgdl: float = 1.0
         self.idf: dict[str, float] = {}
         self.tf: dict[str, Counter] = {}
+        self.field_doc_len: dict[str, dict[str, int]] = {}
+        self.field_avgdl: dict[str, float] = {}
+        self.field_tf: dict[str, dict[str, Counter]] = {}
 
         self._load_corpus()
 
@@ -71,9 +108,27 @@ class CandidateRetriever:
                 return c
         return candidates[0]
 
+    # Sections that may receive a small DEV-validated soft penalty. They are
+    # never excluded because clinically relevant evidence can occur in them.
+    _NOISE_SECTION_PREFIXES: tuple[str, ...] = (
+        "method", "result", "material", "reference", "supplementary",
+        "acknowledgement", "acknowledgment", "author contribution",
+        "conflict of interest", "data availability",
+    )
+
     def _tokenize(self, text: str) -> list[str]:
         """Extractive tokenization for lexical indexing."""
         return [w for w in re.findall(r"[a-zA-Z0-9]+", text.lower()) if len(w) > 2]
+
+    def _is_noise_section(self, section_path: list[str]) -> bool:
+        """Return True if the section path indicates a noise section (Methods/Results/etc.)."""
+        if not section_path:
+            return False
+        for section in section_path:
+            normalized = re.sub(r"^\s*\d+(?:\.\d+)*[.)]?\s*", "", section.lower()).strip()
+            if any(normalized.startswith(pfx) for pfx in self._NOISE_SECTION_PREFIXES):
+                return True
+        return False
 
     def _load_corpus(self):
         """Load all chunks, build document/section index mappings, and construct BM25 index."""
@@ -99,6 +154,7 @@ class CandidateRetriever:
         # Build index maps
         self.doc_to_chunk_indices = {}
         self.section_to_chunk_indices = {}
+        self.section_path_to_chunk_indices = {}
         for idx, cid in enumerate(self.ordered_chunk_ids):
             ch = self.chunks[cid]
             doc_id = ch["document_id"]
@@ -106,13 +162,27 @@ class CandidateRetriever:
 
             sec = ch.get("heading") or "General"
             self.section_to_chunk_indices.setdefault((doc_id, sec), []).append(idx)
+            path = tuple(ch.get("section_path", [])) or (sec,)
+            self.section_path_to_chunk_indices.setdefault((doc_id, path), []).append(idx)
 
-        # Build BM25 index across all chunks
-        corpus_tokens = {}
+        # Preserve the exact V1 concatenated index and build separate fields for
+        # true BM25F scoring. This avoids token-duplication approximations and
+        # permits like-for-like V1/V2 ablation with one implementation.
+        corpus_tokens: dict[str, list[str]] = {}
+        field_tokens: dict[str, dict[str, list[str]]] = {
+            "title": {},
+            "heading": {},
+            "body": {},
+        }
         for cid in self.ordered_chunk_ids:
             ch = self.chunks[cid]
-            text = f"{ch.get('doc_title', '')} {ch.get('heading', '')} {ch.get('text', '')}"
-            corpus_tokens[cid] = self._tokenize(text)
+            title_tokens = self._tokenize(ch.get("doc_title", ""))
+            heading_tokens = self._tokenize(ch.get("heading", ""))
+            body_tokens = self._tokenize(ch.get("text", ""))
+            corpus_tokens[cid] = title_tokens + heading_tokens + body_tokens
+            field_tokens["title"][cid] = title_tokens
+            field_tokens["heading"][cid] = heading_tokens
+            field_tokens["body"][cid] = body_tokens
 
         self.doc_len = {cid: len(corpus_tokens[cid]) for cid in self.ordered_chunk_ids}
         self.avgdl = (sum(self.doc_len.values()) / len(self.doc_len)) if self.doc_len else 1.0
@@ -125,6 +195,18 @@ class CandidateRetriever:
 
         self.idf = {w: math.log((n_docs - n + 0.5) / (n + 0.5) + 1.0) for w, n in df.items()}
         self.tf = {cid: Counter(corpus_tokens[cid]) for cid in self.ordered_chunk_ids}
+        self.field_doc_len = {
+            field: {cid: len(tokens[cid]) for cid in self.ordered_chunk_ids}
+            for field, tokens in field_tokens.items()
+        }
+        self.field_avgdl = {
+            field: (sum(lengths.values()) / len(lengths) if lengths else 1.0)
+            for field, lengths in self.field_doc_len.items()
+        }
+        self.field_tf = {
+            field: {cid: Counter(tokens[cid]) for cid in self.ordered_chunk_ids}
+            for field, tokens in field_tokens.items()
+        }
 
         logger.info(
             f"Loaded {len(self.chunks)} corpus chunks across {len(self.doc_to_chunk_indices)} documents from {chunks_dir}. "
@@ -195,6 +277,40 @@ class CandidateRetriever:
         norm = np.linalg.norm(emb)
         return emb / norm if norm > 0 else emb
 
+    def _bm25_score(self, cid: str, q_tokens: list[str]) -> float:
+        """Score one chunk with exact V1 BM25 or configured BM25F fields."""
+        k1 = 1.5
+        b = 0.75
+        if not self.config.use_field_aware_bm25:
+            c_tf = self.tf[cid]
+            length = self.doc_len[cid]
+            return sum(
+                self.idf.get(word, 0.0)
+                * (c_tf[word] * (k1 + 1.0))
+                / (c_tf[word] + k1 * (1.0 - b + b * (length / self.avgdl)))
+                for word in q_tokens
+                if word in c_tf
+            )
+
+        weights = {
+            "title": self.config.bm25_title_weight,
+            "heading": self.config.bm25_heading_weight,
+            "body": self.config.bm25_body_weight,
+        }
+        score = 0.0
+        for word in q_tokens:
+            weighted_tf = 0.0
+            for field, weight in weights.items():
+                tf = self.field_tf[field][cid][word]
+                if not tf or weight <= 0.0:
+                    continue
+                length = self.field_doc_len[field][cid]
+                avgdl = self.field_avgdl[field] or 1.0
+                weighted_tf += weight * tf / (1.0 - b + b * (length / avgdl))
+            if weighted_tf > 0.0:
+                score += self.idf.get(word, 0.0) * (weighted_tf * (k1 + 1.0)) / (weighted_tf + k1)
+        return score
+
     def retrieve_candidates(
         self,
         query_rep: QueryRepresentation,
@@ -264,21 +380,31 @@ class CandidateRetriever:
 
         # -------------------------------------------------------------
         # Route C: Section-Local Matching (top 30)
+        # Full section paths are available for DEV ablation, but the default
+        # retains heading-local matching because it generalized better.
         # -------------------------------------------------------------
         route_c_candidates: dict[str, tuple[int, float]] = {}
         route_c_pool: list[tuple[str, float]] = []
 
+        section_index = (
+            self.section_path_to_chunk_indices
+            if self.config.use_full_section_path
+            else self.section_to_chunk_indices
+        )
         for doc_id in routed_docs:
-            for (sec_doc_id, heading), c_indices in self.section_to_chunk_indices.items():
+            for (sec_doc_id, section_key), c_indices in section_index.items():
                 if sec_doc_id != doc_id:
                     continue
-                h_tokens = set(self._tokenize(heading))
-                overlap = sum(1 for w in h_tokens if w in q_tokens)
+                if self.config.use_full_section_path:
+                    section_tokens = set(self._tokenize(" ".join(section_key)))
+                else:
+                    section_tokens = set(self._tokenize(section_key))
+                overlap = sum(1 for word in section_tokens if word in q_tokens)
                 if overlap > 0:
                     for c_idx in c_indices[:3]:
                         cid = self.ordered_chunk_ids[c_idx]
                         base_score = float(global_sims[c_idx]) if (has_dense and global_sims is not None) else 0.5
-                        bonus_score = base_score + (0.05 * overlap)
+                        bonus_score = base_score + (self.config.section_overlap_bonus * overlap)
                         route_c_pool.append((cid, bonus_score))
 
         route_c_pool.sort(key=lambda x: x[1], reverse=True)
@@ -291,16 +417,8 @@ class CandidateRetriever:
         # -------------------------------------------------------------
         route_d_candidates: dict[str, tuple[int, float]] = {}
         bm25_scores: dict[str, float] = {}
-        k1 = 1.5
-        b = 0.75
         for cid in self.ordered_chunk_ids:
-            c_tf = self.tf[cid]
-            L = self.doc_len[cid]
-            s = sum(
-                self.idf.get(w, 0.0) * (c_tf[w] * (k1 + 1.0)) / (c_tf[w] + k1 * (1.0 - b + b * (L / self.avgdl)))
-                for w in q_tokens
-                if w in c_tf
-            )
+            s = self._bm25_score(cid, q_tokens)
             if s > 0:
                 bm25_scores[cid] = s
 
@@ -319,21 +437,25 @@ class CandidateRetriever:
         )
         fused_scores: dict[str, float] = {}
 
-        w_a = 1.0
-        w_b = 1.5
-        w_c = 1.0
-        w_d = 1.2
+        w_a, w_b, w_c, w_d = self.config.rrf_weights
 
         for cid in all_candidate_ids:
             score = 0.0
             if cid in route_a_candidates:
-                score += w_a / (RRF_K + route_a_candidates[cid][0])
+                score += w_a / (self.config.rrf_k + route_a_candidates[cid][0])
             if cid in route_b_candidates:
-                score += w_b / (RRF_K + route_b_candidates[cid][0])
+                score += w_b / (self.config.rrf_k + route_b_candidates[cid][0])
             if cid in route_c_candidates:
-                score += w_c / (RRF_K + route_c_candidates[cid][0])
+                score += w_c / (self.config.rrf_k + route_c_candidates[cid][0])
             if cid in route_d_candidates:
-                score += w_d / (RRF_K + route_d_candidates[cid][0])
+                score += w_d / (self.config.rrf_k + route_d_candidates[cid][0])
+
+            # Optional soft penalty only; production default is 1.0 because
+            # DEV showed no stable gain and relevant evidence may live here.
+            sp = self.chunks[cid].get("section_path", [])
+            if self._is_noise_section(sp):
+                score *= self.config.noise_section_penalty
+
             fused_scores[cid] = score
 
         sorted_cids = sorted(all_candidate_ids, key=lambda c: (fused_scores[c], c), reverse=True)[:top_k]

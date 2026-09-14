@@ -1,14 +1,25 @@
 """Test suite for MedicalPlab Production Cloud FastAPI backend."""
 
+from pathlib import Path
+
+import numpy as np
 import pytest
 from fastapi.testclient import TestClient
 
-from main import app
+import main
+from medicalplab.evidence_engine.service import CanonicalEvidenceEngine
+
+
+class _DirectSupportModel:
+    """Deterministic endpoint-test double for a strong reranker decision."""
+
+    def predict(self, pairs, **kwargs):
+        return np.full(len(pairs), 8.0, dtype=np.float32)
 
 
 @pytest.fixture
 def client():
-    return TestClient(app)
+    return TestClient(main.app)
 
 
 def test_health_check_endpoint(client):
@@ -29,46 +40,56 @@ def test_root_endpoint(client):
     assert "MedicalPlab" in data["service"]
 
 
-def test_ai_chat_stemi_query(client):
-    """Verify AI tutor returns clinical reasoning and NICE citations."""
+def test_ai_chat_supported_renal_query(client, monkeypatch):
+    """Verify a supported query traverses the canonical evidence engine."""
+    engine = CanonicalEvidenceEngine(data_root=Path(__file__).resolve().parents[1] / "Data")
+    engine.reranker.model = _DirectSupportModel()
+    engine.reranker.is_degraded = False
+    monkeypatch.setattr(main, "_evidence_engine", engine)
     response = client.post(
         "/ai/chat",
-        json={"query": "What is the revascularisation window for STEMI under NICE guidelines?"},
+        json={"query": "What evidence describes 1.1. RAAS in relation to aldosterone?"},
     )
     assert response.status_code == 200
     data = response.json()
     assert "explanation" in data
     assert "citations" in data
-    assert len(data["citations"]) > 0
+    assert len(data["citations"]) == 1
     assert data["safety_validated"] is True
-    assert "PCI" in data["explanation"] or "coronary" in data["explanation"].lower()
+    assert data["abstain"] is False
+    assert "RAAS" in data["explanation"] or "aldosterone" in data["explanation"].lower()
 
 
-def test_ai_chat_safety_interception_pregnancy(client):
-    """Verify safety interceptor blocks ACE inhibitors in pregnancy."""
+def test_ai_chat_unsupported_pregnancy_abstains(client, monkeypatch):
+    """Verify an unsupported high-risk query has no hard-coded bypass."""
+    engine = CanonicalEvidenceEngine(data_root=Path(__file__).resolve().parents[1] / "Data")
+    engine.reranker.is_degraded = True
+    monkeypatch.setattr(main, "_evidence_engine", engine)
     response = client.post(
         "/ai/chat",
         json={"query": "Can I give an ACE inhibitor to a pregnant patient?"},
     )
     assert response.status_code == 200
     data = response.json()
-    assert data["intent"] == "safety_interception"
-    assert data["interception_triggered"] is True
-    assert "contraindicated" in data["explanation"].lower()
-    assert "CG127" in data["explanation"]
+    assert data["intent"] == "abstain"
+    assert data["abstain"] is True
+    assert data["citations"] == []
 
 
-def test_ai_chat_safety_interception_nitrates(client):
-    """Verify safety interceptor blocks nitrates in RV STEMI."""
+def test_ai_chat_unsupported_nitrates_abstains(client, monkeypatch):
+    """Verify unsupported emergency guidance fails closed without prose."""
+    engine = CanonicalEvidenceEngine(data_root=Path(__file__).resolve().parents[1] / "Data")
+    engine.reranker.is_degraded = True
+    monkeypatch.setattr(main, "_evidence_engine", engine)
     response = client.post(
         "/ai/chat",
         json={"query": "Should I administer nitrates in acute inferior STEMI with RV involvement?"},
     )
     assert response.status_code == 200
     data = response.json()
-    assert data["intent"] == "safety_interception"
-    assert data["interception_triggered"] is True
-    assert "contraindicated" in data["explanation"].lower()
+    assert data["intent"] == "abstain"
+    assert data["abstain"] is True
+    assert data["citations"] == []
 
 
 def test_student_analytics_endpoint(client):
