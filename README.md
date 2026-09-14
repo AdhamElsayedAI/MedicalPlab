@@ -254,10 +254,10 @@ MedicalPlab/
 ├── evaluation/             # Ground truth datasets & benchmarks asserted by governance tests
 ├── models/                 # Frozen classifier models with cryptographic SHA-256 sidecars
 ├── main.py                 # Primary local & demo FastAPI entrypoint
-├── production_main.py      # Strict pilot/production fail-closed entrypoint
+├── production_main.py      # Strict fail-closed deployment/pilot entrypoint
 ├── Dockerfile              # Production multi-stage container build (Google Cloud Run)
 ├── pyproject.toml          # Canonical Python package specification and tool configurations
-└── requirements.txt        # Pinned production runtime requirements
+└── requirements.txt        # Runtime/deployment compatibility requirements
 ```
 
 ---

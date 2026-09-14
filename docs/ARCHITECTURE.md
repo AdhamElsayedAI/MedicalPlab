@@ -108,10 +108,10 @@ graph TD
    - Provides full developer ergonomics, CORS, Socratic chat (`/ai/chat`), University endpoints (`/api/v1/university/*`), direct evidence queries (`/api/v1/evidence/query`), and student analytics (`/student/*`).
    - Serves as the primary local development and hackathon judge evaluation entrypoint.
 
-2. **`production_main.py` (Strict Pilot & Production Gateway)**:
+2. **`production_main.py` (Strict Fail-Closed Deployment/Pilot Entrypoint)**:
    - Requires `MEDICALPLAB_RUNTIME_MODE=pilot` or `production`.
    - Enforces data integrity manifests on startup; fails closed if files are missing or modified.
-   - Strictly validates PLAB governance counts before serving questions.
+   - Strictly validates PLAB governance counts before serving questions without implying external clinical certification.
 
 ---
 
