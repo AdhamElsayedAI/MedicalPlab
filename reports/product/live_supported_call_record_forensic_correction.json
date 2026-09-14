@@ -1,0 +1,60 @@
+{
+  "_purpose": "Retroactive forensic correction of reports/product/live_supported_call_record.json and live_supported_result.json, produced under PHASE 1 - LIVE VETO FORENSIC AUDIT. The original artifacts are left unmodified for audit-trail integrity; this file documents the corrected semantic understanding using (a) the terminal transcript captured at call time and (b) deterministic local re-computation of the SAFE_FALLBACK content. NO live provider call was made to produce this correction.",
+  "original_record_reference": {
+    "response_id": "REQ-CC34EB0B",
+    "session_id": "synth-live-eval-520cbc6a",
+    "timestamp": "2026-09-14T14:31:34Z",
+    "file": "reports/product/live_supported_call_record.json"
+  },
+  "provider_attribution_correction": {
+    "original_record_reported": {
+      "provider": "google_gemini",
+      "model": "gemini-3.8-flash"
+    },
+    "corrected_from_call_transcript": {
+      "requested_provider": "google_gemini",
+      "requested_model": "gemini-3.8-flash",
+      "primary_result": "429_RESOURCE_EXHAUSTED",
+      "primary_provider_error": "HTTP/1.1 429 Too Many Requests on gemini-3.8-flash; log: 'Model gemini-3.8-flash Free Tier quota exceeded; failing over to next model.'",
+      "provider_failover_applied": true,
+      "actual_generation_provider": "google_gemini",
+      "actual_generation_model": "gemini-3.5-flash",
+      "actual_result": "200_OK"
+    },
+    "source_of_correction": "Terminal transcript captured synchronously during the original run (INFO/WARNING log lines showing the 429 on gemini-3.8-flash followed immediately by a 200 OK HTTP request to gemini-3.5-flash). No fabrication; the original ProviderResponse.model field was already correct internally (active_model), but TutorService.chat() discarded it in favor of the static self.provider.model_name when building the persisted record - this is the exact bug fixed in this pass (see service.py)."
+  },
+  "verification_metrics_correction": {
+    "original_record_reported_single_block": {
+      "total_propositions": 16,
+      "supported_propositions": 0,
+      "unsupported_propositions": 0,
+      "non_factual_statements": 5,
+      "veto_flags": ["POLARITY_MISMATCH"]
+    },
+    "corrected_draft_verification": {
+      "total_propositions": 16,
+      "supported_propositions": "UNKNOWN_LOST_TO_LEGACY_ZEROING_BUG",
+      "unsupported_propositions": "UNKNOWN_LOST_TO_LEGACY_ZEROING_BUG",
+      "non_factual_statements": 5,
+      "veto_flags": ["POLARITY_MISMATCH"],
+      "note": "The original code (service.py, pre-fix) zeroed supported/unsupported counts on the SAME verif_summary object used for the rejected draft, in place, before persistence, and never recorded the true draft-side split. That specific numeric split for the REJECTED draft is genuinely unrecoverable without re-running the live call (forbidden in this pass). What IS recoverable and certain: at least 1 of the 11 substantive draft propositions was UNSUPPORTED with a POLARITY_MISMATCH veto on its best-matching evidence candidate (this is the only way POLARITY_MISMATCH could have reached the top-level summary.veto_flags via TutorPostVerifier.verify_propositions)."
+    },
+    "corrected_served_verification": {
+      "total_propositions": 6,
+      "supported_propositions": 0,
+      "unsupported_propositions": 0,
+      "non_factual_statements": 6,
+      "veto_flags": [],
+      "note": "Deterministically recomputed by re-running the CURRENT _build_safe_fallback('PRE_SUBMISSION') template through PropositionSegmenter + TutorPostVerifier locally (no live call - the fallback template is static code, not model output). This exactly matches what the learner actually saw: the message text recorded in the original artifact is reproduced byte-for-byte by this reconstruction, confirming the served content and its verification are correctly zero-claim / zero-unsupported."
+    }
+  },
+  "hard_invariant_status": {
+    "unsupported_substantive_medical_claims_served": 0,
+    "explanation": "Regardless of the unrecoverable draft-side supported/unsupported split, the SERVED content (SAFE_FALLBACK) is confirmed, by direct deterministic recomputation, to contain zero substantive propositions requiring evidence. The rejected draft was never served. The hard safety invariant held for this run."
+  },
+  "forensic_diagnosis_of_polarity_mismatch": {
+    "classification": "OTHER_INSUFFICIENT_FORENSIC_DATA_CAPTURED",
+    "explanation": "The exact rejected proposition text and the exact evidence passage text used by CentralClaimVerifier for this specific veto were never persisted anywhere (not in the response, not in TutorTelemetryEvent, not on disk) and the in-memory TutorService/telemetry instance was discarded when the one-shot harness process exited. Re-running the live call to recover this data is explicitly forbidden in this pass. A specific A/B/C/D determination for THIS incident would therefore be fabrication and is not made.",
+    "static_code_observation_not_incident_specific": "CentralClaimVerifier's polarity veto (src/medicalplab/evidence_engine/claim_verifier.py, condition 3, lines ~89-93) flags POLARITY_MISMATCH if ANY negation term appears anywhere in the evidence text near ANY claim word >4 chars, without requiring the negation and the shared word to be in the same clause/sentence. This is a plausible general false-positive risk against long, multi-sentence real PMC evidence chunks, but this observation does not confirm what happened in this specific incident and must not be used to justify weakening the verifier without direct evidence."
+  }
+}

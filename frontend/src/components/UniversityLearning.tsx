@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api-client";
+import { SocraticTutorDrawer } from "./SocraticTutorDrawer";
 
 type Choice = { name: string; count: number };
 type Question = { id: string; stem: string; subject: string; topic: string; options: Record<string, string> };
@@ -29,7 +30,7 @@ async function request<T>(path: string, learner: string, body?: object): Promise
 
 export function UniversityLearning() {
   const learner = useRef("");
-  const attemptKey = useRef("");
+  const [attemptKey, setAttemptKey] = useState("");
   const [subjects, setSubjects] = useState<Choice[]>([]);
   const [topics, setTopics] = useState<Choice[]>([]);
   const [subject, setSubject] = useState("");
@@ -82,7 +83,7 @@ export function UniversityLearning() {
       setSubject(targetSubject); setTopic(name); setQuestion(data.question);
       setPosition(data.position || 0); setTotal(data.total || 0);
       setSelected(""); setFeedback(null); setComplete(!data.question);
-      attemptKey.current = crypto.randomUUID();
+      setAttemptKey(crypto.randomUUID());
     });
   }
 
@@ -90,7 +91,7 @@ export function UniversityLearning() {
     if (!question || !selected || feedback) return;
     await run(async () => {
       const result = await request<Feedback>("/answer", learner.current, {
-        question_id: question.id, selected_option: selected, idempotency_key: attemptKey.current,
+        question_id: question.id, selected_option: selected, idempotency_key: attemptKey,
       });
       setFeedback(result); setProgress(result.progress);
     });
@@ -156,6 +157,14 @@ export function UniversityLearning() {
                 <a className={button} href="#university-progress">View progress</a>
               </div>
             </div>}
+
+            <SocraticTutorDrawer
+              questionId={question.id}
+              topic={topic}
+              selectedOption={selected || null}
+              isSubmitted={!!feedback}
+              attemptKey={attemptKey || null}
+            />
           </>}
 
           {complete && <div className="space-y-4">

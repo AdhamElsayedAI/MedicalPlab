@@ -21,6 +21,7 @@ from medicalplab.evidence_engine.models import EvidencePacket
 from medicalplab.evidence_engine.service import CanonicalEvidenceEngine, SharedEvidenceEngineV2
 from medicalplab.stage_g.models import APIRequest
 from medicalplab.stage_g.server import create_demo_platform
+from medicalplab.stage_g.product_api import router as product_router
 from medicalplab.university.api import router as university_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
@@ -47,6 +48,7 @@ app = FastAPI(
 
 APP_START_TIME = time.time()
 app.include_router(university_router)
+app.include_router(product_router)
 
 # 2. Configure CORS
 # Pull allowed origins from environment variable or default to Vercel and local origins
@@ -159,9 +161,72 @@ async def ai_chat(
                 content={"error": "Missing 'query' parameter in request body"},
             )
 
-        # All medical queries use the canonical evidence engine. Unsupported
-        # specialties fail closed; no hard-coded guideline prose bypasses the
-        # source, retrieval, or claim-support gates.
+        # If question_id or explicit tutor mode is provided, delegate to Phase 1 Grounded TutorService
+        question_id = body_json.get("question_id")
+        mode = body_json.get("mode")
+
+        if question_id or mode == "tutor":
+            from medicalplab.tutor.models import TutorChatRequest
+            from medicalplab.stage_g.product_api import get_tutor_service
+
+            tutor_req = TutorChatRequest(
+                query=query,
+                mode=mode or "auto",
+                session_id=body_json.get("session_id"),
+                learner_id=user_id,
+                question_id=question_id,
+                attempt_key=body_json.get("attempt_key"),
+                topic=body_json.get("topic"),
+                hint_level=body_json.get("hint_level"),
+                selected_option=body_json.get("selected_option"),
+            )
+            tutor_resp = get_tutor_service().chat(tutor_req, x_user_id=x_user_id)
+
+            if tutor_resp.abstain:
+                return {
+                    "intent": "abstain",
+                    "abstain": True,
+                    "abstain_reason": tutor_resp.abstain_reason or "INSUFFICIENT_RETRIEVAL_SUPPORT",
+                    "explanation": tutor_resp.message,
+                    "citations": [],
+                    "next_actions": [
+                        "Consult accredited NHS clinical guidelines or senior clinician",
+                        "Refine query with specific clinical terms",
+                    ],
+                    "latency_ms": tutor_resp.latency_breakdown.total_ms,
+                    "safety_validated": True,
+                    "is_degraded": False,
+                    "retrieval_mode": "TUTOR",
+                    "packet": {},
+                    "tutor_response": tutor_resp.model_dump(),
+                }
+
+            citations = [
+                {
+                    "title": c.title,
+                    "ref": c.ref,
+                    "quote": c.quote,
+                    "section": c.chunk_id,
+                    "score": 1.0,
+                }
+                for c in tutor_resp.citations
+            ]
+            return {
+                "intent": "clinical_guidance",
+                "abstain": False,
+                "abstain_reason": None,
+                "explanation": tutor_resp.message,
+                "citations": citations,
+                "next_actions": ["Review Grounded Evidence", "Correlate with Clinical Presentation"],
+                "latency_ms": tutor_resp.latency_breakdown.total_ms,
+                "safety_validated": True,
+                "is_degraded": False,
+                "retrieval_mode": "TUTOR",
+                "packet": {},
+                "tutor_response": tutor_resp.model_dump(),
+            }
+
+        # Legacy general query behavior: query evidence engine directly
         engine = get_evidence_engine()
         packet = engine.query(
             query=query,
@@ -170,7 +235,6 @@ async def ai_chat(
             rerank_top_k=25,
         )
 
-        # Fail-closed abstention: No generic fabricated medical advice
         if packet.abstain or not packet.candidates:
             return {
                 "intent": "abstain",
@@ -194,9 +258,6 @@ async def ai_chat(
                 "packet": packet.to_dict(),
             }
 
-        # Grounded evidence packet response
-        # Only the top passage has passed the product-serving gate. Do not
-        # expose lower-ranked candidates as if they had also been validated.
         top_cands = [packet.top_passage]
         citations = [
             {

@@ -4,7 +4,14 @@ import {
   PLABQuestionPublic,
   StudentMasteryProfile,
 } from './types';
-import type { CourseLearningRequest, CourseLearningResponse, AnatomyCommandRequest, AnatomyCommandResponse } from './types';
+import type {
+  CourseLearningRequest,
+  CourseLearningResponse,
+  AnatomyCommandRequest,
+  AnatomyCommandResponse,
+  TutorChatRequest,
+  TutorChatResponse,
+} from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
@@ -260,6 +267,36 @@ class PlatformApiClient {
     }
     return response.json();
   }
+
+  async sendTutorChat(request: TutorChatRequest): Promise<TutorChatResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/tutor/chat`, {
+      method: "POST",
+      headers: this.getHeaders(),
+      body: JSON.stringify(request),
+    });
+
+    if (!response.ok) {
+      // If 404 on canonical route, attempt fallback to legacy /ai/chat
+      if (response.status === 404) {
+        const legacyResp = await fetch(`${API_BASE_URL}/ai/chat`, {
+          method: "POST",
+          headers: this.getHeaders(),
+          body: JSON.stringify(request),
+        });
+        if (legacyResp.ok) {
+          const lData = await legacyResp.json();
+          if (lData.tutor_response) {
+            return lData.tutor_response;
+          }
+        }
+      }
+      const errorText = await response.text();
+      throw new Error(`Tutor chat failed (${response.status}): ${errorText}`);
+    }
+
+    return response.json();
+  }
+
 
   private fallbackClinicalAI(prompt: string) {
     const pLower = prompt.toLowerCase();

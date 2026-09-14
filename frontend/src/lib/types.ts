@@ -600,3 +600,92 @@ export interface AnatomyCommandResponse {
     related_structures?: string[];
   };
 }
+
+// ---------------------------------------------------------------------------
+// Phase 1 Grounded Generative Tutor Contracts
+// ---------------------------------------------------------------------------
+
+export type TutorMode =
+  | "auto"
+  | "socratic_hint"
+  | "mechanistic_explanation"
+  | "misconception_diagnosis"
+  | "distractor_explanation"
+  | "concept_comparison"
+  | "revision_summary";
+
+export type PedagogicalState =
+  | "PRE_SUBMISSION"
+  | "POST_SUBMISSION"
+  | "GENERAL_STUDY";
+
+export interface TutorCitationDTO {
+  ref: string;
+  quote: string;
+  document_id: string;
+  pmcid?: string | null;
+  title: string;
+  license: string;
+  chunk_id: string;
+}
+
+export interface DistractorItem {
+  option: string;
+  text: string;
+  why_incorrect: string;
+  supported_by_ref: string;
+}
+
+export interface LatencyBreakdownDTO {
+  retrieval_ms: number;
+  ttft_ms?: number | null;
+  generation_ms: number;
+  post_verify_ms: number;
+  total_ms: number;
+}
+
+export interface TutorVerificationSummaryDTO {
+  total_propositions: number;
+  supported_propositions: number;
+  unsupported_propositions: number;
+  non_factual_statements: number;
+  veto_flags: string[];
+}
+
+export interface TutorChatRequest {
+  query: string;
+  mode?: TutorMode;
+  session_id?: string | null;
+  learner_id?: string | null;
+  question_id?: string | null;
+  attempt_key?: string | null;
+  topic?: string | null;
+  hint_level?: number | null;
+  selected_option?: string | null;
+  is_submitted?: boolean | null;
+  max_context_turns?: number;
+}
+
+export interface TutorChatResponse {
+  response_id: string;
+  session_id: string;
+  mode: string;
+  message: string;
+  socratic_question?: string | null;
+  hints?: string[] | null;
+  misconception?: string | null;
+  mechanistic_explanation?: string | null;
+  distractor_analysis?: DistractorItem[] | null;
+  revision_summary?: string | null;
+  citations: TutorCitationDTO[];
+  evidence_packet_id?: string | null;
+  support_status: "SUPPORTED" | "SAFE_FALLBACK" | "PARTIALLY_SUPPORTED" | "UNSUPPORTED" | "ABSTAIN";
+  abstain: boolean;
+  abstain_reason?: string | null;
+  fallback_applied: boolean;
+  pedagogical_state: PedagogicalState;
+  provider: string;
+  model: string;
+  latency_breakdown: LatencyBreakdownDTO;
+  verification: TutorVerificationSummaryDTO;
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "eval_id": "DEV-RENAL-001",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Anatomical Layers",
+    "question_id": "UNI-RENAL-001",
+    "query": "What are the three cellular and extracellular layers that constitute the glomerular filtration barrier?",
+    "target_document_id": "DOC-PMC-RENAL-0002",
+    "target_chunk_id": "DOC-PMC-RENAL-0002-B0002-C01",
+    "ground_truth_concepts": ["fenestrated endothelial cells", "glomerular basement membrane", "podocyte foot processes", "slit diaphragms"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-002",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Charge Selectivity",
+    "question_id": "UNI-RENAL-002",
+    "query": "How does the negative electrostatic charge of the filtration barrier prevent albuminuria?",
+    "target_document_id": "DOC-PMC-RENAL-0002",
+    "target_chunk_id": "DOC-PMC-RENAL-0002-B0002-C02",
+    "ground_truth_concepts": ["heparan sulfate proteoglycans", "polyanionic repulsion", "albumin charge barrier"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-003",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Podocyte Slit Diaphragm",
+    "question_id": "UNI-RENAL-001",
+    "query": "What is the structural function of nephrin in the podocyte slit diaphragm?",
+    "target_document_id": "DOC-PMC-RENAL-0003",
+    "target_chunk_id": "DOC-PMC-RENAL-0003-B0001-C01",
+    "ground_truth_concepts": ["nephrin", "podocin", "size selective pore", "foot processes"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-004",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Endothelial Fenestrations",
+    "question_id": "UNI-RENAL-001",
+    "query": "What role do endothelial fenestrae play in bulk fluid movement across the glomerular wall?",
+    "target_document_id": "DOC-PMC-RENAL-0002",
+    "target_chunk_id": "DOC-PMC-RENAL-0002-B0002-C01",
+    "ground_truth_concepts": ["fenestrated endothelium", "hydraulic permeability", "glycocalyx"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-005",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Basement Membrane Composition",
+    "question_id": "UNI-RENAL-002",
+    "query": "Which molecular components form the dense meshwork of the glomerular basement membrane?",
+    "target_document_id": "DOC-PMC-RENAL-0003",
+    "target_chunk_id": "DOC-PMC-RENAL-0003-B0002-C01",
+    "ground_truth_concepts": ["collagen type IV", "laminin", "nidogen", "heparan sulfate"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-006",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Starling Forces",
+    "question_id": "UNI-RENAL-001",
+    "query": "Explain how glomerular capillary hydrostatic pressure and oncotic pressure determine net ultrafiltration pressure.",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0001-C01",
+    "ground_truth_concepts": ["hydrostatic pressure", "colloid oncotic pressure", "Bowman space", "ultrafiltration coefficient"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-007",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Arteriolar Hemodynamics",
+    "question_id": "UNI-RENAL-001",
+    "query": "How does selective constriction of the efferent arteriole modulate GFR versus renal blood flow?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0002-C01",
+    "ground_truth_concepts": ["efferent vasoconstriction", "increased capillary pressure", "decreased renal blood flow", "filtration fraction"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-008",
+    "topic": "Glomerular Filtration Barrier",
+    "subtopic": "Afferent Vasodilation",
+    "question_id": "UNI-RENAL-001",
+    "query": "What physiological effects occur when prostaglandins dilate the afferent arteriole?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0002-C02",
+    "ground_truth_concepts": ["afferent dilation", "increased glomerular blood flow", "increased GFR"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-009",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Renin Substrate",
+    "question_id": "UNI-RENAL-002",
+    "query": "What substrate does active renin cleave to initiate the renin-angiotensin cascade?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+    "ground_truth_concepts": ["angiotensinogen", "active renin", "cleavage", "angiotensin I"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-010",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Juxtaglomerular Secretion",
+    "question_id": "UNI-RENAL-002",
+    "query": "What physiological stimuli trigger renin release from the juxtaglomerular cells?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C02",
+    "ground_truth_concepts": ["decreased renal perfusion", "sympathetic stimulation", "decreased macula densa sodium chloride"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-011",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "ACE Conversion",
+    "question_id": "UNI-RENAL-002",
+    "query": "Where and how is angiotensin I converted into physiologically active angiotensin II?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C01",
+    "ground_truth_concepts": ["angiotensin converting enzyme", "pulmonary endothelium", "angiotensin II"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-012",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Angiotensin II Hemodynamics",
+    "question_id": "UNI-RENAL-001",
+    "query": "Explain the differential sensitivity of afferent versus efferent arterioles to angiotensin II.",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C03",
+    "ground_truth_concepts": ["efferent constriction", "AT1 receptor density", "maintenance of GFR"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-013",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Aldosterone Secretion",
+    "question_id": "UNI-RENAL-002",
+    "query": "How does angiotensin II stimulate aldosterone secretion in the adrenal cortex?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C04",
+    "ground_truth_concepts": ["zona glomerulosa", "aldosterone synthase", "sodium reabsorption"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-014",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Tubular Sodium Reabsorption",
+    "question_id": "UNI-RENAL-002",
+    "query": "Which proximal tubular transporter is directly stimulated by angiotensin II?",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C03",
+    "ground_truth_concepts": ["Na+/H+ antiporter (NHE3)", "proximal convoluted tubule", "bicarbonate reabsorption"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-015",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Macula Densa Feedback",
+    "question_id": "UNI-RENAL-002",
+    "query": "How does the macula densa sense luminal chloride concentration to regulate tubuloglomerular feedback?",
+    "target_document_id": "DOC-PMC-RENAL-0004",
+    "target_chunk_id": "DOC-PMC-RENAL-0004-B0001-C01",
+    "ground_truth_concepts": ["NKCC2 cotransporter", "macula densa cells", "adenosine release", "renin suppression"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  },
+  {
+    "eval_id": "DEV-RENAL-016",
+    "topic": "RAAS Mechanisms",
+    "subtopic": "Negative Feedback Loop",
+    "question_id": "UNI-RENAL-002",
+    "query": "Describe the short-loop and long-loop negative feedback mechanisms that suppress renin release.",
+    "target_document_id": "DOC-PMC-RENAL-0001",
+    "target_chunk_id": "DOC-PMC-RENAL-0001-B0003-C02",
+    "ground_truth_concepts": ["AT1 receptor on juxtaglomerular cells", "blood pressure restoration", "extracellular volume expansion"],
+    "expected_pedagogical_state": "PRE_SUBMISSION"
+  }
+]

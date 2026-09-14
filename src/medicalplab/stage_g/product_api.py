@@ -25,9 +25,26 @@ from medicalplab.plab.pilot import PLABPilotService, PLABProductError
 from medicalplab.stage_g.runtime import runtime_metadata
 
 
+from medicalplab.tutor.models import TutorChatRequest, TutorChatResponse
+from medicalplab.tutor.service import TutorService
+
 router = APIRouter(prefix="/api/v1")
 _plab_service: PLABPilotService | None = None
 _course_learning_service: CourseLearningService | None = None
+_tutor_service: TutorService | None = None
+
+
+def configure_tutor_service(service: TutorService | None) -> None:
+    """Inject a tutor service for tests or custom configuration."""
+    global _tutor_service
+    _tutor_service = service
+
+
+def get_tutor_service() -> TutorService:
+    global _tutor_service
+    if _tutor_service is None:
+        _tutor_service = TutorService()
+    return _tutor_service
 
 
 def configure_plab_service(service: PLABPilotService | None) -> None:
@@ -252,6 +269,16 @@ def clinical_reason(_: ClinicalReasonRequest) -> None:
             "message": "Real clinical reasoning service is not wired to the Product API yet; no demo response was generated.",
         },
     )
+
+
+@router.post("/tutor/chat", response_model=TutorChatResponse)
+def tutor_chat(
+    request: TutorChatRequest,
+    x_user_id: str | None = Header(default=None),
+) -> TutorChatResponse:
+    """Canonical Evidence-Grounded Socratic Tutor chat endpoint."""
+    service = get_tutor_service()
+    return service.chat(request, x_user_id=x_user_id)
 
 
 @router.get("/plab/questions")
