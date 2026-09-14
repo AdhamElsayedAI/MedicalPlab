@@ -24,9 +24,10 @@ RUN grep -v "^-e" requirements.txt > requirements-prod.txt && \
     pip install --no-cache-dir -r requirements-prod.txt && \
     rm requirements-prod.txt
 
-# Copy application source code and schemas
+# Copy application source code, schemas, and public-safe data
 COPY src/ src/
 COPY schemas/ schemas/
+COPY Data/ Data/
 COPY main.py production_main.py ./
 
 # Install medicalplab package

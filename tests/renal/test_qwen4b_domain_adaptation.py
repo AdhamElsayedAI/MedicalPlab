@@ -1,4 +1,5 @@
 import importlib.util, json, sys
+import pytest
 from collections.abc import Mapping
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]; S=ROOT/'Scripts'; sys.path.insert(0,str(S))
@@ -86,7 +87,7 @@ def test_builder_synthetic_source_grounded_pipeline(tmp_path, monkeypatch):
     data=json.loads(output.read_text()); assert all(r['hard_negative_ids'] for r in data)
 
 def test_qwen4b_feature_device_move_preserves_non_tensor_metadata():
-    import torch
+    torch = pytest.importorskip("torch")
     from train_qwen4b_retrieval_lora import _move_features_to_device
     features={
         'input_ids':torch.tensor([[1,2,3]]),
@@ -104,7 +105,7 @@ def test_qwen4b_feature_device_move_preserves_non_tensor_metadata():
     assert moved['labels']==['a','b']
 
 def test_qwen4b_preprocess_path_preserves_metadata_and_query_prompt(monkeypatch):
-    import torch
+    torch = pytest.importorskip("torch")
     import train_qwen4b_retrieval_lora as t
     calls={}
     class FakeST:
@@ -118,7 +119,7 @@ def test_qwen4b_preprocess_path_preserves_metadata_and_query_prompt(monkeypatch)
     assert out['modality']=='text'
 
 def test_qwen4b_preprocess_accepts_batchencoding_like_mapping(monkeypatch):
-    import torch
+    torch = pytest.importorskip("torch")
     import train_qwen4b_retrieval_lora as t
     class BatchEncodingLike(Mapping):
         def __init__(self,data): self.data=data
