@@ -66,9 +66,23 @@ MedicalPlab provides two explicit, specialized FastAPI entrypoints:
 
 ---
 
-## 3. Supported Deployment Pathways
+## 3. Deployment Classification Matrix
 
-### Pathway A: Google Cloud Run (Primary Recommended)
+MedicalPlab distinguishes between canonical production deployments, supported optional targets, and retired legacy configurations:
+
+| Tier | Target Platform | Component | Configuration Assets | Status & Support Level |
+| :--- | :--- | :--- | :--- | :--- |
+| **CANONICAL** | **Google Cloud Run** | Backend Cloud API | `Dockerfile`, `cloudbuild.yaml`, `.github/workflows/deploy-cloud-run.yml` | Fully automated production deployment with auto-scaling, unprivileged non-root container, and fail-closed readiness probes. |
+| **CANONICAL** | **Vercel** | Web Client UI | `frontend/vercel.json`, `frontend/package.json` | Global edge distribution for Next.js 16.3.4 (React 19) client application at `https://medical-plab.vercel.app`. |
+| **SUPPORTED OPTIONAL** | **Docker Standalone** | Backend API | `Dockerfile`, `deploy/deploy_cloud_run.sh` | Local developer containers, self-hosted Docker hosts, or ECS/GKE clusters. |
+| **SUPPORTED OPTIONAL** | **Render PaaS** | Backend API | `render.yaml` | Supported PaaS deployment running `production_main:app` with automated health check probes. |
+| **LEGACY / RETIRED** | **Heroku / Procfile** | Process Runner | `Procfile` (obsolete) | Legacy Heroku-style process runner; unmaintained and superseded by containerized Cloud Run deployment. |
+
+---
+
+## 4. Deployment Pathways
+
+### Pathway A: Google Cloud Run (Canonical Backend)
 
 The repository includes a production Dockerfile and automated deployment scripts:
 
@@ -84,7 +98,14 @@ The repository includes a production Dockerfile and automated deployment scripts
 2. **Automated CI/CD via GitHub Actions**:
    `.github/workflows/deploy-cloud-run.yml` automatically builds the container image using Google Cloud Build (`cloudbuild.yaml`) and deploys to Cloud Run on push to main branches.
 
-### Pathway B: Docker Standalone
+### Pathway B: Vercel (Canonical Frontend)
+
+1. Connect the `frontend/` directory to Vercel.
+2. Vercel automatically detects `frontend/vercel.json` and Next.js 16 Turbopack settings.
+3. Set environment variable:
+   - `NEXT_PUBLIC_API_URL`: URL of the deployed Google Cloud Run backend API.
+
+### Pathway C: Docker Standalone (Supported Optional)
 
 Build and run the non-root container locally or on any container platform:
 
@@ -102,22 +123,16 @@ docker run -d \
   medicalplab-api:latest
 ```
 
-### Pathway C: Render PaaS
+### Pathway D: Render PaaS (Supported Optional)
 
 The repository includes a declarative `render.yaml`:
 1. Connect your GitHub repository to [Render.com](https://render.com).
 2. Render detects `render.yaml` automatically.
 3. Deploys `production_main:app` with automated health checking on `/health`.
 
-### Pathway D: Hugging Face Spaces (Docker SDK)
-
-1. Create a new Space on [Hugging Face](https://huggingface.co/new-space) choosing the **Docker** SDK.
-2. Push repository files or configure Git sync.
-3. The Space will expose the API on port `7860` (override with `PORT=7860`).
-
 ---
 
-## 4. Environment Variables Reference
+## 5. Environment Variables Reference
 
 | Variable | Default | Required | Description |
 | :--- | :--- | :---: | :--- |
@@ -130,7 +145,7 @@ The repository includes a declarative `render.yaml`:
 
 ---
 
-## 5. Health Probes & Verification
+## 6. Health Probes & Verification
 
 Verify the deployed service:
 

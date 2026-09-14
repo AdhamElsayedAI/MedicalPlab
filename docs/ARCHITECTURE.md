@@ -120,3 +120,63 @@ graph TD
 - **No Live Secrets:** Repository contains zero hardcoded API keys, passwords, or production tokens. Pointers use `.env.example`.
 - **No Private Publisher Redistribution:** Full proprietary publisher guideline text remains in the private canonical evidence vault (`plab-evidence-final-v9`); the public repository tracks only open-access PMC literature and public-safe synthetic verification fixtures.
 - **Cryptographic Reproducibility:** Every question and evidence chunk is tracked with SHA-256 digests. Line-ending normalization (`UTF8_LF_CANONICAL_TEXT`) ensures cross-platform cryptographic reproducibility.
+
+---
+
+## 6. Repository Architecture
+
+*Note: This section defines the structural engineering layout of the codebase, distinct from the runtime system architecture in Section 1.*
+
+The repository is structured into six functional tiers designed for 10-second comprehension by senior engineers, mentors, and technical judges:
+
+```
+MedicalPlab/
+├── src/medicalplab/        # Tier 1: Core Product Code (Backend & AI Engine)
+├── frontend/               # Tier 1: Core Product Code (Web Client)
+├── Data/                   # Tier 2: Active Runtime Data (Public-Safe Evidence & Banks)
+├── evaluation/             # Tier 3: Research & Reproducibility (Benchmarks & Splits)
+├── models/                 # Tier 3: Research & Reproducibility (Frozen Classifiers & Hashes)
+├── notebooks/              # Tier 3: Research & Reproducibility (Colab Demonstration)
+├── deploy/                 # Tier 4: Deployment Infrastructure (Cloud Run Automations)
+├── cloudbuild.yaml         # Tier 4: Deployment Infrastructure (Google Cloud Build)
+├── Dockerfile              # Tier 4: Deployment Infrastructure (Container Definition)
+├── render.yaml             # Tier 4: Deployment Infrastructure (Render Blueprint)
+├── Scripts/                # Tier 5: Developer Tooling & Utilities (Ingestion & Pipelines)
+├── examples/               # Tier 5: Developer Tooling & Utilities (Schema Examples & Loaders)
+├── package.json            # Tier 5: Developer Tooling & Utilities (Root Script Wrapper)
+└── tests/                  # Tier 6: Test Architecture (Automated Verification Suite)
+```
+
+### 1. Core Product Code
+- **`src/medicalplab/`**: The core Python package housing the Canonical Evidence Engine V1.1 (`evidence_engine/`), University Preclinical Track (`university/`), PLAB V9 Governance & Licensing Service (`plab/`), and modular pipeline stages (`stage_b` through `stage_r`).
+- **`frontend/`**: The Next.js 16.3.4 / React 19 web application deployed to Vercel, providing modern UI components for University learning and PLAB practice.
+
+### 2. Active Runtime Data
+- **`Data/`**: Public-safe runtime assets required by the containerized service and AI engine. Contains 16 full-text open-access PMC articles (`Data/raw/` and `Data/processed/`), the 6-question Renal Physiology educational bank (`Data/university/`), the public-safe PLAB question fixture (`Data/questions/`), and corpus license manifests (`Data/metadata/`).
+
+### 3. Research & Scientific Reproducibility
+- **`evaluation/`**: Ground-truth datasets, heldout evaluation splits, and benchmark inputs. Referenced directly by immutable governance tests (`tests/renal/test_renal_v4_1.py`) and development benchmark suites.
+- **`models/`**: Frozen classifier weights (`.pkl`) accompanied by bit-for-bit SHA-256 sidecars (`.pkl.sha256`) asserted by cryptographic firewall tests.
+- **`notebooks/`**: Minimal Colab reproducibility demonstration (`stage_b_colab.ipynb`) illustrating interactive Stage-B tokenization and evidence scoring.
+
+### 4. Deployment Infrastructure
+- **`Dockerfile`**: Multi-stage, unprivileged non-root container configuration powering Google Cloud Run and local container execution.
+- **`cloudbuild.yaml`**: Google Cloud Build pipeline specification for automated container build, SHA tagging, and Cloud Run deployment.
+- **`.github/workflows/deploy-cloud-run.yml`**: Production CI/CD workflow triggering Cloud Run deployments upon merged changes to `main`.
+- **`deploy/`**: PowerShell and Bash automation scripts for developer deployment to Google Cloud Run.
+- **`render.yaml`**: Supported PaaS blueprint for Render web service deployments.
+
+### 5. Developer Tooling & Engineering Utilities
+- **`Scripts/`**: Active data ingestion tools, PMC XML extractors, benchmark suites, and milestone freeze utilities. Retained at root because critical test modules and subprocess pipelines import them directly.
+- **`examples/`**: Schema payload examples (`chunk.example.json`, `question.example.json`, etc.) and lightweight pipeline verification scripts (`test_loader.py`, `test_pipeline.py`).
+- **`configs/` & `schemas/`**: Formal JSON Schema data contracts (`schemas/`) and executable configuration files (`configs/`) with cryptographic SHA sidecars.
+- **`package.json`**: Root command wrapper forwarding `npm run dev`, `build`, and `lint` commands directly to `frontend/`.
+
+### 6. Test Architecture
+- **`tests/`**: Comprehensive Pytest suite organized into functional domains:
+  - `tests/test_canonical_rag.py` & `tests/test_evidence_engine_v2.py`: RAG retrieval, ranking, and claim verification.
+  - `tests/university/`: University contract invariants, zero answer key leakage, and BKT tracking.
+  - `tests/plab/v9/`: PLAB V9 cryptographic oracle, span containment, and blocker taxonomy.
+  - `tests/plab/test_pilot_acceptance.py`: Strict fail-closed production readiness probe.
+  - `tests/renal/`: Historical milestone firewall tests asserting immutable SHA-256 sidecars and heldout splits.
+

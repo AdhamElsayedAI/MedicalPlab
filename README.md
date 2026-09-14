@@ -237,21 +237,26 @@ MedicalPlab/
 │   ├── evidence_engine/    # Canonical Evidence Engine V1.1 (BM25, RRF, Qwen3-Reranker)
 │   ├── university/         # University Learning service and REST API
 │   ├── plab/               # PLAB V9 governance, quarantine, and data manifests
-│   ├── stage_b ... stage_r # Specialized modular pipeline stages (BKT, routing, simulation)
+│   └── stage_b ... stage_r # Specialized modular pipeline stages (BKT, routing, simulation)
 ├── Data/                   # Public-safe runtime data and accredited literature
 │   ├── processed/renal_v1/ # 16 PMC articles (2,192 verified chunks, JATS, quality scores)
 │   ├── raw/renal_v1/       # 16 PMC open-access XML source documents
 │   ├── university/         # University Renal Physiology question bank
 │   ├── questions/          # Public-safe PLAB questions and review queues
 │   └── metadata/           # Corpus snapshot manifests and license registries
-├── tests/                  # Automated verification suite (646 unit & integration tests)
+├── tests/                  # Automated verification suite (safety, governance, RAG, university)
+├── docs/                   # Product, architecture, clinical safety, and deployment docs
+├── deploy/                 # Cloud Run deployment automation scripts (Bash, PowerShell)
+├── configs/                # Executable configs with cryptographic SHA-256 sidecars
+├── schemas/                # Formal JSON Schema data contracts
 ├── Scripts/                # Active maintenance, ingestion, and evaluation tools
-├── docs/                   # Product, architecture, clinical safety, and demo docs
 ├── reports/release/        # Accepted milestone closure reports and verified benchmarks
+├── evaluation/             # Ground truth datasets & benchmarks asserted by governance tests
+├── models/                 # Frozen classifier models with cryptographic SHA-256 sidecars
 ├── main.py                 # Primary local & demo FastAPI entrypoint
 ├── production_main.py      # Strict pilot/production fail-closed entrypoint
-├── Dockerfile              # Production multi-stage container build
-├── pyproject.toml          # Python build specifications and dependencies
+├── Dockerfile              # Production multi-stage container build (Google Cloud Run)
+├── pyproject.toml          # Canonical Python package specification and tool configurations
 └── requirements.txt        # Pinned production runtime requirements
 ```
 
