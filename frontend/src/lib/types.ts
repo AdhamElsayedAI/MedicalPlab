@@ -689,3 +689,68 @@ export interface TutorChatResponse {
   latency_breakdown: LatencyBreakdownDTO;
   verification: TutorVerificationSummaryDTO;
 }
+
+export type AdaptiveActionType =
+  | "SOLVE_TARGETED_QUESTION"
+  | "ASK_GROUNDED_TUTOR"
+  | "REVIEW_CONCEPT"
+  | "REPEAT_TOPIC";
+
+export type WeaknessPriority = "high" | "medium" | "low";
+
+export interface TopicMasteryRecord {
+  subject: string;
+  topic: string;
+  total_attempts: number;
+  correct_attempts: number;
+  accuracy: number | null;
+  mastery_score: number;
+  mastery_level: "beginner" | "developing" | "proficient" | "advanced";
+  mastery_status: "not_started" | "needs_review" | "in_progress" | "mastered";
+  confidence: "low" | "medium" | "high";
+  consecutive_errors: number;
+  last_attempt_correct: boolean | null;
+}
+
+export interface WeakTopicRecord {
+  subject: string;
+  topic: string;
+  priority: WeaknessPriority;
+  failure_rate: number;
+  missed_count: number;
+  total_attempts: number;
+  consecutive_errors: number;
+  reason: string;
+}
+
+export interface AdaptiveRecommendation {
+  recommendation_id: string;
+  action: AdaptiveActionType;
+  subject: string;
+  topic: string;
+  priority: WeaknessPriority;
+  target_question_id?: string | null;
+  tutor_mode?: string | null;
+  tutor_query?: string | null;
+  reason: string;
+  explanation: string;
+}
+
+export interface LearnerState {
+  learner_id: string;
+  total_attempts: number;
+  correct_attempts: number;
+  overall_accuracy: number | null;
+  topic_mastery: Record<string, TopicMasteryRecord>;
+  weak_topics: WeakTopicRecord[];
+  recent_activity: Array<{
+    attempt_key: string;
+    question_id: string;
+    subject: string;
+    topic: string;
+    selected: string;
+    correct: boolean;
+    timestamp?: number | null;
+  }>;
+  recommendations: AdaptiveRecommendation[];
+}

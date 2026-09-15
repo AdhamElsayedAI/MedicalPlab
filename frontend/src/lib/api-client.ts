@@ -11,6 +11,8 @@ import type {
   AnatomyCommandResponse,
   TutorChatRequest,
   TutorChatResponse,
+  LearnerState,
+  AdaptiveRecommendation,
 } from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
@@ -297,6 +299,83 @@ class PlatformApiClient {
     return response.json();
   }
 
+  async getAdaptiveState(learnerId?: string): Promise<LearnerState> {
+    const headers = { ...this.getHeaders() as Record<string, string> };
+    if (learnerId) {
+      headers["X-User-Id"] = learnerId;
+    }
+    const response = await fetch(`${API_BASE_URL}/api/v1/adaptive/state`, {
+      method: "GET",
+      headers,
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Adaptive state returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async getAdaptiveRecommendation(learnerId?: string): Promise<AdaptiveRecommendation | null> {
+    const headers = { ...this.getHeaders() as Record<string, string> };
+    if (learnerId) {
+      headers["X-User-Id"] = learnerId;
+    }
+    const response = await fetch(`${API_BASE_URL}/api/v1/adaptive/recommendation`, {
+      method: "GET",
+      headers,
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Adaptive recommendation returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async triggerAdaptiveRemediation(payload: {
+    topic?: string;
+    question_id?: string;
+    preferred_mode?: string;
+    custom_query?: string;
+  }, learnerId?: string): Promise<TutorChatResponse> {
+    const headers = { ...this.getHeaders() as Record<string, string> };
+    if (learnerId) {
+      headers["X-User-Id"] = learnerId;
+    }
+    const response = await fetch(`${API_BASE_URL}/api/v1/adaptive/remediate`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Adaptive remediation failed (${response.status}): ${errorText}`);
+    }
+    return response.json();
+  }
+
+  async recordAdaptiveEvent(event: {
+    subject: string;
+    topic: string;
+    question_id?: string;
+    selected_option?: string;
+    is_correct?: boolean;
+    attempt_key?: string;
+  }, learnerId?: string): Promise<LearnerState> {
+    const headers = { ...this.getHeaders() as Record<string, string> };
+    const effectiveLearner = learnerId || this.userId;
+    headers["X-User-Id"] = effectiveLearner;
+
+    const response = await fetch(`${API_BASE_URL}/api/v1/adaptive/event`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        ...event,
+        learner_id: effectiveLearner,
+      }),
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Recording adaptive event returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
 
   private fallbackClinicalAI(prompt: string) {
     const pLower = prompt.toLowerCase();

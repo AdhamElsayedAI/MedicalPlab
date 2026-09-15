@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { api } from "@/lib/api-client";
 import { SocraticTutorDrawer } from "./SocraticTutorDrawer";
+import { AdaptiveGuidanceCard } from "./AdaptiveGuidanceCard";
 
 type Choice = { name: string; count: number };
 type Question = { id: string; stem: string; subject: string; topic: string; options: Record<string, string> };
@@ -44,6 +45,7 @@ export function UniversityLearning() {
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState("");
   const [complete, setComplete] = useState(false);
+  const [adaptiveRefresh, setAdaptiveRefresh] = useState(0);
 
   useEffect(() => {
     let active = true;
@@ -94,6 +96,7 @@ export function UniversityLearning() {
         question_id: question.id, selected_option: selected, idempotency_key: attemptKey,
       });
       setFeedback(result); setProgress(result.progress);
+      setAdaptiveRefresh((prev) => prev + 1);
     });
   }
 
@@ -108,6 +111,14 @@ export function UniversityLearning() {
         <p className="text-slate-300 max-w-2xl">Build your foundations with short, source-backed practice. Choose a topic, check your understanding, and review the explanation.</p>
         <p className="text-sm text-slate-400">Educational basic science • Independent University progress • No clinician approval claimed</p>
       </header>
+
+      <AdaptiveGuidanceCard
+        learnerId={learner.current}
+        refreshTrigger={adaptiveRefresh}
+        onSelectTopic={(targetSubj, targetTopic) => {
+          void loadQuestion(targetTopic, undefined, targetSubj);
+        }}
+      />
 
       {error && <div role="alert" className="rounded-xl border border-amber-500 p-4 space-y-3">
         <p>{error}</p>
