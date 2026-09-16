@@ -26,6 +26,7 @@ from medicalplab.university.api import router as university_router
 from medicalplab.adaptive.api import router as adaptive_router
 from medicalplab.remediation.api import router as remediation_router
 from medicalplab.learning_intelligence.api import router as learning_intelligence_router
+from medicalplab.anatomy.api import router as anatomy_router
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
 logger = logging.getLogger("medicalplab_cloud_api")
@@ -55,6 +56,7 @@ app.include_router(product_router)
 app.include_router(adaptive_router)
 app.include_router(remediation_router)
 app.include_router(learning_intelligence_router)
+app.include_router(anatomy_router)
 
 # 2. Configure CORS
 # Pull allowed origins from environment variable or default to Vercel and local origins

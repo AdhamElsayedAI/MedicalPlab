@@ -1,17 +1,248 @@
-"""AI anatomy command planner with manifest/ontology validation."""
-
+"""AI anatomy tutor agent and command planner with manifest/ontology validation."""
 from __future__ import annotations
 
 import json
+import logging
 import re
-from typing import Any
+from typing import Any, Optional
 
 from medicalplab.stage_b.models import strict_json
 
 from .commands import AnatomyAction, AnatomyCommand
-from .ontology import MVP_STRUCTURES, get_structure, resolve_structure
+from .knowledge import get_all_facts, get_facts_for_structure
+from .manifest import get_renal_manifest, get_structure_by_id, resolve_query_to_structure, valid_structure_ids
+from .models import (
+    AnatomyActionType,
+    AnatomyAgentResponse,
+    InteractionRequest,
+    InteractionRequestType,
+    LessonState,
+    SceneAction,
+)
+from .ontology import MVP_STRUCTURES, get_structure as legacy_get_structure, resolve_structure as legacy_resolve_structure
 from .provider import StaticCardiovascularAssetProvider
-from .validator import validate_anatomy_command
+from .validator import validate_agent_response, validate_anatomy_command
+
+logger = logging.getLogger(__name__)
+
+# ============================================================================
+# Phase 5 — Structured AI Anatomy Tutor Agent (Renal MVP)
+# ============================================================================
+
+ANATOMY_AGENT_SYSTEM_PROMPT = """You are the MedicalPlab AI Anatomy Tutor Agent.
+You control an educational 3D anatomical viewport and teach UK PLAB medical anatomy.
+You emit STRICT JSON with validated scene actions and clinical explanations.
+
+Allowed scene actions:
+- FOCUS_STRUCTURE: focus viewport camera on structure_id
+- HIGHLIGHT_STRUCTURE: visually highlight structure_id
+- ISOLATE_STRUCTURE: dim or hide everything except structure_id
+- SHOW_STRUCTURE: reveal structure_id
+- HIDE_STRUCTURE: hide structure_id
+- SHOW_RELATION: emphasize relationship between structures
+- SET_STRUCTURE_OPACITY: set opacity (0.0 - 1.0) on structure_id (e.g. kidney_capsule_left)
+- RESET_SCENE: restore canonical scene state (structure_id must be null)
+
+SAFETY & TRUTH RULES:
+1. ONLY use structure_id values present in the verified anatomy inventory.
+2. NEVER write arbitrary JavaScript, Three.js code, HTML, or URLs.
+3. Every clinical anatomical statement must be grounded in the supplied verified facts.
+4. Output MUST conform strictly to this JSON format and nothing else:
+{
+  "tutor_message": "...",
+  "scene_actions": [
+    {"action": "HIGHLIGHT_STRUCTURE", "structure_id": "renal_artery_left", "opacity": null, "duration_ms": null}
+  ],
+  "interaction_request": {
+    "type": "IDENTIFY_STRUCTURE",
+    "target_structure_id": "renal_vein_left",
+    "prompt": "Click the vessel that lies most anteriorly at the renal hilum."
+  }
+}
+"""
+
+
+class StructuredAnatomyAgent:
+    """Anatomy tutor agent directing 3D scene composition and Socratic dialogue."""
+
+    def __init__(self, backend: Optional[Any] = None):
+        self.backend = backend
+
+    def plan_interaction(
+        self,
+        user_query: Optional[str],
+        lesson_state: LessonState,
+        selected_structure_id: Optional[str] = None,
+        target_structure_id: Optional[str] = None,
+        hint_level: int = 0,
+    ) -> AnatomyAgentResponse:
+        """Produce an educational tutor response with validated 3D scene actions."""
+        if self.backend is not None:
+            try:
+                allowed_ids = valid_structure_ids()
+                facts = [f.statement for f in get_all_facts()]
+                payload = {
+                    "query": user_query or "",
+                    "lesson_state": lesson_state.value,
+                    "selected_structure_id": selected_structure_id,
+                    "target_structure_id": target_structure_id,
+                    "hint_level": hint_level,
+                    "allowed_structures": list(allowed_ids),
+                    "verified_facts": facts,
+                }
+                user_prompt = json.dumps(payload)
+                if hasattr(self.backend, "generate_structured"):
+                    response_schema = {
+                        "type": "object",
+                        "properties": {
+                            "tutor_message": {"type": "string"},
+                            "scene_actions": {"type": "array"},
+                            "interaction_request": {"type": "object"},
+                        },
+                        "required": ["tutor_message", "scene_actions"],
+                    }
+                    resp = self.backend.generate_structured(
+                        system_prompt=ANATOMY_AGENT_SYSTEM_PROMPT,
+                        user_prompt=user_prompt,
+                        response_schema=response_schema,
+                    )
+                    raw_dict = resp.structured_json if hasattr(resp, "structured_json") and resp.structured_json else json.loads(resp.raw_text)
+                    return validate_agent_response(raw_dict, allowed_ids)
+                elif hasattr(self.backend, "generate"):
+                    raw = self.backend.generate(ANATOMY_AGENT_SYSTEM_PROMPT, user_prompt)
+                    if isinstance(raw, dict) and "text" in raw:
+                        parsed = json.loads(str(raw["text"]).strip())
+                        return validate_agent_response(parsed, allowed_ids)
+            except Exception as exc:
+                logger.warning("Generative backend failed; falling back to deterministic grounded planner: %s", exc)
+
+        return self._deterministic_plan(
+            user_query=user_query,
+            lesson_state=lesson_state,
+            selected_structure_id=selected_structure_id,
+            target_structure_id=target_structure_id,
+            hint_level=hint_level,
+        )
+
+    def _deterministic_plan(
+        self,
+        user_query: Optional[str],
+        lesson_state: LessonState,
+        selected_structure_id: Optional[str],
+        target_structure_id: Optional[str],
+        hint_level: int,
+    ) -> AnatomyAgentResponse:
+        query_text = (user_query or "").casefold()
+
+        # Guided Lesson: Renal Blood Flow & Hilum Orientation
+        if lesson_state in (LessonState.INTRO, LessonState.GUIDED_VESSELS) or "blood flow" in query_text or "hilum" in query_text:
+            return AnatomyAgentResponse(
+                tutor_message=(
+                    "Welcome to the Renal Anatomy Lab. Let us investigate renal blood flow and hilum spatial organization. "
+                    "The Left Renal Artery branches directly from the abdominal aorta to supply oxygenated blood to the kidney. "
+                    "Notice its orientation relative to the renal vein and pelvis: from anterior to posterior, the structures lie Vein, Artery, Pelvis (V-A-P). "
+                    "Please physically click the vessel that lies most ANTERIORLY at the renal hilum."
+                ),
+                scene_actions=[
+                    SceneAction(action=AnatomyActionType.RESET_SCENE),
+                    SceneAction(action=AnatomyActionType.FOCUS_STRUCTURE, structure_id="hilum_of_kidney_left"),
+                    SceneAction(action=AnatomyActionType.SET_STRUCTURE_OPACITY, structure_id="kidney_capsule_left", opacity=0.35),
+                    SceneAction(action=AnatomyActionType.HIGHLIGHT_STRUCTURE, structure_id="renal_artery_left"),
+                ],
+                interaction_request=InteractionRequest(
+                    type=InteractionRequestType.IDENTIFY_STRUCTURE,
+                    target_structure_id="renal_vein_left",
+                    prompt="Click the most anterior vessel at the renal hilum on the 3D model.",
+                ),
+            )
+
+        # Independent Challenge State: Scene reset, translucent capsule, no target leakage
+        if lesson_state == LessonState.CHALLENGE_ACTIVE or (selected_structure_id and target_structure_id and selected_structure_id == target_structure_id):
+            challenge_target = "renal_artery_left" if target_structure_id == "renal_vein_left" else (target_structure_id or "renal_artery_left")
+            return AnatomyAgentResponse(
+                tutor_message=(
+                    "Excellent! You accurately identified the Left Renal Vein. "
+                    "As you observed, it lies anterior to the renal artery at the hilum and empties into the IVC. "
+                    "Now let us test your spatial understanding with an independent 3D identification challenge."
+                ),
+                scene_actions=[
+                    SceneAction(action=AnatomyActionType.RESET_SCENE),
+                    SceneAction(action=AnatomyActionType.SET_STRUCTURE_OPACITY, structure_id="kidney_capsule_left", opacity=0.35),
+                ],
+                interaction_request=InteractionRequest(
+                    type=InteractionRequestType.IDENTIFY_STRUCTURE,
+                    target_structure_id=challenge_target,
+                    prompt="Independent Challenge: Click the vessel that supplies oxygenated blood to the kidney from the abdominal aorta.",
+                ),
+            )
+
+        # Socratic Hint Progression on Incorrect Physical Selection
+        if selected_structure_id and target_structure_id and selected_structure_id != target_structure_id:
+            sel_struct = get_structure_by_id(selected_structure_id)
+            sel_name = sel_struct.display_name if sel_struct else selected_structure_id
+
+            if hint_level == 1:
+                return AnatomyAgentResponse(
+                    tutor_message=(
+                        f"You selected the {sel_name}. [Hint 1 - Functional Clue]: Consider the difference in function: "
+                        "the vessel we are looking for is responsible for returning venous drainage back to the inferior vena cava (IVC), "
+                        "not supplying arterial blood or collecting urine."
+                    ),
+                    scene_actions=[
+                        SceneAction(action=AnatomyActionType.FOCUS_STRUCTURE, structure_id="hilum_of_kidney_left"),
+                    ],
+                    interaction_request=InteractionRequest(
+                        type=InteractionRequestType.IDENTIFY_STRUCTURE,
+                        target_structure_id=target_structure_id,
+                        prompt="Try again: click the vessel draining blood from the kidney.",
+                    ),
+                )
+            elif hint_level == 2:
+                return AnatomyAgentResponse(
+                    tutor_message=(
+                        f"[Hint 2 - Spatial Orientation]: Remember the classic anatomical mnemonic V-A-P (Anterior to Posterior). "
+                        "The Vein is situated in FRONT (most anterior), the Artery is in the MIDDLE, and the Pelvis is BEHIND (most posterior). "
+                        "Rotate the model to view the anterior surface."
+                    ),
+                    scene_actions=[
+                        SceneAction(action=AnatomyActionType.FOCUS_STRUCTURE, structure_id="hilum_of_kidney_left"),
+                        SceneAction(action=AnatomyActionType.SET_STRUCTURE_OPACITY, structure_id="kidney_capsule_left", opacity=0.2),
+                    ],
+                    interaction_request=InteractionRequest(
+                        type=InteractionRequestType.IDENTIFY_STRUCTURE,
+                        target_structure_id=target_structure_id,
+                        prompt="Identify the anterior-most vessel in front of the renal artery.",
+                    ),
+                )
+            else:
+                return AnatomyAgentResponse(
+                    tutor_message=(
+                        f"[Hint 3 - Near-Target Guidance]: Look directly at the hilum from the ventral view. "
+                        f"The {target_structure_id.replace('_', ' ').title()} is the wide vessel crossing anterior to the renal artery."
+                    ),
+                    scene_actions=[
+                        SceneAction(action=AnatomyActionType.FOCUS_STRUCTURE, structure_id=target_structure_id),
+                    ],
+                    interaction_request=InteractionRequest(
+                        type=InteractionRequestType.IDENTIFY_STRUCTURE,
+                        target_structure_id=target_structure_id,
+                        prompt="Select the target vessel.",
+                    ),
+                )
+
+        return AnatomyAgentResponse(
+            tutor_message=(
+                "You are inspecting the 3D Renal Model. Click any anatomical structure (renal artery, renal vein, pelvis, cortex, pyramids) "
+                "or request a lesson on renal blood flow or internal parenchymal organization."
+            ),
+            scene_actions=[SceneAction(action=AnatomyActionType.RESET_SCENE)],
+            interaction_request=None,
+        )
+
+
+# ============================================================================
+# Legacy Cardiovascular Prototype Support (Preserves Stage-G & Prior Tests)
+# ============================================================================
 
 ANATOMY_AGENT_PROMPT = """
 You control an educational 3D cardiovascular anatomy viewport.
@@ -28,7 +259,7 @@ Allowed actions:
 
 CRITICAL SAFETY RULE:
 You may use ONLY structure_id values present in the supplied structure inventory.
-Never invent an ID. If the user query refers to an unsupported structure (e.g. kidney, liver, brain),
+Never invent an ID. If the user query refers to an unsupported structure (e.g. liver, brain),
 return an error object instead of a command.
 
 Successful JSON:
@@ -52,17 +283,11 @@ UNSUPPORTED_ANATOMY_KEYWORDS = (
 
 
 def resolve_query_to_command(query: str) -> tuple[AnatomyCommand, dict[str, Any]]:
-    """Deterministic natural-language parser and ontology resolver.
-
-    Maps student text directly into validated typed scene commands with
-    associated educational context. Rejects unsupported or hallucinated organs.
-    """
     if not isinstance(query, str) or not query.strip():
         raise AnatomyAgentError("Anatomy query must be a non-empty string")
 
     clean_query = " " + " ".join(re.findall(r"[a-zA-Z0-9_]+", query.casefold())) + " "
 
-    # 1. Check for reset
     if any(k in clean_query for k in [" reset ", " clear view ", " restore default ", " default view ", " reset view "]):
         cmd = AnatomyCommand(action=AnatomyAction.RESET)
         return cmd, {
@@ -71,14 +296,12 @@ def resolve_query_to_command(query: str) -> tuple[AnatomyCommand, dict[str, Any]
             "message": "Viewport reset to canonical anatomical orientation.",
         }
 
-    # 2. Check for explicit unsupported anatomical organs
     for kw in UNSUPPORTED_ANATOMY_KEYWORDS:
         if f" {kw} " in clean_query or f" {kw}s " in clean_query:
             raise AnatomyAgentError(
                 f"UNSUPPORTED_STRUCTURE: Structure '{kw}' is outside the verified cardiovascular anatomy ontology (11 structures supported)."
             )
 
-    # 3. Detect action intent
     action = AnatomyAction.FOCUS
     if any(k in clean_query for k in [" highlight ", " glow ", " emphasize ", " select "]):
         action = AnatomyAction.HIGHLIGHT
@@ -93,10 +316,7 @@ def resolve_query_to_command(query: str) -> tuple[AnatomyCommand, dict[str, Any]
     elif any(k in clean_query for k in [" focus ", " zoom ", " center ", " look at "]):
         action = AnatomyAction.FOCUS
 
-    # 4. Resolve target structures
     matched_ids: list[str] = []
-
-    # Map candidate search phrases sorted by length descending to match multi-word phrases first
     candidates: list[tuple[str, str]] = []
     for s in MVP_STRUCTURES:
         candidates.append((s.structure_id, s.structure_id))
@@ -131,8 +351,6 @@ def resolve_query_to_command(query: str) -> tuple[AnatomyCommand, dict[str, Any]
 
 
 class AnatomyCommandAgent:
-    """Convert natural language into validated viewport commands."""
-
     def __init__(self, backend=None):
         self.backend = backend
         self.trace: list[dict[str, Any]] = []
@@ -196,7 +414,6 @@ class AnatomyCommandAgent:
             )
             return validated
 
-        # Deterministic offline resolution
         cmd, _ = resolve_query_to_command(query)
         self.trace.append(
             {

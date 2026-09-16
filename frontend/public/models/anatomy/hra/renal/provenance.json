@@ -1,0 +1,53 @@
+{
+  "provenance_schema_version": "1.0.0",
+  "dataset": "Human Reference Atlas (HRA) CCF 3D Reference Object Library",
+  "organization": "HuBMAP Consortium / NIH Common Fund",
+  "license": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "HuBMAP Human Reference Atlas (HRA) CCF 3D Reference Object Library, NIH HuBMAP Consortium (CC BY 4.0)",
+  "coordinate_system": "HuBMAP CCF (Common Coordinate Framework) v1.3",
+  "ontology_standards": [
+    "UBERON",
+    "FMA"
+  ],
+  "assets": [
+    {
+      "local_filename": "VH_M_Kidney_L.glb",
+      "original_filename": "VH_M_Kidney_L.glb",
+      "source_url": "https://raw.githubusercontent.com/hubmapconsortium/ccf-releases/main/v1.3/models/VH_M_Kidney_L.glb",
+      "release_version": "v1.3",
+      "size_bytes": 846088,
+      "sha256": "785d778848f683457a41aaec565c829141be3f6b7e0d37e6dff918706346bc35",
+      "structures_used": [
+        "kidney_capsule_left",
+        "hilum_of_kidney_left",
+        "renal_cortex_left",
+        "renal_medulla_left"
+      ]
+    },
+    {
+      "local_filename": "VH_M_Ureter_L.glb",
+      "original_filename": "VH_M_Ureter_L.glb",
+      "source_url": "https://raw.githubusercontent.com/hubmapconsortium/ccf-releases/main/v1.3/models/VH_M_Ureter_L.glb",
+      "release_version": "v1.3",
+      "size_bytes": 682796,
+      "sha256": "b6e27766b5e5663fe31d96052caa49cd4fab782eed39367c26fec517b3ba0ebb",
+      "structures_used": [
+        "renal_pelvis_left",
+        "ureter_left"
+      ]
+    },
+    {
+      "local_filename": "VH_M_Blood_Vasculature_Kidney.glb",
+      "original_filename": "VH_M_Blood_Vasculature_Kidney.glb",
+      "source_url": "https://raw.githubusercontent.com/hubmapconsortium/ccf-3d-reference-object-library/main/VH_Male/v1.2/VH_M_Blood_Vasculature_Kidney.glb",
+      "release_version": "v1.2",
+      "size_bytes": 97472,
+      "sha256": "63cecbc05b8ef0cf80fd2b829cb430d554ab6bb536eec16c4c81b2b41a1671ea",
+      "structures_used": [
+        "renal_artery_left",
+        "renal_vein_left"
+      ]
+    }
+  ]
+}
