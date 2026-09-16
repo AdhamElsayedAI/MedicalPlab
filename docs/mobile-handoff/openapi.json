@@ -1,0 +1,4942 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MedicalPlab API",
+    "description": "Evidence-Grounded Medical Intelligence Platform API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/university/subjects": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Subjects",
+        "operationId": "subjects_api_v1_university_subjects_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/topics": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Topics",
+        "operationId": "topics_api_v1_university_topics_get",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/question": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Question",
+        "operationId": "question_api_v1_university_question_get",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject"
+            }
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Topic"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/answer": {
+      "post": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Answer",
+        "operationId": "answer_api_v1_university_answer_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 120,
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Answer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/progress": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Progress",
+        "operationId": "progress_api_v1_university_progress_get",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 120,
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/version": {
+      "get": {
+        "summary": "Version",
+        "operationId": "version_api_v1_version_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Version Api V1 Version Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/structures": {
+      "get": {
+        "summary": "Anatomy Structures",
+        "operationId": "anatomy_structures_api_v1_anatomy_structures_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Anatomy Structures Api V1 Anatomy Structures Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/command": {
+      "post": {
+        "summary": "Anatomy Command",
+        "operationId": "anatomy_command_api_v1_anatomy_command_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnatomyCommandRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Anatomy Command Api V1 Anatomy Command Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/learn/query": {
+      "post": {
+        "summary": "Course Learn Query",
+        "description": "Execute an evidence-grounded course learning query across medical tracks.",
+        "operationId": "course_learn_query_api_v1_learn_query_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseLearningQueryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Course Learn Query Api V1 Learn Query Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/clinical/reason": {
+      "post": {
+        "summary": "Clinical Reason",
+        "operationId": "clinical_reason_api_v1_clinical_reason_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClinicalReasonRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/tutor/chat": {
+      "post": {
+        "summary": "Tutor Chat",
+        "description": "Canonical Evidence-Grounded Socratic Tutor chat endpoint.",
+        "operationId": "tutor_chat_api_v1_tutor_chat_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TutorChatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TutorChatResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plab/questions": {
+      "get": {
+        "summary": "List Plab Questions",
+        "operationId": "list_plab_questions_api_v1_plab_questions_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response List Plab Questions Api V1 Plab Questions Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plab/questions/{question_id}": {
+      "get": {
+        "summary": "Get Plab Question",
+        "operationId": "get_plab_question_api_v1_plab_questions__question_id__get",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Plab Question Api V1 Plab Questions  Question Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plab/evaluate": {
+      "post": {
+        "summary": "Evaluate Plab Answer",
+        "operationId": "evaluate_plab_answer_api_v1_plab_evaluate_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PLABEvaluationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Evaluate Plab Answer Api V1 Plab Evaluate Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/plab/progress": {
+      "get": {
+        "summary": "Plab Progress",
+        "operationId": "plab_progress_api_v1_plab_progress_get",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Plab Progress Api V1 Plab Progress Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/reviews": {
+      "get": {
+        "summary": "List Plab Reviews",
+        "operationId": "list_plab_reviews_api_v1_internal_plab_reviews_get",
+        "parameters": [
+          {
+            "name": "risk_level",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Risk Level"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response List Plab Reviews Api V1 Internal Plab Reviews Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/review/status/{question_id}": {
+      "get": {
+        "summary": "Plab Review Status",
+        "operationId": "plab_review_status_api_v1_internal_plab_review_status__question_id__get",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Plab Review Status Api V1 Internal Plab Review Status  Question Id  Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/review/{question_id}/start": {
+      "post": {
+        "summary": "Start Plab Review",
+        "operationId": "start_plab_review_api_v1_internal_plab_review__question_id__start_post",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewStartRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Start Plab Review Api V1 Internal Plab Review  Question Id  Start Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/review/{question_id}/promotion-eligibility": {
+      "get": {
+        "summary": "Plab Promotion Eligibility",
+        "operationId": "plab_promotion_eligibility_api_v1_internal_plab_review__question_id__promotion_eligibility_get",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Plab Promotion Eligibility Api V1 Internal Plab Review  Question Id  Promotion Eligibility Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/review/{question_id}/decision": {
+      "post": {
+        "summary": "Submit Plab Review",
+        "operationId": "submit_plab_review_api_v1_internal_plab_review__question_id__decision_post",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewDecisionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Submit Plab Review Api V1 Internal Plab Review  Question Id  Decision Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/questions/{question_id}/revision": {
+      "patch": {
+        "summary": "Revise Plab Question",
+        "operationId": "revise_plab_question_api_v1_internal_plab_questions__question_id__revision_patch",
+        "parameters": [
+          {
+            "name": "question_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Question Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuestionRevisionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Revise Plab Question Api V1 Internal Plab Questions  Question Id  Revision Patch"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/internal/plab/telemetry": {
+      "get": {
+        "summary": "Plab Telemetry",
+        "operationId": "plab_telemetry_api_v1_internal_plab_telemetry_get",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "x-user-role",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Role"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Plab Telemetry Api V1 Internal Plab Telemetry Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/adaptive/state": {
+      "get": {
+        "tags": [
+          "Adaptive Learning Engine"
+        ],
+        "summary": "Get Learner State",
+        "description": "Retrieve the unified learner state, topic mastery, weaknesses, and recommendations.\n\nEndpoint: GET /api/v1/adaptive/state\nPurpose: Retrieve unified learner state.\nInput: Header X-User-Id or Query learner_id.\nOutput: LearnerState.\nReason: Single unified source of truth on student educational progress.",
+        "operationId": "get_learner_state_api_v1_adaptive_state_get",
+        "parameters": [
+          {
+            "name": "learner_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Learner Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearnerState"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/adaptive/recommendation": {
+      "get": {
+        "tags": [
+          "Adaptive Learning Engine"
+        ],
+        "summary": "Get Recommendation",
+        "description": "Retrieve the highest priority next learning action chosen by the Adaptive Decision Engine.\n\nEndpoint: GET /api/v1/adaptive/recommendation\nPurpose: Next best learning action.\nInput: Header X-User-Id or Query learner_id.\nOutput: AdaptiveRecommendation or null.\nReason: Guides student directly to their next intervention.",
+        "operationId": "get_recommendation_api_v1_adaptive_recommendation_get",
+        "parameters": [
+          {
+            "name": "learner_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Learner Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/AdaptiveRecommendation"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Recommendation Api V1 Adaptive Recommendation Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/adaptive/event": {
+      "post": {
+        "tags": [
+          "Adaptive Learning Engine"
+        ],
+        "summary": "Record Learning Event",
+        "description": "Ingest a learning interaction event and return the updated learner state.\n\nEndpoint: POST /api/v1/adaptive/event\nPurpose: Ingest learning interaction event.\nInput: LearningEvent JSON body.\nOutput: Updated LearnerState.\nReason: Enables real-time mastery recalculation following practice or review.",
+        "operationId": "record_learning_event_api_v1_adaptive_event_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LearningEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearnerState"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/adaptive/remediate": {
+      "post": {
+        "tags": [
+          "Adaptive Learning Engine"
+        ],
+        "summary": "Trigger Remediation",
+        "description": "Trigger an evidence-grounded Socratic tutor intervention targeted at student weakness.\n\nEndpoint: POST /api/v1/adaptive/remediate\nPurpose: Trigger Grounded Tutor remediation for active weakness.\nInput: RemediationRequest JSON body.\nOutput: TutorChatResponse (verified by Phase 1 verifier).\nReason: Connects adaptive gap detection to verified Socratic tutor safely.",
+        "operationId": "trigger_remediation_api_v1_adaptive_remediate_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RemediationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TutorChatResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/adaptive/loop-status": {
+      "get": {
+        "tags": [
+          "Adaptive Learning Engine"
+        ],
+        "summary": "Get Loop Status",
+        "description": "Check whether mastery has improved following an intervention.\n\nEndpoint: GET /api/v1/adaptive/loop-status\nPurpose: Evaluate learning loop closure.\nInput: Query params topic, baseline_mastery, Header X-User-Id.\nOutput: JSON summary of initial vs current mastery.\nReason: Closes feedback loop across diagnostic assessment and re-evaluation.",
+        "operationId": "get_loop_status_api_v1_adaptive_loop_status_get",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Topic"
+            }
+          },
+          {
+            "name": "baseline_mastery",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Baseline Mastery"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "title": "Response Get Loop Status Api V1 Adaptive Loop Status Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/remediation/start": {
+      "post": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Start Remediation",
+        "description": "Initiate a bounded 3-turn Socratic remediation session for an incorrect option.\n\nEndpoint: POST /api/v1/remediation/start",
+        "operationId": "start_remediation_api_v1_remediation_start_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartRemediationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemediationTurnResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/remediation/turn": {
+      "post": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Advance Remediation Turn",
+        "description": "Advance the Socratic dialogue through Turn 2 (Guide) or Turn 3 (Consolidate).\n\nEndpoint: POST /api/v1/remediation/turn",
+        "operationId": "advance_remediation_turn_api_v1_remediation_turn_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TurnRemediationRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemediationTurnResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/remediation/session/{session_id}": {
+      "get": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Get Remediation Session",
+        "description": "Retrieve full remediation session state and 5-stage timeline.\n\nEndpoint: GET /api/v1/remediation/session/{session_id}",
+        "operationId": "get_remediation_session_api_v1_remediation_session__session_id__get",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemediationSessionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/remediation/session/{session_id}/transfer": {
+      "get": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Get Transfer Item",
+        "description": "Retrieve the eligible held-out transfer item without answer keys.\n\nEndpoint: GET /api/v1/remediation/session/{session_id}/transfer",
+        "operationId": "get_transfer_item_api_v1_remediation_session__session_id__transfer_get",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferItemDTO"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Submit Transfer Answer",
+        "description": "Submit transfer item answer for deterministic server-side scoring.\n\nEndpoint: POST /api/v1/remediation/session/{session_id}/transfer",
+        "operationId": "submit_transfer_answer_api_v1_remediation_session__session_id__transfer_post",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferSubmissionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransferSubmissionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/remediation/session/{session_id}/abandon": {
+      "post": {
+        "tags": [
+          "Intelligent Socratic Remediation"
+        ],
+        "summary": "Abandon Remediation Session",
+        "description": "Explicitly abandon an active remediation session.\n\nEndpoint: POST /api/v1/remediation/session/{session_id}/abandon",
+        "operationId": "abandon_remediation_session_api_v1_remediation_session__session_id__abandon_post",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemediationTurnResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/learning-intelligence/reasoning-gaps": {
+      "get": {
+        "tags": [
+          "learning-intelligence"
+        ],
+        "summary": "Get Reasoning Gap Radar",
+        "description": "Derive deterministic cross-learner reasoning-gap radar for educators.\n\nCRITICAL INVARIANTS:\n- Never leaks individual student names, emails, or IDs.\n- Suppresses aggregate breakdown if cohort unique learners < MIN_COHORT_N (server-enforced >= 3).\n- Caller CANNOT override or lower MIN_COHORT_N via query parameter.\n- Strictly excludes assisted transfer from qualified independent transfer counts and rates.\n- Modest epistemic language only ('POSSIBLE_PATTERN').\n- Rejects unknown cohort IDs with 404.\n- Blocks demo cohort in production without explicit configuration with 403.",
+        "operationId": "get_reasoning_gap_radar_api_v1_learning_intelligence_reasoning_gaps_get",
+        "parameters": [
+          {
+            "name": "cohort_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "description": "Cohort identifier. Defaults to the deterministic demo cohort.",
+              "default": "cohort_demo_renal_01",
+              "title": "Cohort Id"
+            },
+            "description": "Cohort identifier. Defaults to the deterministic demo cohort."
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional clinical topic filter (e.g. 'preclinical_renal').",
+              "title": "Topic"
+            },
+            "description": "Optional clinical topic filter (e.g. 'preclinical_renal')."
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional subject area filter.",
+              "title": "Subject"
+            },
+            "description": "Optional subject area filter."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReasoningGapRadarResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "description": "Health check endpoint for Google Cloud Run, Vercel, and monitoring.",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Root",
+        "description": "Root platform discovery endpoint.",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ai/chat": {
+      "post": {
+        "summary": "Ai Chat",
+        "description": "Evidence-grounded Socratic tutor chat endpoint.\n\nAccepts clinical query, applies safety verification, queries guideline\nevidence, and returns structured clinical reasoning with citations.",
+        "operationId": "ai_chat_ai_chat_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/evidence/query": {
+      "post": {
+        "summary": "Evidence Query Endpoint",
+        "description": "Direct query endpoint for Canonical Evidence Engine V1.1 inspection.",
+        "operationId": "evidence_query_endpoint_api_v1_evidence_query_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/student/analytics": {
+      "get": {
+        "summary": "Student Analytics",
+        "description": "Retrieve Bayesian knowledge tracing and mastery analytics for student.",
+        "operationId": "student_analytics_student_analytics_get",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/student/attempts": {
+      "post": {
+        "summary": "Record Student Attempt",
+        "description": "Record student question attempt and update Bayesian knowledge tracing.",
+        "operationId": "record_student_attempt_student_attempts_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{full_path}": {
+      "options": {
+        "summary": "Universal Stage G Proxy",
+        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
+        "operationId": "universal_stage_g_proxy__full_path__options",
+        "parameters": [
+          {
+            "name": "full_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Full Path"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Universal Stage G Proxy",
+        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
+        "operationId": "universal_stage_g_proxy__full_path__options",
+        "parameters": [
+          {
+            "name": "full_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Full Path"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Universal Stage G Proxy",
+        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
+        "operationId": "universal_stage_g_proxy__full_path__options",
+        "parameters": [
+          {
+            "name": "full_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Full Path"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Universal Stage G Proxy",
+        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
+        "operationId": "universal_stage_g_proxy__full_path__options",
+        "parameters": [
+          {
+            "name": "full_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Full Path"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Universal Stage G Proxy",
+        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
+        "operationId": "universal_stage_g_proxy__full_path__options",
+        "parameters": [
+          {
+            "name": "full_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Full Path"
+            }
+          },
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "x-tenant-id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Tenant-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdaptiveActionType": {
+        "type": "string",
+        "enum": [
+          "SOLVE_TARGETED_QUESTION",
+          "ASK_GROUNDED_TUTOR",
+          "REVIEW_CONCEPT",
+          "REPEAT_TOPIC"
+        ],
+        "title": "AdaptiveActionType"
+      },
+      "AdaptiveRecommendation": {
+        "properties": {
+          "recommendation_id": {
+            "type": "string",
+            "title": "Recommendation Id"
+          },
+          "action": {
+            "$ref": "#/components/schemas/AdaptiveActionType"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "priority": {
+            "$ref": "#/components/schemas/WeaknessPriority"
+          },
+          "target_question_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Question Id"
+          },
+          "tutor_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tutor Mode"
+          },
+          "tutor_query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tutor Query"
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "recommendation_id",
+          "action",
+          "subject",
+          "topic",
+          "priority",
+          "reason",
+          "explanation"
+        ],
+        "title": "AdaptiveRecommendation",
+        "description": "Next best pedagogical action chosen by the decision engine."
+      },
+      "AnatomyCommandRequest": {
+        "properties": {
+          "query": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 1000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Query"
+          },
+          "action": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "focus",
+                  "highlight",
+                  "isolate",
+                  "ghost",
+                  "reset",
+                  "show",
+                  "hide"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Action"
+          },
+          "structure_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "maxItems": 16,
+            "title": "Structure Ids"
+          },
+          "opacity": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.05
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opacity"
+          }
+        },
+        "type": "object",
+        "title": "AnatomyCommandRequest"
+      },
+      "Answer": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 5,
+            "title": "Question Id"
+          },
+          "selected_option": {
+            "type": "string",
+            "pattern": "^[A-E]$",
+            "title": "Selected Option"
+          },
+          "idempotency_key": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 8,
+            "title": "Idempotency Key"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question_id",
+          "selected_option",
+          "idempotency_key"
+        ],
+        "title": "Answer"
+      },
+      "AttemptRecord": {
+        "properties": {
+          "attempt_key": {
+            "type": "string",
+            "title": "Attempt Key"
+          },
+          "question_id": {
+            "type": "string",
+            "title": "Question Id"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "selected": {
+            "type": "string",
+            "title": "Selected"
+          },
+          "correct": {
+            "type": "boolean",
+            "title": "Correct"
+          },
+          "timestamp": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "attempt_key",
+          "question_id",
+          "subject",
+          "topic",
+          "selected",
+          "correct"
+        ],
+        "title": "AttemptRecord",
+        "description": "Normalized representation of a single learner attempt."
+      },
+      "ClinicalReasonRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 3,
+            "title": "Query"
+          },
+          "case_context": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 8000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Case Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "ClinicalReasonRequest"
+      },
+      "ConfidenceLevel": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "title": "ConfidenceLevel"
+      },
+      "CourseLearningQueryRequest": {
+        "properties": {
+          "course_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 2,
+            "title": "Course Id"
+          },
+          "query": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 3,
+            "title": "Query"
+          },
+          "intent": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "explain",
+                  "question",
+                  "compare",
+                  "check",
+                  "quiz"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Intent"
+          }
+        },
+        "type": "object",
+        "required": [
+          "course_id",
+          "query"
+        ],
+        "title": "CourseLearningQueryRequest"
+      },
+      "DataSufficiencyStatus": {
+        "type": "string",
+        "enum": [
+          "SUFFICIENT",
+          "INSUFFICIENT_COHORT_DATA"
+        ],
+        "title": "DataSufficiencyStatus",
+        "description": "Cohort data sufficiency status based on MIN_COHORT_N threshold."
+      },
+      "DistractorItem": {
+        "properties": {
+          "option": {
+            "type": "string",
+            "title": "Option"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text"
+          },
+          "why_incorrect": {
+            "type": "string",
+            "title": "Why Incorrect"
+          },
+          "supported_by_ref": {
+            "type": "string",
+            "title": "Supported By Ref"
+          }
+        },
+        "type": "object",
+        "required": [
+          "option",
+          "text",
+          "why_incorrect",
+          "supported_by_ref"
+        ],
+        "title": "DistractorItem"
+      },
+      "EvidenceSummaryItem": {
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "title": "Document Id"
+          },
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "license": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "License"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_id"
+        ],
+        "title": "EvidenceSummaryItem",
+        "description": "Safe, verified clinical/scientific evidence reference summary."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LatencyBreakdownDTO": {
+        "properties": {
+          "retrieval_ms": {
+            "type": "number",
+            "title": "Retrieval Ms",
+            "default": 0.0
+          },
+          "ttft_ms": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ttft Ms"
+          },
+          "generation_ms": {
+            "type": "number",
+            "title": "Generation Ms",
+            "default": 0.0
+          },
+          "post_verify_ms": {
+            "type": "number",
+            "title": "Post Verify Ms",
+            "default": 0.0
+          },
+          "total_ms": {
+            "type": "number",
+            "title": "Total Ms",
+            "default": 0.0
+          }
+        },
+        "type": "object",
+        "title": "LatencyBreakdownDTO"
+      },
+      "LearnerState": {
+        "properties": {
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "total_attempts": {
+            "type": "integer",
+            "title": "Total Attempts",
+            "default": 0
+          },
+          "correct_attempts": {
+            "type": "integer",
+            "title": "Correct Attempts",
+            "default": 0
+          },
+          "overall_accuracy": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overall Accuracy"
+          },
+          "topic_mastery": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/TopicMasteryRecord"
+            },
+            "type": "object",
+            "title": "Topic Mastery"
+          },
+          "weak_topics": {
+            "items": {
+              "$ref": "#/components/schemas/WeakTopicRecord"
+            },
+            "type": "array",
+            "title": "Weak Topics"
+          },
+          "recent_activity": {
+            "items": {
+              "$ref": "#/components/schemas/AttemptRecord"
+            },
+            "type": "array",
+            "title": "Recent Activity"
+          },
+          "recommendations": {
+            "items": {
+              "$ref": "#/components/schemas/AdaptiveRecommendation"
+            },
+            "type": "array",
+            "title": "Recommendations"
+          }
+        },
+        "type": "object",
+        "required": [
+          "learner_id"
+        ],
+        "title": "LearnerState",
+        "description": "Unified educational representation of the learner."
+      },
+      "LearningEvent": {
+        "properties": {
+          "event_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Event Id"
+          },
+          "learner_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Learner Id"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "QUESTION_ATTEMPT",
+              "TUTOR_INTERVENTION",
+              "TOPIC_REVIEW"
+            ],
+            "title": "Event Type",
+            "default": "QUESTION_ATTEMPT"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "question_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question Id"
+          },
+          "selected_option": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selected Option"
+          },
+          "is_correct": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Correct"
+          },
+          "attempt_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attempt Key"
+          },
+          "timestamp": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timestamp"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subject",
+          "topic"
+        ],
+        "title": "LearningEvent",
+        "description": "Incoming learning telemetry event."
+      },
+      "MasteryLevel": {
+        "type": "string",
+        "enum": [
+          "beginner",
+          "developing",
+          "proficient",
+          "advanced"
+        ],
+        "title": "MasteryLevel"
+      },
+      "MasteryStatus": {
+        "type": "string",
+        "enum": [
+          "not_started",
+          "needs_review",
+          "in_progress",
+          "mastered"
+        ],
+        "title": "MasteryStatus"
+      },
+      "PLABEvaluationRequest": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 3,
+            "title": "Question Id"
+          },
+          "selected_option": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "title": "Selected Option"
+          },
+          "idempotency_key": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 8,
+            "title": "Idempotency Key"
+          },
+          "response_time_ms": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 86400000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Response Time Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question_id",
+          "selected_option",
+          "idempotency_key"
+        ],
+        "title": "PLABEvaluationRequest"
+      },
+      "QuestionRevisionRequest": {
+        "properties": {
+          "changes": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Changes"
+          },
+          "revision_reason": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 3,
+            "title": "Revision Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "changes",
+          "revision_reason"
+        ],
+        "title": "QuestionRevisionRequest"
+      },
+      "ReasoningGapAggregate": {
+        "properties": {
+          "pattern_id": {
+            "type": "string",
+            "title": "Pattern Id"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category"
+          },
+          "reasoning_pattern": {
+            "type": "string",
+            "title": "Reasoning Pattern"
+          },
+          "epistemic_status": {
+            "type": "string",
+            "title": "Epistemic Status",
+            "description": "Epistemic status; always modest ('POSSIBLE_PATTERN'). Never 'CONFIRMED' or 'DIAGNOSED'.",
+            "default": "POSSIBLE_PATTERN"
+          },
+          "unique_learners_count": {
+            "type": "integer",
+            "title": "Unique Learners Count",
+            "description": "Number of distinct learners exhibiting this possible reasoning pattern."
+          },
+          "pattern_learner_count": {
+            "type": "integer",
+            "title": "Pattern Learner Count",
+            "description": "Number of distinct learners exhibiting this possible reasoning pattern.",
+            "default": 0
+          },
+          "sessions_count": {
+            "type": "integer",
+            "title": "Sessions Count",
+            "description": "Total completed remediation sessions associated with this pattern."
+          },
+          "prevalence_rate": {
+            "type": "number",
+            "title": "Prevalence Rate",
+            "description": "Ratio of unique learners exhibiting this pattern to total eligible cohort learners."
+          },
+          "transfer_metrics": {
+            "$ref": "#/components/schemas/TransferEffectivenessMetrics"
+          },
+          "evidence_references": {
+            "items": {
+              "$ref": "#/components/schemas/EvidenceSummaryItem"
+            },
+            "type": "array",
+            "title": "Evidence References"
+          }
+        },
+        "type": "object",
+        "required": [
+          "pattern_id",
+          "category",
+          "reasoning_pattern",
+          "unique_learners_count",
+          "sessions_count",
+          "prevalence_rate",
+          "transfer_metrics"
+        ],
+        "title": "ReasoningGapAggregate",
+        "description": "Aggregate metric for a specific observed reasoning-pattern signal across a cohort."
+      },
+      "ReasoningGapRadarResponse": {
+        "properties": {
+          "cohort_id": {
+            "type": "string",
+            "title": "Cohort Id"
+          },
+          "cohort_name": {
+            "type": "string",
+            "title": "Cohort Name"
+          },
+          "topic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subject"
+          },
+          "sufficiency_status": {
+            "$ref": "#/components/schemas/DataSufficiencyStatus"
+          },
+          "min_cohort_n": {
+            "type": "integer",
+            "title": "Min Cohort N",
+            "default": 3
+          },
+          "total_eligible_learners": {
+            "type": "integer",
+            "title": "Total Eligible Learners",
+            "default": 0
+          },
+          "total_eligible_sessions": {
+            "type": "integer",
+            "title": "Total Eligible Sessions",
+            "default": 0
+          },
+          "reasoning_gaps": {
+            "items": {
+              "$ref": "#/components/schemas/ReasoningGapAggregate"
+            },
+            "type": "array",
+            "title": "Reasoning Gaps"
+          },
+          "overall_transfer_effectiveness": {
+            "$ref": "#/components/schemas/TransferEffectivenessMetrics"
+          },
+          "is_demo_data": {
+            "type": "boolean",
+            "title": "Is Demo Data",
+            "default": false
+          },
+          "demo_disclaimer": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Demo Disclaimer"
+          },
+          "generated_at": {
+            "type": "number",
+            "title": "Generated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cohort_id",
+          "cohort_name",
+          "sufficiency_status"
+        ],
+        "title": "ReasoningGapRadarResponse",
+        "description": "Top-level response payload for the Educator Reasoning-Gap Radar view."
+      },
+      "ReasoningTimelineItem": {
+        "properties": {
+          "initial_pattern": {
+            "type": "string",
+            "title": "Initial Pattern",
+            "description": "Description of the initial distractor choice and suspected premise"
+          },
+          "learning_gap": {
+            "type": "string",
+            "title": "Learning Gap",
+            "description": "Calibrated hypothesis of the underlying reasoning pattern"
+          },
+          "guided_practice": {
+            "type": "string",
+            "title": "Guided Practice",
+            "description": "Status of bounded 3-turn Socratic practice",
+            "default": "In progress"
+          },
+          "transfer_result": {
+            "type": "string",
+            "title": "Transfer Result",
+            "description": "Independent assessment result",
+            "default": "Awaiting independent transfer assessment"
+          },
+          "next_recommendation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Recommendation",
+            "description": "Adaptive recommendation from Phase 2A"
+          },
+          "corrected_reasoning": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Corrected Reasoning",
+            "description": "Deprecated alias for guided practice synthesis"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "IN_PROGRESS",
+              "RESOLVED",
+              "UNRESOLVED",
+              "AWAITING_TRANSFER",
+              "COMPLETED",
+              "SAFETY_FALLBACK"
+            ],
+            "title": "Status",
+            "default": "IN_PROGRESS"
+          }
+        },
+        "type": "object",
+        "required": [
+          "initial_pattern",
+          "learning_gap"
+        ],
+        "title": "ReasoningTimelineItem",
+        "description": "5-stage reasoning progression tracking the complete educational journey."
+      },
+      "RemediationLifecycleState": {
+        "type": "string",
+        "enum": [
+          "CREATED",
+          "REMEDIATING",
+          "AWAITING_TRANSFER",
+          "COMPLETED"
+        ],
+        "title": "RemediationLifecycleState",
+        "description": "State machine lifecycle stages of a remediation session."
+      },
+      "RemediationOutcome": {
+        "type": "string",
+        "enum": [
+          "TRANSFER_CONFIRMED",
+          "TRANSFER_NOT_CONFIRMED",
+          "UNRESOLVED",
+          "ABANDONED",
+          "SAFETY_FALLBACK"
+        ],
+        "title": "RemediationOutcome",
+        "description": "Terminal outcomes for a remediation intervention."
+      },
+      "RemediationRequest": {
+        "properties": {
+          "topic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic"
+          },
+          "question_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question Id"
+          },
+          "preferred_mode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Mode"
+          },
+          "custom_query": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Custom Query"
+          }
+        },
+        "type": "object",
+        "title": "RemediationRequest",
+        "description": "Request to generate an evidence-grounded tutor intervention for a weakness."
+      },
+      "RemediationSessionResponse": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "user_id": {
+            "type": "string",
+            "title": "User Id"
+          },
+          "question_id": {
+            "type": "string",
+            "title": "Question Id"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "turn_number": {
+            "type": "integer",
+            "title": "Turn Number"
+          },
+          "max_turns": {
+            "type": "integer",
+            "title": "Max Turns"
+          },
+          "is_complete": {
+            "type": "boolean",
+            "title": "Is Complete"
+          },
+          "lifecycle_state": {
+            "$ref": "#/components/schemas/RemediationLifecycleState"
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RemediationOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "strategy": {
+            "$ref": "#/components/schemas/SocraticStrategyType"
+          },
+          "timeline": {
+            "$ref": "#/components/schemas/ReasoningTimelineItem"
+          },
+          "turns": {
+            "items": {
+              "$ref": "#/components/schemas/RemediationTurnRecord"
+            },
+            "type": "array",
+            "title": "Turns"
+          },
+          "transfer_item": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TransferItemDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "transfer_attempt": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TransferAttempt"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "user_id",
+          "question_id",
+          "topic",
+          "turn_number",
+          "max_turns",
+          "is_complete",
+          "lifecycle_state",
+          "strategy",
+          "timeline",
+          "turns"
+        ],
+        "title": "RemediationSessionResponse",
+        "description": "Full session inspection response for GET /api/v1/remediation/session/{session_id}."
+      },
+      "RemediationStatus": {
+        "type": "string",
+        "enum": [
+          "PROBING",
+          "GUIDING",
+          "CONFIRMING",
+          "RESOLVED",
+          "UNRESOLVED"
+        ],
+        "title": "RemediationStatus",
+        "description": "Transitional UI dialogue stages (retained for backward-compatible views)."
+      },
+      "RemediationTurnRecord": {
+        "properties": {
+          "turn_number": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 1.0,
+            "title": "Turn Number"
+          },
+          "phase": {
+            "type": "string",
+            "enum": [
+              "PROBE",
+              "GUIDE",
+              "CONFIRM",
+              "CONSOLIDATE"
+            ],
+            "title": "Phase"
+          },
+          "tutor_message": {
+            "type": "string",
+            "title": "Tutor Message"
+          },
+          "socratic_probe": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Socratic Probe"
+          },
+          "student_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Student Message"
+          },
+          "citations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "timestamp": {
+            "type": "number",
+            "title": "Timestamp"
+          },
+          "is_safety_fallback": {
+            "type": "boolean",
+            "title": "Is Safety Fallback",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "turn_number",
+          "phase",
+          "tutor_message"
+        ],
+        "title": "RemediationTurnRecord",
+        "description": "Audit record for an individual dialogue turn within the 3-turn limit."
+      },
+      "RemediationTurnResponse": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "turn_number": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 1.0,
+            "title": "Turn Number"
+          },
+          "max_turns": {
+            "type": "integer",
+            "title": "Max Turns",
+            "default": 3
+          },
+          "is_complete": {
+            "type": "boolean",
+            "title": "Is Complete"
+          },
+          "lifecycle_state": {
+            "$ref": "#/components/schemas/RemediationLifecycleState",
+            "default": "REMEDIATING"
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RemediationOutcome"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "remediation_status": {
+            "$ref": "#/components/schemas/RemediationStatus",
+            "default": "PROBING"
+          },
+          "pattern_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pattern Id"
+          },
+          "reasoning_pattern": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reasoning Pattern"
+          },
+          "strategy": {
+            "$ref": "#/components/schemas/SocraticStrategyType",
+            "default": "GUIDED_RECALL"
+          },
+          "timeline": {
+            "$ref": "#/components/schemas/ReasoningTimelineItem"
+          },
+          "tutor_message": {
+            "type": "string",
+            "title": "Tutor Message"
+          },
+          "socratic_probe": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Socratic Probe"
+          },
+          "citations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "transfer_available": {
+            "type": "boolean",
+            "title": "Transfer Available",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "turn_number",
+          "is_complete",
+          "timeline",
+          "tutor_message"
+        ],
+        "title": "RemediationTurnResponse",
+        "description": "Response contract returned by dialogue progression endpoints."
+      },
+      "ReviewDecisionRequest": {
+        "properties": {
+          "final_decision": {
+            "type": "string",
+            "enum": [
+              "APPROVED",
+              "REVISE",
+              "REJECT"
+            ],
+            "title": "Final Decision"
+          },
+          "clinical_correctness": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Clinical Correctness"
+          },
+          "sba_unambiguity": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Sba Unambiguity"
+          },
+          "uk_alignment": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Uk Alignment"
+          },
+          "evidence_adequacy": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Evidence Adequacy"
+          },
+          "distractor_quality": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Distractor Quality"
+          },
+          "explanation_quality": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "edit",
+              "fail"
+            ],
+            "title": "Explanation Quality"
+          },
+          "review_comments": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 4000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Review Comments"
+          },
+          "revision_notes": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 4000
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revision Notes"
+          }
+        },
+        "type": "object",
+        "required": [
+          "final_decision",
+          "clinical_correctness",
+          "sba_unambiguity",
+          "uk_alignment",
+          "evidence_adequacy",
+          "distractor_quality",
+          "explanation_quality"
+        ],
+        "title": "ReviewDecisionRequest"
+      },
+      "ReviewStartRequest": {
+        "properties": {
+          "reviewer_name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reviewer Name"
+          }
+        },
+        "type": "object",
+        "title": "ReviewStartRequest"
+      },
+      "SocraticStrategyType": {
+        "type": "string",
+        "enum": [
+          "GUIDED_RECALL",
+          "CONTRAST_CASE",
+          "STEPWISE_DECOMPOSITION",
+          "COUNTEREXAMPLE_PROBE"
+        ],
+        "title": "SocraticStrategyType",
+        "description": "Socratic pedagogical remediation strategies."
+      },
+      "StartRemediationRequest": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 3,
+            "title": "Question Id"
+          },
+          "selected_option": {
+            "type": "string",
+            "pattern": "^[A-E]$",
+            "title": "Selected Option"
+          },
+          "topic": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic"
+          },
+          "attempt_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attempt Id"
+          },
+          "idempotency_key": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Idempotency Key"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question_id",
+          "selected_option"
+        ],
+        "title": "StartRemediationRequest",
+        "description": "POST /api/v1/remediation/start payload."
+      },
+      "TopicMasteryRecord": {
+        "properties": {
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "total_attempts": {
+            "type": "integer",
+            "title": "Total Attempts",
+            "default": 0
+          },
+          "correct_attempts": {
+            "type": "integer",
+            "title": "Correct Attempts",
+            "default": 0
+          },
+          "accuracy": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Accuracy"
+          },
+          "mastery_score": {
+            "type": "number",
+            "title": "Mastery Score",
+            "default": 0.0
+          },
+          "mastery_level": {
+            "$ref": "#/components/schemas/MasteryLevel",
+            "default": "beginner"
+          },
+          "mastery_status": {
+            "$ref": "#/components/schemas/MasteryStatus",
+            "default": "not_started"
+          },
+          "confidence": {
+            "$ref": "#/components/schemas/ConfidenceLevel",
+            "default": "low"
+          },
+          "consecutive_errors": {
+            "type": "integer",
+            "title": "Consecutive Errors",
+            "default": 0
+          },
+          "last_attempt_correct": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Attempt Correct"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subject",
+          "topic"
+        ],
+        "title": "TopicMasteryRecord",
+        "description": "Deterministic mastery status for an individual subject/topic."
+      },
+      "TransferAttempt": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "title": "Question Id"
+          },
+          "question_version": {
+            "type": "string",
+            "title": "Question Version",
+            "default": "1.0.0"
+          },
+          "submitted_option": {
+            "type": "string",
+            "pattern": "^[A-E]$",
+            "title": "Submitted Option"
+          },
+          "is_correct": {
+            "type": "boolean",
+            "title": "Is Correct"
+          },
+          "was_assisted": {
+            "type": "boolean",
+            "title": "Was Assisted",
+            "default": false
+          },
+          "prior_exposure_count": {
+            "type": "integer",
+            "title": "Prior Exposure Count",
+            "default": 0
+          },
+          "submitted_at": {
+            "type": "number",
+            "title": "Submitted At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question_id",
+          "submitted_option",
+          "is_correct"
+        ],
+        "title": "TransferAttempt",
+        "description": "Scored submission on an independent transfer item."
+      },
+      "TransferEffectivenessMetrics": {
+        "properties": {
+          "transfer_attempted_count": {
+            "type": "integer",
+            "title": "Transfer Attempted Count",
+            "default": 0
+          },
+          "qualified_independent_transfer_count": {
+            "type": "integer",
+            "title": "Qualified Independent Transfer Count",
+            "default": 0
+          },
+          "transfer_demonstrated_count": {
+            "type": "integer",
+            "title": "Transfer Demonstrated Count",
+            "default": 0
+          },
+          "transfer_not_demonstrated_count": {
+            "type": "integer",
+            "title": "Transfer Not Demonstrated Count",
+            "default": 0
+          },
+          "assisted_excluded_count": {
+            "type": "integer",
+            "title": "Assisted Excluded Count",
+            "default": 0
+          },
+          "transfer_demonstration_rate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transfer Demonstration Rate"
+          }
+        },
+        "type": "object",
+        "title": "TransferEffectivenessMetrics",
+        "description": "Deterministic transfer metrics.\n\nCRITICAL INVARIANTS:\n1. qualified_independent_transfer_count = transfer_attempted_count - assisted_excluded_count\n2. Assisted/disqualified attempts are excluded from BOTH numerator AND denominator of transfer_demonstration_rate.\n3. transfer_demonstration_rate = transfer_demonstrated_count / qualified_independent_transfer_count (or None if qualified == 0)."
+      },
+      "TransferItemDTO": {
+        "properties": {
+          "question_id": {
+            "type": "string",
+            "title": "Question Id"
+          },
+          "stem": {
+            "type": "string",
+            "title": "Stem"
+          },
+          "options": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Options"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "difficulty": {
+            "type": "string",
+            "title": "Difficulty"
+          },
+          "evidence_title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Title"
+          },
+          "evidence_license": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence License"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question_id",
+          "stem",
+          "options",
+          "subject",
+          "topic",
+          "difficulty"
+        ],
+        "title": "TransferItemDTO",
+        "description": "Held-out transfer assessment item delivered to learner.\n\nSTRICT INVARIANT:\nExcludes correct_answer, explanation, or distractor annotations to prevent answer key leakage."
+      },
+      "TransferSubmissionRequest": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 8,
+            "title": "Session Id"
+          },
+          "question_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 3,
+            "title": "Question Id"
+          },
+          "selected_option": {
+            "type": "string",
+            "pattern": "^[A-E]$",
+            "title": "Selected Option"
+          },
+          "was_assisted": {
+            "type": "boolean",
+            "title": "Was Assisted",
+            "default": false
+          },
+          "idempotency_key": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Idempotency Key"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "question_id",
+          "selected_option"
+        ],
+        "title": "TransferSubmissionRequest",
+        "description": "POST /api/v1/remediation/session/{session_id}/transfer payload."
+      },
+      "TransferSubmissionResponse": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "outcome": {
+            "$ref": "#/components/schemas/RemediationOutcome"
+          },
+          "is_correct": {
+            "type": "boolean",
+            "title": "Is Correct"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation"
+          },
+          "citations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "timeline": {
+            "$ref": "#/components/schemas/ReasoningTimelineItem"
+          },
+          "next_recommendation": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Next Recommendation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "outcome",
+          "is_correct",
+          "explanation",
+          "timeline"
+        ],
+        "title": "TransferSubmissionResponse",
+        "description": "Response returned when a transfer item is scored."
+      },
+      "TurnRemediationRequest": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 8,
+            "title": "Session Id"
+          },
+          "student_message": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 1,
+            "title": "Student Message"
+          },
+          "idempotency_key": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Idempotency Key"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "student_message"
+        ],
+        "title": "TurnRemediationRequest",
+        "description": "POST /api/v1/remediation/turn payload."
+      },
+      "TutorChatRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "maxLength": 4000,
+            "minLength": 2,
+            "title": "Query",
+            "description": "Learner clinical/physiological query"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "socratic_hint",
+              "mechanistic_explanation",
+              "misconception_diagnosis",
+              "distractor_explanation",
+              "concept_comparison",
+              "revision_summary"
+            ],
+            "title": "Mode",
+            "description": "Pedagogical dialogue mode",
+            "default": "auto"
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Session Id",
+            "description": "Client session UUID"
+          },
+          "learner_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Learner Id",
+            "description": "Anonymized learner ID (demo/device)"
+          },
+          "question_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Question Id",
+            "description": "University question ID (e.g. UNI-RENAL-001)"
+          },
+          "attempt_key": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attempt Key",
+            "description": "Submission proof key issued upon University answer submission; mandatory to unlock POST_SUBMISSION"
+          },
+          "topic": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Topic",
+            "description": "Physiological topic (e.g. Glomerular filtration barrier)"
+          },
+          "hint_level": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 3.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hint Level",
+            "description": "1: Concept, 2: Mechanism, 3: Near-answer"
+          },
+          "selected_option": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-E]$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selected Option",
+            "description": "Option selected by learner"
+          },
+          "is_submitted": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Submitted",
+            "description": "Client-provided hint; strictly NON-AUTHORITATIVE and ignored by server for state elevation"
+          },
+          "max_context_turns": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Max Context Turns",
+            "description": "Maximum previous dialogue turns to include",
+            "default": 3
+          }
+        },
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "title": "TutorChatRequest"
+      },
+      "TutorChatResponse": {
+        "properties": {
+          "response_id": {
+            "type": "string",
+            "title": "Response Id"
+          },
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "socratic_question": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Socratic Question"
+          },
+          "hints": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hints"
+          },
+          "misconception": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Misconception"
+          },
+          "mechanistic_explanation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mechanistic Explanation"
+          },
+          "distractor_analysis": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/DistractorItem"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Distractor Analysis"
+          },
+          "revision_summary": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Revision Summary"
+          },
+          "citations": {
+            "items": {
+              "$ref": "#/components/schemas/TutorCitationDTO"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "evidence_packet_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Packet Id"
+          },
+          "support_status": {
+            "type": "string",
+            "enum": [
+              "SUPPORTED",
+              "SAFE_FALLBACK",
+              "PARTIALLY_SUPPORTED",
+              "UNSUPPORTED",
+              "ABSTAIN"
+            ],
+            "title": "Support Status",
+            "default": "SUPPORTED"
+          },
+          "abstain": {
+            "type": "boolean",
+            "title": "Abstain",
+            "default": false
+          },
+          "abstain_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Abstain Reason"
+          },
+          "fallback_applied": {
+            "type": "boolean",
+            "title": "Fallback Applied",
+            "default": false
+          },
+          "pedagogical_state": {
+            "type": "string",
+            "enum": [
+              "PRE_SUBMISSION",
+              "POST_SUBMISSION",
+              "GENERAL_STUDY"
+            ],
+            "title": "Pedagogical State",
+            "default": "PRE_SUBMISSION"
+          },
+          "provider": {
+            "type": "string",
+            "title": "Provider",
+            "default": "stub"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model",
+            "default": "stub"
+          },
+          "requested_provider": {
+            "type": "string",
+            "title": "Requested Provider",
+            "default": "stub"
+          },
+          "requested_model": {
+            "type": "string",
+            "title": "Requested Model",
+            "default": "stub"
+          },
+          "actual_generation_provider": {
+            "type": "string",
+            "title": "Actual Generation Provider",
+            "default": "stub"
+          },
+          "actual_generation_model": {
+            "type": "string",
+            "title": "Actual Generation Model",
+            "default": "stub"
+          },
+          "provider_failover_applied": {
+            "type": "boolean",
+            "title": "Provider Failover Applied",
+            "default": false
+          },
+          "primary_provider_error": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Provider Error"
+          },
+          "latency_breakdown": {
+            "$ref": "#/components/schemas/LatencyBreakdownDTO"
+          },
+          "verification": {
+            "$ref": "#/components/schemas/TutorVerificationSummaryDTO"
+          },
+          "draft_verification": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TutorVerificationSummaryDTO"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "response_id",
+          "session_id",
+          "mode",
+          "message"
+        ],
+        "title": "TutorChatResponse"
+      },
+      "TutorCitationDTO": {
+        "properties": {
+          "ref": {
+            "type": "string",
+            "title": "Ref"
+          },
+          "quote": {
+            "type": "string",
+            "title": "Quote"
+          },
+          "document_id": {
+            "type": "string",
+            "title": "Document Id"
+          },
+          "pmcid": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pmcid"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "license": {
+            "type": "string",
+            "title": "License"
+          },
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ref",
+          "quote",
+          "document_id",
+          "title",
+          "license",
+          "chunk_id"
+        ],
+        "title": "TutorCitationDTO"
+      },
+      "TutorVerificationSummaryDTO": {
+        "properties": {
+          "total_propositions": {
+            "type": "integer",
+            "title": "Total Propositions",
+            "default": 0
+          },
+          "supported_propositions": {
+            "type": "integer",
+            "title": "Supported Propositions",
+            "default": 0
+          },
+          "unsupported_propositions": {
+            "type": "integer",
+            "title": "Unsupported Propositions",
+            "default": 0
+          },
+          "non_factual_statements": {
+            "type": "integer",
+            "title": "Non Factual Statements",
+            "default": 0
+          },
+          "veto_flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Veto Flags"
+          }
+        },
+        "type": "object",
+        "title": "TutorVerificationSummaryDTO"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WeakTopicRecord": {
+        "properties": {
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "topic": {
+            "type": "string",
+            "title": "Topic"
+          },
+          "priority": {
+            "$ref": "#/components/schemas/WeaknessPriority"
+          },
+          "failure_rate": {
+            "type": "number",
+            "title": "Failure Rate"
+          },
+          "missed_count": {
+            "type": "integer",
+            "title": "Missed Count"
+          },
+          "total_attempts": {
+            "type": "integer",
+            "title": "Total Attempts"
+          },
+          "consecutive_errors": {
+            "type": "integer",
+            "title": "Consecutive Errors",
+            "default": 0
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          }
+        },
+        "type": "object",
+        "required": [
+          "subject",
+          "topic",
+          "priority",
+          "failure_rate",
+          "missed_count",
+          "total_attempts",
+          "reason"
+        ],
+        "title": "WeakTopicRecord",
+        "description": "Identified knowledge deficit in a specific medical topic."
+      },
+      "WeaknessPriority": {
+        "type": "string",
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "title": "WeaknessPriority"
+      }
+    }
+  }
+}
