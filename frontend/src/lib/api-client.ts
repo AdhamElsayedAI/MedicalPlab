@@ -13,6 +13,13 @@ import type {
   TutorChatResponse,
   LearnerState,
   AdaptiveRecommendation,
+  StartRemediationRequest,
+  TurnRemediationRequest,
+  RemediationTurnResponse,
+  TransferItemDTO,
+  TransferSubmissionRequest,
+  TransferSubmissionResponse,
+  RemediationSessionResponse,
 } from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
@@ -27,13 +34,48 @@ export class ApiUnavailableError extends Error {
   }
 }
 
+export const LEARNER_STORAGE_KEY = "medicalplab.university.learner.v1";
+
+export function getAuthoritativeLearnerId(): string {
+  if (typeof window !== "undefined") {
+    try {
+      const stored = localStorage.getItem(LEARNER_STORAGE_KEY);
+      if (stored && stored.trim()) {
+        return stored.trim();
+      }
+      const newId = `uni-${crypto.randomUUID()}`;
+      localStorage.setItem(LEARNER_STORAGE_KEY, newId);
+      return newId;
+    } catch {
+      // Storage unavailable fallback
+    }
+  }
+  return "demo-student-001";
+}
+
 class PlatformApiClient {
-  private userId: string = "user_alice";
+  private userId: string | null = null;
   private tenantId: string = "tenant_nhs_demo";
 
-  setUser(userId: string, tenantId: string) {
+  setUser(userId: string, tenantId: string = "tenant_nhs_demo") {
     this.userId = userId;
     this.tenantId = tenantId;
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem(LEARNER_STORAGE_KEY, userId);
+      } catch {
+        // Storage fallback
+      }
+    }
+  }
+
+  getUserId(): string {
+    if (this.userId && this.userId.trim()) {
+      return this.userId.trim();
+    }
+    const resolved = getAuthoritativeLearnerId();
+    this.userId = resolved;
+    return resolved;
   }
 
   getBaseUrl(): string {
@@ -44,10 +86,10 @@ class PlatformApiClient {
     return RUNTIME_MODE;
   }
 
-  private getHeaders(): HeadersInit {
+  private getHeaders(overrideUserId?: string): HeadersInit {
     return {
       "Content-Type": "application/json",
-      "X-User-Id": this.userId,
+      "X-User-Id": overrideUserId || this.getUserId(),
       "X-Tenant-Id": this.tenantId,
     };
   }
@@ -359,9 +401,8 @@ class PlatformApiClient {
     is_correct?: boolean;
     attempt_key?: string;
   }, learnerId?: string): Promise<LearnerState> {
-    const headers = { ...this.getHeaders() as Record<string, string> };
-    const effectiveLearner = learnerId || this.userId;
-    headers["X-User-Id"] = effectiveLearner;
+    const effectiveLearner = learnerId || this.getUserId();
+    const headers = { ...(this.getHeaders(effectiveLearner) as Record<string, string>) };
 
     const response = await fetch(`${API_BASE_URL}/api/v1/adaptive/event`, {
       method: "POST",
@@ -373,6 +414,117 @@ class PlatformApiClient {
     });
     if (!response.ok) {
       throw new ApiUnavailableError(`Recording adaptive event returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async startRemediation(req: StartRemediationRequest, learnerId?: string): Promise<RemediationTurnResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/start`, {
+      method: "POST",
+      headers: this.getHeaders(learnerId),
+      body: JSON.stringify(req),
+    });
+    if (!response.ok) {
+      let detail = `Starting remediation returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async submitRemediationTurn(req: TurnRemediationRequest, learnerId?: string): Promise<RemediationTurnResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/turn`, {
+      method: "POST",
+      headers: this.getHeaders(learnerId),
+      body: JSON.stringify(req),
+    });
+    if (!response.ok) {
+      let detail = `Submitting remediation turn returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async getTransferItem(sessionId: string, learnerId?: string): Promise<TransferItemDTO> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/session/${sessionId}/transfer`, {
+      method: "GET",
+      headers: this.getHeaders(learnerId),
+    });
+    if (!response.ok) {
+      let detail = `Fetching transfer assessment item returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async submitTransferAnswer(req: TransferSubmissionRequest, learnerId?: string): Promise<TransferSubmissionResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/session/${req.session_id}/transfer`, {
+      method: "POST",
+      headers: this.getHeaders(learnerId),
+      body: JSON.stringify(req),
+    });
+    if (!response.ok) {
+      let detail = `Submitting transfer assessment returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async abandonRemediation(sessionId: string, learnerId?: string): Promise<RemediationTurnResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/session/${sessionId}/abandon`, {
+      method: "POST",
+      headers: this.getHeaders(learnerId),
+    });
+    if (!response.ok) {
+      let detail = `Abandoning remediation session returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async getRemediationSession(sessionId: string, learnerId?: string): Promise<RemediationSessionResponse> {
+    const response = await fetch(`${API_BASE_URL}/api/v1/remediation/session/${sessionId}`, {
+      method: "GET",
+      headers: this.getHeaders(learnerId),
+    });
+    if (!response.ok) {
+      let detail = `Fetching remediation session returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
     }
     return response.json();
   }

@@ -754,3 +754,135 @@ export interface LearnerState {
   }>;
   recommendations: AdaptiveRecommendation[];
 }
+
+export type RemediationLifecycleState =
+  | "CREATED"
+  | "REMEDIATING"
+  | "AWAITING_TRANSFER"
+  | "COMPLETED";
+
+export type RemediationOutcome =
+  | "TRANSFER_CONFIRMED"
+  | "TRANSFER_NOT_CONFIRMED"
+  | "UNRESOLVED"
+  | "ABANDONED"
+  | "SAFETY_FALLBACK";
+
+export type RemediationStatus =
+  | "PROBING"
+  | "GUIDING"
+  | "CONFIRMING"
+  | "RESOLVED"
+  | "UNRESOLVED";
+
+export interface ReasoningTimelineItem {
+  initial_pattern: string;
+  learning_gap: string;
+  guided_practice?: string;
+  transfer_result?: string;
+  next_recommendation?: string | null;
+  status: "IN_PROGRESS" | "RESOLVED" | "UNRESOLVED" | "AWAITING_TRANSFER" | "COMPLETED" | "SAFETY_FALLBACK";
+}
+
+export interface TransferItemDTO {
+  question_id: string;
+  stem: string;
+  options: Record<string, string>;
+  subject: string;
+  topic: string;
+  difficulty: string;
+  evidence_title?: string | null;
+  evidence_license?: string | null;
+}
+
+export interface TransferSubmissionRequest {
+  session_id: string;
+  question_id: string;
+  selected_option: string;
+  was_assisted?: boolean;
+  idempotency_key?: string | null;
+}
+
+export interface TransferSubmissionResponse {
+  session_id: string;
+  outcome: RemediationOutcome;
+  is_correct: boolean;
+  explanation: string;
+  citations: Array<{
+    ref: string;
+    quote: string;
+    chunk_id: string;
+    license: string;
+  }>;
+  timeline: ReasoningTimelineItem;
+  next_recommendation?: Record<string, any> | null;
+}
+
+export interface StartRemediationRequest {
+  question_id: string;
+  selected_option: string;
+  topic?: string | null;
+  attempt_id?: string | null;
+  idempotency_key?: string | null;
+}
+
+export interface TurnRemediationRequest {
+  session_id: string;
+  student_message: string;
+  idempotency_key?: string | null;
+}
+
+export interface RemediationTurnResponse {
+  session_id: string;
+  turn_number: number;
+  max_turns: number;
+  is_complete: boolean;
+  lifecycle_state?: RemediationLifecycleState;
+  outcome?: RemediationOutcome | null;
+  remediation_status: RemediationStatus;
+  pattern_id?: string | null;
+  reasoning_pattern?: string | null;
+  strategy: string;
+  timeline: ReasoningTimelineItem;
+  tutor_message: string;
+  socratic_probe?: string | null;
+  citations?: Array<{
+    ref: string;
+    title?: string;
+    license: string;
+    quote: string;
+    chunk_id: string;
+    pmcid?: string | null;
+  }>;
+  transfer_available?: boolean;
+}
+
+export interface RemediationSessionResponse {
+  session_id: string;
+  user_id: string;
+  question_id: string;
+  topic: string;
+  turn_number: number;
+  max_turns: number;
+  is_complete: boolean;
+  lifecycle_state: RemediationLifecycleState;
+  outcome?: RemediationOutcome | null;
+  strategy: string;
+  timeline: ReasoningTimelineItem;
+  turns: Array<{
+    turn_number: number;
+    phase: string;
+    tutor_message: string;
+    socratic_probe?: string | null;
+    student_message?: string | null;
+    citations: Array<{ ref: string; quote: string; chunk_id: string; license: string }>;
+    is_safety_fallback: boolean;
+  }>;
+  transfer_item?: TransferItemDTO | null;
+  transfer_attempt?: {
+    question_id: string;
+    submitted_option: string;
+    is_correct: boolean;
+    was_assisted: boolean;
+  } | null;
+}

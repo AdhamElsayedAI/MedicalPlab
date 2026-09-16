@@ -24,6 +24,8 @@ from medicalplab.stage_g.product_api import get_plab_service
 from medicalplab.stage_g.product_api import configure_plab_service, router as product_router
 from medicalplab.stage_g.runtime import get_runtime_mode, runtime_metadata, strict_runtime_enabled
 from medicalplab.university.api import router as university_router
+from medicalplab.adaptive.api import router as adaptive_router
+from medicalplab.remediation.api import router as remediation_router
 
 
 RUNTIME_MODE = get_runtime_mode()
@@ -74,6 +76,8 @@ app.add_middleware(
 
 app.include_router(product_router)
 app.include_router(university_router)
+app.include_router(adaptive_router)
+app.include_router(remediation_router)
 
 
 @app.get("/ready")
