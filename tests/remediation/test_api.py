@@ -132,3 +132,44 @@ def test_api_invalid_session_returns_404(client: TestClient):
         headers={"X-User-Id": "test_user"},
     )
     assert response.status_code == 404
+
+
+def test_get_remediation_session_wrong_owner_returns_403(client: TestClient):
+    """Regression test: GET /session/{session_id} with wrong owner returns 403 Forbidden, not 500."""
+    user_a = "learner_alpha_owner"
+    user_b = "learner_beta_intruder"
+
+    start_resp = client.post(
+        "/api/v1/remediation/start",
+        json={
+            "question_id": "UNI-RENAL-001",
+            "selected_option": "B",
+            "topic": "RAAS mechanisms",
+        },
+        headers={"X-User-Id": user_a},
+    )
+    assert start_resp.status_code == 200
+    session_id = start_resp.json()["session_id"]
+
+    # 1. Correct owner -> 200
+    resp_owner = client.get(
+        f"/api/v1/remediation/session/{session_id}",
+        headers={"X-User-Id": user_a},
+    )
+    assert resp_owner.status_code == 200
+    assert resp_owner.json()["session_id"] == session_id
+
+    # 2. Wrong owner -> 403 Forbidden (must NOT be 500)
+    resp_wrong = client.get(
+        f"/api/v1/remediation/session/{session_id}",
+        headers={"X-User-Id": user_b},
+    )
+    assert resp_wrong.status_code == 403
+    assert "Session does not belong to the requesting user" in resp_wrong.json()["detail"]
+
+    # 3. Unknown session -> 404 Not Found
+    resp_404 = client.get(
+        "/api/v1/remediation/session/REM-NONEXISTENT",
+        headers={"X-User-Id": user_a},
+    )
+    assert resp_404.status_code == 404

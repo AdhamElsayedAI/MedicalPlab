@@ -136,26 +136,34 @@ def get_remediation_session(
     _check_feature_enabled()
     user_id = _resolve_user_id(x_user_id)
     controller = get_remediation_controller()
-    session = controller.get_session(session_id, user_id=user_id)
-    if not session:
-        raise HTTPException(status_code=404, detail=f"Remediation session '{session_id}' not found.")
+    try:
+        session = controller.get_session(session_id, user_id=user_id)
+        if not session:
+            raise HTTPException(status_code=404, detail=f"Remediation session '{session_id}' not found.")
 
-    return RemediationSessionResponse(
-        session_id=session.session_id,
-        user_id=session.user_id,
-        question_id=session.question_id,
-        topic=session.topic,
-        turn_number=session.turn_number,
-        max_turns=session.max_turns,
-        is_complete=session.is_complete,
-        lifecycle_state=session.lifecycle_state,
-        outcome=session.outcome,
-        strategy=session.strategy,
-        timeline=session.timeline,
-        turns=session.turns,
-        transfer_item=None,
-        transfer_attempt=session.transfer_attempt,
-    )
+        return RemediationSessionResponse(
+            session_id=session.session_id,
+            user_id=session.user_id,
+            question_id=session.question_id,
+            topic=session.topic,
+            turn_number=session.turn_number,
+            max_turns=session.max_turns,
+            is_complete=session.is_complete,
+            lifecycle_state=session.lifecycle_state,
+            outcome=session.outcome,
+            strategy=session.strategy,
+            timeline=session.timeline,
+            turns=session.turns,
+            transfer_item=None,
+            transfer_attempt=session.transfer_attempt,
+        )
+    except RemediationError as exc:
+        raise HTTPException(status_code=exc.status_code, detail=str(exc)) from exc
+    except HTTPException:
+        raise
+    except Exception as exc:
+        logger.error("Unexpected error in /remediation/session/{session_id}: %s", exc, exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal remediation failure.") from exc
 
 
 @router.get("/session/{session_id}/transfer", response_model=TransferItemDTO)
