@@ -570,7 +570,16 @@ export function UniversityLearning() {
   return <main className="min-h-screen bg-slate-950 text-slate-100 px-5 py-8">
     <div className="max-w-5xl mx-auto space-y-8">
       <header className="space-y-4">
-        <Link className="text-sky-300 underline" href="/">← MedicalPlab home</Link>
+        <div className="flex items-center justify-between">
+          <Link className="text-sky-300 underline" href="/">← MedicalPlab home</Link>
+          <Link
+            id="nav-to-radar-link"
+            href="/radar"
+            className="px-3 py-1 text-xs font-semibold rounded-lg bg-indigo-950 text-indigo-300 border border-indigo-700/60 hover:bg-indigo-900 transition flex items-center gap-1.5"
+          >
+            <span>Class Reasoning-Gap Radar ↗</span>
+          </Link>
+        </div>
         <p className="text-sm uppercase tracking-widest text-sky-300">Undergraduate medical education</p>
         <h1 className="text-3xl font-bold">University Learning</h1>
         <p className="text-slate-300 max-w-2xl">Build your foundations with short, source-backed practice. Choose a topic, check your understanding, and review the explanation.</p>

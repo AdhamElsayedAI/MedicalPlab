@@ -886,3 +886,49 @@ export interface RemediationSessionResponse {
     was_assisted: boolean;
   } | null;
 }
+
+export interface EvidenceSummaryItem {
+  document_id: string;
+  chunk_id?: string | null;
+  title?: string | null;
+  source_url?: string | null;
+  license?: string | null;
+}
+
+export interface TransferEffectivenessMetrics {
+  transfer_attempted_count: number;
+  qualified_independent_transfer_count: number;
+  transfer_demonstrated_count: number;
+  transfer_not_demonstrated_count: number;
+  assisted_excluded_count: number;
+  transfer_demonstration_rate: number | null;
+}
+
+export interface ReasoningGapAggregate {
+  pattern_id: string;
+  category: string;
+  reasoning_pattern: string;
+  epistemic_status: string;
+  unique_learners_count: number;
+  pattern_learner_count: number;
+  sessions_count: number;
+  prevalence_rate: number;
+  transfer_metrics: TransferEffectivenessMetrics;
+  evidence_references: EvidenceSummaryItem[];
+}
+
+export interface ReasoningGapRadarResponse {
+  cohort_id: string;
+  cohort_name: string;
+  topic?: string | null;
+  subject?: string | null;
+  sufficiency_status: "SUFFICIENT" | "INSUFFICIENT_COHORT_DATA";
+  min_cohort_n: number;
+  total_eligible_learners: number;
+  total_eligible_sessions: number;
+  reasoning_gaps: ReasoningGapAggregate[];
+  overall_transfer_effectiveness: TransferEffectivenessMetrics;
+  is_demo_data: boolean;
+  demo_disclaimer?: string | null;
+  generated_at: number;
+}

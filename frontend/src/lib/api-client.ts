@@ -20,6 +20,7 @@ import type {
   TransferSubmissionRequest,
   TransferSubmissionResponse,
   RemediationSessionResponse,
+  ReasoningGapRadarResponse,
 } from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
@@ -518,6 +519,34 @@ class PlatformApiClient {
     });
     if (!response.ok) {
       let detail = `Fetching remediation session returned HTTP ${response.status}.`;
+      try {
+        const err = await response.json();
+        if (typeof err.detail === "string") detail = err.detail;
+      } catch {
+        /* Retain status detail */
+      }
+      throw new ApiUnavailableError(detail);
+    }
+    return response.json();
+  }
+
+  async getReasoningGapRadar(
+    cohortId: string = "cohort_demo_renal_01",
+    topic?: string
+  ): Promise<ReasoningGapRadarResponse> {
+    const params = new URLSearchParams();
+    if (cohortId) params.append("cohort_id", cohortId);
+    if (topic) params.append("topic", topic);
+
+    const response = await fetch(
+      `${API_BASE_URL}/api/v1/learning-intelligence/reasoning-gaps?${params.toString()}`,
+      {
+        method: "GET",
+        headers: this.getHeaders(),
+      }
+    );
+    if (!response.ok) {
+      let detail = `Fetching reasoning gap radar returned HTTP ${response.status}.`;
       try {
         const err = await response.json();
         if (typeof err.detail === "string") detail = err.detail;
