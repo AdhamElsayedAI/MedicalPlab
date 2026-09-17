@@ -1,0 +1,581 @@
+{
+  "info": {
+    "name": "MedicalPlab Mobile Consumer API",
+    "description": "Ready-to-run Postman collection for external mobile application developers consuming MedicalPlab /api/v1. Excludes internal administration and educator cohort analytics.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "System",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        },
+        {
+          "name": "Readiness & Governance Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/ready",
+              "host": ["{{base_url}}"],
+              "path": ["ready"]
+            }
+          }
+        },
+        {
+          "name": "API Version & Contract Metadata",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/version",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "version"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "University",
+      "item": [
+        {
+          "name": "Get Subjects",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/university/subjects",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "university", "subjects"]
+            }
+          }
+        },
+        {
+          "name": "Get Topics by Subject",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/university/topics?subject=Renal%20physiology",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "university", "topics"],
+              "query": [
+                {
+                  "key": "subject",
+                  "value": "Renal physiology"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Next Question (No Answer Leak)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/university/question?subject=Renal%20physiology&topic=RAAS%20mechanisms",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "university", "question"],
+              "query": [
+                {
+                  "key": "subject",
+                  "value": "Renal physiology"
+                },
+                {
+                  "key": "topic",
+                  "value": "RAAS mechanisms"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Submit Answer (Idempotent)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_id\": \"{{question_id}}\",\n  \"selected_option\": \"B\",\n  \"idempotency_key\": \"{{idempotency_key}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/university/answer",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "university", "answer"]
+            }
+          }
+        },
+        {
+          "name": "Get University Progress",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/university/progress",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "university", "progress"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLAB Preview QA",
+      "description": "NOTE: Public student release is FROZEN pending clinician golden-question promotion. In default production, questions return count: 0. Set MEDICALPLAB_PLAB_PREVIEW_QA=1 on backend for internal QA/evaluation testing.",
+      "item": [
+        {
+          "name": "List PLAB Questions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/plab/questions",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "plab", "questions"]
+            }
+          }
+        },
+        {
+          "name": "Get PLAB Question by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/plab/questions/PLAB-CARD-0001",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "plab", "questions", "PLAB-CARD-0001"]
+            }
+          }
+        },
+        {
+          "name": "Evaluate PLAB Answer (Idempotent)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_id\": \"PLAB-CARD-0001\",\n  \"selected_option\": \"A\",\n  \"idempotency_key\": \"{{idempotency_key}}\",\n  \"response_time_ms\": 12000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/plab/evaluate",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "plab", "evaluate"]
+            }
+          }
+        },
+        {
+          "name": "Get PLAB Progress",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/plab/progress",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "plab", "progress"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tutor",
+      "item": [
+        {
+          "name": "Evidence-Grounded Socratic Chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"Explain the mechanism of the glomerular filtration barrier and how podocytes contribute to charge selectivity.\",\n  \"topic\": \"Glomerular filtration barrier\",\n  \"mode\": \"auto\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/tutor/chat",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "tutor", "chat"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Adaptive",
+      "item": [
+        {
+          "name": "Get Learner Adaptive State",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/adaptive/state",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "adaptive", "state"]
+            }
+          }
+        },
+        {
+          "name": "Get Next Recommended Learning Action",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/adaptive/recommendation",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "adaptive", "recommendation"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Remediation",
+      "item": [
+        {
+          "name": "Start Remediation Session (Turn 1: Probe)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question_id\": \"UNI-RENAL-001\",\n  \"selected_option\": \"B\",\n  \"topic\": \"RAAS mechanisms\",\n  \"idempotency_key\": \"{{idempotency_key}}\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/start",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "start"]
+            }
+          }
+        },
+        {
+          "name": "Advance Socratic Turn (Turn 2 Guide / Turn 3 Consolidate)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{remediation_session_id}}\",\n  \"student_message\": \"Renin acts at the beginning of the cascade on angiotensinogen from the liver.\",\n  \"idempotency_key\": \"{{idempotency_key}}-t2\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/turn",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "turn"]
+            }
+          }
+        },
+        {
+          "name": "Get Remediation Session State & Timeline",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Get Held-Out Transfer Item (No Leak)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/transfer",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "transfer"]
+            }
+          }
+        },
+        {
+          "name": "Submit Transfer Answer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"session_id\": \"{{remediation_session_id}}\",\n  \"question_id\": \"UNI-RENAL-001-T\",\n  \"selected_option\": \"C\",\n  \"was_assisted\": false,\n  \"idempotency_key\": \"{{idempotency_key}}-transfer\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/transfer",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "transfer"]
+            }
+          }
+        },
+        {
+          "name": "Abandon Remediation Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/abandon",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "abandon"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3D Anatomy",
+      "item": [
+        {
+          "name": "Get Anatomy Manifest & Provenance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/manifest",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "manifest"]
+            }
+          }
+        },
+        {
+          "name": "Get Supported Anatomical Structures",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/structures",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "structures"]
+            }
+          }
+        },
+        {
+          "name": "Start Anatomy Learning Session",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"learner_id\": \"{{user_id}}\",\n  \"learning_objective\": \"RENAL_BLOOD_FLOW_AND_HILUM\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/session/start",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "session", "start"]
+            }
+          }
+        },
+        {
+          "name": "Get Anatomy Session State",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Interact with Anatomy Session (Guided Step)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"learner_id\": \"{{user_id}}\",\n  \"selected_structure_id\": \"renal_vein_left\",\n  \"message\": \"I select the left renal vein.\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}/interact",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}", "interact"]
+            }
+          }
+        },
+        {
+          "name": "Submit Anatomy Challenge (Independent Evaluation)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"learner_id\": \"{{user_id}}\",\n  \"selected_structure_id\": \"renal_artery_left\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}/challenge",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}", "challenge"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Unified Progress",
+      "item": [
+        {
+          "name": "Get Unified Learner Progress (Canonical)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/learner/progress",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "learner", "progress"]
+            }
+          }
+        },
+        {
+          "name": "Get Unified Progress (Compatibility Alias)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-User-Id",
+                "value": "{{user_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/progress",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "progress"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
