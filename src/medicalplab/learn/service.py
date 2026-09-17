@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import uuid
 from collections import Counter
@@ -60,7 +61,11 @@ class CourseLearningService:
         renal_retriever: RenalRetriever | None = None,
         renal_runtime_version: str = RENAL_RUNTIME_VERSION,
     ) -> None:
-        self.data_root = Path(data_root) if data_root else Path(__file__).resolve().parents[3] / "Data"
+        if data_root:
+            self.data_root = Path(data_root)
+        else:
+            env_root = os.environ.get("MEDICALPLAB_DATA_ROOT")
+            self.data_root = Path(env_root) if env_root else Path(__file__).resolve().parents[3] / "Data"
         self._doc_titles: dict[str, str] = {}
         self._chunks: list[dict[str, Any]] = []
         self._chunk_tokens: list[list[str]] = []

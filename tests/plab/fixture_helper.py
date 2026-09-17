@@ -52,6 +52,10 @@ def build_test_data_root(dest_dir: Path | str) -> Path:
     meta_dst.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(meta_src, meta_dst)
 
+    doc_manifest_src = PROJECT_ROOT / "Data" / "metadata" / "document_manifest.json"
+    if doc_manifest_src.exists():
+        shutil.copy2(doc_manifest_src, dest / "metadata" / "document_manifest.json")
+
     batch_src = PROJECT_ROOT / "Data" / "questions" / "versions" / "cardiorespiratory_batch_1_source_audit_v2.json"
     batch_dst = dest / "questions" / "versions" / "cardiorespiratory_batch_1_source_audit_v2.json"
     batch_dst.parent.mkdir(parents=True, exist_ok=True)
