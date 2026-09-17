@@ -69,8 +69,6 @@ class CourseLearningService:
         self._renal_runtime_version = renal_runtime_version
         self._load_corpora()
         self._renal_retriever = renal_retriever or build_renal_retriever(self.data_root, renal_runtime_version)
-        if self._renal_retriever is not None:
-            self.urinary_available = True
 
     def _load_corpora(self) -> None:
         # 1. Load document titles from manifest
