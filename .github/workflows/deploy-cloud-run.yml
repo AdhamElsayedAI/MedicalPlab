@@ -100,13 +100,20 @@ jobs:
             --max-instances 1 \
             --concurrency 4 \
             --timeout 300 \
-            --set-env-vars MEDICALPLAB_RUNTIME_MODE="production",MEDICALPLAB_PLAB_PREVIEW_QA="1",ALLOWED_ORIGINS="${{ env.ALLOWED_ORIGINS }}"
+            --set-env-vars MEDICALPLAB_RUNTIME_MODE="pilot",MEDICALPLAB_PLAB_PREVIEW_QA="1",MEDICALPLAB_PHASE_2B_ENABLED="1",MEDICALPLAB_ANATOMY_3D_ENABLED="1",ALLOWED_ORIGINS="${{ env.ALLOWED_ORIGINS }}"
 
       - name: Retrieve Private Backend URL
         run: |
           BACKEND_URL=$(gcloud run services describe ${{ env.BACKEND_SERVICE_NAME }} --platform managed --region ${{ env.REGION }} --format "value(status.url)")
           echo "BACKEND_URL=$BACKEND_URL" >> $GITHUB_ENV
           echo "Private Backend URL: $BACKEND_URL"
+
+      - name: Bind BFF Invoker Role to Backend Service
+        run: |
+          gcloud run services add-iam-policy-binding ${{ env.BACKEND_SERVICE_NAME }} \
+            --region=${{ env.REGION }} \
+            --member="serviceAccount:medicalplab-bff-runtime@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com" \
+            --role="roles/run.invoker"
 
       - name: Build & Push BFF Gateway Docker Image
         run: |

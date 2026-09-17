@@ -32,8 +32,19 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(na
 
 # Configuration
 BACKEND_SERVICE_URL = os.environ.get("BACKEND_SERVICE_URL", "http://localhost:8080").rstrip("/")
-STAGING_ACCESS_KEY = os.environ.get("STAGING_ACCESS_KEY", "staging-dev-key-change-me")
 DEV_MOCK_AUTH = os.environ.get("DEV_MOCK_AUTH", "0").strip().lower() in {"1", "true", "yes"}
+STAGING_ACCESS_KEY = os.environ.get("STAGING_ACCESS_KEY", "").strip()
+
+if not DEV_MOCK_AUTH:
+    if not STAGING_ACCESS_KEY:
+        raise RuntimeError(
+            "Fatal: STAGING_ACCESS_KEY environment variable is required for BFF gateway operation. "
+            "Server cannot start with an empty or missing staging secret."
+        )
+else:
+    if not STAGING_ACCESS_KEY:
+        STAGING_ACCESS_KEY = "staging-dev-key-change-me"
+
 MAX_BODY_BYTES = int(os.environ.get("MAX_BODY_BYTES", str(1024 * 1024)))  # 1 MB
 REQUEST_TIMEOUT_SECONDS = float(os.environ.get("REQUEST_TIMEOUT_SECONDS", "30.0"))
 RATE_LIMIT_PER_MINUTE = int(os.environ.get("RATE_LIMIT_PER_MINUTE", "120"))

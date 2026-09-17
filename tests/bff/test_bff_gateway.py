@@ -209,3 +209,17 @@ def test_body_size_limit_enforced(client, mock_backend):
     assert response.status_code == 413
     assert "Payload exceeds size limit" in response.json()["detail"]
     mock_backend.request.assert_not_called()
+
+
+def test_missing_staging_key_fails_closed_in_production():
+    """When DEV_MOCK_AUTH is disabled, an empty STAGING_ACCESS_KEY must fail startup."""
+    import importlib
+    import bff.main
+    with patch.dict(os.environ, {"DEV_MOCK_AUTH": "0", "STAGING_ACCESS_KEY": ""}):
+        with pytest.raises(RuntimeError) as exc_info:
+            importlib.reload(bff.main)
+        assert "STAGING_ACCESS_KEY environment variable is required" in str(exc_info.value)
+    # Restore normal module state
+    with patch.dict(os.environ, {"DEV_MOCK_AUTH": "1", "STAGING_ACCESS_KEY": STAGING_ACCESS_KEY}):
+        importlib.reload(bff.main)
+

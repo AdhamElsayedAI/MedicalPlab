@@ -33,9 +33,36 @@
 
 ### Authoritative Deployment Status
 - **Current GCP Cloud Run Deployment:** `MEDICALPLAB_ZERO_COST_STAGING_BLOCKED_USER_GCP_SETUP`
+- **Backend Staging URL:** `NOT_PROVISIONED`
+- **BFF Staging URL:** `NOT_PROVISIONED`
 - **Root Cause:** GCP Project ID, Workload Identity Federation / Service Account Key, and `STAGING_ACCESS_KEY` secrets are not yet configured in GitHub Repository Settings.
 - **Fail-Closed Guarantee:** The GitHub Actions deployment workflow (`deploy-cloud-run.yml`) fails closed with an explicit error rather than falsely reporting green success when secrets are missing.
-- **Required Administrator Action:** Complete the zero-cost GCP staging setup steps (create project, enable Run/Artifact Registry, configure WIF/SA, set GitHub repository secrets `GCP_PROJECT_ID`, `GCP_WIF_PROVIDER`/`GCP_SA_KEY`, and `STAGING_ACCESS_KEY`).
+- **Artifact Registry Cleanup Policy:** `PENDING_GCP_RESOURCE_CREATION` (will retain recent tagged revisions and delete untagged/stale images once repository is created; no paid scanning).
+- **Public Browser Proxy Security:** `MENTOR_SESSION_GATE = YES`, `PUBLIC_BROWSER_PROXY_OPEN = NO` (HttpOnly signed session cookie required at `/api/medicalplab/*`).
+
+### Corrected Human Setup & Automated Deployment Sequence
+
+1. **Create / Select GCP Project & Link Billing**:
+   Create project in GCP Console (e.g. `medicalplab-staging`) and attach standard billing.
+2. **Enable Required Google APIs**:
+   `gcloud services enable run.googleapis.com artifactregistry.googleapis.com iam.googleapis.com --project <PROJECT_ID>`
+3. **Create Artifact Registry Docker Repository**:
+   `gcloud artifacts repositories create medicalplab --repository-format=docker --location=europe-west1 --project <PROJECT_ID>`
+4. **Create Runtime Service Accounts**:
+   - `medicalplab-api-runtime` (Private backend identity)
+   - `medicalplab-bff-runtime` (Public BFF gateway identity)
+5. **Create Deployment Identity (WIF or SA Key)**:
+   Grant `medicalplab-deploy` deployment identity: `roles/run.admin`, `roles/artifactregistry.writer`, `roles/iam.serviceAccountUser`.
+6. **Configure GitHub Repository Secrets**:
+   `GCP_PROJECT_ID`, `GCP_WIF_PROVIDER` / `GCP_SA_KEY`, `GCP_WIF_SERVICE_ACCOUNT`, `STAGING_ACCESS_KEY`.
+7. **Configure Vercel Environment Variables**:
+   `BFF_BASE_URL`, `STAGING_ACCESS_KEY` (server-only), `MENTOR_ACCESS_CODE` (server-only).
+8. **Run Deployment**:
+   Trigger `workflow_dispatch` on GitHub Actions:
+   - Deploys private `medicalplab-api` with `pilot` runtime mode and demo feature flags enabled (`MEDICALPLAB_PHASE_2B_ENABLED=1`, `MEDICALPLAB_ANATOMY_3D_ENABLED=1`).
+   - Automatically establishes `roles/run.invoker` policy binding for `medicalplab-bff-runtime` on `medicalplab-api`.
+   - Deploys public `medicalplab-bff` gateway.
+   - Executes automated security boundary tests (anonymous backend rejection, BFF key verification).
 
 ---
 

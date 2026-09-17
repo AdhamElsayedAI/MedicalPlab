@@ -23,6 +23,9 @@ HEADING_PATTERN = re.compile(r"^#{1,6}\s+(.+)$", re.MULTILINE)
 def _slug(heading: str) -> str:
     """Convert a markdown heading to a GitHub-compatible anchor slug."""
     heading = heading.strip()
+    # Strip optional leading/trailing ATX hashes (e.g. '# Heading #' -> 'Heading')
+    heading = re.sub(r"^#+\s*", "", heading)
+    heading = re.sub(r"\s+#+\s*$", "", heading)
     # Remove inline code backticks, bold/italic markers
     heading = re.sub(r"[`*_]", "", heading)
     # Lowercase
@@ -46,6 +49,8 @@ def test_github_slug_accuracy() -> None:
         ("Data Licensing & Attribution", "data-licensing--attribution"),
         ("Team & Mentor Handoff", "team--mentor-handoff"),
         ("Choose Your Path", "choose-your-path"),
+        ("# Heading #", "heading"),
+        ("Heading #", "heading"),
     ]
     for heading, expected in cases:
         actual = _slug(heading)

@@ -1,14 +1,24 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  MENTOR_COOKIE_NAME,
+  SESSION_TTL_SECONDS,
+  getMentorSecret,
+  signSessionToken,
+  validateMentorAccessCode,
+  verifySessionToken,
+} from "@/lib/mentor-auth";
 
 /**
  * Server-side same-origin proxy to the Cloud Run Staging BFF Gateway.
  *
  * Security guarantees:
- * 1. STAGING_ACCESS_KEY is read strictly from SERVER-ONLY environment variables.
- *    It is NEVER prefixed with NEXT_PUBLIC_* and NEVER leaked to the client browser.
- * 2. Browser requests use same-origin (/api/medicalplab/*), avoiding cross-site cookie
- *    or CORS header complexities.
- * 3. Inbound Authorization and Host headers are stripped; only verified headers
+ * 1. MENTOR_SESSION_GATE: Public browser requests without a valid, signed
+ *    mentor session cookie are rejected with HTTP 401 before touching the BFF.
+ * 2. STAGING_ACCESS_KEY and MENTOR_ACCESS_CODE are strictly SERVER-ONLY
+ *    environment variables. They are NEVER leaked or returned to the browser.
+ * 3. Mobile clients continue to access the Cloud Run BFF directly via
+ *    X-Staging-Key + X-User-Id without browser cookies.
+ * 4. Inbound Authorization and Host headers are stripped; only verified headers
  *    (X-User-Id, content-type, accept) and server-injected X-Staging-Key are sent to BFF.
  */
 
@@ -18,17 +28,108 @@ const BFF_BASE_URL = (
   "http://localhost:8080"
 ).replace(/\/+$/, "");
 
-// Server-only secret: NEVER expose to browser
 const STAGING_ACCESS_KEY = process.env.STAGING_ACCESS_KEY || "";
+const MENTOR_ACCESS_CODE = process.env.MENTOR_ACCESS_CODE || "";
+
+function isSessionAuthorized(request: NextRequest): boolean {
+  // If MENTOR_ACCESS_CODE is set, enforce the session gate strictly
+  // In production, require either valid session or fail closed
+  const cookie = request.cookies.get(MENTOR_COOKIE_NAME)?.value;
+  if (!cookie) {
+    // If no MENTOR_ACCESS_CODE is configured in local development, allow dev fallback
+    if (!MENTOR_ACCESS_CODE && process.env.NODE_ENV !== "production") {
+      return true;
+    }
+    return false;
+  }
+  return verifySessionToken(cookie, getMentorSecret());
+}
+
+async function handleSessionAuth(request: NextRequest): Promise<Response> {
+  if (request.method === "POST") {
+    try {
+      const body = await request.json();
+      const code = (body?.access_code || "").trim();
+      if (!code || !validateMentorAccessCode(code)) {
+        return NextResponse.json(
+          { error: "Invalid mentor access code", detail: "Authentication failed" },
+          { status: 401 }
+        );
+      }
+
+      const exp = Date.now() + SESSION_TTL_SECONDS * 1000;
+      const token = signSessionToken({ exp, iat: Date.now(), v: 1 }, getMentorSecret());
+
+      const response = NextResponse.json(
+        { authenticated: true, expires_in: SESSION_TTL_SECONDS },
+        { status: 200 }
+      );
+
+      response.cookies.set({
+        name: MENTOR_COOKIE_NAME,
+        value: token,
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge: SESSION_TTL_SECONDS,
+      });
+
+      return response;
+    } catch {
+      return NextResponse.json(
+        { error: "Malformed request", detail: "JSON body with access_code expected" },
+        { status: 400 }
+      );
+    }
+  }
+
+  if (request.method === "GET") {
+    const isAuth = isSessionAuthorized(request);
+    return NextResponse.json({ authenticated: isAuth }, { status: isAuth ? 200 : 401 });
+  }
+
+  if (request.method === "DELETE") {
+    const response = NextResponse.json({ authenticated: false, logged_out: true });
+    response.cookies.set({
+      name: MENTOR_COOKIE_NAME,
+      value: "",
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 0,
+    });
+    return response;
+  }
+
+  return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
+}
 
 async function handleProxy(request: NextRequest): Promise<Response> {
   const url = new URL(request.url);
   const subpath = url.pathname.replace(/^\/api\/medicalplab/, "") || "/";
-  const targetUrl = `${BFF_BASE_URL}${subpath}${url.search}`;
 
+  // Dedicated mentor session endpoint
+  if (subpath === "/session" || subpath === "/session/") {
+    return handleSessionAuth(request);
+  }
+
+  // 1. Enforce Mentor Session Gate: Disallow unauthenticated public visitors
+  if (!isSessionAuthorized(request)) {
+    return NextResponse.json(
+      {
+        error: "Unauthorized",
+        detail: "Mentor access session required. Authenticate at /api/medicalplab/session",
+      },
+      { status: 401 }
+    );
+  }
+
+  // 2. Prepare upstream URL & headers
+  const targetUrl = `${BFF_BASE_URL}${subpath}${url.search}`;
   const forwardHeaders = new Headers();
 
-  // Forward permitted client headers
   const safeHeaders = [
     "content-type",
     "accept",
@@ -44,12 +145,11 @@ async function handleProxy(request: NextRequest): Promise<Response> {
     }
   }
 
-  // Inject server-only staging key
+  // Inject server-only staging key for the Cloud Run BFF gateway
   if (STAGING_ACCESS_KEY) {
     forwardHeaders.set("x-staging-key", STAGING_ACCESS_KEY);
   }
 
-  // Read request body for mutating methods
   let body: BodyInit | null = null;
   if (["POST", "PUT", "PATCH"].includes(request.method)) {
     body = await request.arrayBuffer();
@@ -100,4 +200,13 @@ export async function HEAD(request: NextRequest) {
 
 export async function OPTIONS() {
   return new Response(null, { status: 204 });
+}
+
+export async function DELETE(request: NextRequest) {
+  const url = new URL(request.url);
+  const subpath = url.pathname.replace(/^\/api\/medicalplab/, "") || "/";
+  if (subpath === "/session" || subpath === "/session/") {
+    return handleSessionAuth(request);
+  }
+  return new Response(null, { status: 405 });
 }

@@ -150,6 +150,9 @@ jobs:
       - name: Install Frontend Dependencies
         run: npm ci || npm install
 
+      - name: Run Frontend Tests (Mentor Gate & Security)
+        run: npm test
+
       - name: Build Next.js Application
         run: npm run build
 
