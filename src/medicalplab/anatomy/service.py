@@ -245,6 +245,33 @@ class AnatomyService:
         session.updated_at = time.time()
         self.repository.save_session(session)
 
+        # Emit pedagogical learning event to Adaptive Engine
+        try:
+            from medicalplab.adaptive.api import get_adaptive_service
+            from medicalplab.adaptive.models import LearningEvent
+
+            evt = LearningEvent(
+                event_id=f"evt-{uuid.uuid4().hex[:10]}",
+                learner_id=session.learner_id,
+                event_type="QUESTION_ATTEMPT",
+                subject="Anatomy",
+                topic=session.learning_objective,
+                question_id="renal_hilum_challenge",
+                selected_option=selected_id,
+                is_correct=is_correct,
+                attempt_key=f"anat-chal-{session.session_id}",
+                timestamp=session.updated_at,
+                metadata={
+                    "source": "anatomy",
+                    "session_id": session.session_id,
+                    "target_structure_id": target_id,
+                    "hint_level": session.hint_level,
+                },
+            )
+            get_adaptive_service().record_learning_event(evt)
+        except Exception as exc:
+            pass
+
         return ChallengeSubmitResponse(
             session=session,
             is_correct=is_correct,
@@ -253,3 +280,4 @@ class AnatomyService:
             tutor_feedback=tutor_msg,
             scene_actions=actions,
         )
+

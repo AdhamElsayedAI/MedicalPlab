@@ -69,42 +69,84 @@ class UnifiedLearnerStateManager:
         return conn
 
     def get_raw_attempts(self, learner_id: str) -> list[AttemptRecord]:
-        """Read all historical attempts for this student from the university attempt store."""
+        """Read all historical attempts for this student from module-owned stores."""
+        cleaned_id = learner_id.strip() if learner_id else "anonymous_device"
         attempts: list[AttemptRecord] = []
+
+        # 1. University attempts
         conn = self._connect()
-        if conn is None:
-            return attempts
+        if conn is not None:
+            try:
+                with closing(conn):
+                    cursor = conn.execute(
+                        "SELECT name FROM sqlite_master WHERE type='table' AND name='university_attempts'"
+                    )
+                    if cursor.fetchone():
+                        rows = conn.execute(
+                            "SELECT user_id, attempt_key, question_id, subject, topic, selected, correct "
+                            "FROM university_attempts WHERE user_id = ? ORDER BY rowid ASC",
+                            (cleaned_id,),
+                        ).fetchall()
 
+                        for r in rows:
+                            attempts.append(
+                                AttemptRecord(
+                                    attempt_key=r["attempt_key"],
+                                    question_id=r["question_id"],
+                                    subject=r["subject"],
+                                    topic=r["topic"],
+                                    selected=r["selected"],
+                                    correct=bool(r["correct"]),
+                                )
+                            )
+            except Exception as exc:
+                logger.warning("Error reading university attempts for learner %s: %s", cleaned_id, exc)
+
+        # 2. PLAB attempts (read-only from active PLAB pilot service)
         try:
-            with closing(conn):
-                # Ensure table exists before querying
-                cursor = conn.execute(
-                    "SELECT name FROM sqlite_master WHERE type='table' AND name='university_attempts'"
-                )
-                if not cursor.fetchone():
-                    return attempts
+            from medicalplab.stage_g.product_api import get_plab_service
+            plab_svc = get_plab_service()
+            if plab_svc is not None:
+                for (uid, _), att in plab_svc.attempts.items():
+                    if uid == cleaned_id:
+                        q_id = str(att["question_id"])
+                        q_data = plab_svc.questions.get(q_id, {})
+                        attempts.append(
+                            AttemptRecord(
+                                attempt_key=str(att.get("attempt_id") or f"plab-{q_id}"),
+                                question_id=q_id,
+                                subject=str(q_data.get("specialty") or "Cardiorespiratory"),
+                                topic=str(att.get("topic") or q_data.get("topic") or "Cardiorespiratory"),
+                                selected=str(att.get("selected_option", "")),
+                                correct=bool(att.get("is_correct", False)),
+                            )
+                        )
+        except Exception as exc:
+            logger.debug("PLAB attempts not loaded for %s: %s", cleaned_id, exc)
 
-                rows = conn.execute(
-                    "SELECT user_id, attempt_key, question_id, subject, topic, selected, correct "
-                    "FROM university_attempts WHERE user_id = ? ORDER BY rowid ASC",
-                    (learner_id.strip(),),
-                ).fetchall()
-
-                for r in rows:
+        # 3. Anatomy challenge attempts (read-only from anatomy repository)
+        try:
+            from medicalplab.anatomy.repository import AnatomyRepository
+            from medicalplab.anatomy.models import ChallengeResult
+            anat_repo = AnatomyRepository()
+            anat_sessions = anat_repo.list_sessions_for_learner(cleaned_id)
+            for s in anat_sessions:
+                if s.challenge_result is not None:
                     attempts.append(
                         AttemptRecord(
-                            attempt_key=r["attempt_key"],
-                            question_id=r["question_id"],
-                            subject=r["subject"],
-                            topic=r["topic"],
-                            selected=r["selected"],
-                            correct=bool(r["correct"]),
+                            attempt_key=f"anat-chal-{s.session_id}",
+                            question_id="renal_hilum_challenge",
+                            subject="Anatomy",
+                            topic=s.learning_objective,
+                            selected=s.selected_structure_ids[-1] if s.selected_structure_ids else "renal_artery_left",
+                            correct=(s.challenge_result == ChallengeResult.CORRECT),
                         )
                     )
         except Exception as exc:
-            logger.warning("Error reading attempts for learner %s: %s", learner_id, exc)
+            logger.debug("Anatomy challenge attempts not loaded for %s: %s", cleaned_id, exc)
 
         return attempts
+
 
     def get_learner_state(
         self,

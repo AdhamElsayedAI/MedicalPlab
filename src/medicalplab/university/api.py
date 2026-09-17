@@ -61,7 +61,31 @@ def question(subject: str, topic: str, after: str | None = None, s=Depends(servi
 
 @router.post("/answer")
 def answer(body: Answer, user=Depends(student), s=Depends(service)):
-    return execute(s.answer, user, body.question_id, body.selected_option, body.idempotency_key)
+    res = execute(s.answer, user, body.question_id, body.selected_option, body.idempotency_key)
+    try:
+        import time
+        import uuid
+        from medicalplab.adaptive.api import get_adaptive_service
+        from medicalplab.adaptive.models import LearningEvent
+
+        evt = LearningEvent(
+            event_id=f"evt-{uuid.uuid4().hex[:10]}",
+            learner_id=user,
+            event_type="QUESTION_ATTEMPT",
+            subject=res.get("subject", "Renal physiology"),
+            topic=res.get("topic", "Renal physiology"),
+            question_id=body.question_id,
+            selected_option=body.selected_option,
+            is_correct=bool(res.get("is_correct")),
+            attempt_key=body.idempotency_key,
+            timestamp=time.time(),
+            metadata={"source": "university"},
+        )
+        get_adaptive_service().record_learning_event(evt)
+    except Exception:
+        pass
+    return res
+
 
 
 @router.get("/progress")
