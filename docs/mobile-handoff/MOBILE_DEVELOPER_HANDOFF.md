@@ -63,7 +63,7 @@ MEDICALPLAB_API_BASE_URL
   - Configure mobile app with the developer machine's LAN IP: `http://<development-host-ip>:8000`.
   - *Note: A physical device cannot reach your computer using its own `127.0.0.1`.*
 - **Staging / Production:**
-  - `https://<deployed-medicalplab-api>` (HTTPS with valid TLS certificate).
+  - `https://<deployed-medicalplab-api>` (Production deployments MUST expose MedicalPlab through HTTPS with a valid TLS certificate).
 
 ---
 
@@ -75,7 +75,7 @@ X-User-Id: <learner_identifier>
 - **Type:** String (8 to 120 characters, URL-safe alphanumeric, dashes, underscores).
 - **Example:** `X-User-Id: learner_mobile_dev_001`
 - **Backward Compatibility:** `X-Learner-Id` is accepted as a legacy alias in 3D Anatomy and CORS configurations. New mobile implementations must standardize on `X-User-Id`.
-- **Missing Header Behavior:** Endpoints requiring learner identity fail closed with `HTTP 400` or `HTTP 422` if omitted.
+- **Missing Header Behavior:** Endpoints utilizing canonical identity resolution (`resolve_learner_id(required=True)`) fail closed with `HTTP 401 Unauthorized` (`{"detail": {"code": "USER_ID_REQUIRED", "message": "X-User-Id header is required."}}`). Note: University endpoints enforce header presence via FastAPI dependency validation and return `HTTP 422 Unprocessable Entity`; Anatomy session initialization returns `HTTP 400 Bad Request` if `learner_id` is omitted from both header and body.
 
 ---
 
@@ -126,9 +126,9 @@ All 44 operations across 43 paths in OpenAPI are categorized into exactly one li
 | **GET** | `/api/v1/learner/progress` | Progress | `MOBILE_PUBLIC` | **Yes** | Yes | No | Canonical unified dashboard projection |
 | **GET** | `/api/v1/progress` | Progress | `MOBILE_PUBLIC` | **Yes** | Yes | No | Backward-compatible progress alias |
 | **GET** | `/api/v1/learning-intelligence/reasoning-gaps` | Intelligence | `EDUCATOR_ONLY` | No | Yes | No | Cohort analytics (N>=3 suppression) |
-| **POST** | `/api/v1/adaptive/event` | Adaptive | `INTERNAL_ONLY` | No | Yes | Yes | Telemetry ingestion (auto-emitted) |
-| **POST** | `/api/v1/adaptive/remediate` | Adaptive | `INTERNAL_ONLY` | No | No | Yes | Internal remediation trigger |
-| **GET** | `/api/v1/adaptive/loop-status` | Adaptive | `INTERNAL_ONLY` | No | Yes | No | Background worker status |
+| **POST** | `/api/v1/adaptive/event` | Adaptive | `INTERNAL_ONLY` | **Yes** | Yes | Yes | Telemetry ingestion (auto-emitted) |
+| **POST** | `/api/v1/adaptive/remediate` | Adaptive | `INTERNAL_ONLY` | **Yes** | No | Yes | Internal remediation trigger |
+| **GET** | `/api/v1/adaptive/loop-status` | Adaptive | `INTERNAL_ONLY` | **Yes** | Yes | No | Background worker status |
 | **PATCH** | `/api/v1/internal/plab/questions/{id}/revision` | Internal | `INTERNAL_ONLY` | No | No | Yes | Clinician question revision |
 | **GET** | `/api/v1/internal/plab/review/status/{id}` | Internal | `INTERNAL_ONLY` | No | Yes | No | Clinician review status |
 | **POST** | `/api/v1/internal/plab/review/{id}/decision` | Internal | `INTERNAL_ONLY` | No | Yes | Yes | Clinician approval decision |
@@ -222,7 +222,14 @@ When a learner selects a known distractor (e.g. on `UNI-RENAL-001` selecting `B`
   - TRANSFER_NOT_CONFIRMED (Incorrect transfer)
   - UNRESOLVED             (Assisted or turn limit reached)
   - ABANDONED              (Explicit student exit)
+  - SAFETY_FALLBACK        (Verification / evidence failure)
 ```
+
+### Exact Remediation Enums:
+- **`RemediationLifecycleState`:** `"CREATED"`, `"REMEDIATING"`, `"AWAITING_TRANSFER"`, `"COMPLETED"`
+- **`RemediationStatus`:** `"PROBING"`, `"GUIDING"`, `"CONFIRMING"`, `"RESOLVED"`, `"UNRESOLVED"`
+- **`RemediationOutcome`:** `"TRANSFER_CONFIRMED"`, `"TRANSFER_NOT_CONFIRMED"`, `"UNRESOLVED"`, `"ABANDONED"`, `"SAFETY_FALLBACK"`
+- **`SocraticStrategyType`:** `"GUIDED_RECALL"`, `"CONTRAST_CASE"`, `"STEPWISE_DECOMPOSITION"`, `"COUNTEREXAMPLE_PROBE"`
 
 - **Resume Support:** A session can be resumed at any time via `GET /api/v1/remediation/session/{session_id}`.
 - **Abandonment:** `POST /api/v1/remediation/session/{session_id}/abandon`.
@@ -237,13 +244,19 @@ The backend does **not** mandate or execute client 3D rendering. The mobile deve
    - Returns session ID (`anat_...`) and initial lesson state (`INTRO`).
 3. **Interact / Guide:** `POST /api/v1/anatomy/session/{session_id}/interact`
    - Client sends student action (e.g. `selected_structure_id: "renal_vein_left"`).
-   - Server returns structured `scene_actions`:
-     - `action: "highlight"`, `structure_id: "renal_vein_left"`
-     - `action: "fade"`, `opacity: 0.2`
+   - Server returns structured `scene_actions` using exact `AnatomyActionType` values:
+     - `{"action": "HIGHLIGHT_STRUCTURE", "structure_id": "renal_vein_left"}`
+     - `{"action": "SET_STRUCTURE_OPACITY", "opacity": 0.2, "duration_ms": 300}`
 4. **Challenge:** `POST /api/v1/anatomy/session/{session_id}/challenge`
    - Target structure: `renal_artery_left`.
    - Client submits user selection: `{"selected_structure_id": "renal_artery_left"}`.
-   - Server deterministically evaluates correctness and updates learner mastery.
+   - Server deterministically evaluates correctness and returns `ChallengeResult` (`CORRECT` / `INCORRECT`).
+
+### Exact 3D Anatomy Enums:
+- **`AnatomyActionType`:** `"FOCUS_STRUCTURE"`, `"HIGHLIGHT_STRUCTURE"`, `"ISOLATE_STRUCTURE"`, `"SHOW_STRUCTURE"`, `"HIDE_STRUCTURE"`, `"SHOW_RELATION"`, `"SET_STRUCTURE_OPACITY"`, `"RESET_SCENE"`
+- **`LessonState`:** `"INTRO"`, `"GUIDED_VESSELS"`, `"GUIDED_IDENTIFICATION"`, `"CHALLENGE_READY"`, `"CHALLENGE_ACTIVE"`, `"COMPLETED"`
+- **`ChallengeResult`:** `"PENDING"`, `"CORRECT"`, `"INCORRECT"`
+- **`InteractionRequestType`:** `"IDENTIFY_STRUCTURE"`, `"EXPLORE_SCENE"`
 
 ---
 
@@ -353,12 +366,16 @@ curl -X POST http://127.0.0.1:8000/api/v1/anatomy/session/anat_sample_01/challen
 
 | HTTP Status | Error Code / Detail | Meaning | Mobile UX Action | Retry Safe? | User Msg Safe? |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `400 Bad Request` | `learner_id must not be empty` | Missing identity in request body or header | Ensure `X-User-Id` is attached before dispatching | No | Yes ("Please select or sign into a profile.") |
-| `403 Forbidden` | `Session does not belong to the requesting user` | Cross-learner access attempt | Invalidate local cached session ID; return to list | No | Yes ("You do not have access to this session.") |
+| `401 Unauthorized` | `USER_ID_REQUIRED` ("X-User-Id header is required.") | Missing learner identity on canonical endpoints (`resolve_learner_id(required=True)`) | Ensure `X-User-Id` is attached in HTTP headers before dispatching | No | Yes ("Please select or sign into a profile.") |
+| `400 Bad Request` | `learner_id must not be empty` | Missing identity in 3D Anatomy request body and header | Supply `learner_id` in request body or header | No | Yes ("Please select or sign into a profile.") |
+| `403 Forbidden` | `QUESTION_NOT_AVAILABLE` ("Question is not approved for student use.") | Attempted evaluation on unpromoted PLAB question in strict mode | Block question presentation; guide student to approved items | No | Yes ("This clinical question is awaiting clinician promotion.") |
+| `403 Forbidden` | `Session does not belong to the requesting user` / `SESSION_ACCESS_FORBIDDEN` | Cross-learner session access attempt | Invalidate local cached session ID; return to list | No | Yes ("You do not have access to this session.") |
 | `403 Forbidden` | `Phase 3 synthetic demo cohorts are disabled...` | Attempted access to educator cohort analytics | Do not render educator analytics in student app | No | Yes ("Educator analytics require educator authorization.") |
-| `404 Not Found` | `Remediation session '...' not found` | Invalid or expired session ID | Clear stale session state and offer new diagnostic | No | Yes ("Learning session not found or expired.") |
-| `422 Unprocess.` | `Field required / validation error` | Malformed JSON or invalid enum (e.g. option not A-E) | Validate fields locally before submission | No | Yes ("Invalid input format.") |
+| `404 Not Found` | `Remediation session '...' not found` / `Question not found` | Invalid or expired session ID or nonexistent question ID | Clear stale session state and offer new diagnostic | No | Yes ("Learning session not found or expired.") |
+| `409 Conflict` | `IDEMPOTENCY_CONFLICT` / `This attempt was already submitted with another answer.` | Reusing idempotency key with conflicting answers or payload | Do not resubmit with same key; fetch state with GET or use new key | No | Yes ("A submission with this request key was already recorded.") |
+| `422 Unprocess.` | `Field required / validation error` | Malformed JSON, invalid enum (e.g. option not A-E), or missing FastAPI header dependency | Validate fields locally before submission | No | Yes ("Invalid input format.") |
 | `422 Unprocess.` | `UNSUPPORTED_ANATOMY_REQUEST` | Requested structure not in 3D ontology | Prompt learner to select supported renal anatomy | No | Yes ("This structure is outside the current 3D lab module.") |
+| `503 Serv. Unavail`| `PLAB_CONTENT_UNAVAILABLE` ("PLAB data integrity validation failed...") | Active production corpus unavailable or checksum mismatch | Retry after backoff; platform self-checks integrity | Yes | Yes ("Clinical exam content is temporarily unavailable.") |
 | `503 Serv. Unavail`| `Socratic remediation engine is currently disabled...` | Feature flag disabled on backend | Hide or disable remediation CTA in UI | Yes | Yes ("This module is temporarily unavailable for maintenance.") |
 | `503 Serv. Unavail`| `MedicalPlab 3D Anatomy Engine is currently disabled...` | Feature flag disabled on backend | Hide or disable 3D anatomy lab tab | Yes | Yes ("3D Anatomy Lab is currently offline.") |
 | `503 Serv. Unavail`| `CLINICAL_AI_NOT_CONFIGURED` | Legacy clinical reasoning endpoint called | Do not invoke `/clinical/reason`; use `/tutor/chat` | No | Yes ("Clinical reasoning service unavailable.") |
@@ -369,11 +386,11 @@ curl -X POST http://127.0.0.1:8000/api/v1/anatomy/session/anat_sample_01/challen
 
 | Operation | Idempotency Key Location | Mechanism | Retry Safe? | Duplicate Behavior | Conflict Behavior |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `POST /university/answer` | Request JSON: `idempotency_key` | Server attempt deduplication | **YES** | Returns cached evaluation attempt without re-scoring | Fails validation if key reused for different question |
-| `POST /plab/evaluate` | Request JSON: `idempotency_key` | Pilot service attempt registry | **YES** | Returns cached evaluation attempt and feedback | Prevents duplicate question scoring |
+| `POST /university/answer` | Request JSON: `idempotency_key` | Server attempt deduplication | **YES** | Returns cached evaluation attempt without re-scoring | `HTTP 409`: Rejects submission if key reused with differing answer |
+| `POST /plab/evaluate` | Request JSON: `idempotency_key` | Pilot service attempt registry | **YES** | Returns cached evaluation attempt and feedback | `HTTP 409 IDEMPOTENCY_CONFLICT`: Rejects duplicate key with conflicting answer |
 | `POST /remediation/start` | Request JSON: `idempotency_key` | Controller session registry | **YES** | Returns existing session without creating duplicates | Reuses existing active session for attempt |
 | `POST /remediation/turn` | Request JSON: `idempotency_key` | Turn history deduplication | **YES** | Returns existing turn response | Prevents duplicate dialogue advancement |
-| `POST /remediation/transfer` | Request JSON: `idempotency_key` | Assessment locking | **YES** | Returns cached transfer outcome | Rejects secondary attempts on completed session |
+| `POST /remediation/transfer` | Request JSON: `idempotency_key` | Assessment locking | **YES** | Returns cached transfer outcome | `HTTP 409`: Rejects conflicting transfer payload |
 | `POST /remediation/abandon` | Path parameter: `session_id` | State transition guard | **YES** | Re-asserts `ABANDONED` status | Idempotent terminal transition |
 | `POST /anatomy/session/start` | Parameter: `learner_id` | Session repository | **YES** | Creates or resumes session | Safe lifecycle initiation |
 | `POST /anatomy/challenge` | Parameter: `session_id` | Challenge evaluator | **YES** | Returns deterministic evaluation | Locks challenge state |
@@ -386,13 +403,15 @@ curl -X POST http://127.0.0.1:8000/api/v1/anatomy/session/anat_sample_01/challen
 | :--- | :--- | :--- | :--- | :--- |
 | **University Attempts** | `PERSISTENT` | Yes | Yes (SQLite/DB) | `GET /api/v1/university/progress` |
 | **PLAB Attempts** | `PERSISTENT` | Yes | Yes (Pilot DB) | `GET /api/v1/plab/progress` |
-| **Adaptive Mastery** | `PERSISTENT` | Yes | Yes (Telemetry DB) | `GET /api/v1/adaptive/state` |
+| **Adaptive Mastery** | `DERIVED` | Yes (recomputed) | Yes (recomputed from authoritative module-owned persistence) | `GET /api/v1/adaptive/state` |
 | **Remediation Sessions** | `SESSION_LIFECYCLE` | Yes | Yes (Controller DB) | `GET /api/v1/remediation/session/{id}` |
 | **3D Anatomy Sessions** | `SESSION_LIFECYCLE` | Yes | Yes (Anatomy Repo) | `GET /api/v1/anatomy/session/{id}` |
 | **Tutor Conversation** | `EPHEMERAL` (Client) | No (unless cached locally)| No | Client retains turn history; sends `query` |
-| **Unified Progress** | `DERIVED` (Read-only) | Yes (recomputed) | Yes (recomputed) | `GET /api/v1/learner/progress` |
+| **Unified Progress** | `DERIVED` (Read-only) | Yes (recomputed) | Yes (recomputed from authoritative module-owned persistence) | `GET /api/v1/learner/progress` |
 
 > [!NOTE]
+> **Adaptive State Ownership:** Adaptive Mastery has no separate "Telemetry DB". The `UnifiedLearnerStateManager` recomputes mastery on demand from authoritative module-owned persistence (University SQLite `university_attempts`, PLAB pilot attempt registry, and 3D Anatomy repository sessions). Server restarts safely recompute state from these underlying stores without loss of learner evidence.
+>
 > **Offline Sync:** `OFFLINE_SYNC_SUPPORTED = NO`. The backend does not support offline queueing or conflict resolution. The mobile app must have an active network connection for scoring and tutor dialogue.
 
 ---
