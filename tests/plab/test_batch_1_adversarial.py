@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 import unittest
 
+from medicalplab.plab.data_manifest import REFERENCE_ONLY_DOCUMENT_IDS
 from medicalplab.plab.models import (
     PLABCitation,
     PLABChoice,
@@ -24,6 +25,11 @@ from medicalplab.plab.models import (
     PLABQuestionStatus,
 )
 from medicalplab.plab.validation import validate_plab_question
+
+try:
+    from .fixture_helper import get_test_chunk_index
+except ImportError:
+    from fixture_helper import get_test_chunk_index
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 BATCH_PATH = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
@@ -39,20 +45,28 @@ class TestPLABBatch1Adversarial(unittest.TestCase):
         with open(SNAPSHOT_PATH, "r", encoding="utf-8") as f:
             snapshot = json.load(f)
 
-        cls.chunk_index = {}
+        # Prefer tracked public-safe test fixture for clean-checkout reproducibility;
+        # fallback to local active processed files if present.
+        cls.chunk_index = get_test_chunk_index()
         for doc in snapshot["documents"]:
             doc_id = doc["document_id"]
+            if doc_id in REFERENCE_ONLY_DOCUMENT_IDS:
+                continue
             chunks_file = PROJECT_ROOT / doc["chunks_file"]
-            with open(chunks_file, "r", encoding="utf-8") as cf:
-                cdata = json.load(cf)
-            for chunk in cdata["chunks"]:
-                cls.chunk_index[chunk["chunk_id"]] = {
-                    "document_id": doc_id,
-                    "text": chunk["text"],
-                }
+            if chunks_file.exists():
+                with open(chunks_file, "r", encoding="utf-8") as cf:
+                    cdata = json.load(cf)
+                for chunk in cdata["chunks"]:
+                    cls.chunk_index[chunk["chunk_id"]] = {
+                        "document_id": doc_id,
+                        "text": chunk["text"],
+                    }
 
-        # Take first valid question as baseline
-        cls.base_q = cls.batch_data["questions"][0]
+        # Take first active startup-safe grounded question as baseline
+        cls.base_q = next(
+            q for q in cls.batch_data["questions"]
+            if not any(c["document_id"] in REFERENCE_ONLY_DOCUMENT_IDS for c in q["citations"])
+        )
 
     def _create_valid_question(self) -> tuple[PLABQuestion, list[str]]:
         choices = tuple(

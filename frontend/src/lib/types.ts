@@ -932,3 +932,83 @@ export interface ReasoningGapRadarResponse {
   demo_disclaimer?: string | null;
   generated_at: number;
 }
+
+export interface UnifiedLearnerProgress {
+  learner_id: string;
+  university: {
+    track: string;
+    attempted: number;
+    correct: number;
+    accuracy: number | null;
+    topics: Array<{
+      subject: string;
+      topic: string;
+      attempted: number;
+      correct: number;
+      accuracy: number | null;
+      mastery: string;
+    }>;
+    weak_topics: Array<{
+      subject: string;
+      topic: string;
+      priority?: string;
+      failure_rate?: number;
+    }>;
+    recommendation: {
+      subject: string;
+      topic: string;
+      attempted: number;
+      correct: number;
+      accuracy: number | null;
+      mastery: string;
+    } | null;
+  };
+  plab: {
+    user_id: string;
+    question_count: number;
+    total_attempts: number;
+    correct_attempts: number;
+    overall_accuracy: number | null;
+    recent_accuracy: number | null;
+    first_attempt_accuracy: number | null;
+    question_completion: number;
+    topic_accuracy: Record<string, number>;
+    weak_topics: string[];
+    strongest_topics: string[];
+    mastery_model: string;
+    content_policy?: string;
+  };
+  adaptive: {
+    total_attempts: number;
+    correct_attempts: number;
+    overall_accuracy: number | null;
+    mastered_topics_count: number;
+    weak_topics_count: number;
+    top_recommendation: AdaptiveRecommendation | null;
+    weak_topics: Array<{
+      subject: string;
+      topic: string;
+      priority: string;
+      failure_rate: number;
+      reason: string;
+    }>;
+  };
+  anatomy: {
+    total_sessions: number;
+    completed_sessions: number;
+    challenges_passed: number;
+    recent_sessions: Array<{
+      session_id: string;
+      learning_objective: string;
+      lesson_state: string;
+      challenge_result?: string | null;
+      created_at: number;
+    }>;
+  };
+  summary: {
+    total_questions_attempted: number;
+    active_modules: string[];
+    cross_track_learner_id: string;
+  };
+}
+

@@ -408,6 +408,137 @@ class TestRenalAnatomyDomain(unittest.TestCase):
         actions = [act.action for act in resp.scene_actions]
         self.assertIn(AnatomyActionType.RESET_SCENE, actions)
 
+    # -----------------------------------------------------------------------
+    # Phase 5.1.1 — Hotfix Regression Tests
+    # Proves that challenge scoring is always isolated from the guided-phase
+    # target, regardless of session state at the time submit_challenge is called.
+    # -----------------------------------------------------------------------
+
+    def test_23_hotfix_artery_scores_correct_in_challenge(self):
+        """23. HOTFIX 5.1.1 — Left Renal Artery selection is CORRECT in the challenge.
+
+        This is the exact scenario that exposed the bug:
+          Challenge prompt: 'Identify the vessel branching from the abdominal aorta to supply the kidney.'
+          Learner selection: Left Renal Artery
+          Expected: CORRECT
+          Pre-fix result: INCORRECT (backend was comparing against renal_vein_left)
+        """
+        repo = AnatomyRepository(":memory:")
+        service = AnatomyService(repository=repo)
+
+        # Create a session where current_target_structure_id is still renal_vein_left
+        # (i.e., the guided phase was NOT completed — simulates the contamination scenario)
+        start_res = service.start_session(StartSessionRequest(learner_id="hotfix_test_artery"))
+        session_id = start_res.session.session_id
+
+        # Manually set lesson_state to CHALLENGE_ACTIVE WITHOUT updating target
+        # (simulates learner reaching challenge without completing guided flow via direct API)
+        contaminated_session = start_res.session.model_copy(
+            update={
+                "lesson_state": LessonState.CHALLENGE_ACTIVE,
+                # Intentionally leave current_target_structure_id = "renal_vein_left"
+                # This is the contamination that triggered the original bug.
+            }
+        )
+        repo.save_session(contaminated_session)
+
+        # Learner selects Left Renal Artery
+        result = service.submit_challenge(
+            session_id,
+            ChallengeSubmitRequest(learner_id="hotfix_test_artery", selected_structure_id="renal_artery_left"),
+        )
+
+        # MUST be correct: artery is always the challenge target
+        self.assertTrue(
+            result.is_correct,
+            f"HOTFIX REGRESSION: Left Renal Artery was scored as INCORRECT. "
+            f"target_structure_id={result.target_structure_id}, "
+            f"selected_structure_id={result.selected_structure_id}"
+        )
+        self.assertEqual(result.target_structure_id, "renal_artery_left")
+        self.assertEqual(result.session.challenge_result, ChallengeResult.CORRECT)
+        self.assertEqual(result.session.challenge_state, "PASSED")
+
+    def test_24_hotfix_vein_scores_incorrect_in_challenge(self):
+        """24. HOTFIX 5.1.1 — Left Renal Vein selection is INCORRECT in the challenge.
+
+        Medical invariant: The Left Renal Vein does NOT originate from the abdominal aorta.
+        It drains into the inferior vena cava (IVC). Selecting it for the aortic supply
+        prompt must always score as INCORRECT.
+        """
+        repo = AnatomyRepository(":memory:")
+        service = AnatomyService(repository=repo)
+
+        start_res = service.start_session(StartSessionRequest(learner_id="hotfix_test_vein"))
+        session_id = start_res.session.session_id
+
+        # Set up challenge state (correctly, with artery as target)
+        repo.save_session(
+            start_res.session.model_copy(
+                update={
+                    "lesson_state": LessonState.CHALLENGE_ACTIVE,
+                    "current_target_structure_id": "renal_artery_left",
+                }
+            )
+        )
+
+        # Learner incorrectly selects Left Renal Vein
+        result = service.submit_challenge(
+            session_id,
+            ChallengeSubmitRequest(learner_id="hotfix_test_vein", selected_structure_id="renal_vein_left"),
+        )
+
+        self.assertFalse(result.is_correct)
+        self.assertEqual(result.target_structure_id, "renal_artery_left")
+        self.assertEqual(result.selected_structure_id, "renal_vein_left")
+        self.assertEqual(result.session.challenge_result, ChallengeResult.INCORRECT)
+        self.assertEqual(result.session.challenge_state, "FAILED")
+        # Feedback must reference the correct vessel (artery) not vein
+        self.assertIn("artery", result.tutor_feedback.casefold())
+
+    def test_25_hotfix_guided_to_challenge_state_isolation(self):
+        """25. HOTFIX 5.1.1 — Guided lesson → Challenge transition resets target atomically.
+
+        Proves that after the learner correctly identifies the vein in guided mode,
+        the session.current_target_structure_id is updated to renal_artery_left
+        BEFORE any challenge submission can occur. Both targets are always isolated.
+        """
+        repo = AnatomyRepository(":memory:")
+        service = AnatomyService(repository=repo)
+
+        start_res = service.start_session(StartSessionRequest(learner_id="hotfix_test_isolation"))
+        session_id = start_res.session.session_id
+
+        # Verify initial state: guided target is renal_vein_left
+        session_before = service.get_session(session_id)
+        self.assertEqual(session_before.current_target_structure_id, "renal_vein_left")
+        self.assertEqual(session_before.lesson_state, LessonState.INTRO)
+
+        # Learner correctly identifies the guided target (renal_vein_left)
+        interact_res = service.interact(
+            session_id,
+            InteractSessionRequest(learner_id="hotfix_test_isolation", selected_structure_id="renal_vein_left"),
+        )
+
+        # Verify state transition: challenge target must now be renal_artery_left
+        self.assertEqual(interact_res.session.lesson_state, LessonState.CHALLENGE_ACTIVE)
+        self.assertEqual(
+            interact_res.session.current_target_structure_id,
+            "renal_artery_left",
+            "HOTFIX REGRESSION: current_target_structure_id was not updated to renal_artery_left "
+            "on transition to CHALLENGE_ACTIVE. Guided and challenge targets are contaminated."
+        )
+        self.assertEqual(interact_res.session.hint_level, 0)
+
+        # Now submit the challenge with the correct answer
+        challenge_res = service.submit_challenge(
+            session_id,
+            ChallengeSubmitRequest(learner_id="hotfix_test_isolation", selected_structure_id="renal_artery_left"),
+        )
+        self.assertTrue(challenge_res.is_correct)
+        self.assertEqual(challenge_res.target_structure_id, "renal_artery_left")
+
 
 if __name__ == "__main__":
     unittest.main()
+

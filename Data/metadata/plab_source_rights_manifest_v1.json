@@ -1,0 +1,596 @@
+{
+  "manifest_id": "PLAB-SOURCE-RIGHTS-v1",
+  "version": "1.0.0",
+  "created_at": "2026-09-17T17:45:00Z",
+  "verification_authority": "Crossref API / Europe PMC / Official JATS XML / Publisher VOR records",
+  "corpus_id": "medicalplab-cardiorespiratory-corpus-v1",
+  "total_documents": 13,
+  "documents": [
+    {
+      "document_id": "DOC-WHO-CARD-0001",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-WHO-CARD-0001.chunks.json",
+        "chunk_count": 83,
+        "chunks_sha256": "a84ad34a2b7e66cc165b3301b1f6d0ff1de3609334ab71a8f6ff47ab5aceb786"
+      },
+      "claimed_metadata": {
+        "title": "Guideline for the pharmacological treatment of hypertension in adults",
+        "license": "CC BY-NC-SA 3.0 IGO"
+      },
+      "verified_metadata": {
+        "title": "Guideline for the pharmacological treatment of hypertension in adults",
+        "authors": "World Health Organization Guidelines Approved by the Guidelines Review Committee",
+        "publication_year": 2021,
+        "doi": null,
+        "pmcid": null,
+        "pmid": null,
+        "publisher": "World Health Organization",
+        "official_source_url": "https://www.who.int/publications/i/item/9789240033986/",
+        "source_type": "Clinical Guideline"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY-NC-SA 3.0 IGO",
+        "verified_license": "CC BY-NC-SA 3.0 IGO",
+        "official_license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/igo",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": false,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Non-commercial only; ShareAlike (copyleft); WHO logo prohibited; no endorsement implied; translation disclaimer required."
+      },
+      "governance_classification": {
+        "startup_suitability": "REFERENCE_ONLY",
+        "public_repository_suitability": false,
+        "runtime_only_suitability": false,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Official WHO Publication Page 4 Notice (ISBN 978-92-4-003398-6)",
+        "discrepancies": "Non-commercial copyleft license prevents active commercial startup retrieval. Quarantined to reference-only; questions PLAB-CARD-0001 and PLAB-CARD-0003 are fully covered by DOC-PMC-CARD-0002 (CC BY 4.0).",
+        "final_action": "REFERENCE_ONLY_NON_ACTIVE"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0002",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0002.chunks.json",
+        "chunk_count": 144,
+        "chunks_sha256": "1845f390f095bd4c53f558576c9965495382eef4822dec02387ce4a62f81fd33"
+      },
+      "claimed_metadata": {
+        "title": "Outpatient management of essential hypertension: a review based on the latest clinical guidelines",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Outpatient management of essential hypertension: a review based on the latest clinical guidelines",
+        "authors": "Areesha Moiz, Tetiana Zolotarova, Mark J. Eisenberg",
+        "publication_year": 2024,
+        "doi": "10.1080/07853890.2024.2338242",
+        "pmcid": "PMC11011233",
+        "pmid": "38604225",
+        "publisher": "Informa UK Limited (Taylor & Francis)",
+        "official_source_url": "https://doi.org/10.1080/07853890.2024.2338242",
+        "source_type": "Narrative Review / Practice Synthesis"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "http://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + JATS XML permissions element",
+        "discrepancies": "None. Authoritative verification matches claimed status.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0008",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0008.chunks.json",
+        "chunk_count": 42,
+        "chunks_sha256": "89fa22ffd17bb2dc6a0d1c59c5c445c6caa0f8aaeab72614b54f5ab5d9825301"
+      },
+      "claimed_metadata": {
+        "title": "Advances in Atrial Fibrillation Management: A Guide for General Internists",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Advances in Atrial Fibrillation Management: A Guide for General Internists",
+        "authors": "Hoang Nhat Pham, Ramzi Ibrahim, Hong Hieu Truong, Enkhtsogt Sainbayar, Viet Nghi Tran, Mahmoud Abdelnabi, Christopher Kanaan, Aadhavi Sridharan",
+        "publication_year": 2024,
+        "doi": "10.3390/jcm13247846",
+        "pmcid": "PMC11678337",
+        "pmid": "39768769",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/jcm13247846",
+        "source_type": "Clinical Review"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0009",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0009.chunks.json",
+        "chunk_count": 54,
+        "chunks_sha256": "c5d9a8d1556d79453c5bc99e99ce7fec3a08fe934f087d91bbbe4a9452320d41"
+      },
+      "claimed_metadata": {
+        "title": "Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review",
+        "authors": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccalà",
+        "publication_year": 2024,
+        "doi": "10.3390/jcm13030727",
+        "pmcid": "PMC10856004",
+        "pmid": "38337421",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/jcm13030727",
+        "source_type": "Narrative Review"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0003",
+      "specialty": "respiratory_medicine",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0003.chunks.json",
+        "chunk_count": 64,
+        "chunks_sha256": "b74e4a51e5aede2e41f8ac627db3eed6ea6df42714255cd05c92801c4a15c49d"
+      },
+      "claimed_metadata": {
+        "title": "Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease",
+        "authors": "Ankit Kumar, Surya Kant, Vijeta Niranjan",
+        "publication_year": 2024,
+        "doi": "10.7759/cureus.60423",
+        "pmcid": "PMC11179745",
+        "pmid": "38882972",
+        "publisher": "Springer Science and Business Media LLC (Cureus)",
+        "official_source_url": "https://doi.org/10.7759/cureus.60423",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Cureus JATS XML license-p declaration and license_ref CC-BY 4.0",
+        "discrepancies": "Crossref metadata omitted license block; verified via Cureus JATS XML open access declaration.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-EMERG-0001",
+      "specialty": "emergency_medicine",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\emergency_medicine\\DOC-PMC-EMERG-0001.chunks.json",
+        "chunk_count": 11,
+        "chunks_sha256": "b818b59b85ce13cb36d4944cc3b7695f2ca18fd859c72c9f53a0f7ae1467488f"
+      },
+      "claimed_metadata": {
+        "title": "Cardiopulmonary Resuscitation: Clinical Updates and Perspectives",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Cardiopulmonary Resuscitation: Clinical Updates and Perspectives",
+        "authors": "Stephan Marsch, Timur Sellmann",
+        "publication_year": 2024,
+        "doi": "10.3390/jcm13092717",
+        "pmcid": "PMC11084294",
+        "pmid": "38731246",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/jcm13092717",
+        "source_type": "Clinical Update"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0004",
+      "specialty": "respiratory_medicine",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0004.chunks.json",
+        "chunk_count": 58,
+        "chunks_sha256": "c9d40acc922efa2a78f072cbd5c046a678d64160569d22337787eee6cf8e4f73"
+      },
+      "claimed_metadata": {
+        "title": "Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis",
+        "authors": "Hatem Al Wahaibi, Ahmed Al Salmi, Abdullah Al Reesi, Mohamed Al Shamsi",
+        "publication_year": 2024,
+        "doi": "10.7759/cureus.58385",
+        "pmcid": "PMC11097702",
+        "pmid": "38756278",
+        "publisher": "Springer Science and Business Media LLC (Cureus)",
+        "official_source_url": "https://doi.org/10.7759/cureus.58385",
+        "source_type": "Systematic Review and Meta-Analysis"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Cureus JATS XML license-p declaration and license_ref CC-BY 4.0",
+        "discrepancies": "Crossref metadata omitted license block; verified via Cureus JATS XML open access declaration.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-RESP-0005",
+      "specialty": "respiratory_medicine",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\respiratory_medicine\\DOC-PMC-RESP-0005.chunks.json",
+        "chunk_count": 38,
+        "chunks_sha256": "e9559a614664aa7731a6ad4137e8502d2dd3ebc03edd70bbc3399b21e87d8b9c"
+      },
+      "claimed_metadata": {
+        "title": "Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19",
+        "authors": "Shayan Kassirian, Ravi Taneja, Sanjay Mehta",
+        "publication_year": 2020,
+        "doi": "10.3390/diagnostics10121053",
+        "pmcid": "PMC7762111",
+        "pmid": "33291238",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/diagnostics10121053",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0010",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0010.chunks.json",
+        "chunk_count": 77,
+        "chunks_sha256": "13fce0136cdc72d19228575d263b42348e188ead8e3d1b21e13be4bee351b25c"
+      },
+      "claimed_metadata": {
+        "title": "Management of cardiogenic shock: a narrative review",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Management of cardiogenic shock: a narrative review",
+        "authors": "Driss Laghlam, Sarah Benghanem, Sofia Ortuno, Nadia Bouabdallaoui, Stephane Manzo-Silberman, Olfa Hamzaoui, Nadia Aissaoui",
+        "publication_year": 2024,
+        "doi": "10.1186/s13613-024-01260-y",
+        "pmcid": "PMC10980676",
+        "pmid": "38553663",
+        "publisher": "SpringerOpen / BioMed Central (Springer Nature)",
+        "official_source_url": "https://doi.org/10.1186/s13613-024-01260-y",
+        "source_type": "Narrative Review"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Official PubMed Central Version of Record XML permissions element (license_ref https://creativecommons.org/licenses/by/4.0/) and SpringerOpen Annals of Intensive Care open-access declaration. Previous Gate 0.6 Crossref TDM syndication notice superseded by authoritative publisher VOR.",
+        "discrepancies": "None. Authoritative publisher VOR and PMC confirm Creative Commons Attribution 4.0 International (CC BY 4.0). False Elsevier / CC BY-NC-ND classification removed.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0011",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0011.chunks.json",
+        "chunk_count": 85,
+        "chunks_sha256": "f68ad8c3aee8f495ce1d722bb5240270471f5c67474d54996333852c2d33cb9c"
+      },
+      "claimed_metadata": {
+        "title": "Native Infective Endocarditis: A State-of-the-Art-Review",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Native Infective Endocarditis: A State-of-the-Art-Review",
+        "authors": "Francesco Nappi",
+        "publication_year": 2024,
+        "doi": "10.3390/microorganisms12071481",
+        "pmcid": "PMC11278776",
+        "pmid": "39065249",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/microorganisms12071481",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0012",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0012.chunks.json",
+        "chunk_count": 69,
+        "chunks_sha256": "c0c5fb99b9a6917ec83780aa812e9c672c739be9642416a53bb5bd8de974561a"
+      },
+      "claimed_metadata": {
+        "title": "Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature",
+        "authors": "William Chick, Christopher Monkhouse, Amal Muthumala, Syed Ahsan, Nikolaos Papageorgiou",
+        "publication_year": 2024,
+        "doi": "10.31083/j.rcm2505162",
+        "pmcid": "PMC11267218",
+        "pmid": "39076493",
+        "publisher": "IMR Press",
+        "official_source_url": "https://doi.org/10.31083/j.rcm2505162",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref API record + IMR Press JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0013",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0013.chunks.json",
+        "chunk_count": 62,
+        "chunks_sha256": "7ee814bff044e82c8584ddb658e7762f6836f24076c856037ad898a8a9aac2cf"
+      },
+      "claimed_metadata": {
+        "title": "Diagnostic Challenges in Aortic Stenosis",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Diagnostic Challenges in Aortic Stenosis",
+        "authors": "André González-García, Pablo Pazos-López, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Chía, Raquel Bilbao-Quesada, Elisa Blanco-González, Carina González-Ríos, María Castiñeira-Busto, Manuel Barreiro-Pérez, Andrés Íñiguez-Romo",
+        "publication_year": 2024,
+        "doi": "10.3390/jcdd11060162",
+        "pmcid": "PMC11203729",
+        "pmid": "38921662",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/jcdd11060162",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    },
+    {
+      "document_id": "DOC-PMC-CARD-0014",
+      "specialty": "cardiology",
+      "local_artifacts": {
+        "chunks_file": "Data\\processed\\cardiology\\DOC-PMC-CARD-0014.chunks.json",
+        "chunk_count": 30,
+        "chunks_sha256": "be86e4a7cf022676bfad11b477051a0dc9bab49cbf193e28fdb57ee60f43728c"
+      },
+      "claimed_metadata": {
+        "title": "Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our Road Map for the Appropriate Strategy",
+        "license": "CC BY 4.0"
+      },
+      "verified_metadata": {
+        "title": "Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our “Road Map” for the Appropriate Strategy",
+        "authors": "Konstantinos Sideris, Melchior Burri, Antonia Mayr, Stephanie Voss, Keti Vitanova, Anatol Prinzing, Bernhard Voss, Andrea Amabile, Arnar Geirsson, Markus Krane, Ralf Guenzinger",
+        "publication_year": 2024,
+        "doi": "10.3390/jcm13113264",
+        "pmcid": "PMC11172680",
+        "pmid": "38892978",
+        "publisher": "MDPI AG",
+        "official_source_url": "https://doi.org/10.3390/jcm13113264",
+        "source_type": "Review Article"
+      },
+      "license_audit": {
+        "claimed_license": "CC BY 4.0",
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
+        "attribution_required": true,
+        "license_restrictions": "Attribution to original authors and source."
+      },
+      "governance_classification": {
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
+        "runtime_only_suitability": true,
+        "verification_date": "2026-09-17",
+        "verification_evidence": "Crossref VOR License record + MDPI JATS XML permissions",
+        "discrepancies": "None.",
+        "final_action": "KEEP_PUBLIC"
+      }
+    }
+  ],
+  "active_corpus_summary": {
+    "active_startup_safe_document_count": 12,
+    "active_startup_safe_chunk_count": 734,
+    "reference_only_document_count": 1,
+    "reference_only_chunk_count": 83,
+    "archived_local_document_count": 0,
+    "unresolved_document_count": 0,
+    "active_startup_safe_documents": [
+      "DOC-PMC-CARD-0002",
+      "DOC-PMC-CARD-0008",
+      "DOC-PMC-CARD-0009",
+      "DOC-PMC-CARD-0010",
+      "DOC-PMC-CARD-0011",
+      "DOC-PMC-CARD-0012",
+      "DOC-PMC-CARD-0013",
+      "DOC-PMC-CARD-0014",
+      "DOC-PMC-RESP-0003",
+      "DOC-PMC-RESP-0004",
+      "DOC-PMC-RESP-0005",
+      "DOC-PMC-EMERG-0001"
+    ],
+    "reference_only_documents": [
+      "DOC-WHO-CARD-0001"
+    ],
+    "archived_local_documents": [],
+    "unresolved_documents": []
+  }
+}

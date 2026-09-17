@@ -4,6 +4,7 @@ from __future__ import annotations
 from typing import Any
 from fastapi import APIRouter, Header, HTTPException, Query
 
+from medicalplab.identity import resolve_learner_id
 from medicalplab.tutor.models import TutorChatResponse
 from .models import (
     AdaptiveRecommendation,
@@ -29,14 +30,23 @@ def configure_adaptive_service(service: AdaptiveLearningService | None) -> None:
     _service = service
 
 
-def _resolve_user_id(x_user_id: str | None = Header(default=None), query_user: str | None = None) -> str:
-    user = (x_user_id or query_user or "anonymous_device").strip()
-    return user
+def _resolve_user_id(
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
+    query_user: str | None = None,
+) -> str:
+    return resolve_learner_id(
+        x_user_id=x_user_id,
+        x_learner_id=x_learner_id,
+        fallback_id=query_user,
+        required=True,
+    )
 
 
 @router.get("/state", response_model=LearnerState)
 def get_learner_state(
-    x_user_id: str | None = Header(default=None),
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
     learner_id: str | None = Query(default=None),
 ) -> LearnerState:
     """Retrieve the unified learner state, topic mastery, weaknesses, and recommendations.
@@ -47,14 +57,15 @@ def get_learner_state(
     Output: LearnerState.
     Reason: Single unified source of truth on student educational progress.
     """
-    uid = _resolve_user_id(x_user_id, learner_id)
+    uid = _resolve_user_id(x_user_id, x_learner_id, learner_id)
     service = get_adaptive_service()
     return service.get_learner_state(uid)
 
 
 @router.get("/recommendation", response_model=AdaptiveRecommendation | None)
 def get_recommendation(
-    x_user_id: str | None = Header(default=None),
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
     learner_id: str | None = Query(default=None),
 ) -> AdaptiveRecommendation | None:
     """Retrieve the highest priority next learning action chosen by the Adaptive Decision Engine.
@@ -65,7 +76,7 @@ def get_recommendation(
     Output: AdaptiveRecommendation or null.
     Reason: Guides student directly to their next intervention.
     """
-    uid = _resolve_user_id(x_user_id, learner_id)
+    uid = _resolve_user_id(x_user_id, x_learner_id, learner_id)
     service = get_adaptive_service()
     return service.get_top_recommendation(uid)
 
@@ -73,7 +84,8 @@ def get_recommendation(
 @router.post("/event", response_model=LearnerState)
 def record_learning_event(
     event: LearningEvent,
-    x_user_id: str | None = Header(default=None),
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
 ) -> LearnerState:
     """Ingest a learning interaction event and return the updated learner state.
 
@@ -83,10 +95,13 @@ def record_learning_event(
     Output: Updated LearnerState.
     Reason: Enables real-time mastery recalculation following practice or review.
     """
-    if x_user_id and x_user_id.strip():
-        event.learner_id = x_user_id.strip()
-    elif not event.learner_id:
-        event.learner_id = "anonymous_device"
+    uid = resolve_learner_id(
+        x_user_id=x_user_id,
+        x_learner_id=x_learner_id,
+        fallback_id=event.learner_id,
+        required=True,
+    )
+    event.learner_id = uid
     service = get_adaptive_service()
     return service.record_learning_event(event)
 
@@ -94,7 +109,8 @@ def record_learning_event(
 @router.post("/remediate", response_model=TutorChatResponse)
 def trigger_remediation(
     request: RemediationRequest,
-    x_user_id: str | None = Header(default=None),
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
 ) -> TutorChatResponse:
     """Trigger an evidence-grounded Socratic tutor intervention targeted at student weakness.
 
@@ -104,7 +120,7 @@ def trigger_remediation(
     Output: TutorChatResponse (verified by Phase 1 verifier).
     Reason: Connects adaptive gap detection to verified Socratic tutor safely.
     """
-    uid = _resolve_user_id(x_user_id)
+    uid = _resolve_user_id(x_user_id, x_learner_id)
     service = get_adaptive_service()
     return service.trigger_grounded_remediation(
         learner_id=uid,
@@ -119,7 +135,8 @@ def trigger_remediation(
 def get_loop_status(
     topic: str = Query(...),
     baseline_mastery: str = Query(...),
-    x_user_id: str | None = Header(default=None),
+    x_user_id: str | None = Header(default=None, alias="X-User-Id"),
+    x_learner_id: str | None = Header(default=None, alias="X-Learner-Id"),
 ) -> dict[str, Any]:
     """Check whether mastery has improved following an intervention.
 
@@ -129,6 +146,6 @@ def get_loop_status(
     Output: JSON summary of initial vs current mastery.
     Reason: Closes feedback loop across diagnostic assessment and re-evaluation.
     """
-    uid = _resolve_user_id(x_user_id)
+    uid = _resolve_user_id(x_user_id, x_learner_id)
     service = get_adaptive_service()
     return service.verify_loop_closure(uid, topic, baseline_mastery)

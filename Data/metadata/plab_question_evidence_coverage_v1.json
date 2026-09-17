@@ -1,0 +1,334 @@
+{
+  "report_id": "PLAB-QUESTION-COVERAGE-v1",
+  "framework": "GMC MLA / UK MLA Clinical Practice Guidelines",
+  "total_questions": 36,
+  "covered_by_active_startup_safe": 36,
+  "uncovered_questions": 0,
+  "coverage_percentage": 100.0,
+  "questions": [
+    {
+      "question_id": "PLAB-CARD-0001",
+      "topic": "Hypertension (Essential & Secondary)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Mapped to DOC-PMC-CARD-0002 (Table 5 amlodipine first-line DHP CCB indication & combination therapy); historical WHO reference quarantined to REFERENCE_ONLY."
+    },
+    {
+      "question_id": "PLAB-CARD-0002",
+      "topic": "Hypertension (Essential & Secondary)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0002"
+    },
+    {
+      "question_id": "PLAB-CARD-0003",
+      "topic": "Hypertension (Essential & Secondary)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0002"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Mapped to DOC-PMC-CARD-0002 (Table 5 amlodipine first-line DHP CCB indication & combination therapy); historical WHO reference quarantined to REFERENCE_ONLY."
+    },
+    {
+      "question_id": "PLAB-CARD-0004",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0008"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0008"
+    },
+    {
+      "question_id": "PLAB-CARD-0005",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0008"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0008"
+    },
+    {
+      "question_id": "PLAB-CARD-0006",
+      "topic": "Atrial Fibrillation (Rate vs Rhythm, Anticoagulation)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0008"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0008"
+    },
+    {
+      "question_id": "PLAB-CARD-0007",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0009"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0009"
+    },
+    {
+      "question_id": "PLAB-CARD-0008",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0009"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0009"
+    },
+    {
+      "question_id": "PLAB-CARD-0009",
+      "topic": "Syncope & Transient Loss of Consciousness",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0009"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0009"
+    },
+    {
+      "question_id": "PLAB-RESP-0001",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0003"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0003"
+    },
+    {
+      "question_id": "PLAB-RESP-0002",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0003"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0003"
+    },
+    {
+      "question_id": "PLAB-RESP-0003",
+      "topic": "Chronic Obstructive Pulmonary Disease (COPD)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0003"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0003"
+    },
+    {
+      "question_id": "PLAB-EMERG-0001",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "active_source_ids": [
+        "DOC-PMC-EMERG-0001"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-EMERG-0001"
+    },
+    {
+      "question_id": "PLAB-EMERG-0002",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "active_source_ids": [
+        "DOC-PMC-EMERG-0001"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-EMERG-0001"
+    },
+    {
+      "question_id": "PLAB-EMERG-0003",
+      "topic": "Cardiopulmonary Resuscitation & Cardiac Arrest",
+      "active_source_ids": [
+        "DOC-PMC-EMERG-0001"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-EMERG-0001"
+    },
+    {
+      "question_id": "PLAB-RESP-0004",
+      "topic": "Pneumothorax",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0004"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0004"
+    },
+    {
+      "question_id": "PLAB-RESP-0005",
+      "topic": "Pneumothorax",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0004"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0004"
+    },
+    {
+      "question_id": "PLAB-RESP-0006",
+      "topic": "Pneumothorax",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0004"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0004"
+    },
+    {
+      "question_id": "PLAB-RESP-0007",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0005"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0005"
+    },
+    {
+      "question_id": "PLAB-RESP-0008",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0005"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0005"
+    },
+    {
+      "question_id": "PLAB-RESP-0009",
+      "topic": "Acute Respiratory Distress Syndrome (ARDS)",
+      "active_source_ids": [
+        "DOC-PMC-RESP-0005"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-RESP-0005"
+    },
+    {
+      "question_id": "PLAB-CARD-0010",
+      "topic": "Cardiogenic Shock",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0010"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0010"
+    },
+    {
+      "question_id": "PLAB-CARD-0011",
+      "topic": "Cardiogenic Shock",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0010"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0010"
+    },
+    {
+      "question_id": "PLAB-CARD-0012",
+      "topic": "Cardiogenic Shock",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0010"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0010"
+    },
+    {
+      "question_id": "PLAB-CARD-0013",
+      "topic": "Infective Endocarditis (IE)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0011"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0011"
+    },
+    {
+      "question_id": "PLAB-CARD-0014",
+      "topic": "Infective Endocarditis (IE)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0011"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0011"
+    },
+    {
+      "question_id": "PLAB-CARD-0015",
+      "topic": "Infective Endocarditis (IE)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0011"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0011"
+    },
+    {
+      "question_id": "PLAB-CARD-0016",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0012"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0012"
+    },
+    {
+      "question_id": "PLAB-CARD-0017",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0012"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0012"
+    },
+    {
+      "question_id": "PLAB-CARD-0018",
+      "topic": "Bradyarrhythmias & Conduction Blocks",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0012"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0012"
+    },
+    {
+      "question_id": "PLAB-CARD-0019",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0013"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0013"
+    },
+    {
+      "question_id": "PLAB-CARD-0020",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0013"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0013"
+    },
+    {
+      "question_id": "PLAB-CARD-0021",
+      "topic": "Aortic Stenosis (Valvular Heart Disease)",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0013"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0013"
+    },
+    {
+      "question_id": "PLAB-CARD-0022",
+      "topic": "Functional Mitral Regurgitation",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0014"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0014"
+    },
+    {
+      "question_id": "PLAB-CARD-0023",
+      "topic": "Functional Mitral Regurgitation",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0014"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0014"
+    },
+    {
+      "question_id": "PLAB-CARD-0024",
+      "topic": "Functional Mitral Regurgitation",
+      "active_source_ids": [
+        "DOC-PMC-CARD-0014"
+      ],
+      "coverage_status": "COVERED_ACTIVE_STARTUP_SAFE",
+      "coverage_detail": "Covered by active primary evidence source DOC-PMC-CARD-0014"
+    }
+  ]
+}

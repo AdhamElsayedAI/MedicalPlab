@@ -11,17 +11,27 @@ You do **not** need to read or understand backend internals (such as Evidence En
 To launch the local MedicalPlab API server for development and testing:
 
 ```bash
-# Set required feature flag for Phase 2B Socratic remediation
-export MEDICALPLAB_PHASE_2B_ENABLED=true
+# 1. Set required runtime mode and feature flags
+export PYTHONPATH="src"
+export MEDICALPLAB_RUNTIME_MODE="pilot"
+export MEDICALPLAB_PHASE_2B_ENABLED="1"
+export MEDICALPLAB_ANATOMY_3D_ENABLED="1"
 
-# Launch FastAPI application with Uvicorn
-python -m uvicorn main:app --host 127.0.0.1 --port 8000 --workers 1
+# For PLAB preview QA / demo mode (optional):
+export MEDICALPLAB_PLAB_PREVIEW_QA="1"
+
+# 2. Launch production FastAPI application with Uvicorn
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
 *(On Windows PowerShell):*
 ```powershell
-$env:MEDICALPLAB_PHASE_2B_ENABLED = "true"
-python -m uvicorn main:app --host 127.0.0.1 --port 8000 --workers 1
+$env:PYTHONPATH = "src"
+$env:MEDICALPLAB_RUNTIME_MODE = "pilot"
+$env:MEDICALPLAB_PHASE_2B_ENABLED = "1"
+$env:MEDICALPLAB_ANATOMY_3D_ENABLED = "1"
+# $env:MEDICALPLAB_PLAB_PREVIEW_QA = "1" # (Optional for QA review)
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
 ---
@@ -48,10 +58,14 @@ python -m uvicorn main:app --host 127.0.0.1 --port 8000 --workers 1
 | Variable | Type | Default | Required for Mobile Demo | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `MEDICALPLAB_PHASE_2B_ENABLED` | Boolean (`true`/`false`) | `false` | **YES (`true`)** | Activates the Phase 2B Socratic Remediation & Transfer engine. If false, `/api/v1/remediation/*` returns `503 Service Unavailable`. |
+| `MEDICALPLAB_PLAB_PREVIEW_QA` | Boolean (`1`/`0`) | `0` | For Demo / QA | Enables Preview QA mode for PLAB clinical questions. In strict default production (`0`), `/api/v1/plab/questions` returns `count: 0` (`PLAB_PUBLIC_RELEASE_READY = NO`, `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`). For internal QA/demo, set to `1` (`content_mode: "PREVIEW_QA"`). |
 | `MEDICALPLAB_TUTOR_PROVIDER` | String | `stub` | Optional (`stub` default) | AI provider mode for tutor responses. Default `stub` runs completely deterministic, offline-safe, with zero external LLM dependencies. This stub is for demo and test validation only; it does not represent live clinical LLM generation. |
 | `ALLOWED_ORIGINS` | Comma-separated | `*` | Optional | Allowed CORS origins. |
 
-> **Security Note:** Never hardcode secrets, API keys, or administrative tokens in mobile client bundles. The MVP mobile client communicates without requiring private secrets.
+> **Security & Governance Note:**
+> 1. Never hardcode secrets, API keys, or administrative tokens in mobile client bundles.
+> 2. Mobile clients must distinguish `PLAB_PREVIEW_QA / INTERNAL_DEMO` from `PLAB_PUBLIC_STUDENT_READY`. Preview-only questions must never be presented as production student curriculum. Mobile integration status: `MOBILE_BACKEND_HANDOFF_READY` with `PLAB_PUBLIC_RELEASE_READY = NO` and `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`.
+
 
 ---
 
@@ -195,10 +209,13 @@ See [`ERRORS_AND_STATES.md`](./ERRORS_AND_STATES.md#session-resume-behavior) for
 
 ## 12. Handoff Package Contents
 
-1. [`README.md`](./README.md) — *This file: quickstart & integration rules.*
-2. [`API_CONTRACT.md`](./API_CONTRACT.md) — *Exhaustive REST API contract with schemas and DTOs.*
-3. [`MOBILE_FLOW.md`](./MOBILE_FLOW.md) — *Complete end-to-end learning flow and state machine.*
-4. [`ERRORS_AND_STATES.md`](./ERRORS_AND_STATES.md) — *Error matrix, terminal states, and resume patterns.*
-5. [`DEMO_DATA.md`](./DEMO_DATA.md) — *Synthetic demo questions, distractors, and transfer items.*
-6. [`SMOKE_TESTS.md`](./SMOKE_TESTS.md) — *Practical curl examples for the 11-step end-to-end smoke test.*
-7. [`openapi.json`](./openapi.json) — *Machine-readable OpenAPI 3.1 specification.*
+1. [`MOBILE_DEVELOPER_HANDOFF.md`](./MOBILE_DEVELOPER_HANDOFF.md) — *Authoritative first-read developer guide with request/response examples and matrices.*
+2. [`MedicalPlab.mobile.postman_collection.json`](./MedicalPlab.mobile.postman_collection.json) — *Ready-to-run Postman collection (29 requests across 8 consumer folders).*
+3. [`MedicalPlab.mobile.postman_environment.json`](./MedicalPlab.mobile.postman_environment.json) — *Postman environment with non-secret variable placeholders.*
+4. [`README.md`](./README.md) — *Quickstart & integration rules.*
+5. [`API_CONTRACT.md`](./API_CONTRACT.md) — *Exhaustive REST API contract with schemas and DTOs.*
+6. [`MOBILE_FLOW.md`](./MOBILE_FLOW.md) — *Complete end-to-end learning flow and state machine.*
+7. [`ERRORS_AND_STATES.md`](./ERRORS_AND_STATES.md) — *Error matrix, terminal states, and resume patterns.*
+8. [`DEMO_DATA.md`](./DEMO_DATA.md) — *Synthetic demo questions, distractors, and transfer items.*
+9. [`SMOKE_TESTS.md`](./SMOKE_TESTS.md) — *Practical curl examples for the 11-step end-to-end smoke test.*
+10. [`openapi.json`](./openapi.json) — *Frozen runtime OpenAPI 3.1 specification.*

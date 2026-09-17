@@ -1,229 +1,11 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "MedicalPlab API",
-    "description": "Evidence-Grounded Medical Intelligence Platform API",
-    "version": "1.0.0"
+    "title": "MedicalPlab Product API",
+    "description": "Fail-closed MedicalPlab API for pilot and production clients",
+    "version": "1.1.0"
   },
   "paths": {
-    "/api/v1/university/subjects": {
-      "get": {
-        "tags": [
-          "University Learning"
-        ],
-        "summary": "Subjects",
-        "operationId": "subjects_api_v1_university_subjects_get",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/university/topics": {
-      "get": {
-        "tags": [
-          "University Learning"
-        ],
-        "summary": "Topics",
-        "operationId": "topics_api_v1_university_topics_get",
-        "parameters": [
-          {
-            "name": "subject",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Subject"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/university/question": {
-      "get": {
-        "tags": [
-          "University Learning"
-        ],
-        "summary": "Question",
-        "operationId": "question_api_v1_university_question_get",
-        "parameters": [
-          {
-            "name": "subject",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Subject"
-            }
-          },
-          {
-            "name": "topic",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Topic"
-            }
-          },
-          {
-            "name": "after",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "After"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/university/answer": {
-      "post": {
-        "tags": [
-          "University Learning"
-        ],
-        "summary": "Answer",
-        "operationId": "answer_api_v1_university_answer_post",
-        "parameters": [
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "minLength": 8,
-              "maxLength": 120,
-              "title": "X-User-Id"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Answer"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/university/progress": {
-      "get": {
-        "tags": [
-          "University Learning"
-        ],
-        "summary": "Progress",
-        "operationId": "progress_api_v1_university_progress_get",
-        "parameters": [
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "minLength": 8,
-              "maxLength": 120,
-              "title": "X-User-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/v1/version": {
       "get": {
         "summary": "Version",
@@ -1207,6 +989,224 @@
         }
       }
     },
+    "/api/v1/university/subjects": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Subjects",
+        "operationId": "subjects_api_v1_university_subjects_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/topics": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Topics",
+        "operationId": "topics_api_v1_university_topics_get",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/question": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Question",
+        "operationId": "question_api_v1_university_question_get",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Subject"
+            }
+          },
+          {
+            "name": "topic",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Topic"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "After"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/answer": {
+      "post": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Answer",
+        "operationId": "answer_api_v1_university_answer_post",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 120,
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Answer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/university/progress": {
+      "get": {
+        "tags": [
+          "University Learning"
+        ],
+        "summary": "Progress",
+        "operationId": "progress_api_v1_university_progress_get",
+        "parameters": [
+          {
+            "name": "x-user-id",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 120,
+              "title": "X-User-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/v1/adaptive/state": {
       "get": {
         "tags": [
@@ -1233,7 +1233,7 @@
             }
           },
           {
-            "name": "x-user-id",
+            "name": "X-User-Id",
             "in": "header",
             "required": false,
             "schema": {
@@ -1246,6 +1246,22 @@
                 }
               ],
               "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
             }
           }
         ],
@@ -1299,7 +1315,7 @@
             }
           },
           {
-            "name": "x-user-id",
+            "name": "X-User-Id",
             "in": "header",
             "required": false,
             "schema": {
@@ -1312,6 +1328,22 @@
                 }
               ],
               "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
             }
           }
         ],
@@ -1357,7 +1389,7 @@
         "operationId": "record_learning_event_api_v1_adaptive_event_post",
         "parameters": [
           {
-            "name": "x-user-id",
+            "name": "X-User-Id",
             "in": "header",
             "required": false,
             "schema": {
@@ -1370,6 +1402,22 @@
                 }
               ],
               "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
             }
           }
         ],
@@ -1417,7 +1465,7 @@
         "operationId": "trigger_remediation_api_v1_adaptive_remediate_post",
         "parameters": [
           {
-            "name": "x-user-id",
+            "name": "X-User-Id",
             "in": "header",
             "required": false,
             "schema": {
@@ -1430,6 +1478,22 @@
                 }
               ],
               "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
             }
           }
         ],
@@ -1495,7 +1559,7 @@
             }
           },
           {
-            "name": "x-user-id",
+            "name": "X-User-Id",
             "in": "header",
             "required": false,
             "schema": {
@@ -1508,6 +1572,22 @@
                 }
               ],
               "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
             }
           }
         ],
@@ -1983,17 +2063,515 @@
         }
       }
     },
+    "/api/v1/anatomy/manifest": {
+      "get": {
+        "tags": [
+          "Generative 3D Anatomy"
+        ],
+        "summary": "Get Anatomy Manifest",
+        "description": "Retrieve verified anatomical structure manifest and attribution provenance.",
+        "operationId": "get_anatomy_manifest_api_v1_anatomy_manifest_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnatomyManifestResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/session/start": {
+      "post": {
+        "tags": [
+          "Generative 3D Anatomy"
+        ],
+        "summary": "Start Anatomy Session",
+        "description": "Start or resume an anatomy learning session.",
+        "operationId": "start_anatomy_session_api_v1_anatomy_session_start_post",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StartSessionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StartSessionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/session/{session_id}": {
+      "get": {
+        "tags": [
+          "Generative 3D Anatomy"
+        ],
+        "summary": "Get Anatomy Session",
+        "description": "Retrieve session state with ownership enforcement.",
+        "operationId": "get_anatomy_session_api_v1_anatomy_session__session_id__get",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnatomySession"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/session/{session_id}/interact": {
+      "post": {
+        "tags": [
+          "Generative 3D Anatomy"
+        ],
+        "summary": "Interact With Anatomy Session",
+        "description": "Advance dialogue or process physical 3D mesh interaction.",
+        "operationId": "interact_with_anatomy_session_api_v1_anatomy_session__session_id__interact_post",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InteractSessionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InteractSessionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/anatomy/session/{session_id}/challenge": {
+      "post": {
+        "tags": [
+          "Generative 3D Anatomy"
+        ],
+        "summary": "Submit Anatomy Challenge",
+        "description": "Submit learner 3D mesh selection for deterministic challenge evaluation.",
+        "operationId": "submit_anatomy_challenge_api_v1_anatomy_session__session_id__challenge_post",
+        "parameters": [
+          {
+            "name": "session_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Session Id"
+            }
+          },
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChallengeSubmitRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChallengeSubmitResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/learner/progress": {
+      "get": {
+        "tags": [
+          "Unified Learner Progress"
+        ],
+        "summary": "Get Learner Progress",
+        "description": "Retrieve unified read-only progress composed across all learning modes.",
+        "operationId": "get_learner_progress_api_v1_learner_progress_get",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnifiedProgressResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/progress": {
+      "get": {
+        "tags": [
+          "Unified Learner Progress"
+        ],
+        "summary": "Get Progress Alias",
+        "description": "Convenience alias for /api/v1/learner/progress.",
+        "operationId": "get_progress_alias_api_v1_progress_get",
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-User-Id"
+            }
+          },
+          {
+            "name": "X-Learner-Id",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Learner-Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnifiedProgressResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Ready Ready Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/health": {
       "get": {
         "summary": "Health",
-        "description": "Health check endpoint for Google Cloud Run, Vercel, and monitoring.",
         "operationId": "health_health_get",
         "responses": {
           "200": {
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Health Health Get"
+                }
               }
             }
           }
@@ -2003,555 +2581,16 @@
     "/": {
       "get": {
         "summary": "Root",
-        "description": "Root platform discovery endpoint.",
         "operationId": "root__get",
         "responses": {
           "200": {
             "description": "Successful Response",
             "content": {
               "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ai/chat": {
-      "post": {
-        "summary": "Ai Chat",
-        "description": "Evidence-grounded Socratic tutor chat endpoint.\n\nAccepts clinical query, applies safety verification, queries guideline\nevidence, and returns structured clinical reasoning with citations.",
-        "operationId": "ai_chat_ai_chat_post",
-        "parameters": [
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/v1/evidence/query": {
-      "post": {
-        "summary": "Evidence Query Endpoint",
-        "description": "Direct query endpoint for Canonical Evidence Engine V1.1 inspection.",
-        "operationId": "evidence_query_endpoint_api_v1_evidence_query_post",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          }
-        }
-      }
-    },
-    "/student/analytics": {
-      "get": {
-        "summary": "Student Analytics",
-        "description": "Retrieve Bayesian knowledge tracing and mastery analytics for student.",
-        "operationId": "student_analytics_student_analytics_get",
-        "parameters": [
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/student/attempts": {
-      "post": {
-        "summary": "Record Student Attempt",
-        "description": "Record student question attempt and update Bayesian knowledge tracing.",
-        "operationId": "record_student_attempt_student_attempts_post",
-        "parameters": [
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/{full_path}": {
-      "options": {
-        "summary": "Universal Stage G Proxy",
-        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
-        "operationId": "universal_stage_g_proxy__full_path__options",
-        "parameters": [
-          {
-            "name": "full_path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Full Path"
-            }
-          },
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "summary": "Universal Stage G Proxy",
-        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
-        "operationId": "universal_stage_g_proxy__full_path__options",
-        "parameters": [
-          {
-            "name": "full_path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Full Path"
-            }
-          },
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "summary": "Universal Stage G Proxy",
-        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
-        "operationId": "universal_stage_g_proxy__full_path__options",
-        "parameters": [
-          {
-            "name": "full_path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Full Path"
-            }
-          },
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Universal Stage G Proxy",
-        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
-        "operationId": "universal_stage_g_proxy__full_path__options",
-        "parameters": [
-          {
-            "name": "full_path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Full Path"
-            }
-          },
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "summary": "Universal Stage G Proxy",
-        "description": "Forward any unhandled Stage-G routes (/auth, /documents, /admin, etc.) to platform router.",
-        "operationId": "universal_stage_g_proxy__full_path__options",
-        "parameters": [
-          {
-            "name": "full_path",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "title": "Full Path"
-            }
-          },
-          {
-            "name": "x-user-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-User-Id"
-            }
-          },
-          {
-            "name": "x-tenant-id",
-            "in": "header",
-            "required": false,
-            "schema": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                }
-              ],
-              "title": "X-Tenant-Id"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            }
-          },
-          "422": {
-            "description": "Validation Error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
+                  "additionalProperties": true,
+                  "type": "object",
+                  "title": "Response Root  Get"
                 }
               }
             }
@@ -2647,6 +2686,57 @@
         "title": "AdaptiveRecommendation",
         "description": "Next best pedagogical action chosen by the decision engine."
       },
+      "AnatomyActionType": {
+        "type": "string",
+        "enum": [
+          "FOCUS_STRUCTURE",
+          "HIGHLIGHT_STRUCTURE",
+          "ISOLATE_STRUCTURE",
+          "SHOW_STRUCTURE",
+          "HIDE_STRUCTURE",
+          "SHOW_RELATION",
+          "SET_STRUCTURE_OPACITY",
+          "RESET_SCENE"
+        ],
+        "title": "AnatomyActionType",
+        "description": "Deterministic 3D scene actions recognized by the frontend Scene Controller."
+      },
+      "AnatomyAgentResponse": {
+        "properties": {
+          "tutor_message": {
+            "type": "string",
+            "title": "Tutor Message"
+          },
+          "scene_actions": {
+            "items": {
+              "$ref": "#/components/schemas/SceneAction"
+            },
+            "type": "array",
+            "title": "Scene Actions"
+          },
+          "interaction_request": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/InteractionRequest"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fallback_applied": {
+            "type": "boolean",
+            "title": "Fallback Applied",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "tutor_message"
+        ],
+        "title": "AnatomyAgentResponse",
+        "description": "Strict schema emitted by the Structured AI Anatomy Tutor Agent."
+      },
       "AnatomyCommandRequest": {
         "properties": {
           "query": {
@@ -2705,6 +2795,201 @@
         },
         "type": "object",
         "title": "AnatomyCommandRequest"
+      },
+      "AnatomyManifestResponse": {
+        "properties": {
+          "structures": {
+            "items": {
+              "$ref": "#/components/schemas/AnatomyStructure"
+            },
+            "type": "array",
+            "title": "Structures"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          },
+          "learning_objectives": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Learning Objectives"
+          }
+        },
+        "type": "object",
+        "required": [
+          "structures",
+          "provenance",
+          "learning_objectives"
+        ],
+        "title": "AnatomyManifestResponse"
+      },
+      "AnatomySession": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "title": "Session Id"
+          },
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "learning_objective": {
+            "type": "string",
+            "title": "Learning Objective"
+          },
+          "lesson_state": {
+            "$ref": "#/components/schemas/LessonState",
+            "default": "INTRO"
+          },
+          "current_target_structure_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current Target Structure Id"
+          },
+          "selected_structure_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Selected Structure Ids"
+          },
+          "hint_level": {
+            "type": "integer",
+            "title": "Hint Level",
+            "default": 0
+          },
+          "challenge_state": {
+            "type": "string",
+            "title": "Challenge State",
+            "default": "NOT_STARTED"
+          },
+          "challenge_result": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChallengeResult"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "created_at": {
+            "type": "number",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "number",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session_id",
+          "learner_id",
+          "learning_objective",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "AnatomySession",
+        "description": "Persistent anatomy learning session."
+      },
+      "AnatomyStructure": {
+        "properties": {
+          "structure_id": {
+            "type": "string",
+            "title": "Structure Id"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          },
+          "source_system": {
+            "type": "string",
+            "title": "Source System",
+            "default": "HRA"
+          },
+          "source_structure_id": {
+            "type": "string",
+            "title": "Source Structure Id"
+          },
+          "ontology_id": {
+            "type": "string",
+            "title": "Ontology Id"
+          },
+          "mesh_node_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Mesh Node Names"
+          },
+          "aliases": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Aliases"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region",
+            "default": "renal"
+          },
+          "relationships": {
+            "items": {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Relationships"
+          },
+          "learning_objectives": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Learning Objectives"
+          },
+          "evidence_refs": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Evidence Refs"
+          },
+          "fma_crosswalk": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fma Crosswalk"
+          }
+        },
+        "type": "object",
+        "required": [
+          "structure_id",
+          "display_name",
+          "source_structure_id",
+          "ontology_id",
+          "mesh_node_names"
+        ],
+        "title": "AnatomyStructure",
+        "description": "Deterministic anatomical structure metadata grounded in verified ontologies."
       },
       "Answer": {
         "properties": {
@@ -2783,6 +3068,73 @@
         ],
         "title": "AttemptRecord",
         "description": "Normalized representation of a single learner attempt."
+      },
+      "ChallengeResult": {
+        "type": "string",
+        "enum": [
+          "PENDING",
+          "CORRECT",
+          "INCORRECT"
+        ],
+        "title": "ChallengeResult",
+        "description": "Deterministic outcome of the independent 3D identification challenge."
+      },
+      "ChallengeSubmitRequest": {
+        "properties": {
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "selected_structure_id": {
+            "type": "string",
+            "title": "Selected Structure Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "learner_id",
+          "selected_structure_id"
+        ],
+        "title": "ChallengeSubmitRequest"
+      },
+      "ChallengeSubmitResponse": {
+        "properties": {
+          "session": {
+            "$ref": "#/components/schemas/AnatomySession"
+          },
+          "is_correct": {
+            "type": "boolean",
+            "title": "Is Correct"
+          },
+          "target_structure_id": {
+            "type": "string",
+            "title": "Target Structure Id"
+          },
+          "selected_structure_id": {
+            "type": "string",
+            "title": "Selected Structure Id"
+          },
+          "tutor_feedback": {
+            "type": "string",
+            "title": "Tutor Feedback"
+          },
+          "scene_actions": {
+            "items": {
+              "$ref": "#/components/schemas/SceneAction"
+            },
+            "type": "array",
+            "title": "Scene Actions"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session",
+          "is_correct",
+          "target_structure_id",
+          "selected_structure_id",
+          "tutor_feedback"
+        ],
+        "title": "ChallengeSubmitResponse"
       },
       "ClinicalReasonRequest": {
         "properties": {
@@ -2967,6 +3319,107 @@
         },
         "type": "object",
         "title": "HTTPValidationError"
+      },
+      "InteractSessionRequest": {
+        "properties": {
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "selected_structure_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selected Structure Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "learner_id"
+        ],
+        "title": "InteractSessionRequest"
+      },
+      "InteractSessionResponse": {
+        "properties": {
+          "session": {
+            "$ref": "#/components/schemas/AnatomySession"
+          },
+          "tutor_response": {
+            "$ref": "#/components/schemas/AnatomyAgentResponse"
+          },
+          "deterministic_feedback": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Deterministic Feedback"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session",
+          "tutor_response"
+        ],
+        "title": "InteractSessionResponse"
+      },
+      "InteractionRequest": {
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/InteractionRequestType",
+            "default": "IDENTIFY_STRUCTURE"
+          },
+          "target_structure_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Structure Id"
+          },
+          "prompt": {
+            "type": "string",
+            "title": "Prompt"
+          }
+        },
+        "type": "object",
+        "required": [
+          "prompt"
+        ],
+        "title": "InteractionRequest",
+        "description": "Request from AI tutor for the student to physically interact with the 3D model."
+      },
+      "InteractionRequestType": {
+        "type": "string",
+        "enum": [
+          "IDENTIFY_STRUCTURE",
+          "EXPLORE_SCENE"
+        ],
+        "title": "InteractionRequestType",
+        "description": "Types of physical interactions requested from the student."
       },
       "LatencyBreakdownDTO": {
         "properties": {
@@ -3178,6 +3631,19 @@
         ],
         "title": "LearningEvent",
         "description": "Incoming learning telemetry event."
+      },
+      "LessonState": {
+        "type": "string",
+        "enum": [
+          "INTRO",
+          "GUIDED_VESSELS",
+          "GUIDED_IDENTIFICATION",
+          "CHALLENGE_READY",
+          "CHALLENGE_ACTIVE",
+          "COMPLETED"
+        ],
+        "title": "LessonState",
+        "description": "State machine progression for the guided anatomy lesson."
       },
       "MasteryLevel": {
         "type": "string",
@@ -3971,6 +4437,56 @@
         "type": "object",
         "title": "ReviewStartRequest"
       },
+      "SceneAction": {
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/AnatomyActionType"
+          },
+          "structure_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Structure Id"
+          },
+          "opacity": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Opacity"
+          },
+          "duration_ms": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 5000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duration Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "action"
+        ],
+        "title": "SceneAction",
+        "description": "Validated structured action dispatched to the Three.js Scene Controller."
+      },
       "SocraticStrategyType": {
         "type": "string",
         "enum": [
@@ -4039,6 +4555,55 @@
         ],
         "title": "StartRemediationRequest",
         "description": "POST /api/v1/remediation/start payload."
+      },
+      "StartSessionRequest": {
+        "properties": {
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "learning_objective": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Learning Objective",
+            "default": "RENAL_BLOOD_FLOW_AND_HILUM"
+          }
+        },
+        "type": "object",
+        "required": [
+          "learner_id"
+        ],
+        "title": "StartSessionRequest"
+      },
+      "StartSessionResponse": {
+        "properties": {
+          "session": {
+            "$ref": "#/components/schemas/AnatomySession"
+          },
+          "initial_tutor_response": {
+            "$ref": "#/components/schemas/AnatomyAgentResponse"
+          },
+          "active_structures": {
+            "items": {
+              "$ref": "#/components/schemas/AnatomyStructure"
+            },
+            "type": "array",
+            "title": "Active Structures"
+          }
+        },
+        "type": "object",
+        "required": [
+          "session",
+          "initial_tutor_response",
+          "active_structures"
+        ],
+        "title": "StartSessionResponse"
       },
       "TopicMasteryRecord": {
         "properties": {
@@ -4839,6 +5404,44 @@
         },
         "type": "object",
         "title": "TutorVerificationSummaryDTO"
+      },
+      "UnifiedProgressResponse": {
+        "properties": {
+          "learner_id": {
+            "type": "string",
+            "title": "Learner Id"
+          },
+          "university": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "University"
+          },
+          "plab": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Plab"
+          },
+          "adaptive": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Adaptive"
+          },
+          "anatomy": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Anatomy"
+          },
+          "summary": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "learner_id"
+        ],
+        "title": "UnifiedProgressResponse"
       },
       "ValidationError": {
         "properties": {

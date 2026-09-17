@@ -27,6 +27,9 @@ from medicalplab.university.api import router as university_router
 from medicalplab.adaptive.api import router as adaptive_router
 from medicalplab.remediation.api import router as remediation_router
 from medicalplab.learning_intelligence.api import router as learning_intelligence_router
+from medicalplab.anatomy.api import router as anatomy_router
+from medicalplab.progress_api import router as progress_router
+
 
 
 RUNTIME_MODE = get_runtime_mode()
@@ -72,7 +75,7 @@ app.add_middleware(
     allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type", "X-User-Id", "X-Tenant-Id", "X-Request-Id"],
+    allow_headers=["Authorization", "Content-Type", "X-User-Id", "X-Learner-Id", "X-Tenant-Id", "X-Request-Id"],
 )
 
 app.include_router(product_router)
@@ -80,6 +83,9 @@ app.include_router(university_router)
 app.include_router(adaptive_router)
 app.include_router(remediation_router)
 app.include_router(learning_intelligence_router)
+app.include_router(anatomy_router)
+app.include_router(progress_router)
+
 
 
 @app.get("/ready")

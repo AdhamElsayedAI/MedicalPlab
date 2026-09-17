@@ -1,230 +1,359 @@
 # MedicalPlab
 
-> **An evidence-grounded medical learning platform combining adaptive undergraduate education with fail-closed licensing preparation.**
+### Adaptive Evidence-Grounded Medical Learning Platform
 
-[![Python 3.11 / 3.12](https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![Next.js 16.3](https://img.shields.io/badge/Next.js-16.3.4-black?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
-[![React 19](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
-[![Architecture: V1.1](https://img.shields.io/badge/Evidence%20Engine-V1.1%20Frozen-blueviolet?style=flat-square)](docs/RAG_ARCHITECTURE.md)
-[![Verification Suite](https://img.shields.io/badge/Tests-Passing%20%5BVerified%5D-10B981?style=flat-square)](reports/release/test_summary.md)
+MedicalPlab connects adaptive medical education, bounded Socratic remediation, evidence-grounded AI tutoring, interactive 3D anatomy, and governed clinical exam preparation into one longitudinal learning experience.
+
+> MedicalPlab does not only answer students. It learns how students learn.
+
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%20%7C%203.12-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
+[![Next.js 16](https://img.shields.io/badge/Next.js-16.3.4-black.svg)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19.2.8-61DAFB.svg)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg)](https://www.typescriptlang.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-0.183+-black.svg)](https://threejs.org/)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()
+[![E2E Verification](https://img.shields.io/badge/E2E-Verified%20(Chrome%20CDP)-success.svg)]()
+[![Mobile API Contract](https://img.shields.io/badge/Mobile%20API-Frozen%20Baseline-informational.svg)](docs/mobile-handoff/START_HERE.md)
+[![Evidence Grounding](https://img.shields.io/badge/Evidence-PMC%20Open%20Access-orange.svg)]()
+
+---
+
+### Navigation
+[Product Demo](#running-the-certified-demo) • [Architecture](#ai-architecture) • [Mobile API](#mobile-app-integration) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Team Handoff](docs/handoff/TEAM_HANDOFF.md) • [Release Notes](RELEASE_NOTES.md)
+
+---
+
+## Product Hero
+
+![MedicalPlab Learning Hub](docs/demo/final-showcase/01-home.png)
+
+<p align="center">
+  <img src="docs/demo/final-showcase/05-tutor.png" width="32%" alt="Evidence-Grounded AI Tutor" />
+  <img src="docs/demo/final-showcase/06-anatomy-guided.png" width="32%" alt="Guided 3D Anatomy Lab" />
+  <img src="docs/demo/final-showcase/08-progress.png" width="32%" alt="Unified Learner Progress" />
+</p>
+
+*Complete gallery available in the [Certified Showcase Gallery](docs/demo/final-showcase/README.md).*
 
 ---
 
 ## What is MedicalPlab?
 
-MedicalPlab is an AI-powered medical education platform designed to support clinicians across their training lifecycle. It bridges foundational basic science and high-stakes clinical licensing examination practice through two distinct, architecturally decoupled product lanes: **University Learning** and **PLAB / Licensing Preparation**. 
+MedicalPlab is an adaptive clinical edtech platform designed to address the foundational disconnect in digital medical education: the gap between practicing multiple-choice questions, understanding basic-science mechanisms, and mastering clinical decision-making.
 
-Rather than relying on unconstrained generative language models that confabulate clinical facts, MedicalPlab pairs targeted generative explanations with a deterministic, fail-closed **Evidence Engine (V1.1)**. Every explanation and distractor rejection is anchored to accredited medical literature and verified clinical guidelines with exact cryptographic provenance.
+MedicalPlab is not an unconstrained medical chatbot, a static question bank, or an isolated 3D viewer. It is a single, coherent learning intelligence system that unifies:
+1. **Preclinical Medical Education:** Curricular basic-science modules with mechanistic distractor analysis.
+2. **Cognitive Diagnostic Remediation:** Multi-turn Socratic remediation that diagnoses reasoning patterns without giving away answers.
+3. **Evidence-Grounded Clinical Tutoring:** Generative clinical dialogue strictly bound to peer-reviewed medical literature with automated claim verification.
+4. **Spatial 3D Anatomy:** Interactive organ models powered by the HuBMAP Human Reference Atlas with deterministic challenge scoring.
+5. **Governed Clinical Exam Preparation:** Fail-closed clinical licensing preparation requiring formal clinician promotion before content release.
 
 ---
 
 ## The Problem
 
-1. **Preclinical Comprehension Gap:** Undergraduate medical students struggle to bridge dense textbook physiology with mechanistic, board-style question application.
-2. **Commercial Question Stagnation:** Legacy licensing question banks rely on static question pools that lag months behind clinical guideline updates and carry expensive recurring subscriptions.
-3. **Unsafe LLM Confabulation:** General-purpose AI models frequently invent dosages, cite retracted literature, and generate convincing but dangerous clinical rationales. In medical education, ungrounded AI leads directly to diagnostic error and patient harm.
+Traditional medical education software suffers from critical systemic limitations:
+
+- **Static question banks score correctness, not reasoning:** When a student picks a wrong answer, standard platforms display a red box and a generic explanation. They cannot determine *why* the student failed—such as confusing an enzyme's substrate with its downstream product.
+- **Generic generative LLMs pose patient-safety risks:** Unconstrained large language models hallucinate plausible-sounding medical advice, invent non-existent clinical trials, and lack deterministic citation provenance.
+- **Assessment and remediation operate in silos:** Students quiz themselves on one website, read disconnected textbook passages on another, and study anatomy in isolation, leaving cognitive gaps unaddressed.
+- **Anatomy applications lack longitudinal learner integration:** 3D anatomy tools typically function as passive anatomical atlases rather than active challenge environments bound to learner mastery telemetry.
+- **Clinical exam preparation lacks explicit governance:** Licensing questions are frequently scraped, unverified, or published without clinical oversight, exposing candidates to outdated or incorrect clinical guidelines.
 
 ---
 
-## The Product: Two Dedicated Learning Lanes
+## How MedicalPlab Learns With the Student
 
-MedicalPlab enforces complete structural and behavioral separation between its two product lanes:
-
-### 1. University Learning (Undergraduate Medical Education)
-- **Target Learner:** Preclinical medical students and healthcare trainees.
-- **Pedagogical Goal:** Mechanistic comprehension of foundational basic sciences.
-- **Current Verified MVP:** **Renal Physiology** across two core syllabus topics:
-  - *Glomerular filtration barrier* (fenestrated endothelium, basement membrane, podocyte slit diaphragms).
-  - *Renin-Angiotensin-Aldosterone System (RAAS)* (renin cleavage of angiotensinogen, ACE conversion, AT1 receptor actions).
-- **Core Loop:** Subject $\rightarrow$ Topic $\rightarrow$ Single-Best-Answer Question $\rightarrow$ Feedback & Mechanistic Rationale $\rightarrow$ BKT Mastery Update $\rightarrow$ Next Action Recommendation.
-- **Security & Contract:** Zero answer key leakage in client payloads; anonymous learner device identity; fail-closed on corrupted content.
-
-### 2. PLAB / Licensing Preparation (Clinical Licensing Practice)
-- **Target Learner:** International Medical Graduates (IMGs) and final-year UK students sitting the GMC PLAB 1 / Medical Licensing Assessment (MLA).
-- **Pedagogical Goal:** High-stakes diagnostic decision-making and guideline adherence.
-- **Governance & Safety:** Bounded by UK clinical issuing bodies (NICE, BTS, RCUK, SIGN).
-- **Fail-Closed Quarantine Policy:** Every question is audited against an explicit 9-point blocker taxonomy (Blockers A through I). In Cardiorespiratory Batch 1, **24 of 36 items are strictly quarantined** due to evidence currency or distractor ambiguity blockers. **Zero questions are published without GMC clinician sign-off.**
-
----
-
-## What Works Today
-
-- [x] **Next.js 16.3.4 Production Client:** Responsive learning interface with mode selection, question engine, instantaneous rationale drawer, and mastery telemetry (`frontend/`).
-- [x] **FastAPI Application Gateway:** High-performance async backend supporting `/api/v1/university/*`, direct evidence retrieval `/api/v1/evidence/query`, Socratic chat `/ai/chat`, and platform routing (`main.py`).
-- [x] **Canonical Evidence Engine V1.1:** Field-aware BM25 + deterministic document routing + section-local matching + weighted Reciprocal Rank Fusion + `Qwen3-Reranker-0.6B` cross-encoder (`src/medicalplab/evidence_engine/`).
-- [x] **Central Claim Verification:** Deterministic polarity, numeric consistency, and high-risk claim safety checks enforcing fail-closed abstention.
-- [x] **Bayesian Knowledge Tracing (BKT):** Dynamic student mastery tracking modeling knowledge state transitions and weak topic identification (`src/medicalplab/stage_e/`).
-- [x] **PLAB V9 Governance Engine:** Mathematical verification of UTF-8 LF normalized hashes, exact span containment, and independent negative mutation rejection (`tests/plab/v9/`).
-
----
-
-## Why MedicalPlab is Different
-
-| Feature | Legacy Question Banks | Generic LLMs (ChatGPT/Claude) | MedicalPlab |
-| :--- | :--- | :--- | :--- |
-| **Evidence Grounding** | Text summaries; unverified provenance | Probabilistic recall; prone to hallucination | Cryptographically verified exact-span containment in accredited sources |
-| **Adaptivity** | Static tags; linear difficulty | Conversational, but no learner state model | Bayesian Knowledge Tracing (BKT) with dynamic mastery tracking |
-| **Safety Governance** | Infrequent manual reviews | No safety guarantees | NHS DCB0129-aligned fail-closed quarantine framework |
-| **Out-of-Domain Query** | Hard 404 or out of scope | Generates convincing confabulations | **Fail-closed abstention** (`INSUFFICIENT_RETRIEVAL_SUPPORT`) |
-| **Clinical Integrity** | Self-published | Ungrounded probabilistic output | Software cannot self-approve medical truth; clinician sign-off required |
-
----
-
-## Generative AI & The Evidence Engine
-
-MedicalPlab maintains total transparency on what is generative AI versus deterministic algorithms:
-
-```
-┌────────────────────────────────────────────────────────────────────────┐
-│                        AI & Algorithmic Stack                          │
-├──────────────────────────┬─────────────────────────────────────────────┤
-│ Component                │ Implementation & Nature                     │
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Generative AI            │ Socratic clinical explanation rendering and │
-│                          │ contextual learner feedback (bounded)       │
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Candidate Retrieval      │ Pure deterministic: document routing cards, │
-│                          │ field-aware BM25 (title 1.0, heading 2.0),  │
-│                          │ section matching, weighted RRF (k=60)       │
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Neural Reranking         │ Qwen/Qwen3-Reranker-0.6B cross-encoder      │
-│                          │ (scores top-25 query-chunk entailment)      │
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Deterministic Safety     │ CentralClaimVerifier: directional entailment│
-│                          │ polarity veto, numeric check, fail-closed   │
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Adaptive Learning        │ 4-parameter Bayesian Knowledge Tracing (BKT)│
-├──────────────────────────┼─────────────────────────────────────────────┤
-│ Human-in-the-Loop        │ GMC-licensed clinician sign-off boundary    │
-└──────────────────────────┴─────────────────────────────────────────────┘
-```
-
----
-
-## Product Architecture
+MedicalPlab implements a closed-loop cognitive learning loop that detects reasoning gaps and intervenes at the conceptual level:
 
 ```mermaid
 graph TD
-    Learner(["Medical Learner / Clinician"])
-    
-    subgraph Client["Next.js 16.3.4 Client (React 19 + Turbopack)"]
-        UI["Product Dashboard & Mode Selector"]
-        UniStudio["University Learning Studio<br/>(/university)"]
-        PLABRoom["PLAB Practice & Review Room<br/>(/)"]
-    end
+    Attempt["1. Learner Attempt<br/>(Preclinical or Clinical MCQ)"]
+    Signal["2. Reasoning Signal<br/>(Heuristic Distractor Analysis)"]
+    Recommend["3. Adaptive Recommendation<br/>(Intervention Policy Engine)"]
+    Remediation["4. Socratic Remediation<br/>(Probe → Guide → Consolidate)"]
+    Transfer["5. Independent Transfer<br/>(Held-Out Problem Assessment)"]
+    Tutor["6. Evidence-Grounded Tutor<br/>(Deep Literature Inquiries)"]
+    Anatomy["7. Spatial 3D Learning<br/>(Guided Lesson & Pin Challenge)"]
+    Progress["8. Unified Progress<br/>(Longitudinal Mastery Telemetry)"]
 
-    Learner --> UI
-    UI --> UniStudio
-    UI --> PLABRoom
-
-    subgraph Backend["FastAPI High-Performance Gateway (Python 3.12)"]
-        MainApp["main.py (Demo / Local Entrypoint)"]
-        ProdApp["production_main.py (Strict Pilot Mode)"]
-    end
-
-    UniStudio -- "HTTP REST" --> MainApp
-    PLABRoom -- "HTTP REST" --> MainApp
-
-    subgraph Services["Core Application & AI Services"]
-        UniService["University Service<br/>(Renal Basic-Science Question Bank)"]
-        PLABService["PLAB V9 Service<br/>(Governance & Quarantine Engine)"]
-        EvidenceEngine["Evidence Engine V1.1<br/>(Field BM25, RRF, Qwen3-Reranker)"]
-        SafetyGate["Central Claim Verifier<br/>(Fail-Closed Safety Gate)"]
-        BKT["Mastery & Progress Engine<br/>(Bayesian Knowledge Tracing)"]
-    end
-
-    MainApp --> UniService
-    MainApp --> PLABService
-    MainApp --> EvidenceEngine
-    MainApp --> BKT
-    EvidenceEngine --> SafetyGate
-
-    subgraph DataStore["Public-Safe Storage & Corpus"]
-        UniData["Data/university/questions.json<br/>(Renal Physiology MVP)"]
-        CorpusData["Data/processed/renal_v1/<br/>(16 Open-Access PMC Articles, 2,192 Chunks)"]
-        DB["SQLite Progress Stores<br/>(university.sqlite3 / pilot.db)"]
-    end
-
-    UniService --> UniData
-    UniService --> DB
-    EvidenceEngine --> CorpusData
+    Attempt --> Signal
+    Signal --> Recommend
+    Recommend --> Remediation
+    Remediation --> Transfer
+    Transfer --> Tutor
+    Transfer --> Anatomy
+    Tutor --> Progress
+    Anatomy --> Progress
+    Progress --> Attempt
 ```
+
+> **Important Pedagogical Boundary:** A wrong answer is **not** a diagnosed misconception. In MedicalPlab, incorrect options trigger *heuristic reasoning-pattern signals*—provisional hypotheses that qualify the learner for bounded Socratic remediation. Mastery is only certified when the learner solves an independent held-out transfer item.
 
 ---
 
-## Learning Workflows: University vs PLAB
+## Current Pilot / Demo Capabilities
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Learner as Student / Candidate
-    participant UI as Next.js Client
-    participant API as FastAPI Gateway
-    participant Engine as Evidence / Safety Engine
-    participant DB as Persistence
+### 1. Preclinical University Learning
+- Curricular renal physiology module covering Glomerular Filtration Barrier and RAAS Mechanisms.
+- 6 production questions (`UNI-RENAL-001` through `006`) with zero pre-submission answer leakage.
+- Detailed distractor analysis explaining *why* alternatives are incorrect.
 
-    alt University Learning Flow (Preclinical)
-        Learner->>UI: Select Renal Physiology -> Topic
-        UI->>API: GET /api/v1/university/question (No Answer Leak)
-        API-->>UI: Return Stem, Options & Position
-        Learner->>UI: Submit Option (e.g., Option D)
-        UI->>API: POST /api/v1/university/answer (Idempotent Key)
-        API->>DB: Record Attempt & Update Mastery State
-        API-->>UI: Return Correctness, Full Rationale & PMC Citation
-        UI-->>Learner: Display Feedback & Next Action Recommendation
-    else PLAB Licensing Flow (High Stakes)
-        Learner->>UI: Request Licensing Question
-        UI->>API: GET /api/v1/plab/questions
-        API->>Engine: Verify Data Manifest & Governance Integrity
-        Note over API,Engine: If Golden Count == 0, Fail-Closed (No Unvetted Items)
-        API-->>UI: Return Governed Question (Preview QA mode only)
-    end
-```
+### 2. Adaptive Learning Engine
+- Authoritative backend learner state profiling with zero client-side calculation.
+- Dynamic recommendation engine targeting foundational knowledge gaps.
+- Real-time event ingestion across University, Remediation, and Anatomy tracks.
+
+### 3. Socratic Remediation
+- Bounded 3-turn Socratic dialogue structure (`PROBE` → `GUIDE` → `CONSOLIDATE`).
+- Prevents cognitive abandonment while actively guiding the student toward the mechanism.
+- Mandatory held-out transfer problem (`UNI-RENAL-001-T`) verified by backend scoring.
+
+### 4. Evidence-Grounded AI Tutor
+- Powered by `TutorService` and the Shared Evidence Engine.
+- Multi-channel BM25 retrieval, reciprocal rank fusion, and neural reranking over PubMed Central Open Access literature.
+- Automated proposition extraction, directional entailment check, and fail-closed `SAFE_FALLBACK`.
+
+### 5. Guided 3D Anatomy Lab
+- Authentic HuBMAP Human Reference Atlas (HRA) 3D renal vasculature and organ models.
+- Guided anatomical pathway: Left Renal Vein (`renal_vein_left`).
+- Independent spatial pin challenge: Left Renal Artery (`renal_artery_left`), scored deterministically via canonical backend route (`POST /api/v1/anatomy/session/{session_id}/challenge`).
+
+### 6. Unified Learner Progress
+- Single authoritative endpoint (`GET /api/v1/learner/progress`) aggregating University attempts, Adaptive state, Anatomy challenge passes, and PLAB status.
+
+### 7. Governed PLAB Preview QA
+- 36 candidate questions available under Preview QA for internal engineering and mentor demonstration.
+- Explicit governance banner: candidate questions require clinician panel review before release.
+- Zero pre-answer metadata or leakage.
 
 ---
 
-## Evidence Safety & Fail-Closed Abstention Flow
+## Product Experience
+
+| Stage | Visual Demonstration | Key Innovation |
+|---|---|---|
+| **Learning Hub** | ![Home](docs/demo/final-showcase/01-home.png) | Ambient motion, dynamic Cognitive Loop SVG animation, runtime truth badges. |
+| **Preclinical Practice** | ![University](docs/demo/final-showcase/02-university.png) | Option B distractor triggers mechanistic analysis without pre-submission leakage. |
+| **Socratic Remediation** | ![Remediation](docs/demo/final-showcase/03-remediation.png) | Multi-turn dialogue guides the student without revealing the direct answer. |
+| **Held-Out Transfer** | ![Transfer](docs/demo/final-showcase/04-transfer.png) | Unseen transfer item evaluates conceptual transfer under novel clinical phrasing. |
+| **Grounded AI Tutor** | ![Tutor](docs/demo/final-showcase/05-tutor.png) | Verifiable citations with exact chunk IDs, verbatim quotes, and CC-BY license provenance. |
+| **Safe Fallback Guard** | ![Fallback](docs/demo/final-showcase/05-tutor-safe-fallback.png) | Fail-closed protection: out-of-scope queries trigger verified non-factual pedagogical fallback. |
+| **3D Spatial Anatomy** | ![Anatomy Guided](docs/demo/final-showcase/06-anatomy-guided.png) | Authentic HuBMAP HRA reference meshes with camera preset animations. |
+| **Anatomy Challenge** | ![Anatomy Challenge](docs/demo/final-showcase/07-anatomy-challenge.png) | Deterministic 3D pin challenge evaluated directly by the authoritative backend. |
+| **Unified Progress** | ![Progress](docs/demo/final-showcase/08-progress.png) | Real-time aggregated learner dashboard spanning all learning tracks. |
+| **PLAB Governance** | ![PLAB Preview](docs/demo/final-showcase/09-plab-preview.png) | Strict Preview QA warning banner; candidate content quarantined from production. |
+
+*See [docs/demo/final-showcase/README.md](docs/demo/final-showcase/README.md) for the high-resolution gallery.*
+
+---
+
+## AI Architecture
+
+MedicalPlab enforces strict architectural invariants to ensure safety and clinical credibility:
 
 ```mermaid
 graph TD
-    Query["User / Socratic Inquiry"] --> Route["Deterministic Document Routing"]
-    Route --> Multi["4-Route Hybrid Retrieval (BM25 + Headings)"]
-    Multi --> RRF["Weighted Reciprocal Rank Fusion (k=60)"]
-    RRF --> Rerank["Qwen3-Reranker-0.6B (Top 25 Candidates)"]
-    Rerank --> Verify["Central Claim Verifier (Polarity & Numeric Consistency)"]
-    
-    Verify --> Decision{"Sufficient Evidence Support?"}
-    
-    Decision -- "YES: High Confidence Entailment" --> Serve["Serve Grounded EvidencePacket<br/>(Exact Citation & Heading Breadcrumbs)"]
-    Decision -- "NO: Gap, Ambiguity, or Contradiction" --> Abstain["FAIL-CLOSED ABSTENTION<br/>('INSUFFICIENT_RETRIEVAL_SUPPORT')"]
+    LearnerClient["Next.js Web / Mobile Client"]
+    FastAPIGateway["FastAPI Application Gateway<br/>(production_main.py)"]
+
+    subgraph Orchestration["Pedagogical & Adaptive Orchestration"]
+        AdaptiveEngine["Adaptive Engine<br/>(Mastery Profiler)"]
+        RemediationController["Remediation Controller<br/>(Bounded 3-Turn Socratic)"]
+        UniversityService["University Learning Service"]
+        AnatomyService["3D Anatomy Lab Service"]
+        PLABService["PLAB Governance Service"]
+    end
+
+    subgraph ClinicalAIEngine["Grounded Clinical AI Engine"]
+        TutorService["TutorService<br/>(Conversational Agent)"]
+        SharedEvidenceEngine["Shared Evidence Engine V1.1<br/>(Router, BM25, RRF, Qwen3-Reranker)"]
+        PostVerifier["Post-Generation Verifier<br/>(Proposition Extractor & Provenance Check)"]
+        SafeFallback["Fail-Closed SAFE_FALLBACK<br/>(Non-Factual Pedagogical Scaffolding)"]
+    end
+
+    subgraph LiteratureCorpus["Authoritative Open Access Corpus"]
+        PMCCorpus["PubMed Central (PMC) JATS XML<br/>(CC-BY Licensed Open Literature)"]
+        HRALibrary["HuBMAP Human Reference Atlas<br/>(CC-BY 4.0 3D Meshes)"]
+    end
+
+    LearnerClient <--> FastAPIGateway
+    FastAPIGateway <--> AdaptiveEngine
+    FastAPIGateway <--> RemediationController
+    FastAPIGateway <--> UniversityService
+    FastAPIGateway <--> AnatomyService
+    FastAPIGateway <--> PLABService
+
+    RemediationController --> TutorService
+    AdaptiveEngine -.-> TutorService
+    TutorService --> SharedEvidenceEngine
+    SharedEvidenceEngine --> PMCCorpus
+    AnatomyService --> HRALibrary
+
+    SharedEvidenceEngine --> TutorService
+    TutorService --> PostVerifier
+    PostVerifier -- "All Claims Supported" --> FastAPIGateway
+    PostVerifier -- "Veto / Provenance Mismatch" --> SafeFallback
+    SafeFallback --> FastAPIGateway
 ```
 
-> **Core Clinical Invariant:** Retrieval relevance does not equal claim support. When evidence is ambiguous, absent, or contradicted, MedicalPlab deliberately abstains.
+> **Strict Architectural Invariant:** The Adaptive Layer never calls generative language models directly. All clinical explanations and Socratic responses route through `TutorService` and the `Shared Evidence Engine` where every substantive proposition is verified before rendering.
 
 ---
 
-## Verified Engineering Status & Metrics
+## Evidence-Grounded by Design
 
-### Canonical Evidence Engine V1.1 DEV Cross-Validation
-*Evaluated across 5 deterministic folds on 99 DEV queries grounded in 16 PMC renal documents (`Data/processed/renal_v1/`, 2,192 chunks):*
+In clinical education, **retrieval relevance is not claim support**. Just because a passage is retrieved does not mean the generated text accurately represents it.
 
-| Metric | V1 Baseline | V1.1 Selected | Absolute Delta | Description |
-| :--- | :---: | :---: | :---: | :--- |
-| **MRR** | `0.7476` | **`0.8144`** | `+0.0668` | Mean Reciprocal Rank |
-| **Hit@1** | `0.6768` | **`0.7576`** | `+0.0808` | Top passage is ground truth |
-| **Hit@5** | `0.7879` | **`0.8485`** | `+0.0606` | Ground truth within top 5 |
-| **Hit@10** | `0.8485` | **`0.9091`** | `+0.0606` | Ground truth within top 10 |
-| **NDCG@10** | `0.6417` | **`0.7061`** | `+0.0644` | Ranking quality discount |
-| **Doc Hit@1** | `0.8283` | **`0.8586`** | `+0.0303` | Document-level routing precision |
-| **CandidateRecall@50**| `0.9495` | **`0.9697`** | `+0.0202` | High-recall candidate pool |
-| **Product-Served Unsupported DEV Cases** | `0 / 37` | **`0 / 37`** | `0.0% false support` | Zero ungrounded claims served |
+MedicalPlab’s evidence pipeline enforces:
+1. **Clinical Query Processing:** Normalizes medical acronyms and preserves negation.
+2. **Deterministic Document Routing:** Prunes out-of-specialty articles before ranking.
+3. **Multi-Route Candidate Retrieval:** Field-aware BM25 (title, headings, text) fused via Reciprocal Rank Fusion ($k=60$).
+4. **Neural Reranking:** Cross-encoder inference evaluating query-chunk contextual entailment.
+5. **Post-Generation Proposition Verification:**
+   - Deconstructs AI draft responses into atomic propositions.
+   - Verifies citation provenance: every quote must be a character-exact match inside the allowed retrieved chunks.
+   - Clinical safety vetoes: rejects unauthorized drug dosages, definitive diagnoses, or cure claims.
+   - Automatic fail-closed fallback: if any proposition is unsupported, the response transitions to `SAFE_FALLBACK`.
 
-- **Warm Runtime Latency:** p50 = `951.18 ms` | p95 = `1160.31 ms` | Mean = `934.68 ms`
-- **Cold Startup:** `10.83 s` (one-time index load and routing card generation)
+---
 
-> [!NOTE]
-> All figures above represent **cross-validated DEV performance**. In accordance with scientific integrity guidelines, the lineage report records: `NO_UNSPENT_UNBIASED_FINAL_HOLDOUT_AVAILABLE`. We do not claim unseen final holdout performance.
+## Interactive 3D Anatomy
+
+MedicalPlab does **not** use AI to generate synthetic 3D human anatomy geometry. Generating biological meshes with AI creates inaccurate anatomical relations that endanger medical learning.
+
+Instead:
+- Meshes are scientifically verified assets authored by medical illustrators for the **NIH HuBMAP Consortium** (Common Coordinate Framework CCF v1.3 / v2.0, licensed under Creative Commons Attribution 4.0 International).
+- Generative AI is restricted to **educational scene composition**: emitting structured scene actions (`HIGHLIGHT`, `ISOLATE`, `FLY_TO_CAMERA`, `SET_SURFACE_MODE`).
+- Three.js executes deterministic camera trajectories and material properties in the client browser.
+- Challenge evaluation is performed deterministically by the authoritative backend (`POST /api/v1/anatomy/session/{session_id}/challenge`).
+
+*See [THIRD_PARTY_NOTICES_ANATOMY.md](THIRD_PARTY_NOTICES_ANATOMY.md) for full licensing details.*
+
+---
+
+## PLAB Governance
+
+MedicalPlab maintains an uncompromised distinction between preview candidate content and released clinical examinations:
+
+| Dimension | Preview QA Mode | Strict Production Mode |
+|---|---|---|
+| **Environment Variable** | `MEDICALPLAB_PLAB_PREVIEW_QA=1` | `MEDICALPLAB_PLAB_PREVIEW_QA=0` (or unset) |
+| **Target Audience** | Internal engineering, mentor demos, faculty review | Live medical candidates & institutional users |
+| **Available Items** | 36 candidate questions | **0 Golden released items** (fail-closed empty state) |
+| **Status Banner** | Amber `PREVIEW QA` warning banner displayed | Informative empty state explaining peer review |
+| **Release Readiness** | `PLAB_PUBLIC_RELEASE_READY = NO` | `PLAB_GOLDEN_PROMOTION_REQUIRED = YES` |
+
+Candidate questions are never represented as clinician-approved exam materials until formal expert clinician panel sign-off occurs.
+
+---
+
+## Mobile App Integration
+
+The MedicalPlab backend API contract is **frozen** and ready for native mobile client consumption (iOS, Android, React Native):
+
+- **Quick Start for Mobile:** [`docs/mobile-handoff/START_HERE.md`](docs/mobile-handoff/START_HERE.md)
+- **Developer Handoff Specification:** [`docs/mobile-handoff/MOBILE_DEVELOPER_HANDOFF.md`](docs/mobile-handoff/MOBILE_DEVELOPER_HANDOFF.md)
+- **Endpoint Quick Matrix:** [`docs/mobile-handoff/API_CONTRACT.md`](docs/mobile-handoff/API_CONTRACT.md)
+- **OpenAPI 3.1.0 Contract:** [`docs/mobile-handoff/openapi.json`](docs/mobile-handoff/openapi.json)
+- **Postman Artifacts:**
+  - Collection: [`MedicalPlab.mobile.postman_collection.json`](docs/mobile-handoff/MedicalPlab.mobile.postman_collection.json)
+  - Environment: [`MedicalPlab.mobile.postman_environment.json`](docs/mobile-handoff/MedicalPlab.mobile.postman_environment.json)
+
+> **Pilot Identity Invariant:** All learner requests must supply the `X-User-Id` HTTP header. This provides identity-partitioning across sessions for pilot and demo integrations. It is **not** cryptographic production authentication (`MOBILE_PRODUCTION_AUTH_READY = NO`).
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.11 or 3.12 (virtualenv recommended)
+- Node.js 20+ or 22+ (npm 10+)
+- Google Chrome or modern Chromium browser
+
+### 1. Start the Authoritative Backend (Terminal 1)
+```powershell
+# Windows PowerShell
+$env:PYTHONPATH="src;."
+$env:MEDICALPLAB_RUNTIME_MODE="pilot"
+$env:MEDICALPLAB_PLAB_PREVIEW_QA="1"
+$env:MEDICALPLAB_PHASE_2B_ENABLED="1"
+$env:MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+$env:ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
+
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+```bash
+# macOS / Linux Bash
+export PYTHONPATH="src:."
+export MEDICALPLAB_RUNTIME_MODE="pilot"
+export MEDICALPLAB_PLAB_PREVIEW_QA="1"
+export MEDICALPLAB_PHASE_2B_ENABLED="1"
+export MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+export ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
+
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+### 2. Start the Production Frontend (Terminal 2)
+```bash
+cd frontend
+npm install
+npm run build
+npm run start -- -p 3000
+```
+
+### 3. Verify Health & Availability
+- Backend Health: `http://127.0.0.1:8000/health` (`{"status":"healthy","runtime_mode":"pilot"}`)
+- Backend Readiness: `http://127.0.0.1:8000/ready` (`{"status":"ready"}`)
+- Frontend Application: `http://localhost:3000`
+
+---
+
+## Running the Certified Demo
+
+For live mentor, judge, and team walkthroughs, consult the step-by-step master runbook:
+👉 **[`docs/demo/FINAL_DEMO_RUNBOOK.md`](docs/demo/FINAL_DEMO_RUNBOOK.md)**  
+*(Contingency procedures: [`docs/demo/DEMO_FAILURE_RECOVERY.md`](docs/demo/DEMO_FAILURE_RECOVERY.md))*
+
+### Scripted 3m 40s Demo Walkthrough:
+1. **Home Hub (`0:00 – 0:30`):** Cognitive Loop animation, clinical styling, system badges.
+2. **University Practice (`0:30 – 1:00`):** `UNI-RENAL-001` Option B (reasoning distractor).
+3. **Socratic Remediation (`1:00 – 2:00`):** 3-turn Socratic dialogue & held-out transfer item (`UNI-RENAL-001-T` Option A).
+4. **Evidence-Grounded Tutor (`2:00 – 2:45`):** RAAS mechanism inquiry with verifiable PMC citations & SAFE_FALLBACK guard.
+5. **3D Spatial Anatomy (`2:45 – 3:30`):** Guided tour of Left Renal Vein & challenge on Left Renal Artery.
+6. **Progress & Governance (`3:30 – 3:40`):** Unified learner dashboard & PLAB Preview QA boundary.
+
+---
+
+## Engineering Verification
+
+The MedicalPlab platform is verified across unit, integration, contract, and browser test suites:
+
+| Verification Suite | Result | Details |
+|---|---|---|
+| **Frontend Production Build** | **PASS** | `npm run build`: 0 TypeScript errors, 0 build errors, 11/11 pages prerendered. |
+| **Integration Test Suite** | **PASS (23/23)** | `python -m pytest tests/integration/ -q -p no:cacheprovider` |
+| **Mobile API Contract Tests** | **PASS (12/12)** | `python -m pytest tests/integration/test_mobile_api_contract.py -q` |
+| **Historical Backend Baseline** | **PASS (379/379)** | Certified full backend regression baseline. |
+| **PLAB Clean Checkout Probe** | **PASS (87/87)** | Clean-checkout reproducibility verified. |
+| **Backend Functional Diff** | **0** | Zero functional drift across `src/`, `tests/`, and `Data/`. |
+| **Browser CDP Certification** | **PASS** | Real headless Chrome CDP certified across all 9 learner journey steps. |
+
+---
+
+## Technology Stack
+
+| Domain | Technology | Key Components |
+|---|---|---|
+| **Frontend** | Next.js 16.3.4, React 19, TypeScript | Turbopack, App Router, Lucide, Tailwind CSS |
+| **Spatial 3D** | Three.js 0.183+ | WebGL, HuBMAP CCF Reference Meshes, Orbit Controls |
+| **Backend** | FastAPI 0.115+, Python 3.12/3.11 | Asynchronous ASGI, Uvicorn, Pydantic v2 |
+| **AI & Retrieval** | Custom BM25, Qwen3-Reranker, BKT | Reciprocal Rank Fusion, Proposition Segmenter, Post-Verifier |
+| **Persistence** | SQLite, JSON Schema | Module-scoped pilot stores, bit-for-bit SHA-256 manifests |
+| **Testing** | Pytest, Chrome DevTools Protocol | Automated contract verification, headless CDP E2E execution |
 
 ---
 
@@ -232,126 +361,64 @@ graph TD
 
 ```
 MedicalPlab/
-├── frontend/               # Next.js 16.3.4 client application (React 19, Turbopack)
-├── src/medicalplab/        # Core backend application and AI services
-│   ├── evidence_engine/    # Canonical Evidence Engine V1.1 (BM25, RRF, Qwen3-Reranker)
-│   ├── university/         # University Learning service and REST API
-│   ├── plab/               # PLAB V9 governance, quarantine, and data manifests
-│   └── stage_b ... stage_r # Specialized modular pipeline stages (BKT, routing, simulation)
-├── Data/                   # Public-safe runtime data and accredited literature
-│   ├── processed/renal_v1/ # 16 PMC articles (2,192 verified chunks, JATS, quality scores)
-│   ├── raw/renal_v1/       # 16 PMC open-access XML source documents
-│   ├── university/         # University Renal Physiology question bank
-│   ├── questions/          # Public-safe PLAB questions and review queues
-│   └── metadata/           # Corpus snapshot manifests and license registries
-├── tests/                  # Automated verification suite (safety, governance, RAG, university)
-├── docs/                   # Product, architecture, clinical safety, and deployment docs
-├── deploy/                 # Cloud Run deployment automation scripts (Bash, PowerShell)
-├── configs/                # Executable configs with cryptographic SHA-256 sidecars
-├── schemas/                # Formal JSON Schema data contracts
-├── Scripts/                # Active maintenance, ingestion, and evaluation tools
-├── reports/release/        # Accepted milestone closure reports and verified benchmarks
-├── evaluation/             # Ground truth datasets & benchmarks asserted by governance tests
-├── models/                 # Frozen classifier models with cryptographic SHA-256 sidecars
-├── main.py                 # Primary local & demo FastAPI entrypoint
-├── production_main.py      # Strict fail-closed deployment/pilot entrypoint
-├── Dockerfile              # Production multi-stage container build (Google Cloud Run)
-├── pyproject.toml          # Canonical Python package specification and tool configurations
-└── requirements.txt        # Runtime/deployment compatibility requirements
+├── frontend/               # Next.js 16 / React 19 modern medical web client
+│   ├── src/app/            # App Router pages (/, /university, /tutor, /anatomy, /progress, /practice)
+│   └── src/features/       # Modular features (anatomy Three.js viewport, learning rails)
+├── src/medicalplab/        # Core Python backend package
+│   ├── adaptive/           # Bayesian mastery profiling & recommendation engine
+│   ├── anatomy/            # 3D anatomy session management & challenge verification
+│   ├── evidence_engine/    # Canonical RAG retrieval, RRF, and neural reranking
+│   ├── plab/               # Clinical exam governance & blocker quarantine
+│   ├── remediation/        # Bounded 3-turn Socratic remediation controller
+│   └── tutor/              # Grounded conversational tutor & post-generation verifier
+├── Data/                   # Public-safe runtime data (PMC open-access literature, question banks)
+├── tests/                  # Pytest test suites (integration, mobile contract, anatomy, tutor)
+├── docs/                   # Comprehensive architectural & clinical documentation
+│   ├── demo/               # Certified showcase gallery, demo runbook & failure recovery
+│   ├── handoff/            # Central multi-role team handoff guide
+│   └── mobile-handoff/     # Frozen OpenAPI 3.1.0 spec, Postman collection & quick start
+├── reports/                # Engineering acceptance reports & quality audits
+├── production_main.py      # Authoritative pilot/production FastAPI entrypoint
+├── main.py                 # Local developer & exploration entrypoint
+├── LICENSE                 # MIT Open Source License
+└── RELEASE_NOTES.md        # Official Startup Demo Release notes
 ```
 
 ---
 
-## Quick Start
+## Release Status
 
-### 1. Run the Backend API
-```bash
-# Set up Python virtual environment
-python -m venv .venv
-source .venv/bin/activate       # On Windows: .\.venv\Scripts\Activate.ps1
-
-# Install dependencies and local package
-pip install -r requirements.txt
-pip install -e .
-
-# Start FastAPI gateway
-python main.py
-```
-*API will be live at `http://localhost:8000`. Swagger documentation available at `http://localhost:8000/docs`.*
-
-### 2. Run the Next.js Frontend
-```bash
-cd frontend
-npm ci
-npm run dev
-```
-*Web application will be accessible at `http://localhost:3000`.*
-
----
-
-## Mentor & Judge Demo Walkthrough (3–5 Minutes)
-
-Follow our complete step-by-step evaluation guide in [`docs/DEMO_GUIDE.md`](docs/DEMO_GUIDE.md):
-
-1. **Launch:** Open `http://localhost:3000` and navigate to **University Learning**.
-2. **Practice:** Answer a real Renal question (*Glomerular filtration barrier*).
-3. **Inspect Feedback:** View instantaneous correctness, mechanistic explanation, and direct PubMed Central citation (`DOC-PMC-RENAL-0004`).
-4. **Inspect Mastery:** Observe Bayesian Knowledge Tracing (BKT) update topic mastery and recommend the next action.
-5. **Inspect PLAB Separation:** Observe that preclinical University attempts never leak into PLAB licensing records.
-6. **Supported Evidence Query:** Query the Evidence Engine on Renal physiology; observe verified passage retrieval with section context.
-7. **Unsupported Query / Fail-Closed Abstention:** Test with an out-of-domain or ungrounded inquiry; observe safe, fail-closed abstention (`INSUFFICIENT_RETRIEVAL_SUPPORT`).
-
----
-
-## Testing & Quality Verification
-
-Run all test tiers using standard `pytest`:
-
-```bash
-# 1. Canonical Evidence Engine V1.1 tests
-pytest tests/test_canonical_rag.py tests/test_evidence_engine_v2.py -v
-
-# 2. University Learning Track tests
-pytest tests/university/ -v
-
-# 3. PLAB V9 Evidence Closure & Negative Mutation tests
-pytest tests/plab/v9/ -v
-
-# 4. Fast backend smoke verification
-python tests/verify_endpoints.py
-
-# 5. Frontend build & lint
-cd frontend && npm run build && npm run lint
-```
-
----
-
-## Current Limitations & Transparent Boundaries
-
-- **University Scope:** Currently focused on an MVP of 6 verified questions across two core Renal Physiology topics. Curriculum expansion is prioritized post-submission.
-- **PLAB Readiness:** Cardiorespiratory Batch 1 contains 24 quarantined items awaiting formal GMC-registered physician sign-off. We do not self-publish unapproved medical licensing items.
-- **RAG Final Holdout:** Reported metrics reflect 5-fold cross-validation on DEV queries (`NO_UNSPENT_UNBIASED_FINAL_HOLDOUT_AVAILABLE`). Unbiased held-out testing will occur after expanding the PMC corpus to additional organ systems.
-- **Hardware Acceleration:** Neural reranking (`Qwen3-Reranker-0.6B`) runs optimally on CUDA GPU (~950 ms p50); on CPU environments, inference falls back gracefully with higher latency (~2.8 s).
+| Deliverable | Status | Assessment |
+|---|---|---|
+| **Core Backend Engineering** | **CLOSED** | Fully implemented, tested, and frozen. |
+| **Mobile API Handoff** | **READY** | OpenAPI 3.1.0 and Postman collections certified with zero contract drift. |
+| **Premium UI / UX** | **READY** | Visual acceptance passed across Desktop, Tablet, and Mobile. |
+| **Final Product E2E Journey** | **PASS** | Complete 9-step learner loop verified in real browser CDP. |
+| **Mentor Demo Reliability** | **READY** | Scripted ~3m 40s runbook and recovery guide verified. |
+| **Team Handoff** | **READY** | Role-based handoff guides available in `docs/handoff/TEAM_HANDOFF.md`. |
+| **Mobile Team Integration** | **READY** | Ready for consumption via `docs/mobile-handoff/START_HERE.md`. |
+| **Public Production Auth** | **NOT READY** | `MOBILE_PRODUCTION_AUTH_READY = NO` (Synthetic `X-User-Id` used for pilot). |
+| **PLAB Public Golden Release** | **NOT READY** | `PLAB_PUBLIC_RELEASE_READY = NO` (Requires clinician panel promotion). |
+| **Offline Synchronization** | **NOT SUPPORTED** | `OFFLINE_SYNC_SUPPORTED = NO` (Local runtime supported, multi-device cloud sync not supported). |
 
 ---
 
 ## Roadmap
 
-- [ ] **Curriculum Expansion:** Expand University Learning to Cardiovascular and Respiratory physiology.
-- [ ] **Physician Review Portal:** Streamline GMC clinician review workflow for quarantined PLAB items.
-- [ ] **OSCE Simulation Mode:** Expand turn-based clinical communication simulations with audio input.
-- [ ] **Multimodal Diagnostic Grounding:** Ingest and bind radiological and histopathological images to evidence packets.
+> **Notice:** The following features are planned future research directions and are **NOT** current capabilities of the v1.0.0 startup demo release.
+
+- **Multimodal Medical Learning:** Incorporating clinical diagnostic imaging (ECG waveforms, chest radiographs, ultrasound) into the Socratic tutoring loop.
+- **Extended 3D Anatomy Systems:** Expanding beyond renal vasculature to cardiovascular, pulmonary, and neuroanatomical reference systems from HuBMAP HRA.
+- **Formal Clinician Feedback Portal:** Web-based review interface enabling accredited physicians to audit candidate items and approve Golden promotions directly.
+- **Longitudinal Curriculum Sequencing:** Multi-specialty preclinical learning tracks (Cardiovascular, Respiratory, Gastrointestinal) integrated into Bayesian knowledge tracing.
+- **Native Mobile Experience:** Dedicated iOS and Android client applications consuming the frozen `/api/v1` REST contract.
+- **Institutional Production Authentication:** Enterprise SSO (SAML / OAuth2 / OIDC), role-based clinical access controls, and encrypted multi-tenant persistence.
 
 ---
 
-## Documentation Links
+## Data, Evidence & Attribution
 
-- [System Architecture](docs/ARCHITECTURE.md)
-- [AI & Intelligence Framework](docs/AI_SYSTEM.md)
-- [Canonical RAG Architecture](docs/RAG_ARCHITECTURE.md)
-- [University Learning Track](docs/UNIVERSITY_TRACK.md)
-- [PLAB Evidence & Governance](docs/PLAB_EVIDENCE.md)
-- [Clinical Safety & Risk Framework](docs/CLINICAL_SAFETY.md)
-- [Mentor & Judge Demo Guide](docs/DEMO_GUIDE.md)
-- [Developer & Testing Guide](docs/DEVELOPMENT.md)
-- [Production Deployment Guide](docs/DEPLOYMENT.md)
+- **3D Anatomical Digital Objects:** Derived from the **HuBMAP Human Reference Atlas (HRA) CCF 3D Reference Object Library**, published by the NIH HuBMAP Consortium / CNS at Indiana University. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Ontology & Terminology Crosswalks:** BodyParts3D, Database Center for Life Science (DBCLS), licensed under CC BY 4.0.
+- **Medical Literature:** Open Access articles sourced from PubMed Central (PMC) in full compliance with Creative Commons CC-BY licensing terms.
+- **Software License:** MedicalPlab software is released under the **MIT License**. See [`LICENSE`](LICENSE) for terms.

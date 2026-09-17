@@ -8,11 +8,17 @@ internal Stage-B/C/D/E/F/G/R names are not exposed to clients.
 from __future__ import annotations
 
 import hmac
+import logging
 import os
+import time
 from typing import Any, Literal
+import uuid
 
 from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, Field
+
+logger = logging.getLogger(__name__)
+
 
 from medicalplab.anatomy.agent import AnatomyAgentError, resolve_query_to_command
 from medicalplab.anatomy.commands import AnatomyAction, AnatomyCommand
@@ -310,15 +316,85 @@ def evaluate_plab_answer(
 ) -> dict[str, object]:
     user_id = _student_id(x_user_id)
     try:
-        return get_plab_service().evaluate(
+        service = get_plab_service()
+        res = service.evaluate(
             user_id=user_id,
             question_id=request.question_id,
             selected_option=request.selected_option,
             idempotency_key=request.idempotency_key,
             response_time_ms=request.response_time_ms,
         )
+
+        # 1. Emit LearningEvent to Adaptive Learning Layer
+        try:
+            from medicalplab.adaptive.api import get_adaptive_service
+            from medicalplab.adaptive.models import LearningEvent
+
+            q_payload = service.questions.get(request.question_id, {})
+            specialty_name = str(q_payload.get("specialty") or "Cardiorespiratory")
+            topic_name = str(res.get("topic") or q_payload.get("topic") or "Cardiorespiratory")
+
+            evt = LearningEvent(
+                event_id=f"evt-{uuid.uuid4().hex[:10]}",
+                learner_id=user_id,
+                event_type="QUESTION_ATTEMPT",
+                subject=specialty_name,
+                topic=topic_name,
+                question_id=request.question_id,
+                selected_option=request.selected_option,
+                is_correct=bool(res.get("correct")),
+                attempt_key=str(res.get("attempt_id")),
+                timestamp=time.time(),
+                metadata={
+                    "source": "plab",
+                    "content_mode": res.get("content_mode"),
+                    "question_version": res.get("question_version"),
+                },
+            )
+            get_adaptive_service().record_learning_event(evt)
+        except Exception as exc:
+            logger.warning("Failed to emit PLAB learning event to Adaptive: %s", exc)
+
+        # 2. Check Reasoning Pattern Eligibility for Remediation
+        remediation_meta: dict[str, object] = {"eligible": False}
+        if not res.get("correct"):
+            try:
+                from medicalplab.remediation.detector import ReasoningPatternDetectionEngine
+                from medicalplab.remediation.models import DetectionStatus, EvidenceStrength
+                detector = ReasoningPatternDetectionEngine()
+                hyp = detector.detect_hypothesis(
+                    question_id=request.question_id,
+                    selected_option=request.selected_option,
+                    topic=str(res.get("topic") or ""),
+                    attempt_id=str(res.get("attempt_id")),
+                )
+                if (
+                    hyp.detection_status == DetectionStatus.POSSIBLE_PATTERN
+                    and hyp.evidence_strength in {EvidenceStrength.STRONG, EvidenceStrength.MODERATE}
+                    and not hyp.is_fallback
+                ):
+                    remediation_meta = {
+                        "eligible": True,
+                        "hypothesis_id": hyp.hypothesis_id,
+                        "pattern_id": hyp.pattern_id,
+                        "candidate_pattern": hyp.candidate_pattern,
+                        "evidence_strength": hyp.evidence_strength.value,
+                        "rationale": hyp.detection_rationale,
+                    }
+                else:
+                    remediation_meta = {
+                        "eligible": False,
+                        "reason": "Wrong answer did not match a verified cognitive misconception pattern (fail-closed neutral guidance).",
+                    }
+            except Exception as exc:
+                logger.warning("Failed to check reasoning pattern: %s", exc)
+                remediation_meta = {"eligible": False, "error": str(exc)}
+
+        res["remediation"] = remediation_meta
+        return res
     except PLABProductError as exc:
         raise _product_error(exc) from exc
+
 
 
 @router.get("/plab/progress")

@@ -24,6 +24,11 @@ These endpoints support the complete, authoritative student learning journey.
 | `POST` | `/api/v1/remediation/session/{session_id}/abandon` | Explicitly abandon an ongoing remediation session | Header `X-User-Id` |
 | `GET` | `/api/v1/remediation/session/{session_id}` | Retrieve authoritative session state, chat history, and timeline | Header `X-User-Id` |
 
+| `GET` | `/api/v1/learner/progress` | Retrieve unified read-only learner progress across University, PLAB, Anatomy, and Adaptive | Header `X-User-Id` (or `X-Learner-Id`) |
+| `GET` | `/api/v1/plab/questions` | List clinical PLAB exam questions | None required |
+| `POST` | `/api/v1/plab/evaluate` | Evaluate PLAB question answer, emit LearningEvent, detect reasoning gap | Header `X-User-Id` |
+| `GET` | `/api/v1/plab/progress` | Retrieve PLAB module-owned attempt history and accuracy | Header `X-User-Id` |
+
 ---
 
 ### Category B: OPTIONAL FOR MOBILE MVP
@@ -32,8 +37,8 @@ Secondary capabilities that enhance the mobile app but are not strictly required
 | Method | Path | Description | Usage Note |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/health` or `/api/v1/health` | Health check & service readiness | Useful for mobile connectivity monitoring |
-| `POST` | `/api/v1/adaptive/event` | Manually ingest client-side learning events | Optional; `/university/answer` already persists attempts automatically |
-| `GET` | `/api/v1/adaptive/loop-status` | Check remediation loop closure for a topic | Query param `topic` |
+| `POST` | `/api/v1/anatomy/session/start` | Initialize 3D Anatomy learning session | Header `X-User-Id` or `X-Learner-Id` |
+| `POST` | `/api/v1/anatomy/session/{session_id}/challenge` | Submit deterministic anatomy pin challenge | Header `X-User-Id` or `X-Learner-Id` |
 | `POST` | `/api/v1/tutor/chat` | Direct conversational tutor for open-ended clinical questions | Optional free-form tutor interface |
 | `GET` | `/api/v1/cases` | List PLAB scenario cases | PLAB exam simulation track |
 | `GET` | `/api/v1/cases/{case_id}` | Retrieve individual clinical case | PLAB exam simulation track |
@@ -53,14 +58,17 @@ Educator-facing analytics and backend administrative routes. **Do not implement 
 ---
 
 ### Category D: INTERNAL / DO NOT USE DIRECTLY
-Low-level pipeline endpoints or backwards-compatibility shims.
+Low-level pipeline endpoints, internal telemetry routes, or backwards-compatibility shims.
 
-| Method | Path | Description |
-| :--- | :--- | :--- |
-| `POST` | `/api/v1/evidence/packet` | Low-level RAG evidence packet retrieval |
-| `POST` | `/api/v1/evidence/stage-e/retrieve` | Legacy stage-e retrieval service |
-| `POST` | `/api/v1/query` | Direct raw vector search |
-| `ALL` | `/{full_path:path}` | Universal Stage-G fallback proxy |
+| Method | Path | Description | Identity Requirement |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/api/v1/adaptive/event` | Internal telemetry ingestion (auto-emitted) | **Yes** (`resolve_learner_id(required=True)` -> `HTTP 401`) |
+| `POST` | `/api/v1/adaptive/remediate` | Internal remediation trigger | **Yes** (`resolve_learner_id(required=True)` -> `HTTP 401`) |
+| `GET` | `/api/v1/adaptive/loop-status` | Internal background loop evaluation | **Yes** (`resolve_learner_id(required=True)` -> `HTTP 401`) |
+| `POST` | `/api/v1/evidence/packet` | Low-level RAG evidence packet retrieval | None |
+| `POST` | `/api/v1/evidence/stage-e/retrieve` | Legacy stage-e retrieval service | None |
+| `POST` | `/api/v1/query` | Direct raw vector search | None |
+| `ALL` | `/{full_path:path}` | Universal Stage-G fallback proxy | None |
 
 ---
 
@@ -77,7 +85,9 @@ X-User-Id: uni-e2a48b39-6541-4567-89ab-cdef01234567
 - **Format:** String between 8 and 120 characters (`min_length=8, max_length=120`).
 - **Generation:** Created by the mobile app on first launch using UUIDv4 (recommended prefix: `uni-`).
 - **Persistence:** Stored in secure local device storage.
-- **Ownership:** Sessions and attempts belong strictly to the `X-User-Id` that created them. If a request sends a different `X-User-Id` for an existing session or attempt, the server returns `HTTP 403 Forbidden`.
+- **Ownership:** Sessions and attempts belong strictly to the `X-User-Id` that created them. If a request sends a different `X-User-Id` for an existing session or attempt, the server returns `HTTP 403 Forbidden` (`Session does not belong to the requesting user.` / `SESSION_ACCESS_FORBIDDEN`).
+- **Missing Header Behavior:** Endpoints utilizing canonical identity resolution (`resolve_learner_id(required=True)`) or `_student_id` fail closed with `HTTP 401 Unauthorized` (`{"detail": {"code": "USER_ID_REQUIRED", "message": "X-User-Id header is required."}}`). Note: University endpoints enforce header presence via FastAPI dependency validation and return `HTTP 422 Unprocessable Entity`; Anatomy session initialization returns `HTTP 400 Bad Request` if `learner_id` is omitted from both header and body.
+- **Backward Compatibility:** `X-Learner-Id` is accepted as an alias in 3D Anatomy and progress projections. New mobile implementations must standardize on `X-User-Id`.
 
 ---
 
@@ -248,7 +258,8 @@ Query the Adaptive Decision Engine to determine the pedagogical next step for th
 Unified educational view of learner accuracy, mastery levels, and active weaknesses.
 
 - **URL:** `GET /api/v1/adaptive/state`
-- **Headers:** `X-User-Id`
+- **Headers:** `X-User-Id` (required -> `HTTP 401 USER_ID_REQUIRED` if omitted)
+- **State Classification:** `DERIVED`. Recomputed on demand by `UnifiedLearnerStateManager` from authoritative module-owned persistence (University SQLite `university_attempts`, PLAB pilot attempt registry, and 3D Anatomy repository sessions). There is no dedicated "Telemetry DB". Server restarts safely recompute state without losing learner progress.
 - **Response `200 OK`:**
   ```json
   {
@@ -546,3 +557,89 @@ Retrieve the complete session state, turn history, and timeline. Used on app lau
     }
   }
   ```
+
+---
+
+## 4. PLAB Clinical Exam Mobile Contract & Readiness State
+
+### 4.1. Contract Separation: Preview QA vs. Public Student Ready
+
+The PLAB clinical exam preparation endpoints (`/api/v1/plab/*`) operate under a strict governance gate to prevent unapproved medical content from reaching production student clients:
+
+| Dimension | `PLAB_PREVIEW_QA` / Internal Demo | `PLAB_PUBLIC_STUDENT_READY` |
+| :--- | :--- | :--- |
+| **Server Flag** | `MEDICALPLAB_PLAB_PREVIEW_QA=1` | Default production (`golden_only=True`, no flag) |
+| **Intended Audience** | Internal engineering, QA testing, mentor demonstration | Public medical students |
+| **Question Status** | Seeded candidate items in review workflow | Clinician-reviewed, formally promoted **Golden Questions** |
+| **`GET /api/v1/plab/questions`** | Returns candidate items with `content_mode: "PREVIEW_QA"` and explicit warning | Returns `count: 0`, `items: []`, `content_policy: "GOLDEN_ONLY"` until golden promotion |
+| **`POST /api/v1/plab/evaluate`** | Evaluates answers, reveals explanations, detects reasoning gaps | Returns `HTTP 403 QUESTION_NOT_AVAILABLE` for unpromoted questions |
+| **Answer Leakage** | **Zero leakage** pre-answer (`correct_answer`, `explanation`, `citations` omitted) | **Zero leakage** |
+
+> [!WARNING]
+> **Mobile Client Enforcement Rule:**
+> Mobile clients MUST distinguish between internal demo/preview QA and public student production. Mobile clients MUST NOT present preview-only PLAB questions as production-ready student curriculum.
+
+### 4.2. Mobile Integration Certification Status
+
+As of Phase 6.1:
+- **Mobile Backend Handoff Status:** `MOBILE_BACKEND_HANDOFF_READY`
+- **Public Student Release Status:** `PLAB_PUBLIC_RELEASE_READY = NO`
+- **Prerequisite for Student Release:** `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`
+
+Backend API contracts, schema serialization, idempotency validation, error matrices, and reasoning-gap bridges are fully hardened and integration-tested for mobile handoff. Public student release of the PLAB exam track requires completion of the clinician review workflow to promote candidate items to golden status.
+
+---
+
+## 5. Exact Mobile Runtime Enum Contract
+
+Mobile client applications must serialize and deserialize exact runtime string enum values (not approximate UI presentation strings):
+
+### 5.1. Socratic Remediation Enums
+- **`RemediationLifecycleState`:**
+  - `"CREATED"`: Initialized from failed attempt.
+  - `"REMEDIATING"`: In-progress 3-turn Socratic dialogue (Turns 1-3).
+  - `"AWAITING_TRANSFER"`: Dialogue completed; awaiting independent transfer assessment.
+  - `"COMPLETED"`: Concluded with terminal outcome.
+- **`RemediationStatus`:**
+  - `"PROBING"`: Turn 1 (Challenging flawed premise neutrally).
+  - `"GUIDING"`: Turn 2 (Providing grounded mechanistic clue).
+  - `"CONFIRMING"`: Turn 3 (Synthesizing and checking readiness).
+  - `"RESOLVED"`: Backward-compatible resolution indicator.
+  - `"UNRESOLVED"`: Terminal non-resolution.
+- **`RemediationOutcome`:**
+  - `"TRANSFER_CONFIRMED"`: Correct on held-out transfer item without assistance.
+  - `"TRANSFER_NOT_CONFIRMED"`: Incorrect on held-out transfer item.
+  - `"UNRESOLVED"`: Assisted transfer, unavailable transfer item, or turn limit reached.
+  - `"ABANDONED"`: Explicit student exit or cancellation.
+  - `"SAFETY_FALLBACK"`: Retrieval failure or claim verification fail-closed fallback.
+- **`SocraticStrategyType`:**
+  - `"GUIDED_RECALL"`
+  - `"CONTRAST_CASE"`
+  - `"STEPWISE_DECOMPOSITION"`
+  - `"COUNTEREXAMPLE_PROBE"`
+
+### 5.2. 3D Anatomy Lab Enums
+- **`AnatomyActionType`:**
+  - `"FOCUS_STRUCTURE"`: Camera focus and recenter on structure.
+  - `"HIGHLIGHT_STRUCTURE"`: Visual outline / mesh highlight.
+  - `"ISOLATE_STRUCTURE"`: Isolate target structure; hide others.
+  - `"SHOW_STRUCTURE"`: Make target structure visible.
+  - `"HIDE_STRUCTURE"`: Hide target structure.
+  - `"SHOW_RELATION"`: Draw anatomical relationship / flow indicator.
+  - `"SET_STRUCTURE_OPACITY"`: Adjust transparency (`opacity: 0.0 - 1.0`).
+  - `"RESET_SCENE"`: Restore baseline 3D camera and visibility.
+- **`LessonState`:**
+  - `"INTRO"`: Introductory orientation.
+  - `"GUIDED_VESSELS"`: Guided vessel identification.
+  - `"GUIDED_IDENTIFICATION"`: Guided parenchymal structures.
+  - `"CHALLENGE_READY"`: Challenge ready for student attempt.
+  - `"CHALLENGE_ACTIVE"`: Challenge currently active.
+  - `"COMPLETED"`: Lesson completed.
+- **`ChallengeResult`:**
+  - `"PENDING"`: Awaiting evaluation.
+  - `"CORRECT"`: Challenge successfully identified target structure.
+  - `"INCORRECT"`: Wrong structure identified.
+- **`InteractionRequestType`:**
+  - `"IDENTIFY_STRUCTURE"`: Prompt requesting identification of structure.
+  - `"EXPLORE_SCENE"`: Open exploratory navigation prompt.
+

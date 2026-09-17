@@ -87,12 +87,12 @@ export function AdaptiveGuidanceCard({
           </div>
           <div>
             <h3 className="text-sm font-semibold text-slate-100 flex items-center gap-2">
-              Adaptive Learning Engine
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300 font-mono">
-                Phase 2A
+              Adaptive Learning Guidance
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-teal-500/20 text-teal-300 font-semibold border border-teal-500/30">
+                Personalized
               </span>
             </h3>
-            <p className="text-xs text-slate-400">Continuous diagnostic mastery &amp; guided remediation</p>
+            <p className="text-xs text-slate-400">Continuous diagnostic mastery &amp; guided reinforcement</p>
           </div>
         </div>
 

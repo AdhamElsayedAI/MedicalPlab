@@ -79,22 +79,33 @@ def get_anatomy_manifest():
 
 
 @router.post("/session/start", response_model=StartSessionResponse)
-def start_anatomy_session(request: StartSessionRequest):
+def start_anatomy_session(
+    request: StartSessionRequest,
+    x_user_id: Optional[str] = Header(None, alias="X-User-Id"),
+    x_learner_id: Optional[str] = Header(None, alias="X-Learner-Id"),
+):
     """Start or resume an anatomy learning session."""
     _check_feature_enabled()
-    if not request.learner_id or not request.learner_id.strip():
+    effective_learner_id = (request.learner_id or x_user_id or x_learner_id or "").strip()
+    if not effective_learner_id:
         raise HTTPException(status_code=400, detail="learner_id must not be empty.")
+    request.learner_id = effective_learner_id
     service = get_anatomy_service()
     return service.start_session(request)
 
 
 @router.get("/session/{session_id}", response_model=AnatomySession)
-def get_anatomy_session(session_id: str, x_learner_id: Optional[str] = Header(None)):
+def get_anatomy_session(
+    session_id: str,
+    x_user_id: Optional[str] = Header(None, alias="X-User-Id"),
+    x_learner_id: Optional[str] = Header(None, alias="X-Learner-Id"),
+):
     """Retrieve session state with ownership enforcement."""
     _check_feature_enabled()
+    effective_id = x_user_id or x_learner_id
     service = get_anatomy_service()
     try:
-        return service.get_session(session_id, learner_id=x_learner_id)
+        return service.get_session(session_id, learner_id=effective_id)
     except AnatomyOwnershipError as exc:
         raise HTTPException(status_code=403, detail=str(exc))
     except AnatomyServiceError as exc:
@@ -102,9 +113,17 @@ def get_anatomy_session(session_id: str, x_learner_id: Optional[str] = Header(No
 
 
 @router.post("/session/{session_id}/interact", response_model=InteractSessionResponse)
-def interact_with_anatomy_session(session_id: str, request: InteractSessionRequest):
+def interact_with_anatomy_session(
+    session_id: str,
+    request: InteractSessionRequest,
+    x_user_id: Optional[str] = Header(None, alias="X-User-Id"),
+    x_learner_id: Optional[str] = Header(None, alias="X-Learner-Id"),
+):
     """Advance dialogue or process physical 3D mesh interaction."""
     _check_feature_enabled()
+    effective_id = (request.learner_id or x_user_id or x_learner_id or "").strip()
+    if effective_id:
+        request.learner_id = effective_id
     service = get_anatomy_service()
     try:
         return service.interact(session_id, request)
@@ -115,9 +134,17 @@ def interact_with_anatomy_session(session_id: str, request: InteractSessionReque
 
 
 @router.post("/session/{session_id}/challenge", response_model=ChallengeSubmitResponse)
-def submit_anatomy_challenge(session_id: str, request: ChallengeSubmitRequest):
+def submit_anatomy_challenge(
+    session_id: str,
+    request: ChallengeSubmitRequest,
+    x_user_id: Optional[str] = Header(None, alias="X-User-Id"),
+    x_learner_id: Optional[str] = Header(None, alias="X-Learner-Id"),
+):
     """Submit learner 3D mesh selection for deterministic challenge evaluation."""
     _check_feature_enabled()
+    effective_id = (request.learner_id or x_user_id or x_learner_id or "").strip()
+    if effective_id:
+        request.learner_id = effective_id
     service = get_anatomy_service()
     try:
         return service.submit_challenge(session_id, request)
@@ -125,3 +152,4 @@ def submit_anatomy_challenge(session_id: str, request: ChallengeSubmitRequest):
         raise HTTPException(status_code=403, detail=str(exc))
     except AnatomyServiceError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
+

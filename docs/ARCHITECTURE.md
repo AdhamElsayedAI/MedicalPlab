@@ -2,65 +2,74 @@
 
 ## 1. Architectural Overview
 
-MedicalPlab is an evidence-grounded medical education and clinical intelligence platform built on two distinct, architecturally decoupled product lanes:
-1. **University Learning**: Preclinical undergraduate medical education focusing on mechanistic physiology and basic-science comprehension (Renal Physiology MVP: Glomerular filtration barrier & RAAS mechanisms).
-2. **PLAB / Licensing Preparation**: High-stakes licensing examination preparation (UK GMC PLAB 1 / MLA) enforcing strict cryptographic source provenance, automated blocker taxonomy, and mandatory GMC clinician review boundaries.
+MedicalPlab is an adaptive, evidence-grounded medical learning and clinical intelligence platform. It seamlessly unifies preclinical basic science, cognitive reasoning diagnosis, Socratic remediation, evidence-verified clinical tutoring, interactive 3D anatomy, and governed clinical licensing preparation into a single longitudinal learner experience.
 
 ```mermaid
 graph TD
     Learner(["Medical Student / Preclinical Learner / Licensing Candidate"])
     
-    subgraph Frontend["Next.js 16.3.4 Client (React 19 + Turbopack)"]
-        UI["Product UI & Mode Selector"]
-        UniView["University Learning Studio<br/>(/university)"]
-        PLABView["PLAB Practice & Review Room<br/>(/)"]
-        OfflineCache["Client Fallback Cache"]
+    subgraph ClientLayer["Client Layer (Web & Mobile)"]
+        NextJS["Next.js 16.3.4 Client<br/>(React 19, Turbopack, Three.js)"]
+        MobileClient["Mobile Apps (iOS / Android)<br/>(Consumes Frozen REST / OpenAPI 3.1.0)"]
     end
 
-    Learner --> UI
-    UI --> UniView
-    UI --> PLABView
-    UI -.-> OfflineCache
+    Learner --> NextJS
+    Learner --> MobileClient
 
-    subgraph Gateway["FastAPI Application Layer"]
-        MainEntry["Local & Demo Gateway<br/>(main.py:app)"]
-        ProdEntry["Strict Pilot / Production Gateway<br/>(production_main.py:app)"]
-        AuthMiddleware["CORS, Process-Time Header & Rate Limiting"]
+    subgraph Gateway["FastAPI Application Layer (production_main.py)"]
+        CORSMiddleware["CORS, Header Resolution (X-User-Id) & Telemetry"]
+        RouterHub["API Router Gateway (/api/v1/*)"]
     end
 
-    UniView -- "HTTP REST" --> AuthMiddleware
-    PLABView -- "HTTP REST" --> AuthMiddleware
-    AuthMiddleware --> MainEntry
-    AuthMiddleware --> ProdEntry
+    NextJS -- "HTTP / REST" --> CORSMiddleware
+    MobileClient -- "HTTP / REST" --> CORSMiddleware
+    CORSMiddleware --> RouterHub
 
-    subgraph CoreServices["Shared Backend & AI Subsystems"]
-        UniService["University Service<br/>(Renal Basic-Science Question Bank)"]
-        PLABService["PLAB V9 Service<br/>(Governance, Quarantine, Provenance)"]
-        EvidenceEngine["Canonical Evidence Engine V1.1<br/>(Routing, Field BM25, Weighted RRF, Qwen3-Reranker)"]
-        SafetyGate["Central Claim Verifier<br/>(Fail-Closed Safety Gate)"]
-        MasteryEngine["Mastery & Progress Engine<br/>(Bayesian Knowledge Tracing)"]
+    subgraph PedagogicalCore["Pedagogical & Adaptive Subsystems"]
+        UniService["University Learning Service<br/>(Renal Basic-Science Question Bank)"]
+        AdaptiveEngine["Adaptive Engine<br/>(Bayesian Mastery & Recommendation Profiler)"]
+        RemediationController["Socratic Remediation Controller<br/>(Bounded 3-Turn PROBE → GUIDE → CONSOLIDATE)"]
+        TransferEngine["Held-Out Transfer Engine<br/>(Independent Transfer Assessment)"]
+        AnatomyService["3D Anatomy Lab Service<br/>(Session State & Deterministic Challenge Evaluator)"]
+        ProgressService["Unified Learner Progress API<br/>(Cross-Track Longitudinal Projection)"]
+        PLABService["PLAB Governance Service<br/>(Dual-Mode: Preview QA vs Golden Only)"]
     end
 
-    MainEntry --> UniService
-    MainEntry --> EvidenceEngine
-    MainEntry --> MasteryEngine
-    ProdEntry --> PLABService
-    ProdEntry --> UniService
+    RouterHub --> UniService
+    RouterHub --> AdaptiveEngine
+    RouterHub --> RemediationController
+    RouterHub --> TransferEngine
+    RouterHub --> AnatomyService
+    RouterHub --> ProgressService
+    RouterHub --> PLABService
 
-    EvidenceEngine --> SafetyGate
-
-    subgraph DataPersistence["Data & Evidence Storage"]
-        UniBank["Data/university/questions.json<br/>(Verified Educational Bank)"]
-        PLABBank["Data/questions/cardiorespiratory_batch_1.json<br/>(Public-Safe PLAB Subset)"]
-        Corpus["Data/processed/renal_v1/<br/>(16 Open-Access PMC Articles, 2,192 Chunks)"]
-        DB["SQLite Persistence<br/>(university.sqlite3 / pilot.db)"]
+    subgraph GroundedAI["Grounded Clinical AI Subsystem"]
+        TutorService["TutorService<br/>(Pedagogical Dialogue & Socratic Prompts)"]
+        EvidenceEngine["Shared Evidence Engine V1.1<br/>(Routing, Field BM25, Weighted RRF, Qwen3-Reranker)"]
+        PostVerifier["Central Claim Verifier<br/>(Proposition Extractor, Provenance & Clinical Vetoes)"]
+        SafeFallback["Fail-Closed SAFE_FALLBACK Gate<br/>(Non-Factual Pedagogical Guidance)"]
     end
 
-    UniService --> UniBank
-    UniService --> DB
-    PLABService --> PLABBank
-    PLABService --> DB
-    EvidenceEngine --> Corpus
+    RemediationController --> TutorService
+    TutorService --> EvidenceEngine
+    EvidenceEngine --> PostVerifier
+    PostVerifier -- "Verified" --> RouterHub
+    PostVerifier -- "Veto / Mismatch" --> SafeFallback
+    SafeFallback --> RouterHub
+
+    subgraph DataAndKnowledge["Knowledge Repositories & Reference Models"]
+        PMCCorpus["PubMed Central (PMC) Corpus<br/>(Open Access CC-BY Full-Text Chunks)"]
+        HRALibrary["HuBMAP Human Reference Atlas (HRA)<br/>(CC-BY 4.0 3D Anatomical Meshes)"]
+        DataBanks["Data/ (University Banks & PLAB Preview Candidates)"]
+        DB["Module-Scoped SQLite Persistence<br/>(Learner state, sessions, telemetry)"]
+    end
+
+    EvidenceEngine --> PMCCorpus
+    AnatomyService --> HRALibrary
+    UniService --> DataBanks
+    PLABService --> DataBanks
+    AdaptiveEngine --> DB
+    ProgressService --> DB
 ```
 
 ---
@@ -69,71 +78,88 @@ graph TD
 
 | Layer | Component | Version / Technology | Architectural Role |
 | :--- | :--- | :--- | :--- |
-| **Frontend Framework** | Next.js | `16.3.4` (Turbopack) | Server Components, fast hydration, client resilience |
+| **Frontend Web** | Next.js | `16.3.4` (Turbopack) | Server Components, static prerendering, client hydration |
 | **UI Library** | React | `19.2.8` | Declarative UI state, reactive learning components |
-| **Frontend Styling** | TailwindCSS | `4.x` | Modern, responsive medical UI tokens |
-| **Icons & Animation** | Lucide / Framer Motion | `1.42.0` / `13.2.0` | Polished micro-interactions and status indicators |
+| **Styling & Motion** | TailwindCSS / CSS | `4.x` / Vanilla CSS | Modern clinical dark mode, responsive layouts |
+| **3D Visualization** | Three.js | `0.183+` | WebGL canvas, HuBMAP HRA mesh rendering, orbit controls |
 | **Backend Framework** | FastAPI | `0.115+` (Python 3.12/3.11) | Asynchronous ASGI, typed Pydantic contracts |
 | **ASGI Server** | Uvicorn | `0.34+` | Production async event loop |
 | **Lexical Retrieval** | Custom BM25 | Pure Python / NumPy | Field-aware title (1.0), heading (2.0), body (1.0) |
 | **Neural Reranking** | Qwen3-Reranker | `Qwen/Qwen3-Reranker-0.6B` | Cross-encoder contextual relevance verification |
-| **Claim Verification** | CentralClaimVerifier | Deterministic Rule Engine | Polarity, numeric consistency, directional entailment |
+| **Claim Verification** | CentralClaimVerifier | Deterministic Rule Engine | Polarity, numeric consistency, directional entailment, citations |
 | **Student Modeling** | Bayesian Knowledge Tracing | Custom BKT | Dynamic mastery updates, weak topic recommendations |
-| **Containerization** | Docker | Multi-stage, non-root | Google Cloud Run, HF Spaces, portable deployment |
+| **Mobile Integration** | OpenAPI 3.1.0 / Postman | REST/JSON contract | Frozen mobile API handoff |
 
 ---
 
-## 3. Product Lanes & Architectural Boundaries
+## 3. Core Product Subsystems
 
-### Lane 1: University Learning
+### 1. Preclinical University Track
 - **Focus:** Preclinical undergraduate medical education.
 - **Current MVP:** Renal Physiology (Glomerular filtration barrier & RAAS mechanisms).
-- **Taxonomy:** Subject -> Topic -> Question -> Feedback -> Explanation -> Mastery.
-- **Contract:** Zero answer key leakage in question payloads (`options` dict without correct key).
-- **Safety Status:** `VERIFIED_EDUCATIONAL`. Fail-closed on missing fields or broken encodings.
+- **Taxonomy:** Subject → Topic → Question → Feedback → Explanation → Adaptive Update.
+- **Contract Invariant:** Zero answer key leakage in question payloads (`options` dict without correct key metadata).
 
-### Lane 2: PLAB / Licensing Preparation
+### 2. Adaptive Learning & Reasoning Signals
+- **Focus:** Closed-loop learner modeling and recommendation.
+- **Principle:** Wrong answer $\neq$ diagnosed misconception. Incorrect answers trigger heuristic reasoning-pattern signals.
+- **Contract:** Dynamic mastery profiling driven by backend persistence with zero client-side calculation.
+
+### 3. Socratic Remediation & Held-Out Transfer
+- **Focus:** Guided cognitive remediation without answer leakage.
+- **Protocol:** Bounded 3-turn controller (`PROBE` → `GUIDE` → `CONSOLIDATE`).
+- **Transfer Invariant:** Held-out problem (`UNI-RENAL-001-T`) evaluated by backend scoring to certify conceptual transfer.
+
+### 4. Grounded AI Tutor & Evidence Invariant
+- **Focus:** Conversational clinical learning with zero hallucination.
+- **Invariant:** Adaptive Layer $\rightarrow$ `TutorService` $\rightarrow$ `Shared Evidence Engine` $\rightarrow$ Verification $\rightarrow$ Grounded Response / `SAFE_FALLBACK`.
+- **Fail-Closed Gate:** Out-of-scope queries or provenance mismatches automatically fall back to procedural non-factual guidance.
+
+### 5. Generative 3D Anatomy Lab
+- **Focus:** Spatial anatomical learning and deterministic identification testing.
+- **Assets:** Scientifically licensed HuBMAP Human Reference Atlas (HRA) 3D reference objects.
+- **Contract:** Challenge submission evaluated via canonical endpoint: `POST /api/v1/anatomy/session/{session_id}/challenge`.
+
+### 6. PLAB Clinical Licensing Governance
 - **Focus:** High-stakes licensing examinations (UK GMC PLAB 1 / MLA).
-- **Governance:** 9-point blocker taxonomy (Blockers A through I).
-- **Safety Policy:**
-  - 24 out of 36 questions quarantined due to strict evidence/distractor blockers.
-  - 0 questions published as "Golden" without GMC clinician sign-off.
-  - Complete character-exact span containment in accredited clinical guidelines.
+- **Dual-Mode Governance:**
+  - `MEDICALPLAB_PLAB_PREVIEW_QA=1`: 36 candidate questions for internal review and mentor demos with prominent warning banner.
+  - `MEDICALPLAB_PLAB_PREVIEW_QA=0`: Fail-closed empty state (`GOLDEN_ONLY`: 0 released questions) until formal clinician panel promotion.
+
+### 7. Unified Learner Progress
+- **Focus:** Consolidated longitudinal telemetry across all learning tracks.
+- **Contract:** Driven by `GET /api/v1/learner/progress`, unifying University attempts, Adaptive state, Anatomy challenge passes, and PLAB review metrics.
 
 ---
 
 ## 4. API Entrypoint Specialization
 
-1. **`main.py` (Local & Demo Gateway)**:
-   - Provides full developer ergonomics, CORS, Socratic chat (`/ai/chat`), University endpoints (`/api/v1/university/*`), direct evidence queries (`/api/v1/evidence/query`), and student analytics (`/student/*`).
-   - Serves as the primary local development and hackathon judge evaluation entrypoint.
-
-2. **`production_main.py` (Strict Fail-Closed Deployment/Pilot Entrypoint)**:
+1. **`production_main.py` (Authoritative Pilot & Production Entrypoint)**:
    - Requires `MEDICALPLAB_RUNTIME_MODE=pilot` or `production`.
    - Enforces data integrity manifests on startup; fails closed if files are missing or modified.
-   - Strictly validates PLAB governance counts before serving questions without implying external clinical certification.
+   - Enforces clinical PLAB governance and mounts all authoritative `/api/v1` routes.
+
+2. **`main.py` (Local Development Entrypoint)**:
+   - Provides developer ergonomics, backwards-compatible exploration routes, and synthetic test harnesses.
 
 ---
 
 ## 5. Security, Privacy & Integrity Invariants
 
-- **No Live Secrets:** Repository contains zero hardcoded API keys, passwords, or production tokens. Pointers use `.env.example`.
-- **No Private Publisher Redistribution:** Full proprietary publisher guideline text remains in the private canonical evidence vault (`plab-evidence-final-v9`); the public repository tracks only open-access PMC literature and public-safe synthetic verification fixtures.
+- **No Live Secrets:** Repository contains zero hardcoded API keys, passwords, or production tokens.
+- **Synthetic Learner Partitioning:** Mobile and pilot requests use the `X-User-Id` header for session isolation. This is an integration partitioning protocol, not cryptographic production authentication (`MOBILE_PRODUCTION_AUTH_READY = NO`).
 - **Cryptographic Reproducibility:** Every question and evidence chunk is tracked with SHA-256 digests. Line-ending normalization (`UTF8_LF_CANONICAL_TEXT`) ensures cross-platform cryptographic reproducibility.
+- **No Private Publisher Redistribution:** Public repository tracks only open-access PMC literature (CC-BY) and public-safe synthetic verification fixtures.
 
 ---
 
 ## 6. Repository Architecture
 
-*Note: This section defines the structural engineering layout of the codebase, distinct from the runtime system architecture in Section 1.*
-
-The repository is structured into six functional tiers designed for 10-second comprehension by senior engineers, mentors, and technical judges:
-
 ```
 MedicalPlab/
 ├── src/medicalplab/        # Tier 1: Core Product Code (Backend & AI Engine)
-├── frontend/               # Tier 1: Core Product Code (Web Client)
-├── Data/                   # Tier 2: Active Runtime Data (Public-Safe Evidence & Banks)
+├── frontend/               # Tier 1: Core Product Code (Next.js 16 Web Client)
+├── Data/                   # Tier 2: Active Runtime Data (Public-Safe Evidence & Question Banks)
 ├── evaluation/             # Tier 3: Research & Reproducibility (Benchmarks & Splits)
 ├── models/                 # Tier 3: Research & Reproducibility (Frozen Classifiers & Hashes)
 ├── notebooks/              # Tier 3: Research & Reproducibility (Colab Demonstration)
@@ -141,42 +167,10 @@ MedicalPlab/
 ├── cloudbuild.yaml         # Tier 4: Deployment Infrastructure (Google Cloud Build)
 ├── Dockerfile              # Tier 4: Deployment Infrastructure (Container Definition)
 ├── render.yaml             # Tier 4: Deployment Infrastructure (Render Blueprint)
-├── Scripts/                # Tier 5: Developer Tooling & Utilities (Ingestion & Pipelines)
-├── examples/               # Tier 5: Developer Tooling & Utilities (Schema Examples & Loaders)
-├── package.json            # Tier 5: Developer Tooling & Utilities (Root Script Wrapper)
-└── tests/                  # Tier 6: Test Architecture (Automated Verification Suite)
+├── Scripts/                # Tier 5: Developer Tooling & Engineering Utilities
+├── examples/               # Tier 5: Schema Examples & Pipeline Loaders
+├── configs/ & schemas/     # Tier 5: Formal Data Contracts with SHA-256 Sidecars
+├── docs/                   # Tier 6: Documentation (Architecture, Demo, Mobile Handoff, Team Handoff)
+├── reports/                # Tier 6: Release Acceptance & Audit Reports
+└── tests/                  # Tier 7: Automated Verification Suite (Integration, Mobile Contract, Unit)
 ```
-
-### 1. Core Product Code
-- **`src/medicalplab/`**: The core Python package housing the Canonical Evidence Engine V1.1 (`evidence_engine/`), University Preclinical Track (`university/`), PLAB V9 Governance & Licensing Service (`plab/`), and modular pipeline stages (`stage_b` through `stage_r`).
-- **`frontend/`**: The Next.js 16.3.4 / React 19 web application deployed to Vercel, providing modern UI components for University learning and PLAB practice.
-
-### 2. Active Runtime Data
-- **`Data/`**: Public-safe runtime assets required by the containerized service and AI engine. Contains 16 full-text open-access PMC articles (`Data/raw/` and `Data/processed/`), the 6-question Renal Physiology educational bank (`Data/university/`), the public-safe PLAB question fixture (`Data/questions/`), and corpus license manifests (`Data/metadata/`).
-
-### 3. Research & Scientific Reproducibility
-- **`evaluation/`**: Ground-truth datasets, heldout evaluation splits, and benchmark inputs. Referenced directly by immutable governance tests (`tests/renal/test_renal_v4_1.py`) and development benchmark suites.
-- **`models/`**: Frozen classifier weights (`.pkl`) accompanied by bit-for-bit SHA-256 sidecars (`.pkl.sha256`) asserted by cryptographic firewall tests.
-- **`notebooks/`**: Minimal Colab reproducibility demonstration (`stage_b_colab.ipynb`) illustrating interactive Stage-B tokenization and evidence scoring.
-
-### 4. Deployment Infrastructure
-- **`Dockerfile`**: Multi-stage, unprivileged non-root container configuration powering Google Cloud Run and local container execution.
-- **`cloudbuild.yaml`**: Google Cloud Build pipeline specification for automated container build, SHA tagging, and Cloud Run deployment.
-- **`.github/workflows/deploy-cloud-run.yml`**: Production CI/CD workflow triggering Cloud Run deployments upon merged changes to `main`.
-- **`deploy/`**: PowerShell and Bash automation scripts for developer deployment to Google Cloud Run.
-- **`render.yaml`**: Supported PaaS blueprint for Render web service deployments.
-
-### 5. Developer Tooling & Engineering Utilities
-- **`Scripts/`**: Active data ingestion tools, PMC XML extractors, benchmark suites, and milestone freeze utilities. Retained at root because critical test modules and subprocess pipelines import them directly.
-- **`examples/`**: Schema payload examples (`chunk.example.json`, `question.example.json`, etc.) and lightweight pipeline verification scripts (`test_loader.py`, `test_pipeline.py`).
-- **`configs/` & `schemas/`**: Formal JSON Schema data contracts (`schemas/`) and executable configuration files (`configs/`) with cryptographic SHA sidecars.
-- **`package.json`**: Root command wrapper forwarding `npm run dev`, `build`, and `lint` commands directly to `frontend/`.
-
-### 6. Test Architecture
-- **`tests/`**: Comprehensive Pytest suite organized into functional domains:
-  - `tests/test_canonical_rag.py` & `tests/test_evidence_engine_v2.py`: RAG retrieval, ranking, and claim verification.
-  - `tests/university/`: University contract invariants, zero answer key leakage, and BKT tracking.
-  - `tests/plab/v9/`: PLAB V9 cryptographic oracle, span containment, and blocker taxonomy.
-  - `tests/plab/test_pilot_acceptance.py`: Strict fail-closed production readiness probe.
-  - `tests/renal/`: Historical milestone firewall tests asserting immutable SHA-256 sidecars and heldout splits.
-

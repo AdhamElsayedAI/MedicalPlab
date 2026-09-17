@@ -218,47 +218,116 @@ class RemediationLoopController:
                             f"Option '{selected_option}' is the correct answer to '{question_id}'. Remediation is only available for incorrect answers.",
                             status_code=422,
                         )
+            try:
+                from medicalplab.stage_g.product_api import get_plab_service
+                plab_svc = get_plab_service()
+                if plab_svc is not None and question_id in plab_svc.questions:
+                    plab_q = plab_svc.questions[question_id]
+                    if selected_option == plab_q.get("correct_answer"):
+                        raise RemediationError(
+                            f"Option '{selected_option}' is the correct answer to '{question_id}'. Remediation is only available for incorrect answers.",
+                            status_code=422,
+                        )
+            except RemediationError:
+                raise
+            except Exception:
+                pass
         except RemediationError:
             raise
         except Exception as exc:
             logger.warning("Could not verify question bank correctness for %s: %s", question_id, exc)
 
-        # Validate attempt provenance against real persisted University attempts
+        # Validate attempt provenance against real persisted University or PLAB attempts
         originating_attempt_id = attempt_id
         try:
+            found_attempt = False
+            has_attempts_table = False
             with closing(sqlite3.connect(self.db_path, timeout=5.0)) as conn:
                 conn.row_factory = sqlite3.Row
                 has_attempts = conn.execute(
                     "SELECT 1 FROM sqlite_master WHERE type='table' AND name='university_attempts'"
                 ).fetchone()
                 if has_attempts:
+                    has_attempts_table = True
                     if attempt_id:
                         row = conn.execute(
                             "SELECT user_id, attempt_key, question_id, selected, correct FROM university_attempts WHERE attempt_key = ?",
                             (attempt_id,),
                         ).fetchone()
-                        if not row:
-                            raise RemediationError(f"Attempt '{attempt_id}' not found.", status_code=404)
-                        if row["user_id"] != user_id:
-                            raise RemediationError("Attempt belongs to another learner.", status_code=403)
-                        if row["question_id"] != question_id or row["selected"] != selected_option:
-                            raise RemediationError("Attempt question or selected option does not match remediation request.", status_code=422)
-                        if row["correct"] == 1:
-                            raise RemediationError("Remediation is only available for incorrect attempts.", status_code=422)
-                        originating_attempt_id = row["attempt_key"]
+                        if row:
+                            found_attempt = True
+                            if row["user_id"] != user_id:
+                                raise RemediationError("Attempt belongs to another learner.", status_code=403)
+                            if row["question_id"] != question_id or row["selected"] != selected_option:
+                                raise RemediationError("Attempt question or selected option does not match remediation request.", status_code=422)
+                            if row["correct"] == 1:
+                                raise RemediationError("Remediation is only available for incorrect attempts.", status_code=422)
+                            originating_attempt_id = row["attempt_key"]
                     else:
                         row = conn.execute(
                             "SELECT attempt_key, correct FROM university_attempts WHERE user_id = ? AND question_id = ? AND selected = ? ORDER BY rowid DESC LIMIT 1",
                             (user_id, question_id, selected_option),
                         ).fetchone()
                         if row:
+                            found_attempt = True
                             if row["correct"] == 1:
                                 raise RemediationError("Remediation is only available for incorrect attempts.", status_code=422)
                             originating_attempt_id = row["attempt_key"]
+
+            if not found_attempt:
+                try:
+                    from medicalplab.stage_g.product_api import get_plab_service
+                    plab_svc = get_plab_service()
+                    if plab_svc is not None:
+                        matched_att = None
+                        if attempt_id:
+                            for (uid, _), att in plab_svc.attempts.items():
+                                if att.get("attempt_id") == attempt_id or _ == attempt_id:
+                                    matched_att = att
+                                    break
+                            if not matched_att and plab_svc.persistence:
+                                p_attempts = plab_svc.persistence.load_attempts()
+                                for (uid, _), att in p_attempts.items():
+                                    if att.get("attempt_id") == attempt_id or _ == attempt_id:
+                                        matched_att = att
+                                        break
+                            if matched_att:
+                                found_attempt = True
+                                if matched_att["user_id"] != user_id:
+                                    raise RemediationError("Attempt belongs to another learner.", status_code=403)
+                                if matched_att["question_id"] != question_id or matched_att["selected_option"] != selected_option:
+                                    raise RemediationError("Attempt question or selected option does not match remediation request.", status_code=422)
+                                if matched_att.get("is_correct"):
+                                    raise RemediationError("Remediation is only available for incorrect attempts.", status_code=422)
+                                originating_attempt_id = matched_att["attempt_id"]
+                        else:
+                            for (uid, _), att in plab_svc.attempts.items():
+                                if uid == user_id and att.get("question_id") == question_id and att.get("selected_option") == selected_option:
+                                    matched_att = att
+                                    break
+                            if not matched_att and plab_svc.persistence:
+                                p_attempts = plab_svc.persistence.load_attempts()
+                                for (uid, _), att in p_attempts.items():
+                                    if uid == user_id and att.get("question_id") == question_id and att.get("selected_option") == selected_option:
+                                        matched_att = att
+                                        break
+                            if matched_att:
+                                found_attempt = True
+                                if matched_att.get("is_correct"):
+                                    raise RemediationError("Remediation is only available for incorrect attempts.", status_code=422)
+                                originating_attempt_id = matched_att["attempt_id"]
+                except RemediationError:
+                    raise
+                except Exception as exc:
+                    logger.debug("Error checking PLAB attempts: %s", exc)
+
+            if attempt_id and has_attempts_table and not found_attempt:
+                raise RemediationError(f"Attempt '{attempt_id}' not found.", status_code=404)
         except RemediationError:
             raise
         except Exception as exc:
             logger.warning("Could not verify attempt provenance in database: %s", exc)
+
 
         # Idempotency check for active session with matching idempotency key
         if idempotency_key:

@@ -13,21 +13,20 @@ Every error response from the backend follows standard FastAPI JSON format:
 }
 ```
 
-| HTTP Status | Triggering Scenario | Backend Meaning | Mobile Client UX Action |
-| :---: | :--- | :--- | :--- |
-| **`400`** | Calling `/remediation/turn` after Turn 3 | Turn progression out of bounds ($>3$) | Disable turn input; navigate student to Transfer Assessment or Topic overview. |
-| **`403`** | `X-User-Id` header mismatch on `/remediation/session/{id}` or `/attempt` | Requested resource belongs to a different learner ID | Clear cached session ID; prompt user to restart session with current device ID. |
-| **`404`** | Requesting invalid subject, topic, or question ID | Resource does not exist in active educational content | Display "Content Not Found" toast and navigate back to Subjects list. |
-| **`404`** | `GET /remediation/session/{id}` with unknown session ID | Remediation session does not exist or was evicted | Clear local active session pointer; return user to practice question. |
-| **`404`** | `GET /remediation/session/{id}/transfer` on questions without transfer | Question does not have a paired held-out transfer item (e.g. `UNI-RENAL-003`) | Inform learner that transfer item is not available; mark session resolved/complete and return to topics. |
-| **`409`** | Reusing `idempotency_key` with conflicting options or answers | Attempt or transfer was already submitted with a different payload | Display "Submission Conflict" toast; fetch latest state via `GET` without retrying POST. |
-| **`422`** | Missing or empty `X-User-Id` on `/answer` or `/progress` | Header length $< 8$ or $> 120$ characters | Ensure mobile local storage initializes `uni-<uuid>` before issuing requests. |
-| **`422`** | Calling `/remediation/start` for a **correct** answer | Remediation is strictly reserved for incorrect options/distractors | Prevent student from triggering remediation on correct answers; prompt for next question. |
-| **`422`** | Calling `/remediation/session/{id}/transfer` before reaching `AWAITING_TRANSFER` | Dialogue turns 1-3 have not yet concluded | Block transfer navigation; keep student on current dialogue turn. |
-| **`422`** | Submitting transfer answer without first calling `GET /transfer` | Transfer item has not yet been dispensed by server | Fetch transfer item via `GET /transfer` before displaying assessment UI. |
-| **`422`** | Submitted transfer question ID does not match dispensed item | Client submitted answer for wrong question | Ensure client submits matching `question_id` received from `GET /transfer`. |
-| **`500`** | Unexpected server-side failure in RAG or scoring engine | Internal server exception | Show generic retry banner: "Service temporarily unavailable. Please retry shortly." |
-| **`503`** | `MEDICALPLAB_PHASE_2B_ENABLED` feature flag is disabled | Phase 2B remediation engine is turned off on server | Show notice: "Socratic remediation is currently unavailable in this environment." |
+| HTTP Status | Triggering Scenario | Backend Meaning | Mobile Client UX Action | Retry Safe? |
+| :---: | :--- | :--- | :--- | :---: |
+| **`401`** | Omitted or empty `X-User-Id` on canonical learner endpoints | `USER_ID_REQUIRED`: `resolve_learner_id(required=True)` failed closed | Attach valid `X-User-Id` header before issuing request. | **No** |
+| **`400`** | Missing `learner_id` on 3D Anatomy session start or turn $> 3$ | Request parameter missing or turn progression out of bounds | Supply `learner_id` in header/body or advance to transfer. | **No** |
+| **`403`** | Evaluating unpromoted PLAB question in strict production mode | `QUESTION_NOT_AVAILABLE`: Question not approved for student release | Block question presentation; guide learner to promoted questions. | **No** |
+| **`403`** | `X-User-Id` mismatch on `/remediation/session/{id}` or `/attempt` | `SESSION_ACCESS_FORBIDDEN`: Resource belongs to a different learner ID | Clear cached session ID; restart session with current device ID. | **No** |
+| **`403`** | Attempted access to educator cohort analytics (`/reasoning-gaps`) | Educator role required ($N \ge 3$ privacy suppression enforced) | Hide educator analytics tabs in mobile student application. | **No** |
+| **`404`** | Requesting invalid subject, topic, question ID, or expired session | Resource does not exist in active content or session expired | Display "Content Not Found" toast and navigate back to list. | **No** |
+| **`409`** | Reusing `idempotency_key` with conflicting options or payload | `IDEMPOTENCY_CONFLICT`: Key was already submitted with different data | Display "Submission Conflict" toast; fetch latest state with GET. | **No** |
+| **`422`** | Missing required JSON fields, invalid enums, or University header | Validation error (e.g. option not A-E, or missing required field) | Validate request schema and fields locally before submission. | **No** |
+| **`422`** | `UNSUPPORTED_ANATOMY_REQUEST` or invalid remediation phase | Structure not in 3D ontology or action taken in wrong state | Restrict interactions to active supported ontology and state. | **No** |
+| **`500`** | Unexpected server-side internal exception | Internal server processing failure | Show retry banner: "Service temporarily unavailable. Please retry." | **Yes** |
+| **`503`** | Active PLAB production corpus unavailable or checksum mismatch | `PLAB_CONTENT_UNAVAILABLE`: Data integrity verification failed | Retry after exponential backoff; backend self-checks integrity. | **Yes** |
+| **`503`** | `MEDICALPLAB_PHASE_2B_ENABLED=0` or `ANATOMY_3D_ENABLED=0` | Corresponding engine is disabled by feature flag on backend | Hide or disable corresponding CTA / tab in mobile UI. | **Yes** |
 
 ---
 
@@ -134,3 +133,52 @@ Mobile applications must reliably resume sessions across app backgrounding, OS t
   - The client may safely resend the identical POST payload with the **same** `idempotency_key`.
   - The backend returns the previously computed turn or transfer score without creating duplicate database rows or inflating learning metrics.
   - Submitting a **different** answer or message with the same idempotency key is rejected with `HTTP 409 Conflict`.
+
+---
+
+## 5. 3D Anatomy States & Structured Enums
+
+The 3D Anatomy service delivers deterministic scene actions and structured evaluation states:
+
+### Scene Action Type (`AnatomyActionType`)
+Dispatched by server in `POST /anatomy/session/{id}/interact`:
+```typescript
+export enum AnatomyActionType {
+  FOCUS_STRUCTURE = "FOCUS_STRUCTURE",           // Camera focus on anatomy item
+  HIGHLIGHT_STRUCTURE = "HIGHLIGHT_STRUCTURE",   // Visual highlight/outline
+  ISOLATE_STRUCTURE = "ISOLATE_STRUCTURE",       // Isolate item; hide rest
+  SHOW_STRUCTURE = "SHOW_STRUCTURE",             // Make structure visible
+  HIDE_STRUCTURE = "HIDE_STRUCTURE",             // Hide structure
+  SHOW_RELATION = "SHOW_RELATION",               // Visual link between structures
+  SET_STRUCTURE_OPACITY = "SET_STRUCTURE_OPACITY", // Set transparency (0.0 to 1.0)
+  RESET_SCENE = "RESET_SCENE",                   // Restore baseline 3D scene
+}
+```
+
+### Lesson State (`LessonState`)
+State machine progression of the 3D guided lesson:
+```typescript
+export enum LessonState {
+  INTRO = "INTRO",
+  GUIDED_VESSELS = "GUIDED_VESSELS",
+  GUIDED_IDENTIFICATION = "GUIDED_IDENTIFICATION",
+  CHALLENGE_READY = "CHALLENGE_READY",
+  CHALLENGE_ACTIVE = "CHALLENGE_ACTIVE",
+  COMPLETED = "COMPLETED",
+}
+```
+
+### Challenge Evaluation Result (`ChallengeResult`)
+Deterministic pin test assessment outcome returned by `POST /anatomy/session/{id}/challenge`:
+```typescript
+export enum ChallengeResult {
+  PENDING = "PENDING",
+  CORRECT = "CORRECT",
+  INCORRECT = "INCORRECT",
+}
+```
+
+### Interaction Request Type (`InteractionRequestType`)
+AI guidance prompt category:
+- `IDENTIFY_STRUCTURE`: Prompt requesting student to locate/tap an anatomical structure.
+- `EXPLORE_SCENE`: Open exploratory rotation/inspection prompt.

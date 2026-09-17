@@ -10,10 +10,36 @@ from typing import Any
 
 ACTIVE_BATCH_PATH = "questions/versions/cardiorespiratory_batch_1_source_audit_v2.json"
 EXPECTED_BATCH_HASH = "3351e9b7a70c0dfc83eb3927f0258f80efb273c3e37a08ab9714419f5239eeca"
-EXPECTED_QUEUE_HASH = "11a9c20dd80209243ac791f41b3d2a07f76e8f64fed82e9e1e52024cdef39a26"
+EXPECTED_QUEUE_HASH = "8ebe46c8923d3750b075d1907cf63b56439aaf51b3314fa243558506d8968d65"
 EXPECTED_SNAPSHOT_HASH = "ff9497c744fe5c31813281a042ce30cc4bfa51aee59d3ed0adcede03ea971db5"
-EXPECTED_DOCUMENT_COUNT = 13
-EXPECTED_CHUNK_COUNT = 817
+
+# Historical full preserved corpus (audit & provenance tracking)
+HISTORICAL_FULL_DOCUMENT_COUNT = 13
+HISTORICAL_FULL_CHUNK_COUNT = 817
+
+# Authoritative active runtime corpus (12 CC BY 4.0 startup-safe documents, 734 chunks)
+ACTIVE_STARTUP_SAFE_DOCUMENT_COUNT = 12
+ACTIVE_STARTUP_SAFE_CHUNK_COUNT = 734
+
+# Active runtime production expectations
+EXPECTED_DOCUMENT_COUNT = ACTIVE_STARTUP_SAFE_DOCUMENT_COUNT
+EXPECTED_CHUNK_COUNT = ACTIVE_STARTUP_SAFE_CHUNK_COUNT
+
+REFERENCE_ONLY_DOCUMENT_IDS = frozenset({"DOC-WHO-CARD-0001"})
+ACTIVE_STARTUP_SAFE_DOCUMENT_IDS = frozenset({
+    "DOC-PMC-CARD-0002",
+    "DOC-PMC-CARD-0008",
+    "DOC-PMC-CARD-0009",
+    "DOC-PMC-RESP-0003",
+    "DOC-PMC-EMERG-0001",
+    "DOC-PMC-RESP-0004",
+    "DOC-PMC-RESP-0005",
+    "DOC-PMC-CARD-0010",
+    "DOC-PMC-CARD-0011",
+    "DOC-PMC-CARD-0012",
+    "DOC-PMC-CARD-0013",
+    "DOC-PMC-CARD-0014",
+})
 
 
 def compute_file_sha256(path: Path) -> str:
@@ -80,11 +106,16 @@ def verify_production_data_manifest(data_root: Path | str | None = None) -> Data
             snap_data = json.loads(snapshot_file.read_text(encoding="utf-8"))
             snapshot_id = snap_data.get("snapshot_id") or snap_data.get("corpus_id")
             documents = snap_data.get("documents", [])
-            doc_count = len(documents)
+            # Filter to active runtime documents only (excluding reference-only sources like WHO)
+            active_documents = [
+                doc for doc in documents
+                if doc.get("document_id") not in REFERENCE_ONLY_DOCUMENT_IDS
+            ]
+            doc_count = len(active_documents)
             if doc_count != EXPECTED_DOCUMENT_COUNT:
                 blockers.append(f"DOCUMENT_COUNT_MISMATCH: expected {EXPECTED_DOCUMENT_COUNT}, found {doc_count}")
 
-            for doc in documents:
+            for doc in active_documents:
                 rel = Path(str(doc.get("chunks_file", "")))
                 chunk_path = root / Path(*rel.parts[1:]) if rel.parts and rel.parts[0].lower() == "data" else root / rel
                 if not chunk_path.exists():

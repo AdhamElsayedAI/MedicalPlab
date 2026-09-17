@@ -1,0 +1,324 @@
+{
+  "fixture_id": "medicalplab-cardiorespiratory-test-fixture-v1",
+  "description": "Public-safe reproducible test fixture containing CC BY 4.0 evidence chunks for PLAB Cardiorespiratory tests.",
+  "license": "CC BY 4.0",
+  "zero_who_guarantee": true,
+  "total_chunks": 35,
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-CARD-0002-B0003-C01",
+      "document_id": "DOC-PMC-CARD-0002",
+      "text": "Hypertension can be divided into two major categories: essential (or primary) hypertension and secondary hypertension [ 1 ]. Essential hypertension, which does not have a single identifiable cause, represents the vast majority of cases (85\u201395%) [ 1 , 11 ]. Risk factors for essential hypertension include genetics, obesity, diabetes, smoking, high alcohol consumption, high sodium intake, lack of exercise, and stress [ 1 ]. In contrast, secondary hypertension is caused by an identifiable underlying condition which can be divided into four categories: renal, endocrine, vascular, or other [ 12 ]. Among these, renal causes include renal parenchymal disease or renovascular disease; endocrine causes are adrenal-dependent, thyroid-dependent, or pituitary dependent; vascular causes include coarctation of the aorta; and other causes include obstructive sleep apnea, drug-induced, and pregnancy. Since the prevalence of secondary hypertension is relatively low (5\u201315%), routine evaluations in the absence of compelling clinical findings are time-consuming and not cost-effective [ 13 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Areesha Moiz, Tetiana Zolotarova, Mark J. Eisenberg, 'Outpatient management of essential hypertension: a review based on the latest clinical guidelines' (2024)",
+      "doi": "10.1080/07853890.2024.2338242",
+      "pmcid": "PMC11011233"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0002-B0095-C01",
+      "document_id": "DOC-PMC-CARD-0002",
+      "text": "Table 5. Summary of first-line antihypertensive agents. \u2014 Category: Dihydropyridine Calcium Channel Blockers \u2014 Name: Amlodipine; Starting (mg/day): 2.5 (fragile, elderly, or hepatic insufficiency) or 5; Maintenance (mg/day): 5\u201310; Maximum (mg/day): 10; Additional Information: Increase dose at intervals of 7\u201314 days; Taken with food?: No",
+      "license": "CC BY 4.0",
+      "attribution": "Areesha Moiz, Tetiana Zolotarova, Mark J. Eisenberg, 'Outpatient management of essential hypertension: a review based on the latest clinical guidelines' (2024)",
+      "doi": "10.1080/07853890.2024.2338242",
+      "pmcid": "PMC11011233"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0008-B0011-C01",
+      "document_id": "DOC-PMC-CARD-0008",
+      "text": "Smoking and excessive alcohol consumption both adversely affect AF outcomes. Smoking is associated with an increased risk for post-ablation AF recurrence and worse cardiovascular outcomes in patients with AF, including stroke, HF, hospitalization, and death, and those who undergo tobacco cessation showed lower trends of incident AF and improved CVD outcomes [ 38 , 39 , 40 ]. Additionally, smoking reduces the efficacy of anticoagulation, thereby increasing stroke risk [ 41 ]. Therefore, smoking cessation through behavioral interventions and pharmacotherapy is strongly recommended [ 42 , 43 ]. Similarly, alcohol reduction to \u22643 standard drinks per week or complete abstinence is associated with a reduction in AF symptoms, burden, and progression because of the high risk of incident AF with alcohol consumption [ 12 , 20 , 21 , 22 , 44 ]. Conversely, there is limited evidence linking caffeine intake to an increased risk of AF, despite it frequently being reported as a trigger or an exacerbating factor for AF symptoms. In fact, moderate caffeine consumption has been shown to reduce AF incidence [ 45 , 46 ]. Therefore, the 2023 guidelines recommend against caffeine abstention for AF prevention [ 4 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Hoang Nhat Pham, Ramzi Ibrahim, Hong Hieu Truong, Enkhtsogt Sainbayar, Viet Nghi Tran, Mahmoud Abdelnabi, Christopher Kanaan, Aadhavi Sridharan, 'Advances in Atrial Fibrillation Management: A Guide for General Internists' (2024)",
+      "doi": "10.3390/jcm13247846",
+      "pmcid": "PMC11678337"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0008-B0015-C01",
+      "document_id": "DOC-PMC-CARD-0008",
+      "text": "Several clinical risk scores have been developed to assess stroke risk in patients with AF, with each offering unique advantages and considerations for clinical use. Introduced in 2001, the CHADS 2 score, which includes congestive heart failure, hypertension, age, diabetes, and history of stroke or transient ischemic attack, represents an advancement over previous classification systems and guides the selection of antithrombotic therapy [ 72 ]. Developed in 2010, the CHA 2 DS 2 -VASc score improved the prediction of thromboembolism (TE) by incorporating additional risk factors, such as vascular disease, female sex, and age categories [ 73 ]. The 2013 ATRIA score further refined age categories and included renal function and proteinuria, which helped classify more patients as either low or high risk [ 74 ]. The 2016 MCHA2DS2-VASc score, specifically designed for Asian populations, adjusts the lower age threshold and has proven more effective than CHA 2 DS 2 -VASc in identifying Asian patients with AF who could benefit from stroke prevention [ 75 ]. The GARFIELD-AF tool, launched in 2017, uses web-based data to simultaneously evaluate the risk of stroke, mortality, and bleeding, facilitating shared decision-making about the benefits and risks of anticoagulation [ 76 ]. Recently, the role of the sex component in the CHA 2 DS 2 -VASc score has been re-evaluated.",
+      "license": "CC BY 4.0",
+      "attribution": "Hoang Nhat Pham, Ramzi Ibrahim, Hong Hieu Truong, Enkhtsogt Sainbayar, Viet Nghi Tran, Mahmoud Abdelnabi, Christopher Kanaan, Aadhavi Sridharan, 'Advances in Atrial Fibrillation Management: A Guide for General Internists' (2024)",
+      "doi": "10.3390/jcm13247846",
+      "pmcid": "PMC11678337"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0008-B0018-C01",
+      "document_id": "DOC-PMC-CARD-0008",
+      "text": "The management of AF typically involves either rate or rhythm control strategies. Commonly used medications for rate control include atrio-ventricular (AV) nodal blockers, such as beta-blockers or calcium channel blockers (CCBs), though CCBs should be avoided in patients with left ventricular dysfunction. Digoxin can be added as adjunctive therapy, particularly for improving rate control in HF patients [ 4 ]. The 2010 RACE II trial demonstrated that lenient rate control (below 110 BPM) provides comparable outcomes for strict rate control (below 80 BPM) in patients with permanent AF, though stricter control may be reasonable for symptomatic cases [ 95 ]. A rhythm control strategy, on the other hand, aims to restore and maintain sinus rhythm through cardioversion, antiarrhythmic drugs, or catheter ablation procedures [ 4 ]. Previous studies, including the 2002 AFFIRM and the 2004 HOT CAFE trials, have shown that rate control has similar outcomes to rhythm control for all-cause mortality, thromboembolism, and major bleeding, with a lower risk of adverse drug reactions [ 96 , 97 ]. However, these trials were confounded by the toxic effects of antiarrhythmic drugs and the suboptimal treatment of risk factors and comorbid conditions. More contemporary studies have demonstrated that rhythm control may offer greater advantages for specific patient populations, including individuals with HF, symptomatic or recent-onset AF (within one year), younger patients, and those with fewer comorbidities [ 4 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Hoang Nhat Pham, Ramzi Ibrahim, Hong Hieu Truong, Enkhtsogt Sainbayar, Viet Nghi Tran, Mahmoud Abdelnabi, Christopher Kanaan, Aadhavi Sridharan, 'Advances in Atrial Fibrillation Management: A Guide for General Internists' (2024)",
+      "doi": "10.3390/jcm13247846",
+      "pmcid": "PMC11678337"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0009-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "text": "Orthostatic syncope refers to a TLOC resulting from a postural decrease in BP. It can occur with or without premonitory symptoms (e.g., dizziness, asthenia, fatigue, palpitations, sweating, visual and auditory disturbances, and neck pain). The causes of orthostatic hypotension (OH) include volume depletion (e.g., vomiting, diarrhea, hemorrhage, and Addison\u2019s disease), dysautonomia, and peripheral venous pooling (e.g., exercise, post-prandial, or after prolonged bed rest), which may exacerbate drops in systolic BP (SBP) [ 1 ]. ESC guidelines identify five subtypes of OH ( Figure 2 ) [ 1 ]. Initial OH is defined as a drop in SBP higher than 40 mmHg and/or a DBP higher than 20 mmHg occurring within the first 15 s. It is more common in older adults, and it is often drug-induced. Classic OH is defined as a decrease in SBP > 20 mmHg and/or DBP > 10 mmHg or a sustained SBP below 90 mmHg after over 3 min of active standing or tilting. Delayed OH occurs after 3 min of active standing or tilting. It is potentially caused by decreased pre-load and low cardiac output and differentiates from reflex syncope due to the absence of bradycardia. Vasovagal syncope triggered by orthostatism is more common in women with orthostatic intolerance. Postural orthostatic tachycardia syndrome (POTS) is defined by an increase in heart rate higher than 30 bpm or above 120 bpm within the first 10 min of active standing or tilting. It is due to an inappropriate increase in heart rate without a concomitant decrease in blood pressure. POTS mostly affects young women, individuals suffering from an infection or recent trauma, and those with joint hypermobility syndrome [ 1 , 40 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccal\u00e0, 'Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review' (2024)",
+      "doi": "10.3390/jcm13030727",
+      "pmcid": "PMC10856004"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0010-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "text": "Distinguishing between the cardiac and non-cardiac causes of syncope is critical to performing proper risk stratification and guiding diagnostic and therapeutic management. While the 2018 ESC guidelines point out the existence of a \u201clow BP phenotype\u201d for vasovagal syncope, a recent multicohort cross-sectional study by Brignole et al. suggested that they may actually have different cardiovascular hemodynamics [ 41 ]. In particular, the hemodynamic profile of those identified as being the \u201clow BP phenotype\u201d may be characterized by a lower SBP and pulse pressure and, therefore, a reduced pre-load and lower stroke volume, and a higher HR and diastolic BP (DPB) as a likely activation of compensatory mechanisms. Therefore, recent evidence has focused on phenotypes rather than on classical etiological classification, such as the hypotensive phenotype, characterized by prevailing hypotension or vasodepression, and the bradycardic phenotype, with prevailing cardioinhibition [ 42 , 43 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccal\u00e0, 'Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review' (2024)",
+      "doi": "10.3390/jcm13030727",
+      "pmcid": "PMC10856004"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0020-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "text": "CSM is indicated in patients over 40 years of age with a suspicion of reflex syncope. Asystole > 3 s and/or a fall in BP > 50 mmHg after CSM suggests carotid sinus syndrome [ 68 ]. If CSM causes pure asystole, the possibility of a marked but hidden concomitant vasodepressor response should be considered. In that case, the intravenous administration of 0.02 mg/kg atropine prevents reflex asystole, allowing the unmasking of any concomitant vasodepressor response. A history of TIA or stroke occurring in the previous six months and/or stenosis higher than 70% in the common or internal carotid arteries are contraindications for performing CSM [ 69 ]. Other contraindications include a recent myocardial infarction (<8 weeks) and a history of ventricular arrhythmias. The main complications of CSM are TIAs and ischemic events; however, they are rare (0\u201324%) [ 69 ]. CSM is always reproducible in individuals with severe cardioinhibitory conditions who are candidates for PM implantation. A cardioinhibitory response to carotid sinus massage that reproduces symptoms appears to be predictive of spontaneous asystole [ 65 , 70 , 71 , 72 , 73 ]. Orthostatic challenge tests include the active standing test, tilt test, Valsalva maneuver, deep breathing test, and 24-h Holter BP test ( Table 4 ) [ 74 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccal\u00e0, 'Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review' (2024)",
+      "doi": "10.3390/jcm13030727",
+      "pmcid": "PMC10856004"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0023-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "text": "The cornerstone of treatment that improved CS prognosis in AMI patients is emergent coronary revascularization (or Percutaneous Coronary Intervention PCI) in patients with coronary artery disease [ 48 ]. The SHOCK trial highlighted that early revascularization in AMI-CS significantly decreased 6 months (50 vs. 63%, p = 0.027) and long-term mortality compared with intensive medical treatment [ 49 ]. The benefit of an initial revascularization strategy was confirmed in a nationwide cohort study including 60,833 patients, showing a significant reduction in mortality compared with a conservative strategy. This improvement appears in all patient subgroups, including the elderly [ 50 ]. These studies confirmed the need for an initial invasive management approach in case of AMI-CS. Although its implementation reduces the incidence of CS in myocardial infarction [ 51 ], fibrinolysis is ineffective once shock has set in, due to reduced penetration into thrombus as there is a decrease in blood pressure. In this regard, fibrinolysis should be reserved in very selected patient for whom timely percutaneous coronary intervention (PCI) is not feasible [ 52 ]. Thus, primary PCI is recommended as first-line therapy (IB level) according to ESC guidelines [ 52 ] (Fig. 3 ).",
+      "license": "CC BY 4.0",
+      "attribution": "Driss Laghlam, Sarah Benghanem, Sofia Ortuno, Nadia Bouabdallaoui, Stephane Manzo-Silberman, Olfa Hamzaoui, Nadia Aissaoui, 'Management of cardiogenic shock: a narrative review' (2024)",
+      "doi": "10.1186/s13613-024-01260-y",
+      "pmcid": "PMC10980676"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0041-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock \u2014 Agents: Norepinephrine; Mechanism of action: \u03b1 1+ > \u0392 1 +; Main effects: Vasoconstriction; Indications: First-line vasopressor in cardiogenic shock; Side effects: Excessive vasoconstriction, immunomodulation",
+      "license": "CC BY 4.0",
+      "attribution": "Driss Laghlam, Sarah Benghanem, Sofia Ortuno, Nadia Bouabdallaoui, Stephane Manzo-Silberman, Olfa Hamzaoui, Nadia Aissaoui, 'Management of cardiogenic shock: a narrative review' (2024)",
+      "doi": "10.1186/s13613-024-01260-y",
+      "pmcid": "PMC10980676"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0042-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock \u2014 Agents: Dobutamine; Mechanism of action: \u0392 1+; Main effects: Ionotropy, moderate vasodilatation; Indications: First-line inotropic agent in cardiogenic shock; Side effects: Tachycardia, hypotension (excessive vasodilatation)",
+      "license": "CC BY 4.0",
+      "attribution": "Driss Laghlam, Sarah Benghanem, Sofia Ortuno, Nadia Bouabdallaoui, Stephane Manzo-Silberman, Olfa Hamzaoui, Nadia Aissaoui, 'Management of cardiogenic shock: a narrative review' (2024)",
+      "doi": "10.1186/s13613-024-01260-y",
+      "pmcid": "PMC10980676"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0011-B0012-C01",
+      "document_id": "DOC-PMC-CARD-0011",
+      "text": "In the case where transesophageal echocardiography (TEE) is more sensitive than transthoracic echocardiography (TTE) for identifying valvular vegetations and periannular complications of NVE, TEE should be employed as the initial diagnostic tool. This is in contrast to TTE, which may yield false negative or nondiagnostic results.",
+      "license": "CC BY 4.0",
+      "attribution": "Francesco Nappi, 'Native Infective Endocarditis: A State-of-the-Art-Review' (2024)",
+      "doi": "10.3390/microorganisms12071481",
+      "pmcid": "PMC11278776"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0011-B0020-C01",
+      "document_id": "DOC-PMC-CARD-0011",
+      "text": "The requisite momentum for the production of biofilms and the impact of these on the maturation of antibiotic tolerance have been the subject of study. The results showed that benchmark strains of Staphylococcus aureus , as well as three clinical isolates of infective endocarditis, formed biofilms that mimicked IE vegetation six hours after the onset of infection. As a result, the sooner the antibiotic was initiated, the more pronounced was its pharmacological effect in limiting the maturation of the biofilm. This is an indication that timely treatment is more effective at stopping the disease from spreading. A microscopic observation of the biofilm formation process was conducted by studying the growth of bacterial aggregates on the vegetation of IE in vitro (test) modeling and by examining the interaction of the aggregates with an antibiotic. The formation of mature, antibiotic-resistant biofilms was observed six hours after initial inoculation, prompting the search for optimal treatment strategies for IE [ 5 , 7 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Francesco Nappi, 'Native Infective Endocarditis: A State-of-the-Art-Review' (2024)",
+      "doi": "10.3390/microorganisms12071481",
+      "pmcid": "PMC11278776"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0011-B0032-C01",
+      "document_id": "DOC-PMC-CARD-0011",
+      "text": "Blood cultures represent a crucial diagnostic tool for the identification and treatment of infective endocarditis. Moreover, they fulfill a primary criterion established by the Duke criteria. The choice and dosing of antimicrobial agents largely depend on the blood culture isolate and its antimicrobial susceptibility profile. In approximately 90 to 95% of cases of NVE, a positive blood culture result is observed. To optimize recovery of a pathogen, a strategy involving the acquisition of three distinct sets of blood cultures at 30-min intervals before the administration of antibiotics has proven to be effective [ 1 , 19 , 20 ]. The administration of antimicrobial therapies represents the most common cause of a negative blood culture result. Other potential etiological agents that can lead to a negative blood culture result include those pathogens that are unable to grow effectively or at all within the conventional parameters of standard blood culture media. These include Bartonella species, Coxiella burnetii , Tropheryma whipplei , and Legionella [ 1 , 4 , 21 ]. Another factor that can result in a negative blood culture result is suboptimal specimen collection [ 22 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Francesco Nappi, 'Native Infective Endocarditis: A State-of-the-Art-Review' (2024)",
+      "doi": "10.3390/microorganisms12071481",
+      "pmcid": "PMC11278776"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0012-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0012",
+      "text": "Implantable cardiac devices are at the forefront of managing tachy-arrhythmias, brady-arrhythmias and heart failure with concomitant conduction disease. They reduce mortality and morbidity in selected patients and provide improvements in quality of life and functional status of patients. However, these devices are not without risks. Complications can occur at the time of implantation including bleeding, infection and damage to surrounding myocardial structures, as well as later on, including lead failure, dislodgement or pacemaker induced cardiomyopathy. Recent advances in cardiac devices aim to reduce some of these risks through more physiological pacing techniques or leadless designs. In this review article we provide an update on the literature on implantable cardiac devices, focusing on new pacing techniques, leadless devices and patient selection for device therapies.",
+      "license": "CC BY 4.0",
+      "attribution": "William Chick, Christopher Monkhouse, Amal Muthumala, Syed Ahsan, Nikolaos Papageorgiou, 'Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature' (2024)",
+      "doi": "10.31083/j.rcm2505162",
+      "pmcid": "PMC11267218"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0012-B0003-C01",
+      "document_id": "DOC-PMC-CARD-0012",
+      "text": "Right ventricular apical pacing (RVAP) is the most common ventricular pacing site. However, it can be associated with ventricular desynchrony, pacing induced cardiomyopathy and impaired ventricular function [ 1 ]. In turn, pacing-induced cardiomyopathy results in significant morbidity and mortality, with higher rates of atrial fibrillation (AF), heart failure hospitalisation and cardiovascular mortality [ 2 , 3 ]. As a result of this, several alternative pacing sites have been proposed for both single and dual chamber pacemakers, including the right ventricular septum (RVS) and conduction system (His-bundle (HB) and left bundle branch area (LBBA)). These novel pacing sites, along with the development of leadless pacemakers, mean clinicians have several treatments options in the management of brady-arrhythmias (Fig. 1 ).",
+      "license": "CC BY 4.0",
+      "attribution": "William Chick, Christopher Monkhouse, Amal Muthumala, Syed Ahsan, Nikolaos Papageorgiou, 'Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature' (2024)",
+      "doi": "10.31083/j.rcm2505162",
+      "pmcid": "PMC11267218"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0012-B0006-C01",
+      "document_id": "DOC-PMC-CARD-0012",
+      "text": "In a 2022 meta-analysis comparing HBP to right ventricular pacing (RVP), Abdin et al . [ 13 ] found that HBP was associated with a lower risk of heart failure hospitalisation, new AF and a reduction in LVEF when compared to RVP. There was a trend towards reduced all-cause mortality in the HBP group, but this was not statistically significant. They noted that HBP was associated with significantly increased procedure and fluoroscopy times, as well as increased need for lead revision. Lead revision was mostly due to progressive increases in His-capture thresholds. The HB is anatomically short, making pacing difficult and often right sided chamber back-up electrodes are required due to high rates of electrode displacements [ 14 ]. As a result, European Society of Cardiology (ESC) guidelines suggest RV leads should be considered in patients with high capture thresholds, atrioventricular node ablation or in patients with either high-degree or infranodal block [ 15 ]. As well as this, issues with high capture thresholds and losing HB capture over time are well documented in the literature and remain a major issue with this form of pacing.",
+      "license": "CC BY 4.0",
+      "attribution": "William Chick, Christopher Monkhouse, Amal Muthumala, Syed Ahsan, Nikolaos Papageorgiou, 'Implantable Cardiac Devices in Patients with Brady- and Tachy-Arrhythmias: An Update of the Literature' (2024)",
+      "doi": "10.31083/j.rcm2505162",
+      "pmcid": "PMC11267218"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0001-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "text": "Aortic stenosis (AS) is the most prevalent degenerative valvular disease in western countries. Transthoracic echocardiography (TTE) is considered, nowadays, to be the main imaging technique for the work-up of AS due to high availability, safety, low cost, and excellent capacity to evaluate aortic valve (AV) morphology and function. Despite the diagnosis of AS being considered straightforward for a very long time, based on high gradients and reduced aortic valve area (AVA), many patients with AS represent a real dilemma for cardiologist. On the one hand, the acoustic window may be inadequate and the TTE limited in some cases. On the other hand, a growing body of evidence shows that patients with low gradients (due to systolic dysfunction, concentric hypertrophy or coexistence of another valve disease such as mitral stenosis or regurgitation) may develop severe AS (low-flow low-gradient severe AS) with a similar or even worse prognosis. The use of complementary imaging techniques such as transesophageal echocardiography (TEE), multidetector computed tomography (MDTC), or cardiac magnetic resonance (CMR) plays a key role in such scenarios. The aim of this review is to summarize the diagnostic challenges associated with patients with AS and the advantages of a comprehensive multimodality cardiac imaging (MCI) approach to reach a precise grading of the disease, a crucial factor to warrant an adequate management of patients.",
+      "license": "CC BY 4.0",
+      "attribution": "Andr\u00e9 Gonz\u00e1lez-Garc\u00eda, Pablo Pazos-L\u00f3pez, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Ch\u00eda, Raquel Bilbao-Quesada, Elisa Blanco-Gonz\u00e1lez, Carina Gonz\u00e1lez-R\u00edos, Mar\u00eda Casti\u00f1eira-Busto, Manuel Barreiro-P\u00e9rez, Andr\u00e9s \u00cd\u00f1iguez-Romo, 'Diagnostic Challenges in Aortic Stenosis' (2024)",
+      "doi": "10.3390/jcdd11060162",
+      "pmcid": "PMC11203729"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "text": "Aortic stenosis (AS) is a relevant entity in daily practice due to several factors. It is the most common heart valve disease in developed nations [ 1 ], with an increased occurrence in the elderly (10\u201315% of individuals over 80 years of age) [ 2 , 3 ]. Bearing in mind the population aging of western countries, it is expected that AS prevalence may double by 2050. Another matter of concern is the high morbidity and mortality of this pathology at advanced stages; prognosis of symptomatic severe AS patients without percutaneous or surgical treatment is still ominous nowadays. Diagnosis and classification of AS was considered quite simple in the past, based on transvalvular flow maximal velocity (VMax), mean gradient (MG), and valve area (AVA) which could be obtained with transthoracic echocardiography (TTE). However, several investigations have demonstrated that this is a simplistic approach. Patients at a high output state (due to anemia, veno\u2013arterial shunts) can exhibit a significant rise in gradients in the presence of just moderate AS, whereas a low-flow (LF) state (due to left ventricular systolic dysfunction, concentric left ventricular hypertrophy) may justify a true severe AS with a VMax and MG not particularly elevated. A multimodality cardiac imaging approach (MCI) plays a key role in these scenarios. The addition of complementary techniques such as transesophageal echocardiography (TEE), multidetector computed tomography (MDCT), and cardiac magnetic resonance (CMR) allows a proper grading in most cases.",
+      "license": "CC BY 4.0",
+      "attribution": "Andr\u00e9 Gonz\u00e1lez-Garc\u00eda, Pablo Pazos-L\u00f3pez, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Ch\u00eda, Raquel Bilbao-Quesada, Elisa Blanco-Gonz\u00e1lez, Carina Gonz\u00e1lez-R\u00edos, Mar\u00eda Casti\u00f1eira-Busto, Manuel Barreiro-P\u00e9rez, Andr\u00e9s \u00cd\u00f1iguez-Romo, 'Diagnostic Challenges in Aortic Stenosis' (2024)",
+      "doi": "10.3390/jcdd11060162",
+      "pmcid": "PMC11203729"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0029-C03",
+      "document_id": "DOC-PMC-CARD-0013",
+      "text": "This information is helpful in cases where surgical valve replacement is considered. Regarding transcatheter aortic valve replacement (TAVR), CT is the reference technique for procedural planning. MDCT allows a precise estimation of the valve annulus size, its distance to the coronary ostia, and the caliber of the peripheral arterial vascular accesses. All of these parameters are essential to determine the candidacy for TAVR and to select the type and size of the prosthesis. Moreover, the incorporation of coronary assessment into CT protocols does not require an increase in contrast or radiation doses and has been shown to reduce the need for invasive coronary angiography in a noteworthy percentage of cases [ 42 ]. The use of the novel CT-derived fractional flow reserve technique is still not recommended because it may increase the number of false positive tests [ 43 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Andr\u00e9 Gonz\u00e1lez-Garc\u00eda, Pablo Pazos-L\u00f3pez, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Ch\u00eda, Raquel Bilbao-Quesada, Elisa Blanco-Gonz\u00e1lez, Carina Gonz\u00e1lez-R\u00edos, Mar\u00eda Casti\u00f1eira-Busto, Manuel Barreiro-P\u00e9rez, Andr\u00e9s \u00cd\u00f1iguez-Romo, 'Diagnostic Challenges in Aortic Stenosis' (2024)",
+      "doi": "10.3390/jcdd11060162",
+      "pmcid": "PMC11203729"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0014-B0001-C01",
+      "document_id": "DOC-PMC-CARD-0014",
+      "text": "Objectives: The optimal surgical approach for the treatment of functional mitral regurgitation (FMR) remains controversial. Current guidelines suggest that the surgical approach has to be tailored to the individual patient. The aim of the present study was to clarify further aspects of this tailored treatment. Methods: From 01/2006 to 12/2015, 390 patients underwent mitral valve (MV) surgery for FMR (ischemic n = 241, non-ischemic n = 149) at our institution. A regression analysis was used to determine the effect of MV repair or replacement on survival. The patients were analyzed according to the etiology of the MR (ischemic or non-ischemic), different age groups (<65 years, 65\u201375 years, and >75 years), LV function, and LV dimensions, as well as the underlying heart rhythm. Results: The overall survival rates for the repair group at 1, 5, and 8 years were 86.1 \u00b1 1.9%, 70.6 \u00b1 2.6%, and 55.1 \u00b1 3.1%, respectively. For the same intervals, the survival rates in patients who underwent MV replacement were 75.9 \u00b1 4.5%, 58.6 \u00b1 5.4%, and 40.9 \u00b1 6.4%, respectively ( p = 0.003). Patients younger than 65 years, with an ischemic etiology of FMR, poor ejection fraction (<30%), severe dilatation of left ventricle (LVEDD > 60mm), and presence of atrial fibrillation had significantly higher mortality rates after MV replacement (HR, 3.0; CI, 1.3\u20136.9; p = 0.007).",
+      "license": "CC BY 4.0",
+      "attribution": "Konstantinos Sideris, Melchior Burri, Antonia Mayr, Stephanie Voss, Keti Vitanova, Anatol Prinzing, Bernhard Voss, Andrea Amabile, Arnar Geirsson, Markus Krane, Ralf Guenzinger, 'Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our \u201cRoad Map\u201d for the Appropriate Strategy' (2024)",
+      "doi": "10.3390/jcm13113264",
+      "pmcid": "PMC11172680"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0014-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0014",
+      "text": "The optimal surgical approach for the treatment of FMR remains a controversial topic. In contrast to degenerative mitral regurgitation, in which mitral valve repair is highly recommended, current guidelines for FMR suggest that the surgical approach has to be tailored to the individual patient [ 1 ]. Depending on the underlying MV pathology (ischemic or non-ischemic), the stage of the left ventricular disease, or the presence of predictors for repair failure, either repair or replacement of the MV can be performed [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 ]. Despite the clinical evidence on this topic, there is still room for interpretation. In the description of the etiology, the term functional mitral regurgitation or secondary mitral regurgitation is usually used. However, each study investigates a specific underlying condition. Furthermore, additional factors such as age are often not taken into account. In fact, in real settings, the distinction between the different causes of functional mitral regurgitation is not clear enough, so that often the surgical approach is left to the surgeon\u2019s discretion. There is therefore a need to simplify the whole process and provide a decision-making tool for the surgeon. The aim of the present study was to identify which subgroup of patients would benefit from mitral valve repair over replacement, to enable an individually tailored treatment.",
+      "license": "CC BY 4.0",
+      "attribution": "Konstantinos Sideris, Melchior Burri, Antonia Mayr, Stephanie Voss, Keti Vitanova, Anatol Prinzing, Bernhard Voss, Andrea Amabile, Arnar Geirsson, Markus Krane, Ralf Guenzinger, 'Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our \u201cRoad Map\u201d for the Appropriate Strategy' (2024)",
+      "doi": "10.3390/jcm13113264",
+      "pmcid": "PMC11172680"
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0014-B0022-C01",
+      "document_id": "DOC-PMC-CARD-0014",
+      "text": "Despite concerns that the presumed high MR recurrence rate has a negative impact on survival, several studies reported a higher survival rate in patients who underwent MV repair for functional MR compared to those who underwent MV replacement [ 3 , 9 ]. This was explained by the assumption that patients undergoing replacement were frequently older and had more comorbidities than those with MV repair [ 3 ]. We therefore compared both procedures stratified by age groups. Thereby, we could demonstrate that not only age but also additional factors (such as LV dilatation, LV function, and the origin of mitral regurgitation) had a significant impact on survival after MV repair or MV replacement.",
+      "license": "CC BY 4.0",
+      "attribution": "Konstantinos Sideris, Melchior Burri, Antonia Mayr, Stephanie Voss, Keti Vitanova, Anatol Prinzing, Bernhard Voss, Andrea Amabile, Arnar Geirsson, Markus Krane, Ralf Guenzinger, 'Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our \u201cRoad Map\u201d for the Appropriate Strategy' (2024)",
+      "doi": "10.3390/jcm13113264",
+      "pmcid": "PMC11172680"
+    },
+    {
+      "chunk_id": "DOC-PMC-EMERG-0001-B0001-C01",
+      "document_id": "DOC-PMC-EMERG-0001",
+      "text": "Cardiopulmonary resuscitation (CPR) stands as a cornerstone in emergency care, representing the crucial link between life and death for victims of cardiac arrest. Over the years, advancements in medical knowledge, technology, and training methodologies have propelled CPR into a dynamic field with continuous updates. In this closing editorial of the Special Issue \u201cCardiopulmonary Resuscitation: Clinical Updates and Perspectives\u201d, we sum up the major findings of the published articles. Nineteen manuscripts were submitted for consideration for the Special Issue, with thirteen papers finally accepted for publication and inclusion (eleven research articles and two reviews). The contributions as an overview of the published articles are listed below.",
+      "license": "CC BY 4.0",
+      "attribution": "Stephan Marsch, Timur Sellmann, 'Cardiopulmonary Resuscitation: Clinical Updates and Perspectives' (2024)",
+      "doi": "10.3390/jcm13092717",
+      "pmcid": "PMC11084294"
+    },
+    {
+      "chunk_id": "DOC-PMC-EMERG-0001-B0002-C01",
+      "document_id": "DOC-PMC-EMERG-0001",
+      "text": "Effective CPR is an arduous task that requires skill, precision, and quick decision making\u2014it is a stressful task per se. In view of the substantial evidence and the importance of simulation research, documented by high-ranking publications [ 1 ], innovative \u201chigh volume/high fidelity\u201d simulation models are currently being developed. Models such as those enable us to measure the effectiveness of medical education and training methods in simulated CPR and to publish the results to increase the scope of available evidence and the visibility of scientific projects. Simulation models enable us to investigate relevant CPR questions using state-of-the-art methodology, avoiding methodological, logistical, and ethical challenges that would arise in studies with real patients. High-fidelity mannequins, virtual reality, and immersive scenarios nowadays enable healthcare providers to experience almost perfect realistic resuscitation situations. In this Special Issue, two papers on simulated cardiac circulation dealt with the effect of potential distractors on the overall performance of the teams during resuscitation. While both studies showed that randomly present relatives with different behavioral patterns (withdrawn or agitated) or carrying personal protective equipment (PPE) mentally stress the teams (measured by the NASA Task Load Index), no poorer performance during CPR could be demonstrated, at least for relatives\u2019 presence.",
+      "license": "CC BY 4.0",
+      "attribution": "Stephan Marsch, Timur Sellmann, 'Cardiopulmonary Resuscitation: Clinical Updates and Perspectives' (2024)",
+      "doi": "10.3390/jcm13092717",
+      "pmcid": "PMC11084294"
+    },
+    {
+      "chunk_id": "DOC-PMC-EMERG-0001-B0005-C01",
+      "document_id": "DOC-PMC-EMERG-0001",
+      "text": "Post-resuscitation care plays a crucial role in neurological outcome and overall recovery. As the incidence of OHCA is high and the survival rate is low, it remains a challenge to treat those who survive the first phase and regain spontaneous circulation. In a previous narrative review, the authors summarized the existing evidence on oxygen dosage, the role of noradrenaline in urine output and blood pressure, and blood pressure targets themselves. Furthermore, they offered the prospect of experimental approaches to improve neuroprognostication, which includes various approaches like bundles and novel biomarkers. While whole-blood transcriptome analysis has been shown to reliably predict neurological survival in two feasibility studies, Hinkelbein et al. were unable to prognosticate survival or non-survival after OHCA based on proteomics-based serum alterations in the human protein expression, at least not in the first 24 h after ROSC. However, since a good neurological outcome is essential, advancements in neuroprognostication as well as the integration of neuroimaging, biochemical markers, and electrophysiological assessments are vital to refine prognostic accuracy and thus aid clinicians in making informed decisions regarding the continuation or withdrawal of aggressive interventions [ 7 ]. Injuries related to CPR are a frequent finding in cardiac arrest victims.",
+      "license": "CC BY 4.0",
+      "attribution": "Stephan Marsch, Timur Sellmann, 'Cardiopulmonary Resuscitation: Clinical Updates and Perspectives' (2024)",
+      "doi": "10.3390/jcm13092717",
+      "pmcid": "PMC11084294"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0010-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "text": "Exacerbations of COPD reveal varied types of airway inflammation. Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition\u2019s heterogeneity. Research also indicates diverse airflow limitations among patients. Fixed airflow limitation, preserved ratio impaired spirometry, pre-COPD stage positioned within the continuum of COPD [ 9 , 10 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Ankit Kumar, Surya Kant, Vijeta Niranjan, 'Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease' (2024)",
+      "doi": "10.7759/cureus.60423",
+      "pmcid": "PMC11179745"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0020-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "text": "Preventing and managing exacerbations is crucial in COPD care to reduce disease progression, hospitalizations, and mortality rates. Strategies for managing exacerbations may include vaccinations, the use of bronchodilators and corticosteroids, and patient education on recognizing early symptoms. Treatment strategies help mitigate exacerbation frequency, alleviate symptoms, and improve lung function, fostering better disease control and patient well-being.",
+      "license": "CC BY 4.0",
+      "attribution": "Ankit Kumar, Surya Kant, Vijeta Niranjan, 'Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease' (2024)",
+      "doi": "10.7759/cureus.60423",
+      "pmcid": "PMC11179745"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0022-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "text": "The treatment of COPD is guided by identifiable, treatable traits. Patients with fewer frequent exacerbations are managed with long-acting muscarinic antagonists (LAMA), long-acting beta-agonists (LABA), or their combination. For those experiencing fewer symptoms, short- or long-acting bronchodilators are prescribed, while individuals with higher symptom burdens receive LABA/LAMA combinations [ 15 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Ankit Kumar, Surya Kant, Vijeta Niranjan, 'Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease' (2024)",
+      "doi": "10.7759/cureus.60423",
+      "pmcid": "PMC11179745"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0004-B0001-C01",
+      "document_id": "DOC-PMC-RESP-0004",
+      "text": "Several studies indicate that observation alone is sufficient for the management of stable pneumothorax. To compare clinical efficacy, tolerability, and safety outcomes for treating hemodynamically stable adult patients with pneumothorax, the present review compared observation alone versus interventional procedures. We searched PubMed and Google Scholar from inception until June 24, 2020, for randomized controlled trials (RCTs) comparing observational therapy with conventional therapy for the treatment of adult pneumothorax. The pediatric age group and patients with tension pneumothorax were not included. Four hundred and forty-six patients were enrolled in three RCTs. The failure rate (relative risk (RR) 4.30; 95% CI = 0.23-81.82, p = 0.33) and mortality (RR 1.01; 95% CI = 0.31-3.33, p = 0.98) of observation were comparable to those of the chest tube. Chest tube and observation both carried comparable risks of complications, including tension pneumothorax and empyema (RR 3.15; 95% CI = 0.67-1) and (RR 1.55; 95% CI = 0.21-11.56, p = 0.67), respectively. Between chest tubes and observation, there was no statistically significant difference in the duration of hospital stay. We conclude that observation is as safe and effective at treating adult patients with stable pneumothorax as a chest tube.",
+      "license": "CC BY 4.0",
+      "attribution": "Hatem Al Wahaibi, Ahmed Al Salmi, Abdullah Al Reesi, Mohamed Al Shamsi, 'Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis' (2024)",
+      "doi": "10.7759/cureus.58385",
+      "pmcid": "PMC11097702"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0004-B0004-C01",
+      "document_id": "DOC-PMC-RESP-0004",
+      "text": "The incidence of primary spontaneous pneumothorax (PSP) admissions is 14.1 per 100,000 people age 15 years and older, with a higher rate for males (20.8) than females (7.6), reflecting an increase over earlier years [ 4 ]. The treatment of pneumothorax differs according to hemodynamic stability and size. According to BTS guidelines, any unstable, bilateral, or symptomatic pneumothorax should undergo active intervention, regardless of its size. Observation with supplemental oxygen is appropriate for small, stable pneumothoraxes. The observation may be a choice for selected asymptomatic patients with a large PSP, and it does not clarify this selection. Previous studies reported that conservative management of a larger pneumothorax is possible if there is no underlying lung disease [ 5 ]. A recently published study shows the safety of observation as a line of treatment for traumatic pneumothorax [ 6 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Hatem Al Wahaibi, Ahmed Al Salmi, Abdullah Al Reesi, Mohamed Al Shamsi, 'Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis' (2024)",
+      "doi": "10.7759/cureus.58385",
+      "pmcid": "PMC11097702"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0004-B0030-C01",
+      "document_id": "DOC-PMC-RESP-0004",
+      "text": "For PSP, Brown et al. [ 11 ] evaluated the observation approach in comparison to interventional treatment. It was a multicenter, open-label, non-inferiority trial. Patients with first-known, unilateral, moderate-to-large primary spontaneous pneumothorax between the ages of 14 and 50 were recruited. A total of 316 patients were identified, of whom 154 were assigned to the intervention group and 162 to the conservation group at random. The main result of their 12-month follow-up on those patients was lung re-expansion in just eight weeks. Based on chest radiography, the Collins method indicated that this pneumothorax was 32% or higher (sum of interpleural distances, >6 cm). Pneumothorax expansion or clinical deterioration was monitored in the conservative group. A small-bore (\u226412 French) chest tube using the Seldinger technique was inserted and secured to an underwater seal for all patients in the intervention group. The tube was removed after four hours if the patient showed no symptoms and the pneumothorax had resolved. In this study, 39 out of 154 patients in the interventional group underwent additional intervention, and 25 out of 162 patients (15.4%) in the observational group underwent interventions to manage the pneumothorax. As a result, Brown et al. concluded that the observation has a lower risk of serious adverse events and is equally effective in managing spontaneous pneumothorax as the chest tube.",
+      "license": "CC BY 4.0",
+      "attribution": "Hatem Al Wahaibi, Ahmed Al Salmi, Abdullah Al Reesi, Mohamed Al Shamsi, 'Comparison of Observation Alone Versus Interventional Procedures in Hemodynamically Stable Patients With Pneumothorax: A Systematic Review and Meta-Analysis' (2024)",
+      "doi": "10.7759/cureus.58385",
+      "pmcid": "PMC11097702"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0005-B0014-C01",
+      "document_id": "DOC-PMC-RESP-0005",
+      "text": "ARDS severity is assessed by the degree of hypoxemia, quantified by the ratio of arterial partial pressure of oxygen (PaO 2 ) to the fraction of inspired oxygen (FiO 2 ) as per the Berlin criteria, which is strongly predictive of worsening survival ( Figure 1 ) [ 1 ]. In addition, the presence of hypercapnia (PaCO 2 \u2265 50 mmHg) was independently associated with more organ dysfunction and higher mortality [ 38 ]. Other laboratory abnormalities have not been shown to assess severity or predict prognosis in ARDS, but key investigations can identify prognostically-important complications of non-pulmonary organ dysfunction, e.g., cardiac, renal, and potentially MODS [ 39 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Shayan Kassirian, Ravi Taneja, Sanjay Mehta, 'Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19' (2020)",
+      "doi": "10.3390/diagnostics10121053",
+      "pmcid": "PMC7762111"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0005-B0025-C01",
+      "document_id": "DOC-PMC-RESP-0005",
+      "text": "Based on strong evidence for improved clinical outcomes in ARDS patients who are intubated and ventilated (see Section 3.3 . Respiratory Support of Moderate\u2013Severe ARDS below [ 80 ]), prone positioning is being increasingly used to improve oxygenation in spontaneously-breathing non-intubated patients with hypoxemic respiratory failure, including COVID-19. For example, in a small prospective cohort study of 20 patients with ARDS, prone positioning combined with either HFNO or NIPPV was associated with reduced need for intubation/MV only in patients with moderate ARDS, not in those with severe ARDS [ 81 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Shayan Kassirian, Ravi Taneja, Sanjay Mehta, 'Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19' (2020)",
+      "doi": "10.3390/diagnostics10121053",
+      "pmcid": "PMC7762111"
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0005-B0027-C01",
+      "document_id": "DOC-PMC-RESP-0005",
+      "text": "In moderate\u2013severe ARDS patients, respiratory management is similar for ARDS from all causes including COVID-19 ( Figure 2 ) [ 26 , 40 , 48 , 75 , 79 , 91 ]. Invasive respiratory support through endotracheal intubation and MV is strongly recommended for worsening or persistent respiratory distress, persistent hypoxemia (SpO 2 < 92%), or progressive hypercapnia. In patients requiring MV, specific ventilatory modalities and parameters are guidelines-recommended based on improved outcomes in multiple RCTs ( Figure 2 ) [ 48 , 75 , 91 ]. The goal is to use a lung protective strategy to prevent excessive lung tidal-inflation stress (volutrauma) and cyclic atelectasis-recruitment (atelectrauma), reducing the risk of ventilation-induced lung injury (VILI) [ 92 ]. The most important measure is MV using low-tidal volumes, specifically a target of 4\u20138 mL/kg predicted body weight [ 91 , 93 ].",
+      "license": "CC BY 4.0",
+      "attribution": "Shayan Kassirian, Ravi Taneja, Sanjay Mehta, 'Diagnosis and Management of Acute Respiratory Distress Syndrome in a Time of COVID-19' (2020)",
+      "doi": "10.3390/diagnostics10121053",
+      "pmcid": "PMC7762111"
+    }
+  ]
+}
