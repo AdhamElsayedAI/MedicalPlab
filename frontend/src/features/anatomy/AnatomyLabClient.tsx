@@ -426,7 +426,7 @@ export function AnatomyLabClient() {
   }, [reducedMotion]);
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#F4F7FA] text-slate-900 font-sans overflow-hidden select-none">
+    <div className="flex flex-col flex-1 h-full w-full bg-[#0D1722] text-slate-900 font-sans overflow-hidden select-none">
       {/* 60–64px Application Header */}
       <AnatomyHeader
         onOpenSources={() => setIsSourcesOpen(true)}
