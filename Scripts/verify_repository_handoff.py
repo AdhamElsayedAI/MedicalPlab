@@ -27,13 +27,29 @@ def _slug(heading: str) -> str:
     heading = re.sub(r"[`*_]", "", heading)
     # Lowercase
     heading = heading.lower()
-    # Replace spaces and hyphens with single hyphen
-    heading = re.sub(r"[\s]+", "-", heading)
-    # Remove all non-alphanumeric, non-hyphen characters
-    heading = re.sub(r"[^\w\-]", "", heading)
-    # Collapse multiple hyphens
-    heading = re.sub(r"-+", "-", heading)
-    return heading.strip("-")
+    # Remove punctuation (any character that is not alphanumeric, whitespace, or hyphen)
+    heading = re.sub(r"[^\w\s\-]", "", heading)
+    # Replace whitespace characters with hyphens (does not collapse multiple hyphens)
+    heading = re.sub(r"\s", "-", heading)
+    return heading
+
+
+def test_github_slug_accuracy() -> None:
+    """Deterministic self-tests ensuring GitHub-compatible anchor generation."""
+    cases = [
+        ("Technology & Tooling", "technology--tooling"),
+        ("Adaptive Learning & Socratic Remediation", "adaptive-learning--socratic-remediation"),
+        ("Clinical Licensing & Governance", "clinical-licensing--governance"),
+        ("AI Systems & Machine Learning", "ai-systems--machine-learning"),
+        ("Architecture & Standards", "architecture--standards"),
+        ("Containerization & Cloud Run", "containerization--cloud-run"),
+        ("Data Licensing & Attribution", "data-licensing--attribution"),
+        ("Team & Mentor Handoff", "team--mentor-handoff"),
+        ("Choose Your Path", "choose-your-path"),
+    ]
+    for heading, expected in cases:
+        actual = _slug(heading)
+        assert actual == expected, f"Slug mismatch for '{heading}': expected '{expected}', got '{actual}'"
 
 
 def _extract_anchors(file_path: Path) -> set[str]:
@@ -125,6 +141,7 @@ def check_file_links(file_path: Path, repo_root: Path) -> list[str]:
 
 
 def main() -> int:
+    test_github_slug_accuracy()
     repo_root = Path(__file__).resolve().parent.parent
     os.chdir(repo_root)
 

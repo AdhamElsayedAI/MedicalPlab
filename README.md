@@ -23,7 +23,7 @@ Most medical learning platforms stop at answer correctness. MedicalPlab treats t
 
 ### Quick Navigation
 
-[Choose Your Path](#choose-your-path) • [Why Different](#why-medicalplab-is-different) • [Signal Story](#from-signal-to-understanding) • [Signal Path](#signal-path) • [GenAI Core](#generative-ai-core) • [AI Systems](#ai-systems-at-a-glance) • [Intelligence Stack](#medicalplab-intelligence-stack) • [Product Experience](#product-experience) • [Adaptive & Socratic](#adaptive-learning-socratic-remediation) • [Grounded Tutor](#evidence-grounded-ai-tutor) • [Shared Evidence](#shared-evidence-engine) • [3D Anatomy](#spatial-3d-anatomy) • [AI & Anatomy Boundary](#ai-instruction-layer-vs-geometry-layer) • [Innovation Map](#innovation-map) • [Built Today](#built-today) • [Technology & Tooling](#technology-tooling) • [Engineering Verification](#engineering-verification) • [Mobile Integration](#mobile-integration) • [Clinical Governance](#clinical-licensing-governance) • [Current Status](#current-status-matrix) • [Future Roadmap](#future-intelligence-roadmap) • [Quick Start](#quick-start) • [Deployment](#deployment) • [Repository Structure](#repository-structure) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Mentor Briefing](docs/handoff/MENTOR_START_HERE.md)
+[Choose Your Path](#choose-your-path) • [Why Different](#why-medicalplab-is-different) • [Signal Story](#from-signal-to-understanding) • [Signal Path](#signal-path) • [GenAI Core](#generative-ai-core) • [AI Systems](#ai-systems-at-a-glance) • [Intelligence Stack](#medicalplab-intelligence-stack) • [Product Experience](#product-experience) • [Adaptive & Socratic](#adaptive-learning--socratic-remediation) • [Grounded Tutor](#evidence-grounded-ai-tutor) • [Shared Evidence](#shared-evidence-engine) • [3D Anatomy](#spatial-3d-anatomy) • [AI & Anatomy Boundary](#ai-instruction-layer-vs-geometry-layer) • [Innovation Map](#innovation-map) • [Built Today](#built-today) • [Technology & Tooling](#technology--tooling) • [Engineering Verification](#engineering-verification) • [Mobile Integration](#mobile-integration) • [Clinical Governance](#clinical-licensing-governance) • [Current Status](#current-status-matrix) • [Future Roadmap](#future-intelligence-roadmap) • [Quick Start](#quick-start) • [Deployment](#deployment) • [Repository Structure](#repository-structure) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Mentor Briefing](docs/handoff/MENTOR_START_HERE.md)
 
 ---
 
@@ -45,13 +45,13 @@ Select your discipline to access the authoritative specifications, codebases, an
 MedicalPlab is engineered around six fundamental architectural departures from conventional medical educational software:
 
 ### 1. Reasoning-Aware Learning
-Instead of only recording whether an answer is right or wrong, selected distractors generate heuristic reasoning-pattern signals. A mistake is treated as an educational hypothesis that routes bounded intervention, rather than an arbitrary deduction.
+Instead of only recording whether an answer is right or wrong, selected distractors may map to heuristic reasoning-pattern signals. A mistake is treated as an educational hypothesis that routes bounded intervention, rather than an arbitrary deduction.
 
 ### 2. Evidence-Grounded Generative Tutoring
 Medical explanations are retrieved from peer-reviewed literature, reranked by neural cross-encoders, generated under strict context constraints, and subjected to sentence-level claim verification before delivery. Unsupported claims fail-closed to safe guidance.
 
 ### 3. Independent Transfer Verification
-Socratic dialogue alone does not certify competence. After remediation, the learner must solve an unprompted, held-out clinical transfer problem before mastery state is incremented.
+Socratic dialogue alone does not certify competence. After remediation, the learner must solve an unprompted, held-out clinical transfer problem before learner state is updated.
 
 ### 4. Spatial Intelligence Grounding
 3D anatomy is connected directly to the cognitive state rather than operating as an isolated cosmetic viewer. Spatial landmarks anchor basic-science concepts in canonical physical geometry.
@@ -72,16 +72,13 @@ The core narrative spine of MedicalPlab transforms a single diagnostic interacti
 Learner Selects Distractor
           │
           ▼
-Provisional Reasoning-Pattern Signal Created
+Heuristic Reasoning-Pattern Signal Identifies Potential Misconception
           │
           ▼
-Adaptive Policy Selects Bounded Remediation
+Adaptive Policy Routes Student to 3-Turn Socratic Remediation Drawer
           │
           ▼
-Socratic Dialogue Explores Mechanism (Max 3 Turns)
-          │
-          ▼
-Independent Held-Out Transfer Problem Tests Generalization
+Independent Held-Out Transfer Problem Verifies Conceptual Understanding
           │
           ▼
 AI Tutor Provides Deeper Verified Evidence with PMC Citations
@@ -90,7 +87,7 @@ AI Tutor Provides Deeper Verified Evidence with PMC Citations
 3D Anatomy Grounds Physiology in Physical Organ Architecture
           │
           ▼
-Longitudinal Learner Telemetry Updates Mastery State
+Unified Learner Progress Updates Topic-Level Learner State
 ```
 
 ---
@@ -106,13 +103,13 @@ The closed-loop architecture ensures that every learner interaction carries cogn
 | Stage | Cognitive Function | Pedagogical Mechanism |
 | :--- | :--- | :--- |
 | **1. Attempt** | Evaluated Clinical Scenario | Preclinical basic science or clinical question attempt |
-| **2. Reasoning Signal** | Heuristic Pattern Identification | Selected distractors map to heuristic reasoning-pattern signals |
+| **2. Reasoning Signal** | Heuristic Pattern Identification | Selected distractors may map to heuristic reasoning-pattern signals |
 | **3. Adaptive Intervention** | Dynamic Routing Policy | Recommends targeted remediation rather than passive scoring |
 | **4. Socratic Remediation** | Dialogue Scaffolding | 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate |
 | **5. Independent Transfer** | Independent Transfer Evidence | Demonstrates transfer on an unseen held-out item before learner state update |
 | **6. Grounded Tutor** | Verified Literature Inquiries | Explanations bounded to open-access PMC literature with proposition verification |
 | **7. Spatial 3D Learning** | Anatomy Grounding | Interactive HuBMAP Human Reference Atlas models with deterministic raycast challenges |
-| **8. Unified Progress** | Longitudinal Telemetry | Shared telemetry across preclinical tracks, tutor turns, and 3D spatial labs |
+| **8. Unified Progress** | Cross-Module Progress | Shared progress across preclinical tracks, tutor turns, and 3D spatial labs |
 
 ---
 
@@ -136,7 +133,7 @@ The platform decouples generative fluency from medical authority. The generative
 7. **Supported Output or Safe Fallback:** If verified, the response is delivered with citations. If unsupported claims exist, the system deterministically executes `SAFE_FALLBACK`.
 
 ### Pipeline B: Adaptive Pedagogical Actions
-In parallel, learner interactions emit telemetry into the **Adaptive Policy Engine**. The engine evaluates topic mastery, error history, and distractor hypotheses to emit structured actions:
+In parallel, learner interactions emit progress events into the **Adaptive Policy Engine**. The engine evaluates topic-level learner state, error history, and reasoning hypotheses to emit structured actions:
 * **Socratic Prompts:** Guiding questions that probe mechanism without disclosing the answer key.
 * **Tutor Interventions:** Mechanistic deep dives when persistent misconceptions emerge.
 * **3D Scene Guidance:** Camera position and structure highlighting actions dispatched to the client Three.js canvas.
@@ -174,11 +171,11 @@ MedicalPlab organizes its AI capabilities into four distinct operational discipl
 
 | Layer | Functional Role | Operational Mechanics | Authoritative Guarantees |
 | :--- | :--- | :--- | :--- |
-| **Adaptive Intelligence** | Cognitive diagnostic routing | Distractor taxonomy mapping, heuristic reasoning signals, topic mastery models | Wrong answer &ne; confirmed defect; signals are provisional hypotheses |
+| **Adaptive Intelligence** | Cognitive diagnostic routing | Distractor taxonomy mapping, heuristic reasoning signals, topic-level learner state | Wrong answer &ne; confirmed defect; signals are provisional hypotheses |
 | **Generative Intelligence** | Pedagogical dialogue & explanation | In-context clinical explanations, multi-turn Socratic scaffolding, structured scene payloads | Generation is bounded by evidence; no unconstrained medical generation |
 | **Evidence Intelligence** | Evidence retrieval & verification | Hybrid BM25 + dense retrieval, neural reranking, proposition entailment verification | Fail-closed `SAFE_FALLBACK`; only rights-approved CC-BY sources served |
 | **Spatial Intelligence** | Physical anatomical grounding | Three.js renderer, HuBMAP HRA canonical CCF geometry, deterministic raycasting | AI directs camera/highlights; scientific geometry is fixed and immutable |
-| **Learning Intelligence** | Longitudinal progress telemetry | Unified cross-module mastery tracking across questions, tutor sessions, and 3D challenges | Held-out transfer items provide independent evidence of transfer |
+| **Learning Intelligence** | Cross-Module Progress | Unified cross-module learner progress across questions, tutor sessions, and 3D challenges | Held-out transfer items provide independent evidence of transfer |
 
 > **Governance Boundary:** Cohort-level learning intelligence and aggregate reasoning-gap analytics are **educator-facing only**. They are never exposed as automated student-facing diagnostic recommendations.
 
@@ -221,13 +218,13 @@ Real interfaces captured from the certified MedicalPlab demonstration:
 </p>
 
 **FIG. 05 — UNIFIED PROGRESS**  
-*Unified competence telemetry recording question accuracy, remediation completions, transfer problem success, and spatial anatomy challenge scores.*
+*Unified learner progress recording question accuracy, remediation completions, transfer problem success, and spatial anatomy challenge scores.*
 
 ---
 
 ## Adaptive Learning & Socratic Remediation
 
-Selected distractors map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception; it represents a provisional reasoning-pattern signal and heuristic educational hypothesis that routes the learner to targeted Socratic scaffolding.
+Selected distractors may map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception; it represents a provisional reasoning-pattern signal and heuristic educational hypothesis that routes the learner to targeted Socratic scaffolding.
 
 <p align="center">
   <img src="docs/readme-assets/remediation-loop.svg" alt="MedicalPlab Remediation Loop & Transfer Firewall" width="100%" />
@@ -263,12 +260,12 @@ The remediation dialogue is separated from learner state updates by an architect
                      ▼
        [Held-Out Transfer Gate]
               │
-              ├── Pass ──► Update learner mastery telemetry (+1 Transfer demonstrated)
+              ├── Pass ──► Update topic-level learner state (+1 Transfer demonstrated)
               └── Fail ──► Retain topic in priority queue for review
 ```
 
 * Heuristic pattern identification operates deterministically via rule-matched distractor dictionaries (`Data/university/distractor_taxonomy.json`).
-* Student mastery records are isolated per topic (`raas_mechanisms`, `glomerular_filtration_barrier`) and persisted across sessions.
+* Student progress records are isolated per topic (`raas_mechanisms`, `glomerular_filtration_barrier`) and persisted across sessions.
 </details>
 
 ---
@@ -416,7 +413,7 @@ Evidence Layer ───► Gates, Grounds, and Verifies Claims
       │
 Spatial 3D Layer ─► Physically Grounds Organ Relationships
       │
-Progress Layer ───► Closes the Longitudinal Mastery Loop
+Progress Layer ───► Closes the Cross-Module Progress Loop
 ```
 
 ---
@@ -430,12 +427,12 @@ MedicalPlab maintains complete transparency regarding current implementation sta
 | **Preclinical Curriculum** | 6 validated renal physiology questions with full distractor reasoning taxonomy | `CURRENT` |
 | **Adaptive Engine** | Distractor-matched reasoning signals with dynamic intervention routing | `CURRENT` |
 | **Socratic Remediation** | Bounded 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate | `CURRENT` |
-| **Independent Transfer** | Held-out transfer item gating before learner mastery credit is awarded | `CURRENT` |
+| **Independent Transfer** | Held-out transfer item gating before transfer evidence is recorded | `CURRENT` |
 | **Evidence-Grounded Tutor**| Hybrid BM25 + dense retrieval, neural reranking, claim verification, safe fallback | `CURRENT` |
 | **Interactive 3D Anatomy**| Canonical HuBMAP HRA left kidney model with Three.js orbit and inspection presets | `CURRENT` |
 | **Guided Spatial Tours** | Pre-programmed Left Renal Vein and hilar anatomical inspections | `CURRENT` |
 | **Deterministic Spatial Challenge** | Left Renal Artery identification challenge with backend raycast verification | `CURRENT` |
-| **Unified Progress Telemetry** | Cross-module competence ledger integrating questions, remediation, and 3D tasks | `CURRENT` |
+| **Unified Learner Progress** | Cross-module progress integration across questions, remediation, and 3D tasks | `CURRENT` |
 | **PLAB Exam Governance** | 36 candidate questions isolated under Preview QA; Golden released = 0 | `CURRENT` |
 | **Mobile Integration Baseline** | Frozen REST contract with OpenAPI 3.1.0, Postman collections, and client guides | `CURRENT` |
 
@@ -539,7 +536,7 @@ POST /api/v1/tutor/chat
 POST /api/v1/anatomy/session/start
 POST /api/v1/anatomy/session/{session_id}/challenge
 
-# Learner Progress Telemetry
+# Unified Learner Progress
 GET  /api/v1/learner/progress
 ```
 </details>
@@ -743,7 +740,7 @@ To conduct an end-to-end evaluation of MedicalPlab:
 3. **Step 3: Held-Out Transfer Assessment** — Solve the independent transfer problem to demonstrate transfer on an unseen item and trigger streak advancement.
 4. **Step 4: Evidence-Grounded AI Tutor (`/tutor`)** — Ask a physiological mechanism question, show sentence-level proposition verification, and inspect verified PMC citations with document-level license provenance.
 5. **Step 5: Spatial 3D Anatomy Lab (`/anatomy`)** — Showcase canonical Three.js camera transitions, select the Left Renal Vein, and complete the independent Left Renal Artery pin challenge with deterministic backend scoring.
-6. **Step 6: Unified Progress (`/progress`)** — Verify that preclinical accuracy, transfer successes, tutor queries, and 3D anatomy mastery reflect in the longitudinal learner telemetry.
+6. **Step 6: Unified Progress (`/progress`)** — Verify that preclinical accuracy, transfer successes, tutor queries, and 3D anatomy interactions reflect in the unified cross-module learner progress.
 
 *For complete step-by-step click targets, consult the [Final Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md).*
 

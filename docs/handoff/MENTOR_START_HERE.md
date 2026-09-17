@@ -8,7 +8,7 @@
 MedicalPlab is an **Adaptive Evidence-Grounded Medical Learning Platform**. 
 
 Most medical assessment platforms operate as passive question banks: a learner selects an option, gets a score, and reads a static explanation. MedicalPlab fundamentally changes this dynamic by treating learner interactions as cognitive signals:
-- **Heuristic Reasoning Signals:** Selected distractors generate provisional cognitive hypotheses (e.g., misidentifying efferent vs. afferent arteriolar constriction in GFR regulation).
+- **Heuristic Reasoning Signals:** Selected distractors may map to heuristic reasoning-pattern signals (e.g., misidentifying efferent vs. afferent arteriolar constriction in GFR regulation).
 - **Closed-Loop Learning:** Rather than endless drills, MedicalPlab routes the learner into a bounded Socratic dialogue, verifies independent conceptual transfer with a held-out clinical vignette, grounds explanations in peer-reviewed evidence via an AI Tutor, and anchors spatial relationships through an interactive 3D anatomical viewer.
 
 > **Core Product Thesis:** *"MedicalPlab does not only answer students. It learns how students learn."*
@@ -17,7 +17,7 @@ Most medical assessment platforms operate as passive question banks: a learner s
 
 ## 2. Why It Is Technically Different
 1. **Generation as a Capability, Not an Authority:** Generative LLMs never provide unconstrained medical responses. Every generative claim must be bounded by retrieved literature and verified before delivery.
-2. **Distractor-Aware Reasoning Signals:** Distractors are not just "incorrect"; they map to specific clinical reasoning heuristics.
+2. **Distractor-Aware Reasoning Signals:** Distractors are not just "incorrect"; selected distractors may map to heuristic reasoning-pattern signals.
 3. **Independent Transfer Testing:** Socratic dialogue alone does not certify learning. Transfer is measured by performance on an unprompted, held-out clinical transfer problem.
 4. **Unified Spatial Cognition:** 3D anatomy is directly connected to the cognitive state, allowing guided anatomical tours and structure identification challenges.
 5. **AI / Scientific Asset Separation:** AI orchestrates pedagogical camera and scene actions; fixed, scientifically validated HuBMAP Human Reference Atlas (HRA) geometry remains the immutable spatial authority.
@@ -62,11 +62,11 @@ MedicalPlab employs a dual-pipeline generative intelligence architecture:
 
 ### BUILT TODAY (CURRENT)
 - **Preclinical University Track:** 6 validated preclinical questions spanning renal physiology and hemodynamics.
-- **Adaptive Remediation Engine:** Distractor analysis generating heuristic reasoning signals; bounded Socratic remediation (max 3 turns).
+- **Adaptive Remediation Engine:** Selected distractors may map to heuristic reasoning-pattern signals; bounded Socratic remediation (max 3 turns).
 - **Independent Transfer Assessment:** Held-out problem generation evaluating conceptual transfer.
 - **Evidence-Grounded AI Tutor:** Hybrid retrieval + Qwen neural reranking + NLI proposition verification + safe fallback.
 - **Interactive 3D Renal Anatomy:** HuBMAP HRA renal model, guided anatomical tours, and deterministic artery identification challenge.
-- **Unified Progress Tracking:** Cross-module mastery calculation across questions, remediation, tutor sessions, and spatial challenges.
+- **Unified Progress Tracking:** Cross-module learner progress tracking across questions, remediation, tutor sessions, and spatial challenges.
 - **PLAB Preview QA Governance:** 36 clinician-review candidates isolated under Preview QA mode.
 - **Mobile Contract & OpenAPI:** Fully documented, drift-tested REST API contract with synthetic `X-User-Id` learner state partitioning.
 
