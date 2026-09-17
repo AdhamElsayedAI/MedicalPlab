@@ -32,6 +32,10 @@ except ImportError:
 
 def warm_staging(bff_url: str, staging_key: str, timeout: float = 30.0) -> bool:
     bff_url = bff_url.rstrip("/")
+    is_local = bff_url.startswith(("http://localhost", "http://127.0.0.1"))
+    if not is_local and not bff_url.startswith("https://"):
+        print(f"ERROR: Non-local BFF URL must use HTTPS for transport security: {bff_url}", file=sys.stderr)
+        return False
     headers = {
         "X-Staging-Key": staging_key,
         "X-User-Id": "synthetic-warmup-learner-001",

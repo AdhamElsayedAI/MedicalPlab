@@ -41,6 +41,11 @@ if not DEV_MOCK_AUTH:
             "Fatal: STAGING_ACCESS_KEY environment variable is required for BFF gateway operation. "
             "Server cannot start with an empty or missing staging secret."
         )
+    is_local_backend = BACKEND_SERVICE_URL.startswith(("http://localhost", "http://127.0.0.1"))
+    if not is_local_backend and not BACKEND_SERVICE_URL.startswith("https://"):
+        raise RuntimeError(
+            "Fatal: BACKEND_SERVICE_URL must use HTTPS when real Google IAM authentication is active."
+        )
 else:
     if not STAGING_ACCESS_KEY:
         STAGING_ACCESS_KEY = "staging-dev-key-change-me"
@@ -140,8 +145,11 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS configuration for browser clients (e.g. Vercel staging preview)
-allowed_origins_env = os.environ.get("ALLOWED_ORIGINS", "*")
+# CORS configuration for browser clients (explicit origins default)
+allowed_origins_env = os.environ.get(
+    "ALLOWED_ORIGINS",
+    "https://medical-plab.vercel.app,http://localhost:3000,http://127.0.0.1:3000",
+)
 allowed_origins = [o.strip() for o in allowed_origins_env.split(",") if o.strip()]
 
 app.add_middleware(
@@ -197,7 +205,7 @@ async def proxy_gateway(request: Request, full_path: str):
             content={"detail": "Too many requests. Please slow down."},
         )
 
-    # 5. Body Size Limit
+    # 5. Body Size Limit (enforced on content-length and streaming read)
     content_length = request.headers.get("content-length")
     if content_length:
         try:
@@ -209,12 +217,18 @@ async def proxy_gateway(request: Request, full_path: str):
         except ValueError:
             pass
 
-    body_bytes = await request.body()
-    if len(body_bytes) > MAX_BODY_BYTES:
-        return JSONResponse(
-            status_code=413,
-            content={"detail": f"Payload exceeds size limit of {MAX_BODY_BYTES} bytes"},
-        )
+    body_chunks: list[bytes] = []
+    total_bytes = 0
+    async for chunk in request.stream():
+        total_bytes += len(chunk)
+        if total_bytes > MAX_BODY_BYTES:
+            return JSONResponse(
+                status_code=413,
+                content={"detail": f"Payload exceeds size limit of {MAX_BODY_BYTES} bytes"},
+            )
+        body_chunks.append(chunk)
+
+    body_bytes = b"".join(body_chunks)
 
     # 6. Sanitize Headers & Attach Google IAM ID Token
     target_url = f"{BACKEND_SERVICE_URL}{path}"

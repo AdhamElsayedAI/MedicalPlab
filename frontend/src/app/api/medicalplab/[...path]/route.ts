@@ -161,6 +161,7 @@ async function handleProxy(request: NextRequest): Promise<Response> {
       headers: forwardHeaders,
       body,
       redirect: "manual",
+      signal: AbortSignal.timeout(30000),
     });
 
     const responseHeaders = new Headers();
