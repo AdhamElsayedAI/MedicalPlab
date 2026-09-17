@@ -28,18 +28,18 @@ export function AnatomyHeader({
       {/* Brand & Module Identification */}
       <div className="flex items-center gap-2 sm:gap-4 min-w-0">
         <div className="flex items-center gap-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-4 ring-teal-950/60 shrink-0" />
+          <div className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-4 ring-teal-950/60 shrink-0 animate-pulse" />
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 sm:gap-2">
               <h1 className="text-xs sm:text-[15px] font-semibold tracking-tight text-slate-100 truncate">
-                Anatomy Lab
+                Guided 3D Anatomy
               </h1>
               <span className="hidden sm:inline px-2 py-0.5 rounded text-[10px] font-medium bg-teal-950/70 text-teal-300 border border-teal-800/50">
-                Renal
+                Renal Vasculature (HRA)
               </span>
             </div>
             <p className="hidden sm:block text-[11px] text-slate-400 truncate">
-              Verified anatomy · AI-guided learning
+              Interactive 3D spatial learning · Biologically grounded
             </p>
           </div>
         </div>

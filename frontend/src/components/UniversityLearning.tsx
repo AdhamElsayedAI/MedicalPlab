@@ -575,11 +575,11 @@ export function UniversityLearning() {
             Undergraduate Medical Education
           </span>
           <Link
-            id="nav-to-radar-link"
-            href="/radar"
-            className="px-2.5 py-1 text-[11px] font-semibold rounded-lg bg-indigo-950/80 text-indigo-300 border border-indigo-700/50 hover:bg-indigo-900 transition flex items-center gap-1.5 shrink-0"
+            id="nav-to-progress-link"
+            href="/progress"
+            className="px-2.5 py-1 text-[11px] font-semibold rounded-lg bg-sky-950/80 text-sky-300 border border-sky-700/50 hover:bg-sky-900 transition flex items-center gap-1.5 shrink-0"
           >
-            <span>Class Reasoning-Gap Radar ↗</span>
+            <span>Track Progress →</span>
           </Link>
         </div>
         <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">University Learning</h2>

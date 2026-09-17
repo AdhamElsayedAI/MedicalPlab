@@ -50,8 +50,8 @@ export const MobileMasterySummary: React.FC<MobileMasterySummaryProps> = ({
             </div>
             <div>
               <h3 className="text-sm font-semibold text-slate-100">Educational Progress</h3>
-              <p className="text-[11px] text-slate-400 font-mono truncate max-w-[180px]">
-                {learnerState.learner_id}
+              <p className="text-[11px] text-slate-400 truncate max-w-[180px]">
+                Preclinical &amp; Clinical Track
               </p>
             </div>
           </div>

@@ -14,7 +14,6 @@ import {
   Copy,
   RotateCcw,
   ShieldCheck,
-  Radio,
   ChevronDown,
 } from "lucide-react";
 import { api, getAuthoritativeLearnerId, LEARNER_STORAGE_KEY } from "@/lib/api-client";
@@ -130,16 +129,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
 
         {/* Right Section: Backend Status & Learner Identity */}
         <div className="flex items-center gap-2.5">
-          {/* Educator Portal Link */}
-          <Link
-            href="/radar"
-            title="Educator Cohort Radar"
-            className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium text-slate-400 hover:text-slate-200 hover:bg-white/[0.04] border border-transparent hover:border-white/[0.08] transition-all"
-          >
-            <Radio className="w-3.5 h-3.5 text-indigo-400" />
-            <span>Cohort Radar</span>
-          </Link>
-
           {/* Learner Identity Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -171,7 +160,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
                 <div className="space-y-3">
                   <div>
                     <label className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1 block">
-                      Canonical Header (X-User-Id)
+                      Learner Session Key
                     </label>
                     <div className="flex items-center justify-between bg-black/40 rounded-lg p-2 border border-white/[0.06]">
                       <span className="font-mono text-xs text-sky-300 truncate max-w-[190px]">
