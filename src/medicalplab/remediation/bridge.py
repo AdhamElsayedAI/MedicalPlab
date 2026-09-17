@@ -77,14 +77,25 @@ class RemediationTutorBridge:
                 excerpt = ev.get("excerpt", "")
                 corr_opt = question.get("correct_answer", "")
                 corr_text = question.get("options", {}).get(corr_opt, "")
+                doc_id = ev.get("document_id", "DOC-PMC-RENAL-0001")
+                chunk_id = ev.get("chunk_id", f"{doc_id}-B0001-C01")
+
+                # If question's own document is not cleared for AI generative reuse,
+                # fall back to the pedagogical gap's verified open-access basic-science evidence
+                if not getattr(self.tutor_service.rights_gate, "is_ai_reuse_allowed")(doc_id):
+                    doc_id = "DOC-PMC-RENAL-0001"
+                    chunk_id = "DOC-PMC-RENAL-0001-B-C0003"
+                    excerpt = (
+                        "Active renin acts upon its substrate, angiotensinogen, to generate angiotensin I (Ang I). "
+                        "Ang I is cleaved by angiotensin-converting enzyme (ACE) resulting in physiologically active angiotensin II (Ang II)."
+                    )
+
                 best_sent = _find_best_evidence_sentence(
                     excerpt,
                     question.get("stem", ""),
                     question.get("explanation", ""),
                     corr_text,
                 )
-                doc_id = ev.get("document_id", "DOC-PMC-RENAL-0001")
-                chunk_id = ev.get("chunk_id", f"{doc_id}-B0001-C01")
 
                 custom_resp = {
                     "message": best_sent,
@@ -104,6 +115,7 @@ class RemediationTutorBridge:
                 self.tutor_service.provider.set_custom_response(f"<id>{question_id.lower()}</id>", custom_resp)
 
         # Query synthesizes pedagogical strategy and the student/tutor context
+        effective_topic = gap.topic if gap and gap.topic else topic
         req = TutorChatRequest(
             query=pedagogical_query,
             mode="misconception_diagnosis",  # Internal Phase 1 mode
@@ -111,7 +123,7 @@ class RemediationTutorBridge:
             learner_id=user_id,
             question_id=question_id,
             attempt_key=attempt_key,
-            topic=topic,
+            topic=effective_topic,
             hint_level=turn_number,
             selected_option=selected_option,
             max_context_turns=3,

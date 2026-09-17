@@ -86,7 +86,31 @@ class TutorService:
                 logger.warning(f"Failed to load university questions: {exc}")
 
     def get_question(self, question_id: str) -> dict[str, Any] | None:
-        return self._questions.get(question_id)
+        if question_id in self._questions:
+            return self._questions[question_id]
+        try:
+            from medicalplab.stage_g.product_api import get_plab_service
+            plab_svc = get_plab_service()
+            if plab_svc is not None and question_id in plab_svc.questions:
+                q = plab_svc.questions[question_id]
+                first_cit = q["citations"][0] if q.get("citations") else {}
+                return {
+                    "id": question_id,
+                    "stem": q.get("stem", ""),
+                    "options": {c["id"]: c["text"] for c in q.get("choices", [])},
+                    "correct_answer": q.get("correct_answer", ""),
+                    "topic": q.get("topic", ""),
+                    "explanation": q.get("explanation", ""),
+                    "evidence": {
+                        "document_id": first_cit.get("document_id", ""),
+                        "chunk_id": first_cit.get("ref", ""),
+                        "excerpt": first_cit.get("quote", ""),
+                    },
+                }
+        except Exception:
+            pass
+        return None
+
 
     def _build_safe_fallback(
         self,

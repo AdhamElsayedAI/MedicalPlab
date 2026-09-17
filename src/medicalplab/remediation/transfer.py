@@ -87,7 +87,36 @@ TRANSFER_ITEM_REGISTRY: Dict[str, Dict[str, Any]] = {
             "license": "CC BY 3.0",
         },
     },
+    "PLAB-CARD-0001": {
+        "question_id": "PLAB-CARD-0001-T",
+        "paired_original_id": "PLAB-CARD-0001",
+        "subject": "Cardiology",
+        "topic": "Hypertension (Essential & Secondary)",
+        "target_concept": "Step 1 antihypertensive in patients >=55 or of African origin (CCB)",
+        "stem": (
+            "A 62-year-old Afro-Caribbean woman with newly confirmed stage 1 hypertension and no comorbidities "
+            "requires initiation of antihypertensive therapy according to UK NICE NG136 guidance. Which class of medication is the most appropriate first-line choice?"
+        ),
+        "options": {
+            "A": "Calcium channel blocker (e.g. Amlodipine)",
+            "B": "ACE inhibitor (e.g. Ramipril)",
+            "C": "Angiotensin II receptor blocker (e.g. Losartan)",
+            "D": "Thiazide-like diuretic (e.g. Indapamide)",
+        },
+        "correct_answer": "A",
+        "explanation": "NICE NG136 specifies that for patients aged 55 or older or of Black African or African-Caribbean origin, Step 1 treatment is a calcium channel blocker.",
+        "difficulty": "medium",
+        "content_kind": "SYNTHETIC_TEST_FIXTURE",
+        "status": "TEST_FIXTURE_ONLY",
+        "evidence": {
+            "document_id": "DOC-PMC-CARD-0002",
+            "chunk_id": "DOC-PMC-CARD-0002-B0001-C01",
+            "title": "Hypertension management in adults: summary of updated NICE guidance",
+            "license": "CC BY 4.0",
+        },
+    },
 }
+
 
 
 class TransferAssessmentService:
