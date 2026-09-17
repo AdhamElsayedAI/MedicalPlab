@@ -108,16 +108,16 @@ class MedicalPlabClient {
   /// 6. Evidence-Grounded AI Tutor Chat
   Future<Map<String, dynamic>> sendTutorQuery({
     required String query,
-    String? subject,
     String? topic,
+    String? sessionId,
+    String? learnerId,
   }) async {
     final url = Uri.parse('$baseUrl/api/v1/tutor/chat');
     final body = jsonEncode({
       'query': query,
-      'context': {
-        if (subject != null) 'subject': subject,
-        if (topic != null) 'topic': topic,
-      },
+      if (topic != null) 'topic': topic,
+      if (sessionId != null) 'session_id': sessionId,
+      if (learnerId != null) 'learner_id': learnerId,
     });
 
     final response = await _httpClient.post(url, headers: _headers(), body: body).timeout(timeout);
@@ -220,14 +220,25 @@ export interface AnswerResponseDTO {
 }
 
 export interface TutorResponseDTO {
-  tutor_message: string;
+  response_id: string;
+  session_id: string;
+  mode: string;
+  message: string;
+  socratic_question?: string;
+  hints?: string[];
   citations: Array<{
+    ref: string;
     document_id: string;
+    pmcid?: string;
     title: string;
     quote: string;
     license: string;
+    chunk_id: string;
   }>;
+  support_status: 'SUPPORTED' | 'SAFE_FALLBACK' | 'PARTIALLY_SUPPORTED' | 'UNSUPPORTED' | 'ABSTAIN';
   fallback_applied: boolean;
+  abstain: boolean;
+  pedagogical_state: string;
 }
 
 export class MedicalPlabError extends Error {
@@ -337,12 +348,17 @@ export class MedicalPlabClient {
   }
 
   // 6. Evidence-Grounded Tutor Query
-  async askTutor(query: string, subject?: string, topic?: string): Promise<TutorResponseDTO> {
+  async askTutor(
+    query: string,
+    options?: { topic?: string; sessionId?: string; learnerId?: string }
+  ): Promise<TutorResponseDTO> {
     return this.request<TutorResponseDTO>('/api/v1/tutor/chat', {
       method: 'POST',
       body: JSON.stringify({
         query,
-        context: { subject, topic },
+        ...(options?.topic ? { topic: options.topic } : {}),
+        ...(options?.sessionId ? { session_id: options.sessionId } : {}),
+        ...(options?.learnerId ? { learner_id: options.learnerId } : {}),
       }),
     });
   }

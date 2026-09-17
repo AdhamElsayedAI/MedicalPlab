@@ -1,4 +1,5 @@
-# MedicalPlab — Staging Environment & Contract Certification
+# MedicalPlab — Staging Environment Certification
+## ⚠️ NON-DURABLE INTEGRATION / DEMONSTRATION STAGING
 **Date:** September 18, 2026  
 **Git Baseline SHA:** `e3225e47534968270312bb2db5df697ee1043876`  
 **Target Branch:** `release/final-mentor-mobile-handoff`  
@@ -7,6 +8,9 @@
 **OpenAPI Contract SHA-256:** `e17f06cd4fb4cebca4f14ab4ffbd702cfa9b3eaf050da55f8a5c1c5b0dccfb95`  
 **Postman Suite SHA-256:** `55792ca5cdf66612f551b4cfdfd504de58611dd97ce507d8935c6306f7d366ac`  
 **Target Staging Base URL:** `https://medicalplab-api-staging-uc.a.run.app` (or local staging simulation `http://127.0.0.1:8000`)
+
+> [!WARNING]
+> **Non-Durable Staging.** This environment uses ephemeral SQLite storage. Learner state, session progress, and remediation records do NOT persist across Cloud Run container lifecycle restarts. This environment is suitable for API contract verification, mobile integration testing, and live mentor demonstrations only. It is NOT equivalent to a production-grade durable environment.
 
 ---
 
@@ -35,10 +39,15 @@
 
 ## 2. Staging Persistence Architecture Truth
 
-- **Persistence Backend:** Staging uses module-owned SQLite storage (`Data/persistence/`).
-- **Instance Lifecycle:** In serverless environments (Google Cloud Run), local container storage is ephemeral and may reset across container lifecycle restarts.
-- **Recommended Configuration:** `min-instances: 0`, `max-instances: 1` to ensure deterministic state during active mentor demonstrations and mobile contract testing.
-- **Production Standard:** Durable managed cloud persistence (PostgreSQL / Cloud SQL) is scheduled for institutional multi-tenant expansion.
+> [!CAUTION]
+> **`STAGING_PERSISTENCE_CERTIFIED = NO`**  
+> Staging uses module-owned SQLite storage (`Data/persistence/`). In serverless environments (Google Cloud Run), local container storage is **ephemeral** and resets on container lifecycle restarts. This environment does NOT certify data durability.
+
+- **Persistence Backend:** Local SQLite (`Data/persistence/`) — ephemeral on Cloud Run.
+- **Data Durability:** NOT CERTIFIED. Session state may be lost across container restarts.
+- **Recommended Usage:** API contract testing, mobile integration smoke tests, and live supervised demonstrations only.
+- **Recommended Configuration:** `min-instances: 0`, `max-instances: 1` to minimize restart probability during active demonstrations.
+- **Production Standard:** Durable managed cloud persistence (PostgreSQL / Cloud SQL) is required for institutional multi-tenant production deployment.
 
 ---
 
@@ -70,3 +79,5 @@ Mobile developers and reviewing mentors must observe the following authoritative
    The 36 PLAB candidate questions are strictly candidate items undergoing clinician review. In strict production (`MEDICALPLAB_PLAB_PREVIEW_QA=0`), the endpoint fails closed to 0 released questions.
 3. **`OFFLINE_SYNC_SUPPORTED = NO`**  
    MedicalPlab requires network connectivity for deterministic scoring, evidence retrieval, and post-generation proposition verification.
+4. **`STAGING_PERSISTENCE_CERTIFIED = NO`**  
+   Staging SQLite storage is ephemeral in Cloud Run serverless environments. Learner session data may not survive container restarts. Do not measure persistence SLAs against this environment.

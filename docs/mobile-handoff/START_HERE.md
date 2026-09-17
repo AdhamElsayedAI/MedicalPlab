@@ -200,10 +200,8 @@ curl -X POST http://127.0.0.1:8000/api/v1/tutor/chat \
   -H "X-User-Id: learner_01" \
   -d '{
     "query": "Explain the exact proteolytic action of renin on angiotensinogen.",
-    "context": {
-      "subject": "Renal physiology",
-      "topic": "RAAS mechanisms"
-    }
+    "topic": "RAAS mechanisms",
+    "mode": "mechanistic_explanation"
   }'
 ```
 
