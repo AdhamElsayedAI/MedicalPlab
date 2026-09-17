@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070D15" />
+      <stop offset="100%" stop-color="#0B1726" />
+    </linearGradient>
+    <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="glowGreen" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect x="0" y="0" width="960" height="420" rx="14" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Grid texture -->
+  <pattern id="grid3" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3" />
+  </pattern>
+  <rect x="1" y="1" width="958" height="418" rx="13" fill="url(#grid3)" />
+
+  <!-- Header -->
+  <text x="36" y="34" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">SHARED EVIDENCE ENGINE V1.1</text>
+  <text x="240" y="34" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">Retrieval Relevance ≠ Claim Support · Verification Before Delivery</text>
+
+  <!-- Left Input: Learner Query via TutorService -->
+  <g transform="translate(36, 60)">
+    <rect width="180" height="70" rx="8" fill="#0F1D2F" stroke="#0284C7" stroke-width="1.2" />
+    <text x="14" y="24" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">1. CLINICAL QUERY</text>
+    <text x="14" y="42" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Learner Inquiry</text>
+    <text x="14" y="58" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">via TutorService / Adaptive</text>
+  </g>
+
+  <!-- Tributaries: Open-Access Literature Chunks -->
+  <g transform="translate(36, 155)">
+    <rect width="180" height="150" rx="8" fill="#091422" stroke="#1E293B" stroke-width="1" />
+    <text x="14" y="24" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">EVIDENCE TRIBUTARIES</text>
+    
+    <!-- Mini Chunks -->
+    <g transform="translate(12, 34)">
+      <rect width="156" height="24" rx="4" fill="#0F1F33" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="8" y="16" fill="#BAE6FD" font-family="ui-monospace, monospace" font-size="9">DOC-PMC-RENAL-0001:C01</text>
+
+      <rect y="28" width="156" height="24" rx="4" fill="#0F1F33" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="8" y="44" fill="#BAE6FD" font-family="ui-monospace, monospace" font-size="9">DOC-PMC-RENAL-0002:C04</text>
+
+      <rect y="56" width="156" height="24" rx="4" fill="#0F1F33" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="8" y="72" fill="#BAE6FD" font-family="ui-monospace, monospace" font-size="9">DOC-PMC-RENAL-0006:C02</text>
+
+      <text x="8" y="104" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">PubMed Central (CC-BY)</text>
+    </g>
+  </g>
+
+  <!-- Tributary convergence paths -->
+  <path d="M 216 95 C 255 95, 255 125, 275 125" fill="none" stroke="#0284C7" stroke-width="2" />
+  <path d="M 216 195 C 245 195, 255 135, 275 125" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 3" />
+  <path d="M 216 255 C 250 255, 260 145, 275 125" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 3" />
+
+  <!-- Stage 2: Rerank & Candidate Ordering -->
+  <g transform="translate(275, 75)">
+    <rect width="180" height="100" rx="8" fill="#0F1D2F" stroke="#06B6D4" stroke-width="1.2" />
+    <text x="14" y="24" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">2. NEURAL RERANKING</text>
+    <text x="14" y="44" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Qwen3 Cross-Encoder</text>
+    <text x="14" y="62" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Candidate ordering by</text>
+    <text x="14" y="76" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">contextual entailment</text>
+  </g>
+
+  <!-- Conduit: Rerank -> Bounded Generation -->
+  <path d="M 455 125 L 495 125" fill="none" stroke="#06B6D4" stroke-width="2" />
+
+  <!-- Stage 3: Bounded Generation -->
+  <g transform="translate(495, 75)">
+    <rect width="170" height="100" rx="8" fill="#0F1D2F" stroke="#14B8A6" stroke-width="1.2" />
+    <text x="14" y="24" fill="#14B8A6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">3. BOUNDED DRAFT</text>
+    <text x="14" y="44" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">Draft Explanation</text>
+    <text x="14" y="62" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Structured JSON schema</text>
+    <text x="14" y="76" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Proposition segmentation</text>
+  </g>
+
+  <!-- Conduit: Draft -> Verification Gate -->
+  <path d="M 665 125 L 705 125" fill="none" stroke="#14B8A6" stroke-width="2" />
+
+  <!-- Stage 4: Post-Verification Gate -->
+  <g transform="translate(705, 55)">
+    <rect width="215" height="140" rx="8" fill="#0B131E" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="16" y="24" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1">4. POST-VERIFIER GATE</text>
+    <text x="16" y="44" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Atomic claim verification</text>
+
+    <!-- Check items -->
+    <g transform="translate(16, 56)">
+      <circle cx="4" cy="6" r="3" fill="#10B981" />
+      <text x="14" y="10" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">Exact quote span containment</text>
+
+      <circle cx="4" cy="22" r="3" fill="#10B981" />
+      <text x="14" y="26" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">Polarity &amp; numeric consistency</text>
+
+      <circle cx="4" cy="38" r="3" fill="#10B981" />
+      <text x="14" y="42" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">Clinical safety veto scan</text>
+    </g>
+  </g>
+
+  <!-- Branch Out: Two Distinct Paths -->
+  <!-- Path A: Supported -> Grounded Response -->
+  <path d="M 812 195 L 812 245 C 812 265, 875 265, 875 295" fill="none" stroke="#10B981" stroke-width="2" />
+  <g transform="translate(765, 295)">
+    <rect width="165" height="60" rx="6" fill="#06281E" stroke="#10B981" stroke-width="1.5" />
+    <text x="12" y="20" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">SUPPORTED (200)</text>
+    <text x="12" y="36" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Cited Response Served</text>
+    <text x="12" y="49" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5">PMC ID &amp; License Visible</text>
+  </g>
+
+  <!-- Path B: Mismatch / Veto -> SAFE_FALLBACK -->
+  <path d="M 812 195 L 812 245 C 812 265, 600 265, 600 295" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4 3" />
+  <g transform="translate(495, 295)">
+    <rect width="210" height="60" rx="6" fill="#261905" stroke="#F59E0B" stroke-width="1.5" />
+    <text x="12" y="20" fill="#FBBF24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700">SAFE_FALLBACK (FAIL-CLOSED)</text>
+    <text x="12" y="36" fill="#FEF3C7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Zero Citations · Zero Unverified Claims</text>
+    <text x="12" y="49" fill="#FCD34D" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5">Procedural Scaffolding Only</text>
+  </g>
+
+  <!-- Footer Boundary Notice -->
+  <g transform="translate(36, 372)">
+    <rect width="884" height="30" rx="5" fill="#0A1522" stroke="#1E293B" stroke-width="1" />
+    <text x="16" y="19" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">ARCHITECTURAL INVARIANT:</text>
+    <text x="195" y="19" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Adaptive Layer → TutorService → Shared Evidence Engine → Verification Gate → Served Answer. Direct LLM generation is architecturally barred.</text>
+  </g>
+</svg>
