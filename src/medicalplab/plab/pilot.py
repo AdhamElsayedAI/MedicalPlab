@@ -201,7 +201,7 @@ class PLABPilotService:
             for document in snapshot["documents"]:
                 if str(document.get("document_id")) in REFERENCE_ONLY_DOCUMENT_IDS:
                     continue
-                relative = Path(str(document["chunks_file"]))
+                relative = Path(str(document["chunks_file"]).replace("\\", "/"))
                 path = data_root / Path(*relative.parts[1:]) if relative.parts and relative.parts[0].lower() == "data" else data_root / relative
                 chunk_data = json.loads(path.read_text(encoding="utf-8"))
                 for chunk in chunk_data["chunks"]:
