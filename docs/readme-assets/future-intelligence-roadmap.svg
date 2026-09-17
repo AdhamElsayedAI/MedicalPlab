@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 490" width="100%" height="auto">
+  <defs>
+    <linearGradient id="roadBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070D16" />
+      <stop offset="100%" stop-color="#0B1624" />
+    </linearGradient>
+    <linearGradient id="todayGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="futureGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.4" />
+    </linearGradient>
+    <marker id="roadArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06B6D4" />
+    </marker>
+    <marker id="greenRoadArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10B981" />
+    </marker>
+  </defs>
+
+  <!-- Container -->
+  <rect x="0" y="0" width="960" height="490" rx="14" fill="url(#roadBg)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Grid Texture -->
+  <pattern id="gridRoad" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3" />
+  </pattern>
+  <rect x="1" y="1" width="958" height="488" rx="13" fill="url(#gridRoad)" />
+
+  <!-- Header -->
+  <text x="36" y="34" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">FUTURE INTELLIGENCE ROADMAP</text>
+  <text x="260" y="34" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">Separating Proven Implemented Reality from Long-Term Vision</text>
+  <text x="924" y="34" text-anchor="end" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">FOUR HORIZONS</text>
+
+  <!-- Central Spine Conduit (Left-to-Right Trunk) -->
+  <path d="M 60 250 L 900 250" stroke="#1E293B" stroke-width="3" />
+  <path d="M 60 250 L 260 250" stroke="#10B981" stroke-width="3" />
+  <path d="M 260 250 L 900 250" stroke="#06B6D4" stroke-width="2" stroke-dasharray="6 4" />
+
+  <!-- ==================== HORIZON 0: BUILT TODAY (CURRENT / ACTIVE) ==================== -->
+  <g transform="translate(36, 60)">
+    <rect width="205" height="170" rx="9" fill="url(#todayGrad)" stroke="#10B981" stroke-width="1.8" />
+    <g transform="translate(14, 16)">
+      <rect width="70" height="18" rx="4" fill="#064E3B" />
+      <text x="35" y="13" text-anchor="middle" fill="#6EE7B7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.5">CURRENT</text>
+    </g>
+    <text x="14" y="56" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">BUILT TODAY</text>
+    <text x="14" y="74" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Preclinical Baseline</text>
+    
+    <text x="14" y="98" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• 6 University questions active</text>
+    <text x="14" y="112" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• 36 PLAB Preview QA candidates</text>
+    <text x="14" y="126" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• 3D renal Hilum pin challenge</text>
+    <text x="14" y="140" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Bounded 3-turn Socratic loop</text>
+    <text x="14" y="154" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Frozen Mobile API v1.1.0</text>
+  </g>
+
+  <!-- Branch Node 0 (Current Anchor) -->
+  <circle cx="138" cy="250" r="8" fill="#0B1726" stroke="#10B981" stroke-width="3" />
+  <circle cx="138" cy="250" r="3" fill="#10B981" />
+  <line x1="138" y1="230" x2="138" y2="242" stroke="#10B981" stroke-width="1.5" />
+
+  <!-- ==================== HORIZON 1: MULTI-ORGAN SPATIAL (FUTURE) ==================== -->
+  <g transform="translate(260, 275)">
+    <rect width="210" height="165" rx="9" fill="url(#futureGrad)" stroke="#334155" stroke-width="1.2" stroke-dasharray="4 3" />
+    <g transform="translate(14, 16)">
+      <rect width="60" height="18" rx="4" fill="#1E293B" />
+      <text x="30" y="13" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">HORIZON 1</text>
+    </g>
+    <text x="14" y="56" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">MULTI-ORGAN HRA</text>
+    <text x="14" y="74" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Spatial Expansion</text>
+    
+    <text x="14" y="98" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Cardiovascular 3D reference</text>
+    <text x="14" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Pulmonary &amp; hepatic vasculature</text>
+    <text x="14" y="126" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Neuroanatomy mesh crosswalks</text>
+    <text x="14" y="140" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Clinician Golden exam release</text>
+  </g>
+
+  <!-- Branch Node 1 -->
+  <circle cx="365" cy="250" r="7" fill="#0B1726" stroke="#06B6D4" stroke-width="2" />
+  <circle cx="365" cy="250" r="2.5" fill="#06B6D4" />
+  <line x1="365" y1="257" x2="365" y2="275" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="3 2" />
+
+  <!-- ==================== HORIZON 2: MULTIMODAL REASONING (FUTURE) ==================== -->
+  <g transform="translate(488, 60)">
+    <rect width="215" height="170" rx="9" fill="url(#futureGrad)" stroke="#334155" stroke-width="1.2" stroke-dasharray="4 3" />
+    <g transform="translate(14, 16)">
+      <rect width="60" height="18" rx="4" fill="#1E293B" />
+      <text x="30" y="13" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">HORIZON 2</text>
+    </g>
+    <text x="14" y="56" fill="#A855F7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">MULTIMODAL AI</text>
+    <text x="14" y="74" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Educational Vision</text>
+    
+    <text x="14" y="98" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• ECG waveform interpretation</text>
+    <text x="14" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Radiograph teaching explanations</text>
+    <text x="14" y="126" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Histopathology visual reasoning</text>
+    <text x="14" y="140" fill="#F59E0B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5">⚠️ Strictly educational, not diagnostic</text>
+  </g>
+
+  <!-- Branch Node 2 -->
+  <circle cx="595" cy="250" r="7" fill="#0B1726" stroke="#A855F7" stroke-width="2" />
+  <circle cx="595" cy="250" r="2.5" fill="#A855F7" />
+  <line x1="595" y1="230" x2="595" y2="243" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="3 2" />
+
+  <!-- ==================== HORIZON 3 & 4: FRONTIER ORCHESTRATION & INSTITUTIONAL (FUTURE) ==================== -->
+  <g transform="translate(720, 275)">
+    <rect width="205" height="165" rx="9" fill="url(#futureGrad)" stroke="#334155" stroke-width="1.2" stroke-dasharray="4 3" />
+    <g transform="translate(14, 16)">
+      <rect width="95" height="18" rx="4" fill="#1E293B" />
+      <text x="47" y="13" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">HORIZONS 3 &amp; 4</text>
+    </g>
+    <text x="14" y="56" fill="#EC4899" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">SCALE &amp; FRONTIER</text>
+    <text x="14" y="74" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Frontier &amp; LMS</text>
+    
+    <text x="14" y="98" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Model provider router</text>
+    <text x="14" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Frontier reasoning models</text>
+    <text x="14" y="126" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Institutional SSO &amp; LTI 1.3</text>
+    <text x="14" y="140" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9">• Multi-tenant durable storage</text>
+  </g>
+
+  <!-- Branch Node 3 -->
+  <circle cx="822" cy="250" r="7" fill="#0B1726" stroke="#EC4899" stroke-width="2" />
+  <circle cx="822" cy="250" r="2.5" fill="#EC4899" />
+  <line x1="822" y1="257" x2="822" y2="275" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="3 2" />
+
+  <!-- Footer Notice -->
+  <g transform="translate(36, 452)">
+    <text x="0" y="18" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Architectural Invariant: Future capabilities are strictly labeled as future vision. Better models and broader curriculum will strengthen the platform without bypassing verification.</text>
+  </g>
+</svg>
