@@ -74,6 +74,12 @@ export function ExplorePanel({
           <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-teal-100 text-teal-800">
             {presented.category}
           </span>
+          <button
+            onClick={() => onSelectStructureByName('')}
+            className="text-[11px] text-teal-700 hover:text-teal-900 font-medium hover:underline"
+          >
+            &larr; Choose another structure
+          </button>
         </div>
         <h2 className="text-base font-bold text-slate-900 tracking-tight" id="selected-structure-display">
           {presented.displayName}

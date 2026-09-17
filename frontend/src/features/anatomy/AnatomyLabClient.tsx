@@ -28,6 +28,7 @@ import { LearningRail } from './components/LearningRail';
 import { ProjectedLabel } from './components/ProjectedLabel';
 import { SourcesModal } from './components/SourcesModal';
 import { DemoControls } from './components/DemoControls';
+import { getAuthoritativeLearnerId } from '@/lib/api-client';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -191,10 +192,18 @@ export function AnatomyLabClient() {
     setIsIsolated(false);
     setSurfaceMode('SURFACE');
     setCurrentPreset('KIDNEY_OVERVIEW');
+    setSelectedStructure(null);
     if (viewportRef.current) {
       viewportRef.current.resetScene();
     }
   }, []);
+
+  // Expose authoritative structure selection helper for headless testing and accessibility
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).__selectAnatomyStructure = (id: string) => handleSelectStructure(id);
+    }
+  }, [handleSelectStructure]);
 
   // Synchronize guided internal pathway mode when in GUIDED_LESSON and CUTAWAY
   useEffect(() => {
@@ -337,7 +346,7 @@ export function AnatomyLabClient() {
         setManifest(manifestData);
 
         // Fetch or start session
-        const learnerId = 'student_plab_demo';
+        const learnerId = getAuthoritativeLearnerId();
         let sessionData: any = null;
         try {
           const startRes = await fetch(`${API_BASE}/api/v1/anatomy/session/start`, {
