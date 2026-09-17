@@ -39,8 +39,8 @@ The MedicalPlab closed-loop architecture ensures that every learner interaction 
 | **2. Reasoning Signal** | Heuristic Pattern Identification | Selected distractors may map to heuristic reasoning-pattern signals |
 | **3. Adaptive Intervention** | Dynamic Routing Policy | Recommends targeted remediation rather than passive scoring |
 | **4. Socratic Remediation** | Dialogue Scaffolding | 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate |
-| **5. Independent Transfer** | Held-Out Concept Certification | Demonstrates transfer on an independent held-out item |
-| **6. Grounded Tutor** | Verified Literature Inquiries | Answers grounded strictly in CC BY 4.0 peer-reviewed medical journals |
+| **5. Independent Transfer** | Independent Transfer Evidence | Demonstrates transfer on an unseen held-out item before learner state update |
+| **6. Grounded Tutor** | Verified Literature Inquiries | Answers grounded in rights-approved open-access and Creative Commons medical literature |
 | **7. Spatial 3D Learning** | Anatomy Grounding | Interactive HuBMAP Human Reference Atlas models with deterministic challenges |
 | **8. Unified Progress** | Longitudinal Telemetry | Shared telemetry across preclinical tracks, tutor turns, and 3D spatial labs |
 
@@ -108,18 +108,18 @@ Real interfaces captured from the certified MedicalPlab demonstration:
 
 ## Adaptive Learning & Socratic Remediation
 
-Selected distractors may map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception or diagnostic defect; it represents a provisional educational hypothesis that routes the learner to targeted Socratic scaffolding.
+Selected distractors may map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception; it represents a provisional reasoning-pattern signal and heuristic educational hypothesis that routes the learner to targeted Socratic scaffolding.
 
 <p align="center">
   <img src="docs/readme-assets/remediation-loop.svg" alt="MedicalPlab Remediation Loop & Transfer Firewall" width="100%" />
 </p>
 
-The remediation dialogue is separated from mastery certification by an architectural firewall:
+The remediation dialogue is separated from learner state updates by an architectural firewall:
 
 1. **Probe:** The preceptor prompts the learner to explain the physiological principle behind their choice.
 2. **Guide:** Target clues highlight the specific mechanistic distinction without disclosing the answer.
 3. **Consolidate:** The learner summarizes the reconciled concept in their own terms.
-4. **Independent Transfer Firewall:** Successful dialogue *never* awards mastery automatically. The learner must independently demonstrate transfer on an unseen held-out question testing the same mechanism.
+4. **Independent Transfer Firewall:** Remediation dialogue scaffolds understanding. A held-out transfer item provides independent evidence of transfer before learner state is updated.
 
 <details>
 <summary>Under the hood: Adaptive State Machine & Reasoning Signal Heuristics</summary>
@@ -166,7 +166,7 @@ The MedicalPlab Tutor is built specifically to address hallucination in medical 
 
 1. **Query:** Student asks a mechanistic or clinical question.
 2. **Retrieve:** Shared Evidence Engine queries the indexed PubMed Central open-access basic-science corpus.
-3. **Rerank & Rights Gate:** Candidates are reranked and filtered to ensure CC BY 4.0 license compliance.
+3. **Rerank & Rights Gate:** Candidates are reranked and filtered through the source rights gate to verify approved open-access / Creative Commons licenses.
 4. **Bounded Generation:** Generative provider drafts an explanation constrained to retrieved excerpts.
 5. **Post-Generation Verification:** Every proposition is checked for entailment against source chunks. If support is insufficient, the system safely falls closed to procedural Socratic guidance (`SAFE_FALLBACK`).
 
@@ -191,7 +191,7 @@ class TutorPostVerifier:
 
 * **Evidence-Grounded Verifier:** Responses are served as Evidence Supported only after the verifier confirms support for substantive medical propositions against the active retrieved evidence.
 * **Fail-Closed Fallback:** When candidate support is insufficient or out of scope, the system safely triggers content-neutral procedural Socratic guidance (`SAFE_FALLBACK`) with zero substantive medical claims.
-* **Citation Traceability:** Citations include PMCID, DOI, author metadata, exact chunk identifiers, and licensing provenance (`CC BY 4.0`).
+* **Citation Traceability:** Citations include PMCID, DOI, author metadata, exact chunk identifiers, and licensing provenance (e.g., `CC BY 4.0`, `CC BY 3.0`).
 </details>
 
 ---
@@ -213,26 +213,40 @@ Medical understanding requires spatial grounding. The MedicalPlab 3D Anatomy Lab
 <details>
 <summary>Under the hood: Deterministic Challenge Verification & Coordinate Framing</summary>
 
-```typescript
+```json
 // Canonical Challenge Verification Flow:
 POST /api/v1/anatomy/session/{session_id}/challenge
 Payload: {
-  "selected_structure_id": "renal_artery_left",
-  "target_structure_id": "renal_artery_left",
-  "raycast_world_point": [-14.2, 82.5, -31.7]
+  "learner_id": "learner_42",
+  "selected_structure_id": "renal_artery_left"
 }
 
 // Server Response (Deterministic Evaluation):
 {
+  "session": {
+    "session_id": "anat_sess_01",
+    "learner_id": "learner_42",
+    "learning_objective": "RENAL_BLOOD_FLOW_AND_HILUM",
+    "lesson_state": "CHALLENGE_ACTIVE",
+    "challenge_state": "COMPLETED",
+    "challenge_result": "CORRECT"
+  },
   "is_correct": true,
-  "evaluated_structure": "Left Renal Artery (UBERON:0001120)",
-  "feedback": "Correct. The left renal artery branches from the abdominal aorta...",
-  "mastery_increment": 0.15
+  "target_structure_id": "renal_artery_left",
+  "selected_structure_id": "renal_artery_left",
+  "tutor_feedback": "Correct. You have accurately identified the Left Renal Artery.",
+  "scene_actions": [
+    {
+      "action": "HIGHLIGHT_STRUCTURE",
+      "structure_id": "renal_artery_left",
+      "duration_ms": 1500
+    }
+  ]
 }
 ```
 
-* All coordinates use the HuBMAP Common Coordinate Framework (CCF v1.2) registered to anatomical reference standards.
-* Geometry is immutable and loaded directly from verified GLTF/OBJ assets.
+* All anatomical structures use the HuBMAP Common Coordinate Framework (CCF v1.3 / v2.0) registered to anatomical reference standards.
+* Geometry is immutable and loaded directly from verified GLB assets.
 </details>
 
 ---
@@ -246,7 +260,7 @@ A fundamental principle of MedicalPlab is architectural separation of AI agency 
 </p>
 
 > **AI DOES NOT GENERATE ANATOMY GEOMETRY.**  
-> The 3D anatomical meshes are immutable scientific assets licensed from the HuBMAP Human Reference Atlas. The AI layer is strictly restricted to structured scene orchestration (`HIGHLIGHT`, `ISOLATE`, `FLY_TO`, `LABEL`, `GUIDE`).
+> The 3D anatomical meshes are immutable scientific assets licensed from the HuBMAP Human Reference Atlas. The AI layer is strictly restricted to structured scene orchestration (`FOCUS_STRUCTURE`, `HIGHLIGHT_STRUCTURE`, `ISOLATE_STRUCTURE`, `SHOW_RELATION`, `RESET_SCENE`).
 
 ---
 
@@ -259,7 +273,7 @@ MedicalPlab employs a shared evidence architecture across both Socratic tutoring
 </p>
 
 * **Unified Retrieval:** A single authoritative retrieval engine serves both University and Clinical tracks.
-* **License Firewall:** Only CC BY 4.0 and open-access peer-reviewed literature are indexed.
+* **License Firewall:** Rights-approved open-access / Creative Commons evidence sources are admitted only after source-level license verification, with license provenance preserved per document.
 * **No Direct LLM Path:** The adaptive engine and question modules never call an unconstrained LLM directly; all generation routes through the verification and rights pipeline.
 
 ---
@@ -280,7 +294,7 @@ MedicalPlab implements explicit clinical content governance to ensure candidate 
 | **PLAB Public Release Ready** | **NO** (`PLAB_PUBLIC_RELEASE_READY = False`) |
 | **Golden Clinician Signoff Required** | **YES** (`PLAB_GOLDEN_PROMOTION_REQUIRED = True`) |
 
-> **Governance Boundary:** The 36 clinical PLAB questions in this repository are candidate items undergoing clinician review. They are not released as public examination curriculum until approved by a licensed clinical review panel.
+> **Governance Boundary:** The 36 clinical PLAB questions in this repository are candidate items undergoing clinician review. They are not released as public examination curriculum until approved by a clinician review panel.
 
 ---
 
@@ -422,15 +436,20 @@ MedicalPlab/
 ├── frontend/                   # Next.js 16 + React 19 web application
 │   ├── src/app/                # App router (/practice, /tutor, /anatomy, /progress)
 │   ├── src/features/anatomy/   # Three.js viewport, camera presets, raycaster
-│   └── src/components/         # Reusable UI components & Socratic drawers
+│   ├── src/components/         # Reusable UI components & Socratic drawers
+│   └── public/models/anatomy/hra/renal/ # HRA CCF 3D GLB assets & provenance.json
+│       ├── VH_M_Kidney_L.glb
+│       ├── VH_M_Ureter_L.glb
+│       ├── VH_M_Blood_Vasculature_Kidney.glb
+│       └── provenance.json
 ├── docs/                       # Architectural documentation & specifications
 │   ├── readme-assets/          # Cognitive Anatomy GIFs, SVGs, and diagrams
 │   ├── demo/final-showcase/    # Certified demonstration gallery & runbook
 │   └── mobile-handoff/         # Frozen mobile contract, OpenAPI & guides
 ├── Data/                       # Curricular data & verified evidence corpus
 │   ├── university/             # Preclinical questions & distractor taxonomy
-│   ├── raw/renal_v2/           # PubMed Central open-access basic-science XMLs
-│   └── anatomy/hra/            # Licensed HuBMAP Human Reference Atlas meshes
+│   ├── raw/renal_v1/           # PubMed Central open-access basic-science XMLs
+│   └── metadata/               # Source license manifest & rights verification
 ├── tests/                      # Automated unit, integration, and contract test suites
 ├── production_main.py          # Authoritative FastAPI entrypoint
 └── README.md                   # Product showcase documentation
@@ -445,7 +464,7 @@ To demonstrate MedicalPlab to mentors, judges, or prospective partners:
 1. **Step 1: Learning Hub (`/`)** — Present the unified student command center and curriculum tracks.
 2. **Step 2: Preclinical MCQ & Remediation (`/practice?track=university`)** — Select *Renal physiology &rarr; RAAS mechanisms*, deliberately choose distractor `[B] Angiotensin II`, demonstrate heuristic pattern detection, and walk through the 3-turn Socratic remediation drawer.
 3. **Step 3: Held-Out Transfer Assessment** — Solve the independent transfer problem to demonstrate transfer on an unseen item and trigger streak advancement.
-4. **Step 4: Evidence-Grounded AI Tutor (`/tutor`)** — Ask a physiological mechanism question, show sentence-level proposition verification, and inspect the CC BY 4.0 PMC citation drawer.
+4. **Step 4: Evidence-Grounded AI Tutor (`/tutor`)** — Ask a physiological mechanism question, show sentence-level proposition verification, and inspect verified PMC citations with document-level license provenance.
 5. **Step 5: Spatial 3D Anatomy Lab (`/anatomy`)** — Showcase canonical Three.js camera transitions, select the Left Renal Vein, and complete the independent Left Renal Artery pin challenge with deterministic backend scoring.
 6. **Step 6: Unified Progress (`/progress`)** — Verify that preclinical accuracy, transfer successes, tutor queries, and 3D anatomy mastery reflect in the longitudinal learner telemetry.
 
@@ -458,7 +477,7 @@ To demonstrate MedicalPlab to mentors, judges, or prospective partners:
 - [x] **Phase 1: Preclinical Renal Baseline** — Curricular questions, Socratic remediation, HuBMAP HRA 3D anatomy, PMC evidence grounding.
 - [x] **Phase 2: Mobile Contract Freeze** — Cross-platform OpenAPI specifications, pilot identity protocol, and sample client SDKs.
 - [ ] **Phase 3: Multi-Organ Spatial Expansion** — Integrating HuBMAP cardiac, hepatic, and pulmonary reference vasculature.
-- [ ] **Phase 4: Clinical Panel Golden Promotion** — Formal clinician review and promotion of the 36 candidate PLAB items into public release.
+- [ ] **Phase 4: Clinician Review Panel Golden Promotion** — Formal clinician review panel and promotion of the 36 candidate PLAB items into public release.
 - [ ] **Phase 5: Institutional LMS Integration** — LTI 1.3 / FHIR educational interoperability for university medical schools.
 
 ---
@@ -466,8 +485,8 @@ To demonstrate MedicalPlab to mentors, judges, or prospective partners:
 ## Data Licensing & Attribution
 
 * **Anatomical Models:** NIH HuBMAP Human Reference Atlas (HRA) 3D Reference Organs. Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-* **Medical Evidence Corpus:** Extracted from open-access basic-science and renal physiology articles in PubMed Central (PMC). Strictly filtered for CC BY 4.0 compliance with author and DOI attribution.
-* **Clinical Questions:** University questions authored for foundational medical physiology education. PLAB candidate items are maintained under Preview QA governance and require formal clinician Golden promotion before public release.
+* **Medical Evidence Corpus:** Extracted from open-access basic-science and renal physiology articles in PubMed Central (PMC). Rights-approved open-access / Creative Commons evidence sources are admitted only after source-level license verification, with license provenance preserved per document.
+* **Clinical Questions:** University questions authored for foundational medical physiology education. PLAB candidate items are maintained under Preview QA governance and require formal clinician review panel Golden promotion before public release.
 
 ---
 
