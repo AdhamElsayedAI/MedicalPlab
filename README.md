@@ -14,9 +14,9 @@ MedicalPlab connects assessment, adaptive remediation, verified medical evidence
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com/)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16.3.4-black.svg)](https://nextjs.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-0.183+-black.svg)](https://threejs.org/)
-[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()
-[![E2E Verification](https://img.shields.io/badge/E2E-Verified%20(Chrome%20CDP)-success.svg)]()
-[![Mobile API Contract](https://img.shields.io/badge/Mobile%20API-Frozen%20Baseline-informational.svg)](docs/mobile-handoff/START_HERE.md)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](#engineering-verification)
+[![E2E Verification](https://img.shields.io/badge/E2E-Verified%20(Chrome%20CDP)-success.svg)](#engineering-verification)
+[![Mobile API Contract](https://img.shields.io/badge/Mobile%20API-Frozen%20Baseline-informational.svg)](docs/mobile-handoff/API_CONTRACT.md)
 
 ---
 
@@ -36,10 +36,10 @@ The MedicalPlab closed-loop architecture ensures that every learner interaction 
 | Stage | Cognitive Function | Pedagogical Mechanism |
 | :--- | :--- | :--- |
 | **1. Attempt** | Evaluated Clinical Scenario | Preclinical basic science or clinical question attempt |
-| **2. Reasoning Signal** | Heuristic Pattern Identification | Wrong options detect provisional confusion without diagnostic labelling |
+| **2. Reasoning Signal** | Heuristic Pattern Identification | Selected distractors may map to heuristic reasoning-pattern signals |
 | **3. Adaptive Intervention** | Dynamic Routing Policy | Recommends targeted remediation rather than passive scoring |
 | **4. Socratic Remediation** | Dialogue Scaffolding | 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate |
-| **5. Independent Transfer** | Held-Out Concept Certification | Proves conceptual mastery before updating competence records |
+| **5. Independent Transfer** | Held-Out Concept Certification | Demonstrates transfer on an independent held-out item |
 | **6. Grounded Tutor** | Verified Literature Inquiries | Answers grounded strictly in CC BY 4.0 peer-reviewed medical journals |
 | **7. Spatial 3D Learning** | Anatomy Grounding | Interactive HuBMAP Human Reference Atlas models with deterministic challenges |
 | **8. Unified Progress** | Longitudinal Telemetry | Shared telemetry across preclinical tracks, tutor turns, and 3D spatial labs |
@@ -108,7 +108,7 @@ Real interfaces captured from the certified MedicalPlab demonstration:
 
 ## Adaptive Learning & Socratic Remediation
 
-MedicalPlab treats incorrect options as cognitive signals. Distractor analysis flags provisional hypotheses—such as confusing an enzyme with its downstream product in the renin-angiotensin cascade.
+Selected distractors may map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception or diagnostic defect; it represents a provisional educational hypothesis that routes the learner to targeted Socratic scaffolding.
 
 <p align="center">
   <img src="docs/readme-assets/remediation-loop.svg" alt="MedicalPlab Remediation Loop & Transfer Firewall" width="100%" />
@@ -119,7 +119,7 @@ The remediation dialogue is separated from mastery certification by an architect
 1. **Probe:** The preceptor prompts the learner to explain the physiological principle behind their choice.
 2. **Guide:** Target clues highlight the specific mechanistic distinction without disclosing the answer.
 3. **Consolidate:** The learner summarizes the reconciled concept in their own terms.
-4. **Independent Transfer Firewall:** Successful dialogue *never* awards mastery automatically. The learner must independently solve a held-out transfer question testing the same mechanism.
+4. **Independent Transfer Firewall:** Successful dialogue *never* awards mastery automatically. The learner must independently demonstrate transfer on an unseen held-out question testing the same mechanism.
 
 <details>
 <summary>Under the hood: Adaptive State Machine & Reasoning Signal Heuristics</summary>
@@ -189,7 +189,8 @@ class TutorPostVerifier:
         return VerificationResult(status="SUPPORTED", fallback_applied=False)
 ```
 
-* **Zero Ungrounded Claims:** Responses marked `Evidence Supported` guarantee that 100% of substantive medical propositions match active PubMed Central source chunks.
+* **Evidence-Grounded Verifier:** Responses are served as Evidence Supported only after the verifier confirms support for substantive medical propositions against the active retrieved evidence.
+* **Fail-Closed Fallback:** When candidate support is insufficient or out of scope, the system safely triggers content-neutral procedural Socratic guidance (`SAFE_FALLBACK`) with zero substantive medical claims.
 * **Citation Traceability:** Citations include PMCID, DOI, author metadata, exact chunk identifiers, and licensing provenance (`CC BY 4.0`).
 </details>
 
@@ -285,50 +286,75 @@ MedicalPlab implements explicit clinical content governance to ensure candidate 
 
 ## Engineering Verification
 
-The MedicalPlab implementation has been verified through automated test suites and real-browser headless Chrome DevTools Protocol automation:
+MedicalPlab functionality is certified through continuous deterministic testing and real-browser headless Chrome DevTools Protocol automation:
 
 ```
-========================= 100% VERIFICATION PASSED =========================
-- Unit & Architecture Tests: 184 passing (pytest)
-- RAG & Evidence Engine: 100% CC BY 4.0 license compliance verified
-- Post-Generation Verifier: 0 ungrounded claims allowed; fail-closed verified
-- Deterministic 3D Anatomy: Raycast ontology verification passing
-- Mobile API Contract: All mobile journey endpoints certified
-- Real Headless Browser QA: Desktop (1440x900), Tablet (768x1024), Mobile (390x844)
-=============================================================================
+===================== CERTIFIED VERIFICATION STATUS =====================
+- Frontend Production Build:       PASS (Next.js 16.3.4, React 19)
+- Cross-Module Integration Tests:  23 / 23 PASS (Scenario A–H closed loops)
+- Mobile API Contract Tests:       12 / 12 PASS (Canonical route certification)
+- Real-Browser E2E Acceptance:     PASS (Headless Chrome CDP Desktop/Tablet/Mobile)
+-------------------------------------------------------------------------
+- Previously certified full-backend regression baseline: 379 / 379 PASS
+- PLAB candidate clean-checkout baseline:                 87 / 87 PASS
+=========================================================================
 ```
+
+Enforced Verifier Guarantees:
+- **Proposition-Level Claim Verification:** Generative tutor drafts are decomposed into atomic statements and checked against retrieved active evidence chunks. If support is insufficient, the system safely triggers fail-closed procedural fallback (`SAFE_FALLBACK`).
+- **Deterministic 3D Anatomy Scoring:** Raycast clicks are evaluated deterministically on the backend against verified HuBMAP CCF anatomical structure identifiers.
+- **Answer Key Protection:** Pre-submission Socratic scaffolding never leaks correct options or distractor keys.
 
 ```bash
-# Run backend verification suite:
-pytest tests/ -v
-
-# Run Phase 6 cross-module integration:
+# Run cross-module integration tests:
 pytest tests/integration/test_phase_6_cross_module.py -v
+
+# Run mobile API contract certification:
+pytest tests/integration/test_mobile_api_contract.py -v
 ```
 
 ---
 
 ## Mobile Integration
 
-MedicalPlab includes a frozen mobile API contract designed for rapid cross-platform client integration (Flutter, React Native, iOS, Android):
+MedicalPlab provides a frozen mobile API contract for rapid cross-platform client integration (Flutter, React Native, iOS, Android):
 
-* **Pilot Identity:** Authenticated via `X-User-Id` header (classified as demo learner identity, not production cryptographic auth).
-* **Deterministic Endpoints:** Complete support for `/api/v1/learn/preclinical`, `/api/v1/tutor/chat`, `/api/v1/anatomy/session`, and `/api/v1/progress/summary`.
+* **Pilot Identity:** Learner identity partitioning via `X-User-Id` header (classified as demo learner identity; `X-User-Id` is NOT production cryptographic authentication; `MOBILE_PRODUCTION_AUTH_READY = NO`).
+* **Authoritative Contract:** All request schemas, responses, and error handling follow [docs/mobile-handoff/API_CONTRACT.md](docs/mobile-handoff/API_CONTRACT.md).
 * **Specification:** Frozen OpenAPI specification available at [docs/mobile-handoff/openapi.json](docs/mobile-handoff/openapi.json).
 
 <details>
-<summary>Under the hood: Mobile Integration Endpoints & Telemetry Contract</summary>
+<summary>Under the hood: Canonical Mobile Endpoints</summary>
 
 ```
-GET  /api/v1/learn/preclinical/topics
-POST /api/v1/learn/preclinical/submit
+# Preclinical University Curriculum
+GET  /api/v1/university/subjects
+GET  /api/v1/university/topics
+GET  /api/v1/university/question
+POST /api/v1/university/answer
+
+# Adaptive Learning Engine
+GET  /api/v1/adaptive/recommendation
+GET  /api/v1/adaptive/state
+
+# Socratic Remediation & Transfer
+POST /api/v1/remediation/start
+POST /api/v1/remediation/turn
+GET  /api/v1/remediation/session/{session_id}/transfer
+POST /api/v1/remediation/session/{session_id}/transfer
+
+# Evidence-Grounded AI Tutor
 POST /api/v1/tutor/chat
-POST /api/v1/anatomy/session
+
+# Spatial 3D Anatomy
+POST /api/v1/anatomy/session/start
 POST /api/v1/anatomy/session/{session_id}/challenge
-GET  /api/v1/progress/summary
+
+# Learner Progress Telemetry
+GET  /api/v1/learner/progress
 ```
 
-See [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md) for endpoint payloads, TypeScript client SDK, and sample request journeys.
+See [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md) and [docs/mobile-handoff/API_CONTRACT.md](docs/mobile-handoff/API_CONTRACT.md) for full request/response schemas, TypeScript SDK, and curl examples.
 </details>
 
 ---
@@ -336,40 +362,48 @@ See [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md) for e
 ## Quick Start
 
 ### Prerequisites
-* Python 3.11 or 3.12
-* Node.js 20+ and npm
-* Google Chrome (optional, for running headless browser verification)
+* Python 3.11 or 3.12 (with virtual environment)
+* Node.js 20+ and npm 10+
+* Google Chrome or Chromium (for running headless browser verification)
 
-### 1. Start the Backend API
-```bash
-# Clone repository
-git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
-cd MedicalPlab
+### 1. Start Authoritative Backend (Preview QA Enabled)
 
-# Set up Python virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+```powershell
+# Windows PowerShell
+$env:PYTHONPATH="src;."
+$env:MEDICALPLAB_RUNTIME_MODE="pilot"
+$env:MEDICALPLAB_PLAB_PREVIEW_QA="1"
+$env:MEDICALPLAB_PHASE_2B_ENABLED="1"
+$env:MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+$env:ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
 
-# Install dependencies
-pip install -r requirements.txt
-
-# Launch FastAPI backend (Pilot mode, port 8000)
-uvicorn production_main:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-### 2. Start the Frontend Application
 ```bash
-# In a new terminal:
+# macOS / Linux Bash
+export PYTHONPATH="src:."
+export MEDICALPLAB_RUNTIME_MODE="pilot"
+export MEDICALPLAB_PLAB_PREVIEW_QA="1"
+export MEDICALPLAB_PHASE_2B_ENABLED="1"
+export MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+export ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
+
+python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
+```
+
+### 2. Start Production Frontend Application
+
+```bash
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start Next.js development server (port 3000)
-npm run dev
+npm run build
+npm run start -- -p 3000
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+*(Optional Development Mode: `npm run dev`)*
 
 ---
 
@@ -379,10 +413,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 MedicalPlab/
 ├── src/medicalplab/            # Core backend logic & services
 │   ├── adaptive/               # Adaptive learning engine & state machine
-│   ├── evidence_engine/        # Shared RAG, rights gate, & claim verifier
-│   ├── tutor/                  # Evidence-grounded tutor & Socratic scaffolding
 │   ├── anatomy/                # 3D anatomy session & deterministic scoring
-│   └── stage_g/                # Governed PLAB clinical preparation
+│   ├── evidence_engine/        # Shared RAG, rights gate, & claim verifier
+│   ├── plab/                   # Governed PLAB clinical preparation & Preview QA
+│   ├── remediation/            # Multi-turn Socratic remediation & transfer gate
+│   ├── tutor/                  # Evidence-grounded tutor & citation verification
+│   └── university/             # Preclinical curriculum & distractor taxonomy
 ├── frontend/                   # Next.js 16 + React 19 web application
 │   ├── src/app/                # App router (/practice, /tutor, /anatomy, /progress)
 │   ├── src/features/anatomy/   # Three.js viewport, camera presets, raycaster
@@ -392,10 +428,10 @@ MedicalPlab/
 │   ├── demo/final-showcase/    # Certified demonstration gallery & runbook
 │   └── mobile-handoff/         # Frozen mobile contract, OpenAPI & guides
 ├── Data/                       # Curricular data & verified evidence corpus
-│   ├── university/             # 6 production preclinical questions
+│   ├── university/             # Preclinical questions & distractor taxonomy
 │   ├── raw/renal_v2/           # PubMed Central open-access basic-science XMLs
 │   └── anatomy/hra/            # Licensed HuBMAP Human Reference Atlas meshes
-├── tests/                      # 184 unit, integration, and contract tests
+├── tests/                      # Automated unit, integration, and contract test suites
 ├── production_main.py          # Authoritative FastAPI entrypoint
 └── README.md                   # Product showcase documentation
 ```
@@ -408,7 +444,7 @@ To demonstrate MedicalPlab to mentors, judges, or prospective partners:
 
 1. **Step 1: Learning Hub (`/`)** — Present the unified student command center and curriculum tracks.
 2. **Step 2: Preclinical MCQ & Remediation (`/practice?track=university`)** — Select *Renal physiology &rarr; RAAS mechanisms*, deliberately choose distractor `[B] Angiotensin II`, demonstrate heuristic pattern detection, and walk through the 3-turn Socratic remediation drawer.
-3. **Step 3: Held-Out Transfer Assessment** — Solve the independent transfer problem to prove conceptual reconciliation and trigger streak advancement.
+3. **Step 3: Held-Out Transfer Assessment** — Solve the independent transfer problem to demonstrate transfer on an unseen item and trigger streak advancement.
 4. **Step 4: Evidence-Grounded AI Tutor (`/tutor`)** — Ask a physiological mechanism question, show sentence-level proposition verification, and inspect the CC BY 4.0 PMC citation drawer.
 5. **Step 5: Spatial 3D Anatomy Lab (`/anatomy`)** — Showcase canonical Three.js camera transitions, select the Left Renal Vein, and complete the independent Left Renal Artery pin challenge with deterministic backend scoring.
 6. **Step 6: Unified Progress (`/progress`)** — Verify that preclinical accuracy, transfer successes, tutor queries, and 3D anatomy mastery reflect in the longitudinal learner telemetry.
@@ -431,13 +467,13 @@ To demonstrate MedicalPlab to mentors, judges, or prospective partners:
 
 * **Anatomical Models:** NIH HuBMAP Human Reference Atlas (HRA) 3D Reference Organs. Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 * **Medical Evidence Corpus:** Extracted from open-access basic-science and renal physiology articles in PubMed Central (PMC). Strictly filtered for CC BY 4.0 compliance with author and DOI attribution.
-* **Clinical Questions:** University questions authored for foundational medical physiology education. PLAB candidate items curated under clinical educational fair use for qualification review.
+* **Clinical Questions:** University questions authored for foundational medical physiology education. PLAB candidate items are maintained under Preview QA governance and require formal clinician Golden promotion before public release.
 
 ---
 
 ## Team Handoff
 
 * **Product & Architecture:** [docs/handoff/TEAM_HANDOFF.md](docs/handoff/TEAM_HANDOFF.md)
-* **Mobile Developers:** [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md)
+* **Mobile Developers:** [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md) & [docs/mobile-handoff/API_CONTRACT.md](docs/mobile-handoff/API_CONTRACT.md)
 * **Demonstration Team:** [docs/demo/FINAL_DEMO_RUNBOOK.md](docs/demo/FINAL_DEMO_RUNBOOK.md)
 * **Release Baseline:** Tagged release snapshot [`v1.0.0-startup-demo`](https://github.com/AdhamElsayedAI/MedicalPlab/releases/tag/v1.0.0-startup-demo)

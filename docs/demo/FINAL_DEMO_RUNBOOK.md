@@ -114,7 +114,7 @@ Follow this precise sequence for a smooth, high-impact demonstration:
   - Ambient particle motion & Cognitive Loop animation (Attempt → Reasoning Signal → Socratic Remediation → Transfer).
   - Runtime truth badges: University items (6 Preclinical), PLAB status ("36 Preview QA Candidates"), 3D Anatomy status.
   - Clear governance disclaimer: explicitly states "Preview QA" and separates roadmap items from current pilot capabilities.
-- **Narrative:** *"MedicalPlab is not just another question bank that tells students whether they got an answer right or wrong. It acts as an adaptive clinical intelligence system that diagnoses learner reasoning and intervenes at the conceptual level."*
+- **Narrative:** *"MedicalPlab is not just another question bank that tells students whether they got an answer right or wrong. It acts as an adaptive clinical intelligence system that uses provisional reasoning-pattern signals to select bounded interventions at the conceptual level."*
 
 ### Step 2: University Preclinical Practice (`0:30 – 1:00`)
 - **URL:** `http://localhost:3000/university`
