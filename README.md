@@ -44,7 +44,7 @@ MedicalPlab is an adaptive clinical edtech platform designed to address the foun
 
 MedicalPlab is not an unconstrained medical chatbot, a static question bank, or an isolated 3D viewer. It is a single, coherent learning intelligence system that unifies:
 1. **Preclinical Medical Education:** Curricular basic-science modules with mechanistic distractor analysis.
-2. **Cognitive Diagnostic Remediation:** Multi-turn Socratic remediation that diagnoses reasoning patterns without giving away answers.
+2. **Cognitive Reasoning Remediation:** Multi-turn Socratic remediation that scaffolds learner reasoning without giving away answers.
 3. **Evidence-Grounded Clinical Tutoring:** Generative clinical dialogue strictly bound to peer-reviewed medical literature with automated claim verification.
 4. **Spatial 3D Anatomy:** Interactive organ models powered by the HuBMAP Human Reference Atlas with deterministic challenge scoring.
 5. **Governed Clinical Exam Preparation:** Fail-closed clinical licensing preparation requiring formal clinician promotion before content release.
@@ -89,7 +89,7 @@ graph TD
     Progress --> Attempt
 ```
 
-> **Important Pedagogical Boundary:** A wrong answer is **not** a diagnosed misconception. In MedicalPlab, incorrect options trigger *heuristic reasoning-pattern signals*—provisional hypotheses that qualify the learner for bounded Socratic remediation. Mastery is only certified when the learner solves an independent held-out transfer item.
+> **Important Pedagogical Boundary:** A wrong answer is **not** a confirmed misconception or rigid defect. In MedicalPlab, incorrect options trigger *heuristic reasoning-pattern signals*—provisional hypotheses that qualify the learner for bounded Socratic remediation. Mastery is only certified when the learner solves an independent held-out transfer item.
 
 ---
 
@@ -214,7 +214,7 @@ MedicalPlab’s evidence pipeline enforces:
 5. **Post-Generation Proposition Verification:**
    - Deconstructs AI draft responses into atomic propositions.
    - Verifies citation provenance: every quote must be a character-exact match inside the allowed retrieved chunks.
-   - Clinical safety vetoes: rejects unauthorized drug dosages, definitive diagnoses, or cure claims.
+   - Clinical safety vetoes: rejects unauthorized drug dosages, definitive patient treatment assertions, or cure claims.
    - Automatic fail-closed fallback: if any proposition is unsupported, the response transitions to `SAFE_FALLBACK`.
 
 ---
@@ -407,7 +407,7 @@ MedicalPlab/
 
 > **Notice:** The following features are planned future research directions and are **NOT** current capabilities of the v1.0.0 startup demo release.
 
-- **Multimodal Medical Learning:** Incorporating clinical diagnostic imaging (ECG waveforms, chest radiographs, ultrasound) into the Socratic tutoring loop.
+- **Multimodal Medical Learning:** Incorporating clinical medical imaging (ECG waveforms, chest radiographs, ultrasound) into the Socratic tutoring loop.
 - **Extended 3D Anatomy Systems:** Expanding beyond renal vasculature to cardiovascular, pulmonary, and neuroanatomical reference systems from HuBMAP HRA.
 - **Formal Clinician Feedback Portal:** Web-based review interface enabling accredited physicians to audit candidate items and approve Golden promotions directly.
 - **Longitudinal Curriculum Sequencing:** Multi-specialty preclinical learning tracks (Cardiovascular, Respiratory, Gastrointestinal) integrated into Bayesian knowledge tracing.

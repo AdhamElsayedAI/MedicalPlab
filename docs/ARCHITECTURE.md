@@ -2,7 +2,7 @@
 
 ## 1. Architectural Overview
 
-MedicalPlab is an adaptive, evidence-grounded medical learning and clinical intelligence platform. It seamlessly unifies preclinical basic science, cognitive reasoning diagnosis, Socratic remediation, evidence-verified clinical tutoring, interactive 3D anatomy, and governed clinical licensing preparation into a single longitudinal learner experience.
+MedicalPlab is an adaptive, evidence-grounded medical learning and clinical intelligence platform. It seamlessly unifies preclinical basic science, cognitive reasoning evaluation, Socratic remediation, evidence-verified clinical tutoring, interactive 3D anatomy, and governed clinical licensing preparation into a single longitudinal learner experience.
 
 ```mermaid
 graph TD
@@ -102,7 +102,7 @@ graph TD
 
 ### 2. Adaptive Learning & Reasoning Signals
 - **Focus:** Closed-loop learner modeling and recommendation.
-- **Principle:** Wrong answer $\neq$ diagnosed misconception. Incorrect answers trigger heuristic reasoning-pattern signals.
+- **Principle:** Wrong answer $\neq$ confirmed misconception. Incorrect answers trigger heuristic reasoning-pattern signals.
 - **Contract:** Dynamic mastery profiling driven by backend persistence with zero client-side calculation.
 
 ### 3. Socratic Remediation & Held-Out Transfer

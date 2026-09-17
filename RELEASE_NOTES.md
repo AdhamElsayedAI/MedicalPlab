@@ -7,7 +7,7 @@
 
 ## 1. Executive Summary
 
-MedicalPlab represents a breakthrough in medical education technology, transitioning from static multiple-choice question banks to a closed-loop adaptive clinical intelligence platform. Rather than merely scoring questions right or wrong, MedicalPlab diagnoses underlying learner reasoning patterns, provides bounded Socratic remediation, verifies conceptual transfer through held-out problems, grounds tutoring conversations in peer-reviewed literature, anchors spatial comprehension via interactive 3D anatomy, and enforces fail-closed clinical governance over licensing preparation.
+MedicalPlab represents a breakthrough in medical education technology, transitioning from static multiple-choice question banks to a closed-loop adaptive clinical intelligence platform. Rather than merely scoring questions right or wrong, MedicalPlab identifies underlying learner reasoning patterns, provides bounded Socratic remediation, verifies conceptual transfer through held-out problems, grounds tutoring conversations in peer-reviewed literature, anchors spatial comprehension via interactive 3D anatomy, and enforces fail-closed clinical governance over licensing preparation.
 
 ---
 
@@ -18,9 +18,9 @@ MedicalPlab represents a breakthrough in medical education technology, transitio
 - Strict post-generation proposition verification: any unverified clinical claim or citation provenance mismatch automatically triggers fail-closed `SAFE_FALLBACK`.
 - Zero fake citations; full CC-BY licensing provenance and chunk attribution exposed to learners.
 
-### 2. Adaptive Learning & Reasoning Diagnosis
+### 2. Adaptive Learning & Reasoning Pattern Identification
 - Continuous learner mastery profiling based on real cognitive signals rather than client-side heuristics.
-- Distinguishes wrong answers from diagnosed misconceptions: captures heuristic reasoning pattern signals (e.g. confusing enzyme substrate with downstream product) to trigger personalized recommendations.
+- Distinguishes wrong answers from confirmed misconceptions: captures heuristic reasoning pattern signals (e.g. confusing enzyme substrate with downstream product) to trigger personalized recommendations.
 
 ### 3. Bounded Socratic Remediation & Held-Out Transfer
 - Deterministic 3-turn Socratic remediation controller (`PROBE` → `GUIDE` → `CONSOLIDATE`).
