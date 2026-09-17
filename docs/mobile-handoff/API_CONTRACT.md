@@ -24,6 +24,11 @@ These endpoints support the complete, authoritative student learning journey.
 | `POST` | `/api/v1/remediation/session/{session_id}/abandon` | Explicitly abandon an ongoing remediation session | Header `X-User-Id` |
 | `GET` | `/api/v1/remediation/session/{session_id}` | Retrieve authoritative session state, chat history, and timeline | Header `X-User-Id` |
 
+| `GET` | `/api/v1/learner/progress` | Retrieve unified read-only learner progress across University, PLAB, Anatomy, and Adaptive | Header `X-User-Id` (or `X-Learner-Id`) |
+| `GET` | `/api/v1/plab/questions` | List clinical PLAB exam questions | None required |
+| `POST` | `/api/v1/plab/evaluate` | Evaluate PLAB question answer, emit LearningEvent, detect reasoning gap | Header `X-User-Id` |
+| `GET` | `/api/v1/plab/progress` | Retrieve PLAB module-owned attempt history and accuracy | Header `X-User-Id` |
+
 ---
 
 ### Category B: OPTIONAL FOR MOBILE MVP
@@ -32,6 +37,8 @@ Secondary capabilities that enhance the mobile app but are not strictly required
 | Method | Path | Description | Usage Note |
 | :--- | :--- | :--- | :--- |
 | `GET` | `/health` or `/api/v1/health` | Health check & service readiness | Useful for mobile connectivity monitoring |
+| `POST` | `/api/v1/anatomy/session/start` | Initialize 3D Anatomy learning session | Header `X-User-Id` or `X-Learner-Id` |
+| `POST` | `/api/v1/anatomy/session/{session_id}/challenge` | Submit deterministic anatomy pin challenge | Header `X-User-Id` or `X-Learner-Id` |
 | `POST` | `/api/v1/adaptive/event` | Manually ingest client-side learning events | Optional; `/university/answer` already persists attempts automatically |
 | `GET` | `/api/v1/adaptive/loop-status` | Check remediation loop closure for a topic | Query param `topic` |
 | `POST` | `/api/v1/tutor/chat` | Direct conversational tutor for open-ended clinical questions | Optional free-form tutor interface |
