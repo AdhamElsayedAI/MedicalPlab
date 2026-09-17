@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import unittest
 
+from medicalplab.plab.data_manifest import REFERENCE_ONLY_DOCUMENT_IDS
 from medicalplab.plab.models import (
     PLABCitation,
     PLABChoice,
@@ -18,6 +19,11 @@ from medicalplab.plab.models import (
     PLABQuestionStatus,
 )
 from medicalplab.plab.validation import validate_plab_question
+
+try:
+    from .fixture_helper import get_test_chunk_index
+except ImportError:
+    from fixture_helper import get_test_chunk_index
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -56,17 +62,22 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
         with open(SNAPSHOT_PATH, "r", encoding="utf-8") as f:
             snapshot = json.load(f)
 
-        cls.chunk_index = {}
+        # Prefer tracked public-safe test fixture for clean-checkout reproducibility;
+        # fallback to local active processed files if present.
+        cls.chunk_index = get_test_chunk_index()
         for doc in snapshot["documents"]:
             doc_id = doc["document_id"]
+            if doc_id in REFERENCE_ONLY_DOCUMENT_IDS:
+                continue
             chunks_file = PROJECT_ROOT / doc["chunks_file"]
-            with open(chunks_file, "r", encoding="utf-8") as cf:
-                cdata = json.load(cf)
-            for chunk in cdata["chunks"]:
-                cls.chunk_index[chunk["chunk_id"]] = {
-                    "document_id": doc_id,
-                    "text": chunk["text"],
-                }
+            if chunks_file.exists():
+                with open(chunks_file, "r", encoding="utf-8") as cf:
+                    cdata = json.load(cf)
+                for chunk in cdata["chunks"]:
+                    cls.chunk_index[chunk["chunk_id"]] = {
+                        "document_id": doc_id,
+                        "text": chunk["text"],
+                    }
 
     def test_batch_metadata_and_structure(self):
         self.assertEqual(self.batch_data.get("batch_id"), "cardiorespiratory_batch_1_v1")
@@ -152,6 +163,15 @@ class TestCardiorespiratoryBatch1(unittest.TestCase):
             )
 
             # Check exact evidence grounding in chunk store
+            has_reference_only = any(cit.document_id in REFERENCE_ONLY_DOCUMENT_IDS for cit in question.citations)
+            if has_reference_only:
+                # WHO is REFERENCE_ONLY_NON_ACTIVE:
+                # Excluded from active retrieval and not required for active tests.
+                # Structural validation passes without requiring excluded chunk files.
+                errors = validate_plab_question(question, None)
+                self.assertEqual(errors, [], f"Question {qid} failed validation gates: {errors}")
+                continue
+
             evidence_texts = []
             for cit in question.citations:
                 self.assertIn(

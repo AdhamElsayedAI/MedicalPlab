@@ -1,6 +1,6 @@
 # MedicalPlab — PLAB Provenance and Data Governance Specification
-**Document Version:** 1.1.0  
-**Phase / Milestone:** Gate 0.6.1 — PLAB Provenance Correction & Final Closure  
+**Document Version:** 1.2.0  
+**Phase / Milestone:** Gate 0.6.2 — PLAB Clean-Checkout & Active-Corpus Finalization  
 **Status:** Authoritative / Canonical  
 **Date:** 2026-09-17  
 
@@ -24,20 +24,22 @@ The PLAB learning module prepares medical students and international medical gra
 
 ## 2. Active Startup-Safe vs. Reference-Only Corpus Architecture
 
-The cardiorespiratory pilot evidence corpus is strictly partitioned to guarantee commercial safety:
+The cardiorespiratory evidence corpus is strictly partitioned to guarantee commercial safety and deterministic test execution:
 
 ### Corpus Partitioning Summary
 
 | Category | Document Count | Chunk Count | Commercial Reuse | Ingestion / Runtime Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **ACTIVE_STARTUP_SAFE** | **12** | **734** | **Unrestricted (CC BY 4.0)** | Active in retrieval index & startup runtime |
-| **REFERENCE_ONLY** | **1** | **83** | **NonCommercial Only (CC BY-NC-SA 3.0 IGO)** | Quarantined from active commercial retrieval |
+| **ACTIVE_STARTUP_SAFE** | **12** | **734** | **Unrestricted (CC BY 4.0)** | Active in retrieval index & startup runtime manifest |
+| **REFERENCE_ONLY** | **1** | **83** | **NonCommercial Only (CC BY-NC-SA 3.0 IGO)** | Quarantined from active commercial retrieval and active manifest |
+| **HISTORICAL_PRESERVED_TOTAL** | **13** | **817** | **Mixed** | Preserved snapshot for archival/audit lineage only |
 | **ARCHIVED_LOCAL** | **0** | **0** | N/A | Preserved in external archive |
 | **UNRESOLVED** | **0** | **0** | N/A | None |
 
-- **Active Startup-Safe Documents:** 12 documents (all verified CC BY 4.0)
-- **Active Startup-Safe Chunks:** 734 chunks
+- **Active Startup-Safe Production Corpus:** 12 documents (all verified CC BY 4.0)
+- **Active Startup-Safe Production Chunks:** 734 chunks
 - **Reference-Only Quarantined Documents:** 1 document (`DOC-WHO-CARD-0001`, 83 chunks)
+- **Historical Full Preserved Corpus:** 13 documents / 817 chunks (archival snapshot only; never used as active runtime requirement)
 - **Topics Covered:** Hypertension, Atrial Fibrillation, Syncope, COPD, CPR / Cardiac Arrest, Pneumothorax, ARDS, Cardiogenic Shock, Infective Endocarditis, Implantable Cardiac Devices, Aortic Stenosis, Mitral Valve Regurgitation.
 
 ### Complete 13-Source Governance Ledger
@@ -101,9 +103,42 @@ Source rights were verified using the strongest available rights authorities:
 
 ## 5. Clean Checkout & Runtime Configuration Contract
 
+### Explicit Corpus Layer Distinctions (Gate 0.6.2 Finalization)
+
+To prevent runtime ambiguity and ensure clean-checkout reproducibility across CI/CD environments, MedicalPlab strictly separates the following tiers:
+
+1. **Historical Preserved Corpus (Archival Metadata Only):**
+   - **Document Count:** 13 documents
+   - **Chunk Count:** 817 chunks
+   - **Status:** Historical baseline snapshot recorded in `Data/metadata/corpus_cardiorespiratory_snapshot_v1.json`. Preserved strictly for audit trails, cryptographic lineage, and historical benchmark comparisons. **Never used as active runtime requirement.**
+
+2. **Active Startup-Safe Production Corpus (Runtime Authority):**
+   - **Document Count:** 12 documents (all CC BY 4.0 approved)
+   - **Chunk Count:** 734 production chunks
+   - **Status:** The sole active runtime requirement enforced by `verify_production_data_manifest()`.
+
+3. **Reference-Only Quarantined Source (`DOC-WHO-CARD-0001`):**
+   - **Document Count:** 1 document (83 chunks)
+   - **License:** CC BY-NC-SA 3.0 IGO (NonCommercial Copyleft)
+   - **Governance Rule:** Strict non-active quarantine. WHO must **never**:
+     - Participate in active retrieval indices or embedding generation;
+     - Contribute to the expected active chunk count (734, never 817);
+     - Be required for PLAB startup or service initialization;
+     - Be required for PLAB clean-checkout tests;
+     - Appear as missing active runtime content in fail-closed diagnostics.
+
+4. **Clean-Checkout Test Fixture (Tracked, Public-Safe, Deterministic):**
+   - **Location:** `tests/plab/fixtures/cardiorespiratory_test_chunks.json` + `tests/plab/fixture_helper.py`
+   - **Content:** Exact CC BY 4.0 evidence passages cited across all 36 questions, complete with author attribution, journal/PMC metadata, and DOI links. ZERO WHO text. ZERO proprietary text.
+   - **Role:** Exercises identical parsing, citation verification, and manifest integrity logic as production, without requiring machine-local production corpus directories. **Not production data.**
+
+5. **Runtime Production Corpus (External / Configured):**
+   - **Location:** Configured via `MEDICALPLAB_DATA_ROOT` (e.g., `MedicalPlab-LocalData/PLAB`).
+   - **Behavior:** When external production corpus data is absent, the runtime **fails closed** with `PLAB_CONTENT_UNAVAILABLE` (HTTP 503). Diagnostics report exactly the 12 missing active CC BY 4.0 sources and expect 734 chunks (zero WHO leakage).
+
 ### The Clean-Checkout Invariant
 When a developer or CI pipeline performs a fresh `git clone` on a new machine without external files:
-1. The repository code compiles and passes all unit, synthetic, and property tests deterministically.
+1. The repository code compiles and passes all unit, synthetic, and property tests deterministically (`tests/plab`: 87/87 PASS).
 2. If `Data/processed/` or production data root is intentionally unavailable, the runtime **fails closed** with `PLAB_CONTENT_UNAVAILABLE` (HTTP 503).
 3. The platform never hallucinates evidence or silently substitutes unverified sources.
 

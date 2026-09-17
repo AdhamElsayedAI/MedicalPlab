@@ -127,12 +127,18 @@ def test_revision_id_cannot_overwrite_existing_history(tmp_path):
 
 def test_real_checkpoint_restart_preserves_preview_attempt(tmp_path):
     from medicalplab.plab.pilot import PLABPilotService
+    try:
+        from .fixture_helper import build_test_data_root
+    except ImportError:
+        from fixture_helper import build_test_data_root
+
+    data_root = build_test_data_root(tmp_path / "data_root")
     path = tmp_path / "pilot.db"
-    first = PLABPilotService.load_default(preview_qa=True, persistence_path=path)
+    first = PLABPilotService.load_default(preview_qa=True, persistence_path=path, data_root=data_root)
     qid = next(iter(first.questions))
     response = first.evaluate("synthetic-student", qid, "A", "durable-retry")
     progress = first.progress("synthetic-student")
-    second = PLABPilotService.load_default(preview_qa=True, persistence_path=path)
+    second = PLABPilotService.load_default(preview_qa=True, persistence_path=path, data_root=data_root)
     assert second.evaluate("synthetic-student", qid, "A", "durable-retry") == response
     assert second.progress("synthetic-student") == progress
     assert second.governance_counts()["golden"] == 0

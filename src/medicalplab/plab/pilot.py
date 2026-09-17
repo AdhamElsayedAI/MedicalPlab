@@ -27,7 +27,7 @@ from .governance import (
 )
 from .models import PLABCitation, PLABChoice, PLABQuestion, PLABQuestionStatus
 from .persistence import SQLitePilotPersistence
-from .data_manifest import ACTIVE_BATCH_PATH, verify_production_data_manifest
+from .data_manifest import ACTIVE_BATCH_PATH, REFERENCE_ONLY_DOCUMENT_IDS, verify_production_data_manifest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -181,8 +181,12 @@ class PLABPilotService:
         preview_qa: bool = False,
         persistence_path: Path | str | None = None,
         enable_persistence: bool = True,
+        data_root: Path | str | None = None,
     ) -> "PLABPilotService":
-        data_root = Path(os.environ.get("MEDICALPLAB_DATA_ROOT", str(PROJECT_ROOT / "Data")))
+        if data_root is None:
+            data_root = Path(os.environ.get("MEDICALPLAB_DATA_ROOT", str(PROJECT_ROOT / "Data")))
+        else:
+            data_root = Path(data_root)
         batch_path = data_root / ACTIVE_BATCH_PATH
         queue_path = data_root / "questions" / "cardiorespiratory_batch_1_review_queue.json"
         snapshot_path = data_root / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
@@ -195,6 +199,8 @@ class PLABPilotService:
             snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
             chunks: dict[str, dict[str, str]] = {}
             for document in snapshot["documents"]:
+                if str(document.get("document_id")) in REFERENCE_ONLY_DOCUMENT_IDS:
+                    continue
                 relative = Path(str(document["chunks_file"]))
                 path = data_root / Path(*relative.parts[1:]) if relative.parts and relative.parts[0].lower() == "data" else data_root / relative
                 chunk_data = json.loads(path.read_text(encoding="utf-8"))
