@@ -567,7 +567,7 @@ export function UniversityLearning() {
     (remediation.outcome === "TRANSFER_CONFIRMED" || remediation.outcome === "TRANSFER_NOT_CONFIRMED" || remediation.outcome === "UNRESOLVED")
   );
 
-  return <main className="min-h-screen bg-slate-950 text-slate-100 px-5 py-8">
+  return <div className="w-full text-slate-100">
     <div className="max-w-5xl mx-auto space-y-8">
       <header className="space-y-4">
         <div className="flex items-center justify-between">
@@ -942,5 +942,5 @@ export function UniversityLearning() {
         </aside>
       </div>
     </div>
-  </main>;
+  </div>;
 }
