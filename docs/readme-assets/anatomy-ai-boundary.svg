@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080E17" />
+      <stop offset="100%" stop-color="#0D1926" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.05" />
+    </linearGradient>
+    <linearGradient id="geoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.05" />
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06B6D4" />
+    </marker>
+  </defs>
+
+  <!-- Container -->
+  <rect x="0" y="0" width="880" height="360" rx="14" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Grid texture -->
+  <pattern id="gridPattern2" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3" />
+  </pattern>
+  <rect x="1" y="1" width="878" height="358" rx="13" fill="url(#gridPattern2)" />
+
+  <!-- Header -->
+  <text x="36" y="36" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL BOUNDARY</text>
+  <text x="215" y="36" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">AI Pedagogical Actions vs Fixed Scientific Geometry</text>
+
+  <!-- Layer 1: AI Pedagogical Actions -->
+  <g transform="translate(36, 56)">
+    <rect width="808" height="96" rx="10" fill="url(#aiGrad)" stroke="#0284C7" stroke-width="1.5" />
+    <text x="20" y="28" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">LAYER 1 · AI EDUCATIONAL &amp; SCENE ACTIONS</text>
+    <text x="20" y="46" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Emits structured educational commands only · Zero vertex or mesh generation</text>
+    
+    <!-- Action tags -->
+    <g transform="translate(20, 60)">
+      <rect x="0" y="0" width="105" height="24" rx="5" fill="#0B1E33" stroke="#0284C7" stroke-width="1" />
+      <text x="52" y="16" text-anchor="middle" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">HIGHLIGHT</text>
+
+      <rect x="115" y="0" width="95" height="24" rx="5" fill="#0B1E33" stroke="#0284C7" stroke-width="1" />
+      <text x="162" y="16" text-anchor="middle" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">ISOLATE</text>
+
+      <rect x="220" y="0" width="115" height="24" rx="5" fill="#0B1E33" stroke="#0284C7" stroke-width="1" />
+      <text x="277" y="16" text-anchor="middle" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">FLY_TO_PRESET</text>
+
+      <rect x="345" y="0" width="135" height="24" rx="5" fill="#0B1E33" stroke="#0284C7" stroke-width="1" />
+      <text x="412" y="16" text-anchor="middle" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">SET_SURFACE_MODE</text>
+
+      <rect x="490" y="0" width="130" height="24" rx="5" fill="#0B1E33" stroke="#0284C7" stroke-width="1" />
+      <text x="555" y="16" text-anchor="middle" fill="#BAE6FD" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">PIN_CHALLENGE</text>
+    </g>
+  </g>
+
+  <!-- One-Direction Flow Arrows & Conduit -->
+  <g transform="translate(440, 154)">
+    <line x1="0" y1="0" x2="0" y2="40" stroke="#06B6D4" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)" />
+    <rect x="-105" y="10" width="210" height="20" rx="4" fill="#080E17" stroke="#1E293B" stroke-width="1" />
+    <text x="0" y="24" text-anchor="middle" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1">ONE-WAY CLIENT DISPATCH</text>
+  </g>
+
+  <!-- Layer 2: Fixed Scientific Anatomy Geometry -->
+  <g transform="translate(36, 196)">
+    <rect width="808" height="96" rx="10" fill="url(#geoGrad)" stroke="#059669" stroke-width="1.5" />
+    <text x="20" y="28" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">LAYER 2 · SCIENTIFIC HUMAN REFERENCE ATLAS (HRA)</text>
+    <text x="20" y="46" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Fixed scientific asset library · Common Coordinate Framework (CCF v1.3/v2.0) · NIH HuBMAP Consortium</text>
+
+    <!-- Mesh assets -->
+    <g transform="translate(20, 60)">
+      <rect x="0" y="0" width="155" height="24" rx="5" fill="#06281E" stroke="#059669" stroke-width="1" />
+      <text x="77" y="16" text-anchor="middle" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">VH_M_Kidney_L.glb</text>
+
+      <rect x="165" y="0" width="220" height="24" rx="5" fill="#06281E" stroke="#059669" stroke-width="1" />
+      <text x="275" y="16" text-anchor="middle" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">VH_M_Blood_Vasculature.glb</text>
+
+      <rect x="395" y="0" width="155" height="24" rx="5" fill="#06281E" stroke="#059669" stroke-width="1" />
+      <text x="472" y="16" text-anchor="middle" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">VH_M_Ureter_L.glb</text>
+
+      <rect x="560" y="0" width="190" height="24" rx="5" fill="#06281E" stroke="#059669" stroke-width="1" />
+      <text x="655" y="16" text-anchor="middle" fill="#A7F3D0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">ASCT+B CCF Crosswalk</text>
+    </g>
+  </g>
+
+  <!-- Invariant Footer Banner -->
+  <g transform="translate(36, 308)">
+    <rect width="808" height="34" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1" />
+    <circle cx="20" cy="17" r="5" fill="#10B981" />
+    <text x="35" y="21" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">CRITICAL SAFETY INVARIANT:</text>
+    <text x="220" y="21" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Artificial intelligence does NOT generate human anatomy geometry. AI orchestrates learning; geometry is scientifically fixed.</text>
+  </g>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="auto">
+  <defs>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080E17" />
+      <stop offset="100%" stop-color="#0C1724" />
+    </linearGradient>
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3" />
+      <stop offset="25%" stop-color="#06B6D4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#14B8A6" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#06B6D4" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect x="0" y="0" width="1200" height="220" rx="14" fill="url(#ribbonBg)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Grid texture -->
+  <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.4" />
+  </pattern>
+  <rect x="1" y="1" width="1198" height="218" rx="13" fill="url(#gridPattern)" />
+
+  <!-- Header / Subtitle -->
+  <text x="36" y="34" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">STRUCTURE CARRIES SIGNAL</text>
+  <text x="250" y="34" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">The Continuous Closed-Loop Cognitive Cycle</text>
+  <text x="1164" y="34" text-anchor="end" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">MEDICALPLAB · COGNITIVE ANATOMY</text>
+
+  <!-- Primary Conduit Line (Trunk) -->
+  <path d="M 60 110 L 1140 110" stroke="#1E293B" stroke-width="3" stroke-linecap="round" />
+  <path d="M 60 110 L 1140 110" stroke="url(#pathGrad)" stroke-width="2" stroke-dasharray="8 6" stroke-linecap="round" />
+
+  <!-- Branch Tributaries (Subtle vascular branching lines) -->
+  <path d="M 120 110 Q 155 75 190 110" fill="none" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M 270 110 Q 340 145 410 110" fill="none" stroke="#14B8A6" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M 560 110 Q 640 70 720 110" fill="none" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.4" />
+  <path d="M 870 110 Q 940 145 1010 110" fill="none" stroke="#10B981" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- Node 1: Attempt -->
+  <g transform="translate(90, 110)">
+    <circle r="18" fill="#0B131E" stroke="#334155" stroke-width="1.5" />
+    <circle r="7" fill="#64748B" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">ATTEMPT</text>
+    <text y="50" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Preclinical / PLAB</text>
+  </g>
+
+  <!-- Node 2: Reasoning Signal -->
+  <g transform="translate(235, 110)">
+    <circle r="18" fill="#0B131E" stroke="#06B6D4" stroke-width="1.5" />
+    <circle r="7" fill="#06B6D4" filter="url(#glow)" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">REASONING SIGNAL</text>
+    <text y="50" text-anchor="middle" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Heuristic Distractor</text>
+  </g>
+
+  <!-- Node 3: Adaptive Policy -->
+  <g transform="translate(385, 110)">
+    <circle r="18" fill="#0B131E" stroke="#0EA5E9" stroke-width="1.5" />
+    <circle r="7" fill="#0EA5E9" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">ADAPT</text>
+    <text y="50" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Mastery Engine</text>
+  </g>
+
+  <!-- Node 4: Socratic Remediation -->
+  <g transform="translate(535, 110)">
+    <circle r="18" fill="#0B131E" stroke="#14B8A6" stroke-width="1.5" />
+    <circle r="7" fill="#14B8A6" filter="url(#glow)" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">REMEDIATION</text>
+    <text y="50" text-anchor="middle" fill="#14B8A6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Probe → Guide</text>
+  </g>
+
+  <!-- Node 5: Independent Transfer -->
+  <g transform="translate(685, 110)">
+    <circle r="18" fill="#0B131E" stroke="#10B981" stroke-width="1.5" />
+    <polygon points="0,-7 7,7 -7,7" fill="#10B981" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">TRANSFER</text>
+    <text y="50" text-anchor="middle" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Held-Out Mastery</text>
+  </g>
+
+  <!-- Node 6: Grounded Tutor -->
+  <g transform="translate(835, 110)">
+    <circle r="18" fill="#0B131E" stroke="#06B6D4" stroke-width="1.5" />
+    <circle r="7" fill="#06B6D4" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">GROUNDED TUTOR</text>
+    <text y="50" text-anchor="middle" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Verified Literature</text>
+  </g>
+
+  <!-- Node 7: 3D Spatial Anatomy -->
+  <g transform="translate(985, 110)">
+    <circle r="18" fill="#0B131E" stroke="#8B5CF6" stroke-width="1.5" />
+    <circle r="7" fill="#8B5CF6" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">3D ANATOMY</text>
+    <text y="50" text-anchor="middle" fill="#A78BFA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">HRA Pin Challenge</text>
+  </g>
+
+  <!-- Node 8: Unified Progress -->
+  <g transform="translate(1115, 110)">
+    <circle r="18" fill="#0B131E" stroke="#10B981" stroke-width="2" />
+    <circle r="8" fill="#10B981" filter="url(#glow)" />
+    <text y="36" text-anchor="middle" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">PROGRESS</text>
+    <text y="50" text-anchor="middle" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Unified Telemetry</text>
+  </g>
+</svg>
