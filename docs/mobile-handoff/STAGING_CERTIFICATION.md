@@ -1,39 +1,41 @@
 # MedicalPlab — Staging Environment Certification
 ## ⚠️ NON-DURABLE INTEGRATION / DEMONSTRATION STAGING
 **Date:** September 18, 2026  
-**Git Baseline SHA:** `e3225e47534968270312bb2db5df697ee1043876`  
+**Git Baseline SHA:** `2078d142088f4c689975ab7f560a2107170b07a8`  
 **Target Branch:** `release/final-mentor-mobile-handoff`  
-**Runtime Mode:** `pilot`  
+**Region:** `europe-west1`  
+**Runtime Mode:** `production` / `pilot`  
 **API Specification Version:** `1.1.0`  
 **OpenAPI Contract SHA-256:** `e17f06cd4fb4cebca4f14ab4ffbd702cfa9b3eaf050da55f8a5c1c5b0dccfb95`  
-**Postman Suite SHA-256:** `55792ca5cdf66612f551b4cfdfd504de58611dd97ce507d8935c6306f7d366ac`  
-**Target Staging Base URL:** `https://medicalplab-api-staging-uc.a.run.app` (or local staging simulation `http://127.0.0.1:8000`)
+**Postman Suite SHA-256:** `a1a01939706a168c610c5c6f11f96355f2b2d88fe85c354512b9455c170b2895`  
+**Target Staging Base URL (BFF Gateway):** `https://medicalplab-bff-staging.europe-west1.run.app` (Public, Gate: `X-Staging-Key`)  
+**Target Backend Service URL:** `https://medicalplab-api-staging.europe-west1.run.app` (Private, `--no-allow-unauthenticated`)  
 
 > [!WARNING]
-> **Non-Durable Staging.** This environment uses ephemeral SQLite storage. Learner state, session progress, and remediation records do NOT persist across Cloud Run container lifecycle restarts. This environment is suitable for API contract verification, mobile integration testing, and live mentor demonstrations only. It is NOT equivalent to a production-grade durable environment.
+> **Non-Durable Staging.** This environment uses ephemeral SQLite storage. Learner state, session progress, and remediation records do NOT persist across Cloud Run container lifecycle restarts (`STAGING_PERSISTENCE_CERTIFIED = NO`). This environment is suitable for API contract verification, mobile integration testing, and live mentor demonstrations only. It is NOT equivalent to a production-grade durable environment.
 
 ---
 
 ## 1. Staging Infrastructure & Deployment Status
 
 ```
-[GitHub Actions CI/CD] 
-       │
-       ▼ (On main push or manual dispatch)
-[.github/workflows/deploy-cloud-run.yml]
-       │
-       ├── Check GCP_PROJECT_ID & GCP_SA_KEY
-       │      │
-       │      ├─► Configured ────► Build Docker Image ──► Deploy Cloud Run (max-instances: 1)
-       │      │
-       │      └─► Absent ────────► FAIL CLEARLY (Fail-closed deployment truth)
+[Vercel Next.js UI]
+        │
+        ▼ (Same-origin server proxy /api/medicalplab/* with server-only STAGING_ACCESS_KEY)
+[Public Cloud Run: medicalplab-bff] (Gate: X-Staging-Key, min=0, max=1, europe-west1)
+        │
+        ▼ (Google IAM ID Token: roles/run.invoker)
+[Private Cloud Run: medicalplab-api] (--no-allow-unauthenticated, min=0, max=1, concurrency=4)
+        │
+        ▼
+[Ephemeral SQLite: Data/persistence/]
 ```
 
 ### Authoritative Deployment Status
-- **Current GCP Cloud Run Deployment:** `STAGING_DEPLOYMENT_BLOCKED_GCP_CONFIGURATION`
-- **Root Cause:** GitHub repository secrets `GCP_PROJECT_ID` and `GCP_SA_KEY` are not yet populated in repository settings.
-- **Fail-Closed Guarantee:** The GitHub Actions deployment workflow has been audited and updated so that it fails closed with an explicit error rather than falsely reporting green success when secrets are missing.
-- **Required Administrator Action:** To activate automated Cloud Run deployment, configure `GCP_PROJECT_ID` and `GCP_SA_KEY` (with Cloud Run Admin + Storage Admin permissions) in GitHub Repository Settings &rarr; Secrets and variables &rarr; Actions.
+- **Current GCP Cloud Run Deployment:** `MEDICALPLAB_ZERO_COST_STAGING_BLOCKED_USER_GCP_SETUP`
+- **Root Cause:** GCP Project ID, Workload Identity Federation / Service Account Key, and `STAGING_ACCESS_KEY` secrets are not yet configured in GitHub Repository Settings.
+- **Fail-Closed Guarantee:** The GitHub Actions deployment workflow (`deploy-cloud-run.yml`) fails closed with an explicit error rather than falsely reporting green success when secrets are missing.
+- **Required Administrator Action:** Complete the zero-cost GCP staging setup steps (create project, enable Run/Artifact Registry, configure WIF/SA, set GitHub repository secrets `GCP_PROJECT_ID`, `GCP_WIF_PROVIDER`/`GCP_SA_KEY`, and `STAGING_ACCESS_KEY`).
 
 ---
 

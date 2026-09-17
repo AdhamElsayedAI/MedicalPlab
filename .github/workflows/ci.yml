@@ -169,3 +169,93 @@ jobs:
         run: |
           python Scripts/verify_repository_handoff.py
 
+  bff-gateway-tests:
+    name: Staging BFF Security Gateway Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r staging/bff/requirements.txt pytest httpx starlette fastapi
+
+      - name: Run BFF Gateway Unit Tests
+        run: |
+          pytest tests/bff/ -v
+
+  docker-runtime-smoke:
+    name: Docker Runtime Smoke Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Production Docker Image
+        run: |
+          docker build -t medicalplab-api:smoke .
+          IMAGE_SIZE_BYTES=$(docker image inspect medicalplab-api:smoke --format='{{.Size}}')
+          IMAGE_SIZE_MB=$((IMAGE_SIZE_BYTES / 1024 / 1024))
+          echo "BACKEND_IMAGE_SIZE_MB=${IMAGE_SIZE_MB}"
+          echo "BACKEND_IMAGE_SIZE_MB=${IMAGE_SIZE_MB}" >> $GITHUB_ENV
+
+      - name: Verify No ML Model Weights in Production Image
+        run: |
+          docker run --rm medicalplab-api:smoke python -c "
+          import sys
+          for mod in ['torch', 'transformers', 'sentence_transformers', 'accelerate']:
+              try:
+                  __import__(mod)
+                  print(f'ERROR: Unwanted module {mod} found in production image', file=sys.stderr)
+                  sys.exit(1)
+              except ImportError:
+                  pass
+          print('ML_MODEL_WEIGHTS_IN_IMAGE = NO')
+          "
+
+      - name: Run Container & Verify Runtime Health
+        run: |
+          docker run -d --name test-api -p 8080:8080 -e MEDICALPLAB_RUNTIME_MODE=production -e PORT=8080 medicalplab-api:smoke
+
+          echo "Waiting for container to report healthy..."
+          HEALTHY=0
+          for i in {1..30}; do
+            if curl -s -f http://localhost:8080/health > /dev/null; then
+              echo "Container is responsive after $i seconds"
+              HEALTHY=1
+              break
+            fi
+            sleep 1
+          done
+
+          if [ $HEALTHY -ne 1 ]; then
+            echo "ERROR: Container failed to become responsive within 30 seconds"
+            docker logs test-api
+            exit 1
+          fi
+
+          echo "--- Testing /health ---"
+          HEALTH_RESP=$(curl -s -f http://localhost:8080/health)
+          echo "Health Response: $HEALTH_RESP"
+
+          echo "--- Testing /ready ---"
+          READY_RESP=$(curl -s http://localhost:8080/ready)
+          echo "Ready Response: $READY_RESP"
+
+          echo "--- Testing /api/v1/version ---"
+          VERSION_RESP=$(curl -s -f http://localhost:8080/api/v1/version)
+          echo "Version Response: $VERSION_RESP"
+
+          echo "--- Stopping and removing container ---"
+          docker stop test-api
+          docker rm test-api
+          echo "DOCKER_RUNTIME_SMOKE = PASS"
+
+

@@ -1,4 +1,4 @@
-name: Deploy MedicalPlab API to Google Cloud Run
+name: Deploy MedicalPlab Staging to Google Cloud Run
 
 on:
   push:
@@ -12,35 +12,57 @@ on:
       - 'Dockerfile'
       - 'requirements.txt'
       - 'pyproject.toml'
-      - 'cloudbuild.yaml'
+      - 'staging/bff/**'
       - '.github/workflows/deploy-cloud-run.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  SERVICE_NAME: medicalplab-api
-  REGION: us-central1
+  REGION: europe-west1
+  BACKEND_SERVICE_NAME: medicalplab-api
+  BFF_SERVICE_NAME: medicalplab-bff
+  ARTIFACT_REPO: medicalplab
   ALLOWED_ORIGINS: 'https://medical-plab.vercel.app,http://localhost:3000,http://127.0.0.1:3000'
 
 jobs:
-  deploy:
-    name: Build and Deploy to Cloud Run
+  deploy-staging:
+    name: Build & Deploy Staging (Backend + BFF)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Validate GCP Configuration
+      - name: Validate Staging Infrastructure Configuration
         run: |
-          if [ -z "${{ secrets.GCP_PROJECT_ID }}" ] || [ -z "${{ secrets.GCP_SA_KEY }}" ]; then
-            echo "::error::DEPLOYMENT_FAILED: GCP_PROJECT_ID or GCP_SA_KEY secret is not configured in this repository."
-            echo "Deployment to Cloud Run cannot proceed without valid GCP credentials."
-            echo "To configure staging, set GCP_PROJECT_ID and GCP_SA_KEY repository secrets in GitHub Settings."
+          if [ -z "${{ secrets.GCP_PROJECT_ID }}" ]; then
+            echo "::error::DEPLOYMENT_BLOCKED: GCP_PROJECT_ID secret is not configured."
+            echo "Deployment to Cloud Run cannot proceed without GCP configuration."
+            exit 1
+          fi
+          if [ -z "${{ secrets.GCP_WIF_PROVIDER }}" ] && [ -z "${{ secrets.GCP_SA_KEY }}" ]; then
+            echo "::error::DEPLOYMENT_BLOCKED: Neither GCP_WIF_PROVIDER nor GCP_SA_KEY is configured."
+            echo "Configure Workload Identity Federation or Service Account Key in GitHub Secrets."
+            exit 1
+          fi
+          if [ -z "${{ secrets.STAGING_ACCESS_KEY }}" ]; then
+            echo "::error::DEPLOYMENT_BLOCKED: STAGING_ACCESS_KEY secret is required for BFF gateway security."
             exit 1
           fi
 
-      - name: Google Cloud Authentication
+      - name: Authenticate to Google Cloud (Workload Identity Federation)
+        if: ${{ secrets.GCP_WIF_PROVIDER != '' }}
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
+          service_account: ${{ secrets.GCP_WIF_SERVICE_ACCOUNT }}
+
+      - name: Authenticate to Google Cloud (Service Account Key Fallback)
+        if: ${{ secrets.GCP_WIF_PROVIDER == '' && secrets.GCP_SA_KEY != '' }}
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
@@ -50,49 +72,89 @@ jobs:
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-      - name: Authorize Docker Push
-        run: gcloud auth configure-docker --quiet
-
-      - name: Build and Push Docker Image
+      - name: Configure Artifact Registry Docker Authentication
         run: |
-          IMAGE_TAG="gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}"
-          LATEST_TAG="gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.SERVICE_NAME }}:latest"
-          docker build -t "$IMAGE_TAG" -t "$LATEST_TAG" .
-          docker push "$IMAGE_TAG"
-          docker push "$LATEST_TAG"
+          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
-      - name: Deploy to Cloud Run Staging
+      - name: Build & Push Backend Docker Image
         run: |
-          # Deploy WITHOUT --allow-unauthenticated.
-          # Cloud Run IAM transport authentication is SEPARATE from MedicalPlab X-User-Id
-          # learner partitioning. X-User-Id is synthetic caller-supplied learner identity
-          # for pilot state partitioning — it is NOT a production authentication boundary.
-          # Restricting Cloud Run ingress to IAM-authenticated callers prevents unrestricted
-          # anonymous access to learner-state pilot APIs.
-          # Authorized pilot testers / mobile integration testers obtain access via:
-          #   gcloud auth print-identity-token
-          # and pass it as: Authorization: Bearer <token>
-          gcloud run deploy ${{ env.SERVICE_NAME }} \
-            --image "gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}" \
+          BACKEND_IMAGE="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BACKEND_SERVICE_NAME }}:${{ github.sha }}"
+          BACKEND_LATEST="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BACKEND_SERVICE_NAME }}:latest"
+          docker build -t "$BACKEND_IMAGE" -t "$BACKEND_LATEST" .
+          docker push "$BACKEND_IMAGE"
+          docker push "$BACKEND_LATEST"
+
+      - name: Deploy Private Backend (medicalplab-api)
+        run: |
+          BACKEND_IMAGE="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BACKEND_SERVICE_NAME }}:${{ github.sha }}"
+          gcloud run deploy ${{ env.BACKEND_SERVICE_NAME }} \
+            --image "$BACKEND_IMAGE" \
             --region ${{ env.REGION }} \
             --platform managed \
             --no-allow-unauthenticated \
+            --service-account "medicalplab-api-runtime@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com" \
             --port 8080 \
             --memory 1Gi \
             --cpu 1 \
             --min-instances 0 \
             --max-instances 1 \
+            --concurrency 4 \
             --timeout 300 \
-            --set-env-vars ALLOWED_ORIGINS="${{ env.ALLOWED_ORIGINS }}",MEDICALPLAB_RUNTIME_MODE="pilot",MEDICALPLAB_PLAB_PREVIEW_QA="1",MEDICALPLAB_PHASE_2B_ENABLED="1",MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+            --set-env-vars MEDICALPLAB_RUNTIME_MODE="production",MEDICALPLAB_PLAB_PREVIEW_QA="1",ALLOWED_ORIGINS="${{ env.ALLOWED_ORIGINS }}"
 
-      - name: Verify Staging Deployment & Health
+      - name: Retrieve Private Backend URL
         run: |
-          URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --platform managed --region ${{ env.REGION }} --format "value(status.url)")
-          echo "Staging Service URL: $URL"
-          # Cloud Run requires IAM authentication — use identity token for health check.
-          # Do NOT weaken ingress to make curl simpler.
-          # Do NOT print the token in logs (redirected to /dev/null).
-          TOKEN=$(gcloud auth print-identity-token 2>/dev/null)
-          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/health" || exit 1
-          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/ready" || exit 1
-          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/api/v1/version" || exit 1
+          BACKEND_URL=$(gcloud run services describe ${{ env.BACKEND_SERVICE_NAME }} --platform managed --region ${{ env.REGION }} --format "value(status.url)")
+          echo "BACKEND_URL=$BACKEND_URL" >> $GITHUB_ENV
+          echo "Private Backend URL: $BACKEND_URL"
+
+      - name: Build & Push BFF Gateway Docker Image
+        run: |
+          BFF_IMAGE="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BFF_SERVICE_NAME }}:${{ github.sha }}"
+          BFF_LATEST="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BFF_SERVICE_NAME }}:latest"
+          docker build -t "$BFF_IMAGE" -t "$BFF_LATEST" staging/bff
+          docker push "$BFF_IMAGE"
+          docker push "$BFF_LATEST"
+
+      - name: Deploy Public BFF Gateway (medicalplab-bff)
+        run: |
+          BFF_IMAGE="${{ env.REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ env.ARTIFACT_REPO }}/${{ env.BFF_SERVICE_NAME }}:${{ github.sha }}"
+          gcloud run deploy ${{ env.BFF_SERVICE_NAME }} \
+            --image "$BFF_IMAGE" \
+            --region ${{ env.REGION }} \
+            --platform managed \
+            --allow-unauthenticated \
+            --service-account "medicalplab-bff-runtime@${{ secrets.GCP_PROJECT_ID }}.iam.gserviceaccount.com" \
+            --port 8080 \
+            --memory 512Mi \
+            --cpu 1 \
+            --min-instances 0 \
+            --max-instances 1 \
+            --concurrency 80 \
+            --timeout 60 \
+            --set-env-vars BACKEND_SERVICE_URL="${{ env.BACKEND_URL }}",STAGING_ACCESS_KEY="${{ secrets.STAGING_ACCESS_KEY }}",ALLOWED_ORIGINS="${{ env.ALLOWED_ORIGINS }}"
+
+      - name: Verify Live Staging Security Boundaries
+        run: |
+          BFF_URL=$(gcloud run services describe ${{ env.BFF_SERVICE_NAME }} --platform managed --region ${{ env.REGION }} --format "value(status.url)")
+          echo "Public BFF Gateway URL: $BFF_URL"
+
+          echo "--- 1. Testing Direct Anonymous Access to Private Backend (Must Fail 401/403) ---"
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${{ env.BACKEND_URL }}/health" || true)
+          echo "Backend Anonymous Response Code: $HTTP_CODE"
+          if [ "$HTTP_CODE" != "401" ] && [ "$HTTP_CODE" != "403" ]; then
+            echo "ERROR: Backend allowed anonymous traffic! HTTP_CODE=$HTTP_CODE"
+            exit 1
+          fi
+
+          echo "--- 2. Testing BFF Without Staging Key (Must Fail 401) ---"
+          BFF_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${BFF_URL}/health" || true)
+          echo "BFF No-Key Response Code: $BFF_CODE"
+          if [ "$BFF_CODE" != "401" ]; then
+            echo "ERROR: BFF allowed access without staging key! BFF_CODE=$BFF_CODE"
+            exit 1
+          fi
+
+          echo "--- 3. Testing BFF With Staging Key (Must Succeed 200) ---"
+          HEALTH_RESP=$(curl -s -f -H "X-Staging-Key: ${{ secrets.STAGING_ACCESS_KEY }}" "${BFF_URL}/health")
+          echo "BFF Health Response: $HEALTH_RESP"
