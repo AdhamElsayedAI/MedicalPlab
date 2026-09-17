@@ -86,3 +86,21 @@ def test_loop_status_endpoint(client: TestClient):
     assert data["learner_id"] == "test_loop_learner"
     assert data["topic"] == "RAAS mechanisms"
     assert "mastery_improved" in data
+
+
+def test_adaptive_endpoints_missing_identity_fail_closed(client: TestClient):
+    # GET /state without identity must return 401 USER_ID_REQUIRED
+    res_state = client.get("/api/v1/adaptive/state")
+    assert res_state.status_code == 401
+    assert res_state.json()["detail"]["code"] == "USER_ID_REQUIRED"
+
+    # GET /recommendation without identity must return 401 USER_ID_REQUIRED
+    res_rec = client.get("/api/v1/adaptive/recommendation")
+    assert res_rec.status_code == 401
+    assert res_rec.json()["detail"]["code"] == "USER_ID_REQUIRED"
+
+    # Backward-compatible X-Learner-Id must be accepted
+    res_compat = client.get("/api/v1/adaptive/state", headers={"X-Learner-Id": "compat_learner"})
+    assert res_compat.status_code == 200
+    assert res_compat.json()["learner_id"] == "compat_learner"
+

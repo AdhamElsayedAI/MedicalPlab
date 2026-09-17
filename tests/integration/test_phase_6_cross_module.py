@@ -366,6 +366,10 @@ def test_negative_missing_learner_identity_fails_closed(client: TestClient):
     res_prog = client.get("/api/v1/learner/progress")
     assert res_prog.status_code in {401, 422}
 
+    res_adapt = client.get("/api/v1/adaptive/state")
+    assert res_adapt.status_code in {401, 422}
+
+
 
 def test_negative_unknown_plab_question_returns_404(client: TestClient):
     """Evaluating unknown PLAB question returns 404."""
