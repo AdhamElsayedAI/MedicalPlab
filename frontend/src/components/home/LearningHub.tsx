@@ -97,10 +97,10 @@ export const LearningHub: React.FC = () => {
           <div className="flex items-center gap-2 mb-2">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-sky-500/10 text-sky-300 border border-sky-500/20">
               <Activity className="w-3 h-3 text-sky-400" />
-              Active Medical Learner
+              Preclinical &amp; Clinical Track
             </span>
-            <span className="text-xs text-slate-400 font-mono">
-              ID: {learnerId.slice(0, 12)}...
+            <span className="text-xs text-slate-400 font-medium">
+              Medical Student
             </span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">

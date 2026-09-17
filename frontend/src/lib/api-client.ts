@@ -243,7 +243,7 @@ class PlatformApiClient {
       throw new ApiUnavailableError(`PLAB questions returned HTTP ${response.status}.`);
     }
     const body = await response.json();
-    return Array.isArray(body.items) ? body.items : [];
+    return Array.isArray(body.questions) ? body.questions : Array.isArray(body.items) ? body.items : [];
   }
 
   async getPLABQuestion(questionId: string): Promise<PLABQuestionPublic> {

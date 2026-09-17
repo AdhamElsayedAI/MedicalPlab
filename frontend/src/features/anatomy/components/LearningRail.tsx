@@ -54,7 +54,7 @@ export function LearningRail({
   isCutawayMode = false,
 }: LearningRailProps) {
   return (
-    <aside className="w-full md:w-[360px] bg-white border-l border-slate-200/90 flex flex-col h-full shrink-0 select-none shadow-xs z-10">
+    <aside className="w-full md:w-[360px] bg-white border-t md:border-t-0 md:border-l border-slate-200/90 flex flex-col flex-1 md:h-full md:shrink-0 select-none shadow-xs z-10 overflow-hidden">
       {/* Mode Switcher Tabs */}
       <div className="p-3 border-b border-slate-100 shrink-0">
         <ModeSwitcher

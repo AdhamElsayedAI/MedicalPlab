@@ -439,8 +439,8 @@ export function AnatomyLabClient() {
 
       {/* Main Learning Workspace */}
       <div className="flex flex-col md:flex-row flex-1 relative overflow-hidden">
-        {/* HERO 3D Anatomy Stage (Gets all remaining width) */}
-        <div className="flex-1 h-full relative flex flex-col bg-[#0D1722] overflow-hidden">
+        {/* HERO 3D Anatomy Stage (Gets 45vh on mobile, all remaining width on desktop) */}
+        <div className="h-[45vh] md:h-full md:flex-1 relative flex flex-col bg-[#0D1722] overflow-hidden shrink-0">
           {/* Subtle Radial Stage Lighting Overlay */}
           <div
             className="absolute inset-0 pointer-events-none"

@@ -144,15 +144,16 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-xs font-medium text-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-sky-400/50"
+              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-xs font-medium text-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-sky-400/50 shrink-0"
               aria-expanded={profileDropdownOpen}
               aria-label="Learner Profile Menu"
             >
-              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="font-mono text-[11px] text-slate-300 max-w-[100px] truncate">
-                {learnerId || "anonymous"}
+              <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+              <span className="text-xs font-medium text-slate-200">
+                <span className="hidden sm:inline">Learner Profile</span>
+                <span className="sm:hidden">Profile</span>
               </span>
-              <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
+              <ChevronDown className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             </button>
 
             {profileDropdownOpen && (

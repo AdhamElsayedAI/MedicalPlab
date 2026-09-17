@@ -68,9 +68,10 @@ export const UnifiedProgressView: React.FC = () => {
 
         <div className="flex items-center gap-3">
           <div className="hidden sm:flex flex-col items-end text-right">
-            <span className="text-xs text-slate-400 font-mono">Learner ID</span>
-            <span className="text-xs font-semibold text-slate-200 font-mono bg-slate-800/70 px-2 py-0.5 rounded border border-slate-700/50">
-              {learnerId}
+            <span className="text-xs text-slate-400">Student Profile</span>
+            <span className="text-xs font-medium text-teal-300 bg-teal-950/40 px-2.5 py-0.5 rounded-full border border-teal-800/50 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+              Active Session
             </span>
           </div>
           <button
