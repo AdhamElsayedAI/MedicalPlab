@@ -43,7 +43,14 @@
   }
 
   body {
-    background-color: var(--bg-primary);
+    background-color: #070c18;
+    background-image:
+      radial-gradient(ellipse 70% 45% at 50% -5%, rgba(14, 165, 233, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 40% at 90% 25%, rgba(99, 102, 241, 0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 45% at 10% 75%, rgba(16, 185, 129, 0.035) 0%, transparent 65%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 52px 52px, 52px 52px;
     color: var(--text-primary);
     font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -54,7 +61,7 @@
 }
 
 /* ============================================================
-   PREMIUM MEDICAL CARD — replaces .cyber-card
+   PREMIUM MEDICAL CARD — Elevation & Depth
    ============================================================ */
 .med-card {
   background: var(--bg-card);
@@ -63,24 +70,26 @@
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.3),
-    0 8px 24px rgba(0, 0, 0, 0.2);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    0 1px 3px rgba(0, 0, 0, 0.35),
+    0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.22s ease;
 }
 
 .med-card:hover {
   border-color: var(--border-default);
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.3),
-    0 12px 32px rgba(0, 0, 0, 0.25);
-  transform: translateY(-1px);
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 16px 36px rgba(0, 0, 0, 0.32);
+  transform: translateY(-3px);
 }
 
 .med-card-active {
   border-color: var(--border-emphasis);
   box-shadow:
-    0 0 0 1px rgba(56, 189, 248, 0.2),
-    0 8px 24px rgba(0, 0, 0, 0.2);
+    0 0 0 1px rgba(56, 189, 248, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 /* Backward compatible — old .cyber-card now maps to .med-card */
@@ -450,4 +459,83 @@
     radial-gradient(ellipse 80% 50% at 50% -10%, rgba(14, 165, 233, 0.12) 0%, transparent 70%),
     radial-gradient(ellipse 60% 40% at 80% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 50% 30% at 20% 60%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+}
+
+/* ============================================================
+   TRACK SPECIFIC DEPTH & BORDER TINT
+   ============================================================ */
+.med-track-university:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15), 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.med-track-plab:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15), 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.med-track-anatomy:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15), 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================================
+   AMBIENT COGNITIVE LOOP ANIMATION
+   ============================================================ */
+@keyframes cognitivePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 14px 2px rgba(56, 189, 248, 0.25);
+    transform: scale(1.02);
+  }
+}
+
+.animate-cognitive-pulse {
+  animation: cognitivePulse 3s ease-in-out infinite;
+}
+
+@keyframes conduitFlow {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-conduit-flow {
+  stroke-dasharray: 6 4;
+  animation: conduitFlow 1.6s linear infinite;
+}
+
+@keyframes ambientGlowBreathe {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.22;
+    transform: scale(1.03);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientGlowBreathe 6s ease-in-out infinite;
+}
+
+/* ============================================================
+   ACCESSIBILITY — PREFERS-REDUCED-MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

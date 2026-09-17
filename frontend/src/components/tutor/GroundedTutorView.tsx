@@ -280,7 +280,10 @@ export const GroundedTutorView: React.FC = () => {
                     <div className="w-7 h-7 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
                       <Sparkles className="w-4 h-4" />
                     </div>
-                    <span className="font-bold text-white text-sm">Grounded Clinical Tutor</span>
+                    <div>
+                      <span className="font-bold text-white text-sm block">Grounded Clinical Tutor</span>
+                      <span className="text-[10px] text-slate-400">Peer-Reviewed Socratic Guidance</span>
+                    </div>
                   </div>
 
                   <div className="flex items-center gap-2">
@@ -289,9 +292,25 @@ export const GroundedTutorView: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Main Tutor Message */}
-                <div className="text-sm text-slate-100 leading-relaxed space-y-2">
-                  <p>{resp.message}</p>
+                {/* Key Learning Point / Concept (if available) */}
+                {resp.revision_summary && (
+                  <div className="p-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/25 text-xs text-emerald-100 flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-emerald-300 block mb-0.5 font-semibold">Key Clinical Concept</strong>
+                      <p className="leading-relaxed">{resp.revision_summary}</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Main Clinical Explanation */}
+                <div className="space-y-1.5 pt-1">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">
+                    Mechanistic Explanation
+                  </span>
+                  <div className="text-sm text-slate-100 leading-relaxed space-y-2 bg-white/[0.02] p-4 rounded-xl border border-white/[0.05]">
+                    <p>{resp.message}</p>
+                  </div>
                 </div>
 
                 {/* Socratic Probe Callout */}
@@ -301,7 +320,7 @@ export const GroundedTutorView: React.FC = () => {
                       <Lightbulb className="w-4 h-4 text-sky-400" />
                       <span>Socratic Reasoning Probe:</span>
                     </div>
-                    <p className="text-xs text-sky-100 leading-relaxed pl-5">
+                    <p className="text-xs text-sky-100 leading-relaxed pl-5 font-medium">
                       {resp.socratic_question}
                     </p>
                   </div>
@@ -321,13 +340,6 @@ export const GroundedTutorView: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                )}
-
-                {/* Revision Summary */}
-                {resp.revision_summary && (
-                  <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-200">
-                    <strong>Key Learning Point:</strong> {resp.revision_summary}
                   </div>
                 )}
 
