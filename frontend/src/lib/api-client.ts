@@ -21,6 +21,7 @@ import type {
   TransferSubmissionResponse,
   RemediationSessionResponse,
   ReasoningGapRadarResponse,
+  UnifiedLearnerProgress,
 } from './types';
 import { INITIAL_STUDENT_PROFILE } from "./demo-data";
 
@@ -368,6 +369,21 @@ class PlatformApiClient {
     });
     if (!response.ok) {
       throw new ApiUnavailableError(`Adaptive recommendation returned HTTP ${response.status}.`);
+    }
+    return response.json();
+  }
+
+  async getLearnerProgress(learnerId?: string): Promise<UnifiedLearnerProgress> {
+    const headers = { ...(this.getHeaders() as Record<string, string>) };
+    if (learnerId) {
+      headers["X-User-Id"] = learnerId;
+    }
+    const response = await fetch(`${API_BASE_URL}/api/v1/learner/progress`, {
+      method: "GET",
+      headers,
+    });
+    if (!response.ok) {
+      throw new ApiUnavailableError(`Learner progress returned HTTP ${response.status}.`);
     }
     return response.json();
   }
