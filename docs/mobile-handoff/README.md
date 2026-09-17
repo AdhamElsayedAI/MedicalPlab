@@ -48,10 +48,14 @@ python -m uvicorn main:app --host 127.0.0.1 --port 8000 --workers 1
 | Variable | Type | Default | Required for Mobile Demo | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `MEDICALPLAB_PHASE_2B_ENABLED` | Boolean (`true`/`false`) | `false` | **YES (`true`)** | Activates the Phase 2B Socratic Remediation & Transfer engine. If false, `/api/v1/remediation/*` returns `503 Service Unavailable`. |
+| `MEDICALPLAB_PLAB_PREVIEW_QA` | Boolean (`1`/`0`) | `0` | For Demo / QA | Enables Preview QA mode for PLAB clinical questions. In strict default production (`0`), `/api/v1/plab/questions` returns `count: 0` (`PLAB_PUBLIC_RELEASE_READY = NO`, `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`). For internal QA/demo, set to `1` (`content_mode: "PREVIEW_QA"`). |
 | `MEDICALPLAB_TUTOR_PROVIDER` | String | `stub` | Optional (`stub` default) | AI provider mode for tutor responses. Default `stub` runs completely deterministic, offline-safe, with zero external LLM dependencies. This stub is for demo and test validation only; it does not represent live clinical LLM generation. |
 | `ALLOWED_ORIGINS` | Comma-separated | `*` | Optional | Allowed CORS origins. |
 
-> **Security Note:** Never hardcode secrets, API keys, or administrative tokens in mobile client bundles. The MVP mobile client communicates without requiring private secrets.
+> **Security & Governance Note:**
+> 1. Never hardcode secrets, API keys, or administrative tokens in mobile client bundles.
+> 2. Mobile clients must distinguish `PLAB_PREVIEW_QA / INTERNAL_DEMO` from `PLAB_PUBLIC_STUDENT_READY`. Preview-only questions must never be presented as production student curriculum. Mobile integration status: `MOBILE_BACKEND_HANDOFF_READY` with `PLAB_PUBLIC_RELEASE_READY = NO` and `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`.
+
 
 ---
 

@@ -553,3 +553,34 @@ Retrieve the complete session state, turn history, and timeline. Used on app lau
     }
   }
   ```
+
+---
+
+## 4. PLAB Clinical Exam Mobile Contract & Readiness State
+
+### 4.1. Contract Separation: Preview QA vs. Public Student Ready
+
+The PLAB clinical exam preparation endpoints (`/api/v1/plab/*`) operate under a strict governance gate to prevent unapproved medical content from reaching production student clients:
+
+| Dimension | `PLAB_PREVIEW_QA` / Internal Demo | `PLAB_PUBLIC_STUDENT_READY` |
+| :--- | :--- | :--- |
+| **Server Flag** | `MEDICALPLAB_PLAB_PREVIEW_QA=1` | Default production (`golden_only=True`, no flag) |
+| **Intended Audience** | Internal engineering, QA testing, mentor demonstration | Public medical students |
+| **Question Status** | Seeded candidate items in review workflow | Clinician-reviewed, formally promoted **Golden Questions** |
+| **`GET /api/v1/plab/questions`** | Returns candidate items with `content_mode: "PREVIEW_QA"` and explicit warning | Returns `count: 0`, `items: []`, `content_policy: "GOLDEN_ONLY"` until golden promotion |
+| **`POST /api/v1/plab/evaluate`** | Evaluates answers, reveals explanations, detects reasoning gaps | Returns `HTTP 403 QUESTION_NOT_AVAILABLE` for unpromoted questions |
+| **Answer Leakage** | **Zero leakage** pre-answer (`correct_answer`, `explanation`, `citations` omitted) | **Zero leakage** |
+
+> [!WARNING]
+> **Mobile Client Enforcement Rule:**
+> Mobile clients MUST distinguish between internal demo/preview QA and public student production. Mobile clients MUST NOT present preview-only PLAB questions as production-ready student curriculum.
+
+### 4.2. Mobile Integration Certification Status
+
+As of Phase 6.1:
+- **Mobile Backend Handoff Status:** `MOBILE_BACKEND_HANDOFF_READY`
+- **Public Student Release Status:** `PLAB_PUBLIC_RELEASE_READY = NO`
+- **Prerequisite for Student Release:** `PLAB_GOLDEN_PROMOTION_REQUIRED = YES`
+
+Backend API contracts, schema serialization, idempotency validation, error matrices, and reasoning-gap bridges are fully hardened and integration-tested for mobile handoff. Public student release of the PLAB exam track requires completion of the clinician review workflow to promote candidate items to golden status.
+
