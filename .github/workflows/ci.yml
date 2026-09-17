@@ -29,6 +29,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt numpy scikit-learn scipy
 
+      - name: Bootstrap Public-Safe PLAB CI Data Root
+        env:
+          PYTHONPATH: "src:."
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, 'src')
+          sys.path.insert(0, '.')
+          from pathlib import Path
+          from tests.plab.fixture_helper import build_test_data_root
+          from medicalplab.plab.data_manifest import verify_production_data_manifest
+          root = build_test_data_root(Path('/tmp/medicalplab_ci_integration'))
+          report = verify_production_data_manifest(root)
+          assert report.is_valid, 'Fixture manifest invalid: ' + str(report.blockers)
+          assert report.chunk_count == 734, f'Expected 734 chunks, got {report.chunk_count}'
+          print(f'CI data root bootstrapped: {root}')
+          print(f'Manifest verified: {report.chunk_count} chunks, {report.document_count} docs')
+          "
+
       - name: Run Cross-Module Integration Tests
         env:
           PYTHONPATH: "src:."
@@ -36,6 +55,7 @@ jobs:
           MEDICALPLAB_PLAB_PREVIEW_QA: "1"
           MEDICALPLAB_PHASE_2B_ENABLED: "1"
           MEDICALPLAB_ANATOMY_3D_ENABLED: "1"
+          MEDICALPLAB_DATA_ROOT: "/tmp/medicalplab_ci_integration"
         run: |
           pytest tests/integration/ -v --basetemp=/tmp/pytest_int
 
@@ -57,6 +77,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt numpy scikit-learn scipy
 
+      - name: Bootstrap Public-Safe PLAB CI Data Root
+        env:
+          PYTHONPATH: "src:."
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, 'src')
+          sys.path.insert(0, '.')
+          from pathlib import Path
+          from tests.plab.fixture_helper import build_test_data_root
+          from medicalplab.plab.data_manifest import verify_production_data_manifest
+          root = build_test_data_root(Path('/tmp/medicalplab_ci_mobile'))
+          report = verify_production_data_manifest(root)
+          assert report.is_valid, 'Fixture manifest invalid: ' + str(report.blockers)
+          assert report.chunk_count == 734, f'Expected 734 chunks, got {report.chunk_count}'
+          print(f'CI data root bootstrapped: {root}')
+          print(f'Manifest verified: {report.chunk_count} chunks, {report.document_count} docs')
+          "
+
       - name: Run Mobile Contract Tests
         env:
           PYTHONPATH: "src:."
@@ -64,6 +103,7 @@ jobs:
           MEDICALPLAB_PLAB_PREVIEW_QA: "1"
           MEDICALPLAB_PHASE_2B_ENABLED: "1"
           MEDICALPLAB_ANATOMY_3D_ENABLED: "1"
+          MEDICALPLAB_DATA_ROOT: "/tmp/medicalplab_ci_mobile"
         run: |
           pytest tests/integration/test_mobile_api_contract.py -v --basetemp=/tmp/pytest_mob
 
@@ -128,3 +168,4 @@ jobs:
       - name: Audit Internal Documentation Links
         run: |
           python Scripts/verify_repository_handoff.py
+

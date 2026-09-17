@@ -68,7 +68,11 @@ MedicalPlab employs a dual-pipeline generative intelligence architecture:
 - **Interactive 3D Renal Anatomy:** HuBMAP HRA renal model, guided anatomical tours, and deterministic artery identification challenge.
 - **Unified Progress Tracking:** Cross-module mastery calculation across questions, remediation, tutor sessions, and spatial challenges.
 - **PLAB Preview QA Governance:** 36 clinician-review candidates isolated under Preview QA mode.
-- **Mobile Contract & OpenAPI:** Fully documented, drift-tested REST API contract with synthetic `X-User-Id` tenant isolation.
+- **Mobile Contract & OpenAPI:** Fully documented, drift-tested REST API contract with synthetic `X-User-Id` learner state partitioning.
+
+> [!WARNING]
+> **`X-User-Id` is NOT cryptographic authentication and is NOT a secure authorization boundary.**
+> It is synthetic caller-supplied learner partitioning for pilot state isolation. On a public unauthenticated API endpoint, any caller can supply any `X-User-Id` value. Remote pilot and staging deployments MUST restrict Cloud Run ingress via IAM (Cloud Run Invoker role) rather than relying on `X-User-Id` as an access control mechanism. `PUBLIC_UNAUTHENTICATED_PILOT_API = NO`.
 
 ### FUTURE INTELLIGENCE ROADMAP (FUTURE / NOT IMPLEMENTED)
 - **Multi-Organ Spatial Anatomy:** Extending HRA coverage to cardiovascular, respiratory, hepatic, and neuroanatomy systems.

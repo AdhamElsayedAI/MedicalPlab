@@ -63,11 +63,20 @@ jobs:
 
       - name: Deploy to Cloud Run Staging
         run: |
+          # Deploy WITHOUT --allow-unauthenticated.
+          # Cloud Run IAM transport authentication is SEPARATE from MedicalPlab X-User-Id
+          # learner partitioning. X-User-Id is synthetic caller-supplied learner identity
+          # for pilot state partitioning — it is NOT a production authentication boundary.
+          # Restricting Cloud Run ingress to IAM-authenticated callers prevents unrestricted
+          # anonymous access to learner-state pilot APIs.
+          # Authorized pilot testers / mobile integration testers obtain access via:
+          #   gcloud auth print-identity-token
+          # and pass it as: Authorization: Bearer <token>
           gcloud run deploy ${{ env.SERVICE_NAME }} \
             --image "gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ env.SERVICE_NAME }}:${{ github.sha }}" \
             --region ${{ env.REGION }} \
             --platform managed \
-            --allow-unauthenticated \
+            --no-allow-unauthenticated \
             --port 8080 \
             --memory 1Gi \
             --cpu 1 \
@@ -80,6 +89,10 @@ jobs:
         run: |
           URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --platform managed --region ${{ env.REGION }} --format "value(status.url)")
           echo "Staging Service URL: $URL"
-          curl -f "$URL/health" || exit 1
-          curl -f "$URL/ready" || exit 1
-          curl -f "$URL/api/v1/version" || exit 1
+          # Cloud Run requires IAM authentication — use identity token for health check.
+          # Do NOT weaken ingress to make curl simpler.
+          # Do NOT print the token in logs (redirected to /dev/null).
+          TOKEN=$(gcloud auth print-identity-token 2>/dev/null)
+          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/health" || exit 1
+          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/ready" || exit 1
+          curl -f -H "Authorization: Bearer ${TOKEN}" "${URL}/api/v1/version" || exit 1

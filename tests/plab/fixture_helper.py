@@ -79,7 +79,7 @@ def build_test_data_root(dest_dir: Path | str) -> Path:
             continue
 
         target_count = int(doc.get("chunk_count", 0))
-        rel = Path(str(doc.get("chunks_file", "")))
+        rel = Path(str(doc.get("chunks_file", "")).replace("\\", "/"))
         chunk_path = dest / Path(*rel.parts[1:]) if rel.parts and rel.parts[0].lower() == "data" else dest / rel
         chunk_path.parent.mkdir(parents=True, exist_ok=True)
 

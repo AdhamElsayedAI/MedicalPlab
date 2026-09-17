@@ -59,7 +59,31 @@ X-User-Id: learner_mobile_001
 ```
 
 > [!IMPORTANT]
-> **Pilot Identity Partitioning Contract:** `X-User-Id` partitions learner progress, mastery state, and remediation sessions for development and pilot testing. It is **NOT** cryptographic production authentication (`MOBILE_PRODUCTION_AUTH_READY = NO`). Production JWT / OAuth2 authentication will be introduced in institutional deployments.
+> **`X-User-Id` is synthetic caller-supplied learner partitioning — it is NOT authentication.**
+>
+> `X-User-Id` partitions learner progress, mastery state, and remediation sessions for development and pilot testing. It is a convenience label supplied by the caller. It is **NOT** cryptographic production authentication and is **NOT** a secure authorization boundary. `MOBILE_PRODUCTION_AUTH_READY = NO`.
+
+> [!WARNING]
+> **Two-Layer Access Model — Remote Pilot / Staging Only:**
+>
+> Mobile developers integrating with the remote staging API must understand these are **separate layers**:
+>
+> | Layer | Mechanism | Purpose |
+> | :--- | :--- | :--- |
+> | **Transport / Ingress** | Cloud Run IAM (`Authorization: Bearer <identity-token>`) | Controls who can reach the API at all. Required for remote staging. |
+> | **Learner Partitioning** | `X-User-Id` header | Identifies which learner's state to read/write within the API. Not authentication. |
+>
+> **Remote pilot/staging must NOT expose learner-state APIs through unrestricted anonymous ingress.** `PUBLIC_UNAUTHENTICATED_PILOT_API = NO`.
+>
+> To obtain an identity token for authorized remote access during pilot integration testing:
+> ```bash
+> # Requires gcloud CLI authenticated with a Cloud Run Invoker IAM role:
+> TOKEN=$(gcloud auth print-identity-token)
+> curl -H "Authorization: Bearer $TOKEN" -H "X-User-Id: learner_01" \
+>   https://<staging-url>/api/v1/university/subjects
+> ```
+>
+> Production JWT / OAuth2 learner authentication will replace `X-User-Id` in institutional deployments.
 
 ---
 
