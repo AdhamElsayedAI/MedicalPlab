@@ -1,0 +1,2368 @@
+{
+  "document_id": "DOC-PMC-CARD-0013",
+  "source_id": "SRC-PMC-001",
+  "title": "Diagnostic Challenges in Aortic Stenosis",
+  "medical_specialty": "Cardiology",
+  "topics": [
+    "Aortic stenosis",
+    "Aortic valve disease"
+  ],
+  "source_sha256": "4f0397b619571ed16891df71c8cc61c95e6e3fdeb7b47421fa3f9d1cd759b6b2",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1400,
+    "maximum_characters": 1800,
+    "minimum_characters": 350,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T03:21:44.964742+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0001-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "5fd94363a79281a3bfb5e76a1f82f865d7ebb7b0531d984e9a8d5de63c28b90c",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Aortic stenosis (AS) is the most prevalent degenerative valvular disease in western countries. Transthoracic echocardiography (TTE) is considered, nowadays, to be the main imaging technique for the work-up of AS due to high availability, safety, low cost, and excellent capacity to evaluate aortic valve (AV) morphology and function. Despite the diagnosis of AS being considered straightforward for a very long time, based on high gradients and reduced aortic valve area (AVA), many patients with AS represent a real dilemma for cardiologist. On the one hand, the acoustic window may be inadequate and the TTE limited in some cases. On the other hand, a growing body of evidence shows that patients with low gradients (due to systolic dysfunction, concentric hypertrophy or coexistence of another valve disease such as mitral stenosis or regurgitation) may develop severe AS (low-flow low-gradient severe AS) with a similar or even worse prognosis. The use of complementary imaging techniques such as transesophageal echocardiography (TEE), multidetector computed tomography (MDTC), or cardiac magnetic resonance (CMR) plays a key role in such scenarios. The aim of this review is to summarize the diagnostic challenges associated with patients with AS and the advantages of a comprehensive multimodality cardiac imaging (MCI) approach to reach a precise grading of the disease, a crucial factor to warrant an adequate management of patients.",
+      "character_count": 1442,
+      "content_sha256": "5fd94363a79281a3bfb5e76a1f82f865d7ebb7b0531d984e9a8d5de63c28b90c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "b1ca7d396d6e4774a22f1798531f5044a1db35459c6475836a9127da5e23c6ea",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Aortic stenosis (AS) is a relevant entity in daily practice due to several factors. It is the most common heart valve disease in developed nations [ 1 ], with an increased occurrence in the elderly (10–15% of individuals over 80 years of age) [ 2 , 3 ]. Bearing in mind the population aging of western countries, it is expected that AS prevalence may double by 2050. Another matter of concern is the high morbidity and mortality of this pathology at advanced stages; prognosis of symptomatic severe AS patients without percutaneous or surgical treatment is still ominous nowadays. Diagnosis and classification of AS was considered quite simple in the past, based on transvalvular flow maximal velocity (VMax), mean gradient (MG), and valve area (AVA) which could be obtained with transthoracic echocardiography (TTE). However, several investigations have demonstrated that this is a simplistic approach. Patients at a high output state (due to anemia, veno–arterial shunts) can exhibit a significant rise in gradients in the presence of just moderate AS, whereas a low-flow (LF) state (due to left ventricular systolic dysfunction, concentric left ventricular hypertrophy) may justify a true severe AS with a VMax and MG not particularly elevated. A multimodality cardiac imaging approach (MCI) plays a key role in these scenarios. The addition of complementary techniques such as transesophageal echocardiography (TEE), multidetector computed tomography (MDCT), and cardiac magnetic resonance (CMR) allows a proper grading in most cases.",
+      "character_count": 1538,
+      "content_sha256": "b1ca7d396d6e4774a22f1798531f5044a1db35459c6475836a9127da5e23c6ea",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0003-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "63bd96d48a10ff8dadd4e0502b88a9c472f4f113ba99292caae8b7da8363b743",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The objective of this review is to delve into the MCI used in the assessment of AS, highlighting the usefulness, strengths, and weaknesses of each imaging test, particularly in specific cases in which the grading of the disease is challenging.",
+      "character_count": 243,
+      "content_sha256": "63bd96d48a10ff8dadd4e0502b88a9c472f4f113ba99292caae8b7da8363b743",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0004-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "c1ccc5208fe3e3f29ad5409a5856c5d1c2983a1aa5dcbf21cdd6fa0fdaed2e44",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ],
+      "heading": "2.1.1. General Principles of Transthoracic Echocardiography Exam",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Two-dimensional (2D) TTE is the first step and corner stone in the evaluation of a suspected AS due to its high availability, safety, low cost, and excellent ability to appraise the morphology and function of the aortic valve (AV). TTE is conclusive on most occasions and no further imaging is needed for clinical decision making. Ideally, the hemodynamic status of the patient at the time of the TTE scanning should be stable and certain parameters such as blood pressure and heart rate well controlled in order to avoid their influence on echo estimations (i.e., a high afterload caused by hypertension or a decreased diastolic phase of the cardiac cycle in the context of rapid atrial fibrillation (AF) may lead to a significant reduction of transaortic valve gradient).",
+      "character_count": 773,
+      "content_sha256": "c1ccc5208fe3e3f29ad5409a5856c5d1c2983a1aa5dcbf21cdd6fa0fdaed2e44",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0005-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "ccf5a9935eca8450caf77a4f1861ebeab005ec164b35f1bb7a467a72ddd9325b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ],
+      "heading": "2.1.1. General Principles of Transthoracic Echocardiography Exam",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Long and short axis views are employed in every TTE examination. Parasternal long axis view (PLAV) helps to assess qualitatively the valve cusps thickening, calcification, and opening [ 4 ] (see Figure 1 ). Color Doppler interrogation determines the occurrence of flow acceleration through the AV (characterized by a “mosaic pattern”), an indirect sign of a restrictive valve aperture, and the coexistence of regurgitation. This view is selected to measure the left ventricular outflow track diameter (LVOT), which is recommended to be done at the level of the annulus in mid-systole [ 5 ]. At this time point, opening of the AV is maximal and LVOT acquires its most circular shape and largest area [ 6 ]. LVOT size is needed to calculate the AVA through the continuity equation (CEq) (see Figure 2 ). This component of the formula represents its main source of error [ 7 ], so care should be taken (zooming is recommended) to ensure the highest precision in such measurement.",
+      "character_count": 976,
+      "content_sha256": "ccf5a9935eca8450caf77a4f1861ebeab005ec164b35f1bb7a467a72ddd9325b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0006-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "b74e9267da794bad73fb37a18aa829ac746b7e23b044277c4ab41c75b875da84",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ],
+      "heading": "2.1.1. General Principles of Transthoracic Echocardiography Exam",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "AV leaflets are visualized from the short-axis view (SAV). SAV offers complemental information about valve morphology that leads to the determination of the etiology of the stenosis (i.e., commissural fusion is a typical feature of rheumatic disease; bicuspid valves depict two instead of three cusps). Despite the anatomical orifice area may be measurable by direct tracing (“planimetry”; see Figure 1 ), technical aspects such as the angulation of the echocardiographic plane or the quality of the echocardiographic window make such an assessment inaccurate in most patients.",
+      "character_count": 577,
+      "content_sha256": "b74e9267da794bad73fb37a18aa829ac746b7e23b044277c4ab41c75b875da84",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0007-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "b7a0b716c496d9ebf5b3662fdbdc02b1b50fe2582a52f21ca5f3e55cd47a3dea",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S004",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ],
+      "heading": "2.1.1. General Principles of Transthoracic Echocardiography Exam",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Apical 5-chamber (A5C) and 3-chamber views (A3C) are the standard views for a functional evaluation of AV. Pulsed wave Doppler (PWD) and continuous wave Doppler (CWD) interrogations are used in this regard. PWD at the LVOT allows a velocity time integral (VTI) assessment at this site, a component of the CEq. A sample volume should be initially placed at the AV and then moved apically until an optimal spectral curve is obtained. CWD is employed to estimate VMax and MG. Alignment between the ultrasound bean (US) and the flow jet should be parallel to elude underestimation of transvalvular velocity and, consequently, gradient [ 8 ].",
+      "character_count": 637,
+      "content_sha256": "b7a0b716c496d9ebf5b3662fdbdc02b1b50fe2582a52f21ca5f3e55cd47a3dea",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.1. General Principles of Transthoracic Echocardiography Exam"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0008-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "c68aca297205e51ebb96db2f82d594d205b1ff3b831513c176244591c4a260da",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "CWD modality, which analyzes the flows found in the path of the US beam, is employed to assess blood velocity through the AV. Gradients are estimated using the simplified Bernoulli equation (4 × velocity 2 ). VMax is the parameter with the greatest amount of scientific evidence, based on prospective studies, to predict cardiovascular events in patients with AS [ 9 , 10 , 11 ]. MG is calculated by plotting the CWD spectral curve; the US machine or workstation software averages the maximum derived gradients at each point of the curve. It has been established that CWD-derived MG correlates closely with the corresponding gradient by catheterization [ 12 ]. The main limitations of VMax and MG are as follows: Interposition of air or valvular calcium may preclude US penetration, so the identification of the envelope of the Doppler spectral curve may be difficult in some cases. Assessment of transvalvular flow velocity by Doppler technique is angle-dependent (see Figure 3 ). The simplified Bernoulli equation can be unsuitable in cases where high LVOT velocities are present (i.e., subaortic membrane or obstructive hypertrophic cardiomyopathy). VMax and MG are flow-dependent parameters: high-flow states (i.e., fever, anemia, significant aortic or mitral regurgitation) or low-flow states (i.e., left ventricular systolic dysfunction or significant mitral stenosis) may, therefore, cause inaccuracy in AS grading.",
+      "character_count": 1422,
+      "content_sha256": "863dedcb61609c4c2a5d03f32a0e7bebb4c4da732388a0419387b10020da038e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0008-C02",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "c68aca297205e51ebb96db2f82d594d205b1ff3b831513c176244591c4a260da",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Pressure recovery. The conversion of potential energy into kinetic energy due to the passage of blood through the VA leads to an increase in flow rate and a drop in pressure. Although some of the kinetic energy is dissipated as heat, due to turbulence and viscous losses, distal to the stenosis at the level of the aortic root, another part is transformed back into potential energy which causes a deceleration of flow and an increase or recovery of pressure (pressure recovery phenomenon; PRF). When the blood flow penetrates the AV, the anatomic orifice pressure keeps falling and velocity increases over a short distance, leading to the formation of what we call vena contracta (VC) which represents the effective orifice of the AV (EOAV). EOAV is slightly smaller than the anatomic orifice area and the major determinant of survival for the patients with AS [ 5 ]. VMax and the derived maximal gradient estimated by CWD reflect the flow velocity and pressure drop at the VC, hence PRF is not taken into consideration by Doppler techniques. In most adults with AS, the magnitude of PRF is small when the diameter of the ascending aorta is >30 mm. However, in patients with a smaller aortic caliber, PRF may be significant and, therefore, VMax and gradients may overestimate AS [ 13 , 14 ].",
+      "character_count": 1292,
+      "content_sha256": "ea24838e655bf94fa3808750c012b82b1496a52c4b4643cc352ddaeb51138af7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0009-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "776c81afa24e00bbe4cab1ee3261e67e19aef8baa36c1a6ebc92586edf35ee6f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "By dint of the CEq, TTE is able to assess AVA (see Figure 2 ). CEq is based on the principle of mass conservation, which equates stroke volume (SV) proximal to the aortic valve to SV through the stenotic AV orifice [ 15 ]. Proximal SV corresponds to LVOT-SV (calculated by multiplying the LVOT area by VTI at this site). VTI is obtained with the PWD spectral curve and LVOT area is indirectly derived from LVOT diameter, with the assumption that LVOT cross-section is a perfect circumference. AVA estimated via CEq has been validated against catheterization-derived AVA as a reference [ 12 , 16 , 17 ]. In contrast to VMax, publications that have demonstrated an independent association between AVA and survival are scarce. Most data suggest that an AVA <0.8–1 cm 2 or an indexed AVA (AVAi) <0.5–0.6 cm 2 carry a poor prognosis [ 18 , 19 ]. Listed below are the main limitations regarding AVA calculation with the CEq.",
+      "character_count": 918,
+      "content_sha256": "776c81afa24e00bbe4cab1ee3261e67e19aef8baa36c1a6ebc92586edf35ee6f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0010-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "7020e13f757ef83edfb2376703efc19f5429018f8a1e8478cf6f305b0b07e042",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Changes in transvalvular flow rate are potential modifiers of AVA. This effect is marginal in the context of preserved left ventricular ejection fraction (LVEF). However, it may be important when LV systolic disfunction is present, as a significant reduction of the AV orifice, in the absence of severe AS, may occur if the LV is unable to generate the required energy to adequately open the AV [ 20 ].",
+      "character_count": 402,
+      "content_sha256": "7020e13f757ef83edfb2376703efc19f5429018f8a1e8478cf6f305b0b07e042",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0011-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "cecbd1913a256465a3e0a0bda061593e1a5c512b834b94102029168377b8c8e0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Inter- and intraobserver reproducibility for LVOT diameter measurements is the main source of inaccuracy relative to the CEq. Although variability in such measurements is only ≈5 ± 4% and ≈3 ± 2%, respectively [ 21 ], it may be meaningful because this parameter is squared in CEq.",
+      "character_count": 280,
+      "content_sha256": "cecbd1913a256465a3e0a0bda061593e1a5c512b834b94102029168377b8c8e0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0012-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "ba8b4e145aa4d1680714825eae25cb630d35dbb2aaee6c6dd888d45b0ae4b3c3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "LVOT real shape is elliptical, whereas a round configuration is considered in the CEq formula. This is the cause of up to 20% underestimation of the AVA by the CEq [ 22 , 23 ].",
+      "character_count": 176,
+      "content_sha256": "ba8b4e145aa4d1680714825eae25cb630d35dbb2aaee6c6dd888d45b0ae4b3c3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0013-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "91ee93d313de36ba65a0d3cc581ee701a4a940d760d4c883b57fa3997ce5582c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S005",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ],
+      "heading": "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "LVOT-VTI measurement is based on the acceptance that flow is laminar with a flat spatial distribution at that site. When the LVOT-VTI assessment is performed distal to the AV annulus, flow convergence may generate higher velocities in the region adjacent to the interventricular septum and lower velocities in the proximity of the mitral valve. In this case, a non-centered PWD sample volume location can lead to over or underestimation of the systolic SV at the LVOT, resulting in AVA calculation inaccuracies.",
+      "character_count": 511,
+      "content_sha256": "91ee93d313de36ba65a0d3cc581ee701a4a940d760d4c883b57fa3997ce5582c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.2. Transthoracic Echocardiography Parameters Used in Aortic Stenosis Quantification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0014-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "140edf7bb6476e9b28502b1d580a1b0df843c09ea3c92efe2a7cf3dc8cf74e6e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "AVAi: it is defined as the ratio of AVA to body surface area (BSA). It should be used with caution in overweight patients because it significantly increases the prevalence of severe AS criteria without improving the predictive accuracy for AV-related events [ 24 ]. In contrast, AVAi can reclassify AS to a lower degree in a significant proportion of subjects with a small body habitus (body surface area < 1.7 m 2 ).",
+      "character_count": 417,
+      "content_sha256": "140edf7bb6476e9b28502b1d580a1b0df843c09ea3c92efe2a7cf3dc8cf74e6e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0015-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "cd60ec3db079ab5403890b354a74f8dea36921786b4a0c89724efa5053369ee3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Dimensionless index (DI): it is calculated from the ratio of LVOT velocity to trans-AV velocity. Despite the potential advantage of avoiding LVOT diameter, investigations have demonstrated that it is less accurate than AVA [ 16 , 17 ]. A cut-off of <0.25 reaches a sensitivity and specificity with respect to AVA <0.75 cm 2 of 92% and 78%, respectively [ 25 ].",
+      "character_count": 360,
+      "content_sha256": "cd60ec3db079ab5403890b354a74f8dea36921786b4a0c89724efa5053369ee3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0016-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "ffeb3a86b9bd39aab22888c862f5c01be609199aaef485341562041f0ed8e239",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Systemic arterial compliance: it is a novel parameter that has been proposed to evaluate AS severity. Validation is still needed to recommend its use for AS grading [ 26 ].",
+      "character_count": 172,
+      "content_sha256": "ffeb3a86b9bd39aab22888c862f5c01be609199aaef485341562041f0ed8e239",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0017-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "e47b6229c26b5e09dcc03f02ec95694bff98cb9d6c4037daa943f0190b8fc9aa",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "CWD waveform (see Figure 4 ) is a semiquantitative parameter to evaluate the severity of AS. The finding of a CW waveform with a rapid acceleration and an early peak makes severe AS very unlikely. On the other hand, a slower acceleration with a late peak is more specific to severe AS. A dagger-shaped pattern may correspond to a dynamic subvalvular aortic stenosis (a common feature of obstructive hypertrophic cardiomyopathy) [ 27 ].",
+      "character_count": 435,
+      "content_sha256": "e47b6229c26b5e09dcc03f02ec95694bff98cb9d6c4037daa943f0190b8fc9aa",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0018-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "7cc79e05e382004d1d2beb5d821844387f85dfadabc1eee66908719b746f28ff",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration.",
+      "character_count": 97,
+      "content_sha256": "7cc79e05e382004d1d2beb5d821844387f85dfadabc1eee66908719b746f28ff",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0019-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "9388acc5033546d7b7ec8cb1efe1b0895f3540e810e1211768505981fa0ba8ff",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration. — No AS: VMax (m/s); Mild AS: <2.5; Moderate AS: 2.5–3; Severe AS: 3–4; Column 5: ≥4",
+      "character_count": 182,
+      "content_sha256": "9388acc5033546d7b7ec8cb1efe1b0895f3540e810e1211768505981fa0ba8ff",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0020-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "824ed2a9f9667d77e270a0145ecec2f2c760f2c516a70620c4f400a1e2c33fba",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration. — No AS: MG (mmHg); Mild AS: -; Moderate AS: <20; Severe AS: 20–40; Column 5: ≥40",
+      "character_count": 179,
+      "content_sha256": "824ed2a9f9667d77e270a0145ecec2f2c760f2c516a70620c4f400a1e2c33fba",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0021-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "41715ce0aedbe1b0e0e814a71109ce4be0f34ce73a6e9a34dd6c3a46814d4711",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration. — No AS: AVA (cm 2 ); Mild AS: >2; Moderate AS: 1.5–2; Severe AS: 1–1.5; Column 5: <1",
+      "character_count": 183,
+      "content_sha256": "41715ce0aedbe1b0e0e814a71109ce4be0f34ce73a6e9a34dd6c3a46814d4711",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0022-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "9424588dbe2d898c89b1dbc2586c0bacac364ce350a1971fb81568fa597e9109",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration. — No AS: AVA index (cm 2 /m 2 ); Mild AS: -; Moderate AS: >0.85; Severe AS: 0.6–0.85; Column 5: <0.6",
+      "character_count": 198,
+      "content_sha256": "9424588dbe2d898c89b1dbc2586c0bacac364ce350a1971fb81568fa597e9109",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0023-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "93e709dcf29a8955ff1d9ffc9e570b83aadf14f51baaf390594f505936b60e4b",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Cut-off values of the different TTE parameters used to grade AS. Source: own elaboration. — No AS: DI; Mild AS: -; Moderate AS: >0.50; Severe AS: 0.25–0.50; Column 5: <0.25",
+      "character_count": 180,
+      "content_sha256": "93e709dcf29a8955ff1d9ffc9e570b83aadf14f51baaf390594f505936b60e4b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0024-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "e54ff4a395ba210627785ec5e2919124612f4979eb19b0899d3671aa50bd233c",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Figure 4 Grading of AS by VMax and MG. ( A ) Mild AS. The morphology of the CWD spectral curve is triangular; an early VMax can be appreciated. As the stenosis progresses (( B ): moderate AS, ( C ): severe AS), the curve becomes rounded and VMax is delayed. ( D ) Dynamic subvalvular stenosis. In this case, the spectral curve acquires a characteristic “dagger” shape with a late VMax. AS: aortic stenosis. MG: mean gradient. VMax: transvalvular flow maximal velocity.",
+      "character_count": 468,
+      "content_sha256": "e54ff4a395ba210627785ec5e2919124612f4979eb19b0899d3671aa50bd233c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0025-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "ec9fd0ca02b9402d6e9926dee08a20913cbf40e60b75c8c2018b9fb0bedf1853",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Three-dimensional (3D) TTE acquisition: a 3D echo dataset allows direct LVOT measurement by multiplanar reformat, in a similar way MDCT does, avoiding geometrical assumptions. LVOT assessment by 3D TTE is more reproducible than 2D TTE and can be employed in the CEq (“ellipsis formula”) [ 23 , 28 ]. Three-dimensional probes are not available in many centers and, despite recent technological advances, the spatial and temporal resolution of 3D TTE is low, so its role may still be limited.",
+      "character_count": 490,
+      "content_sha256": "ec9fd0ca02b9402d6e9926dee08a20913cbf40e60b75c8c2018b9fb0bedf1853",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0026-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "51f81d231648dadb5aa3e61f46961c7c2462ed1cbae6bd53bae81d09e416dad8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S003",
+      "parent_section_heading": "2.1. Transthoracic Echocardiography",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ],
+      "heading": "2.1.3. Other Useful TTE Measurements (See Table 1 )",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Chamber’s size, left ventricle wall thickness, systolic and diastolic function, and pulmonary pressure are easily obtained by TTE. All these parameters, as well as the presence of another concomitant valve dysfunction that can be diagnosed within the same exam, are useful for decision making with respect to patients with AS.",
+      "character_count": 326,
+      "content_sha256": "51f81d231648dadb5aa3e61f46961c7c2462ed1cbae6bd53bae81d09e416dad8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.1. Transthoracic Echocardiography",
+        "2.1.3. Other Useful TTE Measurements (See Table 1 )"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0027-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "bec6dd22cd663d5603bb56c8719597ac2a093c98446f6ee211abd0e9483fca13",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S007",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.2. Transesophageal Echocardiography"
+      ],
+      "heading": "2.2. Transesophageal Echocardiography",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "TEE can be helpful for AV morphological evaluation, although grading AS using Doppler techniques is challenging because of the difficulty in aligning the US beam with the valve orifice. Due to the anatomical proximity of the transducer to the AV and absence of pulmonary air interposition, TEE can visualize the valve structure with excellent definition in most patients. The feasibility of aortic AV planimetry is superior to that of TTE (90–95% according to different reports, see Figure 5 ) [ 29 , 30 , 31 ]. However, in cases of extensive leaflets calcification, the precision of this measurement may be reduced. Additionally, TEE is a semi-invasive test that requires sedation. For these reasons, TEE is reserved for selected cases (i.e., patients with high suspicion of severe AS and inconclusive TTE study due to poor transthoracic window).",
+      "character_count": 847,
+      "content_sha256": "bec6dd22cd663d5603bb56c8719597ac2a093c98446f6ee211abd0e9483fca13",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.2. Transesophageal Echocardiography"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0028-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "d5ce0e186868ca26fdf9b345faa3c65e628d27c5d6c8bba1bab3cddd1af1f0c1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S007",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.2. Transesophageal Echocardiography"
+      ],
+      "heading": "2.2. Transesophageal Echocardiography",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Three-dimensional TEE overcomes the main limitation of its 2D counterpart: the dependence of the scanning angle. Planimetry with this modality has shown better reproducibility than that of the 2D version [ 32 ], although it suffers from the same limitations in patients with significant valve calcification [ 33 ]. LVOT imaging with 3D TEE can be used to obtain its “real” size and has been demonstrated to reduce the proportion of patients with severe AS by isolated AVA criteria, reclassifying a significant proportion (up to 40% of cases) as moderate AS [ 34 , 35 ] and leading, therefore, to a decrease in AVA gradient discrepancies [ 35 ].",
+      "character_count": 644,
+      "content_sha256": "d5ce0e186868ca26fdf9b345faa3c65e628d27c5d6c8bba1bab3cddd1af1f0c1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.2. Transesophageal Echocardiography"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0029-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "996a4bcf556960507d3b79e3c88d99e17de73ba5964b57b772d4291a7c6ed9e0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ],
+      "heading": "2.3. Multidetector Computed Tomography",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "MDCT features a high spatial resolution, which allows an adequate anatomical assessment of the AV but does not provide functional information. The limitations of CT are well-known (exposure to ionizing radiation and the need to use iodinated contrast media, which are particularly harmful in patients with impaired renal function). The main applications of CT can be summarized as follows: Measurement valve calcification. The presence and extent of valvular calcification, quantified by the calcium score using the Agatston method, has been shown to be a predictor of severe AS, as well as of disease progression and development of adverse events [ 36 ]. The main application of the AV calcium score is the differentiation between true severe AS and pseudosevere AS, especially in the presence of preserved LVEF, LF, and significant diastolic dysfunction, i.e., patients with a restrictive diastolic pattern whose tolerance to dobutamine stress echocardiography (DSE) is limited. Cut-off values for severe AS vary according to gender (≥1200 Agatston Units (AU) in women and ≥2000 AU in men; valvular calcium density (AU/aortic annulus area) ≥300 AU/cm 2 in women and ≥500 AU/cm 2 in men [ 4 , 14 , 36 , 37 , 38 ]). In patients with concordant echocardiographic measurements of disease severity, the CT calcium score has a sensitivity and specificity of 87% and 84%, respectively, in females and of 80% and 82%, respectively, in males for identifying severe AS [ 39 ].",
+      "character_count": 1468,
+      "content_sha256": "6174172d8a96e9f4f5a0d39fc285d363391a5c559930a4537ccc6373a81e85d1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0029-C02",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "996a4bcf556960507d3b79e3c88d99e17de73ba5964b57b772d4291a7c6ed9e0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ],
+      "heading": "2.3. Multidetector Computed Tomography",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "In contrast, in individuals with discordant TTE parameters, heterogeneity in CT calcium scores has been observed [ 39 ]. Severe valve calcification is present in ≈50–60% of the patients with LF AS, whereas, among discordant normal flow (NF) AS, it has been detected in 74% of the subjects with a VMax > 4.0 m/s, but only in 34% of the individuals with a VMax < 4.0 m/s [ 39 ]. It should be noted that CT does not assess AV fibrosis, which may contribute significantly to AS in some cases, such as in young individuals with bicuspid AV, although the proportion of such patients in LF scenarios is very low. Planimetry. MDCT allows 3D acquisition throughout the entire cardiac cycle using retrospective protocols. Through multislice reconstructions, planimetry of the AV orifice is feasible. Such a measure has shown good agreement with AVA estimated through the CEq [ 40 ]. Concerning LVOT size, MDCT assessment is considered to be the gold standard test [ 23 ]. Clavel et al. [ 41 ] observed that AVA calculated with a hybrid TTE–MDCT method in which the LVOT area used in the Ceq was obtained with MDCT predicted long-term survival with an optimal cut-off value of 1.2 cm 2 instead of 1 cm 2 [ 41 ]. Pre-interventional study. Coverage of MDCT at acquisition can be extended to the ascending aorta to measure its diameter and determine the presence of calcifications.",
+      "character_count": 1367,
+      "content_sha256": "5ba9cb8b801d9b9c7c060265cba757469ca76c7851d9f626d08fdc7e6537b876",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0029-C03",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "996a4bcf556960507d3b79e3c88d99e17de73ba5964b57b772d4291a7c6ed9e0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ],
+      "heading": "2.3. Multidetector Computed Tomography",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 3,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "This information is helpful in cases where surgical valve replacement is considered. Regarding transcatheter aortic valve replacement (TAVR), CT is the reference technique for procedural planning. MDCT allows a precise estimation of the valve annulus size, its distance to the coronary ostia, and the caliber of the peripheral arterial vascular accesses. All of these parameters are essential to determine the candidacy for TAVR and to select the type and size of the prosthesis. Moreover, the incorporation of coronary assessment into CT protocols does not require an increase in contrast or radiation doses and has been shown to reduce the need for invasive coronary angiography in a noteworthy percentage of cases [ 42 ]. The use of the novel CT-derived fractional flow reserve technique is still not recommended because it may increase the number of false positive tests [ 43 ].",
+      "character_count": 882,
+      "content_sha256": "6f741c1cc9645b9596b42faaff0c4f19d39f0975b6be9a2d482d397862f9ba5f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.3. Multidetector Computed Tomography"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0030-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "a198788353a98471a103d43ec883a9b820cf4cf83e441a5ee283da61584a30af",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ],
+      "heading": "2.4. Cardiac Magnetic Resonance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "CMR allows both anatomical and functional evaluation of AV ( Figure 6 ). LV tissue characterization and quantification of aorta diameter is also possible by CMR imaging [ 44 ]. CMR is the reference technique for ventricular volumes, LVEF, segmental wall thicknesses, mass, and LV remodeling pattern assessment; therefore, it can be a good alternative to TTE in selected patients (i.e., those with a limited acoustic window). LV tissue characterization can help stratify patients according to their myocardial response to AS in terms of fibrosis and morphological and functional cardiac adaptation [ 45 ]. The principal applications of CMR are listed below: Planimetry. Cine sequences, selecting a perpendicular plane to the AV orifice, can be used to obtain a direct planimetry of the AVA. Such a measurement has been shown to be reproducible and correlates well with the AVA obtained by planimetry with 2D TEE [ 46 ] and with AVA estimated by catheterization [ 47 ]. Like MDCT, CMR planimetry slightly overestimates AVA compared to TTE [ 48 ]. Using Hakki’s formula, which is a simplification of Gorlin formula [ 49 ], AVA is mildly underestimated [ 48 , 50 ] compared to catheterization. Despite intra- and interobserver reproducibility of AV planimetry by CMR is excellent [ 48 , 50 ], its application is limited in certain scenarios such as the presence of a non-planar orifice, a highly calcified AV or arrhythmias (i.e., AF) [ 45 ].",
+      "character_count": 1438,
+      "content_sha256": "53c5a6830af3b67c62b8d20380e63dc3a5f3120e5bd9974e6ce880b7c98c5f08",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0030-C02",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "a198788353a98471a103d43ec883a9b820cf4cf83e441a5ee283da61584a30af",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ],
+      "heading": "2.4. Cardiac Magnetic Resonance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Functional AV assessment. In contrast to MDCT, functional assessment with CMR is feasible. Valenti et al. [ 51 ] suggested that the transaortic gradient can be indirectly calculated by using the simplified Gorlin equation (cardiac output/AVA). Such an estimation, in which the components of the formula are obtained using CMR cine imaging, is reproducible and has a good correlation with LV mass [ 51 ]. Phase contrast (PC) sequences are, nowadays, the most frequently employed for AV functional evaluation; VMax and, by using the simplified Bernoulli equation, maximum gradient are easily obtained with PC. These estimates have shown a high correlation with those obtained using Doppler technique and with invasive measurements [ 52 , 53 ]. Eccentric blood flow represents a challenge for PC-CMR, as a non-perpendicular plane alignment may underestimate AV velocity and, therefore, downgrade the stenosis [ 45 ]. Troger et al. [ 54 ] studied 55 patients with moderate or severe AS defined by cardiac catheterization (CC). All patients underwent CMR, TTE, and catheterization. AVA via PC-CMR was calculated as (flow − volume/VMax) during systole, and image planes parallel to the aortic leaflet attachment plane (LAP) were evaluated via PC-CMR between 22 mm below and 24 mm above LAP. AVA assessed in image planes 0–10 mm above LAP differed significantly from invasive measurements. Conversely, AVA values obtained 10–20 mm above LAP showed good agreement with invasive measurements; a plane 15 mm above LAP resulted in the lowest bias [ 54 ].",
+      "character_count": 1543,
+      "content_sha256": "a962806826b69463a813f05ca3e6290ec6f95f4f4fc7b777c3eccbfe038e2cbb",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0031-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "929460c7dc0b2d38c12b7610e7a238a17add77c83dc04aaf9bfed16ff5b3a28c",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ],
+      "heading": "2.4. Cardiac Magnetic Resonance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Figure 6 Typically, a phase-contrast velocity mapping acquisition produces two cine images, a magnitude ( A ) and a phase ( B ) cine. The magnitude image resembles a white blood gradient echo sequence in which the anatomic structures in the selected slice (perpendicular to the aortic orifice, generally at the level of the sinotubular junction; red circle) are displayed. The phase image is presented as a grayscale picture. In this through-plane acquisition, cranial systolic forward flow in the aortic root is displayed as white (it may be represented as black depending on how the sequence is programmed). Ambiguous background noise from the lungs appears as random black and white pixels in the phase image. ( C ) Time velocity curve generated by the CMR phase-contrast velocity mapping in a region of interest (in this case the sinotubular junction; red circle). VMax reaches 5 m/s which is consistent with severe AS.",
+      "character_count": 923,
+      "content_sha256": "929460c7dc0b2d38c12b7610e7a238a17add77c83dc04aaf9bfed16ff5b3a28c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0032",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0032-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "949c6bef5620044351d2072e4e5d64da372f5628c55742e4b3cdf76e026b98bc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ],
+      "heading": "2.4. Cardiac Magnetic Resonance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Left ventricular tissue characterization. Applying gadolinium contrast and T1 mapping sequences, CMR can quantify areas of focal replacement fibrosis (they usually have a nonischemic pattern with a midwall location) and diffuse interstitial fibrosis, both resulting from myocyte apoptosis in the advanced stages of the disease. These types of fibrosis are correlated with the development of heart failure and unfavorable prognosis in patients with AS [ 55 , 56 , 57 , 58 , 59 , 60 ]. The ongoing EVOLVED trial will determine whether early aortic valve replacement in asymptomatic patients with severe aortic stenosis and midwall late gadolinium enhancement improves outcomes [ 61 ]. CMR is a great tool for the screening of amyloidosis in AS which occurs in one of eight patients evaluated for TAVR and carries an adverse prognosis [ 62 ].",
+      "character_count": 839,
+      "content_sha256": "949c6bef5620044351d2072e4e5d64da372f5628c55742e4b3cdf76e026b98bc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0033-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "a8aa8ae85bd0fcbd84f82a79494b8ca5badec8b972a819a9243d91ea472ce533",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S002",
+      "parent_section_heading": "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+      "section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ],
+      "heading": "2.4. Cardiac Magnetic Resonance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The main limitations of CMR are its low availability in non-tertiary hospitals, contraindication for gadolinium contrast in patients with advanced kidney disease, and the inability to perform the test on claustrophobic patients and on those with a noncompatible CMR device. CMR currently has a limited role in cases of LF states [ 48 ]; recent position papers and guidelines do not include this technique in the assessment of patients in such scenarios.",
+      "character_count": 453,
+      "content_sha256": "a8aa8ae85bd0fcbd84f82a79494b8ca5badec8b972a819a9243d91ea472ce533",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. Optimal Assessment of Aortic Stenosis by Multimodality Cardiac Imaging",
+        "2.4. Cardiac Magnetic Resonance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0034-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "92065d719d5057a550e190b86d4d0e2631bcaff2887fcc1c575bdd2e10037137",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ],
+      "heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In many cases, a standard TTE testing is enough to determine the AS grade, as the main echo parameters (AVA, VMax, and MG) agree. Sonographers must examine all TTE windows to obtain the highest VMax and MG with CWD because up to 20% of the maximal values are reached with non-apical views (NAV) [ 17 ]. Our group has recently published evidence that CWD assessment from NAV adds value over apical view evaluation; a total of 34% of patients are reclassified upwards and 19% are regraded from non-severe to severe AS when adding NAV to the TTE scan protocol. In accordance with prior papers, our data support the right parasternal view (RPV) as the NAV of choice due to its superior performance [ 63 ].",
+      "character_count": 701,
+      "content_sha256": "92065d719d5057a550e190b86d4d0e2631bcaff2887fcc1c575bdd2e10037137",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0035-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "b3ece38133bd41fe4c43c51496224573bf9b1a40d794d8e7d2cb234a855bfd55",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ],
+      "heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Minners et al. [ 64 ], in a cohort of more than 2000 patients with AS and preserved left ventricular ejection fraction (LVEF), analyzed the consistency among AVA, VMax, and MG. Correspondence between VMax and MG was very high (>90%). However, VMax or MG and estimated AVA demonstrated only 70% and 75% AS grading consistency, respectively. Investigators found that low-flow states contributed to discrepancies; nevertheless, 48% of inconsistently graded patients had a normal SVi > 35 mL/m 2 [ 64 ]. It was found that an AVA of 1.0 cm 2 correlated with an MG of 21 mmHg and a VMax of 3.3 m/s. Conversely, an MG of 40 mmHg was found to correspond to an AVA of 0.75 cm 2 , while a VMax of 4.0 m/s was found to correspond to an AVA of 0.82 cm 2 . These results questioned the value of the current cut-off points for the classification of AS. In fact, severity of AS by AVA was closer to 0.8 cm 2 than to 1.0 cm 2 [ 64 ].",
+      "character_count": 917,
+      "content_sha256": "b3ece38133bd41fe4c43c51496224573bf9b1a40d794d8e7d2cb234a855bfd55",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0036-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "afb91b78ba8a1e420ef6c78117da971923f1e5faaf726c80daa69101757a31b7",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ],
+      "heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Bearing in mind the previous considerations, we will now focus on key aspects that need to be taken into account for the resolution of cases of AS and discordant classification through the use of MCI (see Figure 7 —Central Illustration).",
+      "character_count": 237,
+      "content_sha256": "afb91b78ba8a1e420ef6c78117da971923f1e5faaf726c80daa69101757a31b7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0037",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0037-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "1863aad660eb50592f61151f49b3f1facec816321e98d264c7dececb271fb4df",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S011",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window"
+      ],
+      "heading": "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "If proper CDW alignment with a transvalvular flow cannot be achieved even after interrogating NAV with a 2D TTE probe, a blind transducer (PEDOF probe) may be helpful. Due to its small size, the PEDOF probe allows for better positioning and angulation than 2D transducers, facilitating parallel alignment of the US beam with the transaortic jet [ 65 ]. Training and experience are required to handle a blind transducer, as there is no anatomical reference for orientation (the probe lacks a 2D image). For example, it is not uncommon to misinterpret the aortic ejection flow with a jet of mitral regurgitation (MR) or tricuspid regurgitation (TR). The duration (width) of the spectral curves must be taken into consideration; MR and TR signals, due to the existence of higher diastolic pressure in the AV than in the atria, appear during isovolumetric contraction, that is, with the beginning of the QRS of the electrocardiogram (ECG), unlike the aortic spectrogram, which appears later.",
+      "character_count": 987,
+      "content_sha256": "1863aad660eb50592f61151f49b3f1facec816321e98d264c7dececb271fb4df",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0038",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0038-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "2a2b7bab44f48705b28f249826a015bd794cfe686d8923e273d1256d45895981",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S011",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window"
+      ],
+      "heading": "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients without an acoustic window, TTE is useless and other imaging techniques such as TEE, MDCT, or CMR are mandatory.",
+      "character_count": 124,
+      "content_sha256": "2a2b7bab44f48705b28f249826a015bd794cfe686d8923e273d1256d45895981",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.1. Inadequate Doppler Alignment and Lack of Acoustic Window"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0039-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "772b12aa3a9519de49dd8290fcb3fcf90f3221fc34692362384be14c1eb387b4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S012",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.2. Discordant High Gradient Severe Aortic Stenosis (AVA ≥ 1 cm 2 with VMax ≥ 4 m/s and/or MG ≥ 40 mmHg)"
+      ],
+      "heading": "3.2. Discordant High Gradient Severe Aortic Stenosis (AVA ≥ 1 cm 2 with VMax ≥ 4 m/s and/or MG ≥ 40 mmHg)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "These cases are usually explained by the presence of a high-output condition (e.g., due to anemia, fever, thyrotoxicosis, an arteriovenous shunt for hemodialysis, etc.). If so, echocardiographic staging should be repeated if the cause is identified, reversible, and under control. In situations where the etiology of the high-output state is not reversible, AS should be classified as severe, placing the VMax–MG criterion ahead of AVA, since several studies have shown that the prognosis of these patients is similar to that of patients with high gradient AS and AVA < 1 cm 2 [ 66 ].",
+      "character_count": 584,
+      "content_sha256": "772b12aa3a9519de49dd8290fcb3fcf90f3221fc34692362384be14c1eb387b4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0040",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.2. Discordant High Gradient Severe Aortic Stenosis (AVA ≥ 1 cm 2 with VMax ≥ 4 m/s and/or MG ≥ 40 mmHg)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0040-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "bf6e854963d3efbb63ea03bb12c21b8dc9e8bec16aa583147f39421e80e546bf",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)"
+      ],
+      "heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "This entity can be divided into three different phenotypes according to LVEF and Svi (see Table 2 ). The first step in these cases is to verify that the TTE (scanning and post-processing) has been performed correctly and there are no errors. As pointed out, special care must be taken when measuring the diameter of the LVOT. After reviewing the TTE examination and correcting possible mistakes, if severe discordant and low-gradient AS persists, different approaches should be taken depending on the subtype.",
+      "character_count": 509,
+      "content_sha256": "bf6e854963d3efbb63ea03bb12c21b8dc9e8bec16aa583147f39421e80e546bf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0041",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0041-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "a051cca7cf3b30e3d2e5baabb2147efa3a2610605b74ee2099a17d886688cdb9",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S014",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis"
+      ],
+      "heading": "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "The gradient across the VA is pseudonormalized and underestimates the degree of AS due to systolic ventricular dysfunction, which may be secondary to the AS itself or to the presence of a concomitant cause such as an extensive coronary artery disease or a dilated cardiomyopathy. This variant accounts for 5–10% of the patient population with AS and is the one with the worst prognosis, with a mortality between 40% and 60% after two years without treatment. As mentioned above, when discussing the CEq, it is important to consider that patients with left ventricular systolic dysfunction may sometimes have a reduced AVA due to the inability of the left ventricle to overcome the inertia to maximal AV opening (pseudosevere AS). Distinguishing the two entities, true severe AS and pseudosevere AS, is important because valve intervention is beneficial in the former but not in the latter, in which treatment should be focused on ventricular dysfunction. The test of choice for this purpose is dobutamine stress echocardiography (DSE). In patients with severe AS and contractile reserve (defined as an increase in SV > 20% compared to baseline), dobutamine infusion increases VMax and GM, reaching the threshold of severe AS without significant fluctuations being observed in AVA (increase < 0.3 cm 2 ), which remains < 1 cm 2 .",
+      "character_count": 1328,
+      "content_sha256": "4abac65211b572d5f3fce529a7ece79aa376cf7c93c767dac00d5a4767226dd0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0041-C02",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "a051cca7cf3b30e3d2e5baabb2147efa3a2610605b74ee2099a17d886688cdb9",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S014",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis"
+      ],
+      "heading": "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "However, in pseudosevere AS, SV improvement is accompanied by an increase in the AV opening, resulting in an AVA > 1 cm 2 without relevant gradient variations (see Figure 8 ). In some cases, especially in patients without contractile reserve, a change in AVA and gradients may not be apparent, and, therefore, it may not be possible to determine whether the AS is truly severe or not. In these situations, calculating a projected AVA at a normal flow rate (i.e., 250 mL/s) can be useful [ 67 , 68 , 69 ]. Lack of contractile reserve is associated with poor outcomes and high surgical mortality [ 70 ]. Expert consensus recommends the addition of another technique to confirm the severity of AS (i.e., MDCT calcium score) and consider intervention (TAVR) in symptomatic patients [ 4 ].",
+      "character_count": 784,
+      "content_sha256": "fdc352e6658e5340bf4fd4c4a4fde84aede24bf5faf9f78285813c6e3fbf39da",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.1. Classical Low-Flow Low-Gradient Severe Aortic Stenosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0042-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "36bc5e2c25ccf938c1b56c5797c4de76af39c6b6a21be146e068c6ddf96989d6",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "NF–LG severe AS is a variant that has classically been considered a pseudosevere AS in relation to TTE measurement errors. In fact, the latest clinical practice guidelines on the management of valvular diseases are positioned in this sense, indicating that the probability of true severe AS in this setting is low, and recommend management of these cases as moderate AS [ 71 ]. Two aspects draw attention to NF–LG severe AS: (a) its high prevalence (15–40% of AS), a finding that is difficult to attribute solely to calculation faults, and (b) the fact that phenomena such as a low aortic compliance and high blood pressure may lead to a substantial reduction in AV gradient and justify the presence of true severe AS with this hemodynamic profile [ 72 ]. These circumstances suggest that this type of AS represents a particular disease which requires a thorough evaluation rather than a misclassified mild/moderate AS as it has been suggested until now ( Table 3 ). Generally, patients falling within this category are associated with lower mortality rates than those associated with other types of severe AS [ 73 ]. Reported results on valve intervention are controversial; while some studies have not found significant differences in survival compared to medical treatment, others, including a meta-analysis, have shown benefits [ 74 ]. Such disparate findings are in favor of a very heterogeneous population with a percentage of true severe AS that can reach up to 40–50% [ 72 ] that should be additionally studied with further imaging test (see Figure 9 ) [ 39 ].",
+      "character_count": 1568,
+      "content_sha256": "36bc5e2c25ccf938c1b56c5797c4de76af39c6b6a21be146e068c6ddf96989d6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0043-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "3822e6591cade4f65738feff79dc8c1f9e68281f31c66b40332cedf2b6c0b46d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "A high proportion of patients with AS show preserved LVEF and low-flow state (≈25–35%). In these cases, the SV reduction is related to an accentuated concentric remodeling that generates a small left ventricular cavity. Alterations in diastolic function and decrease in myocardial deformity (longitudinal strain), a finding that indicates an incipient alteration in systolic function [ 75 ], are common. This subgroup of AS has many pathophysiological similarities with heart failure with preserved LVEF and, from a clinical point of view, both are associated with a similar patient profile: advanced age, female sex, and hypertension. Mortality observed in patients with severe paradoxical AS may be even higher than that associated with patients with a high gradient, with a clear benefit from valve intervention [ 76 ]. Differential diagnosis with pseudosevere AS, which can represent 30–40% of cases, is required. Nowadays, the degree of AV calcification using MDCT is the parameter of choice in this regard (see Figure 7 ).",
+      "character_count": 1028,
+      "content_sha256": "3822e6591cade4f65738feff79dc8c1f9e68281f31c66b40332cedf2b6c0b46d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0044-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "37883ab6ba66c5699ae3d379d4cb191c456dd94dfc0ceb7405ebb9458ae7014b",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Integrated approach to the assessment of challenging AS. Findings suggestive of severe AS [ 4 , 14 ].",
+      "character_count": 109,
+      "content_sha256": "37883ab6ba66c5699ae3d379d4cb191c456dd94dfc0ceb7405ebb9458ae7014b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0045",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0045-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "b62c23b1b2af663121ba2d0d921fb32e60e38df9d279bf7c5a8aacfd1fa5d918",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Integrated approach to the assessment of challenging AS. Findings suggestive of severe AS [ 4 , 14 ]. — Column 1: Clinical findings; Column 2: Crescendo–decrescendo systolic murmur auscultated at the right upper sternal border (may radiate to the carotid arteries) with reduced intensity of the second heart sound [ 77 ] Typical symptoms (dyspnea, angina, or syncope) without other explanations Elderly patients (>70 years)",
+      "character_count": 431,
+      "content_sha256": "b62c23b1b2af663121ba2d0d921fb32e60e38df9d279bf7c5a8aacfd1fa5d918",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0046",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0046-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "d1aacca1413f07a875c0e3275321c269562f841649c2e86b1862c126b2bba502",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Integrated approach to the assessment of challenging AS. Findings suggestive of severe AS [ 4 , 14 ]. — Column 1: Qualitative imaging data; Column 2: LVH (additional history of hypertension to be considered) Reduced LV longitudinal function (global longitudinal strain) without other explanations",
+      "character_count": 304,
+      "content_sha256": "d1aacca1413f07a875c0e3275321c269562f841649c2e86b1862c126b2bba502",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0047-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "f9f8c3c0c4142c78988d93aadd65ad59c61f91e30efb840a7bb3c79c3341ae30",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Integrated approach to the assessment of challenging AS. Findings suggestive of severe AS [ 4 , 14 ]. — Column 1: Semiquantitative imaging data; Column 2: CW waveform: slow acceleration with a late peak Extensive calcification Increased cusps thickness with restrictive motion",
+      "character_count": 284,
+      "content_sha256": "f9f8c3c0c4142c78988d93aadd65ad59c61f91e30efb840a7bb3c79c3341ae30",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0048-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "8d19125e29eee88cf3065c43176d6be774d692fe61c72b51a0b39dbefd1da525",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S013",
+      "parent_section_heading": "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ],
+      "heading": "Table 3",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 3 Integrated approach to the assessment of challenging AS. Findings suggestive of severe AS [ 4 , 14 ]. — Column 1: Quantitative imaging data; Column 2: MG > 35 mmHg AVA < 0.8 cm 2 High calcium score by MDCT",
+      "character_count": 213,
+      "content_sha256": "8d19125e29eee88cf3065c43176d6be774d692fe61c72b51a0b39dbefd1da525",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.3. Discordant Low Gradient Severe aortic Stenosis (AVA < 1 cm 2 with VMax < 4 m/s and MG < 40 mmHg)",
+        "3.3.2. Non-Classical Low-Gradient Aortic Stenosis: Paradoxical and Normal Flow"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0049-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "2d9882852467165d57b609c3c87bd8d3ca977d37ff7141c04203d1a8e30cea94",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S016",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.4. Cardiac Rhythm Abnormalities"
+      ],
+      "heading": "3.4. Cardiac Rhythm Abnormalities",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For VMax, MG, and VTI calculations in patients with sinus rhythm, it is recommended to average three beats [ 4 , 14 ]. Regarding AF, the number of consecutive cardiac cycles to be assessed should be increased to at least five. Using such a number of beats implies reducing the sweep speed, a factor that increases the risk of mismeasurements. To solve this issue, new approaches such as the employment of single but matched R–R intervals are proposed [ 78 ].",
+      "character_count": 458,
+      "content_sha256": "2d9882852467165d57b609c3c87bd8d3ca977d37ff7141c04203d1a8e30cea94",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.4. Cardiac Rhythm Abnormalities"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0050-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "4dd4823ec3909bf8d42ff98cb60e4a501e25ecf17a81dcf33a22a249abe1f55d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S017",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S010",
+      "parent_section_heading": "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease"
+      ],
+      "heading": "3.5. Combined Heart Valve Disease",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "AS does not usually appear as an isolated heart valve disease. Mitral valve disease (stenosis or regurgitation) or aortic regurgitation (AR) can often be present.",
+      "character_count": 162,
+      "content_sha256": "4dd4823ec3909bf8d42ff98cb60e4a501e25ecf17a81dcf33a22a249abe1f55d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0051-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "e7cd4d52e67af1360462314e272fd4e9a5bc01264a9e7105a99238ac3f190e14",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S018",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S017",
+      "parent_section_heading": "3.5. Combined Heart Valve Disease",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.1. Aortic Regurgitation"
+      ],
+      "heading": "3.5.1. Aortic Regurgitation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Common etiological factors justify the coexistence of AS and AR. However, regurgitation is usually mild and has little impact on the assessment of AS. When relevant AR develops, the transaortic flow rate increases and VMax and MG rise, but they do not reflect the effective SV [ 76 ]. Current recommendations support, however, VMax in mixed AV disease as a main parameter for clinical decisions making [ 4 , 14 ] because it reflects both stenosis and regurgitant severity and has been shown to predict event-free survival [ 79 ].",
+      "character_count": 529,
+      "content_sha256": "e7cd4d52e67af1360462314e272fd4e9a5bc01264a9e7105a99238ac3f190e14",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.1. Aortic Regurgitation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0052-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 52,
+      "source_block_sha256": "895426855455fcd2c001c210d1c281785ecf08a12331fcecfafd2d392c08fc99",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S019",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S017",
+      "parent_section_heading": "3.5. Combined Heart Valve Disease",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.2. Mitral Regurgitation"
+      ],
+      "heading": "3.5.2. Mitral Regurgitation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "A combination of AS and MR is common in older people [ 80 ]. If both valvular diseases are present, we should carefully examine each individual lesion. In MR, it is important to distinguish between primary and secondary aetiology. Regarding AS, in cases of significant MR, the transaortic flow rate may be reduced, so VMax and MG may underestimate the severity of the stenosis. In this context, AVA is recommended over flow parameters as well as MCI. Zilberszac et al. [ 81 ] examined 89 symptomatic patients with severe AS and at least moderate MR (mostly secondary). Addition of surgical treatment if severe concomitant MR was present to AV replacement improved survival in an unadjusted population but did not reach statistical significance after propensity matching. A meta-analysis has shown that concurrent moderate-to-severe MR is associated with increased early and late mortality after TAVR. However, it is noteworthy that half of the investigated patients developed significant improvement in MR severity after the percutaneous procedure [ 82 ]. It would be important to determine which cases presenting both valve lesions may benefit from a dual intervention; data remain scarce and further investigations are required [ 83 ].",
+      "character_count": 1237,
+      "content_sha256": "895426855455fcd2c001c210d1c281785ecf08a12331fcecfafd2d392c08fc99",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0053",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.2. Mitral Regurgitation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0053-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 53,
+      "source_block_sha256": "d19ad9c37205e29d8e525a3a25640ee8399f8a503200e42a5b92d1a03eb2d2ed",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S020",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0013-JATS-S017",
+      "parent_section_heading": "3.5. Combined Heart Valve Disease",
+      "section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.3. Mitral Stenosis"
+      ],
+      "heading": "3.5.3. Mitral Stenosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Concomitant mitral stenosis (MS) and AS are strongly associated with rheumatic valve disease. MS is a well-recognized aetiology of LF–LG AS. AVA better predicts severe AS in this circumstance [ 84 ], and planimetry with TEE may be useful as it can estimate both AVA and mitral valve area (MVA) within the same procedure. Kato et al. [ 85 ] retrospectively analyzed patients who had undergone AV replacement (surgery of TAVR) for AS with a coexistent MS. MVA improved after AVR in nearly half of the patients (“pseudosevere MS”). Conversely, individuals with a true MS showed higher mortality [ 85 ]. In contrast, the investigation led by Yamashita et al. [ 86 ] concluded that MS was not a mortality risk factor in patients with severe AS who had undergone TAVR. These conflicting results highlight the need for additional studies.",
+      "character_count": 831,
+      "content_sha256": "d19ad9c37205e29d8e525a3a25640ee8399f8a503200e42a5b92d1a03eb2d2ed",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0054",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Use of Multimodality Cardiac Imaging in Challenging Cases",
+        "3.5. Combined Heart Valve Disease",
+        "3.5.3. Mitral Stenosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0054-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 54,
+      "source_block_sha256": "4f0e656f8e2540c42eb5b6c96a1612417d8d474bef45a36f164fb5d934a13fb1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S021",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "4. Current Gaps and Future Directions"
+      ],
+      "heading": "4. Current Gaps and Future Directions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Non-classical low-gradient severe AS: information about its prognosis and treatment benefits is limited and controversial. MCI could play a key role in unmasking true severe AS cases.",
+      "character_count": 183,
+      "content_sha256": "4f0e656f8e2540c42eb5b6c96a1612417d8d474bef45a36f164fb5d934a13fb1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0055",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Current Gaps and Future Directions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0055-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 55,
+      "source_block_sha256": "9b0f0e254cc564c2076dee2b44bb02f4bc59082d5fd6032fd8a3eb90fb0b1b4f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S021",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "4. Current Gaps and Future Directions"
+      ],
+      "heading": "4. Current Gaps and Future Directions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Low-flow low-gradient AS without contractile reserve: evidence on management is very scarce. More studies aimed at better understanding this entity are required.",
+      "character_count": 161,
+      "content_sha256": "9b0f0e254cc564c2076dee2b44bb02f4bc59082d5fd6032fd8a3eb90fb0b1b4f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0056",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Current Gaps and Future Directions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0056-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "fa440d15fcf35370244d2e3dfdcd51a214b99a27e4782b87e7e5313e76804f24",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S021",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "4. Current Gaps and Future Directions"
+      ],
+      "heading": "4. Current Gaps and Future Directions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Combined heart valve disease: this clinical scenario has not been extensively analyzed. Further investigations are needed to increase our knowledge about these pathologies and clarify the best therapeutical options.",
+      "character_count": 215,
+      "content_sha256": "fa440d15fcf35370244d2e3dfdcd51a214b99a27e4782b87e7e5313e76804f24",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0057",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Current Gaps and Future Directions"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0013-B0057-C01",
+      "document_id": "DOC-PMC-CARD-0013",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Aortic stenosis",
+        "Aortic valve disease"
+      ],
+      "source_block_index": 57,
+      "source_block_sha256": "6843021dc83c2c13786149ec89e35b1d308588a5b4b273a3e1e54bad7891114f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0013-JATS-S022",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "5. Conclusions"
+      ],
+      "heading": "5. Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In many cases, severe aortic stenosis is not a straightforward diagnosis. In all these challenging scenarios, multimodality cardiac imaging can lead to a higher precision grading and a better decision-making process.",
+      "character_count": 216,
+      "content_sha256": "6843021dc83c2c13786149ec89e35b1d308588a5b4b273a3e1e54bad7891114f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0013-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Conclusions"
+      ]
+    }
+  ]
+}

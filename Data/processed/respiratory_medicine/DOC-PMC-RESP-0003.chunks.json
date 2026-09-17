@@ -1,0 +1,2262 @@
+{
+  "document_id": "DOC-PMC-RESP-0003",
+  "source_id": "SRC-PMC-001",
+  "title": "Phenotype to Treatable Traits-Based Management in Chronic Obstructive Pulmonary Disease",
+  "medical_specialty": "Respiratory Medicine",
+  "topics": [
+    "COPD",
+    "Treatable traits"
+  ],
+  "source_sha256": "c87532c7d8f3da2d7c87d8016aa312f6d61f7c012bcb85c39a8d98b02263e7df",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1400,
+    "maximum_characters": 1800,
+    "minimum_characters": 350,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T03:21:21.396884+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0001-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "2131ab713ddb3af0351df7c4920cc4d25a762137dc9d20c6235931f8da818185",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Chronic obstructive pulmonary disease (COPD), a heterogeneous respiratory disease driven by various genetic and environmental factors, presents significant challenges in diagnosis and management. Traditional approaches focused on phenotypic classification, but recent paradigms emphasize identifying and addressing treatable traits to personalize treatment strategies. Treatable traits facilitate personalized interventions, optimizing symptom control, and reducing exacerbation risk. Dyspnea and exacerbations, recognized as key traits, guide treatment decisions and follow-up management. Various interventions, including bronchodilators, corticosteroids, and lifestyle modifications, target specific traits like airway inflammation, mucus overproduction, and emphysema. Strategies for assessing and addressing treatable traits during initial encounters and follow-up visits enhance disease monitoring and treatment efficacy. Comprehensive trait assessment demands resources and specialized monitoring, posing barriers to widespread implementation. The lack of standardized protocols and evolving evidence further complicates decision-making and clinical practice. Despite these challenges, the shift toward treatable traits-based management signifies a pivotal advancement in COPD care, emphasizing holistic approaches tailored to individual patient needs. Recognizing and addressing treatable traits offers personalized interventions, enhancing symptom control and disease management. Embracing treatable traits-based approaches holds promise for improving clinical outcomes and enhancing the quality of life for individuals living with COPD.",
+      "character_count": 1645,
+      "content_sha256": "2131ab713ddb3af0351df7c4920cc4d25a762137dc9d20c6235931f8da818185",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0002-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "b505a6d94b743cc863665d8b908b3bc9216000b46f5ccfe498f343f2ffe4a3d8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction and background"
+      ],
+      "heading": "Introduction and background",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Chronic obstructive pulmonary disease (COPD) is a complex and multifaceted respiratory condition that poses a significant public health challenge globally. Despite being a preventable and treatable disease, it affects a large number of individuals, with approximately 55.3 million diseased people in India alone [ 1 ]. The widespread occurrence highlights both its heterogeneous nature and the variety of factors that contribute to its prevalence. Long-term exposure to irritants such as cigarette smoke, air pollution, and occupational hazards remains the primary culprit [ 2 ]. These risk factors, coupled with the aging population and lifestyle choices, contribute to the alarming statistics surrounding COPD.",
+      "character_count": 712,
+      "content_sha256": "b505a6d94b743cc863665d8b908b3bc9216000b46f5ccfe498f343f2ffe4a3d8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction and background"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0003-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "5055a626e20a1d77b366d0b89c934e7b6a7c5c251b7ea0a2bf55c204d80f358d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction and background"
+      ],
+      "heading": "Introduction and background",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Management of this disease through the phenotype was introduced in the earlier guidelines given by the Global Initiative for Chronic Obstructive Lung Disease (GOLD) [ 3 ]. Later, the identification of biological mechanisms resulting from interactions between genetic predispositions and environmental exposures has been the subject of extensive research over the last few decades. This pursuit has led to the emergence of the treatable traits strategy, wherein patients undergo individual assessments to pinpoint treatable issues, guiding the development of personalized treatment programs [ 4 ].",
+      "character_count": 596,
+      "content_sha256": "5055a626e20a1d77b366d0b89c934e7b6a7c5c251b7ea0a2bf55c204d80f358d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction and background"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0004-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "c44a6900ce6be1b87686c2c4f42a12e9ade6e1faf957c557fdb7da5912e223bb",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction and background"
+      ],
+      "heading": "Introduction and background",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Identifiable treatable traits are specific features of COPD that are easily recognizable and can be effectively treated. These traits serve as keys during treatment. They are particularly important where personalized treatment approaches are crucial [ 5 ].",
+      "character_count": 256,
+      "content_sha256": "c44a6900ce6be1b87686c2c4f42a12e9ade6e1faf957c557fdb7da5912e223bb",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction and background"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0005-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "d7a4f1d5d508dc3570846876c2eff29215c082c3ed114b002e821472e8cbe721",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction and background"
+      ],
+      "heading": "Introduction and background",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The treatable traits strategy acknowledges that multiple traits may coexist within the same patient, advocating for their comprehensive management [ 6 ]. This approach signifies a pivotal shift toward deconstructing traditional disease labels like chronic bronchitis and emphysema, opening avenues for identifying candidate traits for chronic airway diseases.",
+      "character_count": 359,
+      "content_sha256": "d7a4f1d5d508dc3570846876c2eff29215c082c3ed114b002e821472e8cbe721",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction and background"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0006-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "3ae3861b3f5768c45dad3454d18a418ec2af64486c86614bcb21dd8cc1167583",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction and background"
+      ],
+      "heading": "Introduction and background",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "This paper aims to review the common treatable traits and approaches to the identification and treatment of these traits.",
+      "character_count": 121,
+      "content_sha256": "3ae3861b3f5768c45dad3454d18a418ec2af64486c86614bcb21dd8cc1167583",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction and background"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0007-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "384d6b53154706b42e34281e19bea14a320e5f4f62fc762f5ee26ca44b3b8d66",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Total heterogeneous nature of COPD",
+      "character_count": 34,
+      "content_sha256": "384d6b53154706b42e34281e19bea14a320e5f4f62fc762f5ee26ca44b3b8d66",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0008-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "65192f2c5533b7b74d1c4e998675f164930da995f747efdb45c281439805c5ff",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "COPD manifests as a heterogeneous lung condition, comprising chronic bronchitis and emphysema. Dyspnea, cough, expectoration, and expectoration are the common clinical manifestations among COPD patients. Because COPD is so complicated, each person is very different, and different biological and physiological processes can cause different clinical presentations. The presentation of these symptoms varies widely in various combinations [ 7 ].",
+      "character_count": 443,
+      "content_sha256": "65192f2c5533b7b74d1c4e998675f164930da995f747efdb45c281439805c5ff",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0009-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "1088513f8e1d3352575942dc8a64617e2dea9855632fb241d1ffa1f73ecde8a2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The risk factors contributing to COPD development also exhibit heterogeneity, ranging from genetic predisposition to exposure to premature birth, low birth weight, smoke, dust exposure, pollution, pesticide spray, post-infection sequelae, and allergies. The heterogeneity of COPD is further emphasized by the diverse pathological damage observed among patients, ranging from alveolar destruction to airway damage and, in some cases, a combination of both. This destruction is what leads to chronic bronchitis and emphysema, which are the hallmark phenotypic presentations of COPD [ 8 ].",
+      "character_count": 586,
+      "content_sha256": "1088513f8e1d3352575942dc8a64617e2dea9855632fb241d1ffa1f73ecde8a2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0010-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "30e28648240a9bb9ed1156e3065982bb80c798bba8f29eda61a6ae3d70ec67f3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Exacerbations of COPD reveal varied types of airway inflammation. Some patients exhibit neutrophilic inflammation, while others display eosinophilic inflammation, highlighting the condition’s heterogeneity. Research also indicates diverse airflow limitations among patients. Fixed airflow limitation, preserved ratio impaired spirometry, pre-COPD stage positioned within the continuum of COPD [ 9 , 10 ].",
+      "character_count": 404,
+      "content_sha256": "30e28648240a9bb9ed1156e3065982bb80c798bba8f29eda61a6ae3d70ec67f3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0011-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "1a4b0b74ddb1bcf6c73e7af90ce02033d2701e3f32cd85bdb137365cef5a8753",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The complexity of COPD highlights the necessity for the identification of treatable traits, which can guide personalized approaches to diagnosis, treatment, and management. Recognizing the multifaceted aspects of COPD heterogeneity is crucial for advancing research, enhancing clinical outcomes, and tailoring interventions to meet individual patient needs. Understanding the diverse manifestations of COPD facilitates more effective strategies aimed at improving patient care and quality of life [ 11 , 12 ].",
+      "character_count": 509,
+      "content_sha256": "1a4b0b74ddb1bcf6c73e7af90ce02033d2701e3f32cd85bdb137365cef5a8753",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0012-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "15ccfacaf8b669b68be44775159078d09527a45507830c344cacee82995e3b54",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The focus of the GOLD guideline committee moves from phenotypic management to treatable traits. The evolution of COPD management over the past two decades highlights the importance of personalized treatment strategies in altering the disease’s natural course. The 2001 GOLD document put a lot of weight on the severity of airflow limitation when deciding how to classify and treat COPD. This was called the forced expiratory volume at first second (FEV1)-centric approach. However, research prompted a shift toward a more patient-centric paradigm, prioritizing symptoms and exacerbation history over FEV1. In 2016, new treatment algorithms were introduced based on identifiable treatable traits and customized follow-up protocols, marking the transition to a patient-centric model [ 13 ]. These developments signify a move toward precision medicine in COPD care, emphasizing tailored interventions to meet each patient’s unique needs.",
+      "character_count": 934,
+      "content_sha256": "15ccfacaf8b669b68be44775159078d09527a45507830c344cacee82995e3b54",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0013-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "950ff863c1e2644e09bdc1753995267ebde6018b9b10406a9e52df4b7d463b03",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "GOLD-endorsed treatable traits",
+      "character_count": 30,
+      "content_sha256": "950ff863c1e2644e09bdc1753995267ebde6018b9b10406a9e52df4b7d463b03",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0014-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "d1af28d645116328094b02caeece5b07b52d7141855f79830ecce03e4dd4929a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The concept of identifiable treatable traits is particularly relevant in chronic diseases, where individualized approaches to treatment are increasingly emphasized. GOLD has shifted its focus toward identifiable treatable traits. Among the endorsed basic two identifiable treatable traits are dyspnea and exacerbations (Figure 1 ).",
+      "character_count": 331,
+      "content_sha256": "d1af28d645116328094b02caeece5b07b52d7141855f79830ecce03e4dd4929a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0015-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "6d2d2cb55f1d50fa4353998ecb16c95ce78f37a146b5588e1d76b47e7c3f8e2e",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Figure 1 Treatable traits endorsed by the GOLD guideline FEV1, forced expiratory volume at first second; GOLD, Global Initiative for Chronic Obstructive Lung Disease",
+      "character_count": 165,
+      "content_sha256": "6d2d2cb55f1d50fa4353998ecb16c95ce78f37a146b5588e1d76b47e7c3f8e2e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0016-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "8d227d86c249fc6d8a866f9e5fb2b395e9a256b061e86235c98d6c63c579feef",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Dyspnea",
+      "character_count": 7,
+      "content_sha256": "8d227d86c249fc6d8a866f9e5fb2b395e9a256b061e86235c98d6c63c579feef",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0017-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "7703c924619f7fa3c55699126a2911ac692a370896e818c9513a54f9d18b3330",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Dyspnea, or shortness of breath, is a hallmark symptom of COPD and a key treatable trait that is targeted in COPD management. This significantly impacts the daily lives of COPD patients. The COPD assessment test (CAT) Score and modified Medical Research Council (mMRC) Score serve as valuable biomarkers for assessing dyspnea severity and guiding treatment decisions. Dyspnea in COPD is classified into low and high symptoms based on these scores [ 7 ]. The treatment aims to alleviate breathlessness, enhance lung function, and improve exercise capacity, ultimately enhancing patients’ quality of life.",
+      "character_count": 603,
+      "content_sha256": "7703c924619f7fa3c55699126a2911ac692a370896e818c9513a54f9d18b3330",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0018-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "8c90084a38fae35a2834a8f6645b380fd4ea261f75f76922636f57203f521196",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Exacerbations",
+      "character_count": 13,
+      "content_sha256": "8c90084a38fae35a2834a8f6645b380fd4ea261f75f76922636f57203f521196",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0019-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "be476217145d95bf5785daafb9f9c7776d2aabba9b702f1d69b09216b106346d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Exacerbations characterized by sudden symptom worsening pose substantial challenges in COPD management. Exacerbations are another important treatable trait identified by GOLD. Patients with a history of frequent exacerbations are at increased risk. Based on the level of care required, exacerbations are classified into mild, moderate, and severe. Mild exacerbations are those exacerbations that can typically be managed with adjustments to medication or increased use of rescue inhalers at home. Moderate exacerbations may require treatment with corticosteroids and antibiotics, and they may visit an emergency department for evaluation. Severe exacerbations are more severe and may require hospital admission for intensive treatment and monitoring. Exacerbation often involves a significant worsening of symptoms and lung function. Moderate and severe exacerbations have a further risk of exacerbation [ 14 ].",
+      "character_count": 911,
+      "content_sha256": "be476217145d95bf5785daafb9f9c7776d2aabba9b702f1d69b09216b106346d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0019",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0020-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "3e8327ef0f796ec1a0d1ffee593470b41ea1abc05339960598334f6f6513e743",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Preventing and managing exacerbations is crucial in COPD care to reduce disease progression, hospitalizations, and mortality rates. Strategies for managing exacerbations may include vaccinations, the use of bronchodilators and corticosteroids, and patient education on recognizing early symptoms. Treatment strategies help mitigate exacerbation frequency, alleviate symptoms, and improve lung function, fostering better disease control and patient well-being.",
+      "character_count": 459,
+      "content_sha256": "3e8327ef0f796ec1a0d1ffee593470b41ea1abc05339960598334f6f6513e743",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0021-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "ae733501dcbdce84be0826e2d0898a741b22a96764265913a0ac95d483c66325",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Initial management of COPD",
+      "character_count": 26,
+      "content_sha256": "ae733501dcbdce84be0826e2d0898a741b22a96764265913a0ac95d483c66325",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0022-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "83d4bd015df81813521cd81302bddaeae4670fe3d4e720e87046eaf4948ab8f8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The treatment of COPD is guided by identifiable, treatable traits. Patients with fewer frequent exacerbations are managed with long-acting muscarinic antagonists (LAMA), long-acting beta-agonists (LABA), or their combination. For those experiencing fewer symptoms, short- or long-acting bronchodilators are prescribed, while individuals with higher symptom burdens receive LABA/LAMA combinations [ 15 ].",
+      "character_count": 403,
+      "content_sha256": "83d4bd015df81813521cd81302bddaeae4670fe3d4e720e87046eaf4948ab8f8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0023-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "0f883d03e6c0c94e098722830a92e8f8180ea1f7eb583ce4123f649945e25952",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Exacerbations are typically treated with LAMA/LABA alone or in combination with inhaled corticosteroids (ICS), along with azithromycin or roflumilast [ 16 ].",
+      "character_count": 157,
+      "content_sha256": "0f883d03e6c0c94e098722830a92e8f8180ea1f7eb583ce4123f649945e25952",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0024-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "8584830dff30273d03eb0c56e4a6a060844ac7e41fa122586c6863dd7117351c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Follow-up management of COPD",
+      "character_count": 28,
+      "content_sha256": "8584830dff30273d03eb0c56e4a6a060844ac7e41fa122586c6863dd7117351c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0025-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "8aaf63608da726a5d287af4402c80f1a34eabe7d906a01befd7fba7683e99426",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "It is essential to assess adherence to medication, inhaler technique, and the presence of any comorbidities during follow-up visits for COPD patients. Ensuring that patients are adhering to their prescribed medications and using their inhalers correctly can significantly impact disease management and symptom control. It is important to reevaluate and identify any changes in the identifiable treatable traits. This process allows for the adjustment of treatment plans accordingly and ensures that therapy remains aligned with the evolving needs and disease status of the patient.",
+      "character_count": 581,
+      "content_sha256": "8aaf63608da726a5d287af4402c80f1a34eabe7d906a01befd7fba7683e99426",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0026-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "cedf265f55c35aa85c63bbf18ea51dfc7f4f80e409c0ae5e26382b8e73b40df9",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Patients experiencing dyspnea are typically treated with LABA/LAMA combinations, or adjustments may be made by changing the inhaler device to ensure optimal delivery of medication [ 17 ].",
+      "character_count": 187,
+      "content_sha256": "cedf265f55c35aa85c63bbf18ea51dfc7f4f80e409c0ae5e26382b8e73b40df9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0027-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "043311ad664830911aeb13ed6248f935e5d0ed87012c931bb552d7724989f223",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For patients experiencing exacerbations, treatment often involves the addition of ICS to their regimen. Additionally, patients with peripheral eosinophilia (>100/ml) may benefit from ICS therapy to help manage inflammation [ 18 ].",
+      "character_count": 230,
+      "content_sha256": "043311ad664830911aeb13ed6248f935e5d0ed87012c931bb552d7724989f223",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0028-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "202e0db0d07f129c1936cf4a2e72ef7f328733c713757a17ab64124a1ff87f42",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In the management of COPD, certain other identifiable treatable traits, like smoking history, chronic bronchitis, and low FEV1, play a crucial role in guiding treatment strategies. Among these traits, smoking history and chronic bronchitis represent distinct aspects of the disease process, each requiring specific therapeutic interventions.",
+      "character_count": 341,
+      "content_sha256": "202e0db0d07f129c1936cf4a2e72ef7f328733c713757a17ab64124a1ff87f42",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0029-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "622b2096be8ea6df2b867031afaafefe10ef300ba3177017fce8d911e9ec6c8c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Chronic bronchitis is characterized by excessive mucus production and a persistent cough. Patients with chronic bronchitis or FEV1 less than 50% may be treated with roflumilast, a phosphodiesterase-4 inhibitor, to help reduce exacerbation risk and improve lung function by targeting inflammatory pathways associated with mucus production and airway irritation. Roflumilast has demonstrated efficacy in chronic bronchitis by reducing exacerbations and improving lung function [ 19 ].",
+      "character_count": 482,
+      "content_sha256": "622b2096be8ea6df2b867031afaafefe10ef300ba3177017fce8d911e9ec6c8c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0030-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "476c11c3734bd5b4b34bec15b6404c44af3a672fda7da8f7090a2d661ba6bdbf",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Smoking history is a significant risk factor for COPD and contributes to neutrophilic inflammation within the airways. This inflammatory response is exacerbated by smoking. Often necessitates targeted interventions to reduce exacerbation risk and improve lung function. Treatment may include azithromycin, which can help reduce exacerbations and improve outcomes in this population [ 20 ].",
+      "character_count": 389,
+      "content_sha256": "476c11c3734bd5b4b34bec15b6404c44af3a672fda7da8f7090a2d661ba6bdbf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0031-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "9e053d7f7d0c096c6ed8156d874e7dc9e30a85711fa56eb9868771946e25e42d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Other common treatable traits in COPD",
+      "character_count": 37,
+      "content_sha256": "9e053d7f7d0c096c6ed8156d874e7dc9e30a85711fa56eb9868771946e25e42d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0032-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "c7a9555f09f6a65d2ba7ececf9a605c31ed61c304712ff927c80f02c4cf95592",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Other common treatable traits in COPD are presented in Table 1 .",
+      "character_count": 64,
+      "content_sha256": "c7a9555f09f6a65d2ba7ececf9a605c31ed61c304712ff927c80f02c4cf95592",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0032",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0033-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "25a7b35dec30229284a4db31e7f0cde5f44d70f205d6059913b7222eb7d0848c",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide",
+      "character_count": 401,
+      "content_sha256": "25a7b35dec30229284a4db31e7f0cde5f44d70f205d6059913b7222eb7d0848c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0034-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "d5427452216addf1393c312435cb34be829fa350a3256a735448c9078ff55850",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Trait; Column 2: Biomarker; Column 3: Intervention; Column 4: Effect",
+      "character_count": 482,
+      "content_sha256": "d5427452216addf1393c312435cb34be829fa350a3256a735448c9078ff55850",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0035-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "0d65f92ed61ec082329a6ef5d69cba543dec91f80878d213dcdea705c2152802",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Smoking [ 6 ]; Column 2: History; Column 3: Quit smoking/macrolides; Column 4: Improved symptoms, lung function, and exercise capacity",
+      "character_count": 548,
+      "content_sha256": "0d65f92ed61ec082329a6ef5d69cba543dec91f80878d213dcdea705c2152802",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0036-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "8ee70f4a244770e35e5c09adee2d864256fb0a935b756981ecddbb442036ce0c",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Dyspnea [ 6 ]; Column 2: COPD assessment test or modified medical research score; Column 3: LABA/LAMA; Column 4: Improved symptoms, lung function, and exercise capacity",
+      "character_count": 582,
+      "content_sha256": "8ee70f4a244770e35e5c09adee2d864256fb0a935b756981ecddbb442036ce0c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0037-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "ddf871ae2e6132ff4c1df63401bc1626556828553351a97fc142567e8c5686ee",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Exacerbation [ 6 ]; Column 2: History of exacerbation; Column 3: ICS/LABA/LAMA; Column 4: Reduced exacerbation, improved symptoms, lung function, and exercise capacity",
+      "character_count": 581,
+      "content_sha256": "ddf871ae2e6132ff4c1df63401bc1626556828553351a97fc142567e8c5686ee",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0037",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0038-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "bc82457509a035d108abb8bfd65ec75d5f5d45ab493ea64842f81a3f231c3598",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Airflow limitation [ 10 ]; Column 2: FEV1/FVC ratio <0.7; Column 3: β 2 -Agonists, antimuscarinic agents, and theophylline; Column 4: Improved symptoms, lung function, and exercise capacity",
+      "character_count": 603,
+      "content_sha256": "bc82457509a035d108abb8bfd65ec75d5f5d45ab493ea64842f81a3f231c3598",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0038",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0039-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "ec1b8341f868e8ee415af3c85050ecefe48f3da485f2728937a30f951214ec31",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Eosinophilic airway inflammation [ 10 ]; Column 2: Serum eosinophil count, IgE, and FeNO; Column 3: ICSs; oral CSs; anti–IL-5, anti–IL-4, and anti-IL-13; anti-TSLP; Column 4: Reduced exacerbations, improvement in symptoms, and lung function",
+      "character_count": 654,
+      "content_sha256": "ec1b8341f868e8ee415af3c85050ecefe48f3da485f2728937a30f951214ec31",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0040-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "61f345057834f38b5ff43d3b473f5671b10bbcb3cd05e718147035c2fee5a5b3",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Neutrophilic airway inflammation [ 10 ]; Column 2: Induced sputum neutrophil count and CRP; Column 3: Macrolides and CXCR2 antagonists; Column 4: Reduced exacerbations and reduced rate of decrease in lung function reduced cough and sputum",
+      "character_count": 652,
+      "content_sha256": "61f345057834f38b5ff43d3b473f5671b10bbcb3cd05e718147035c2fee5a5b3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0040",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0041-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "7bbb60f34a8ccde0486e2ebfb3be4552998e378d0663951c621e04d2a0fc7727",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Cough reflex hypersensitivity [ 10 ]; Column 2: 24-hour cough counts and Leicester Cough Questionnaire; Column 3: Gabapentin; Column 4: Improved cough",
+      "character_count": 564,
+      "content_sha256": "7bbb60f34a8ccde0486e2ebfb3be4552998e378d0663951c621e04d2a0fc7727",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0041",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0042-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "7130e38abc3c053f9a3a9242754e89bcb5f0ccf08ad791a5e8d38f000e71c994",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Mucus overproduction [ 10 ]; Column 2: Sputum production; Column 3: Carbocisteine; Column 4: Improved sputum and reduced exacerbations",
+      "character_count": 548,
+      "content_sha256": "7130e38abc3c053f9a3a9242754e89bcb5f0ccf08ad791a5e8d38f000e71c994",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0043-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "dad8c68e1a918d2d45fb12bff8af35dd007eeb11a6baf66906f674fb24f5ddf8",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Bronchiectasis [ 4 ]; Column 2: High-resolution CT; Column 3: Drainage, macrolides, inhaled antibiotics, vaccination, and surgery; Column 4: Reduced cough, symptoms, increased exercise capacity, and exacerbations",
+      "character_count": 626,
+      "content_sha256": "dad8c68e1a918d2d45fb12bff8af35dd007eeb11a6baf66906f674fb24f5ddf8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0044-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "18308ae6250a4b64452fb96ba1a191be7b6c326657610bc4d07b80f40e254e52",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Pulmonary artery hypertension [ 4 ]; Column 2: 2D echocardiography/Pro BNP; Column 3: Diuretics; Column 4: Reduced cough, symptoms, and increased exercise capacity",
+      "character_count": 577,
+      "content_sha256": "18308ae6250a4b64452fb96ba1a191be7b6c326657610bc4d07b80f40e254e52",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0045-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "a14891aa38d347134ebb937c9b0be2ce9e3bc1bfb922a1a1d545a7ba339db372",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Common treatable traits identified in COPD COPD, chronic obstructive pulmonary disease; CSs, corticosteroids; FeNO, fractioned exhaled nitric oxide; FEV1/FVC, forced expiratory volume of first second/forced vital capacity; ICS, inhaled corticosteroids; IgE, serum immunoglobulin E; LABA, long-acting beta-agonist; LAMA, long-acting muscarinic antagonist; Pro-BNP, pro-brain natriuretic peptide — Column 1: Emphysema [ 4 ]; Column 2: CT scan; Column 3: Bronchodilator, coils, one-way valve, and lung volume reduction surgery; Column 4: Improved symptoms, lung function, and exercise capacity",
+      "character_count": 598,
+      "content_sha256": "a14891aa38d347134ebb937c9b0be2ce9e3bc1bfb922a1a1d545a7ba339db372",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0045",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0046-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "e9d42bdb9cff401b98d84b53be2b7d1cf71b98b15370a031b812142a3613a40a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Fixed Airflow Limitation",
+      "character_count": 24,
+      "content_sha256": "e9d42bdb9cff401b98d84b53be2b7d1cf71b98b15370a031b812142a3613a40a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0046",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0047-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "28702d01c9f6922b3df6e8ce324af32eec7134af6361b9cb580ac174a82eeb9d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Airflow limitation is the hallmark of COPD and contributes to impaired lung function and exercise tolerance. The FEV1/FVC ratio <0.7 serves as a vital biomarker for airflow limitation. Interventions, including β2-agonists and antimuscarinic agents, aim to optimize bronchodilation, enhance airflow, improve overall respiratory function, and enhance the ability to perform daily activities with ease [ 21 , 22 ].",
+      "character_count": 411,
+      "content_sha256": "28702d01c9f6922b3df6e8ce324af32eec7134af6361b9cb580ac174a82eeb9d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0048-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "8615e85f7c9d8249aac5d3f6e712f752c1f78aff65326a0eca8d6c7a3a3f8723",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Eosinophilic Airway Inflammation",
+      "character_count": 32,
+      "content_sha256": "8615e85f7c9d8249aac5d3f6e712f752c1f78aff65326a0eca8d6c7a3a3f8723",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0049-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "072f3e525bf6f67c6935dbcdd31661a150c6c01308231245b997fcd4eb343548",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Eosinophilic airway inflammation is characterized by elevated eosinophil counts. Biomarkers such as serum eosinophil count, immunoglobulin E, and fractioned exhaled nitric oxide aid in identifying eosinophilic inflammation. Targeted treatments, including ICS, oral corticosteroids, and biologics targeting IL-5, IL-4, and IL-13, aim to reduce exacerbation risk and improve symptom control, although responses may vary among individuals [ 23 ].",
+      "character_count": 443,
+      "content_sha256": "072f3e525bf6f67c6935dbcdd31661a150c6c01308231245b997fcd4eb343548",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0050-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "cba8bc26c4a502e656f826da460b0c075dad9c5d6d3d3915b8b142e4cf2e9513",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Neutrophilic Airway Inflammation",
+      "character_count": 32,
+      "content_sha256": "cba8bc26c4a502e656f826da460b0c075dad9c5d6d3d3915b8b142e4cf2e9513",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0051-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "18e314848a274a8f405ecc71a8d27c125eaf092e91370e0d146e9352745de321",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Neutrophilic airway inflammation is a key feature of COPD. It contributes to disease progression and exacerbations. Biomarkers like induced sputum neutrophil count and CRP help identify neutrophilic inflammation. Therapeutic interventions such as macrolides and CXCR2 antagonists target neutrophilic pathways, reducing exacerbation rates, slowing lung function decline, and alleviating cough and sputum production [ 24 ].",
+      "character_count": 421,
+      "content_sha256": "18e314848a274a8f405ecc71a8d27c125eaf092e91370e0d146e9352745de321",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0052-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 52,
+      "source_block_sha256": "4e83a6a71cbfcd6c6eede511de588dc6e9d5ebb0db512d1d6e62408694bd5935",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cough Reflex Hypersensitivity",
+      "character_count": 29,
+      "content_sha256": "4e83a6a71cbfcd6c6eede511de588dc6e9d5ebb0db512d1d6e62408694bd5935",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0053-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 53,
+      "source_block_sha256": "efd5eb1ab2efb2a13d8bd1663c2b568a9dea8721f319ac5236ae517c6a9c1729",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cough reflex hypersensitivity is prevalent in COPD and significantly impacts the quality of life of COPD patients. Biomarkers including 24-hour cough counts and the Leicester Cough Questionnaire quantify cough severity. Gabapentin is an effective treatment, and this desensitizes cough receptors, leading to improved cough control and reduced cough frequency and severity [ 25 ].",
+      "character_count": 379,
+      "content_sha256": "efd5eb1ab2efb2a13d8bd1663c2b568a9dea8721f319ac5236ae517c6a9c1729",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0053",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0054-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 54,
+      "source_block_sha256": "42290bd3a743944a4c5e2fa6f5e325c42ce7605d177ba24a7b15b31db541545a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Mucus Overproduction",
+      "character_count": 20,
+      "content_sha256": "42290bd3a743944a4c5e2fa6f5e325c42ce7605d177ba24a7b15b31db541545a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0054",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0055-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 55,
+      "source_block_sha256": "d9b7ae98f2002ceb4699217da9fba95a673508c02f23b00f800d9b8e69c563cd",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Mucus overproduction is also a common trait in COPD. It contributes to airway obstruction and exacerbations. Sputum production serves as a key biomarker for mucus overproduction. Treatment with carbocysteine helps reduce mucus viscosity, promote clearance, and reduce exacerbation frequency, thus improving respiratory symptoms and overall disease control [ 26 ].",
+      "character_count": 363,
+      "content_sha256": "d9b7ae98f2002ceb4699217da9fba95a673508c02f23b00f800d9b8e69c563cd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0055",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0056-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "ea27df452702a3a0203a9961f4bc9a09b8444af015b37adbf1d95a056a5216d9",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Emphysema",
+      "character_count": 9,
+      "content_sha256": "ea27df452702a3a0203a9961f4bc9a09b8444af015b37adbf1d95a056a5216d9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0056",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0057-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 57,
+      "source_block_sha256": "e1cdc3fc08f5d1cd9d51d1a893a21e3dcc566bbfc96bdbda4c9b9577ba75a02f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Emphysema is characterized by the destruction of the lung’s alveoli, leading to impaired gas exchange and respiratory function. The presence and severity of emphysema contribute significantly to disease prognosis and symptomatology. Radiographic imaging, such as CT scans, plays a pivotal role in diagnosing and assessing the extent of emphysema. Treatment strategies aim to alleviate symptoms and slow disease progression. Inhaled bronchodilators, supplemental oxygen therapy, pulmonary rehabilitation, and surgical interventions like lung volume reduction surgery, coils, one-way valves, or lung transplantation may be considered in severe cases [ 27 ].",
+      "character_count": 655,
+      "content_sha256": "e1cdc3fc08f5d1cd9d51d1a893a21e3dcc566bbfc96bdbda4c9b9577ba75a02f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0057",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0058-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 58,
+      "source_block_sha256": "c170982fbed5d9c11ee9e9680f0f78ad16fc211f013022c2750a9446652e5447",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Bronchiectasis",
+      "character_count": 14,
+      "content_sha256": "c170982fbed5d9c11ee9e9680f0f78ad16fc211f013022c2750a9446652e5447",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0059-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 59,
+      "source_block_sha256": "ae310cce61825c0485af6aad1c49f34e0c59f7581c66613db456dbe52fe691c0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Bronchiectasis involves the abnormal widening and scarring of the airways, leading to recurrent infections and mucus buildup. The presence of bronchiectasis exacerbates respiratory symptoms and complicates disease management. High-resolution CT scans are instrumental in diagnosing and assessing the extent of bronchiectasis. Treatment strategies aim to reduce airway inflammation, control infections, and improve mucus clearance. Antibiotics, bronchodilators, mucolytics, and airway clearance techniques form the cornerstone of bronchiectasis management. Pulmonary rehabilitation and vaccination against respiratory pathogens play roles in preventing exacerbations and improving overall respiratory health [ 28 , 29 ].",
+      "character_count": 719,
+      "content_sha256": "ae310cce61825c0485af6aad1c49f34e0c59f7581c66613db456dbe52fe691c0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0059",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0060-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 60,
+      "source_block_sha256": "eda8f72476c539920d2c0e3515ba4b07716fdc24ec9226b585c87777472356ef",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Smoking",
+      "character_count": 7,
+      "content_sha256": "eda8f72476c539920d2c0e3515ba4b07716fdc24ec9226b585c87777472356ef",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0060",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0061-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 61,
+      "source_block_sha256": "50ee30d1dd45d6bf05531b60e6ce50553b5d061ba51eab180878b1d267aea213",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Smoking history is another prevalent trait among COPD patients. It significantly influences disease severity and progression. The smoking history serves as a crucial biomarker indicating heightened risk and exacerbation potential in COPD. Individuals with a significant smoking history face accelerated lung function decline and increased susceptibility to respiratory infections. Targeted interventions, including azithromycin and smoking cessation programs, address the specific needs of smokers with COPD, aiming to mitigate exacerbation risk and improve long-term outcomes [ 30 , 31 ].",
+      "character_count": 589,
+      "content_sha256": "50ee30d1dd45d6bf05531b60e6ce50553b5d061ba51eab180878b1d267aea213",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0061",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0062-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 62,
+      "source_block_sha256": "16548550722845a4a6dc9b55cfde1e5177c30c63004d97162bdcb51b170d0c03",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Implementing treatable traits-based COPD management offers several advantages. It allows for tailored treatment plans, addressing specific issues in individual patients, leading to more personalized care and improved outcomes. Target interventions can be applied more effectively by identifying treatable traits such as exacerbation frequency, airflow limitation, or airway inflammation. Regular assessment of treatable traits enables monitoring disease progression and treatment effectiveness more closely, allowing for timely adjustments to the management plan. By considering multiple treatable traits simultaneously, we can adopt a holistic approach to COPD management, addressing various aspects of the disease and its impact on the patient’s health and quality of life [ 6 , 13 ].",
+      "character_count": 786,
+      "content_sha256": "16548550722845a4a6dc9b55cfde1e5177c30c63004d97162bdcb51b170d0c03",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0062",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0063-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 63,
+      "source_block_sha256": "3db611bf7101d1031140856c59b8e9431dc75410afb1e7edb8a8d0979e451a54",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Review"
+      ],
+      "heading": "Review",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Implementing treatable traits-based COPD management offers several drawbacks too. This approach requires comprehensive assessment and monitoring of various clinical parameters, which may be challenging and time-consuming and may require additional resources, including specialized testing, monitoring equipment, and healthcare personnel, which may not be readily available in many healthcare settings. There is currently no standardized approach to identifying and managing treatable traits in COPD, leading to variability in clinical practice and potential inconsistencies in patient care. While the concept of treatable traits in COPD management shows promise, the evidence supporting its efficacy and long-term benefits is still evolving, and further research is needed to establish its effectiveness compared to traditional approaches [ 32 ].",
+      "character_count": 846,
+      "content_sha256": "3db611bf7101d1031140856c59b8e9431dc75410afb1e7edb8a8d0979e451a54",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0063",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Review"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-RESP-0003-B0064-C01",
+      "document_id": "DOC-PMC-RESP-0003",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Respiratory Medicine",
+      "topics": [
+        "COPD",
+        "Treatable traits"
+      ],
+      "source_block_index": 64,
+      "source_block_sha256": "7e79220c62884ea60da37a9cd0d591e9d02848445c5d6ca0d74cfb4efdb2e5a3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-RESP-0003-JATS-S003",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Conclusions"
+      ],
+      "heading": "Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The management of COPD necessitates a comprehensive understanding of its heterogeneous nature and the diverse array of identifiable treatable traits that influence its course. The shift toward identifying and addressing treatable traits marks a significant advancement in COPD management, emphasizing a holistic approach that tailors treatment to individual patient needs. Recognizing and addressing these traits during initial encounters and follow-up visits can effectively optimize symptom control, reduce exacerbation risk, and improve overall disease management. Treatable traits-based COPD management offers several potential benefits, including personalized treatment and targeted interventions. However, its implementation may also pose challenges related to complexity, resource allocation, standardization, and the need for additional evidence.",
+      "character_count": 854,
+      "content_sha256": "7e79220c62884ea60da37a9cd0d591e9d02848445c5d6ca0d74cfb4efdb2e5a3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-RESP-0003-JATS-B0064",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Conclusions"
+      ]
+    }
+  ]
+}

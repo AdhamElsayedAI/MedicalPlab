@@ -1,0 +1,2012 @@
+{
+  "document_id": "DOC-PMC-CARD-0009",
+  "source_id": "SRC-PMC-001",
+  "title": "Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review",
+  "medical_specialty": "Cardiology",
+  "topics": [
+    "Syncope",
+    "Transient loss of consciousness"
+  ],
+  "source_sha256": "5ae8428688f87fde27248b2bb82ed46cfb87e80e00809b7dbbf065ebd8b727aa",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1400,
+    "maximum_characters": 1800,
+    "minimum_characters": 350,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T03:19:19.961537+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0001-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "57dea99fbf4c76fdfcaec5e8b99ac513d506b77969b851d49e0ece2442c13c68",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Syncope is a highly prevalent clinical condition characterized by a rapid, complete, and brief loss of consciousness, followed by full recovery caused by cerebral hypoperfusion. This symptom carries significance, as its potential underlying causes may involve the heart, blood pressure, or brain, leading to a spectrum of consequences, from sudden death to compromised quality of life. Various factors contribute to syncope, and adhering to a precise diagnostic pathway can enhance diagnostic accuracy and treatment effectiveness. A standardized initial assessment, risk stratification, and appropriate test identification facilitate determining the underlying cause in the majority of cases. New technologies, including artificial intelligence and smart devices, may have the potential to reshape syncope management into a proactive, personalized, and data-centric model, ultimately enhancing patient outcomes and quality of life. This review addresses key aspects of syncope management, including pathogenesis, current diagnostic testing options, treatments, and considerations in the geriatric population.",
+      "character_count": 1108,
+      "content_sha256": "57dea99fbf4c76fdfcaec5e8b99ac513d506b77969b851d49e0ece2442c13c68",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "2cf7c227a9f24389dbdbe57ddc600b50c68fec01e8c63e73696b6665fdcaea8c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Syncope is a condition characterized by a sudden and temporary loss of consciousness (TLOC) caused by a decrease in blood flow to the brain. It is marked by a rapid onset, brief duration (a few seconds up to a minute), and spontaneous full recovery [ 1 ]. The incidence and prevalence of syncope are similar in men and women [ 2 ], with the lifetime cumulative incidence being over 35% [ 3 ]. Syncope accounts for 0.6–3% of all the emergency department (ED) visits globally [ 4 , 5 ]. Approximately 50% of them are admitted; however, there are significant differences, ranging from 12% to 86% [ 1 ]. Epidemiological evidence reveals that the incidence has a first peak between the second and the third decade of life and a second peak after the age of 80 [ 2 , 3 , 6 , 7 , 8 ]. However, although syncope is such a common condition, its management remains challenging. According to a recent survey, despite guidelines being issued by major scientific societies [ 1 , 9 ], in 43.6% of cases, ED management of syncope is not standardized [ 10 ]. Standardization, as well as a proper history recording on admission, is crucial for an effective differential diagnosis with other conditions presenting as TLOC and the identification of patients with potentially life-threatening admissions [ 10 , 11 ].",
+      "character_count": 1296,
+      "content_sha256": "2cf7c227a9f24389dbdbe57ddc600b50c68fec01e8c63e73696b6665fdcaea8c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0003-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "12593221d60cacd142aba41d205b02e13d30f08970032a62cfab19aeab41d3c2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "1. Introduction"
+      ],
+      "heading": "1. Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In this review, we highlight the main issues related to the management of syncope. We discuss its pathogenesis, current diagnostic and treatment options, as well as relevant factors in the geriatric population. We finally highlight the limitations of current knowledge and address perspectives on the future.",
+      "character_count": 308,
+      "content_sha256": "12593221d60cacd142aba41d205b02e13d30f08970032a62cfab19aeab41d3c2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "1. Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0004-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "fb4ca94346eed903b2354094e3d10ce56974b04cf9d658362556178d29cfc9e3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "2. The Baroreceptor Reflex"
+      ],
+      "heading": "2. The Baroreceptor Reflex",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The baroreceptor reflex regulates the short-term control of blood pressure (BP) during postural changes and the rest-to-exercise transitions by operating as a negative feedback control system ( Figure 1 ) [ 12 ]. The baroreceptors located in the carotid sinus and in the aortic arch detect variations in the mean arterial pressure (MAP) and send information to the cardioregulatory and vasomotor centers of the medulla. MAP is influenced by cardiac output and systemic vascular resistance. In the case of a reduction in the MAP, the firing rate of the baroreceptors to the solitary tract nucleus (NTS) decreases. The NTS inhibits the nucleus ambiguus, thus reducing parasympathetic activity, and activates the cardiac accelerator and vasomotor centers, stimulating sympathetic activity. In the heart, the inhibition of the nucleus ambiguus reduces the parasympathetic tone on the sinoatrial node, increasing heart rate (HR). Concurrently, sympathetic activity increases heart contractility and stimulates the constriction of the venous wall, enhancing venous return (pre-load). In the arterioles, the sympathetic nervous system stimulates vasoconstriction. Through this mechanism, the baroreceptor reflex influences both cardiac output and total peripheral resistance to restore the MAP to the original setpoint [ 12 ].",
+      "character_count": 1319,
+      "content_sha256": "fb4ca94346eed903b2354094e3d10ce56974b04cf9d658362556178d29cfc9e3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. The Baroreceptor Reflex"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0005-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "d648e4d69286b89d57549b07186864d5b7e6af178390439dee05a41d1f626cc5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S002",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "2. The Baroreceptor Reflex"
+      ],
+      "heading": "2. The Baroreceptor Reflex",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Advancing age is a prominent risk factor for baroreflex dysfunction. Indeed, BP variability has been addressed as a key marker of aging [ 13 , 14 ]. In older adults, several factors compromise optimal BP control, including arterial stiffness [ 15 , 16 ], endothelial dysfunction [ 17 , 18 ], atherosclerosis [ 19 , 20 ], chronic inflammation and oxidative stress [ 21 ], decreased baroreflex sensitivity [ 22 ], and medications [ 23 , 24 ]. Other conditions decrease baroreflex sensitivity through primary or secondary dysautonomia. Primary causes of dysautonomia include pure atrophy, multisystem atrophy, Parkinson’s disease, and Lewy body dementia [ 25 ]. Secondary dysautonomia is caused by diabetes [ 26 ], amyloidosis [ 27 ], uremia [ 28 ], metabolic syndrome [ 29 ], heart failure [ 30 ], or other cardiovascular and non-cardiovascular diseases [ 31 , 32 ], as well as drugs causing sympathetic inhibition (e.g., antipsychotics via α1 and d2, antidepressants via antimuscarinic activity), vasodilation, cardio-inhibitory effects, or volume depletion (diuretics) [ 33 ]. Both acute SARS-CoV-2 infection and its post-acute sequelae are characterized by autonomic dysfunction and an altered mechanism of blood pressure variability and may manifest as syncope [ 34 , 35 ]. Interestingly, physical activity has shown benefits for baroreflex function in older adults [ 36 ]. Moreover, emerging evidence addresses the role of SGLT2 inhibitors in reducing cardiac autonomic neuropathy dysfunction [ 37 , 38 , 39 ].",
+      "character_count": 1513,
+      "content_sha256": "d648e4d69286b89d57549b07186864d5b7e6af178390439dee05a41d1f626cc5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "2. The Baroreceptor Reflex"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0006-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "d363718748897e0c37547095b273955a907538deab82d8cfdba17e09eb60d1ec",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "3. Etiological Classification"
+      ],
+      "heading": "3. Etiological Classification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Syncope can be classified into non-cardiac syncope (including neurally mediated or reflex syncope and orthostatic syncope) and cardiac syncope, depending on its pathogenesis [ 1 ]. Identifying the underlying cause of syncope is essential for risk stratification. While neurally mediated syncope is usually benign, cardiac syncope is more often associated with worse outcomes, including death [ 1 ]. While syncopal events occurring in the first decades of life are mostly isolated with a lower risk of adverse outcomes that may benefit from lifestyle-adjustment therapy, syncopal events occurring in older adults are mostly associated with an underlying disease and usually require accurate evaluation and mechanism-specific therapy [ 8 ].",
+      "character_count": 738,
+      "content_sha256": "d363718748897e0c37547095b273955a907538deab82d8cfdba17e09eb60d1ec",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0007-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "553b1c587d1f76b7009bcf04677e5ac7643128095aeb649f8b0b29b3e5fe8f28",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "parent_section_heading": "3. Etiological Classification",
+      "section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ],
+      "heading": "3.1. Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "According to the 2018 European Society of Cardiology (ESC) guidelines, non-cardiac syncope can be classified into reflex (or neurally mediated) syncope and orthostatic syncope [ 1 ].",
+      "character_count": 182,
+      "content_sha256": "553b1c587d1f76b7009bcf04677e5ac7643128095aeb649f8b0b29b3e5fe8f28",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0008-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "0abf57b9dddf25eeb8290f533b012a797d1299adf7fa1eb7d2abd38ef1536c78",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "parent_section_heading": "3. Etiological Classification",
+      "section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ],
+      "heading": "3.1. Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Reflex syncope is the most common type and often has a benign course. It can be due to different causes that lead to an exaggerated baroreflex response, resulting in peripheral vasodilatation and/or bradycardia, with a consequent BP drop and cerebral hypoperfusion ( Table 1 ) [ 1 ].",
+      "character_count": 283,
+      "content_sha256": "0abf57b9dddf25eeb8290f533b012a797d1299adf7fa1eb7d2abd38ef1536c78",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0009-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "16dc6156a6fde85de89ed4fc25a7dd265795ec1d609a394c39b1a1c9706d69c2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "parent_section_heading": "3. Etiological Classification",
+      "section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ],
+      "heading": "3.1. Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Orthostatic syncope refers to a TLOC resulting from a postural decrease in BP. It can occur with or without premonitory symptoms (e.g., dizziness, asthenia, fatigue, palpitations, sweating, visual and auditory disturbances, and neck pain). The causes of orthostatic hypotension (OH) include volume depletion (e.g., vomiting, diarrhea, hemorrhage, and Addison’s disease), dysautonomia, and peripheral venous pooling (e.g., exercise, post-prandial, or after prolonged bed rest), which may exacerbate drops in systolic BP (SBP) [ 1 ]. ESC guidelines identify five subtypes of OH ( Figure 2 ) [ 1 ]. Initial OH is defined as a drop in SBP higher than 40 mmHg and/or a DBP higher than 20 mmHg occurring within the first 15 s. It is more common in older adults, and it is often drug-induced. Classic OH is defined as a decrease in SBP > 20 mmHg and/or DBP > 10 mmHg or a sustained SBP below 90 mmHg after over 3 min of active standing or tilting. Delayed OH occurs after 3 min of active standing or tilting. It is potentially caused by decreased pre-load and low cardiac output and differentiates from reflex syncope due to the absence of bradycardia. Vasovagal syncope triggered by orthostatism is more common in women with orthostatic intolerance. Postural orthostatic tachycardia syndrome (POTS) is defined by an increase in heart rate higher than 30 bpm or above 120 bpm within the first 10 min of active standing or tilting. It is due to an inappropriate increase in heart rate without a concomitant decrease in blood pressure. POTS mostly affects young women, individuals suffering from an infection or recent trauma, and those with joint hypermobility syndrome [ 1 , 40 ].",
+      "character_count": 1673,
+      "content_sha256": "16dc6156a6fde85de89ed4fc25a7dd265795ec1d609a394c39b1a1c9706d69c2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0010-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "9d55a2753427a2817b5fd3957c1de49dafb16ab514a999e2dfc75dda94893cde",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "parent_section_heading": "3. Etiological Classification",
+      "section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ],
+      "heading": "3.1. Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Distinguishing between the cardiac and non-cardiac causes of syncope is critical to performing proper risk stratification and guiding diagnostic and therapeutic management. While the 2018 ESC guidelines point out the existence of a “low BP phenotype” for vasovagal syncope, a recent multicohort cross-sectional study by Brignole et al. suggested that they may actually have different cardiovascular hemodynamics [ 41 ]. In particular, the hemodynamic profile of those identified as being the “low BP phenotype” may be characterized by a lower SBP and pulse pressure and, therefore, a reduced pre-load and lower stroke volume, and a higher HR and diastolic BP (DPB) as a likely activation of compensatory mechanisms. Therefore, recent evidence has focused on phenotypes rather than on classical etiological classification, such as the hypotensive phenotype, characterized by prevailing hypotension or vasodepression, and the bradycardic phenotype, with prevailing cardioinhibition [ 42 , 43 ].",
+      "character_count": 992,
+      "content_sha256": "9d55a2753427a2817b5fd3957c1de49dafb16ab514a999e2dfc75dda94893cde",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification",
+        "3.1. Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0011-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "41a6c0812ef990bb2d91443f4346ec17b8abddf6d2f9bf30a0933593664f0797",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S005",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S003",
+      "parent_section_heading": "3. Etiological Classification",
+      "section_path": [
+        "3. Etiological Classification",
+        "3.2. Cardiac Syncope"
+      ],
+      "heading": "3.2. Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cardiac syncope can be associated with a variety of causes, including arrhythmias (bradyarrhythmia/tachyarrhythmia), heart disease (e.g., aortic stenosis, hypertrophic cardiomyopathy, cardiac tamponade, pericarditis, myocardial infarction, atrial myxoma, and prosthetic valve dysfunction), congenital anomalies of the coronary arteries, and pulmonary embolism [ 1 , 44 ]. While syncope globally has low morbidity and mortality, cardiac syncope is a red flag for sudden cardiac death, with its 1-year mortality reaching up to 30% [ 45 ].",
+      "character_count": 536,
+      "content_sha256": "41a6c0812ef990bb2d91443f4346ec17b8abddf6d2f9bf30a0933593664f0797",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "3. Etiological Classification",
+        "3.2. Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0012-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "9e191c418cf50c282e1e31329a9a12a016a0cfb60b41e6f94b6983fa82a46b88",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "4. Diagnostic Approach"
+      ],
+      "heading": "4. Diagnostic Approach",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Studies have highlighted significant differences in managing syncope between different centers [ 46 ], with poor adherence to internationally established guidelines [ 11 ]. A lack of standardization is associated with higher costs due to unnecessary hospitalizations, especially in older adults [ 47 ], as well as unnecessary exams [ 48 ]. Further efforts from both research and governance are needed to provide more precise methods for identifying individuals at increased risk of complications, as well as to establish procedures that can optimize treatment for each patient [ 49 , 50 , 51 ]. An effective diagnostic approach for syncope requires four steps: (1) differentiating syncope from other forms of non-syncopal TLOC; (2) prognostic stratification; (3) differentiating between cardiac and non-cardiac syncope and following the appropriate diagnostic algorithm; (4) identifying the “red flags” that indicate serious health conditions manifesting as syncope ( Figure 3 ).",
+      "character_count": 979,
+      "content_sha256": "9e191c418cf50c282e1e31329a9a12a016a0cfb60b41e6f94b6983fa82a46b88",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0013-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "77d9f9ba8dcc6adb26538dcacdf9e66eb89e429a4d3cb31063c06c14f6069a9c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S007",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.1. Initial Assessment"
+      ],
+      "heading": "4.1. Initial Assessment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The initial assessment should differentiate syncope from other forms of non-syncopal TLOC. Reconstructing the fall dynamics with the patient or an eyewitness, identifying indications and symptoms that happened before, during, or after the fall, and an accurate pathological, pharmacological, and family history are all required for a proper initial assessment. ECG, OH testing, and carotid sinus massage (CSM) are mandatory in the early stages ( Figure 4 ) [ 52 ].",
+      "character_count": 464,
+      "content_sha256": "77d9f9ba8dcc6adb26538dcacdf9e66eb89e429a4d3cb31063c06c14f6069a9c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.1. Initial Assessment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0014-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "222b0c1d6c640d7611ac6a923a378137196b3b54e314b418e3e7403a9611fe68",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ],
+      "heading": "4.2. Differential Diagnoses",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Non-syncopal TLOC includes both traumatic (e.g., subarachnoid hemorrhage) and non-traumatic conditions. Among non-traumatic non-syncopal TLOC, epilepsy is the most common condition requiring a differential diagnosis ( Table 2 ). Albeit rare (<60% of cases), myoclonia occurring in syncope may be confused with epileptic tonic-clonic contractions; however, they are often localized to one limb, are asynchronous and asymmetrical, and have a short duration. Occasionally, epilepsy and syncope may trigger each other. In 90% of cases, epileptic seizures are associated with changes in heart rhythm. Prolonged (>8 s) bradycardia caused by temporal lobe epilepsy may trigger the vagus nerve and cause syncope (ictal asystole). The cessation of cortical activity due to global cerebral hypoperfusion stops the convulsive attack. Treatment consists of antiepileptic drugs and PM implantation. On the other hand, a syncopal epileptic seizure may occur as a consequence of hypoxia. In this case, the epileptic seizure lasts longer than anoxia-dependent irritation [ 52 ].",
+      "character_count": 1062,
+      "content_sha256": "222b0c1d6c640d7611ac6a923a378137196b3b54e314b418e3e7403a9611fe68",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0015-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "dbf51122046c63bfb95f9696b742dfbb3bf23b0eae111f738c21323294aec070",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ],
+      "heading": "4.2. Differential Diagnoses",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Other causes of TLOC include vertebrobasilar transient ischemic attacks (TIAs), orthostatic TIAs, and subclavian steal syndrome. Vertebrobasilar TIAs usually last a few minutes and are characterized by a loss of consciousness accompanied by ataxia, vertigo, diplopia, nystagmus, dysarthria, and oropharyngeal dysfunction. Orthostatic TIAs occur as a combination of multiple cerebral artery stenoses and OH due to repetitive TIAs occurring in the orthostatic position. In subclavian steal syndrome, syncope is accompanied by neurological signs [ 52 ]. Metabolic disorders, such as hypoglycemia, hyperventilation with hypocapnia, and intoxication, may cause non-syncopal TLOC [ 52 ].",
+      "character_count": 681,
+      "content_sha256": "dbf51122046c63bfb95f9696b742dfbb3bf23b0eae111f738c21323294aec070",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0016-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "bb74160c1888ecc6e7d498fc7db064fe3bdcf96c3b541ca5d15316a55eeecb81",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ],
+      "heading": "4.2. Differential Diagnoses",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Finally, loss of consciousness may be merely apparent, referred to as psychogenic loss of consciousness. This condition can be categorized into two distinct types, namely a non-epileptic psychogenic convulsive seizure (PNES) and psychogenic pseudosyncope (PPS) [ 52 ]. In a PNES, patients present massive limb movements that strongly resemble an epileptic seizure. An electroencephalogram (EEG) and video-EEG may help to discriminate between psychogenic and organic seizures. Although it is classified as a psychiatric disorder rather than a true TLOC, PPS shares significant similarities with reflex syncope. It can be preceded by pre-syncopal prodromal symptoms, such as vision changes, frostbite, sweating, and shortness of breath, and its causative factors include prolonged orthostatic position, a crowded environment, and psychological tension. Differently from syncope, however, PPS may last up to 15–30 min or even hours. During the attacks, the patient’s eyes are shut, and they exhibit no response to physical touch or verbal stimulation. However, individuals with PPS show signs that are inconsistent with a loss of consciousness, such as fluttering eyelids, swallowing, retained muscle tone, normal limb movement, and aversion to opening the eyes. The gold standard for diagnosing PPS is video documentation during a tilt test (preferably with an EEG) with a normal BP and HR.",
+      "character_count": 1388,
+      "content_sha256": "080dd6ba77fe20c6a8a30bbf5c6bcb2d1bd695c746d0777c9a31203f13bf3701",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0016-C02",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "bb74160c1888ecc6e7d498fc7db064fe3bdcf96c3b541ca5d15316a55eeecb81",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ],
+      "heading": "4.2. Differential Diagnoses",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Once diagnosed, it is necessary to reassure the patient that it is not a “voluntary” condition. Acceptance of the diagnosis is crucial to refer the patient for cognitive behavioral therapy and allow an immediate reduction in the frequency of the episodes [ 52 ]. Assessing emotional and psychogenic factors should be considered in the management of syncope. France et al. studied the determinants of fear and anxiety as triggers of vasovagal syncope in the context of blood donation and identified individuals who were more at risk of a vasovagal reaction following a venipuncture [ 53 ]. O’Hare et al. identified childhood trauma as a possible determinant of life-long vasovagal tendency [ 54 ]. A study of 162 individuals with positive tilt tests for vasovagal syncope, which were matched with 162 healthy subjects found that patients who experienced syncope had higher scores in their persistence temperament and self-transcendence character traits [ 55 ]. A further study highlighted a higher prevalence of depression and anxiety in patients with vasovagal syncope [ 56 , 57 ]. Those findings imply the potential utility of psychological assessment when treating patients with refractory vasovagal syncope.",
+      "character_count": 1210,
+      "content_sha256": "a05d28998f9d486be7fcb03b5cb374cbb04b7e9f524d5585ed879a35c53e457a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0017-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "5a9d3b5d8228823475723fdbb8f5e5f1f5a64710dfd13eeeceb0e872690e3ae5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ],
+      "heading": "4.2. Differential Diagnoses",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Other conditions that may mimic TLOC are cataplexy and drop attacks. Cataplexy is a sudden and transient episode of muscle weakness accompanied by full conscious awareness, typically triggered by emotions (e.g., laughter) without amnesia. The term drop attacks refers to sudden falls without warning signs and/or symptoms and may be used to describe an atonic seizure, Meniere’s disease, or a specific syndrome of unknown etiology [ 52 ].",
+      "character_count": 438,
+      "content_sha256": "5a9d3b5d8228823475723fdbb8f5e5f1f5a64710dfd13eeeceb0e872690e3ae5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.2. Differential Diagnoses"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0018-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "6d03dc1cbc88fcb6e3c22e9b09bf056be48df469a0127526babfaa7e1f60acbd",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S006",
+      "parent_section_heading": "4. Diagnostic Approach",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification"
+      ],
+      "heading": "4.3. Risk Stratification",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Once the differential diagnosis between syncopal and non-syncopal TLOC has been ruled out, the diagnostic algorithm requires the identification of patients at high risk, neither high nor low risk, and low risk ( Table 3 ). High risk requires urgent hospitalization, moderate risk demands a fast track to the syncope unit (in-hospital or as an outpatient), and low risk necessitates outpatient evaluation and may benefit from reassurance or counseling [ 58 ]. Numerous syncope prediction tools have been developed through the combination of different clinical variables to improve risk stratification (e.g., the Martin-Kapoor score [ 59 ], the osservatorio epidemiologico sulla sincope nel Lazio (OESIL) risk score [ 60 ], the San Francesco syncope rule [ 61 ], the FAINT score [ 62 ], the Basel IX ECG ALERT-CS tool [ 63 ]), and the evaluation of guidelines in syncope study (EGSYS) score [ 64 ]. However, the main limitation in implementing a prognostic score in clinical practice was the lack of reproducibility and heterogeneity in study designs, populations, and outcomes [ 58 ]. In the real world, those scores did not perform better than clinical judgement; therefore, both European and American guidelines recommend against their use as a unique criterion for risk stratification [ 1 , 9 ]. The prognosis of patients with syncope strictly depends on the etiology [ 65 ]. The one-year mortality of cardiac syncope is significantly higher (18–33%) than non-cardiac subtypes (3.4%) [ 66 ]. The subsequent choice of a diagnostic test should be guided by pre-test probability. In 90% of cases, an etiological diagnosis can be decided upon with only two more tests in addition to the initial assessment [ 1 ].",
+      "character_count": 1710,
+      "content_sha256": "6d03dc1cbc88fcb6e3c22e9b09bf056be48df469a0127526babfaa7e1f60acbd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0019-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "2e30a2d28ce944a721f63c90b039b0bd11f2e2972e3b22af3c52e3e35f5bbb7f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "CSM and orthostatic challenges (active standing and tilt test) are complementary tests for the diagnosis of non-cardiac syncope. While CSM and the tilt test showed a minimal overlap in bradycardic patients (3%), the tilt test was able to correctly identify 98% of patients with hypotensive syncope. Therefore, the authors concluded that CSM and orthostatic challenge are indicated for identifying those patients with a bradycardic phenotype; however, CSM has limited utility for the hypotensive phenotype [ 67 ].",
+      "character_count": 512,
+      "content_sha256": "2e30a2d28ce944a721f63c90b039b0bd11f2e2972e3b22af3c52e3e35f5bbb7f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0019",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0020-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "194ad38243ca9d9d505cd48aba4122524d1fee547b33430600d3601b7078576f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "CSM is indicated in patients over 40 years of age with a suspicion of reflex syncope. Asystole > 3 s and/or a fall in BP > 50 mmHg after CSM suggests carotid sinus syndrome [ 68 ]. If CSM causes pure asystole, the possibility of a marked but hidden concomitant vasodepressor response should be considered. In that case, the intravenous administration of 0.02 mg/kg atropine prevents reflex asystole, allowing the unmasking of any concomitant vasodepressor response. A history of TIA or stroke occurring in the previous six months and/or stenosis higher than 70% in the common or internal carotid arteries are contraindications for performing CSM [ 69 ]. Other contraindications include a recent myocardial infarction (<8 weeks) and a history of ventricular arrhythmias. The main complications of CSM are TIAs and ischemic events; however, they are rare (0–24%) [ 69 ]. CSM is always reproducible in individuals with severe cardioinhibitory conditions who are candidates for PM implantation. A cardioinhibitory response to carotid sinus massage that reproduces symptoms appears to be predictive of spontaneous asystole [ 65 , 70 , 71 , 72 , 73 ]. Orthostatic challenge tests include the active standing test, tilt test, Valsalva maneuver, deep breathing test, and 24-h Holter BP test ( Table 4 ) [ 74 ].",
+      "character_count": 1302,
+      "content_sha256": "194ad38243ca9d9d505cd48aba4122524d1fee547b33430600d3601b7078576f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0021-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "b52aacac32bd83b25cc2f86b95530ca9ed84e34d0f79a657eafa133197b2dab3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "The active standing test allows for the diagnosis of initial OH and classic OH. A symptomatic systolic fall of 20 mmHg or a diastolic fall of 10 mmHg from the clinostat values or an absolute BP value below 90 mmHg indicates OH. However, OH syncope remains a suspected diagnosis if the symptoms are not reproduced. The tilt test identifies patients with hypotension susceptibility (e.g., suspected vasovagal syncope with an atypical presentation, recurrent syncope without heart disease, syncope with heart disease and negative tests for cardiac syncope, older adults with recurrent unexplained falls, and syncope without prodromes and with retrograde amnesia). The tilt test mimics the clinical situation of a vasovagal syncope induced via prolonged orthostatism or in patients susceptible to a vasovagal response. Passive orthostatism induces a vigorous “empty heart” myocardial contraction, which leads to an inappropriate activation of ventricular mechanoreceptors and subsequent paradoxical vasodilation and cardiac inhibition. An asystolic pause may precede or coincide with TLOC, and this has important clinical implications for PM implantation. However, while a cardioinhibitory response in the tilt test is highly predictive of asystolic syncope, the presence of a vasodepressor or a mixed or even negative response does not exclude the presence of asystole during spontaneous syncope.",
+      "character_count": 1393,
+      "content_sha256": "cdf462ab16889cb91b45c743746a1f0617af8e35c7d55e80cc195b6a8f0a000b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0021-C02",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "b52aacac32bd83b25cc2f86b95530ca9ed84e34d0f79a657eafa133197b2dab3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "The tilt test has low specificity and sensitivity in patients with syncope of an uncertain cause (30–36%) [ 75 ]. Studies have reported a positive test in 51–56% of patients with atypical clinical features suggesting reflex syncope, 30–36% of patients with unexplained syncope, and 45–47% of patients with arrhythmic cardiac syncope [ 76 ]. In the latter group, a positive tilt test reveals orthostatic stress susceptibility, which plays a role in determining syncope regardless of etiology and mechanism. The alternative hemodynamic profile of those identified as having the low BP phenotype, however, [ 41 ] may pair the concept of hypotension susceptibility. A tilt test yielding an abnormal result does not definitively diagnose vasovagal syncope but rather indicates a predisposition to hypotension that becomes evident while standing upright. Therefore, any predisposition towards OH may become activated in the upright position and result in vasovagal syncope [ 77 ]. One more relevant issue in the diagnosis of vasovagal syncope is the quantification of vasodepression and cardioinhibition and their contribution to BP [ 77 ]. For this purpose, Van Dijk and colleagues proposed the log-ratio method to assess the relationships between vasodepression, cardioinhibition, and peripheral resistance on BP [ 78 ].",
+      "character_count": 1316,
+      "content_sha256": "68f1df147f057aff63ef3e56e2c050d7713ef35b55f02b277f0411e7418f536f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0021-C03",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "b52aacac32bd83b25cc2f86b95530ca9ed84e34d0f79a657eafa133197b2dab3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 3,
+      "chunk_count_in_block": 3,
+      "is_split": true,
+      "text": "According to their study conducted in a cohort of 163 patients, cardioinhibition occurred in 91% of patients after a mean time of 58 s from TLOC, and it manifested as a reduction in the stroke volume. While peripheral resistance was not impacted by cardioinhibition, the reduction in the stroke volume negatively impacted BP and produced an ineffective corrective increase in HR, which was unable to compensate for the decline in BP [ 78 ]. In a subsequent study, the authors highlighted that aging had a significative impact on cardioinhibition and vasodilation, as it was associated with a diminished increase in HR and a faster BP decline [ 79 ]. Therefore, the authors questioned the utility of pacing in older patients with vasovagal syncope.",
+      "character_count": 747,
+      "content_sha256": "c505d2c2d4a0a0323c070bb1994283ebf640eb6a3c2f524cf3778a560a9dd5a4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0022-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "c85e369c691228fd361fe14b0747ea37d8c61beff8325b8533ced5737ea63b04",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ],
+      "heading": "4.3.1. Diagnosis of Non-Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Baseline tests such as the Valsalva maneuver, deep breathing test, and 24-hour ambulatory blood pressure monitoring (ABPM) can be performed to determine if the underlying cause of OH is dysautonomia. Recent evidence addresses ABPM as a potentially useful diagnostic test for reflex syncope. According to the SynABPM 1 study, reflex syncope patients showed a higher frequency of SBP drops than healthy controls [ 80 ]. Therefore, the authors proposed the novel cut-off values of one episode of daytime SBP < 90 mmHg or two episodes of daytime SBP < 90 mmHg if the mean 24-h SBP is below 125 mmHg to identify reflex syncope with hypotensive susceptibility [ 80 ].",
+      "character_count": 661,
+      "content_sha256": "c85e369c691228fd361fe14b0747ea37d8c61beff8325b8533ced5737ea63b04",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.1. Diagnosis of Non-Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0023-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "3af26d462950e283416fa4481b776df2b42c72de5a1ad78b1f2c1daf0fab60cb",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In cardiac syncope, the primary event is a marked reduction in cardiac output due to arrhythmia, structural heart disease, or pulmonary embolism.",
+      "character_count": 145,
+      "content_sha256": "3af26d462950e283416fa4481b776df2b42c72de5a1ad78b1f2c1daf0fab60cb",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0024-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "dfe96d2b6770daebb4555af843fbc5482b8b5241de8f6f87f9dd8b9a0307ff86",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Presyncope, symptomatic arrhythmias without diagnostic ECG criteria, and sinus bradycardia without syncope are necessary but not sufficient to identify cardiac syncope. On the other hand, significant tachy- or brady-arrhythmias (asystole for more than 3 s, second-degree atrioventricular (AV) block Mobitz II, third-degree AV block, rapid and prolonged supraventricular tachycardia, or ventricular tachycardia), even without documented syncopal events, are considered diagnostic findings. Diagnostic tests for cardiac syncope include tools to identify intermittent tachy- or brady-arrhythmias (telemetry ECG monitoring, 24-h Holter ECG, and an external/internal event recorder) and electrophysiological (electrophysiological study, EPS) or morphological (echocardiography) substrate, and exercise testing ( Table 5 ) [ 1 , 44 ].",
+      "character_count": 828,
+      "content_sha256": "dfe96d2b6770daebb4555af843fbc5482b8b5241de8f6f87f9dd8b9a0307ff86",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0025-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "5ce033afbd47a5cb7e812864dba5d7a2304b9c2060740e55ebed39432ea1e8d4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Despite its low diagnostic power (1.9–17.6%), telemetry ECG monitoring is useful in the first 72 h of a TLOC event in high-risk patients. The 24-h Holter ECG is indicated in patients with very frequent syncope or presyncope (>1/week); otherwise, the diagnostic power is 1–2% [ 81 ]. For sporadic episodes, event recorders are more useful [ 82 ]. An external loop recorder can be used for recurrent syncope (>1/month), while an internal loop recorder is indicated for indeterminate syncope in high-risk patients, low-risk patients with a high probability of recurrence within 36 months (≥3 episodes in the previous 2 years), and to determine the contribution of bradycardia to TLOC (and thus to indicate PM implantation) in patients with reflex syncope [ 1 , 44 ].",
+      "character_count": 763,
+      "content_sha256": "5ce033afbd47a5cb7e812864dba5d7a2304b9c2060740e55ebed39432ea1e8d4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0026-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "54c1db733b49995ccb57ca1f963ef6855b82f1ea224e196f88326a5fd075b9f0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "An electrophysiological study (EPS) is recommended to identify arrhythmic syncope in patients with a history of organic or acquired heart disease or/and the presence of abnormal findings on the ECG [ 83 ].",
+      "character_count": 205,
+      "content_sha256": "54c1db733b49995ccb57ca1f963ef6855b82f1ea224e196f88326a5fd075b9f0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0027-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "30b0d7b9d1923292a4bc21835e93cff915ea24035ab92c780786d4292bd705a5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "If a structural cardiac disease is suspected during the initial assessment, an echocardiography is useful for both diagnosis and prognostic stratification to assess the risk of sudden death. An ejection fraction (EF) < 35% is associated with a high risk of sudden death in 2 years; therefore, it is an indication of implantable cardiac defibrillator (ICD) implantation regardless of the cause of syncope [ 1 , 84 ].",
+      "character_count": 415,
+      "content_sha256": "30b0d7b9d1923292a4bc21835e93cff915ea24035ab92c780786d4292bd705a5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0028-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "9437d1dc447a4174ac98329cec3f38915a33defc9dcd9f3186e90e2cbce8d793",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Exercise testing is recommended for patients experiencing exertional syncope, aiding in a diagnosis when syncope is replicated during or immediately after physical activity in conjunction with ECG alterations (or when a second- or third-degree AV block manifests even without accompanying syncope). It is crucial to note that, in the absence of structural heart disease, exercise-induced syncope may be an expression of vasovagal vasodilation [ 1 , 85 , 86 ].",
+      "character_count": 459,
+      "content_sha256": "9437d1dc447a4174ac98329cec3f38915a33defc9dcd9f3186e90e2cbce8d793",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0029-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "0273a1142f565ec7b199bc0ed016ec0153e277db31ffb7c9b2d8f940bfaebd1e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S009",
+      "parent_section_heading": "4.3. Risk Stratification",
+      "section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ],
+      "heading": "4.3.2. Diagnosis of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Coronary angiography does not contribute to syncope diagnosis; however, it proves beneficial in cases of heart disease with systolic dysfunction by evaluating the potential for myocardial revascularization, aiming to enhance the patients’ prognoses [ 1 , 87 ].",
+      "character_count": 260,
+      "content_sha256": "0273a1142f565ec7b199bc0ed016ec0153e277db31ffb7c9b2d8f940bfaebd1e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "4. Diagnostic Approach",
+        "4.3. Risk Stratification",
+        "4.3.2. Diagnosis of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0030-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "d5cae5d947d302ee6731847f6d96537505fc3f27ea6e623aeb76e96cb03a6912",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "5. Treatment"
+      ],
+      "heading": "5. Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The treatment of syncope aims to reduce syncopal recurrences; however, no treatment is completely effective in eliminating syncope episodes in the long term [ 88 ]. The underlying physiological mechanism of syncope influences the choice of treatment. For example, bradycardia is the most common cause of cardiac syncope, and it is treated with PM implantation. Nevertheless, the coexistence of hypotension reduces pacing efficacy [ 79 , 88 ]. On the other hand, the management of reflex or orthostatic syncope is more complex since specific therapies are less effective [ 89 ]. However, syncopal recurrences often spontaneously resolve after medical evaluation, even without any specific therapy [ 1 ].",
+      "character_count": 702,
+      "content_sha256": "d5cae5d947d302ee6731847f6d96537505fc3f27ea6e623aeb76e96cb03a6912",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0031-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "60a7ca99b58773ca950f1dc5c8ce0504be961a560960c3b4caa8dcb56ccf69ec",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "5. Treatment"
+      ],
+      "heading": "5. Treatment",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Syncope tends to recur in less than 50% of patients within 1–2 years, particularly in cases of reflex and orthostatic hypotension syncope [ 1 ]. The underlying reason for this decrease is unknown. This implies that treatment may be delayed in low-risk conditions, and caution is warranted when interpreting the effectiveness of interventions in preventing syncope, as observational studies lacking a control group may be biased [ 1 ].",
+      "character_count": 434,
+      "content_sha256": "60a7ca99b58773ca950f1dc5c8ce0504be961a560960c3b4caa8dcb56ccf69ec",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0032-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "b953ed65bf5d53cb511e28b81f1d567ddad1265a2a728f4e2d2e105a473ac220",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ],
+      "heading": "5.1. Treatment of Reflex Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The goal of treating reflex syncope is to enhance the quality of life. Non-pharmacological approaches involve providing reassurance about the benign nature of syncope and encouraging behavioral measures to eliminate or reduce triggers. These measures include avoiding prolonged standing or sitting, rapid changes in position, hot or crowded environments, and engaging in moderate physical activity if tolerated, along with staying hydrated and consuming salted foods. Recognizing prodromes and adopting safe positions or physical counter-pressure maneuvers can significantly reduce syncope recurrence [ 90 ].",
+      "character_count": 608,
+      "content_sha256": "b953ed65bf5d53cb511e28b81f1d567ddad1265a2a728f4e2d2e105a473ac220",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0032",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0033-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "3c5c54494ee43364c60c57f9f88c2fd25da55b7524418be6f4f6ffa4b3728125",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ],
+      "heading": "5.1. Treatment of Reflex Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For cases of recurrent or disabling syncope, therapeutic strategies generally depend on age (younger than 40 years or older than 60 years). Treatment options include adjusting or withdrawing antihypertensive therapy, physical counter-pressure maneuvers ( Figure 5 , and tilt training [ 1 , 90 ]. Isometric muscle contractions increase cardiac outflow and BP and can potentially delay or prevent syncope events ( Figure 5 ). Tilt training involves gradually increasing periods of orthostatism and may be effective in young, motivated patients with orthostatic stress-induced prodromes, although clear efficacy in clinical studies is not well-established [ 1 , 90 ].",
+      "character_count": 664,
+      "content_sha256": "3c5c54494ee43364c60c57f9f88c2fd25da55b7524418be6f4f6ffa4b3728125",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0034-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "60ffa9cc4b4f25e65c2743ef26d95e29010b27df0849bf37ec4dde2206a7c05f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ],
+      "heading": "5.1. Treatment of Reflex Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Pharmacological measures are rarely employed [ 90 , 91 ]. Fludrocortisone increases renal sodium absorption, counteracting the physiological cascade triggering vasovagal reflex syncope. It is recommended at doses of 0.05–0.2 mg/day for young patients without comorbidities and consistently low BP values [ 1 , 90 ]. According to a recent meta-analysis, midodrine, an alpha-agonist acting as a vasoconstrictor, showed a reduction in the recurrence of vasovagal syncope (relative risk (RR) 0.55; 95% CI 0.35–0.85) [ 91 ]. Midodrine may be considered at doses of 2.5–10 mg three times a day for young patients with the low BP phenotype experiencing orthostatic-induced reflex vasovagal syncope [ 1 , 90 ].",
+      "character_count": 702,
+      "content_sha256": "60ffa9cc4b4f25e65c2743ef26d95e29010b27df0849bf37ec4dde2206a7c05f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0035-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "fea927ff84efd6e02c4010b76da0b88e12b9fe2020dfc12a3e374a2812472950",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ],
+      "heading": "5.1. Treatment of Reflex Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In the case of a dominating cardioinhibitory response, the implantation of a dual-chamber PM should be considered. PM implantation is indicated in patients over 40 years old. One indication is the evidence on the internal loop recorder of symptomatic asystolic pauses >3 s or asymptomatic pauses >6 s due to sinus arrest or AV block. However, the presence of a concomitant reflex vasodilatory response compromises the efficacy of pacing, resulting in a higher probability of syncopal recurrence. Another indication is a positive tilt test for a cardioinhibitory response and recurrent syncope, although the evidence is controversial. The clinical presentation of syncope itself, along with the absence of concomitant vasodilation and hypotension, is crucial in selecting patients for implantation. Additional tests, such as an internal loop recorder (ILR), are necessary to document the exact mechanism of reflex syncope and determine the appropriateness of pacing. The tilt test, especially when assessing hypotensive susceptibility, is critical for identifying patients who may not effectively respond to pacing, as a positive tilt for hypotensive susceptibility is a strong predictor of PM ineffectiveness [ 1 , 92 ].",
+      "character_count": 1220,
+      "content_sha256": "fea927ff84efd6e02c4010b76da0b88e12b9fe2020dfc12a3e374a2812472950",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0036-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "d0792a4d0a9345935f9265227b57d46855facf2e1259c902451b539430e390b4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S013",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ],
+      "heading": "5.1. Treatment of Reflex Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cardioneuroablation (CNA) is gaining recognition for its effectiveness in treating vasovagal syncope. CNA refers to the process of precisely targeting and cauterizing the intrinsic epicardial ganglia within the heart. This results in a partial parasympathetic denervation, decreasing vagal tone on the cardiac fibers, reducing the incidence of bradyarrhythmia [ 93 ]. A meta-analysis by Vandenberk et al. on 465 patients aged 18–60 years affected by severely symptomatic recurrent reflex syncope with spontaneous or orthostatic challenge-induced asystole and without sinus node or AV node dysfunction was performed, involving 14 studies [ 94 ]. According to their results, the freedom-from-syncope (FFS) after CNA was 91.9% (95% confidence interval (CI) 88.1–94.6%; p = 0.376), with higher rates of FFS for left atrial ablation (94.0%; 95% CI 88.6–96.9%) and biatrial ablation (92.7%; 95% CI 86.8–96.1%) than right atrial ablation (81.5%; 95% CI 51.9–94.7%; p < 0.0001) [ 94 ]. A recent study conducted on 48 patients with recurrent syncope showed lower recurrence rates of syncope in the CNA group compared to the non-CNA group [ 95 ]. However, despite the promising results, multiple issues arose regarding the selection of potential patients, ideal ablation site, verification of the ablation effect, and long-term durability of the procedure [ 96 , 97 ]. For this reason, further clinical trials and real-world studies encompassing a substantial number of participants with a suitably long follow-up duration are needed.",
+      "character_count": 1524,
+      "content_sha256": "d0792a4d0a9345935f9265227b57d46855facf2e1259c902451b539430e390b4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.1. Treatment of Reflex Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0037-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "ad6a8342bd1de2cd94db8b2b0053ac51702d67747c6f0d9ffa5cadd5ce5fe0e7",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S014",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.2. Treatment of Orthostatic Hypotension and Orthostatic Intolerance"
+      ],
+      "heading": "5.2. Treatment of Orthostatic Hypotension and Orthostatic Intolerance",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The management of orthostatic intolerance syndromes involves reassuring patients about the benign nature of syncope and adopting behavioral measures. Additionally, reducing antihypertensive therapy to achieve a target SBP of 140–150 mmHg is recommended [ 1 , 89 ]. Angiotensin-converting enzyme inhibitors, angiotensin receptor blockers, and calcium channel blockers are preferred over beta-blockers and thiazide diuretics. If symptoms persist, further interventions, such as physical counter-pressure maneuvers, elastic stockings, head-up tilt (sleeping with a pillow to prevent nocturnal polyuria, improve fluid distribution, and address nocturnal hypertension), and the use of midodrine and fludrocortisone should be considered [ 1 , 89 ]. Droxidopa, a central and peripheral alpha and beta agonist, was recently approved by the Food and Drugs Administration for the treatment of symptomatic neurogenic OH [ 98 , 99 ]. The main concerns, however, remain for the durability of its benefits [ 100 , 101 ]. Hauser et al. conducted a 12-week open-label study using droxidopa. The study found a notable improvement in the symptoms of neurogenic OH and daily activities compared to the baseline evaluation [ 102 ].",
+      "character_count": 1211,
+      "content_sha256": "ad6a8342bd1de2cd94db8b2b0053ac51702d67747c6f0d9ffa5cadd5ce5fe0e7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0037",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.2. Treatment of Orthostatic Hypotension and Orthostatic Intolerance"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0038-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "664709ac2b4857979c1d6b553a81f6fb30bada98948292cac583d56f38093bcd",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ],
+      "heading": "5.3. Treatment of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In sick sinus syndrome, a documented correlation between an ECG and syncope warrants consideration for PM implantation. This recommendation extends to patients experiencing syncope with relief of asymptomatic pauses. PM implantation is also indicated for second- and third-degree AV blocks, bifascicular blocks with a positive EPS, or evidence on the ILR of a paroxysmal AV block. Notably, the guidelines emphasize the importance of an EPS and ILR, as a bifascicular block alone suggests a complete block in less than half of patients, with one-third receiving a final diagnosis of reflex syncope and another third remaining unexplained [ 1 , 44 ].",
+      "character_count": 648,
+      "content_sha256": "664709ac2b4857979c1d6b553a81f6fb30bada98948292cac583d56f38093bcd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0038",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0039-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "4068c5afc2a570b61e0e34b0bc422775532b1aaea4f3b1fbe0539818b5ec1510",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ],
+      "heading": "5.3. Treatment of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "For patients with paroxysmal supraventricular tachycardia (nodal reentrant tachycardia, AV reentrant tachycardia, atrial flutter, and ectopic tachycardia) and syncope, catheter ablation is recommended as a first-line therapy. The role of antiarrhythmic therapy is limited to the bridging period before ablation or in cases of ablation failure [ 1 , 44 ].",
+      "character_count": 354,
+      "content_sha256": "4068c5afc2a570b61e0e34b0bc422775532b1aaea4f3b1fbe0539818b5ec1510",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0040-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "959b1f8442e5c9f9e0d54bb14d05ce7764b5f6eb7ea6e497fb4c3ba91f214d01",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ],
+      "heading": "5.3. Treatment of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "ICD implantation is indicated for syncope due to ventricular tachycardia with an EF < 35% and for syncope in the presence of ischemic heart disease with induced ventricular tachycardia during electrophysiological study. It may be considered in patients with an EF > 35% and recurrent ventricular tachycardia syncope when catheter ablation or medical therapy proves unsuccessful or is not feasible [ 1 , 44 ].",
+      "character_count": 408,
+      "content_sha256": "959b1f8442e5c9f9e0d54bb14d05ce7764b5f6eb7ea6e497fb4c3ba91f214d01",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0040",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0041-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "ed5ae5e0ba9d312757b21c5637aaaeb242c6bf5f084ecf70dc1222b49fa6e166",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ],
+      "heading": "5.3. Treatment of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "ICD implantation is always recommended in patients with unexplained syncope and dilated cardiomyopathy with an EF < 35%. Consideration for ICD implantation should be provided to patients with unexplained long QT (LQT) syndrome and recurrent syncope (not meeting diagnostic criteria) despite beta-blocker therapy, particularly in LQT2 and LQT3 syndromes, as well as patients with a Brugada type 1 ECG pattern and unexplained syncope [ 1 , 44 ].",
+      "character_count": 443,
+      "content_sha256": "ed5ae5e0ba9d312757b21c5637aaaeb242c6bf5f084ecf70dc1222b49fa6e166",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0041",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0042-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "c44c7a605c7ca97dfbfe50c059a057aba6fabaf2e8abd9a1080a13229d19b99f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S015",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S012",
+      "parent_section_heading": "5. Treatment",
+      "section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ],
+      "heading": "5.3. Treatment of Cardiac Syncope",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In individuals with HCM, the decision for ICD implantation depends on the identification of a high risk of sudden cardiac death using the European Society of Cardiology (ESC) HCM Risk-SCD score. For those at low risk, the implantation of an ILR should be considered instead of an ICD. Lastly, for patients with syncope related to structural heart disease, addressing the underlying cause is essential [ 1 , 44 ].",
+      "character_count": 412,
+      "content_sha256": "c44c7a605c7ca97dfbfe50c059a057aba6fabaf2e8abd9a1080a13229d19b99f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "5. Treatment",
+        "5.3. Treatment of Cardiac Syncope"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0043-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "a1794abd84b5213eb994f8d1e568dd7a6e826d244b7d9e015636205190404565",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S016",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "6. Management of Syncope in Older Adults"
+      ],
+      "heading": "6. Management of Syncope in Older Adults",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In older adults, the most common form of syncope is vasovagal, constituting 66.6% of the total, according to data from the Italian syncope study group [ 103 ]. The reflex form prevails in younger patients, while the dysautonomic form is more prevalent in older patients. Many older individuals experience prodromes, with the available data suggesting that symptoms like nausea, blurred vision, and sweating predict non-cardiac syncope, while dyspnea is predictive of cardiac syncope [ 104 ]. One-third of older patients with hip fractures have unexplained falls [ 105 ]. The diagnostic protocol proposed by the ESC can be applied even in those over 90 years old, providing an etiological diagnosis in 90% of patients [ 10 , 103 ]. Orthostatic testing, CSM, and tilt testing are well-tolerated, even in frail older individuals with cognitive impairment [ 106 ]. Mortality and recurrence rates increase with age and comorbidity [ 106 ].",
+      "character_count": 934,
+      "content_sha256": "a1794abd84b5213eb994f8d1e568dd7a6e826d244b7d9e015636205190404565",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "6. Management of Syncope in Older Adults"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0044-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "47aa7c01f2d7046870f461e63febd1fac7751318096ad6cfbed68b7d412093c1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S016",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "6. Management of Syncope in Older Adults"
+      ],
+      "heading": "6. Management of Syncope in Older Adults",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "It is strongly recommended to reduce or discontinue antihypertensive and psychotropic drugs in older patients with syncope, as the benefits outweigh the risks. The term “hypotensive TIA” denotes focal neurological signs of hypotension and syncope, even in patients without significant internal carotid artery stenosis. Misdiagnosis can lead to increased antihypertensive therapy and worsen syncopal recurrences [ 1 ].",
+      "character_count": 417,
+      "content_sha256": "47aa7c01f2d7046870f461e63febd1fac7751318096ad6cfbed68b7d412093c1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "6. Management of Syncope in Older Adults"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0045-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "ed1c628df8be334c90c9354e274796ba8e9bf3d71b5982f3941c2199873b44aa",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S016",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "6. Management of Syncope in Older Adults"
+      ],
+      "heading": "6. Management of Syncope in Older Adults",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Unexplained falls often indicate syncope and the same diagnostic algorithm for syncope should be followed. Patients with unexplained falls may deny loss of consciousness, showing retrograde amnesia of the event. In the absence of witnesses, distinguishing between syncope, epilepsy, TIA, and falls is challenging [ 1 ]. Multiple causes of syncope may coexist in older adults, necessitating a multifactorial and multidimensional evaluation [ 13 ]. Atrial fibrillation or aortic stenosis are often found but are not frequently the direct cause of syncope [ 107 , 108 ]. Failure to stabilize orthostatic blood pressure is present in more than 40% of individuals aged over 80 years, posing a risk factor for falls and syncope. Assessing cognitive and physical performance is recommended in older patients [ 1 ].",
+      "character_count": 807,
+      "content_sha256": "ed1c628df8be334c90c9354e274796ba8e9bf3d71b5982f3941c2199873b44aa",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0045",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "6. Management of Syncope in Older Adults"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0046-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "425f707a0f0aa3a456d8f4fafea9990abef8aaa6ba54a74a26dacc0c5f816628",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S017",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0009-JATS-S016",
+      "parent_section_heading": "6. Management of Syncope in Older Adults",
+      "section_path": [
+        "6. Management of Syncope in Older Adults",
+        "Syncope Unit"
+      ],
+      "heading": "Syncope Unit",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The syncope unit involves a multidisciplinary collaboration of specialists (cardiologists, neurologists, geriatricians, and psychologists) responsible for the diagnosis and treatment of syncope [ 109 ]. The syncope unit should have and follow a protocol for the diagnosis and management of syncope with an equipped area including 12-lead ECG and 3-lead ECG monitoring, non-invasive beat-to-beat blood pressure monitoring with recording facilities for subsequent analyses, tilt tables, Holter monitors/external loop recorders, ILRs, follow-up of ILRs, 24-h blood pressure monitoring, and basic autonomic function tests. The unit should establish procedures for echocardiography, EPSs, exercise testing, and neuroimaging [ 1 , 109 ]. Van Zanten et al. proposed and validated the SU-19 score to quantify the adherence of syncope units to the best practices based on the evaluation of the structure, initial assessment, and diagnostic tests [ 110 ]. The syncope unit itself should plan to keep medical records that could also be used for research purposes. Quality indicators for the syncope unit include achieving a 20% reduction in unexplained syncope and less than 20% of low/intermediate-risk patients coming from the ED. The syncope unit should reduce the costs associated with incorrect procedures by 20% and improve outcomes (<5% readmission for syncope and recurrence at 1 year in <20% of implanted patients) [ 1 , 109 ].",
+      "character_count": 1425,
+      "content_sha256": "425f707a0f0aa3a456d8f4fafea9990abef8aaa6ba54a74a26dacc0c5f816628",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0046",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "6. Management of Syncope in Older Adults",
+        "Syncope Unit"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0047-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "8d468e482f7729c93cb7d0a8bbbc22f2341f876dbf6a8c61942ef1e003491b88",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S018",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ],
+      "heading": "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The future of syncope management holds interesting prospects marked by advancements in health technologies.",
+      "character_count": 107,
+      "content_sha256": "8d468e482f7729c93cb7d0a8bbbc22f2341f876dbf6a8c61942ef1e003491b88",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0048-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "bf2cdeb93d6ec5447dfa9e1b7594808ba95c1664a9caab21f516b88e3a1dfab4",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S018",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ],
+      "heading": "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Artificial intelligence (AI) has shown promising results in analyzing vast datasets from multiple cohorts to identify patterns and highlighting specific patient subsets to improve risk stratification and management [ 111 ]. Implementing AI in syncope management may provide benefits in achieving a successful differential diagnosis between both syncopal and non-syncopal TLOCs and between different syncopal etiologies (event definition), risk stratification, and patient management, including the need for immediate intervention and hospitalization, downstream testing, and long-term monitoring strategies [ 112 ]. Recent studies have addressed AI as a potential means to overcome the limits of current risk stratification tools [ 113 , 114 ]. In a systematic review, Goh et al. expressed that machine learning algorithms hold 88.8% sensitivity, 81.5% specificity, and an overall accuracy of 85.8% for detecting syncope [ 114 ].",
+      "character_count": 929,
+      "content_sha256": "bf2cdeb93d6ec5447dfa9e1b7594808ba95c1664a9caab21f516b88e3a1dfab4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0049-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "d0a6ae4ef1ebd14632edf5d0e0e8f1d6a4f2ba5afb4467ca9263bac62e2ec8d0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S018",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ],
+      "heading": "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Working with AI-based models requires a vast availability of data. The sharing of health data across hospitals would undeniably provide benefits [ 115 ]. Nevertheless, this viewpoint still has certain limitations in terms of infrastructure and legislative restrictions [ 116 , 117 ]. The implementation of blockchain technology may overcome current issues in health data sharing between institutions [ 118 ], and its integration with AI may provide beneficial effects for the diagnosis, risk stratification, and management of many cardiovascular conditions, including syncope [ 119 ]. In addition, increasingly advanced wearable devices and sensors enable the identification of syncopal episodes, falls, and arrhythmic events, transmitting data for more timely emergency responses and with the possibility of helping with risk stratification based on the patient’s personal health record, vital parameter monitoring, and ECG parameters [ 120 , 121 , 122 ].",
+      "character_count": 956,
+      "content_sha256": "d0a6ae4ef1ebd14632edf5d0e0e8f1d6a4f2ba5afb4467ca9263bac62e2ec8d0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0050-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "cfb1441e8cf4441aece9f0560fed6ef3def72ddc1ec210d10064a773c04490bc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S018",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ],
+      "heading": "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Embracing these innovative approaches holds the potential to transform syncope management into a more proactive, individualized, and data-driven paradigm, ultimately improving patient outcomes and quality of life.",
+      "character_count": 213,
+      "content_sha256": "cfb1441e8cf4441aece9f0560fed6ef3def72ddc1ec210d10064a773c04490bc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "7. Future Directions in the Management of Syncope: A Little Help from New Technologies?"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0009-B0051-C01",
+      "document_id": "DOC-PMC-CARD-0009",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Syncope",
+        "Transient loss of consciousness"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "c786363fddbfecace118f813b052e32a87ada3e12dcd16642dbc316858a66c00",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0009-JATS-S019",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "8. Conclusions"
+      ],
+      "heading": "8. Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "While cardiac syncope is a symptom of an underlying disease, the traditional classification into reflex and orthostatic syncope is increasingly challenged by the identification of phenotypes with a tendency for bradycardia or hypotension. Correctly identifying these phenotypes is critical for setting up personalized and mechanism-specific diagnoses and treatments. A multidisciplinary approach proves advantageous in identifying and managing the most controversial and difficult cases, while in the future, new technologies could provide substantial help in identifying cases at higher risk for adverse outcomes. The ultimate goal is to maximize the harmonization of both the standardization and personalization of diagnostic and therapeutic procedures in order to reduce costs, minimize hospitalizations, and decrease morbidity.",
+      "character_count": 831,
+      "content_sha256": "c786363fddbfecace118f813b052e32a87ada3e12dcd16642dbc316858a66c00",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0009-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "8. Conclusions"
+      ]
+    }
+  ]
+}

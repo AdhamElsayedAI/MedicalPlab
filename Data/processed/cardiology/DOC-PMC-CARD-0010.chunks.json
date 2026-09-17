@@ -1,0 +1,2981 @@
+{
+  "document_id": "DOC-PMC-CARD-0010",
+  "source_id": "SRC-PMC-001",
+  "title": "Management of cardiogenic shock: a narrative review",
+  "medical_specialty": "Cardiology",
+  "topics": [
+    "Cardiogenic shock",
+    "Hemodynamic support"
+  ],
+  "source_sha256": "bac869e44170a79d6e1bda716ebc146f29f268fb161f21634a5fdfa7dc9a6bc4",
+  "chunking": {
+    "pipeline_version": "v1",
+    "strategy": "structure_aware_lossless",
+    "target_characters": 1400,
+    "maximum_characters": 1800,
+    "minimum_characters": 350,
+    "overlap_characters": 0,
+    "generated_at": "2026-09-09T03:21:40.140043+00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0001-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 1,
+      "source_block_sha256": "509bbc3ab29bd0a8c7584a2097629b8c01da9e2181a7f3bc70919dab7f04e6a3",
+      "block_type": "abstract",
+      "section_number": null,
+      "section_level": 0,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Abstract"
+      ],
+      "heading": "Abstract",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cardiogenic shock (CS) is characterized by low cardiac output and sustained tissue hypoperfusion that may result in end-organ dysfunction and death. CS is associated with high short-term mortality, and its management remains challenging despite recent advances in therapeutic options. Timely diagnosis and multidisciplinary team-based management have demonstrated favourable effects on outcomes. We aimed to review evidence-based practices for managing patients with ischemic and non-ischemic CS, detailing the multi-organ supports needed in this critically ill patient population.",
+      "character_count": 581,
+      "content_sha256": "509bbc3ab29bd0a8c7584a2097629b8c01da9e2181a7f3bc70919dab7f04e6a3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0001",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Abstract"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0002-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 2,
+      "source_block_sha256": "097322a29aa722ea5e920d14b3831ca9888044a7c28e78e521bc1efd39235115",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction"
+      ],
+      "heading": "Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cardiogenic shock (CS) is a life-threatening syndrome defined by peripheral hypoperfusion and organ dysfunction due to primary cardiac dysfunction. It has several underlying aetiologies, the most common being acute myocardial infarction (AMI). Other less common causes include de novo subtypes of CS (fulminant myocarditis, right ventricular [RV] failure, Takotsubo syndrome, post-partum cardiomyopathy, end-stage valvular heart disease) and acute decompensation of other cardiomyopathies [ 1 ].",
+      "character_count": 495,
+      "content_sha256": "097322a29aa722ea5e920d14b3831ca9888044a7c28e78e521bc1efd39235115",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0002",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0003-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 3,
+      "source_block_sha256": "acd211675b207220ba691be108fa416a85e6d10cfc1df8552ccee0fbb3c3f965",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction"
+      ],
+      "heading": "Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Despite the many advances in cardiovascular care over the last 20 years, survival of CS patients has not changed substantially and remains around 50% at 30 days following diagnosis [ 2 ].",
+      "character_count": 187,
+      "content_sha256": "acd211675b207220ba691be108fa416a85e6d10cfc1df8552ccee0fbb3c3f965",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0003",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0004-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 4,
+      "source_block_sha256": "346eff02fc6301e25585d43966b703fd5cb83d9622cff23a2a962901e04c0c22",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Introduction"
+      ],
+      "heading": "Introduction",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In this review, we aimed to address several aspects of CS, highlighting the importance of understanding CS’s pathophysiology and phenotypes to improve the management of these critically ill patients admitted to the intensive care units (ICU).",
+      "character_count": 242,
+      "content_sha256": "346eff02fc6301e25585d43966b703fd5cb83d9622cff23a2a962901e04c0c22",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0004",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0005-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "3fbd335b023c14bb7d16b3a285feb0d013cbdfb43d90ca403826d9c0553146a0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S002",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ],
+      "heading": "Definitions and classifications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "CS is defined as clinical and biological evidence of tissue hypoperfusion secondary to cardiac dysfunction [ 3 ]. Although the clinical definition of CS varies, it usually includes hypotension (systolic blood pressure ≤ 90 mmHg) despite adequate filling pressures, and signs of organ hypoperfusion. Most of definitions and classifications have centered on AMI-CS. However, the use of \"one size fits all\" definitions does not account for the CS hemodynamic phenotypes which can vary from those with myocardial dysfunction due to ischemia requiring minimal vasopressor support to CS with ongoing cardiac arrest. Accordingly, the relatively new classification of the Society for Cardiovascular Angiography and Interventions (SCAI) describes five evolutive stages of CS, from A (preshock, i.e., a patient at risk but with no obvious signs of hypoperfusion) to E (extremis, i.e., refractory circulatory collapse) attempting to better describe the different levels of CS severity Fig. 1 a [ 3 ]. This classification has been validated in a large cohort of unselected cardiac ICU patients, showing a strong association between SCAI shock stages and mortality, even after adjustment for known predictors of mortality [ 4 ]. A second classification focusing on hemodynamic parameters classifies patient into four separates states according to their status volume and their peripheral circulation Fig. 1 c [ 5 ].",
+      "character_count": 1402,
+      "content_sha256": "cfbcfca02cd07dab48d9b673b177b4f41823a7d900a1b2ddd2979f0aa06f866d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0005-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 5,
+      "source_block_sha256": "3fbd335b023c14bb7d16b3a285feb0d013cbdfb43d90ca403826d9c0553146a0",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S002",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ],
+      "heading": "Definitions and classifications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Using this hemodynamic classification and by better characterizing each patient’s “tissue response” to decreased perfusion and the subsequent evolution of specific clinical disease pathways, some authors rationalized that earlier and more specific interventions could be employed to improve CS survival rates [ 6 ]. Another classification based on three different phenotypes has been proposed (I-Not congested, II-cardiorenal, and III-cardiometabolic), Fig. 1 b [ 7 ]. In detail, the non-congested phenotype (I) exhibits lower heart rate, normal filling pressures (right atrial and pulmonary capillary wedge pressures), and a higher blood pressure relative to the other phenotypes, representing a relatively stable profile of a non-congested patient with CS. On the other hand, patients in the cardiorenal shock (II) group are older, with multiple comorbidities. They exhibit a lower heart rate, elevated pulmonary arterial and pulmonary capillary wedge pressures, as well as lower glomerular filtration rate, suggesting renal involvement from shock. Finally, the patients in the cardiometabolic shock (III) group have elevated lactate, alanine aminotransferase, serum creatinine, blood urea nitrogen levels, heart rate, and right atrial pressure, along with low blood pressure, cardiac power output, and index. This suggests multiorgan involvement, featured by increased serum creatinine, blood urea nitrogen levels, transaminases and lactic acidosis in a patient with CS. This classification highlights that CS begins with hemodynamic compromise that triggers impairment of renal and liver function progressively leading to a self-perpetuating “cardiometabolic” shock phenotype causing a further downward spiral.",
+      "character_count": 1714,
+      "content_sha256": "ddaae3b5b96ed00de58e6bc037b3ceddbbcd95b94ce10ac516305a970a422171",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0005",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0006-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 6,
+      "source_block_sha256": "61a66dc08ba04d569f8b05eb5395c936b90c713e8bf43467f7f4327341a531be",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S002",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ],
+      "heading": "Definitions and classifications",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Fig. 1 Classifications of cardiogenic shock. A SCAI classification. B Phenotypic classification: Three different phenotypes are proposed (I-Not congested, II-cardiorenal, and III-cardiometabolic). C Hemodynamic classification: CI, cardiac index; PCWP, pulmonary capillary wedge pressure; and SVRI, systemic vascular resistance index",
+      "character_count": 332,
+      "content_sha256": "61a66dc08ba04d569f8b05eb5395c936b90c713e8bf43467f7f4327341a531be",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0006",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Definitions and classifications"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0007-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 7,
+      "source_block_sha256": "27ad6bc1b7c979e91badab0d284a05f526357a18fb47606260b41f5aa2d8028e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ],
+      "heading": "Pathophysiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "CS involves several pathophysiologic mechanisms that may have consequences for clinical management. Thus, one has to differentiate de novo or acute cardiac conditions leading to CS and CS related to acute-on- chronic heart failure [ 8 ]. De novo CS are mainly due to acute MI (AMI), unstable angina, postcardiotomy syndrome, valvular heart disease, myocardial disease (such as myocarditis), stress-induced cardiomyopathy, sepsis-induced cardiomyopathy, pericardial tamponade, congenital lesions, or/and mechanical injury to the heart. Many triggers lead to acute decompensation of chronic cardiac failure and lead to CS.",
+      "character_count": 620,
+      "content_sha256": "27ad6bc1b7c979e91badab0d284a05f526357a18fb47606260b41f5aa2d8028e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0007",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0008-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 8,
+      "source_block_sha256": "fd565b01ed1d1c6d30310423e1a5a88d5b1ca233e636d00d4b22ee97890df1d7",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ],
+      "heading": "Pathophysiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Cardiogenic shock arises from an imbalance between input and demand, causing systemic hypoperfusion and organ dysfunction [ 5 , 9 – 11 ]. This leads to microcirculatory changes, inflammatory activation, anaerobic metabolism, and oxidative stress, resulting in altered oxygen delivery and microvascular dysfunction that contribute to end-organ dysfunction [ 12 – 14 ].",
+      "character_count": 367,
+      "content_sha256": "fd565b01ed1d1c6d30310423e1a5a88d5b1ca233e636d00d4b22ee97890df1d7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0008",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0009-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 9,
+      "source_block_sha256": "4fad72e7f3ab5a6b926a4240593b493e7c3c5fa0f7b4a23e6e955478b90efd8a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ],
+      "heading": "Pathophysiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Distinguishing between acute CS and acute-on-chronic CS is essential because mortality is higher in acute CS [ 15 – 17 ]. It also seems interesting to assess the different haemodynamic profiles in both entities, as this may help to tailor therapies [ 6 , 15 ].",
+      "character_count": 260,
+      "content_sha256": "4fad72e7f3ab5a6b926a4240593b493e7c3c5fa0f7b4a23e6e955478b90efd8a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0009",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0010-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 10,
+      "source_block_sha256": "ff9c3c20003bcf88fabbdbd21d25b1984977b0e0cbb91a65aeb26eb3d132a42b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ],
+      "heading": "Pathophysiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In acute CS, there is a sudden reduction in ventricular contractility, leading to decreases in stroke volume, CO and blood pressure and increases in pulmonary capillary wedge pressure and central venous pressure. Consequently to systemic hypoperfusion, organ compensatory mechanisms are triggered to restore CO and peripheral perfusion. Among the compensatory homeostatic responses to a drop in CO, the most well-recognized are activation of the sympathetic nervous system and the renin–angiotensin–aldosterone system, secondary to low mean blood pressure and decrease in renal blood flow, respectively. These mechanisms lead to fluid reabsorption and systemic vasoconstriction, increasing volume overload and ventricular afterload and worsening myocardial contractility [ 5 , 11 ].",
+      "character_count": 782,
+      "content_sha256": "ff9c3c20003bcf88fabbdbd21d25b1984977b0e0cbb91a65aeb26eb3d132a42b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0010",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0011-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 11,
+      "source_block_sha256": "3d74a822d536a8ae37367d63710f4e55b87ab8f57901afe46ae9bfb6331c9120",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S003",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ],
+      "heading": "Pathophysiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Acute-on-chronic heart failure evolves from an initial hemodynamic disturbance into a multisystem disorder. Arterial vasoconstriction secondary to activation of the baroceptors and chemoreceptors increases vascular resistance to peripheral organs and redistributes blood away from the splanchnic circulation. Moreover, venoconstriction increases stressed blood volume resulting in significant increases in central venous pressures in the presence of right ventricular (RV) failure and a variable response in pulmonary venous pressures depending on LV function. Congestion in the setting of CS is also associated with organ dysfunction and poor prognosis; and may be challenging to manage [ 18 ]. Indeed, progressive elevations in central venous pressures lead to visceral venous congestion and end-perfusion organ (e.g., kidney and liver) dysfunction. Chronic heart failure progresses to CS when impaired ventricular contractility is severe enough to cause a critical reduction in cardiac output (CO). This reduction of CO may be due to an increase in demand because of a triggering factor or to the natural progression of the disease with a progressive reduction in cardiac output. End organ hypoperfusion results in acute-on-chronic hepatic and renal insults, lactic acidemia, decreased coronary perfusion pressure, and further activation of mechanoreceptors and chemoreceptors, all of which cause a vicious circle of worsening cardiac function [ 8 ].",
+      "character_count": 1453,
+      "content_sha256": "3d74a822d536a8ae37367d63710f4e55b87ab8f57901afe46ae9bfb6331c9120",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0011",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Pathophysiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0012-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 12,
+      "source_block_sha256": "9a45f9c449919933a2dcbc414d62585b79de3b8f9575de69597afb1e271966de",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Epidemiology"
+      ],
+      "heading": "Epidemiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Most epidemiological data on shock in critically ill patients focus on severe sepsis and septic shock, which are thought to be the leading causes of mortality in these patients. Although less frequent, cardiogenic shock (CS) remains a genuine clinical challenge with similar or even higher mortality rates [ 19 – 21 ]. Overall, CS patients seem to represent 7–10% of patients admitted to ICU [ 20 ]. However, the prevalence of CS is variable according to the type ICU in which patients are being treated and is higher in cardiac ICUS compared to general ICUs.",
+      "character_count": 559,
+      "content_sha256": "9a45f9c449919933a2dcbc414d62585b79de3b8f9575de69597afb1e271966de",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0012",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Epidemiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0013-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 13,
+      "source_block_sha256": "fa5593ddf61c871556067b593cc9b78bb544fa80b659708ae44aabe5943d20e7",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Epidemiology"
+      ],
+      "heading": "Epidemiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Data regarding CS epidemiology are predominantly derived from large registries of patients with CS secondary to AMI (AMI-CS). In three nationwide French registries from 2005 to the end of 2015 assessing 9951 patients with AMI, the prevalence of CS has markedly decreased, both for primary (those with CS on admission) and secondary CS (those who developed CS subsequently during hospitalization), so that CS has become an infrequent complication of AMI (2.8%). However, 1-year mortality in patients who developed CS remained exceptionally high (58%) [ 1 ].",
+      "character_count": 556,
+      "content_sha256": "fa5593ddf61c871556067b593cc9b78bb544fa80b659708ae44aabe5943d20e7",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0013",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Epidemiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0014-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 14,
+      "source_block_sha256": "d79e93cc2f61f78e1fc336b13a86142289def38108e95cb6ab22381f56994787",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S004",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Epidemiology"
+      ],
+      "heading": "Epidemiology",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "There are limited datasets that have incorporated CS across all its etiologies; therefore, comparison of outcomes between AMI and non-AMI-CS is still challenging. Data from a French registry suggest that patients with non-AMI-CS may have comparatively better survival rates (36% vs. 31%) [ 20 ]. Regarding the effect of cardiac comorbidity, patients with acute cardiac failure tend to have more severe shock presentations, higher lactate levels, and higher Sequential Organ Failure Assessment (SOFA) scores, even if they are less comorbid and have fewer cardio-vascular risk factors than those with CS due to acute-on-chronic heart failure [ 16 , 22 ]. Consequently, in-hospital mortality appears to be higher in de novo cardiac dysfunction compared to acute-on-chronic heart failure-CS [ 16 , 17 ]. Intensivists should thus pay attention on such acute cardiac conditions, as it seems to be a strong marker of mortality.",
+      "character_count": 920,
+      "content_sha256": "d79e93cc2f61f78e1fc336b13a86142289def38108e95cb6ab22381f56994787",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0014",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Epidemiology"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0015-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 15,
+      "source_block_sha256": "bf109f484f3b333e2e7658e9b391f1ae3ff1dfa53ac1948bad9aa5e769ba6f9f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Assessment and diagnosis"
+      ],
+      "heading": "Assessment and diagnosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The approach to manage CS patients should be multimodal. It includes assessment of severity and early determination of the etiology with clinical examination and non-invasive exploration (clinical ECG, biological and echocardiographic tests). Transthoracic echocardiography (TTE) is the most useful diagnostic modality in this setting, due to its ability to provide comprehensive information about cardiac structure and function, promptly, safely, and at the patient’s bedside. It allows to assess biventricular function, valvular pathology, pericardial effusion, left and right ventricular filling pressure and hemodynamic assessment. Moreover, early comprehensive TTE can provide important prognostic insights in CS patients [ 23 – 26 ]. The invasive hemodynamic assessment may be required to assess response to treatment and for continuous monitoring of cardiovascular function, especially when there is insufficient clinical improvement to initial treatment maneuvers (See Fig. 2 ). Management of CS requires close collaboration between cardiologists and intensivists, with multidisciplinary discussion and early admission to intensive care.",
+      "character_count": 1145,
+      "content_sha256": "bf109f484f3b333e2e7658e9b391f1ae3ff1dfa53ac1948bad9aa5e769ba6f9f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0015",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Assessment and diagnosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0016-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 16,
+      "source_block_sha256": "ffe7a9bbd224562b29313fcd198eddaaf0bbf7a392621631fcf86a866df77ca4",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S006",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Assessment and diagnosis"
+      ],
+      "heading": "Assessment and diagnosis",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Fig. 2 Assessment and diagnosis algorithm for CS early management. Abbreviations : BiV, biventricular dysfunction; CI, cardiac index; CS, cardiogenic shock; ECG, electrocardiogram; LV, left ventricular; RV, right ventricular; SBP, systolic blood pressure",
+      "character_count": 254,
+      "content_sha256": "ffe7a9bbd224562b29313fcd198eddaaf0bbf7a392621631fcf86a866df77ca4",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0016",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Assessment and diagnosis"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0017-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 17,
+      "source_block_sha256": "0d2405609237d21347b31e3ced612914c684d56129bd65a01f945183b3343320",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Current guidelines emphasize the initiation of early (within the first few hours) basic monitoring that should be supplemented by advanced monitoring in more complicated cases and in refractory shock [ 27 , 28 ]. Indeed, during the first hours of CS management, evaluation of organ dysfunction by physical examination (looking for cool extremities, mottling [ 29 ], oliguria < 30 mL/h, abdominal pain and signs of encephalopathy), biological tests (including lactate) and echocardiography, as well as invasive arterial pressure measurement allow the early recognition, better classification and precise phenotyping of CS providing robust mortality risk stratification in this population [ 4 , 30 , 31 ].",
+      "character_count": 703,
+      "content_sha256": "0d2405609237d21347b31e3ced612914c684d56129bd65a01f945183b3343320",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0017",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0018-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 18,
+      "source_block_sha256": "d8f29c8eaf7e4310278616d59b994a6bd03092a772a8d029d6e5f02f599a169a",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Lactate level (pathologic threshold > 2 mmol/L) monitoring should be measured on admission and repeated every 1–4 h based on clinical conditions in the early stage of CS management [ 5 , 34 , 35 ]. Elevated lactate level is associated with an increased risk of mortality [ 36 – 38 ]. Conversely, complete lactate clearance is an independent predictor of in-hospital survival as early as 8 h after enrollment in a sub-analysis of DOREMI-trial [ 39 ].",
+      "character_count": 449,
+      "content_sha256": "d8f29c8eaf7e4310278616d59b994a6bd03092a772a8d029d6e5f02f599a169a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0018",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0019-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 19,
+      "source_block_sha256": "a71eed540e8ffd0ed824d9e3eac416b97b5387b498b404489a840ce06aba1e29",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "TTE is one of the most useful basic monitoring modality in CS patients, due to its accuracy to determine CO and CI with good correlation with pulmonary artery catheters (PAC) data [ 32 , 33 ]. It also allows to determine left and right ventricular filling pressure (even if several limits exist), pulmonary artery systolic pressure and systemic vascular resistance [ 33 ]. On the other hand, trans-oesophageal echocardiography is not the first line of monitoring in these unstable patients. It should be performed under optimal safety conditions, under sedation and by an expert of the technique. Of note, among advanced monitoring modalities, transpulmonary thermodilution technique may be used to directly estimate LV systolic function when TTE is not immediately available [ 27 ].",
+      "character_count": 783,
+      "content_sha256": "a71eed540e8ffd0ed824d9e3eac416b97b5387b498b404489a840ce06aba1e29",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0019",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0020-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 20,
+      "source_block_sha256": "f1561c7b6c3fd2e421a2a180aff3b49ad8d61f54f3dcc8286c507a27a8d01b0b",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In addition to this standard/basic monitoring, parameters derived from central venous catheter (in the superior vena cava territory) may be also helpful in severe patients: the central venous oxygen saturation (ScvO2), which reflects balance between supply and consumption, and the veno-arterial difference in CO 2 tension [“ΔPCO 2 ” or “PCO 2 gap”, elevated > 6 mmHg)] a surrogate of the cardiac output because it reflects the balance between CO 2 production and CO 2 delivery to the lungs [ 30 , 40 ]. No specific threshold is reported in current guidelines but goal is increasing of ScvO2 values with serial evaluation (every 4 h) after treatment initiation [ 5 , 31 ].",
+      "character_count": 672,
+      "content_sha256": "f1561c7b6c3fd2e421a2a180aff3b49ad8d61f54f3dcc8286c507a27a8d01b0b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0020",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0021-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "3fb852c95226bc7c364ce59a8f58815a8908cab6c91518487f7674e6fe9fdffc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Besides, in the most severe patients, PAC could be discussed. It is important to note that the insertion and management of PAC must be carried out by experts, which reinforces the need to transfer patients to an expert CS centre. PAC directly measure pulmonary and cardiac pressures as well as central oxygen saturation (SVO2) and are used to calculate an array of hemodynamic parameters including: cardiac output (CO, L/min) and cardiac index (CI, L/min/m 2 ), cardiac power output (Watts, calculated as mean arterial pressure × cardiac output/451) [ 41 ], pulmonary capillary wedge pressure (PCWP, elevated > 18 mmHg), right atrial pressure (RAP, elevated > 12 mmHg), mean pulmonary arterial pressure (mmHg and pulmonary artery pulsatility index (PAPi) (ratio of the pulmonary artery pulse pressure to right atrial pressure, predictor of right ventricular failure) [ 42 ]. Based on these parameters, physicians can have complete hemodynamic evaluation and categorize CS patients into RV and/or LV dysfunction, right-sided (elevated RAP) congestion, left-sided (elevated PCWP) congestion, bi-sided (both RAP and PCWP elevated) congestion, or euvolemic status (both RAP and PCWP below cutoff values) [ 15 , 43 , 44 ]. An increasing number of studies report the use of PAC and its association with CS prognosis improvement [ 43 , 45 , 46 ].",
+      "character_count": 1339,
+      "content_sha256": "0b379832a21cde46547fbc882cf44862d83df42c1220962e048d8f63c5e12f69",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0021-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 21,
+      "source_block_sha256": "3fb852c95226bc7c364ce59a8f58815a8908cab6c91518487f7674e6fe9fdffc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S007",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S005",
+      "parent_section_heading": "Management of CS",
+      "section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ],
+      "heading": "Monitoring",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "In this regard, recent guidelines recommend invasive hemodynamic assessment for continuous hemodynamic monitoring in the acute management of patients receiving therapy with MCS, to guide its withdrawal and to supervise the pharmacologic support in patients with myocardial recovery from CS [ 5 , 47 ]. Finally, in patients without recovery of myocardial and end-organ function, advanced/invasive hemodynamic monitoring is useful to assess candidacy for and/or transition to advanced heart failure therapies, including durable mechanical circulatory support and heart transplantation [ 5 , 47 ].",
+      "character_count": 594,
+      "content_sha256": "626861856d66fc365fe7146beb33767ead950ecfdcc3b182b797362d085ec6e5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0021",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management of CS",
+        "Monitoring"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0022-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 22,
+      "source_block_sha256": "290d510be3f8564ede3c07c2757c8065229a7b61cbb4caabd7e180a3ad94e78f",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "section_level": 2,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S001",
+      "parent_section_heading": "Introduction",
+      "section_path": [
+        "Introduction",
+        "Management"
+      ],
+      "heading": "Management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Figure 3 summarises the management of cardiogenic shock.",
+      "character_count": 56,
+      "content_sha256": "290d510be3f8564ede3c07c2757c8065229a7b61cbb4caabd7e180a3ad94e78f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0022",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0023-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 23,
+      "source_block_sha256": "b7899154fff64fecd14cc6a944cb11c3aece5ad84e7533ce3e8e60afdd9918a2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ],
+      "heading": "Coronary artery revascularization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The cornerstone of treatment that improved CS prognosis in AMI patients is emergent coronary revascularization (or Percutaneous Coronary Intervention PCI) in patients with coronary artery disease [ 48 ]. The SHOCK trial highlighted that early revascularization in AMI-CS significantly decreased 6 months (50 vs. 63%, p = 0.027) and long-term mortality compared with intensive medical treatment [ 49 ]. The benefit of an initial revascularization strategy was confirmed in a nationwide cohort study including 60,833 patients, showing a significant reduction in mortality compared with a conservative strategy. This improvement appears in all patient subgroups, including the elderly [ 50 ]. These studies confirmed the need for an initial invasive management approach in case of AMI-CS. Although its implementation reduces the incidence of CS in myocardial infarction [ 51 ], fibrinolysis is ineffective once shock has set in, due to reduced penetration into thrombus as there is a decrease in blood pressure. In this regard, fibrinolysis should be reserved in very selected patient for whom timely percutaneous coronary intervention (PCI) is not feasible [ 52 ]. Thus, primary PCI is recommended as first-line therapy (IB level) according to ESC guidelines [ 52 ] (Fig. 3 ).",
+      "character_count": 1274,
+      "content_sha256": "b7899154fff64fecd14cc6a944cb11c3aece5ad84e7533ce3e8e60afdd9918a2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0023",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0024-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 24,
+      "source_block_sha256": "3af3f5b851dea57b701f08a6599344ea8a62c83c5fce9052ba4720d15a7ae96f",
+      "block_type": "figure_caption",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ],
+      "heading": "Coronary artery revascularization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Fig. 3 Cardiogenic shock management. Abbreviations : AV ECMO, arteriovenous extracorporeal membrane oxygenation; HR, heart rate; LV, left ventricular; RV, right ventricular",
+      "character_count": 172,
+      "content_sha256": "3af3f5b851dea57b701f08a6599344ea8a62c83c5fce9052ba4720d15a7ae96f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0024",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0025-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 25,
+      "source_block_sha256": "d2b5498dd4c6f8bfd74f4d2071f79ce28d572a609c39792fca7524f0209e2892",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ],
+      "heading": "Coronary artery revascularization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Another question of interest in AMI-CS was the strategy of revascularization in multivessel coronary artery disease (MVD). Indeed, up to 85% of AMI-CS patients present multivessel or left main coronary artery disease at the diagnostic time, MVD being associated with higher mortality compared to single-vessel disease [ 53 ]. Despite this, optimal management and timing of revascularization for non–infarct-related artery lesions in AMI-CS remains unclear. For decades ESC guidelines encouraged immediate multivessel percutaneous coronary intervention (MV-PCI) of all high-grade lesions, in addition to the culprit lesion with a class IIa C recommendation [ 52 ]. However, despite an appealing pathophysiological rationale, this approach was not supported by robust evidence [ 53 , 54 ]. The debate seemed to be closed thanks to the recent and large randomized, multicenter Culprit Lesion Only PCI versus Multivessel PCI in Cardiogenic Shock (CULPRIT-SHOCK) [ 55 ]. Indeed, this trial showed a significant clinical benefit of a culprit-lesion-only strategy versus MV-PCI at early stage of CS with a reduction in the combined primary endpoint of 30-day mortality or severe renal failure requiring renal replacement therapy (45.9% vs. 55.4%; RR 0.83; 95% IC: 0.71–0.96; p = 0.01). Moreover, the culprit only strategy also provided an absolute 8.2% reduction in 30-day mortality (43.3% vs. 51.5%; RR 0.84; 95% IC 0.72–0.98, p = 0.03). These results were consistent across all predefined subgroups and were confirmed by a meta-analysis [ 56 ].",
+      "character_count": 1539,
+      "content_sha256": "d2b5498dd4c6f8bfd74f4d2071f79ce28d572a609c39792fca7524f0209e2892",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0025",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0026-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 26,
+      "source_block_sha256": "2ba0eac910fa2af43d16805e0a83708df580bbd8d284ff79c7994c9cba68189c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ],
+      "heading": "Coronary artery revascularization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "When patients at early stages of CS present non-revascularizable lesions by PCI and/or mechanical complications, there is a role for emergent coronary artery bypass grafting (CABG). In the IABP-Shock 2 study, 70% of patients with AMI-CS presented with MVD but only 4% underwent emergent CABG [ 57 ]. Few studies have addressed the issue of the benefit of surgical revascularization. Among them, few supported this strategy. Only observational data suggest that PCI and coronary artery bypass grafting could be similar in terms of mortality in AMI-CS [ 58 ] or even that CABG could confer better outcomes with the potential bias of patient selection [ 59 ]. Of note, improvements and better control of PCI techniques have led to decreased CABG indications.",
+      "character_count": 755,
+      "content_sha256": "2ba0eac910fa2af43d16805e0a83708df580bbd8d284ff79c7994c9cba68189c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0026",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0027-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 27,
+      "source_block_sha256": "5e4a7b63c3a22fd1259058cf0e92e2941bfb6e9161a7b6a843eded19b450b8b5",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S009",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ],
+      "heading": "Coronary artery revascularization",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "To conclude, emergent revascularization in patients with coronary artery disease of culprit-lesion-only is the main treatment that improved CS prognosis. The question of the optimal timing of further revascularisation in patients with MVD who have undergone PCI of the infarct-related artery remains open.",
+      "character_count": 305,
+      "content_sha256": "5e4a7b63c3a22fd1259058cf0e92e2941bfb6e9161a7b6a843eded19b450b8b5",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0027",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Coronary artery revascularization"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0028-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 28,
+      "source_block_sha256": "d8f24b0ff285a654554fcaf7d32b2130d7b7643ed6b2251e7b09380619bcf8a9",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Patients with CS have a high prevalence of arrhythmias and conduction disorders. The reported incidence of atrial fibrillation (AF) is as high as 20%, episodes of ventricular fibrillation occur in 9–19% of patients with CS [ 1 ]. In addition, 4.5–21% of patients will develop atrioventricular block [ 1 ] and 4.5% will require pacemaker implantation during hospitalization for CS [ 19 ]. No specific recommendations exist regarding supra-ventricular arrythmia management in CS. In patients with cardiogenic shock and arrhythmia, restoration of sinus rhythm, or slowing heart rate if restoration fails, can be useful to improve hemodynamic parameters. Thus, recent AHA Guidelines on acute AF management argue for immediate restoration of sinus rhythm in critically ill patients if AF is causing hemodynamic compromise. If the hemodynamic situation is stabilized, both rate and rhythm control are feasible [ 60 ]. As for the choice of pharmacological treatment, amiodarone has demonstrated its efficacy for pharmacological cardioversion in this population and seems to be the drug of choice in critically ill patients [ 61 ]. Of note, the paradigm of safe reduction within 48 h without anticoagulation has recently been challenged because recent data support an increased thromboembolic risk of AF reduction beyond 12 h of onset [ 62 ], this risk being correlated with the CHA 2 DS 2 -VASC score [ 63 , 64 ].",
+      "character_count": 1406,
+      "content_sha256": "d8f24b0ff285a654554fcaf7d32b2130d7b7643ed6b2251e7b09380619bcf8a9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0028",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0029-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 29,
+      "source_block_sha256": "1dea7be89657014a9456ca4a8027d14dcdda43f11180271fb7afc52ffc4473bf",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The management of high-degree conduction disorders is not specific to patients with CS. For patients with sinus node dysfunction, second-degree or third-degree atrioventricular block associated with symptoms or hemodynamic compromise, atropine as a first line is reasonable to improve atrioventricular conduction, increase ventricular rate, and improve hemodynamic parameters (Class IIa recommandations). Furthermore, in patients with symptoms or hemodynamic compromise and who have low likelihood for coronary ischemia, beta-adrenergic agonists, such as isoproterenol, dopamine, dobutamine, or epinephrine, may be considered (Class IIb recommendation). When the high-grade conduction disorder is refractory to medical therapy, temporary transvenous pacing is reasonable (Class IIa recommendation) [ 65 ].",
+      "character_count": 805,
+      "content_sha256": "1dea7be89657014a9456ca4a8027d14dcdda43f11180271fb7afc52ffc4473bf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0029",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0030-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 30,
+      "source_block_sha256": "638a6cb32187fc08da556b4802f35e5a82b352be93e0746c89352d4fcf9e7f50",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients with intraventricular conduction disorders, ventricular resynchronization can be considered in selected patients but only few reports describe its utilization in CS [ 66 , 67 ]. In a single-center German study in 15 CS patients with left-bundle branch block, temporary resynchronization of the left ventricle using a lead placed in the coronary sinus optimized hemodynamic parameters and led to reduced blood-lactate plasmatic levels [ 68 ]. Of note, ESC Guidelines did not provide any recommendations on cardiac resynchronization therapy in a CS setting [ 34 ].",
+      "character_count": 574,
+      "content_sha256": "638a6cb32187fc08da556b4802f35e5a82b352be93e0746c89352d4fcf9e7f50",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0030",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0031-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "03a81319fd70176d304213a2c8bcadaeaa0552f468d84c50ce221e98dcb964e8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Finally, electrical storm is a life-threatening condition characterized by recurrent ventricular arrhythmia. A classical clinical definition of electrical storm is three or more sustained ventricular arrhythmia episodes (including appropriate ICD shocks) separated by at least 5 min over 24 h. The management of rhythmic storms should always include a cardiologist and must take several factors into account, namely the presence of underlying pro-arrhythmogenic cardiopathy, previously known left ventricular function, the presence of an implantable cardioverter-defibrillator and hemodynamic tolerance. In addition, the search for a myocardial ischemia substrate must be systematic [ 69 ]. In CS patients (i.e., with hemodynamically unstable ventricular arrhythmia), immediate electrical cardioversion is always preferred for patients and is appropriate for hemodynamically stable VT when the risk of sedation is low. IV Amiodarone is recommended as the first-line anti-arrhythmic therapy in electrical storm caused by structural heart disease in the absence of QT prolongation or Torsade de pointe, because of its greater efficacy for preventing recurrent VT and suppressing VT refractory to other anti-arrhythmic therapy. The recommended dose is a bolus og 300 mg (max 5 mg/kg) over 20 min then repeat 150 mg bolus over 10 min for recurrent ventricular arrhythmia, then Infusion 1 mg/min until free from ventricular arrhythmia ≥ 6 h (may continue for longer) and continue 0.5 mg/min until electrical storm resolves.",
+      "character_count": 1518,
+      "content_sha256": "903ed521a172a42357f35c351cc9f3e2402e00531f53fce41b1513f29827b0b9",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0031-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 31,
+      "source_block_sha256": "03a81319fd70176d304213a2c8bcadaeaa0552f468d84c50ce221e98dcb964e8",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "When amiodarone is ineffective as monotherapy or for higher-risk presentations, lidocaine is often added as a second-line therapy during further amiodarone loading [initial bolus of 1–1.5 mg/kg (max 100–120 mg)]. Of note, lidocaine is more effective on an ischemic myocardium but can accumulate during decompensated heart failure or CS [ 70 ]. Otherwise, specific electrical storm etiologies and cardiomyopathies justify specific management, such as isoprenaline for Torsade de Pointe or Brugada syndrome and betablockers for Long QT syndrome.",
+      "character_count": 543,
+      "content_sha256": "2c54bc48d89d725882442badd31a9b1240f022fad14339c21f181dbe9e4106c0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0031",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0032-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 32,
+      "source_block_sha256": "f8fdc4c40f5362bf8f24dca411e6219f5c1179a61f5ad5d54368ba849212a966",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S010",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ],
+      "heading": "Arrhythmia and conduction disorders management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Deep sedation and intubation is a very effective treatment of electrical storm [ 71 ] and is recommended in patients with an intractable electrical storm refractory to drug treatment (ClassIIa Recommandation, LOE, C). Moreover, implantable cardioverter-defibrillator interrogation is crucial to check frequency, effectiveness, and appropriateness of device therapies. Radiofrequency ablation as sympatholysis by stellar ganglion blockade and/or definite sympathectomy (by surgery or stereotaxic radiotherapy) should be considered in patients with recurrent episodes of ventricular arrythmia nonresponsive to medical treatment or coronary revascularization (ClassIIa Recommandation, LOE, C) [ 70 , 72 ]. Finally, in eligible patients, heart transplantation may be considered with aMCS [ 73 , 74 ].",
+      "character_count": 796,
+      "content_sha256": "f8fdc4c40f5362bf8f24dca411e6219f5c1179a61f5ad5d54368ba849212a966",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0032",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Arrhythmia and conduction disorders management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0033-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 33,
+      "source_block_sha256": "48b32d1c833c6cd97acc558ae7319546f429257d9de43b3558dbbf3c51b35dc6",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The optimal management of severe valvular disease is challenging in CS patients because of the limited number of studies available. Several mechanisms may contribute to CS in the setting of decompensated valvular disease, and initial stabilization is recommended before evaluation for corrective surgery [ 75 ]. Cardiac surgery remains the gold-standard treatment in the management of symptomatic valvular disease but its invasiveness is associated with high mortality leading to consider alternative therapies such as percutaneous management. The role of percutaneous interventional management of valvular heart disease is increasing in CS patients as more and more data report its safety and good results in this severe population.",
+      "character_count": 733,
+      "content_sha256": "48b32d1c833c6cd97acc558ae7319546f429257d9de43b3558dbbf3c51b35dc6",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0033",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0034-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 34,
+      "source_block_sha256": "bcd10531d3380543d1d054f4bd07349badc8ee05f2ac80bd17381d02696162fe",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "However, it is important to remember that in case of valvular deterioration due to endocarditis complicated by cardiogenic shock, surgery remains the cornerstone [ 76 , 77 ].",
+      "character_count": 174,
+      "content_sha256": "bcd10531d3380543d1d054f4bd07349badc8ee05f2ac80bd17381d02696162fe",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0034",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0035-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 35,
+      "source_block_sha256": "781fa2b6ece3e5c444e4d98aa8b5c9c9ecc3f2b77c08adbe05293d39c678f1f1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In detail, in decompensated severe aortic stenosis, current guidelines are very elusive but keep a place for urgent valvuloplasty as a bridge to transcatheter aortic valve replacement (TAVR) or surgical aortic valve replacement (SAVR) [ 56 , 57 ]. When aortic valvuloplasty is performed, the 1-year mortality remains dramatically high around 70% [ 78 ] while TAVR in CS patient is actually associated with 7.9–33% 1-month mortality [ 79 – 83 ]. A recent large observational real-world study by Goel et al. showed that adjusted 1-year mortality of TAVR was significantly higher at 29.7% in the CS group compared to 22.6% in the non-CS group (HR, 1.57; 95% CI 1.43–1.72; p < 0.001). However, patients who survived the first 30 days after TAVR had similar mortality rates to those who were not in CS [ 83 ].",
+      "character_count": 804,
+      "content_sha256": "781fa2b6ece3e5c444e4d98aa8b5c9c9ecc3f2b77c08adbe05293d39c678f1f1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0035",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0036-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 36,
+      "source_block_sha256": "c6d258619246b2180fbb817c77443c4def4e6a94903dff1738b70e78a83097ab",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Management of aortic insufficiency may include atrial pacing to increase heart rate and shorten diastole duration. SAVR is considered as the gold standard despite lack of data, but TAVR should be considered in selected patients [ 84 ].",
+      "character_count": 235,
+      "content_sha256": "c6d258619246b2180fbb817c77443c4def4e6a94903dff1738b70e78a83097ab",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0036",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0037-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 37,
+      "source_block_sha256": "31abc35644ea79084928e93f9e414ba592a9585615cb316d7014d5534e6b31f2",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In mitral regurgitation with CS, surgery is indicated for primary mitral disease but no evidence supports the benefit of surgery in secondary mitral regurgitation leaving a place for percutaneous approaches to the mitral valve [ 85 – 87 ]. In a large observational study, Simard and colleagues reported that transcatheter edge-to-edge mitral valve repair in patients with CS was feasible with excellent device success rate [in 3249 patients (85.6%)] with successful achievement of final mitral regurgitation grade ≤ 2 + in 88.2% of case [ 87 ]. Finally, severe mitral stenosis may be treated by percutaneous mitral valvuloplasty when surgery is not feasible [ 88 , 89 ].",
+      "character_count": 670,
+      "content_sha256": "31abc35644ea79084928e93f9e414ba592a9585615cb316d7014d5534e6b31f2",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0037",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0038-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 38,
+      "source_block_sha256": "2593353c7592b619366d5969c1f47603d44e1fb2a8a4b4f14c49da3dc8a58b53",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S011",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ],
+      "heading": "Valvular disease management",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In summary, the indications for cardiac surgery in case of CS due to acute valvular disease should be personalized. In all cases, it seems important to discuss with experts and trained teams in a multidisciplinary approach (i.e., cardiologists, cardiac surgeons and intensivists). When medical treatment is the first-line choice, it also seems important to re-evaluate the interventional or surgical indication according to the evolution of CS and to reconsider the indication before the occurrence of refractory CS despite optimization of pharmacological treatment.",
+      "character_count": 566,
+      "content_sha256": "2593353c7592b619366d5969c1f47603d44e1fb2a8a4b4f14c49da3dc8a58b53",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0038",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Valvular disease management"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0039-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 39,
+      "source_block_sha256": "2e19888e6bac8fefa45ad8e7937a7bf6630456d933133732829ebed396b3f46d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients with acute CS with hypotension, early vasopressors are recommended to increase perfusion pressure of the vital organs [ 27 , 34 , 35 ]. Most often in patients with acute-on chronic CS but also in the acute CS, inotropes are recommended to manage patients with hypotension and persistent low CO due to decreased LV systolic function, resulting in poor vital organ perfusion [ 27 , 34 , 35 ]. Most existing inotropes used in CS exert their physiological effects through the modulation of cardiomyocyte calcium flow inducing tachycardia. Thus, these drugs can increase myocardial oxygen consumption. These agents should be used with progressive titration at the lowest possible dose for the shortest duration. Relevant effects and mechanism of action of inotropes and vasopressors in CS setting are presented in Table 1 .",
+      "character_count": 830,
+      "content_sha256": "2e19888e6bac8fefa45ad8e7937a7bf6630456d933133732829ebed396b3f46d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0039",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0040-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 40,
+      "source_block_sha256": "03e7f3c3466afb55081c935491139ac924f43d602d0b775c780f3603caf5461b",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock",
+      "character_count": 59,
+      "content_sha256": "03e7f3c3466afb55081c935491139ac924f43d602d0b775c780f3603caf5461b",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0040",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0041-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 41,
+      "source_block_sha256": "5fde72f8dee1cbe8f58da8b35f2335726fd8b9d4b01ea956c7eaf98a28f33fb0",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock — Agents: Norepinephrine; Mechanism of action: α 1+ > Β 1 +; Main effects: Vasoconstriction; Indications: First-line vasopressor in cardiogenic shock; Side effects: Excessive vasoconstriction, immunomodulation",
+      "character_count": 269,
+      "content_sha256": "5fde72f8dee1cbe8f58da8b35f2335726fd8b9d4b01ea956c7eaf98a28f33fb0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0042",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0042-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 42,
+      "source_block_sha256": "7fac0e53d2562effdade05e30934e2b2d4fe9ffc180979fab91f55d896989aa8",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock — Agents: Dobutamine; Mechanism of action: Β 1+; Main effects: Ionotropy, moderate vasodilatation; Indications: First-line inotropic agent in cardiogenic shock; Side effects: Tachycardia, hypotension (excessive vasodilatation)",
+      "character_count": 286,
+      "content_sha256": "7fac0e53d2562effdade05e30934e2b2d4fe9ffc180979fab91f55d896989aa8",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0043",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0043-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 43,
+      "source_block_sha256": "19547b4de28da26a40464820a28a8ade272258e539aaa1fd3fe54a8b638d9f65",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock — Agents: Milrinone; Mechanism of action: PD-3 inhibitor; Main effects: Ionotropy; Indications: Second-line inotropic agent in CS; Side effects: Tachyarrhythmias, hypotension, headache",
+      "character_count": 244,
+      "content_sha256": "19547b4de28da26a40464820a28a8ade272258e539aaa1fd3fe54a8b638d9f65",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0044",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0044-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 44,
+      "source_block_sha256": "5102e0b210f1a2e04b5a0efc99d171690e730e3c8d48252a6fa054c3406832a0",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Table 1",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 1 Inotropes and vasopressors use in cardiogenic shock — Agents: Levosimendan; Mechanism of action: Myofilament calcium sensitizer; Main effects: Ionotropy and inodilator; Indications: Second-line inotropic agent in cardiogenic shock (patients under betablockers); Side effects: Hypotension, atrial and ventricular tachyarrhythmias, headache",
+      "character_count": 346,
+      "content_sha256": "5102e0b210f1a2e04b5a0efc99d171690e730e3c8d48252a6fa054c3406832a0",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0045",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0045-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 45,
+      "source_block_sha256": "9f1e75343e37fef8d16b71dc157a88e201090e933af04f7df499bfa5081a5c74",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Moreover, the target mean blood pressure in CS is not well defined. Current recommendations are based on evidence in septic shock patients, suggesting that 65 mm Hg seems to be sufficient [ 27 ]. In CS, data are conflicting regarding the benefit of targeting a mean blood pressure higher than 65 mmHg [ 90 – 93 ].",
+      "character_count": 313,
+      "content_sha256": "9f1e75343e37fef8d16b71dc157a88e201090e933af04f7df499bfa5081a5c74",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0046",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0046-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 46,
+      "source_block_sha256": "687ca3d88fe93bbe1b07fd2048a04f07f68152e19a50bde74cd417ab032e597c",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "During the last two decades, several studies have compared different regimens of vasopressors and inotropes, the most relevant of which are detailed below.",
+      "character_count": 155,
+      "content_sha256": "687ca3d88fe93bbe1b07fd2048a04f07f68152e19a50bde74cd417ab032e597c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0047",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0047-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 47,
+      "source_block_sha256": "46bfda5049a8305d738a94407fc4d7879d09e2565a926941026e9f5ac5d9d7b3",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In the SOAP II trial, De Backer et al. evaluated the effects of two different regimens of first-line vasopressors in patients with shock and included a prespecified CS subgroup. Compared to norepinephrine, dopamine was associated with a higher rate of arrhythmias in the CS subgroup (280 patients) and in the overall population (1679 patients) and was associated with a higher risk of mortality in the CS subgroup [ 94 ]. The only randomized study (OPTIMA study) comparing, norepinephrine to epinephrine, reported the same hemodynamic efficacy with similar effects on arterial pressure and cardiac index, but epinephrine was associated with more arrhythmias, increased heart rates and lactic acidosis [ 95 ]. Furthermore, the OPTIMA study was stopped prematurely because of an increased incidence of refractory shock in CS patients receiving epinephrine [10 of 27 (37%) vs. 2 of 30 (7%); p = 0.008]. Finally, a meta-analysis including individual data from 2583 cardiogenic shock patients, among whom 37% (IQR 17–76%) received epinephrine, reported a three-fold increase in the risk of death with epinephrine (OR = 3.3 [2.8–3.9]) compared to other drugs [ 96 ]. In addition, in cardiac arrest patients with post-resuscitation shock, all-cause hospital mortality was found to be significantly higher when epinephrine was used (OR 2.6; 95% CI 1.4–4.7; p = 0.002) compared to norepinephrine. Cardiovascular hospital mortality was also higher with epinephrine (aOR = 5.5; 95% CI 3.0–10.3; p < 0.001) [ 97 ]. Given these data, norepinephrine is currently recommended as first-line vasopressor in CS [ 27 , 34 , 35 ].",
+      "character_count": 1610,
+      "content_sha256": "46bfda5049a8305d738a94407fc4d7879d09e2565a926941026e9f5ac5d9d7b3",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0048",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0048-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 48,
+      "source_block_sha256": "11dd04ed814a730f62d016bf748e8dc02f4fd74b9083f002bd5288cc7804ce57",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Among intravenous inotropes, dobutamine, is recommended to improve myocardial contractility and cardiac output [IIb class recommendations] [ 34 , 35 ]. In a pilot study on thirty patients, dobutamine resulted in less arrhythmia, less myocardial oxygen consumption, and a lower increase in lactate concentration compared with epinephrine [ 98 ]. Other inotropes that do not use the beta adrenergic receptor stimulation way (phosphodiesterase-3 inhibitors and levosimendan), have been assessed in CS patients because of their ability to improve myocardial contractility and their vasodilatory effect on pulmonary artery without increasing myocardial oxygen consumption. Milrinone (half life time of 2 h) decreases the rate of intracellular cyclic adenosine mono-phosphate breakdown, which increases intracellular calcium, myocardial contractility, and cardiomyocyte relaxation. A randomized study (DOREMI trial) on 192 participants (96 in each group), had recently compared milrinone with dobutamine in the management of CS. The primary composite outcome (in-hospital death, resuscitated cardiac arrest, receipt of cardiac transplant or mechanical circulatory support, nonfatal myocardial infarction, stroke or initiation of renal replacement therapy) did not differ between the milrinone [47 of 96 (49%)] and dobutamine group [52 of 96 (54%); relative risk, 0.90; 95% CI (0.69–1.19); p = 0.47]. Furthermore, no significant differences were found in heart rate, mean arterial pressure, serum lactate level, hourly urine output or serum creatinine level between the treatment groups [ 99 ].",
+      "character_count": 1587,
+      "content_sha256": "11dd04ed814a730f62d016bf748e8dc02f4fd74b9083f002bd5288cc7804ce57",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0049",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0049-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "78be46638f3ba978afd73dfcdfdc70279c0177a1c51c172c23ab3ae3145a0f56",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Levosimendan seemed promising because it improves myocardial contractility by increasing myofilament calcium sensitivity, without raising intracellular calcium and AMP concentrations. However few data support its use in CS and they suffer from important methodologic bias. In the SURVIVE Study, 1227 patients suffering from acute-on-chronic CS were randomized to rceive either intravenous levosimendan ( n = 664) or intravenous dobutamine ( n = 663). No difference was found regarding all-cause mortality at 180 days. There were higher incidences of atrial fibrillation, hypokalemia, and headache in the levosimendan group [ 100 ]. A systematic Cochrane database review found that levosimendan compared to dobutamine did not reduce short-term mortality (RR = 0.60, 95% CI 0.36–1.03; participants = 1701; low-quality evidence) and long-term mortality (RR = 0.84, 95% CI 0.63–1.13; participants = 1591; low-quality evidence); and did not reduce long-term mortality versus placebo (long-term mortality: RR 0.55, 95% CI 0.16–1.90; participants = 55; very low-quality evidence, no data on short-term mortality) [ 101 ]. Other studies reported a possible increased risk of complications including adverse cardiovascular events and excessive peripheral vasodilatation with hypotension [ 102 ]. A meta-analysis assessing data from 5,480 patients in 45 randomized clinical trials reported a benefit of levosimendan on mortality (risk ratio = 0.80 [0.72; 0.89], p for effect < 0.001).",
+      "character_count": 1474,
+      "content_sha256": "0943b23784d99c390f2d4d15625dd3c2b989f8b7b1f837a0a758c104f5839d5c",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0049-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 49,
+      "source_block_sha256": "78be46638f3ba978afd73dfcdfdc70279c0177a1c51c172c23ab3ae3145a0f56",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S012",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ],
+      "heading": "Inotropes/vasopressors",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "However, in this meta-analysis, trials on patients with acute cardiac events were combined with trials on patients undergoing elective cardiac surgery [ 103 ]. Of note, Levosimendan may be useful in CS patients on chronic beta-blocker treatment. In a subgroup analysis from the SURVIVE study in patients who used beta-blockers ( n = 669), mortality was significantly lower for levosimendan than dobutamine at day 5 (1.5 vs. 5.1% deaths; HR = 0.29; (0.11–0.78), p = 0.01) [ 104 ].",
+      "character_count": 479,
+      "content_sha256": "ebabd50113142ad3bbe0b19cb3cc805887678796359eb2a4e6f322a92b8caa03",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0050",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Inotropes/vasopressors"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0050-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 50,
+      "source_block_sha256": "6fcfe5121a72302bf94492571c4b9bd2e70ac9f8c7c0649597906270f2cf3b67",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The incidence of acute respiratory failure (ARF) in CS patients ranges between 50 and 88% with more than 80% of patients with CS requiring respiratory support [ 19 , 20 ]. Cardiogenic pulmonary edema is backward failure due to LV systolic and diastolic dysfunction [ 105 ]. This excess of interstitial and alveoli fluids impairs ventilation; and increases work of breathing, which ultimately results in both hypoxemia and hypercapnia.",
+      "character_count": 434,
+      "content_sha256": "6fcfe5121a72302bf94492571c4b9bd2e70ac9f8c7c0649597906270f2cf3b67",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0051",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0051-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 51,
+      "source_block_sha256": "b27245d1e8145d57a003e46b19fcad715436d6bf35bba90f445b673fac3ab014",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In addition, intrapleural pressure (Ppleural) seems to be a major determinant of respiratory impairment. During respiratory failure, active respiratory muscles contraction induces a negative Ppleural, increasing venous return and RV/LV preload [ 106 ]. Other factors contribute to a further impairment in gas exchange. Indeed the concurrent inflammatory response conduces to the development of alveolar edema by changing vascular membrane permeability; while acute kidney injury favors fluid retention [ 105 ]. The compensatory increase in respiratory drive in response to hypoxia, hypercapnia and/or metabolic acidosis, can further redirect cardiac output toward respiratory muscles, perpetuating myocardial ischemia and tissue hypoperfusion in CS patients [ 107 ].",
+      "character_count": 766,
+      "content_sha256": "b27245d1e8145d57a003e46b19fcad715436d6bf35bba90f445b673fac3ab014",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0052",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0052-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 52,
+      "source_block_sha256": "78324b0c277ac1b1736b84433c186e78f78863927104f5a24dafb3ef0813e92e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "These pathophysiological concepts support the use of ventilatory support with positive pressure ventilation (PPV) for management of CS patients with respiratory distress [ 106 ]. The first aim of the ventilatory support with PPV is to improve gas exchanges (i.e., oxygenation and decarboxylation) as it reduces alveolo-interstitial edema and enhances alveolar recruitment [ 108 , 109 ]. It leads to a better systemic and myocardial oxygenation and reversion of hypoxic pulmonary vasoconstriction. PPV decreases myocardial oxygen demand by decreasing the myocardial wall tension (Laplace law). In addition, PPV also decreases work-of-breathing and reduces the oxygen consumption of the diaphragm. Finally, PPV leads to favorable hemodynamic effects by reducing RV/LV preload and LV afterload and therefore improves CO [ 107 , 110 ].",
+      "character_count": 831,
+      "content_sha256": "78324b0c277ac1b1736b84433c186e78f78863927104f5a24dafb3ef0813e92e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0053",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0053-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 53,
+      "source_block_sha256": "e26df4a35238ce7e939836ca7c8969771875c603e5edacfb86a2c3e22b530e4e",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Modalities of different respiratory supports use in cardiogenic shock are displayed in Table 2 . Data regarding respiratory management of acute cardiogenic pulmonary oedema came from studies that were not dedicated to cardiogenic shock. In a large multicentric randomized study comparing oxygen therapy versus noninvasive ventilation in acute cardiogenic pulmonary edema, PPV induced a faster improvement of respiratory distress and acidosis. There was no significant difference in mortality or intubation within 7 days. However, these results suffer from limitations regarding the low intubation and mortality rate [ 109 ]. Recent studies also suggested that PPV with noninvasive ventilation reduced the risk of invasive mechanical ventilation (IMV) [ 111 – 113 ].",
+      "character_count": 765,
+      "content_sha256": "e26df4a35238ce7e939836ca7c8969771875c603e5edacfb86a2c3e22b530e4e",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0054",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0054-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 54,
+      "source_block_sha256": "518db9b256980c7ab69d7486c97bc41f89b4ff7d73cb64175878c90538629613",
+      "block_type": "table_caption",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Modalities, settings, advantages, limits and indications of the different respiratory supports used in cardiogenic shock",
+      "character_count": 128,
+      "content_sha256": "518db9b256980c7ab69d7486c97bc41f89b4ff7d73cb64175878c90538629613",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0055",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0055-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 55,
+      "source_block_sha256": "b9dc1e63f3fc24aa65d71b989a6a36f68b53390431aae9d32ffcf6256844134f",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Modalities, settings, advantages, limits and indications of the different respiratory supports used in cardiogenic shock — Modalities: O2 mask; Settings: Oxygen flow: adjust with objective of SaO 2 92–98%; Advantages: Avoid hypoxia Simple and accessible device; Limits: No PEEP effect Limited oxygen flow at 15 L/min; Indications: First-line support until NIV or IMV in case of respiratory failure Acute cardiogenic pulmonary edema: compared to oxygenotherapy, PEEP induced a faster improvement of respiratory distress and acidosis without significant difference in mortality or intubation within 7 days [ 109 ] No data regarding CS specifically",
+      "character_count": 653,
+      "content_sha256": "b9dc1e63f3fc24aa65d71b989a6a36f68b53390431aae9d32ffcf6256844134f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0057",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0056-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "f1feeef57226fa03b5390e4bd9c609e3c30020a2b2344c19cdd283742eecb391",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Table 2 Modalities, settings, advantages, limits and indications of the different respiratory supports used in cardiogenic shock — Modalities: Non invasive ventilation (NIV) Continuous positive airway pressure (CPAP) Bilevel positive air pressure (BIPAP); Settings: Positive Pressure ventilation (PPV) with positive end expiratory pressure (PEEP): minimal starting setting at 5–10 cmH 2 O, adjust according to SaO 2 In case of BIPAP, adjust inspiratory positive airway pressure according to respiratory rate FiO2: adjust with objective of SaO 2 92–98% [ 106 ] Need correct selection of interfaces, favorable patient/ventilator synchrony, comfort and active participation of the patient; Advantages: 1. Respiratory effects: Reduced alveolo-interstitial edema Induced alveolar recruitment Improve oxygenation: reversion of hypoxic pulmonary vasoconstriction, better systemic and myocardial oxygenation Improve decarboxylation Decreasing work-of-breathing and reduce the oxygen consumption of the diaphragm 2.",
+      "character_count": 1006,
+      "content_sha256": "4f5a49bb1a0342f4eeaf03b40776dbb51c9d0bf668f5c9cf0fea699b48aa0f45",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0056-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 56,
+      "source_block_sha256": "f1feeef57226fa03b5390e4bd9c609e3c30020a2b2344c19cdd283742eecb391",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Hemodynamic effects Reduce RV/LV preload and LV afterload Improve cardiac output Could reduce the risk of invasive mechanical ventilation [ 111 – 113 ] Simple and accessible device; Limits: Absolute contraindications: Severely impaired consciousness Refractory vomiting Facial trauma Hemodynamic instability Relative contraindications: Inability to cough Uncooperative patient NIV compared to IMV in a non-randomized study: no difference of mortality [ 115 ]; Indications: First line: respiratory distress in heart failure patients, without absolute contraindications to NIV [ 5 , 34 , 35 , 106 ] Second line: should be considered in CS only after: Hemodynamic stabilization An assessment of the risk–benefit balance Without absolute contraindications to NIV With a close monitoring of efficacity Device: BIPAP increase Vt and could be preferable compared to CPAP in case of hypercapnia, chronic lung disease or severe RF",
+      "character_count": 921,
+      "content_sha256": "e4f6ab8e3d65bf0c8631a8fb77c306148c73f9042e9e07a4caadbc5ae3796f4f",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0058",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0057-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 57,
+      "source_block_sha256": "6a17ed065ffaf0cc9ff6fdc27ff863c357cf119eee59095b45fbdbc497424536",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Modalities, settings, advantages, limits and indications of the different respiratory supports used in cardiogenic shock — Modalities: Invasive mechanical ventilation (IMV); Settings: FiO2: adjust with objective of SaO 2 92–98% [ 106 ] PEEP: set at 5 cmH 2 O, gradually increased according to respiratory (overdistension, barotrauma) and hemodynamic (decrease RV preload and increase RV afterload) risks of excessive PEEP Respiratory rate: adjust to limit hypercapnia acidosis (worsening of RV dysfunction risk) Vt: should not exceed 6–8 mL/kg of ideal body weight No data and recommendations regarding superiority of any specific mode (volume or pressure control) [ 5 , 34 , 35 , 106 ]; Advantages: 1. Respiratory effects: Reduced alveolo-interstitial edema Induced alveolar recruitment Improve oxygenation: reversion of hypoxic pulmonary vasoconstriction, better systemic and myocardial oxygenation Improve decarboxylation Decreasing work-of-breathing and reduce the oxygen consumption of the diaphragm 2. Hemodynamic effects: Reduce RV/LV preload and LV afterload Improve cardiac output Sedation use: could reduce oxygen consumption and improve cardiac output; Limits: Risks associated with anaesthesia induction and intubation: hypotension, hypoxia, transient low cardiac output due to intrathoracic pressures change, cardiac arrest Specific mode: pressure supported ventilation (PSV) could increase myocardial oxygen consumption if spontaneous breath is no fully supported [ 122 ]; Indications: First line: [ 5 , 34 , 35 , 106 ] Refractory shock with severe hypotension Need for effective airway protection due to coma/impairment of consciousness Refractory vomiting Facial trauma Second line after NIV failure [ 5 , 34 , 35 , 106 ]",
+      "character_count": 1745,
+      "content_sha256": "6a17ed065ffaf0cc9ff6fdc27ff863c357cf119eee59095b45fbdbc497424536",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0059",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0058-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 58,
+      "source_block_sha256": "988792fec1bbf68d61573b564b30379aa4894e13f72b0781d02d30201202b4bd",
+      "block_type": "table_row",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 Modalities, settings, advantages, limits and indications of the different respiratory supports used in cardiogenic shock — Modalities: High flow nasal canula (HFNC); Settings: FiO2: adjust with objective of SaO 2 92–98%; Advantages: High oxygen flow (max 60L/min, FIO2 1) Improvement of oxygenation Simple and accessible device; Limits: Inconstant PEEP “effect”, between 5 and 7 cmH 2 O; Indications: Scarce data Remains actually unclear [ 119 , 120 ]",
+      "character_count": 459,
+      "content_sha256": "988792fec1bbf68d61573b564b30379aa4894e13f72b0781d02d30201202b4bd",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0060",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0059-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 59,
+      "source_block_sha256": "ec758cc69e34d7e43a1327a5810b1691c454bdcdbc36eb8ad3c7383dbfe80ebe",
+      "block_type": "table_note",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Table 2",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Table 2 BIPAP, bilevel positive air pressure; CS, cardiogenic shock; CPAP, Continuous positive airway pressure; PPV, Positive Pressure ventilation; NIV, Noninvasive ventilation; PEEP, positive end expiratory pressure; RV, right ventricular; LV, left ventricular; Vt, tidal volume; PSV, pressure supported ventilation",
+      "character_count": 316,
+      "content_sha256": "ec758cc69e34d7e43a1327a5810b1691c454bdcdbc36eb8ad3c7383dbfe80ebe",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0061",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0060-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 60,
+      "source_block_sha256": "d48a763548d360d1a481efab30ed1089ff04acd253e7f9ff5ea653b7af406b80",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "NIV represents a cornerstone in the management of cardiogenic pulmonary edema but its place in CS management is more questionable, mainly due to the hemodynamic instability or consciousness impairment. Importantly, there is no randomized study that compared NIV with IMV in this population. Recent European Guidelines regarding the management of respiratory distress in heart failure patients suggested to use NIV before intubation but do not address specifically the issue of CS patients [ 114 ]. The expected benefit of IMV is the reduction of oxygen consumption by sedation, allowing the optimization of CO [ 105 ]. One observational study including 219 CS patients compared NIV with IMV and highlighted no difference of mortality after propensity score adjustment [ 115 ]. These data suggest to consider NIV with caution after assessment of the risk–benefit balance. Refractory shock with severe hypotension and the need for effective airway protection due to coma are absolute contraindications to NIV. In addition, mild hypotension, inability to expectorate copious secretions, uncooperative patient and isolated RV failure should be considered as relative contraindications [ 108 ]. In consequence, the use of NIV should be considered only after hemodynamic stabilization with a close monitoring of its efficacy, that is usually observed within 1–2 h from its initiation [ 105 , 114 ]. Overall, success of NIV is conditioned by correct selection of interfaces, favorable patient/ventilator synchrony, comfort and active participation of the patient [ 116 ].",
+      "character_count": 1564,
+      "content_sha256": "d48a763548d360d1a481efab30ed1089ff04acd253e7f9ff5ea653b7af406b80",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0062",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0061-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 61,
+      "source_block_sha256": "c877b9a994820579a931cfa876428ac4f3648a229f725d8a95bf7569c2023b3d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In practice, two main modalities of NIV are used in ICU, i.e., continuous positive airway pressure (CPAP) and bilevel positive air pressure (BIPAP) with positive end expiratory pressure (PEEP). Minimal starting setting of PPV should be 5–10 cmH 2 O, adjusted according to oxygen saturation (SaO 2 ). Actually, CPAP and BiPAP can be used indifferently, depending on the practice of the centers, in the absence of demonstrated difference in mortality and intubation rates [ 109 , 117 ]. Although CPAP is a simpler technique, BIPAP could increase tidal volume and seems to be preferable in patients with hypercapnia, chronic lung disease or severe respiratory failure. Finally, high flow nasal canula shows improvement of oxygenation, providing an inconstant PEEP “effect” between 5 and 7 cmH 2 O [ 118 ]. Considering the paucity of data in the respiratory management of CS, the place of this device remains actually unclear [ 119 , 120 ].",
+      "character_count": 936,
+      "content_sha256": "c877b9a994820579a931cfa876428ac4f3648a229f725d8a95bf7569c2023b3d",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0063",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0062-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 62,
+      "source_block_sha256": "db40d0207d1d488b553aec5b8601329223ebd8a207b069b9a45c6b9bde86bffc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "When IMV is needed, patients with cardiogenic shock should benefit from early intubation. A recent study highlighted that each 1-h delay in IMV initiation was associated with higher 30-day mortality (OR, 1.03; 95% CI 1.00–1.06; p = 0.03) [ 121 ]. However, particular attention in early intubation should be paid to cases of severe right ventricular dysfunction or tamponade. In these cases, PPV has to be used only when necessary, optimizing preload and MAP (> 60 mmHg) with vasopressors is needed and consider awake intubation if tamponade/constriction.",
+      "character_count": 554,
+      "content_sha256": "db40d0207d1d488b553aec5b8601329223ebd8a207b069b9a45c6b9bde86bffc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0064",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0063-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 63,
+      "source_block_sha256": "6d8e720a211e8858f5de4c72874e598cfe96e49b161df3a5078b3ec590d1b123",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S013",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ],
+      "heading": "Mechanical ventilation",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In CS patients, no data support the superiority of any specific mode (volume or pressure control, pressure supported ventilation [ 106 ]. Importantly, spontaneous breathing modes as PSV could increase myocardial oxygen consumption if spontaneous breathing is not fully supported, making this ventilation mode less suitable to the CS acute phase [ 122 ]. PEEP level is set at 5 cmH 2 O and gradually increased taking into account the respiratory (overdistension, barotrauma) and hemodynamic (decrease RV preload and increase RV afterload) risks of excessive PEEP [ 106 ]. FiO2 may be titrated to a goal of SaO 2 between 92 and 98% [ 106 ]. The rationale is to avoid either hypoxemia and hyperoxemia. Of note, the ideal oxygenation targets in CS patients remain undefined in current guidelines [ 5 , 34 , 35 ], but emerging evidence highlights the necessary to avoid hyperoxemia, as SaO 2 > 98%, that was found to be deleterious [ 123 – 125 ]. Respiratory rate is mainly adjusted to limit acidosis, as hypercapnia could worsen RV dysfunction. Finally, tidal volume (Vt) > 9 mL/kg seems to be associated with higher mortality (OR 9.0, 95% CI 1.3–62.0, p = 0.03), suggesting that Vt setting should not exceed 6–8 mL/kg of ideal body weight [ 126 ].",
+      "character_count": 1244,
+      "content_sha256": "6d8e720a211e8858f5de4c72874e598cfe96e49b161df3a5078b3ec590d1b123",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0065",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Mechanical ventilation"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0064-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 64,
+      "source_block_sha256": "0299aab081ee6816510222231057533e4c3482f203d89a4d2149ef0489dbf993",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S014",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ],
+      "heading": "Renal replacement therapy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Acute kidney injury (AKI) occurs in up to one half of patients with CS, and 20% of these patients will require renal replacement therapy (RRT) [ 127 ]. AKI is a strong predictor of poor outcomes regardless of the etiology of CS [ 127 , 128 ]. Indeed, patients with an indication for RRT have a two-fold increase in the risk of in-hospital mortality [ 127 , 129 , 130 ] along with a higher risk of long term dialysis when compared with those with no need for RRT [ 129 ]. In a recently published study, age, lactate, hemoglobin, pre-admission loop diuretics use and baseline eGFR were identified as the most important clinical predictors of poor outcomes in patients with CS requiring RRT [ 131 ].",
+      "character_count": 696,
+      "content_sha256": "0299aab081ee6816510222231057533e4c3482f203d89a4d2149ef0489dbf993",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0066",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0065-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 65,
+      "source_block_sha256": "6dba0c8b24c071cf4cdb1924374838c32fa27c3f4ec92017fb21520a86fba837",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S014",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ],
+      "heading": "Renal replacement therapy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "In patients with acute decompensated heart failure with worsened renal function but without shock, RRT with ultrafiltration was associated with improved hemodynamic parameters but also with a higher incidence of adverse events and worsening of renal function and transition to dialysis [ 132 , 133 ]. Recent AKIKI studies on critically ill patients with shock and AKI demonstrate no difference in terms of mortality of a delayed strategy versus an early RRT initiation strategy [ 134 , 135 ]. These results highlighted that RRT may be deferred until one of these criteria is met: severe hyperkalemia, metabolic acidosis, pulmonary edema, blood urea nitrogen level higher than 112 mg per deciliter, or oliguria for more than 72 h.",
+      "character_count": 729,
+      "content_sha256": "6dba0c8b24c071cf4cdb1924374838c32fa27c3f4ec92017fb21520a86fba837",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0067",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0066-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 66,
+      "source_block_sha256": "dd9f7812924b12e12e6eb5b147f8ea290967770f3536f71b31bd8209d5bde4b1",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S014",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ],
+      "heading": "Renal replacement therapy",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "To date, no clear recommendation exists for the ideal timing for RRT initiation in patients with CS. Available studies in this regard are scarce and limited to the post-cardiac surgery setting. In a retrospective analysis of 142 patients managed with post cardiotomy CS complicated with AKI, the early initiation of high-volume continuous veno-venous hemofiltration resulted in improved outcomes with lower in-hospital and 30-day mortality rate when compared to patients undergoing low volume hemofiltration [ 136 ]. Importantly, as patients with CS do not tolerate acute fluid shifts as observed in patients with intermittent hemodialysis, continuous RRT is the most commonly used strategy [ 5 ].",
+      "character_count": 697,
+      "content_sha256": "dd9f7812924b12e12e6eb5b147f8ea290967770f3536f71b31bd8209d5bde4b1",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0068",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Renal replacement therapy"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0067-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 67,
+      "source_block_sha256": "ba69b35e254f5a3ebb211a845ced888773ed3136622e0cfb5056eb17542edc4d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ],
+      "heading": "Acute mechanical circulatory support",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "In CS, short-term acute mechanical circulatory support (aMCS) should be considered when urgent hemodynamic stabilization is needed despite ongoing medical therapies to allow for heart recovery and/or end-organ protection (as a bridge to recovery), or as a bridge to transplantation or long-term aMCS (as a bridge to a bridge or bridge to decision strategy) in appropriately selected patients, as per the 2022 AHA (Class IIa, Level of Evidence B-NR) and the 2021 ESC (IIa, C) recommendations [ 34 , 35 , 137 ]. Emerging data suggest that prompt implantation of aMCS devices in well-selected patients in whom decision-making is based on early invasive hemodynamic assessment and standardized treatment algorithms may improve outcomes [ 36 , 138 , 139 ]. However, evidence for sustained survival benefits with short-term aMCS is limited [ 121 ] and to date studies, such as IABP-SHOCK II, comparing intra-aortic balloon pump (IABP) with other MCS devices like Impella, show no significant differences in mortality [ 42 , 122 – 125 ]. Importantly, there is an absence of proof to date to prefer one to another aMCS and device selection depends on various factors, including CS phenotype and local expertise [ 9 ]. Practices on aMCS type use vary from country, particularly in France where the veno-arterial extracorporeal membrane oxygenation (VA-ECMO) is predominantly used, whereas the Impella device is becoming increasingly popular in the US and Germany, for example.",
+      "character_count": 1467,
+      "content_sha256": "72937ef0f29c1038d1cd545f9f7054ff19dfbdbd7b2ca7f82f981662e9674f19",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0069",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0067-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 67,
+      "source_block_sha256": "ba69b35e254f5a3ebb211a845ced888773ed3136622e0cfb5056eb17542edc4d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ],
+      "heading": "Acute mechanical circulatory support",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "In a recent large nationwide database in US, 20% of AMICS patients received an aMCS of which 66, 22.7 and 10.5% were Impella, VA-ECMO or combination of both devices, respectively [ 144 ]. Recent data emphasize the importance of early aMCS escalation, especially in MI-related CS. Registry findings suggest improved survival with early MCS implantation before percutaneous coronary intervention (PCI) [ 5 , 9 , 34 , 35 ].",
+      "character_count": 420,
+      "content_sha256": "309e1477af6b3c89335dbf209ce61d99a352143445fad3479d8a7de1243b5e1a",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0069",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0068-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 68,
+      "source_block_sha256": "04ed21cfc5087ada3e60ca878bc7a53b4e27be50f0c0bea30a446f988be7378d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ],
+      "heading": "Acute mechanical circulatory support",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "VA-ECMO use has increased, with varying survival rates based on etiology [ 145 – 149 ]. Randomized studies like EURO-SHOCK [ 150 ], ECMO-CS and ECLS-SHOCK trial showed mixed results, and ongoing trial ANCHOR ( NCT04184635 ) aims to provide further insights. In detail, results of the first randomized study were recently published (ECMO-CS): among 122 patients, there was no improvement, in patients with CS supported with early VA-ECMO, in the primary composite outcome (death from any cause, resuscitated circulatory arrest, and implementation of another mechanical circulatory support device at 30 days): 37 (63.8%) patients in the immediate VA-ECMO and 42 (71.2%) in the no early VA-ECMO groups, respectively (hazard ratio, 0.72 [95% CI 0.46–1.12]; p = 0.21. All-cause mortality was 50.0% in immediate ECMO group versus 47.5%; risk difference, 2.5 [95% CI − 15.6 to 20.7]; while the cross-over rate was 39% in no-early ECMO group [ 151 ]. Finally, in a larger randomized study (ECLS-SHOCK trial) conducted by Thiele and colleagues on 417 patients with an acute myocardial infarction complicated by cardiogenic shock, there was no difference on death from any cause at 30 days (the primary end point) that occurred in 47.8% of the patients in the ECLS group and in 49.0% of those in the control group (relative risk, 0.98; 95% confidence interval, 0.80–1.19; p = 0.81).",
+      "character_count": 1372,
+      "content_sha256": "688c03297db11fe90eb356abced38f71593584f14f7c8f4e28f4cc8c28f282bf",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0070",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0068-C02",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 68,
+      "source_block_sha256": "04ed21cfc5087ada3e60ca878bc7a53b4e27be50f0c0bea30a446f988be7378d",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ],
+      "heading": "Acute mechanical circulatory support",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 2,
+      "chunk_count_in_block": 2,
+      "is_split": true,
+      "text": "Moreover, the use of VA ECMO was associated with increased side effects including bleedings [ 152 ]. The meta-analysis of four randomized clinical trials comparing early routine use of VA-ECMO versus optimal medical therapy alone in patients presenting with infarct-related cardiogenic shock trials did not report any significant reduction of 30-day death rate with the early use of VA-ECMO (OR 0.93; 95% CI 0.66–1.29) [ 153 ]. These data rule out the use of VA-ECMO in most patients with CS related to myocardial infarction. Further studies are needed to determine whether there is a sub-group of these patients in whom the benefits outweigh the harms, namely bleedings and vascular complications [ 154 ].",
+      "character_count": 706,
+      "content_sha256": "97e238a1939de5b458cb4d00db538cc1324c1c9d02f69ad7da753d2d4a65ba45",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0070",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0069-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 69,
+      "source_block_sha256": "9e9df8b707b999ca5674e6b6ea0409c48af7a856834286d28b727647cfe24269",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S015",
+      "section_level": 3,
+      "parent_section_number": "DOC-PMC-CARD-0010-JATS-S008",
+      "parent_section_heading": "Management",
+      "section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ],
+      "heading": "Acute mechanical circulatory support",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "Finally, VA ECMO resulting in increased LV afterload, this may lead to inadequate unloading of the LV. Combining veno-arterial ECMO with IABP, Impella support, or atrial septostomy could be considered to achieve LV unloading [ 155 ]. Accordingly, some observational studies showed that these strategies of adding an IABP or Impella to peripheral VA-ECMO was associated to an increase in survival [ 156 , 157 ].",
+      "character_count": 410,
+      "content_sha256": "9e9df8b707b999ca5674e6b6ea0409c48af7a856834286d28b727647cfe24269",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0071",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Introduction",
+        "Management",
+        "Acute mechanical circulatory support"
+      ]
+    },
+    {
+      "chunk_id": "DOC-PMC-CARD-0010-B0070-C01",
+      "document_id": "DOC-PMC-CARD-0010",
+      "source_id": "SRC-PMC-001",
+      "medical_specialty": "Cardiology",
+      "topics": [
+        "Cardiogenic shock",
+        "Hemodynamic support"
+      ],
+      "source_block_index": 70,
+      "source_block_sha256": "ddbc73c97a597046bed128859754a07450730b3efcdc3ce5b2d9208318d466dc",
+      "block_type": "paragraph",
+      "section_number": "DOC-PMC-CARD-0010-JATS-S016",
+      "section_level": 1,
+      "parent_section_number": null,
+      "parent_section_heading": null,
+      "section_path": [
+        "Conclusions"
+      ],
+      "heading": "Conclusions",
+      "start_page": null,
+      "end_page": null,
+      "chunk_index": 1,
+      "chunk_count_in_block": 1,
+      "is_split": false,
+      "text": "The management of CS has seen significant advances in recent decades, but the mortality remains dramatically high. As for other types of shock, rapid recognition with multimodal evaluation by ECG, biological and echocardiographic tests allows early and appropriate management and may improve survival. Recent classifications allowing better stratification of mortality risk may be useful to guide the management. The cornerstone of CS patient management is the treatment of the cause of the cardiac insult including coronary revascularization by PCI of the culprit lesion in case of AMI. Symptomatic management aims to restore perfusion with noradrenaline and increase cardiac output with inotropic therapies. The management of other organs failure is based on optimization of mechanical ventilation and appropriate initiation of RRT. Mechanical assist devices may have an important role in CS patients but, pending the results of further clinical trials, the type and implantation timing of such techniques remain to be defined according to the expertise of the Heart Team.",
+      "character_count": 1074,
+      "content_sha256": "ddbc73c97a597046bed128859754a07450730b3efcdc3ce5b2d9208318d466dc",
+      "provenance_type": "xml_element",
+      "source_locator": "DOC-PMC-CARD-0010-JATS-B0072",
+      "source_format": "pmc_jats_xml",
+      "retrieval_section_path": [
+        "Conclusions"
+      ]
+    }
+  ]
+}
