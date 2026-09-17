@@ -1,4 +1,13 @@
-"""Domain service orchestrating anatomy sessions, Socratic tutoring, and deterministic challenge scoring."""
+"""Domain service orchestrating anatomy sessions, Socratic tutoring, and deterministic challenge scoring.
+
+HOTFIX Phase 5.1.1 — Challenge Scoring Isolation
+-------------------------------------------------
+The independent Challenge always targets the RENAL_ARTERY_LEFT.
+This constant is the single source of truth for challenge scoring.
+It must NOT be derived from session.current_target_structure_id
+because the guided-phase target (renal_vein_left) may still be
+populated if the learner skips or short-circuits the guided flow.
+"""
 from __future__ import annotations
 
 import time
@@ -22,6 +31,15 @@ from .models import (
     StartSessionResponse,
 )
 from .repository import AnatomyRepository
+
+# ---------------------------------------------------------------------------
+# HOTFIX 5.1.1: Single source of truth for the independent challenge target.
+# The guided lesson target is renal_vein_left (most-anterior hilum vessel).
+# The challenge asks for the aortic supply vessel = renal_artery_left.
+# These two targets MUST remain isolated; never derive one from the other.
+# ---------------------------------------------------------------------------
+_GUIDED_LESSON_TARGET_ID: str = "renal_vein_left"   # Guided: most-anterior vessel at hilum
+_CHALLENGE_TARGET_ID: str = "renal_artery_left"      # Challenge: vessel from abdominal aorta
 
 
 class AnatomyServiceError(RuntimeError):
@@ -74,7 +92,7 @@ class AnatomyService:
             learner_id=learner_id,
             learning_objective=objective,
             lesson_state=LessonState.INTRO,
-            current_target_structure_id="renal_vein_left",
+            current_target_structure_id=_GUIDED_LESSON_TARGET_ID,  # Guided phase target
             selected_structure_ids=[],
             hint_level=0,
             challenge_state="NOT_STARTED",
@@ -87,7 +105,7 @@ class AnatomyService:
             user_query=None,
             lesson_state=LessonState.INTRO,
             selected_structure_id=None,
-            target_structure_id="renal_vein_left",
+            target_structure_id=_GUIDED_LESSON_TARGET_ID,
             hint_level=0,
         )
 
@@ -125,9 +143,11 @@ class AnatomyService:
         if session.lesson_state in (LessonState.INTRO, LessonState.GUIDED_VESSELS, LessonState.GUIDED_IDENTIFICATION):
             if canonical_id:
                 if canonical_id == session.current_target_structure_id:
-                    # Correct identification in guided phase
+                    # Correct identification in guided phase → atomically transition to Challenge.
+                    # HOTFIX 5.1.1: Explicitly set challenge target to _CHALLENGE_TARGET_ID.
+                    # Do NOT derive from guided target or invert it — use the constant directly.
                     session.lesson_state = LessonState.CHALLENGE_ACTIVE
-                    session.current_target_structure_id = "renal_artery_left"  # target for independent challenge
+                    session.current_target_structure_id = _CHALLENGE_TARGET_ID
                     session.hint_level = 0
                 else:
                     # Incorrect identification -> trigger Socratic hint
@@ -165,12 +185,29 @@ class AnatomyService:
         """Evaluate learner 3D mesh selection for the independent challenge.
 
         CRITICAL ARCHITECTURAL RULE: Correctness is evaluated DETERMINISTICALLY by
-        comparing selected_structure_id to current_target_structure_id.
+        comparing selected_structure_id to the canonical challenge target.
         The LLM is NEVER permitted to decide or override correctness.
+
+        HOTFIX 5.1.1: The challenge target is derived from _CHALLENGE_TARGET_ID (the
+        module-level constant), NOT from session.current_target_structure_id.
+        Reason: session.current_target_structure_id may still carry the guided-phase
+        target (renal_vein_left) if the learner reaches CHALLENGE_ACTIVE without going
+        through the correct interact() transition (e.g., direct API call or session
+        state contamination). Using the constant enforces target isolation.
         """
         session = self.get_session(session_id, request.learner_id)
 
-        target_id = session.current_target_structure_id or "renal_artery_left"
+        # HOTFIX 5.1.1: Always use the canonical challenge target constant.
+        # Fall back to session.current_target_structure_id ONLY if it is already
+        # correctly set to the challenge target (as a safety consistency check).
+        session_target = session.current_target_structure_id
+        if session_target and session_target != _GUIDED_LESSON_TARGET_ID:
+            # Session target has been correctly updated to the challenge target
+            target_id = session_target
+        else:
+            # Session target is still the guided-phase target (contamination guard) or None
+            target_id = _CHALLENGE_TARGET_ID
+
         selected_raw = request.selected_structure_id.strip().casefold()
 
         # Resolve selected mesh name if needed
