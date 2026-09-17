@@ -40,13 +40,13 @@
         "license_restrictions": "Non-commercial only; ShareAlike (copyleft); WHO logo prohibited; no endorsement implied; translation disclaimer required."
       },
       "governance_classification": {
-        "startup_suitability": "RESTRICTED",
+        "startup_suitability": "REFERENCE_ONLY",
         "public_repository_suitability": false,
-        "runtime_only_suitability": true,
+        "runtime_only_suitability": false,
         "verification_date": "2026-09-17",
         "verification_evidence": "Official WHO Publication Page 4 Notice (ISBN 978-92-4-003398-6)",
-        "discrepancies": "Previous audit labeled as conditional public; strictly NonCommercial-ShareAlike. Prohibited from public commercial repository without separate commercial license.",
-        "final_action": "KEEP_RUNTIME_ONLY"
+        "discrepancies": "Non-commercial copyleft license prevents active commercial startup retrieval. Quarantined to reference-only; questions PLAB-CARD-0001 and PLAB-CARD-0003 are fully covered by DOC-PMC-CARD-0002 (CC BY 4.0).",
+        "final_action": "REFERENCE_ONLY_NON_ACTIVE"
       }
     },
     {
@@ -149,7 +149,7 @@
       },
       "verified_metadata": {
         "title": "Recent Advances and Future Directions in Syncope Management: A Comprehensive Narrative Review",
-        "authors": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccal\u00e0",
+        "authors": "Anna Maria Martone, Iris Parrini, Francesca Ciciarello, Vincenzo Galluzzo, Stefano Cacciatore, Claudia Massaro, Rossella Giordano, Tommaso Giani, Giovanni Landi, Michele Massimo Gulizia, Furio Colivicchi, Domenico Gabrielli, Fabrizio Oliva, Giuseppe Zuccalà",
         "publication_year": 2024,
         "doi": "10.3390/jcm13030727",
         "pmcid": "PMC10856004",
@@ -369,28 +369,28 @@
         "doi": "10.1186/s13613-024-01260-y",
         "pmcid": "PMC10980676",
         "pmid": "38553663",
-        "publisher": "SpringerOpen / Elsevier",
+        "publisher": "SpringerOpen / BioMed Central (Springer Nature)",
         "official_source_url": "https://doi.org/10.1186/s13613-024-01260-y",
         "source_type": "Narrative Review"
       },
       "license_audit": {
         "claimed_license": "CC BY 4.0",
-        "verified_license": "CC BY-NC-ND 4.0 / Elsevier TDM License",
-        "official_license_url": "http://creativecommons.org/licenses/by-nc-nd/4.0/",
-        "redistribution_allowed": false,
-        "commercial_use_allowed": false,
-        "derivative_processing_allowed": false,
+        "verified_license": "CC BY 4.0",
+        "official_license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "redistribution_allowed": true,
+        "commercial_use_allowed": true,
+        "derivative_processing_allowed": true,
         "attribution_required": true,
-        "license_restrictions": "NonCommercial, NoDerivatives. Prohibits commercial adaptation, transformation, and RAG chunking."
+        "license_restrictions": "Attribution to original authors and source."
       },
       "governance_classification": {
-        "startup_suitability": "FAIL",
-        "public_repository_suitability": false,
+        "startup_suitability": "PASS",
+        "public_repository_suitability": true,
         "runtime_only_suitability": true,
         "verification_date": "2026-09-17",
-        "verification_evidence": "Crossref VOR License record http://creativecommons.org/licenses/by-nc-nd/4.0/",
-        "discrepancies": "CRITICAL MISCLASSIFICATION in historical snapshot. Historical snapshot claimed CC BY 4.0; authoritative publisher Crossref registration is CC BY-NC-ND 4.0.",
-        "final_action": "KEEP_RUNTIME_ONLY"
+        "verification_evidence": "Official PubMed Central Version of Record XML permissions element (license_ref https://creativecommons.org/licenses/by/4.0/) and SpringerOpen Annals of Intensive Care open-access declaration. Previous Gate 0.6 Crossref TDM syndication notice superseded by authoritative publisher VOR.",
+        "discrepancies": "None. Authoritative publisher VOR and PMC confirm Creative Commons Attribution 4.0 International (CC BY 4.0). False Elsevier / CC BY-NC-ND classification removed.",
+        "final_action": "KEEP_PUBLIC"
       }
     },
     {
@@ -493,7 +493,7 @@
       },
       "verified_metadata": {
         "title": "Diagnostic Challenges in Aortic Stenosis",
-        "authors": "Andr\u00e9 Gonz\u00e1lez-Garc\u00eda, Pablo Pazos-L\u00f3pez, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Ch\u00eda, Raquel Bilbao-Quesada, Elisa Blanco-Gonz\u00e1lez, Carina Gonz\u00e1lez-R\u00edos, Mar\u00eda Casti\u00f1eira-Busto, Manuel Barreiro-P\u00e9rez, Andr\u00e9s \u00cd\u00f1iguez-Romo",
+        "authors": "André González-García, Pablo Pazos-López, Francisco Eugenio Calvo-Iglesias, Tatiana Mallely Matajira-Chía, Raquel Bilbao-Quesada, Elisa Blanco-González, Carina González-Ríos, María Castiñeira-Busto, Manuel Barreiro-Pérez, Andrés Íñiguez-Romo",
         "publication_year": 2024,
         "doi": "10.3390/jcdd11060162",
         "pmcid": "PMC11203729",
@@ -535,7 +535,7 @@
         "license": "CC BY 4.0"
       },
       "verified_metadata": {
-        "title": "Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our \u201cRoad Map\u201d for the Appropriate Strategy",
+        "title": "Functional Mitral Valve Regurgitation: Mitral Valve Repair or Replacement? Our “Road Map” for the Appropriate Strategy",
         "authors": "Konstantinos Sideris, Melchior Burri, Antonia Mayr, Stephanie Voss, Keti Vitanova, Anatol Prinzing, Bernhard Voss, Andrea Amabile, Arnar Geirsson, Markus Krane, Ralf Guenzinger",
         "publication_year": 2024,
         "doi": "10.3390/jcm13113264",
@@ -565,5 +565,32 @@
         "final_action": "KEEP_PUBLIC"
       }
     }
-  ]
+  ],
+  "active_corpus_summary": {
+    "active_startup_safe_document_count": 12,
+    "active_startup_safe_chunk_count": 734,
+    "reference_only_document_count": 1,
+    "reference_only_chunk_count": 83,
+    "archived_local_document_count": 0,
+    "unresolved_document_count": 0,
+    "active_startup_safe_documents": [
+      "DOC-PMC-CARD-0002",
+      "DOC-PMC-CARD-0008",
+      "DOC-PMC-CARD-0009",
+      "DOC-PMC-CARD-0010",
+      "DOC-PMC-CARD-0011",
+      "DOC-PMC-CARD-0012",
+      "DOC-PMC-CARD-0013",
+      "DOC-PMC-CARD-0014",
+      "DOC-PMC-RESP-0003",
+      "DOC-PMC-RESP-0004",
+      "DOC-PMC-RESP-0005",
+      "DOC-PMC-EMERG-0001"
+    ],
+    "reference_only_documents": [
+      "DOC-WHO-CARD-0001"
+    ],
+    "archived_local_documents": [],
+    "unresolved_documents": []
+  }
 }
