@@ -165,7 +165,7 @@ Follow this precise sequence for a smooth, high-impact demonstration:
   - Challenge Mode: Switch to **Challenge** tab → Locate and select **Left Renal Artery** → Click **Check Answer**.
 - **Showcase:**
   - Interactive WebGL/Three.js spatial organ model.
-  - Deterministic backend challenge scoring (`/api/v1/anatomy/challenge/verify`).
+  - Deterministic backend challenge scoring (`POST /api/v1/anatomy/session/{session_id}/challenge`).
 - **Narrative:** *"To anchor preclinical biochemistry and pharmacology, MedicalPlab integrates spatial 3D organ anatomy with deterministic structural challenges scored on the backend."*
 
 ### Step 6: Unified Progress & PLAB Preview QA (`3:30 – 4:00`)
