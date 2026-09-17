@@ -15,6 +15,7 @@ from medicalplab.plab.data_manifest import REFERENCE_ONLY_DOCUMENT_IDS
 
 FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures"
 TRACKED_CHUNKS_FILE = FIXTURES_DIR / "cardiorespiratory_test_chunks.json"
+TRACKED_TAXONOMY_FILE = FIXTURES_DIR / "reasoning_patterns.v1.json"
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -63,6 +64,11 @@ def build_test_data_root(dest_dir: Path | str) -> Path:
     q_src = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
     q_dst = dest / "questions" / "cardiorespiratory_batch_1.json"
     shutil.copy2(q_src, q_dst)
+
+    if TRACKED_TAXONOMY_FILE.exists():
+        tax_dst = dest / "taxonomy" / "reasoning_patterns.v1.json"
+        tax_dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(TRACKED_TAXONOMY_FILE, tax_dst)
 
     # 2. Load tracked test chunks
     tracked_data = json.loads(TRACKED_CHUNKS_FILE.read_text(encoding="utf-8"))

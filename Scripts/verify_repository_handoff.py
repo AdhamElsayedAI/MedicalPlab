@@ -42,9 +42,10 @@ def _extract_anchors(file_path: Path) -> set[str]:
         text = file_path.read_text(encoding="utf-8", errors="ignore")
     except OSError:
         return set()
+    clean_text = re.sub(r"```[\s\S]*?```", "", text)
     anchors: set[str] = set()
     slug_count: dict[str, int] = {}
-    for match in HEADING_PATTERN.finditer(text):
+    for match in HEADING_PATTERN.finditer(clean_text):
         slug = _slug(match.group(1))
         count = slug_count.get(slug, 0)
         if count == 0:

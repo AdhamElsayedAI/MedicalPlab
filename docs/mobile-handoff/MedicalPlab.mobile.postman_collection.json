@@ -181,8 +181,10 @@
                   "        return v.toString(16);",
                   "    });",
                   "}",
-                  "pm.variables.set('idempotency_key', uuidv4());",
-                  "console.log('Generated idempotency_key:', pm.variables.get('idempotency_key'));"
+                  "if (!pm.variables.get('idempotency_key')) {",
+                  "    pm.variables.set('idempotency_key', uuidv4());",
+                  "}",
+                  "console.log('Using idempotency_key:', pm.variables.get('idempotency_key'));"
                 ]
               }
             }
@@ -302,8 +304,10 @@
                   "        return v.toString(16);",
                   "    });",
                   "}",
-                  "pm.variables.set('idempotency_key', uuidv4());",
-                  "console.log('Generated idempotency_key:', pm.variables.get('idempotency_key'));"
+                  "if (!pm.variables.get('idempotency_key')) {",
+                  "    pm.variables.set('idempotency_key', uuidv4());",
+                  "}",
+                  "console.log('Using idempotency_key:', pm.variables.get('idempotency_key'));"
                 ]
               }
             }
