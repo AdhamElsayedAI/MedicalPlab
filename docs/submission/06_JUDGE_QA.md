@@ -16,7 +16,7 @@
 **A:** Medical students spend hours passive-reading or chatting with unverified bots that foster an illusion of competence. When exam day arrives, they struggle to apply principles to novel scenarios. MedicalPlab turns passive memorization into active, verified cognitive mastery.
 
 ### Q4: What is MedicalPlab's single strongest differentiator?
-**A:** **Independent Transfer Verification**. We never award mastery simply because a student read or agreed with an AI explanation. The learner must independently solve an unprompted, held-out clinical challenge (`UNI-RENAL-001-T`) to demonstrate genuine transfer of knowledge.
+**A:** **Independent Transfer Verification**. We never award transfer confirmation simply because a student read or agreed with an AI explanation. The learner must independently solve an unprompted, held-out clinical challenge (`UNI-RENAL-001-T`) to confirm genuine transfer of knowledge.
 
 ---
 
@@ -32,7 +32,7 @@
 **A:** LLMs excel at conversational adaptation—rephrasing clinical concepts in response to learner confusion, adjusting tone, and formulating probing Socratic questions. Deterministic software provides the guardrails (retrieval, licensing, scoring, safe fallback), while the LLM provides pedagogical flexibility.
 
 ### Q7: What happens if the generative model hallucinates?
-**A:** Our Shared Evidence Engine operates on a fail-closed architecture. All explanations are retrieved from PubMed Central CC-BY open-access literature and verified via Natural Language Inference (NLI) entailment. If the retrieved context does not support the statement, the system refuses to generate speculative facts and issues a safe abstention notice (`SAFE_FALLBACK`).
+**A:** Our Shared Evidence Engine operates on a fail-closed architecture. The Grounded Tutor synthesizes conversational explanations from retrieved, license-verified PubMed Central (PMC) CC-BY evidence chunks. Generated propositions are then verified for textual entailment against the retrieved literature context. If any generated proposition is unsupported by the retrieved evidence or confidence is insufficient, the system safely suppresses the unverified claims and triggers a safe abstention notice (`SAFE_FALLBACK`).
 
 ### Q8: Can you swap or upgrade model providers?
 **A:** Yes. The platform uses a modular provider interface. In local-first mode, it runs on deterministic stub providers requiring $0 API cost. In hosted environments, verified adapter implementations are provided for Google Gemini and OpenAI. Additional frontier models and local open-weight runtimes can be added via future model-router adapters without altering the core safety harness.

@@ -36,8 +36,8 @@
 > 1. **Learner Attempt:** The student tackles clinical vignettes across core medical modules.
 > 2. **Reasoning-Pattern Signal:** Distractor choices generate provisional cognitive hypotheses (e.g. confusing enzyme activation cascades) without diagnostically labeling the student.
 > 3. **Bounded Socratic Remediation:** The AI acts as a tutor in a strictly bounded 3-turn dialogue, guiding deduction without leaking answers.
-> 4. **Independent Transfer Verification:** Mastery is only awarded after the student independently solves an unprompted, held-out clinical challenge (`UNI-RENAL-001-T`).
-> 5. **Evidence Grounding & Cognitive Anatomy:** Clinical explanations are retrieved from peer-reviewed PubMed Central CC-BY literature with NLI entailment checks, while spatial anatomy provides deterministic raycast challenge scoring.
+> 4. **Independent Transfer Verification:** Transfer confirmation is certified only after the student independently solves an unprompted, held-out clinical challenge (`UNI-RENAL-001-T`).
+> 5. **Evidence Grounding & Cognitive Anatomy:** Clinical explanations are synthesized from retrieved peer-reviewed PubMed Central CC-BY literature and validated via NLI entailment checks, while spatial anatomy provides deterministic raycast challenge scoring.
 >
 > **Engineering Rigor:**  
 > MedicalPlab is engineered for complete local reproducibility:
@@ -77,9 +77,12 @@
 >    ```
 > 4. Start backend & frontend:
 >    ```bash
->    # Terminal 1:
->    uvicorn main:app --host 127.0.0.1 --port 8000
->    # Terminal 2:
+>    # Terminal 1 (Backend - Bash/Linux):
+>    MEDICALPLAB_RUNTIME_MODE=pilot uvicorn production_main:app --host 127.0.0.1 --port 8000
+>    # Terminal 1 (Backend - Windows PowerShell):
+>    # $env:MEDICALPLAB_RUNTIME_MODE="pilot"; uvicorn production_main:app --host 127.0.0.1 --port 8000
+>
+>    # Terminal 2 (Frontend):
 >    cd frontend && npm install && npm run dev
 >    ```
 >

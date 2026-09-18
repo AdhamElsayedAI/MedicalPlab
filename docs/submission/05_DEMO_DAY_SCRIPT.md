@@ -19,7 +19,7 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 >
 > *Instead of spitting out answers, MedicalPlab monitors student attempts, detects underlying reasoning patterns, and initiates bounded Socratic remediation to guide the student toward discovery.*
 >
-> *Crucially, we don't award mastery just because a student read an explanation. We test them with an independent, held-out transfer scenario, connect their learning to 3D Cognitive Anatomy, and ground every clinical explanation in peer-reviewed literature.*
+> *Crucially, we don't assume comprehension just because a student read an explanation. We test them with an independent, held-out transfer scenario, connect their learning to 3D Cognitive Anatomy, and ground every clinical explanation in peer-reviewed literature.*
 >
 > *MedicalPlab doesn't replace the medical curriculum—it provides the cognitive scaffolding that turns AI into safe, verifiable medical learning."*
 
@@ -62,7 +62,7 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 >
 > *"Here is our biggest differentiator: **Independent Transfer**.*
 >
-> *Generic AI assumes you learned because you read the explanation. MedicalPlab refuses to award mastery until the student passes an unprompted, held-out clinical transfer item: `UNI-RENAL-001-T`.*
+> *Generic AI assumes you learned because you read the explanation. MedicalPlab certifies genuine comprehension only when the student solves an unprompted, held-out clinical transfer item: `UNI-RENAL-001-T`.*
 >
 > *(Select option **A — Angiotensinogen**)*
 >

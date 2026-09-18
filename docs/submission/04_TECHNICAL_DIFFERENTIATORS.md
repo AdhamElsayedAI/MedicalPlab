@@ -19,7 +19,7 @@ Distractor options are mapped to specific cognitive stumbling blocks (e.g. `PATT
 Remediation is constrained to a strictly bounded 3-turn Socratic dialogue. The system asks targeted leading questions to prompt learner deduction while preventing answer leakage. If the student remains stuck after 3 turns, the engine safely resolves the dialogue with an evidence-backed summary.
 
 ### 5. Independent Held-Out Transfer Verification
-Comprehension cannot be certified through remediation alone. Once a concept is reviewed, the platform serves an unprompted, held-out transfer question (`UNI-RENAL-001-T` $\rightarrow$ Correct Answer: `A — Angiotensinogen`). Mastery is awarded only if the student successfully solves this independent clinical scenario.
+Comprehension cannot be certified through conversational explanation alone. Once a concept is reviewed during remediation, the platform serves an unprompted, held-out transfer challenge (`UNI-RENAL-001-T` $\rightarrow$ Correct Answer: `A — Angiotensinogen`). Successful completion awards a verified transfer confirmation (`TRANSFER_CONFIRMED`), providing an independent cognitive signal distinct from standard practice attempts.
 
 ### 6. Single Evidence-Grounded Tutor Architecture
 All generative tutoring requests pass through a unified pipeline (`Adaptive Layer` $\rightarrow$ `TutorService` $\rightarrow$ `Shared Evidence Engine`). There are no ad-hoc LLM calls, unmonitored agent threads, or competing retrieval paths.
