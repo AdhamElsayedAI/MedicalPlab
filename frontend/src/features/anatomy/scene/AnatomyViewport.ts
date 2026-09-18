@@ -249,7 +249,7 @@ export class AnatomyViewport {
       ceilingBox.position.set(0, 2, 0);
       envScene.add(ceilingBox);
 
-      this.envTexture = pmremGenerator.fromScene(envScene, 0.08).texture;
+      this.envTexture = pmremGenerator.fromScene(envScene, 0.04).texture;
       this.scene.environment = this.envTexture;
       pmremGenerator.dispose();
     } catch (e) {

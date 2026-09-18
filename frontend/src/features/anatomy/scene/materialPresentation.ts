@@ -180,16 +180,21 @@ export function createAnatomicalMaterial(
     finalRoughness = 0.72;
   }
 
-  const mat = new THREE.MeshPhysicalMaterial({
+  const params: THREE.MeshPhysicalMaterialParameters = {
     color: new THREE.Color(finalColor),
     roughness: finalRoughness,
     metalness: 0.0,
     sheen: finalSheen,
-    sheenColor: finalSheenColor ? new THREE.Color(finalSheenColor) : undefined,
     transparent: true,
     opacity: config.opacity ?? 1.0,
     depthWrite: !(config.transparent && (config.opacity ?? 1.0) < 0.6),
-  });
+  };
+
+  if (finalSheenColor !== undefined) {
+    params.sheenColor = new THREE.Color(finalSheenColor);
+  }
+
+  const mat = new THREE.MeshPhysicalMaterial(params);
 
   return mat;
 }

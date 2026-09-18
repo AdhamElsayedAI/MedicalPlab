@@ -24,7 +24,7 @@ MedicalPlab is an adaptive, evidence-grounded medical learning intelligence plat
 
 ### Quick Navigation
 
-[Why MedicalPlab Is Different](#why-medicalplab-is-different) • [The Learning Loop](#the-medicalplab-learning-loop) • [Where GenAI Fits](#where-generative-ai-actually-fits) • [Product Capabilities](#product-capabilities) • [Evidence Architecture](#evidence-grounded-architecture) • [Cognitive Anatomy](#cognitive-anatomy) • [Engineering Confidence](#engineering-confidence) • [Demo Journey](#demo-journey) • [Run Locally](#run-medicalplab-locally) • [Safety by Design](#safety-by-design) • [Beyond LLM Wrappers](#why-this-is-more-than-an-llm-wrapper) • [Current Status](#current-project-status) • [Roadmap](#future-roadmap) • [Documentation](#documentation-navigation) • [Product Brief](docs/handoff/FINAL_PRODUCT_BRIEF.md)
+[Why MedicalPlab Is Different](#why-medicalplab-is-different) • [The Learning Loop](#the-medicalplab-learning-loop) • [Where GenAI Fits](#where-generative-ai-actually-fits) • [Product Capabilities](#product-capabilities) • [Evidence Architecture](#evidence-grounded-architecture) • [Cognitive Anatomy](#cognitive-anatomy) • [Engineering Confidence](#engineering-confidence) • [Demo Journey](#demo-journey) • [Run Locally](#run-medicalplab-locally) • [Safety by Design](#safety-by-design) • [Beyond LLM Wrappers](#why-this-is-more-than-an-llm-wrapper) • [Current Status](#current-project-status) • [Roadmap](#future-roadmap) • [Startup Evaluation](#startup--demo-evaluation) • [Documentation](#documentation-navigation) • [Product Brief](docs/handoff/FINAL_PRODUCT_BRIEF.md)
 
 ---
 
@@ -472,12 +472,29 @@ Decouple generative intelligence behind a provider-agnostic model router while p
 
 ---
 
+## Startup / Demo Evaluation
+
+For hackathon judges, startup reviewers, and ecosystem evaluators, the complete submission package is indexed in `docs/submission/`:
+
+* **[Executive Summary](docs/submission/01_EXECUTIVE_SUMMARY.md)**: 1-page overview of problem, solution, learning loop, and operational status.
+* **[Demo Day Scripts](docs/submission/05_DEMO_DAY_SCRIPT.md)**: 60-second, 3-minute, and 5-minute spoken pitch scripts with exact click targets.
+* **[Startup & Technical Judge Q&A](docs/submission/06_JUDGE_QA.md)**: 31 direct answers covering AI boundaries, learning science, safety, and business defensibility.
+* **[Startup Value Proposition](docs/submission/02_STARTUP_VALUE_PROPOSITION.md)**: Commercial thesis, learner vs. institutional demand, and market drivers.
+* **[Technical Differentiators](docs/submission/04_TECHNICAL_DIFFERENTIATORS.md)**: Fourteen engineering moats and verified test metrics.
+* **[Business Model & Market](docs/submission/07_BUSINESS_MODEL_AND_MARKET.md)**: Sustainable go-to-market strategy, B2C/B2B hypotheses, and defensibility.
+* **[Product Roadmap & Scale](docs/submission/08_ROADMAP_AND_SCALE.md)**: Pragmatic engineering horizons (NOW $\rightarrow$ NEXT $\rightarrow$ THEN $\rightarrow$ LATER).
+* **[Submission Checklist](docs/submission/09_SUBMISSION_CHECKLIST.md)** & **[Repo Handoff Message](docs/submission/10_REPO_HANDOFF_MESSAGE.md)**: Submission readiness and evaluator communications.
+
+---
+
 ## Documentation Navigation
 
 Access authoritative specifications, runbooks, and integration guides:
 
 | Document | Purpose | Target Audience |
 | :--- | :--- | :--- |
+| **[Executive Summary](docs/submission/01_EXECUTIVE_SUMMARY.md)** | 1-page startup & product overview | Judges, Investors, Mentors |
+| **[Demo Day Scripts](docs/submission/05_DEMO_DAY_SCRIPT.md)** | Spoken pitch scripts (60s, 3m, 5m) & click targets | Judges, Presenters |
 | **[Final Product Brief](docs/handoff/FINAL_PRODUCT_BRIEF.md)** | Canonical comprehensive product & technical explanation | Mentors, Judges, Evaluators |
 | **[Mentor Quick Runbook](docs/handoff/MENTOR_LOCAL_RUN.md)** | 3-minute fast-track evaluation guide | Evaluators, Technical Judges |
 | **[Mentor In-Depth Briefing](docs/handoff/MENTOR_START_HERE.md)** | Architectural deep dive & background briefing | Mentors, Due Diligence |
