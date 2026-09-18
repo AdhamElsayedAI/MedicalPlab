@@ -81,6 +81,19 @@ def build_test_data_root(dest_dir: Path | str) -> Path:
         if TRACKED_TAXONOMY_FILE.resolve() != tax_dst.resolve():
             shutil.copy2(TRACKED_TAXONOMY_FILE, tax_dst)
 
+    renal_meta_src = PROJECT_ROOT / "Data" / "metadata" / "renal_source_registry_v1.json"
+    if renal_meta_src.exists():
+        renal_meta_dst = dest / "metadata" / "renal_source_registry_v1.json"
+        renal_meta_dst.parent.mkdir(parents=True, exist_ok=True)
+        if renal_meta_src.resolve() != renal_meta_dst.resolve():
+            shutil.copy2(renal_meta_src, renal_meta_dst)
+
+    renal_proc_src = PROJECT_ROOT / "Data" / "processed" / "renal_v1"
+    if renal_proc_src.exists():
+        renal_proc_dst = dest / "processed" / "renal_v1"
+        if renal_proc_src.resolve() != renal_proc_dst.resolve():
+            shutil.copytree(renal_proc_src, renal_proc_dst, dirs_exist_ok=True)
+
     # 2. Load tracked test chunks
     tracked_data = json.loads(TRACKED_CHUNKS_FILE.read_text(encoding="utf-8"))
     chunks_by_doc: dict[str, list[dict[str, Any]]] = {}
