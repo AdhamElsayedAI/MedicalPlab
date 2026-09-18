@@ -9,8 +9,8 @@ MedicalPlab is **local-first**. You can clone, configure, and run the entire pro
 
 | Prerequisite | Recommended Version | Minimum Version | Notes |
 | :--- | :--- | :--- | :--- |
-| **Python** | `3.11` or `3.12` | `3.10` | 64-bit Python |
-| **Node.js** | `20 LTS` or `22 LTS` | `18.17.0` | Required for Next.js frontend |
+| **Python** | `3.11` or `3.12` | `3.11` | 64-bit Python (`pyproject.toml`: `>=3.11,<3.13`) |
+| **Node.js** | `20 LTS` or `22 LTS` | `20.9.0` | Required for Next.js frontend (`engines: ">=20.9.0"`) |
 | **npm** | `10+` | `9.0` | Bundled with Node.js |
 | **OS** | Windows 10/11, macOS, or Linux | Any supported OS | Windows PowerShell prioritized |
 
@@ -210,7 +210,7 @@ Access at [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health).
 
 ### 3. Node / npm Version Discrepancies
 - **Symptom:** Next.js build errors or module resolution failures in `frontend/`.
-- **Fix:** Ensure Node.js 18.17+ or 20+ LTS is active:
+- **Fix:** Ensure Node.js >=20.9 (recommended: 20 LTS or 22 LTS) is active:
   ```bash
   node -v
   npm -v

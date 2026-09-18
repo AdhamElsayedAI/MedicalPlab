@@ -458,8 +458,8 @@ MedicalPlab maintains complete transparency regarding current implementation sta
 </p>
 
 ### Architecture & Standards
-* **Backend:** Python 3.11+, FastAPI, Pydantic v2, SQLite (module-owned pilot storage), Uvicorn.
-* **Frontend:** Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, Lucide Icons.
+* **Backend:** Python 3.11 / 3.12 (pyproject.toml: ">=3.11,<3.13"), FastAPI, Pydantic v2, SQLite (module-owned pilot storage), Uvicorn.
+* **Frontend:** Next.js 16 (App Router, Node.js >=20.9), React 19, TypeScript, Tailwind CSS, Lucide Icons.
 * **3D Rendering:** Three.js 0.183+, WebGL 2.0, glTF 2.0 Loader, OrbitControls, Raycaster.
 * **Contract & QA:** OpenAPI 3.1.0, Postman Collections, Pytest, Chrome DevTools Protocol (CDP).
 
@@ -581,7 +581,7 @@ MedicalPlab implements explicit clinical content governance to ensure candidate 
 | **Spatial 3D Anatomy** | `READY` | HuBMAP HRA renal model, guided tours, deterministic artery pin challenge |
 | **Mobile API Contract** | `READY` | 43 paths, 44 operations; 0 OpenAPI contract drift |
 | **Mobile Developer Docs** | `READY` | Quick-start guide, Dart/TS client examples, integration checklist |
-| **Automated CI Quality Gate** | `PASS` | 7 CI jobs passing (integration, contract, drift, frontend, handoff, docker, release) |
+| **Automated CI Quality Gate** | `PASS` | 8 CI jobs passing (integration, contract, drift, frontend, handoff, render-security, docker, release) |
 | **Cloud Deployment** | `OPTIONAL_NOT_CONFIGURED` | Render & GCP blueprints retained as optional future infrastructure |
 | **Public Production Auth** | `NO` | `X-User-Id` synthetic partition only; not cryptographic auth |
 | **PLAB Public Exam Release** | `NO` | Candidate items gated behind Preview QA; clinician signoff required |
@@ -630,6 +630,8 @@ Decouple generative intelligence behind a provider-agnostic model router while p
 ---
 
 ## Quick Start — Local
+
+> **Prerequisites:** Python 3.11 or 3.12 (`>=3.11,<3.13`), Node.js >=20.9 (recommended: 20 LTS or 22 LTS).
 
 For full setup details, mobile device integration, and troubleshooting, see the [Local Run Guide](docs/LOCAL_RUN_GUIDE.md) and [Mentor Quick Run](docs/handoff/MENTOR_LOCAL_RUN.md).
 

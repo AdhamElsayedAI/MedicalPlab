@@ -34,7 +34,7 @@ $PythonCmd = Get-Command python -ErrorAction SilentlyContinue
 if (-not $PythonCmd) {
     $PythonCmd = Get-Command py -ErrorAction SilentlyContinue
     if (-not $PythonCmd) {
-        Write-Error "ERROR: Python 3.10+ is required but was not found on PATH. Please install Python from https://www.python.org."
+        Write-Error "ERROR: MedicalPlab currently supports Python 3.11 and 3.12. Python was not found on PATH. Please install Python 3.11 or 3.12 from https://www.python.org."
         exit 1
     }
 }
@@ -42,8 +42,8 @@ if (-not $PythonCmd) {
 $PythonVersion = & python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')"
 Write-Host "Detected Python version: $PythonVersion" -ForegroundColor Green
 $Major, $Minor = $PythonVersion.Split('.')
-if ([int]$Major -lt 3 -or ([int]$Major -eq 3 -and [int]$Minor -lt 10)) {
-    Write-Error "ERROR: Python 3.10 or newer is required (found $PythonVersion)."
+if ([int]$Major -ne 3 -or ([int]$Minor -ne 11 -and [int]$Minor -ne 12)) {
+    Write-Error "ERROR: MedicalPlab currently supports Python 3.11 and 3.12 (found $PythonVersion)."
     exit 1
 }
 

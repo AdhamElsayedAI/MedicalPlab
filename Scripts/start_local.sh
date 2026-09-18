@@ -28,12 +28,17 @@ if command -v python3 &>/dev/null; then
 elif command -v python &>/dev/null; then
     PYTHON_CMD="python"
 else
-    echo "ERROR: Python 3.10+ is required but not found on PATH." >&2
+    echo "ERROR: MedicalPlab currently supports Python 3.11 and 3.12. Python was not found on PATH." >&2
     exit 1
 fi
 
-PYTHON_VERSION=$($PYTHON_CMD -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
-echo "Detected Python version: $PYTHON_VERSION"
+PYTHON_MAJOR=$($PYTHON_CMD -c "import sys; print(sys.version_info.major)")
+PYTHON_MINOR=$($PYTHON_CMD -c "import sys; print(sys.version_info.minor)")
+echo "Detected Python version: ${PYTHON_MAJOR}.${PYTHON_MINOR}"
+if [ "$PYTHON_MAJOR" -ne 3 ] || { [ "$PYTHON_MINOR" -ne 11 ] && [ "$PYTHON_MINOR" -ne 12 ]; }; then
+    echo "ERROR: MedicalPlab currently supports Python 3.11 and 3.12 (found ${PYTHON_MAJOR}.${PYTHON_MINOR})." >&2
+    exit 1
+fi
 
 # 2. Virtual Environment Setup
 VENV_DIR="$PROJECT_ROOT/.venv"

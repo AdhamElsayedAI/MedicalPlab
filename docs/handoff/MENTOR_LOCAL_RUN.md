@@ -2,6 +2,7 @@
 **Target Audience:** Evaluators, Mentors, Technical Judges  
 **Estimated Setup Time:** ~3 minutes  
 **Cloud / External Account Requirement:** **NONE** ($0, zero cloud accounts, zero payment cards)  
+**System Prerequisites:** Python 3.11 or 3.12; Node.js >=20.9 (recommended: 20 LTS or 22 LTS)  
 
 ---
 
@@ -14,7 +15,7 @@ cd MedicalPlab
 ```
 
 ### Step 2: Launch Backend (Automated)
-In PowerShell:
+In PowerShell *(requires Python 3.11 or 3.12)*:
 ```powershell
 .\Scripts\start_local.ps1
 ```
@@ -26,7 +27,7 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
 ### Step 3: Launch Frontend
-In a **second** terminal window:
+In a **second** terminal window *(requires Node.js >=20.9, recommended: 20 LTS or 22 LTS)*:
 ```powershell
 cd MedicalPlab\frontend
 npm install

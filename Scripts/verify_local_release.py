@@ -6,7 +6,7 @@ immediate local execution, reviewer evaluation, mobile integration, and mentor d
 without requiring any cloud infrastructure, paid API keys, or external secrets.
 
 Checks performed:
-1. Python runtime compatibility (3.10+)
+1. Python runtime compatibility (3.11 or 3.12)
 2. Critical repository files and scripts presence
 3. Data integrity and public-safe corpus manifest
 4. Backend imports and router configurations
@@ -46,10 +46,10 @@ def check_python_version() -> bool:
     print("\n[Check 1/8] Python Version Compatibility...")
     major, minor = sys.version_info.major, sys.version_info.minor
     print(f"  Detected Python: {major}.{minor}.{sys.version_info.micro}")
-    if major < 3 or (major == 3 and minor < 10):
-        print(f"  FAIL: Python 3.10+ required, found {major}.{minor}")
+    if major != 3 or minor not in (11, 12):
+        print(f"  FAIL: MedicalPlab currently supports Python 3.11 and 3.12 (found {major}.{minor}).")
         return False
-    print("  PASS: Python version is supported.")
+    print("  PASS: Python version is supported (Python 3.11 or 3.12).")
     return True
 
 

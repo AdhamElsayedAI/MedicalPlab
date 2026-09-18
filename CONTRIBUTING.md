@@ -58,6 +58,6 @@ Every contribution must preserve the following non-negotiable boundaries:
 
 ## 3. Code Quality & Standards
 
-- **Backend:** Python 3.11+, FastAPI, strict Pydantic v2 schemas, type annotations throughout.
-- **Frontend:** Next.js 16 (App Router), React 19, TypeScript strict mode, Tailwind CSS.
+- **Backend:** Python 3.11 or 3.12 (pyproject.toml: ">=3.11,<3.13"), FastAPI, strict Pydantic v2 schemas, type annotations throughout.
+- **Frontend:** Next.js 16 (App Router, Node.js >=20.9), React 19, TypeScript strict mode, Tailwind CSS.
 - **Documentation:** Maintain exact alignment between runtime OpenAPI schemas, Postman collections, and markdown documentation.
