@@ -29,8 +29,7 @@ from medicalplab.remediation.api import router as remediation_router
 from medicalplab.learning_intelligence.api import router as learning_intelligence_router
 from medicalplab.anatomy.api import router as anatomy_router
 from medicalplab.progress_api import router as progress_router
-
-
+from medicalplab.staging.security import StagingSecurityMiddleware, validate_staging_configuration
 
 RUNTIME_MODE = get_runtime_mode()
 if not strict_runtime_enabled(RUNTIME_MODE):
@@ -38,6 +37,9 @@ if not strict_runtime_enabled(RUNTIME_MODE):
         "production_main.py requires MEDICALPLAB_RUNTIME_MODE=pilot or production. "
         "Use main.py for the backwards-compatible demo runtime."
     )
+
+# Validate staging gate configuration (fails closed if enabled without secret)
+validate_staging_configuration()
 
 APP_START_TIME = time.time()
 
@@ -75,8 +77,9 @@ app.add_middleware(
     allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type", "X-User-Id", "X-Learner-Id", "X-Tenant-Id", "X-Request-Id"],
+    allow_headers=["Authorization", "Content-Type", "X-User-Id", "X-Learner-Id", "X-Tenant-Id", "X-Request-Id", "X-Staging-Key"],
 )
+app.add_middleware(StagingSecurityMiddleware)
 
 app.include_router(product_router)
 app.include_router(university_router)

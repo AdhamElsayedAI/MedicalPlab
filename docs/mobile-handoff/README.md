@@ -203,7 +203,7 @@ When the mobile app is killed, backgrounded, or encounters a network drop:
 - Call `GET /api/v1/remediation/session/{session_id}` on app resume to restore exact turn state, chat history, and timeline.
 - **NEVER re-post** earlier turns; the backend is strictly idempotent via `idempotency_key` and rejects duplicate turn progressions.
 
-See [`ERRORS_AND_STATES.md`](./ERRORS_AND_STATES.md#session-resume-behavior) for recovery patterns.
+See [`ERRORS_AND_STATES.md`](./ERRORS_AND_STATES.md#4-session-resume--app-restart-mechanics) for recovery patterns.
 
 ---
 

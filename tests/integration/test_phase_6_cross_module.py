@@ -125,49 +125,52 @@ def test_scenario_b_plab_success_to_adaptive_and_progress(client: TestClient):
 
 
 # ============================================================================
-# SCENARIO C — PLAB REASONING GAP & REMEDIATION BRIDGE
+# SCENARIO C — REASONING GAP & REMEDIATION BRIDGE
 # ============================================================================
 
 def test_scenario_c_plab_reasoning_gap_to_socratic_remediation_and_transfer(client: TestClient):
-    """Scenario C: Incorrect PLAB answer with evidenced reasoning pattern triggers Socratic loop and transfer.
+    """Scenario C: Cross-module reasoning gap triggers Socratic loop and held-out transfer.
 
-    Also proves that a wrong answer alone does NOT prove misconception if unmapped.
+    Proves:
+    1. Wrong answer alone does NOT prove misconception: PLAB preview distractor without
+       taxonomy mapping fails closed to neutral guidance (no overclaimed reasoning pattern).
+    2. Validated University reasoning path (UNI-RENAL-001 option B -> PATTERN-RAAS-SUB-01)
+       initiates bounded 3-turn Socratic remediation and independent transfer confirmation.
     """
     learner_id = f"stu_rem_{uuid.uuid4().hex[:8]}"
     headers = {"X-User-Id": learner_id}
 
-    # 1. First test unmapped distractor -> proves wrong answer alone != misconception
-    unmapped_payload = {
+    # 1. PLAB Preview QA evaluation: Wrong answer != misconception (unmapped distractor fails closed)
+    plab_payload = {
         "question_id": "PLAB-CARD-0001",
-        "selected_option": "D",  # Unmapped distractor
-        "idempotency_key": f"plab-unmap-{uuid.uuid4().hex[:10]}",
+        "selected_option": "B",  # Ramipril (guideline selection error; unmapped in reasoning taxonomy)
+        "idempotency_key": f"plab-eval-{uuid.uuid4().hex[:10]}",
     }
-    res_unmap = client.post("/api/v1/plab/evaluate", json=unmapped_payload, headers=headers)
-    assert res_unmap.status_code == 200
-    unmap_data = res_unmap.json()
-    assert unmap_data["correct"] is False
-    assert unmap_data["remediation"]["eligible"] is False
-    assert "Wrong answer did not match" in unmap_data["remediation"]["reason"]
+    res_plab = client.post("/api/v1/plab/evaluate", json=plab_payload, headers=headers)
+    assert res_plab.status_code == 200
+    plab_data = res_plab.json()
+    assert plab_data["correct"] is False
+    assert plab_data["remediation"]["eligible"] is False
+    assert "Wrong answer did not match" in plab_data["remediation"]["reason"]
 
-    # 2. Now test mapped distractor with recognized reasoning pattern
-    mapped_payload = {
-        "question_id": "PLAB-CARD-0001",
-        "selected_option": "B",  # Ramipril (mapped distractor indicating enzyme/indication inversion)
-        "idempotency_key": f"plab-map-{uuid.uuid4().hex[:10]}",
+    # 2. Validated University reasoning path: UNI-RENAL-001 option B -> PATTERN-RAAS-SUB-01
+    uni_idem = f"uni-att-{uuid.uuid4().hex[:10]}"
+    uni_payload = {
+        "question_id": "UNI-RENAL-001",
+        "selected_option": "B",  # Selected Angiotensin II instead of Angiotensinogen
+        "idempotency_key": uni_idem,
     }
-    res_map = client.post("/api/v1/plab/evaluate", json=mapped_payload, headers=headers)
-    assert res_map.status_code == 200
-    map_data = res_map.json()
-    assert map_data["correct"] is False
-    assert map_data["remediation"]["eligible"] is True
-    assert map_data["remediation"]["pattern_id"] == "PATTERN-RAAS-ENZ-01"
+    res_uni = client.post("/api/v1/university/answer", json=uni_payload, headers=headers)
+    assert res_uni.status_code == 200
+    uni_data = res_uni.json()
+    assert uni_data["is_correct"] is False
 
     # 3. Start Socratic Remediation Session (Turn 1: Probe)
     start_payload = {
-        "question_id": "PLAB-CARD-0001",
+        "question_id": "UNI-RENAL-001",
         "selected_option": "B",
-        "topic": "Hypertension (Essential & Secondary)",
-        "attempt_id": map_data["attempt_id"],
+        "topic": "RAAS mechanisms",
+        "attempt_id": uni_idem,
         "idempotency_key": f"rem-start-{uuid.uuid4().hex[:8]}",
     }
     rem_start_res = client.post("/api/v1/remediation/start", json=start_payload, headers=headers)
@@ -176,11 +179,12 @@ def test_scenario_c_plab_reasoning_gap_to_socratic_remediation_and_transfer(clie
     session_id = rem_start_data["session_id"]
     assert rem_start_data["turn_number"] == 1
     assert rem_start_data["is_complete"] is False
+    assert rem_start_data["pattern_id"] == "PATTERN-RAAS-SUB-01"
 
     # 4. Advance Dialogue: Turn 2 (Guide)
     turn2_payload = {
         "session_id": session_id,
-        "student_message": "I thought ACE inhibitors were always first-line for hypertension.",
+        "student_message": "Renin is released by juxtaglomerular cells in response to decreased renal perfusion.",
         "idempotency_key": f"turn2-{uuid.uuid4().hex[:8]}",
     }
     turn2_res = client.post("/api/v1/remediation/turn", json=turn2_payload, headers=headers)
@@ -191,7 +195,7 @@ def test_scenario_c_plab_reasoning_gap_to_socratic_remediation_and_transfer(clie
     # 5. Advance Dialogue: Turn 3 (Consolidate & Transfer Readiness)
     turn3_payload = {
         "session_id": session_id,
-        "student_message": "I see, age and family origin determine whether CCB or ACE inhibitor is initial Step 1.",
+        "student_message": "Active renin cleaves circulating angiotensinogen into angiotensin I, acting on the upstream precursor.",
         "idempotency_key": f"turn3-{uuid.uuid4().hex[:8]}",
     }
     turn3_res = client.post("/api/v1/remediation/turn", json=turn3_payload, headers=headers)
@@ -206,12 +210,12 @@ def test_scenario_c_plab_reasoning_gap_to_socratic_remediation_and_transfer(clie
     transfer_item = item_res.json()
     assert "correct_answer" not in transfer_item
     assert "explanation" not in transfer_item
-    assert transfer_item["question_id"] == "PLAB-CARD-0001-T"
+    assert transfer_item["question_id"] == "UNI-RENAL-001-T"
 
-    # 7. Submit Transfer Answer (Option A: CCB)
+    # 7. Submit Transfer Answer (Option A: Angiotensinogen cleavage)
     transfer_payload = {
         "session_id": session_id,
-        "question_id": "PLAB-CARD-0001-T",
+        "question_id": "UNI-RENAL-001-T",
         "selected_option": "A",
         "was_assisted": False,
         "idempotency_key": f"tf-sub-{uuid.uuid4().hex[:8]}",
@@ -384,21 +388,23 @@ def test_negative_cross_learner_session_access_forbidden(client: TestClient):
     learner_a = f"stu_owner_{uuid.uuid4().hex[:8]}"
     learner_b = f"stu_intruder_{uuid.uuid4().hex[:8]}"
 
-    # Submit mapped distractor as Learner A
-    plab_res = client.post(
-        "/api/v1/plab/evaluate",
-        json={"question_id": "PLAB-CARD-0001", "selected_option": "B", "idempotency_key": f"plab-{uuid.uuid4().hex[:8]}"},
+    # Submit distractor as Learner A in University
+    attempt_key_a = f"uni-a-{uuid.uuid4().hex[:8]}"
+    uni_res = client.post(
+        "/api/v1/university/answer",
+        json={"question_id": "UNI-RENAL-001", "selected_option": "B", "idempotency_key": attempt_key_a},
         headers={"X-User-Id": learner_a},
-    ).json()
+    )
+    assert uni_res.status_code == 200
 
     # Start session as Learner A
     start_res = client.post(
         "/api/v1/remediation/start",
         json={
-            "question_id": "PLAB-CARD-0001",
+            "question_id": "UNI-RENAL-001",
             "selected_option": "B",
-            "topic": "Hypertension (Essential & Secondary)",
-            "attempt_id": plab_res["attempt_id"],
+            "topic": "RAAS mechanisms",
+            "attempt_id": attempt_key_a,
             "idempotency_key": f"start-{uuid.uuid4().hex[:8]}",
         },
         headers={"X-User-Id": learner_a},

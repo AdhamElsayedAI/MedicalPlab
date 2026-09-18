@@ -116,7 +116,7 @@ def verify_production_data_manifest(data_root: Path | str | None = None) -> Data
                 blockers.append(f"DOCUMENT_COUNT_MISMATCH: expected {EXPECTED_DOCUMENT_COUNT}, found {doc_count}")
 
             for doc in active_documents:
-                rel = Path(str(doc.get("chunks_file", "")))
+                rel = Path(str(doc.get("chunks_file", "")).replace("\\", "/"))
                 chunk_path = root / Path(*rel.parts[1:]) if rel.parts and rel.parts[0].lower() == "data" else root / rel
                 if not chunk_path.exists():
                     blockers.append(f"CHUNK_FILE_MISSING: {doc.get('document_id')}")

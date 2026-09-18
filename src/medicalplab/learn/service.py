@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import re
 import uuid
 from collections import Counter
@@ -60,7 +61,11 @@ class CourseLearningService:
         renal_retriever: RenalRetriever | None = None,
         renal_runtime_version: str = RENAL_RUNTIME_VERSION,
     ) -> None:
-        self.data_root = Path(data_root) if data_root else Path(__file__).resolve().parents[3] / "Data"
+        if data_root:
+            self.data_root = Path(data_root)
+        else:
+            env_root = os.environ.get("MEDICALPLAB_DATA_ROOT")
+            self.data_root = Path(env_root) if env_root else Path(__file__).resolve().parents[3] / "Data"
         self._doc_titles: dict[str, str] = {}
         self._chunks: list[dict[str, Any]] = []
         self._chunk_tokens: list[list[str]] = []
@@ -111,6 +116,7 @@ class CourseLearningService:
         chunks_v2 = self.data_root / "experiments" / "renal_v2" / "chunking" / "B_400_overlap"
         registry_v1 = self.data_root / "metadata" / "renal_source_registry_v1.json"
         chunks_v1 = self.data_root / "experiments" / "renal" / "chunking" / "C_section_aware"
+        processed_v1 = self.data_root / "processed" / "renal_v1"
 
         if registry_v2.exists() and chunks_v2.exists() and any(chunks_v2.glob("*.chunks.json")):
             # Primary: V2 runtime assets present (used by V3 and V4 retrievers)
@@ -122,8 +128,11 @@ class CourseLearningService:
                         self._doc_titles[str(doc["document_id"])] = str(doc.get("title", doc["document_id"]))
             except Exception:
                 self.urinary_available = False
-        elif registry_v1.exists() and chunks_v1.exists() and any(chunks_v1.glob("*.chunks.json")):
-            # Fallback: V1 legacy assets (backwards compatibility)
+        elif (
+            (chunks_v1.exists() and any(chunks_v1.glob("*.chunks.json")))
+            or (processed_v1.exists() and any(processed_v1.glob("*.chunks.json")))
+        ) and registry_v1.exists():
+            # Fallback: V1 legacy / processed assets (backwards compatibility)
             self.urinary_available = True
             try:
                 data1 = json.loads(registry_v1.read_text(encoding="utf-8"))

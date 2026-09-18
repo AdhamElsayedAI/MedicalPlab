@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="100%" height="auto">
+  <defs>
+    <linearGradient id="innBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070D16" />
+      <stop offset="100%" stop-color="#0B1624" />
+    </linearGradient>
+    <linearGradient id="pillarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F1F33" />
+      <stop offset="100%" stop-color="#0A1524" />
+    </linearGradient>
+    <linearGradient id="loopLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="25%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#14B8A6" />
+      <stop offset="75%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <marker id="innArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#06B6D4" />
+    </marker>
+    <marker id="loopBackArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0284C7" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="380" rx="14" fill="url(#innBg)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Grid Texture -->
+  <pattern id="gridInn" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.3" />
+  </pattern>
+  <rect x="1" y="1" width="958" height="378" rx="13" fill="url(#gridInn)" />
+
+  <!-- Header -->
+  <text x="36" y="34" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">INNOVATION ARCHITECTURE</text>
+  <text x="230" y="34" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500">How MedicalPlab Connects Five Isolated EdTech Capabilities into One Continuous Closed Loop</text>
+  <text x="924" y="34" text-anchor="end" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">PRODUCT INNOVATION</text>
+
+  <!-- The 5 Connected Pillars (Width ~165 each, spacing ~14) -->
+  <!-- Pillar 1: Assessment -->
+  <g transform="translate(36, 56)">
+    <rect width="165" height="235" rx="9" fill="url(#pillarGrad)" stroke="#0284C7" stroke-width="1.3" />
+    <g transform="translate(14, 16)">
+      <rect width="36" height="20" rx="4" fill="#0A2540" />
+      <text x="18" y="14" text-anchor="middle" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">01</text>
+    </g>
+    <text x="14" y="60" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">ASSESSMENT</text>
+    <text x="14" y="80" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Reasoning Signal</text>
+    <text x="14" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Beyond binary scoring:</text>
+    <text x="14" y="118" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Selected distractors trigger</text>
+    <text x="14" y="132" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">heuristic reasoning-pattern</text>
+    <text x="14" y="146" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">signals.</text>
+
+    <!-- Connector to Next -->
+    <g transform="translate(14, 182)">
+      <rect width="137" height="36" rx="5" fill="#0C1C2E" stroke="#0284C7" stroke-width="0.8" />
+      <text x="10" y="15" fill="#7DD3FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">EMITS TO ADAPTIVE:</text>
+      <text x="10" y="27" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8">Distractor Pattern Signal</text>
+    </g>
+  </g>
+
+  <!-- Conduit 1 -> 2 -->
+  <path d="M 201 173 L 215 173" fill="none" stroke="#06B6D4" stroke-width="2" marker-end="url(#innArrow)" />
+
+  <!-- Pillar 2: Adaptation -->
+  <g transform="translate(216, 56)">
+    <rect width="165" height="235" rx="9" fill="url(#pillarGrad)" stroke="#06B6D4" stroke-width="1.3" />
+    <g transform="translate(14, 16)">
+      <rect width="36" height="20" rx="4" fill="#06323B" />
+      <text x="18" y="14" text-anchor="middle" fill="#22D3EE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">02</text>
+    </g>
+    <text x="14" y="60" fill="#06B6D4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">ADAPTATION</text>
+    <text x="14" y="80" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Dynamic Policy</text>
+    <text x="14" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">State machine policy:</text>
+    <text x="14" y="118" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Selects targeted educational</text>
+    <text x="14" y="132" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">interventions instead of</text>
+    <text x="14" y="146" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">passive explanations.</text>
+
+    <!-- Connector to Next -->
+    <g transform="translate(14, 182)">
+      <rect width="137" height="36" rx="5" fill="#082328" stroke="#06B6D4" stroke-width="0.8" />
+      <text x="10" y="15" fill="#67E8F9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">ROUTES TO TUTOR:</text>
+      <text x="10" y="27" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8">Bounded Socratic Sequence</text>
+    </g>
+  </g>
+
+  <!-- Conduit 2 -> 3 -->
+  <path d="M 381 173 L 395 173" fill="none" stroke="#14B8A6" stroke-width="2" marker-end="url(#innArrow)" />
+
+  <!-- Pillar 3: Generation -->
+  <g transform="translate(396, 56)">
+    <rect width="165" height="235" rx="9" fill="url(#pillarGrad)" stroke="#14B8A6" stroke-width="1.3" />
+    <g transform="translate(14, 16)">
+      <rect width="36" height="20" rx="4" fill="#0A2E28" />
+      <text x="18" y="14" text-anchor="middle" fill="#2DD4BF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">03</text>
+    </g>
+    <text x="14" y="60" fill="#14B8A6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">GENERATION</text>
+    <text x="14" y="80" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Socratic Scaffolding</text>
+    <text x="14" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Governed generative AI:</text>
+    <text x="14" y="118" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Guides without leaking answer</text>
+    <text x="14" y="132" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">keys; bound to structured</text>
+    <text x="14" y="146" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">evidence excerpts.</text>
+
+    <!-- Connector to Next -->
+    <g transform="translate(14, 182)">
+      <rect width="137" height="36" rx="5" fill="#06221E" stroke="#14B8A6" stroke-width="0.8" />
+      <text x="10" y="15" fill="#5EEAD4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">SENT TO VERIFIER:</text>
+      <text x="10" y="27" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8">Atomic Claim Propositions</text>
+    </g>
+  </g>
+
+  <!-- Conduit 3 -> 4 -->
+  <path d="M 561 173 L 575 173" fill="none" stroke="#10B981" stroke-width="2" marker-end="url(#innArrow)" />
+
+  <!-- Pillar 4: Verification -->
+  <g transform="translate(576, 56)">
+    <rect width="165" height="235" rx="9" fill="url(#pillarGrad)" stroke="#10B981" stroke-width="1.3" />
+    <g transform="translate(14, 16)">
+      <rect width="36" height="20" rx="4" fill="#062F22" />
+      <text x="18" y="14" text-anchor="middle" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">04</text>
+    </g>
+    <text x="14" y="60" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">VERIFICATION</text>
+    <text x="14" y="80" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Evidence Gate</text>
+    <text x="14" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Deterministic check:</text>
+    <text x="14" y="118" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Every substantive proposition</text>
+    <text x="14" y="132" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">is entailed by source literature;</text>
+    <text x="14" y="146" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">unsupported fails closed.</text>
+
+    <!-- Connector to Next -->
+    <g transform="translate(14, 182)">
+      <rect width="137" height="36" rx="5" fill="#042017" stroke="#10B981" stroke-width="0.8" />
+      <text x="10" y="15" fill="#6EE7B7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">GROUNDS SPATIALLY:</text>
+      <text x="10" y="27" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8">Verified Ontology Mapping</text>
+    </g>
+  </g>
+
+  <!-- Conduit 4 -> 5 -->
+  <path d="M 741 173 L 755 173" fill="none" stroke="#8B5CF6" stroke-width="2" marker-end="url(#innArrow)" />
+
+  <!-- Pillar 5: Spatial 3D Learning -->
+  <g transform="translate(756, 56)">
+    <rect width="168" height="235" rx="9" fill="url(#pillarGrad)" stroke="#8B5CF6" stroke-width="1.3" />
+    <g transform="translate(14, 16)">
+      <rect width="36" height="20" rx="4" fill="#24143D" />
+      <text x="18" y="14" text-anchor="middle" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">05</text>
+    </g>
+    <text x="14" y="60" fill="#A855F7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1">SPATIAL LEARNING</text>
+    <text x="14" y="80" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">3D Anatomical Lab</text>
+    <text x="14" y="104" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Embodied spatial memory:</text>
+    <text x="14" y="118" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Three.js + HuBMAP CCF.</text>
+    <text x="14" y="132" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">Independent 3D raycast</text>
+    <text x="14" y="146" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5">pin identification challenge.</text>
+
+    <!-- Connector to Loop Closure -->
+    <g transform="translate(14, 182)">
+      <rect width="140" height="36" rx="5" fill="#180D29" stroke="#8B5CF6" stroke-width="0.8" />
+      <text x="10" y="15" fill="#D8B4FE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700">CLOSES LOOP TO:</text>
+      <text x="10" y="27" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8">Unified Telemetry &amp; Mastery</text>
+    </g>
+  </g>
+
+  <!-- Closed Loop Return Path (Bottom return line) -->
+  <path d="M 840 291 L 840 315 C 840 330, 810 330, 480 330 C 150 330, 118 330, 118 305" fill="none" stroke="url(#loopLine)" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#loopBackArrow)" />
+
+  <!-- Footer Indicator -->
+  <g transform="translate(360, 318)">
+    <rect width="240" height="24" rx="4" fill="#080E17" stroke="#1E293B" stroke-width="1" />
+    <text x="120" y="16" text-anchor="middle" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1">CLOSED COGNITIVE LOOP</text>
+  </g>
+
+  <!-- Invariant Footer Banner -->
+  <g transform="translate(36, 348)">
+    <text x="0" y="18" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">MedicalPlab's product innovation is not adding another chatbot. It is connecting these five isolated capabilities into one continuous educational feedback loop.</text>
+  </g>
+</svg>

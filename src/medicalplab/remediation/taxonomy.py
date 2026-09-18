@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -30,6 +31,13 @@ DEFAULT_TAXONOMY_PATH = (
     / "taxonomy"
     / "reasoning_patterns.v1.json"
 )
+FALLBACK_FIXTURE_PATH = (
+    Path(__file__).resolve().parent.parent.parent.parent
+    / "tests"
+    / "plab"
+    / "fixtures"
+    / "reasoning_patterns.v1.json"
+)
 
 
 class TaxonomyValidationError(Exception):
@@ -41,7 +49,18 @@ class ReasoningPatternTaxonomyRegistry:
     """In-memory registry for reasoning patterns and question distractor mappings."""
 
     def __init__(self, taxonomy_path: Path | str | None = None) -> None:
-        self.path = Path(taxonomy_path) if taxonomy_path else DEFAULT_TAXONOMY_PATH
+        if taxonomy_path:
+            self.path = Path(taxonomy_path)
+        else:
+            data_root = os.environ.get("MEDICALPLAB_DATA_ROOT")
+            if data_root and (Path(data_root) / "taxonomy" / "reasoning_patterns.v1.json").exists():
+                self.path = Path(data_root) / "taxonomy" / "reasoning_patterns.v1.json"
+            elif DEFAULT_TAXONOMY_PATH.exists():
+                self.path = DEFAULT_TAXONOMY_PATH
+            elif FALLBACK_FIXTURE_PATH.exists():
+                self.path = FALLBACK_FIXTURE_PATH
+            else:
+                self.path = DEFAULT_TAXONOMY_PATH
         self._patterns: Dict[str, ReasoningPatternTaxonomyItem] = {}
         self._mappings: Dict[Tuple[str, str], DistractorMapping] = {}
         self._load()
@@ -124,9 +143,11 @@ class ReasoningPatternTaxonomyRegistry:
 _global_registry: Optional[ReasoningPatternTaxonomyRegistry] = None
 
 
-def get_taxonomy_registry() -> ReasoningPatternTaxonomyRegistry:
+def get_taxonomy_registry(reload_if_empty: bool = True) -> ReasoningPatternTaxonomyRegistry:
     """Singleton provider for the taxonomy registry."""
     global _global_registry
     if _global_registry is None:
+        _global_registry = ReasoningPatternTaxonomyRegistry()
+    elif reload_if_empty and (not _global_registry.all_patterns() or not _global_registry.all_mappings()):
         _global_registry = ReasoningPatternTaxonomyRegistry()
     return _global_registry

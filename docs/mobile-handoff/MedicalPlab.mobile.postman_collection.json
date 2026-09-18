@@ -15,8 +15,12 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/health",
-              "host": ["{{base_url}}"],
-              "path": ["health"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
             }
           }
         },
@@ -27,8 +31,12 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/ready",
-              "host": ["{{base_url}}"],
-              "path": ["ready"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ready"
+              ]
             }
           }
         },
@@ -39,8 +47,14 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/version",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "version"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "version"
+              ]
             }
           }
         }
@@ -56,8 +70,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/university/subjects",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "university", "subjects"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "university",
+                "subjects"
+              ]
             }
           }
         },
@@ -68,8 +89,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/university/topics?subject=Renal%20physiology",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "university", "topics"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "university",
+                "topics"
+              ],
               "query": [
                 {
                   "key": "subject",
@@ -86,8 +114,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/university/question?subject=Renal%20physiology&topic=RAAS%20mechanisms",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "university", "question"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "university",
+                "question"
+              ],
               "query": [
                 {
                   "key": "subject",
@@ -121,10 +156,39 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/university/answer",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "university", "answer"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "university",
+                "answer"
+              ]
             }
-          }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Generate a fresh UUID v4 for idempotency_key to prevent double-scoring on retries",
+                  "function uuidv4() {",
+                  "    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {",
+                  "        var r = Math.random() * 16 | 0;",
+                  "        var v = c === 'x' ? r : (r & 0x3 | 0x8);",
+                  "        return v.toString(16);",
+                  "    });",
+                  "}",
+                  "if (!pm.variables.get('idempotency_key')) {",
+                  "    pm.variables.set('idempotency_key', uuidv4());",
+                  "}",
+                  "console.log('Using idempotency_key:', pm.variables.get('idempotency_key'));"
+                ]
+              }
+            }
+          ]
         },
         {
           "name": "Get University Progress",
@@ -138,8 +202,15 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/university/progress",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "university", "progress"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "university",
+                "progress"
+              ]
             }
           }
         }
@@ -156,8 +227,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/plab/questions",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "plab", "questions"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "plab",
+                "questions"
+              ]
             }
           }
         },
@@ -168,8 +246,16 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/plab/questions/PLAB-CARD-0001",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "plab", "questions", "PLAB-CARD-0001"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "plab",
+                "questions",
+                "PLAB-CARD-0001"
+              ]
             }
           }
         },
@@ -193,10 +279,39 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/plab/evaluate",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "plab", "evaluate"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "plab",
+                "evaluate"
+              ]
             }
-          }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Generate a fresh UUID v4 for idempotency_key to prevent double-scoring on retries",
+                  "function uuidv4() {",
+                  "    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {",
+                  "        var r = Math.random() * 16 | 0;",
+                  "        var v = c === 'x' ? r : (r & 0x3 | 0x8);",
+                  "        return v.toString(16);",
+                  "    });",
+                  "}",
+                  "if (!pm.variables.get('idempotency_key')) {",
+                  "    pm.variables.set('idempotency_key', uuidv4());",
+                  "}",
+                  "console.log('Using idempotency_key:', pm.variables.get('idempotency_key'));"
+                ]
+              }
+            }
+          ]
         },
         {
           "name": "Get PLAB Progress",
@@ -210,8 +325,15 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/plab/progress",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "plab", "progress"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "plab",
+                "progress"
+              ]
             }
           }
         }
@@ -240,8 +362,15 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/tutor/chat",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "tutor", "chat"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tutor",
+                "chat"
+              ]
             }
           }
         }
@@ -262,8 +391,15 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/adaptive/state",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "adaptive", "state"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "adaptive",
+                "state"
+              ]
             }
           }
         },
@@ -279,8 +415,15 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/adaptive/recommendation",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "adaptive", "recommendation"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "adaptive",
+                "recommendation"
+              ]
             }
           }
         }
@@ -309,8 +452,15 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/start",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "start"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "start"
+              ]
             }
           }
         },
@@ -334,8 +484,15 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/turn",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "turn"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "turn"
+              ]
             }
           }
         },
@@ -351,8 +508,16 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "session",
+                "{{remediation_session_id}}"
+              ]
             }
           }
         },
@@ -368,8 +533,17 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/transfer",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "transfer"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "session",
+                "{{remediation_session_id}}",
+                "transfer"
+              ]
             }
           }
         },
@@ -393,8 +567,17 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/transfer",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "transfer"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "session",
+                "{{remediation_session_id}}",
+                "transfer"
+              ]
             }
           }
         },
@@ -410,8 +593,17 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/remediation/session/{{remediation_session_id}}/abandon",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "remediation", "session", "{{remediation_session_id}}", "abandon"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "remediation",
+                "session",
+                "{{remediation_session_id}}",
+                "abandon"
+              ]
             }
           }
         }
@@ -427,8 +619,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/manifest",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "manifest"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "manifest"
+              ]
             }
           }
         },
@@ -439,8 +638,15 @@
             "header": [],
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/structures",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "structures"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "structures"
+              ]
             }
           }
         },
@@ -464,8 +670,16 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/session/start",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "session", "start"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "session",
+                "start"
+              ]
             }
           }
         },
@@ -481,8 +695,16 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "session",
+                "{{anatomy_session_id}}"
+              ]
             }
           }
         },
@@ -506,8 +728,17 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}/interact",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}", "interact"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "session",
+                "{{anatomy_session_id}}",
+                "interact"
+              ]
             }
           }
         },
@@ -531,8 +762,17 @@
             },
             "url": {
               "raw": "{{base_url}}/api/v1/anatomy/session/{{anatomy_session_id}}/challenge",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "anatomy", "session", "{{anatomy_session_id}}", "challenge"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "anatomy",
+                "session",
+                "{{anatomy_session_id}}",
+                "challenge"
+              ]
             }
           }
         }
@@ -553,8 +793,15 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/learner/progress",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "learner", "progress"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "learner",
+                "progress"
+              ]
             }
           }
         },
@@ -570,8 +817,14 @@
             ],
             "url": {
               "raw": "{{base_url}}/api/v1/progress",
-              "host": ["{{base_url}}"],
-              "path": ["api", "v1", "progress"]
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "progress"
+              ]
             }
           }
         }
