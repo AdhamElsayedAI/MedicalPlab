@@ -35,14 +35,14 @@
 **A:** Our Shared Evidence Engine operates on a fail-closed architecture. All explanations are retrieved from PubMed Central CC-BY open-access literature and verified via Natural Language Inference (NLI) entailment. If the retrieved context does not support the statement, the system refuses to generate speculative facts and issues a safe abstention notice (`SAFE_FALLBACK`).
 
 ### Q8: Can you swap or upgrade model providers?
-**A:** Yes. The platform uses a modular provider interface. In local-first mode, it runs on deterministic stub providers requiring $0 API cost. In production, providers like Google Gemini, Anthropic Claude, or local Ollama endpoints can be configured via environment variables without altering the core safety harness.
+**A:** Yes. The platform uses a modular provider interface. In local-first mode, it runs on deterministic stub providers requiring $0 API cost. In hosted environments, verified adapter implementations are provided for Google Gemini and OpenAI. Additional frontier models and local open-weight runtimes can be added via future model-router adapters without altering the core safety harness.
 
 ---
 
 ## 3. Learning Science & Remediation
 
 ### Q9: How do you know a student has a misconception?
-**A:** We explicitly avoid claiming a student has a "proven misconception." Selecting a distractor generates a **provisional, heuristic reasoning-pattern signal** (e.g., `RP-RENAL-RENIN-ANGIOTENSIN`). It is treated as an educational hypothesis to be tested through Socratic inquiry and independent transfer, not a diagnostic label.
+**A:** We explicitly avoid claiming a student has a "proven misconception." Selecting a distractor generates a **provisional, heuristic reasoning-pattern signal** (e.g., `PATTERN-RAAS-SUB-01`). It is treated as an educational hypothesis to be tested through Socratic inquiry and independent transfer, not a diagnostic label.
 
 ### Q10: How do you measure student improvement?
 **A:** Improvement is measured by the delta between initial unassisted attempts, performance in Socratic remediation, and accuracy on independent held-out transfer items. This feeds a calibrated topic mastery vector in the learner's persistent state profile.
@@ -103,7 +103,7 @@
 **A:** No. The standard local runtime is optimized for standard CPU execution. Optional heavy dependencies (such as PyTorch or local Qwen weights) are partitioned into optional extras.
 
 ### Q24: How does mobile integration work?
-**A:** The backend exposes a certified OpenAPI 3.1.0 contract (43 endpoints, 44 operations). We provide pre-configured Postman collections for localhost, Android emulator (`10.0.2.2:8000`), and physical devices on local Wi-Fi (`0.0.0.0:8000`).
+**A:** The backend exposes a certified OpenAPI 3.1.0 contract (43 paths / 44 operations). We provide pre-configured Postman collections for localhost, Android emulator (`10.0.2.2:8000`), and physical devices on local Wi-Fi (`0.0.0.0:8000`).
 
 ### Q25: Is production authentication implemented?
 **A:** Not in this prototype. Currently, `X-User-Id` headers provide deterministic client partitioning across sessions. Enterprise OAuth2/OIDC authentication is documented as the immediate next step in our engineering roadmap.

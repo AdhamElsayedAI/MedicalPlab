@@ -13,7 +13,7 @@ Learner progression is tracked across individual questions, topics, and sessions
 An incorrect option choice is never treated as a clinical or psychological diagnosis. An error generates a provisional, heuristic reasoning-pattern signal—a hypothesis to be tested and resolved, rather than a permanent label.
 
 ### 3. Heuristic Reasoning-Pattern Detection
-Distractor options are mapped to specific cognitive stumbling blocks (e.g. `RP-RENAL-RENIN-ANGIOTENSIN`, confusing enzyme activation sequences). When a student selects a diagnostic distractor, the system triggers tailored remediation targeting the underlying mechanism rather than generic restatement.
+Distractor options are mapped to specific cognitive stumbling blocks (e.g. `PATTERN-RAAS-SUB-01`, confusing enzyme activation sequences). When a student selects a diagnostic distractor, the system triggers tailored remediation targeting the underlying mechanism rather than generic restatement.
 
 ### 4. Bounded Socratic Remediation
 Remediation is constrained to a strictly bounded 3-turn Socratic dialogue. The system asks targeted leading questions to prompt learner deduction while preventing answer leakage. If the student remains stuck after 3 turns, the engine safely resolves the dialogue with an evidence-backed summary.
@@ -56,7 +56,7 @@ All metrics reflect current, reproducible tests in the repository:
 
 | Metric | Verified Value | Status |
 | :--- | :--- | :--- |
-| **API Endpoints** | 43 paths, 44 operations | Validated (OpenAPI 3.1.0) |
+| **API Contract** | 43 paths / 44 operations | Validated (OpenAPI 3.1.0) |
 | **OpenAPI Contract Drift** | 0 drift detected | PASS |
 | **Backend Integration Suite** | 23 / 23 tests passing | PASS |
 | **Mobile API Contract Suite** | 12 / 12 tests passing | PASS |

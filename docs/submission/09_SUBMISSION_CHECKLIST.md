@@ -12,7 +12,7 @@
 - [x] **Zero Committed Secrets:** Confirmed 0 API keys, credentials, or private keys committed in git history.
 - [x] **Clean Local Run Verified:** Clone-and-run verified with zero cloud dependencies ($0 cost, 0 GPU, 0 keys).
 - [x] **Documentation Link Integrity:** 0 broken internal links across 39+ markdown documentation files.
-- [x] **OpenAPI Contract Verified:** 43 endpoints, 44 operations, 0 contract drift.
+- [x] **OpenAPI Contract Verified:** 43 paths / 44 operations, 0 contract drift.
 - [x] **Licensing & Copyright:** MIT License confirmed; PMC literature usage adheres strictly to CC-BY open-access permissions.
 
 ---
@@ -34,7 +34,7 @@
 ## 3. Demo Walkthrough Guardrails
 
 - [x] **University Question Invariant:** Question `UNI-RENAL-001` (Renal Physiology).
-- [x] **Diagnostic Distractor:** Selecting Option B triggers reasoning signal `RP-RENAL-RENIN-ANGIOTENSIN`.
+- [x] **Diagnostic Distractor:** Selecting Option B (Angiotensin II) triggers reasoning signal `PATTERN-RAAS-SUB-01`.
 - [x] **Bounded Socratic Remediation:** Max 3 turns with zero answer leakage.
 - [x] **Independent Transfer Question:** Item `UNI-RENAL-001-T` $\rightarrow$ Correct Option `A — Angiotensinogen`.
 - [x] **Cognitive Anatomy Verification:** Guided target `renal_vein_left` vs. Independent challenge target `renal_artery_left`.

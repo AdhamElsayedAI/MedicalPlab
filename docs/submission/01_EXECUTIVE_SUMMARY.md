@@ -51,7 +51,7 @@ Unified Progress Synchronization (Calibrated mastery update)
 
 ### What Is Working Now (Verified in Repository)
 - **Local-First Reproducibility:** 100% clone-and-run functionality requiring **$0 cost, 0 cloud secrets, 0 GPU, and 0 paid LLM keys** (deterministic local fallback providers active).
-- **Frozen Mobile API Contract:** 43 endpoints, 44 operations, OpenAPI 3.1.0 certified with 12/12 passing automated contract tests.
+- **Frozen Mobile API Contract:** 43 paths / 44 operations, OpenAPI 3.1.0 certified with 12/12 passing automated contract tests.
 - **Automated Quality Certification:** 23/23 backend integration tests passing; 15/15 staging security tests passing; 8/8 CI jobs passing on GitHub Actions.
 - **Deterministic AI Boundaries:** Medical truth and challenge scoring remain governed by validated fixtures and deterministic algorithms, not arbitrary LLM output.
 

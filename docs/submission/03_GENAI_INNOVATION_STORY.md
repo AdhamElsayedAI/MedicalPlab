@@ -59,7 +59,7 @@ MedicalPlab enforces a single, unified pipeline for all evidence-grounded educat
 ### Why This Architecture Wins
 1. **Zero Hallucinated Citations:** Passages must exist in the validated local index or remote verified corpus before generation occurs.
 2. **Safe Fallback by Design:** When evidence is ambiguous or retrieval falls below confidence thresholds, the system defaults to a safe abstention notice rather than fabricating a response.
-3. **Provider Agnostic:** The architecture cleanly decouples the retrieval and validation harness from LLM inference. In local development or resource-constrained environments, a deterministic stub provider guarantees full testability with $0 API overhead. In production, high-tier models (Gemini, Claude, GPT-4) can be plugged in without changing the safety boundaries.
+3. **Provider Agnostic:** The architecture cleanly decouples the retrieval and validation harness from LLM inference. In local development or resource-constrained environments, a deterministic stub provider guarantees full testability with $0 API overhead. In hosted environments, verified adapter implementations are provided for Google Gemini and OpenAI, with additional frontier models (e.g., Claude) and local open-weight runtimes planned on the future model-router roadmap without changing the safety boundaries.
 
 ---
 

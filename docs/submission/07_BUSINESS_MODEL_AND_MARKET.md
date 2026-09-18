@@ -74,7 +74,7 @@ MedicalPlab’s defensibility is established by the **specialized cognitive syst
 
 | Defensibility Pillar | Why It Is Hard to Replicate |
 | :--- | :--- |
-| **Reasoning-Pattern Taxonomy** | Curated mappings linking diagnostic distractor choices directly to specific cognitive error archetypes (e.g. `RP-RENAL-RENIN-ANGIOTENSIN`). |
+| **Reasoning-Pattern Taxonomy** | Curated mappings linking diagnostic distractor choices directly to specific cognitive error archetypes (e.g. `PATTERN-RAAS-SUB-01`). |
 | **Paired Held-Out Transfer Bank** | A proprietary catalog of validated question-transfer pairs where understanding of Question A is independently tested by Question B without leakage. |
 | **Verified Evidence Architecture** | Automated PubMed Central rights validation, semantic chunking, and NLI entailment checking with safe abstention protocols. |
 | **Spatial Anatomy Integration** | Bidirectional mapping between Socratic educational intent and 3D Three.js mesh entities mapped to UBERON anatomical ontologies. |

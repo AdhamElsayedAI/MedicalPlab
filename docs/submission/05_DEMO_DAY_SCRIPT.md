@@ -11,7 +11,7 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 
 ## Version A: 60-Second Elevator Pitch
 
-> *"Every medical student today uses ChatGPT to study. The problem? Generic AI gives fluent answers, but it doesn't teach.*
+> *"Many medical learners increasingly use general-purpose AI tools to study. The problem? Generic AI gives fluent answers, but it doesn't teach.*
 >
 > *It treats every question in isolation, conflates wrong answers with permanent failure, and hallucinates without accountability.*
 >
@@ -30,7 +30,7 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 *(Recommended setup: Browser open to `http://localhost:3000` with local backend running)*
 
 ### 0:00 – 0:25 | The Problem
-> *"Good afternoon, judges. Today, medical students across the globe are using AI chatbots to prepare for clinical exams. But generic AI has a fundamental flaw: it gives answers, but it doesn't understand learning.*
+> *"Good afternoon, judges. Today, medical learners increasingly use general-purpose AI tools to prepare for clinical exams. But generic AI has a fundamental flaw: it gives answers, but it doesn't understand learning.*
 >
 > *When a student picks a wrong answer, a generic chatbot simply tells them what was right. It doesn't track their cognitive trajectory, it doesn't diagnose why they were misled, and it cannot prove whether the student actually learned."*
 
@@ -42,9 +42,9 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 ### 0:50 – 1:20 | Step 1: Question Attempt & Reasoning Signal
 > *(Click into **University Mode** $\rightarrow$ Question `UNI-RENAL-001`)*
 >
-> *"Here’s a renal physiology question on renin-angiotensin hemodynamics. Notice what happens when our learner selects distractor **B — Angiotensin I**.*
+> *"Here’s a renal physiology question on renin-angiotensin hemodynamics. Notice what happens when our learner selects distractor **B — Angiotensin II**.*
 >
-> *A standard quiz app just marks this red. But MedicalPlab analyzes the cognitive distractor. Selecting Angiotensin I reveals a specific heuristic signal: `RP-RENAL-RENIN-ANGIOTENSIN`—the student is confusing the precursor cleavage step with active downstream vasoconstriction.*
+> *A standard quiz app just marks this red. But MedicalPlab analyzes the cognitive distractor. Selecting Option B (Angiotensin II) reveals a specific heuristic signal: `PATTERN-RAAS-SUB-01`—the student is confusing the upstream substrate of active renin (angiotensinogen) with its downstream product (angiotensin II).*
 >
 > *Notice our core safety principle: a wrong answer is NOT a proven misconception. It is a provisional hypothesis to explore."*
 
@@ -100,8 +100,8 @@ This document provides three spoken pitch scripts for Hackathon Demo Day and Sta
 *(Use for expanded panel reviews. Follows the 3-minute flow, expanding on technical moats, business model, and safety governance)*
 
 ### Outline Additions:
-1. **0:00–1:00 Problem & Regulatory Context:** Why medical schools cannot endorse commercial chatbots due to hallucination liability and zero learning analytics.
+1. **0:00–1:00 Problem & Educational Context:** Why unconstrained commercial chatbots pose challenges for medical education due to hallucination risks, unverified claims, and the absence of learning analytics.
 2. **1:00–3:00 Live Interactive Demo:** (University Question $\rightarrow$ Socratic Remediation $\rightarrow$ Transfer $\rightarrow$ Grounded Tutor $\rightarrow$ Cognitive Anatomy).
 3. **3:00–3:45 PLAB Candidate Governance Workflow:** Explain the distinction between candidate preview questions (36 items in demo) and clinician-approved golden content (`PLAB_GOLDEN_PROMOTION_REQUIRED = YES`). Show how the platform fails closed to preserve exam integrity.
 4. **3:45–4:30 Business Model & Beachhead:** Student subscription B2C + Medical School B2B institutional licenses ($N \ge 3$ cohort privacy radar).
-5. **4:30–5:00 Engineering Rigor:** 43 API endpoints, 12/12 mobile contract certification, reproducible clone-and-run local deployment.
+5. **4:30–5:00 Engineering Rigor:** 43 paths / 44 operations, 12/12 mobile contract certification, reproducible clone-and-run local deployment.

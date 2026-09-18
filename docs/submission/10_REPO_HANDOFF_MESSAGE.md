@@ -43,7 +43,7 @@
 > MedicalPlab is engineered for complete local reproducibility:
 > - **Zero Cloud Costs:** Runs locally on standard CPUs with $0 cloud, 0 GPU, and 0 paid LLM keys required.
 > - **Verified Quality:** 23/23 backend integration tests, 12/12 mobile contract tests, and 8/8 GitHub Actions CI checks passing.
-> - **API Contract:** 43 endpoints, 44 operations certified via OpenAPI 3.1.0 with complete Postman harnesses.
+> - **API Contract:** 43 paths / 44 operations certified via OpenAPI 3.1.0 with complete Postman harnesses.
 >
 > **Key Links:**  
 > - **GitHub Repository:** https://github.com/AdhamElsayedAI/MedicalPlab  
