@@ -1,6 +1,14 @@
 # MedicalPlab Staging BFF (Backend-For-Frontend) Gateway
+> [!IMPORTANT]
+> **STATUS: INACTIVE / OPTIONAL FUTURE GCP REFERENCE**
+>
+> The authoritative staging provider for MedicalPlab is now **Render Free Web Service**.
+> Under the Render architecture, a separate BFF service is NOT deployed. Staging security
+> access control is enforced directly by the FastAPI ASGI middleware (`src/medicalplab/staging/security.py`).
+>
+> This directory is retained strictly as an inactive architectural reference for future GCP Cloud Run deployments.
 
-## Architecture Overview
+## Architecture Overview (Historical GCP Design)
 
 The Staging BFF Gateway is a lightweight, zero-business-logic reverse proxy deployed as a public Cloud Run service (`medicalplab-bff`) in front of the private backend Cloud Run service (`medicalplab-api`).
 

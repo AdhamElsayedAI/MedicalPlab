@@ -46,11 +46,11 @@ Configure your mobile HTTP client with the appropriate base URL:
 | **Local Dev (iOS Simulator / Desktop)** | `http://127.0.0.1:8000` | Run backend via `python -m uvicorn production_main:app --port 8000` |
 | **Local Dev (Android Emulator)** | `http://10.0.2.2:8000` | Android loopback alias for host machine `127.0.0.1` |
 | **Physical Device (LAN)** | `http://<YOUR_LOCAL_IP>:8000` | Ensure firewall allows inbound on port 8000 |
-| **Staging / Remote** | Configured via environment | See [Staging Certification](./STAGING_CERTIFICATION.md) |
+| **Remote Staging (Render Free)** | `https://medicalplab-staging.onrender.com` | Requires `X-Staging-Key` header. See [Staging Certification](./STAGING_CERTIFICATION.md) |
 
 ---
 
-## 3. Learner Identity Protocol (`X-User-Id`)
+## 3. Learner Identity & Staging Access Protocol
 
 Every learner-scoped request requires an `X-User-Id` header identifying the student session.
 
@@ -64,26 +64,23 @@ X-User-Id: learner_mobile_001
 > `X-User-Id` partitions learner progress, mastery state, and remediation sessions for development and pilot testing. It is a convenience label supplied by the caller. It is **NOT** cryptographic production authentication and is **NOT** a secure authorization boundary. `MOBILE_PRODUCTION_AUTH_READY = NO`.
 
 > [!WARNING]
-> **Two-Layer Access Model — Remote Pilot / Staging Only:**
+> **Two-Layer Access Model — Remote Staging (Render Free):**
 >
-> Mobile developers integrating with the remote staging API must understand these are **separate layers**:
+> Mobile developers integrating with the remote Render staging API must send **two headers**:
 >
-> | Layer | Mechanism | Purpose |
+> | Header | Mechanism | Purpose |
 > | :--- | :--- | :--- |
-> | **Transport / Ingress** | Cloud Run IAM (`Authorization: Bearer <identity-token>`) | Controls who can reach the API at all. Required for remote staging. |
-> | **Learner Partitioning** | `X-User-Id` header | Identifies which learner's state to read/write within the API. Not authentication. |
+> | `X-Staging-Key` | Closed-staging pre-shared key | Temporary access control preventing unauthorized internet access to staging endpoints. |
+> | `X-User-Id` | Caller-supplied learner ID | Identifies which synthetic learner's state to read/write within the API. Not authentication. |
 >
-> **Remote pilot/staging must NOT expose learner-state APIs through unrestricted anonymous ingress.** `PUBLIC_UNAUTHENTICATED_PILOT_API = NO`.
->
-> To obtain an identity token for authorized remote access during pilot integration testing:
+> **Direct Mobile Access Example:**
 > ```bash
-> # Requires gcloud CLI authenticated with a Cloud Run Invoker IAM role:
-> TOKEN=$(gcloud auth print-identity-token)
-> curl -H "Authorization: Bearer $TOKEN" -H "X-User-Id: learner_01" \
->   https://<staging-url>/api/v1/university/subjects
+> curl -H "X-Staging-Key: <STAGING_ACCESS_KEY>" \
+>      -H "X-User-Id: learner_mobile_001" \
+>      https://medicalplab-staging.onrender.com/api/v1/university/subjects
 > ```
 >
-> Production JWT / OAuth2 learner authentication will replace `X-User-Id` in institutional deployments.
+> Note: No Google IAM tokens, gcloud logins, service accounts, or Vercel session cookies are required for mobile/Postman staging access.
 
 ---
 

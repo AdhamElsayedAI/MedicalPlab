@@ -72,7 +72,7 @@ MedicalPlab employs a dual-pipeline generative intelligence architecture:
 
 > [!WARNING]
 > **`X-User-Id` is NOT cryptographic authentication and is NOT a secure authorization boundary.**
-> It is synthetic caller-supplied learner partitioning for pilot state isolation. On a public unauthenticated API endpoint, any caller can supply any `X-User-Id` value. Remote pilot and staging deployments MUST restrict Cloud Run ingress via IAM (Cloud Run Invoker role) rather than relying on `X-User-Id` as an access control mechanism. `PUBLIC_UNAUTHENTICATED_PILOT_API = NO`.
+> It is synthetic caller-supplied learner partitioning for pilot state isolation. On a public unauthenticated API endpoint, any caller can supply any `X-User-Id` value. Remote staging deployments enforce closed-staging access control via the `X-Staging-Key` pre-shared key header, and web browser access via the Vercel Mentor Session Gate, rather than relying on `X-User-Id` as an access control mechanism. `PUBLIC_UNAUTHENTICATED_PILOT_API = NO`.
 
 ### FUTURE INTELLIGENCE ROADMAP (FUTURE / NOT IMPLEMENTED)
 - **Multi-Organ Spatial Anatomy:** Extending HRA coverage to cardiovascular, respiratory, hepatic, and neuroanatomy systems.

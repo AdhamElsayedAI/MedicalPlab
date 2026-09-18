@@ -172,8 +172,8 @@ jobs:
         run: |
           python Scripts/verify_repository_handoff.py
 
-  bff-gateway-tests:
-    name: Staging BFF Security Gateway Tests
+  render-staging-security-tests:
+    name: Render Staging Security Gate Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -188,14 +188,20 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r staging/bff/requirements.txt pytest httpx starlette fastapi
+          pip install -r requirements.txt pytest httpx starlette fastapi numpy scikit-learn scipy
 
-      - name: Run BFF Gateway Unit Tests
+      - name: Run Render Staging Security Gate Tests
+        env:
+          PYTHONPATH: "src:."
+          MEDICALPLAB_RUNTIME_MODE: "pilot"
+          MEDICALPLAB_PLAB_PREVIEW_QA: "1"
+          MEDICALPLAB_PHASE_2B_ENABLED: "1"
+          MEDICALPLAB_ANATOMY_3D_ENABLED: "1"
         run: |
-          pytest tests/bff/ -v
+          pytest tests/staging/ -v
 
   docker-runtime-smoke:
-    name: Docker Runtime Smoke Test
+    name: Docker Runtime / Free-Memory Smoke Test (512MB)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -223,9 +229,22 @@ jobs:
           print('ML_MODEL_WEIGHTS_IN_IMAGE = NO')
           "
 
-      - name: Run Container & Verify Runtime Health
+      - name: Run Container Under Render Free 512MB RAM Limit & Verify Health
         run: |
-          docker run -d --name test-api -p 8080:8080 -e MEDICALPLAB_RUNTIME_MODE=production -e PORT=8080 medicalplab-api:smoke
+          # Enforce exact Render Free memory constraint (512MB RAM, 512MB swap)
+          docker run -d --name test-api \
+            --memory=512m \
+            --memory-swap=512m \
+            -p 8080:8080 \
+            -e MEDICALPLAB_RUNTIME_MODE=pilot \
+            -e MEDICALPLAB_PLAB_PREVIEW_QA=1 \
+            -e MEDICALPLAB_PHASE_2B_ENABLED=1 \
+            -e MEDICALPLAB_ANATOMY_3D_ENABLED=1 \
+            -e MEDICALPLAB_TUTOR_PROVIDER=stub \
+            -e MEDICALPLAB_STAGING_GATE_ENABLED=1 \
+            -e STAGING_ACCESS_KEY=ci-smoke-staging-key-2026 \
+            -e PORT=8080 \
+            medicalplab-api:smoke
 
           echo "Waiting for container to report healthy..."
           HEALTHY=0
@@ -244,21 +263,54 @@ jobs:
             exit 1
           fi
 
-          echo "--- Testing /health ---"
+          echo "--- Testing Public /health (unauthenticated) ---"
           HEALTH_RESP=$(curl -s -f http://localhost:8080/health)
           echo "Health Response: $HEALTH_RESP"
 
-          echo "--- Testing /ready ---"
-          READY_RESP=$(curl -s http://localhost:8080/ready)
+          echo "--- Testing Staging Gate: Unauthenticated /api/v1/version must be 401 ---"
+          STATUS_NO_KEY=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/api/v1/version)
+          if [ "$STATUS_NO_KEY" -ne 401 ]; then
+            echo "ERROR: Expected HTTP 401 without staging key, got $STATUS_NO_KEY"
+            exit 1
+          fi
+          echo "Staging gate correctly returned HTTP 401 without key"
+
+          echo "--- Testing Authenticated Endpoints with X-Staging-Key ---"
+          AUTH_HEADER="X-Staging-Key: ci-smoke-staging-key-2026"
+          USER_HEADER="X-User-Id: ci-smoke-learner-42"
+
+          READY_RESP=$(curl -s -f -H "$AUTH_HEADER" http://localhost:8080/ready)
           echo "Ready Response: $READY_RESP"
 
-          echo "--- Testing /api/v1/version ---"
-          VERSION_RESP=$(curl -s -f http://localhost:8080/api/v1/version)
+          VERSION_RESP=$(curl -s -f -H "$AUTH_HEADER" http://localhost:8080/api/v1/version)
           echo "Version Response: $VERSION_RESP"
+
+          UNI_RESP=$(curl -s -f -H "$AUTH_HEADER" http://localhost:8080/api/v1/university/subjects)
+          echo "University Subjects OK"
+
+          ADAPTIVE_RESP=$(curl -s -f -H "$AUTH_HEADER" "http://localhost:8080/api/v1/adaptive/state?learner_id=ci-smoke-learner-42")
+          echo "Adaptive State OK"
+
+          ANATOMY_RESP=$(curl -s -f -H "$AUTH_HEADER" http://localhost:8080/api/v1/anatomy/structures)
+          echo "Anatomy Structures OK"
+
+          PROGRESS_RESP=$(curl -s -f -H "$AUTH_HEADER" -H "$USER_HEADER" http://localhost:8080/api/v1/progress)
+          echo "Progress OK"
+
+          TUTOR_RESP=$(curl -s -f -H "$AUTH_HEADER" -H "Content-Type: application/json" \
+            -d '{"query":"What is nephrotic syndrome?"}' http://localhost:8080/api/v1/tutor/chat)
+          echo "Tutor Chat OK"
+
+          echo "--- Measuring Peak Container RAM Usage ---"
+          docker stats --no-stream test-api
+          MEM_USAGE_STR=$(docker stats --no-stream --format "{{.MemUsage}}" test-api | awk '{print $1}')
+          echo "RENDER_FREE_RAM_MB = 512"
+          echo "MEASURED_RAM_RAW = $MEM_USAGE_STR"
 
           echo "--- Stopping and removing container ---"
           docker stop test-api
           docker rm test-api
           echo "DOCKER_RUNTIME_SMOKE = PASS"
+
 
 

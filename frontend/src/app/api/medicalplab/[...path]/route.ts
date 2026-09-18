@@ -9,23 +9,24 @@ import {
 } from "@/lib/mentor-auth";
 
 /**
- * Server-side same-origin proxy to the Cloud Run Staging BFF Gateway.
+ * Server-side same-origin proxy to the MedicalPlab Direct Staging API (Render Free).
  *
  * Security guarantees:
  * 1. MENTOR_SESSION_GATE: Public browser requests without a valid, signed
- *    mentor session cookie are rejected with HTTP 401 before touching the BFF.
+ *    mentor session cookie are rejected with HTTP 401 before touching the staging service.
  * 2. STAGING_ACCESS_KEY and MENTOR_ACCESS_CODE are strictly SERVER-ONLY
  *    environment variables. They are NEVER leaked or returned to the browser.
- * 3. Mobile clients continue to access the Cloud Run BFF directly via
+ * 3. Mobile clients continue to access the Render staging service directly via
  *    X-Staging-Key + X-User-Id without browser cookies.
  * 4. Inbound Authorization and Host headers are stripped; only verified headers
- *    (X-User-Id, content-type, accept) and server-injected X-Staging-Key are sent to BFF.
+ *    (X-User-Id, content-type, accept) and server-injected X-Staging-Key are sent to Render.
  */
 
-const BFF_BASE_URL = (
+const STAGING_BASE_URL = (
+  process.env.MEDICALPLAB_STAGING_BASE_URL ||
   process.env.BFF_BASE_URL ||
   process.env.MEDICALPLAB_BFF_URL ||
-  "http://localhost:8080"
+  "http://localhost:8000"
 ).replace(/\/+$/, "");
 
 const STAGING_ACCESS_KEY = process.env.STAGING_ACCESS_KEY || "";
@@ -127,7 +128,7 @@ async function handleProxy(request: NextRequest): Promise<Response> {
   }
 
   // 2. Prepare upstream URL & headers
-  const targetUrl = `${BFF_BASE_URL}${subpath}${url.search}`;
+  const targetUrl = `${STAGING_BASE_URL}${subpath}${url.search}`;
   const forwardHeaders = new Headers();
 
   const safeHeaders = [
@@ -145,7 +146,7 @@ async function handleProxy(request: NextRequest): Promise<Response> {
     }
   }
 
-  // Inject server-only staging key for the Cloud Run BFF gateway
+  // Inject server-only staging key for the Render staging service
   if (STAGING_ACCESS_KEY) {
     forwardHeaders.set("x-staging-key", STAGING_ACCESS_KEY);
   }
@@ -156,7 +157,7 @@ async function handleProxy(request: NextRequest): Promise<Response> {
   }
 
   try {
-    const bffResponse = await fetch(targetUrl, {
+    const upstreamResponse = await fetch(targetUrl, {
       method: request.method,
       headers: forwardHeaders,
       body,
@@ -166,17 +167,17 @@ async function handleProxy(request: NextRequest): Promise<Response> {
 
     const responseHeaders = new Headers();
     for (const h of ["content-type", "x-request-id"]) {
-      const v = bffResponse.headers.get(h);
+      const v = upstreamResponse.headers.get(h);
       if (v) responseHeaders.set(h, v);
     }
 
-    const responseBody = await bffResponse.arrayBuffer();
+    const responseBody = await upstreamResponse.arrayBuffer();
     return new Response(responseBody, {
-      status: bffResponse.status,
+      status: upstreamResponse.status,
       headers: responseHeaders,
     });
   } catch (err: unknown) {
-    const errorMessage = err instanceof Error ? err.message : "Failed to connect to BFF gateway";
+    const errorMessage = err instanceof Error ? err.message : "Failed to connect to MedicalPlab staging service";
     return NextResponse.json(
       {
         error: "Staging proxy error",

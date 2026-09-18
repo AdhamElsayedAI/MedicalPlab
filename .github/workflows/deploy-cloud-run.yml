@@ -1,19 +1,17 @@
-name: Deploy MedicalPlab Staging to Google Cloud Run
+# ==============================================================================
+# OPTIONAL / INACTIVE FUTURE GCP DEPLOYMENT REFERENCE
+#
+# Authoritative Staging Provider: RENDER (Render Free Web Service)
+# GCP Staging Status: INACTIVE / ABANDONED (GCP billing setup blocked)
+# Automatic Deployment: DISABLED (GCP_AUTOMATIC_DEPLOYMENT_ENABLED = NO)
+#
+# This workflow is preserved strictly for future architectural reference and
+# can only be triggered manually via workflow_dispatch if GCP billing is activated.
+# ==============================================================================
+
+name: "[INACTIVE] Deploy MedicalPlab Staging to Google Cloud Run"
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'src/**'
-      - 'schemas/**'
-      - 'Data/**'
-      - 'production_main.py'
-      - 'Dockerfile'
-      - 'requirements.txt'
-      - 'pyproject.toml'
-      - 'staging/bff/**'
-      - '.github/workflows/deploy-cloud-run.yml'
   workflow_dispatch:
 
 permissions:

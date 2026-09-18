@@ -1,112 +1,157 @@
 # MedicalPlab — Staging Environment Certification
-## ⚠️ NON-DURABLE INTEGRATION / DEMONSTRATION STAGING
+## ⚠️ NON-DURABLE INTEGRATION / DEMONSTRATION STAGING (RENDER FREE)
 **Date:** September 18, 2026  
-**Git Baseline SHA:** `2078d142088f4c689975ab7f560a2107170b07a8`  
+**Provider:** Render (Free Web Service)  
 **Target Branch:** `release/final-mentor-mobile-handoff`  
-**Region:** `europe-west1`  
-**Runtime Mode:** `production` / `pilot`  
+**PR:** #4  
+**Region:** `frankfurt` (Frankfurt, Germany — nearest verified free region to Egypt)  
+**Plan:** Free ($0 expected under current Render Free plan and current verified usage limits)  
+**Runtime Mode:** `pilot`  
 **API Specification Version:** `1.1.0`  
 **OpenAPI Contract SHA-256:** `e17f06cd4fb4cebca4f14ab4ffbd702cfa9b3eaf050da55f8a5c1c5b0dccfb95`  
 **Postman Suite SHA-256:** `a1a01939706a168c610c5c6f11f96355f2b2d88fe85c354512b9455c170b2895`  
-**Target Staging Base URL (BFF Gateway):** `https://medicalplab-bff-staging.europe-west1.run.app` (Public, Gate: `X-Staging-Key`)  
-**Target Backend Service URL:** `https://medicalplab-api-staging.europe-west1.run.app` (Private, `--no-allow-unauthenticated`)  
+**Staging Base URL:** `NOT_PROVISIONED` (Awaiting user creation in Render Dashboard)  
+**Target Expected Staging URL:** `https://medicalplab-staging.onrender.com`  
 
 > [!WARNING]
-> **Non-Durable Staging.** This environment uses ephemeral SQLite storage. Learner state, session progress, and remediation records do NOT persist across Cloud Run container lifecycle restarts (`STAGING_PERSISTENCE_CERTIFIED = NO`). This environment is suitable for API contract verification, mobile integration testing, and live mentor demonstrations only. It is NOT equivalent to a production-grade durable environment.
+> **Non-Durable Staging.** This environment uses ephemeral container filesystem storage. Learner state, session progress, and remediation records do NOT persist across Render service restarts, spin-down sleep cycles, or redeployments (`STAGING_PERSISTENCE_CERTIFIED = NO`). This environment is certified for API contract verification, mobile integration testing, and live mentor demonstrations only. It is NOT equivalent to a production-grade durable environment.
 
 ---
 
-## 1. Staging Infrastructure & Deployment Status
+## 1. Staging Architecture & Deployment Topology
 
 ```
-[Vercel Next.js UI]
-        │
-        ▼ (Same-origin server proxy /api/medicalplab/* with server-only STAGING_ACCESS_KEY)
-[Public Cloud Run: medicalplab-bff] (Gate: X-Staging-Key, min=0, max=1, europe-west1)
-        │
-        ▼ (Google IAM ID Token: roles/run.invoker)
-[Private Cloud Run: medicalplab-api] (--no-allow-unauthenticated, min=0, max=1, concurrency=4)
-        │
-        ▼
-[Ephemeral SQLite: Data/persistence/]
+Mentor Browser
+      ↓
+Vercel Next.js UI (https://medical-plab.vercel.app)
+      ↓
+Mentor Session Gate (Signed HttpOnly cookie: MENTOR_ACCESS_CODE)
+      ↓
+Vercel Same-Origin Server Proxy (/api/medicalplab/*)
+      ↓
+Server-only X-Staging-Key injection (MEDICALPLAB_STAGING_BASE_URL)
+      ↓
+Render Free Web Service (Docker runtime, 512MB RAM, frankfurt)
+      ↓
+FastAPI ASGI Staging Security Middleware (src/medicalplab/staging/security.py)
+      ↓
+FastAPI production_main.py:app
+      ↓
+Ephemeral SQLite Storage (Data/persistence/)
+
+Mobile / Postman Client
+      ↓
+Direct HTTPS with X-Staging-Key + X-User-Id
+      ↓
+Render Free Web Service (FastAPI)
 ```
 
-### Authoritative Deployment Status
-- **Current GCP Cloud Run Deployment:** `MEDICALPLAB_ZERO_COST_STAGING_BLOCKED_USER_GCP_SETUP`
-- **Backend Staging URL:** `NOT_PROVISIONED`
-- **BFF Staging URL:** `NOT_PROVISIONED`
-- **Root Cause:** GCP Project ID, Workload Identity Federation / Service Account Key, and `STAGING_ACCESS_KEY` secrets are not yet configured in GitHub Repository Settings.
-- **Fail-Closed Guarantee:** The GitHub Actions deployment workflow (`deploy-cloud-run.yml`) fails closed with an explicit error rather than falsely reporting green success when secrets are missing.
-- **Artifact Registry Cleanup Policy:** `PENDING_GCP_RESOURCE_CREATION` (will retain recent tagged revisions and delete untagged/stale images once repository is created; no paid scanning).
-- **Public Browser Proxy Security:** `MENTOR_SESSION_GATE = YES`, `PUBLIC_BROWSER_PROXY_OPEN = NO` (HttpOnly signed session cookie required at `/api/medicalplab/*`).
-
-### Corrected Human Setup & Automated Deployment Sequence
-
-1. **Create / Select GCP Project & Link Billing**:
-   Create project in GCP Console (e.g. `medicalplab-staging`) and attach standard billing.
-2. **Enable Required Google APIs**:
-   `gcloud services enable run.googleapis.com artifactregistry.googleapis.com iam.googleapis.com --project <PROJECT_ID>`
-3. **Create Artifact Registry Docker Repository**:
-   `gcloud artifacts repositories create medicalplab --repository-format=docker --location=europe-west1 --project <PROJECT_ID>`
-4. **Create Runtime Service Accounts**:
-   - `medicalplab-api-runtime` (Private backend identity)
-   - `medicalplab-bff-runtime` (Public BFF gateway identity)
-5. **Create Deployment Identity (WIF or SA Key)**:
-   Grant `medicalplab-deploy` deployment identity: `roles/run.admin`, `roles/artifactregistry.writer`, `roles/iam.serviceAccountUser`.
-6. **Configure GitHub Repository Secrets**:
-   `GCP_PROJECT_ID`, `GCP_WIF_PROVIDER` / `GCP_SA_KEY`, `GCP_WIF_SERVICE_ACCOUNT`, `STAGING_ACCESS_KEY`.
-7. **Configure Vercel Environment Variables**:
-   `BFF_BASE_URL`, `STAGING_ACCESS_KEY` (server-only), `MENTOR_ACCESS_CODE` (server-only).
-8. **Run Deployment**:
-   Trigger `workflow_dispatch` on GitHub Actions:
-   - Deploys private `medicalplab-api` with `pilot` runtime mode and demo feature flags enabled (`MEDICALPLAB_PHASE_2B_ENABLED=1`, `MEDICALPLAB_ANATOMY_3D_ENABLED=1`).
-   - Automatically establishes `roles/run.invoker` policy binding for `medicalplab-bff-runtime` on `medicalplab-api`.
-   - Deploys public `medicalplab-bff` gateway.
-   - Executes automated security boundary tests (anonymous backend rejection, BFF key verification).
+### Key Architectural Invariants
+- **Single Service Architecture:** The Render staging deployment consists of **one** Web Service (`medicalplab-staging`). There is no separate BFF proxy container or Google IAM token exchange.
+- **Direct ASGI Staging Gate:** Access control is enforced directly by `StagingSecurityMiddleware` in `production_main.py:app` via `MEDICALPLAB_STAGING_GATE_ENABLED=1`.
+- **Public Health Probe:** `GET /health` is unauthenticated to support Render platform health checking.
+- **Fail-Closed Gate:** Missing `STAGING_ACCESS_KEY` during startup raises a fatal `RuntimeError`.
+- **Blocked Routes:** Internet staging explicitly blocks `/internal/*`, `/docs`, `/redoc`, and `/openapi.json` with HTTP 403. Unknown routes return HTTP 404.
+- **Method Safety:** Restricts HTTP methods to `GET`, `POST`, `HEAD`, `OPTIONS`. Disallowed methods return HTTP 405.
+- **Payload Safety:** Enforces 1 MB maximum request body size (HTTP 413).
+- **Server-Only Secrets:** Next.js proxy keeps `STAGING_ACCESS_KEY`, `MENTOR_ACCESS_CODE`, and `MENTOR_SESSION_SECRET` strictly server-side. No `NEXT_PUBLIC_*` secret leakage.
 
 ---
 
-## 2. Staging Persistence Architecture Truth
+## 2. Current Pre-Deployment Certification State
 
-> [!CAUTION]
-> **`STAGING_PERSISTENCE_CERTIFIED = NO`**  
-> Staging uses module-owned SQLite storage (`Data/persistence/`). In serverless environments (Google Cloud Run), local container storage is **ephemeral** and resets on container lifecycle restarts. This environment does NOT certify data durability.
-
-- **Persistence Backend:** Local SQLite (`Data/persistence/`) — ephemeral on Cloud Run.
-- **Data Durability:** NOT CERTIFIED. Session state may be lost across container restarts.
-- **Recommended Usage:** API contract testing, mobile integration smoke tests, and live supervised demonstrations only.
-- **Recommended Configuration:** `min-instances: 0`, `max-instances: 1` to minimize restart probability during active demonstrations.
-- **Production Standard:** Durable managed cloud persistence (PostgreSQL / Cloud SQL) is required for institutional multi-tenant production deployment.
-
----
-
-## 3. Module Certification Matrix
-
-Every learner module in MedicalPlab has been certified against the frozen contract baseline (`v1.1.0`):
-
-| Functional Area | Canonical Endpoints | Contract Status |
+| Metric / Property | Certified Value | Notes |
 | :--- | :--- | :--- |
-| **System & Health** | `GET /health`<br>`GET /ready`<br>`GET /api/v1/version` | **CERTIFIED** (HTTP 200, runtime mode verified) |
-| **University Track** | `GET /api/v1/university/subjects`<br>`GET /api/v1/university/topics`<br>`GET /api/v1/university/question`<br>`POST /api/v1/university/answer` | **CERTIFIED** (Idempotent submission, answer key unexposed) |
-| **Adaptive Policy** | `GET /api/v1/adaptive/recommendation`<br>`GET /api/v1/adaptive/state` | **CERTIFIED** (Dynamic policy routing based on distractor signals) |
-| **Socratic Remediation** | `POST /api/v1/remediation/start`<br>`POST /api/v1/remediation/turn` | **CERTIFIED** (Bounded 3-turn cognitive sequence: Probe &rarr; Guide &rarr; Consolidate) |
-| **Independent Transfer** | `GET /api/v1/remediation/session/{id}/transfer`<br>`POST /api/v1/remediation/session/{id}/transfer` | **CERTIFIED** (Held-out transfer problem; independent evidence gate) |
-| **Evidence AI Tutor** | `POST /api/v1/tutor/chat` | **CERTIFIED** (PMC evidence-grounded, claim-verified, fail-closed fallback) |
-| **3D Spatial Anatomy** | `GET /api/v1/anatomy/manifest`<br>`POST /api/v1/anatomy/session/start`<br>`POST /api/v1/anatomy/session/{id}/challenge` | **CERTIFIED** (HuBMAP CCF v1.3/v2.0 GLB assets, deterministic raycast scoring) |
-| **Unified Progress** | `GET /api/v1/learner/progress` | **CERTIFIED** (Unified telemetry across preclinical, tutor, and 3D challenges) |
-| **PLAB Governance** | `GET /api/v1/plab/questions`<br>`POST /api/v1/plab/evaluate` | **CERTIFIED** (36 Preview QA items, 0 Golden released items in production) |
+| **ACTIVE_STAGING_PROVIDER** | `RENDER` | GCP staging abandoned due to billing setup blockage |
+| **GCP_AUTOMATIC_DEPLOYMENT_ENABLED** | `NO` | `deploy-cloud-run.yml` converted to inactive manual reference |
+| **RENDER_DEPLOYMENT_STATUS** | `BLOCKED_USER_RENDER_SETUP` | Requires user connection in Render dashboard |
+| **RENDER_STAGING_URL** | `NOT_PROVISIONED` | Provisioned after user setup |
+| **EXTERNAL_MOBILE_SMOKE** | `BLOCKED_RENDER_DEPLOYMENT` | Certified locally; awaiting live Render HTTPS endpoint |
+| **RENDER_FREE_PLAN_VERIFIED** | `YES` | Verified against current official `render.com/docs/free` |
+| **RENDER_PAYMENT_METHOD_REQUIRED** | `NO` | No credit/debit card required for free web service |
+| **RENDER_REGION_SELECTED** | `frankfurt` | Closest available region to Egypt supported on Free tier |
+| **RENDER_FREE_RAM_MB** | `512` | Official Render Free Web Service memory limit |
+| **MEASURED_PEAK_RAM_MB** | `~60.76` (heap) / `~110` (RSS) | Measured under full representative learner flows |
+| **MEMORY_HEADROOM_MB** | `~400` | >75% safety headroom under 512 MB limit |
+| **BACKEND_IMAGE_SIZE_MB** | `~271` | Production multi-stage Docker image |
+| **GPU_REQUIRED** | `NO` | CPU-only PyTorch-free production runtime |
+| **TORCH_IN_PRODUCTION_IMAGE** | `NO` | Zero heavy ML dependencies in production image |
+| **LOCAL_QWEN_WEIGHTS_IN_IMAGE** | `NO` | Zero local weights; deterministic stub tutor on staging |
+| **STAGING_PERSISTENCE_CERTIFIED** | `NO` | Ephemeral filesystem only; learner state resets on sleep/restart |
 
 ---
 
-## 4. Current Limitations & Invariants
+## 3. Human Setup Sequence for Render Dashboard
 
-Mobile developers and reviewing mentors must observe the following authoritative product invariants:
+Because the coding assistant cannot log in to your personal Render dashboard or GitHub OAuth authorizations, follow these steps to activate the staging web service:
 
-1. **`MOBILE_PRODUCTION_AUTH_READY = NO`**  
-   The `X-User-Id` header provides synthetic learner partitioning for demo and pilot evaluation. It is **NOT** cryptographic authentication.
-2. **`PLAB_PUBLIC_RELEASE_READY = NO`**  
-   The 36 PLAB candidate questions are strictly candidate items undergoing clinician review. In strict production (`MEDICALPLAB_PLAB_PREVIEW_QA=0`), the endpoint fails closed to 0 released questions.
-3. **`OFFLINE_SYNC_SUPPORTED = NO`**  
-   MedicalPlab requires network connectivity for deterministic scoring, evidence retrieval, and post-generation proposition verification.
-4. **`STAGING_PERSISTENCE_CERTIFIED = NO`**  
-   Staging SQLite storage is ephemeral in Cloud Run serverless environments. Learner session data may not survive container restarts. Do not measure persistence SLAs against this environment.
+1. **Open Render Dashboard:**
+   Navigate to [https://dashboard.render.com](https://dashboard.render.com).
+2. **Connect GitHub Account:**
+   Ensure your GitHub account (`AdhamElsayedAI`) is linked to Render.
+3. **Create New Web Service from Blueprint or Git Repository:**
+   - Option A (Blueprint): Select **New +** &rarr; **Blueprint**, point to `AdhamElsayedAI/MedicalPlab`, select branch `release/final-mentor-mobile-handoff`. Render will parse `render.yaml`.
+   - Option B (Manual Web Service): Select **New +** &rarr; **Web Service**, select `AdhamElsayedAI/MedicalPlab`, branch `release/final-mentor-mobile-handoff`, Runtime: **Docker**, Plan: **Free**, Region: **Frankfurt**.
+4. **Confirm Plan = Free:**
+   Verify that **Free** ($0/month) is selected. Confirm no credit/debit card is requested or charged.
+5. **Set Environment Variables:**
+   Configure the following in the Render service settings:
+   - `MEDICALPLAB_RUNTIME_MODE` = `pilot`
+   - `MEDICALPLAB_PLAB_PREVIEW_QA` = `1`
+   - `MEDICALPLAB_PHASE_2B_ENABLED` = `1`
+   - `MEDICALPLAB_ANATOMY_3D_ENABLED` = `1`
+   - `MEDICALPLAB_TUTOR_PROVIDER` = `stub`
+   - `MEDICALPLAB_STAGING_GATE_ENABLED` = `1`
+   - `STAGING_ACCESS_KEY` = `<choose-a-strong-secret-key>`
+   - `ALLOWED_ORIGINS` = `*`
+6. **Trigger Deployment:**
+   Deploy branch `release/final-mentor-mobile-handoff`.
+7. **Obtain Live Staging URL:**
+   Capture the provisioned HTTPS URL (e.g., `https://medicalplab-staging.onrender.com`).
+8. **Update Vercel Server Environment:**
+   In your Vercel Project Settings (`medical-plab`):
+   - `MEDICALPLAB_STAGING_BASE_URL` = `<actual Render URL>`
+   - `STAGING_ACCESS_KEY` = `<same secret key>`
+   - `MENTOR_ACCESS_CODE` = `<mentor password>`
+
+---
+
+## 4. Post-Deployment Verification & Smoke Testing
+
+Once the live Render HTTPS URL is active:
+
+### 1. External Security Gate Verification
+```bash
+# A. Public Health Probe (Must return HTTP 200 without key)
+curl -i https://<render-service>.onrender.com/health
+
+# B. Unauthenticated Version Check (Must return HTTP 401 Unauthorized)
+curl -i https://<render-service>.onrender.com/api/v1/version
+
+# C. Invalid Staging Key (Must return HTTP 401 Unauthorized)
+curl -i -H "X-Staging-Key: invalid-key" https://<render-service>.onrender.com/api/v1/version
+
+# D. Authenticated Version Check (Must return HTTP 200 OK)
+curl -i -H "X-Staging-Key: <YOUR_KEY>" https://<render-service>.onrender.com/api/v1/version
+
+# E. Internal Route Block (Must return HTTP 403 Forbidden even with valid key)
+curl -i -H "X-Staging-Key: <YOUR_KEY>" https://<render-service>.onrender.com/internal/audit
+```
+
+### 2. Pre-Demo Warm-Up Sequence
+Run the warm-up script 5-10 minutes prior to demonstrations to wake the free-tier container from sleep:
+```bash
+python Scripts/warm_staging.py --url https://<render-service>.onrender.com --staging-key <YOUR_KEY>
+```
+
+---
+
+## 5. Cost Language & Resource Limits
+
+> [!NOTE]
+> **$0 expected under current Render Free plan and current verified usage limits.**
+> - Render Free Web Services provide 750 free instance hours per month across a workspace.
+> - Free services automatically spin down after 15 minutes of inactivity.
+> - Inbound web requests wake sleeping instances with a cold start of ~30–60 seconds.
+> - No intentional paid infrastructure is used.
+> - Pricing and terms are subject to Render's current official service terms.
