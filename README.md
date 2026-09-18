@@ -6,329 +6,231 @@
   <img src="docs/readme-assets/hero-signal-through-structure.gif" alt="MedicalPlab Cognitive Anatomy — Structure Carries Signal" width="100%" />
 </p>
 
-> **MedicalPlab does not only answer students. It learns how students learn.**
+> **"MedicalPlab does not only answer students. It learns how students learn."**
 
-Most medical learning platforms stop at answer correctness. MedicalPlab treats the learner interaction as a signal. It connects assessment, adaptive intervention, grounded generative tutoring, independent transfer, and interactive anatomy into one closed learning loop. The generative model is not the authority: retrieved evidence, deterministic state, structured actions, and verification define what the model is allowed to do.
+MedicalPlab is an adaptive, evidence-grounded medical learning intelligence platform engineered to replace passive multiple-choice memorization and unconstrained medical chatbot wrappers. It couples evidence-grounded generative tutoring bounded by peer-reviewed literature, distractor-level reasoning pattern signals, multi-turn bounded Socratic remediation, independent held-out clinical transfer verification, interactive 3D spatial anatomy from the NIH HuBMAP Human Reference Atlas, and clinician-governed examination content into a unified, closed-loop educational system.
 
 <p align="center">
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?style=flat&logo=python&logoColor=white" alt="Python Version" /></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
   <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-16.3.4-000000?style=flat&logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
-  <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-0.183+-000000?style=flat&logo=threedotjs&logoColor=white" alt="Three.js" /></a>
-  <a href="#engineering-verification"><img src="https://img.shields.io/badge/CI%20Integration-23%20%2F%2023%20Passing-00e599?style=flat" alt="CI Status" /></a>
+  <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-0.185+-000000?style=flat&logo=threedotjs&logoColor=white" alt="Three.js" /></a>
+  <a href="#engineering-confidence"><img src="https://img.shields.io/badge/CI%20Quality%20Gate-8%20%2F%208%20Passing-00e599?style=flat" alt="CI Status" /></a>
   <a href="docs/mobile-handoff/API_CONTRACT.md"><img src="https://img.shields.io/badge/Mobile%20API-Frozen%20Contract-00f0ff?style=flat" alt="Mobile API" /></a>
+  <a href="#run-medicalplab-locally"><img src="https://img.shields.io/badge/Delivery-Local--First%20%7C%20Clone--and--Run-blueviolet?style=flat" alt="Delivery" /></a>
 </p>
 
 ---
 
 ### Quick Navigation
 
-[Choose Your Path](#choose-your-path) • [Why Different](#why-medicalplab-is-different) • [Signal Story](#from-signal-to-understanding) • [Signal Path](#signal-path) • [GenAI Core](#generative-ai-core) • [AI Systems](#ai-systems-at-a-glance) • [Intelligence Stack](#medicalplab-intelligence-stack) • [Product Experience](#product-experience) • [Adaptive & Socratic](#adaptive-learning--socratic-remediation) • [Grounded Tutor](#evidence-grounded-ai-tutor) • [Shared Evidence](#shared-evidence-engine) • [3D Anatomy](#spatial-3d-anatomy) • [AI & Anatomy Boundary](#ai-instruction-layer-vs-geometry-layer) • [Innovation Map](#innovation-map) • [Built Today](#built-today) • [Technology & Tooling](#technology--tooling) • [Engineering Verification](#engineering-verification) • [Mobile Integration](#mobile-integration) • [Clinical Governance](#clinical-licensing-governance) • [Current Status](#current-status-matrix) • [Future Roadmap](#future-intelligence-roadmap) • [Quick Start](#quick-start--local) • [Deployment](#deployment) • [Repository Structure](#repository-structure) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Mentor Briefing](docs/handoff/MENTOR_START_HERE.md)
-
----
-
-## Choose Your Path
-
-Select your discipline to access the authoritative specifications, codebases, and entry points immediately:
-
-| Audience | Key Questions Answered | Primary Starting Point |
-| :--- | :--- | :--- |
-| **Mentor / Judge** | What is MedicalPlab? Why is it differentiated? What is built today vs future vision? | [Mentor Quick Briefing](docs/handoff/MENTOR_START_HERE.md) &bull; [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) |
-| **Mobile Developer** | How do I integrate iOS/Android against the REST contract? Where is the OpenAPI spec? | [Mobile 10-Min Start](docs/mobile-handoff/START_HERE.md) &bull; [Client Examples](docs/mobile-handoff/CLIENT_EXAMPLES.md) &bull; [OpenAPI](docs/mobile-handoff/openapi.json) |
-| **AI / Backend Engineer** | How does the Evidence Engine work? Where are the claim verification boundaries? | [Generative AI Core](#generative-ai-core) &bull; [AI Architecture](docs/AI_SYSTEM.md) &bull; [System Architecture](docs/ARCHITECTURE.md) |
-| **Clinical Reviewer** | How is clinical literature verified? How is candidate PLAB exam content governed? | [Clinical Governance](#clinical-licensing-governance) &bull; [Clinical Safety](docs/CLINICAL_SAFETY.md) &bull; [Attribution](THIRD_PARTY_NOTICES_ANATOMY.md) |
+[Why MedicalPlab Is Different](#why-medicalplab-is-different) • [The Learning Loop](#the-medicalplab-learning-loop) • [Where GenAI Fits](#where-generative-ai-actually-fits) • [Product Capabilities](#product-capabilities) • [Evidence Architecture](#evidence-grounded-architecture) • [Cognitive Anatomy](#cognitive-anatomy) • [Engineering Confidence](#engineering-confidence) • [Demo Journey](#demo-journey) • [Run Locally](#run-medicalplab-locally) • [Safety by Design](#safety-by-design) • [Beyond LLM Wrappers](#why-this-is-more-than-an-llm-wrapper) • [Current Status](#current-project-status) • [Roadmap](#future-roadmap) • [Documentation](#documentation-navigation) • [Product Brief](docs/handoff/FINAL_PRODUCT_BRIEF.md)
 
 ---
 
 ## Why MedicalPlab Is Different
 
-MedicalPlab is engineered around six fundamental architectural departures from conventional medical educational software:
+MedicalPlab departs fundamentally from conventional medical education software and generic conversational AI wrappers across seven architectural boundaries:
 
-### 1. Reasoning-Aware Learning
-Instead of only recording whether an answer is right or wrong, selected distractors may map to heuristic reasoning-pattern signals. A mistake is treated as an educational hypothesis that routes bounded intervention, rather than an arbitrary deduction.
+### 1. Learner State, Not Stateless Chat
+Most medical AI tools operate statelessly: prompt &rarr; answer &rarr; forget. MedicalPlab maintains persistent, multi-topic learner state machines. Learning history, mastery trajectories, and error distributions persist across preclinical curricular questions, AI tutor discussions, and 3D spatial anatomy challenges.
 
-### 2. Evidence-Grounded Generative Tutoring
-Medical explanations are retrieved from peer-reviewed literature, reranked by neural cross-encoders, generated under strict context constraints, and subjected to sentence-level claim verification before delivery. Unsupported claims fail-closed to safe guidance.
+### 2. Wrong Answer &ne; Confirmed Misconception
+In MedicalPlab, an incorrect response is treated as an informative signal rather than an automatic mark of incompetence. Selected distractors are mapped against a curated clinical taxonomy to identify *provisional heuristic reasoning signals*. They represent educational hypotheses to investigate through targeted scaffolding—never definitive diagnoses of learner ability.
 
-### 3. Independent Transfer Verification
-Socratic dialogue alone does not certify competence. After remediation, the learner must solve an unprompted, held-out clinical transfer problem before learner state is updated.
+### 3. Bounded Socratic Remediation
+When a student selects a diagnostic distractor, the platform does not simply give away the answer or show a wall of text. It initiates a bounded 3-turn Socratic remediation sequence (Probe &rarr; Guide &rarr; Consolidate) that scaffolds physiological reasoning without disclosing the answer key.
 
-### 4. Spatial Intelligence Grounding
-3D anatomy is connected directly to the cognitive state rather than operating as an isolated cosmetic viewer. Spatial landmarks anchor basic-science concepts in canonical physical geometry.
+### 4. Independent Transfer Verification
+Dialogue alone does not confirm mastery. A student can easily parrot an explanation without understanding the underlying mechanism. MedicalPlab enforces an independent transfer firewall: the learner must successfully solve an unprompted, structurally distinct held-out clinical vignette before transfer is confirmed and learner state advances.
 
-### 5. AI / Scientific Asset Separation
-Generative AI orchestrates educational scene actions (camera focus, structure highlight), but **never** generates or alters scientific anatomy geometry. Authority remains anchored in peer-reviewed HuBMAP Human Reference Atlas models.
+### 5. Evidence-Grounded Generative Tutoring
+The generative model is never presented as the source of medical truth. The AI Tutor follows a strict verification pipeline:
+$$\text{TutorService} \longrightarrow \text{Shared Evidence Engine} \longrightarrow \text{Retrieval} \longrightarrow \text{Rights/Provenance} \longrightarrow \text{NLI Verification} \longrightarrow \text{Grounded Output / Safe Fallback}$$
+Medical statements are broken down into atomic propositions and verified for entailment against open-access PubMed Central literature. If evidence is insufficient, the system safely falls closed to procedural Socratic guidance with zero unverified claims.
 
-### 6. Governance-First Clinical Content
-Clinical examination questions undergo strict lifecycle control. Candidate PLAB questions cannot self-promote into released production curriculum without independent clinician review panel sign-off.
+### 6. Cognitive Anatomy: "Structure Carries Signal"
+Anatomy is not an ornamental 3D viewer. Generative AI orchestrates educational intent and structured scene actions (`FOCUS_STRUCTURE`, `HIGHLIGHT_STRUCTURE`), while Three.js renders immutable, scientifically validated NIH HuBMAP Human Reference Atlas geometry. Structure identification challenges are scored deterministically by backend raycasting on anatomical ontology IDs.
 
----
-
-## From Signal to Understanding
-
-The core narrative spine of MedicalPlab transforms a single diagnostic interaction into verified understanding:
-
-```
-Learner Selects Distractor
-          │
-          ▼
-Heuristic Reasoning-Pattern Signal Identifies Potential Misconception
-          │
-          ▼
-Adaptive Policy Routes Student to 3-Turn Socratic Remediation Drawer
-          │
-          ▼
-Independent Held-Out Transfer Problem Verifies Conceptual Understanding
-          │
-          ▼
-AI Tutor Provides Deeper Verified Evidence with PMC Citations
-          │
-          ▼
-3D Anatomy Grounds Physiology in Physical Organ Architecture
-          │
-          ▼
-Unified Learner Progress Updates Topic-Level Learner State
-```
+### 7. Governed PLAB Exam Content
+Candidate examination questions are structurally segregated under **Preview QA** governance. Candidate questions cannot self-promote into public production curriculum without independent clinician review panel sign-off (`PLAB_GOLDEN_PROMOTION_REQUIRED = YES`, Golden released = 0, Preview QA = 36).
 
 ---
 
-## Signal Path
+## The MedicalPlab Learning Loop
 
-The closed-loop architecture ensures that every learner interaction carries cognitive signal through the entire educational stack:
+The closed-loop cognitive learning spine connects diagnostic interaction directly to verified conceptual transfer:
+
+```mermaid
+graph TD
+    A[Curricular Question Attempt] --> B{Answer Evaluation}
+    B -->|Correct| C[Advance Topic Mastery & Streak]
+    B -->|Distractor Selected| D[Heuristic Reasoning Signal Detected]
+    D --> E[Bounded 3-Turn Socratic Drawer]
+    E -->|Turn 1: Probe| E1[Prompt Physiological Rationale]
+    E1 -->|Turn 2: Guide| E2[Targeted Mechanistic Clue]
+    E2 -->|Turn 3: Consolidate| E3[Student Synthesizes Principle]
+    E3 --> F[Independent Held-Out Transfer Problem]
+    F -->|Transfer Confirmed| G[Update Topic Learner State]
+    F -->|Transfer Missed| H[Retain in Priority Queue]
+    G --> I[Unified Cross-Module Progress Synchronization]
+```
 
 <p align="center">
   <img src="docs/readme-assets/signal-path-ribbon.svg" alt="MedicalPlab Closed-Loop Cognitive Signal Path" width="100%" />
 </p>
 
-| Stage | Cognitive Function | Pedagogical Mechanism |
+| Stage | Cognitive Objective | Pedagogical Mechanism |
 | :--- | :--- | :--- |
-| **1. Attempt** | Evaluated Clinical Scenario | Preclinical basic science or clinical question attempt |
-| **2. Reasoning Signal** | Heuristic Pattern Identification | Selected distractors may map to heuristic reasoning-pattern signals |
-| **3. Adaptive Intervention** | Dynamic Routing Policy | Recommends targeted remediation rather than passive scoring |
-| **4. Socratic Remediation** | Dialogue Scaffolding | 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate |
-| **5. Independent Transfer** | Independent Transfer Evidence | Demonstrates transfer on an unseen held-out item before learner state update |
-| **6. Grounded Tutor** | Verified Literature Inquiries | Explanations bounded to open-access PMC literature with proposition verification |
-| **7. Spatial 3D Learning** | Anatomy Grounding | Interactive HuBMAP Human Reference Atlas models with deterministic raycast challenges |
-| **8. Unified Progress** | Cross-Module Progress | Shared progress across preclinical tracks, tutor turns, and 3D spatial labs |
+| **1. Diagnostic Attempt** | Preclinical assessment | Clinical vignette with high-yield distractor taxonomy |
+| **2. Reasoning Signal** | Misconception hypothesis | Distractor maps to heuristic reasoning pattern |
+| **3. Socratic Scaffolding**| Guided self-correction | Bounded 3-turn dialogue: Probe &rarr; Guide &rarr; Consolidate |
+| **4. Transfer Firewall** | Verification of generalization | Unprompted, held-out clinical item (`UNI-RENAL-001-T`) |
+| **5. Grounded Tutoring** | Literature deep-dive | Hybrid BM25/Dense RAG with proposition-level NLI verification |
+| **6. Spatial Grounding** | Physical organ architecture | Canonical HuBMAP 3D models with deterministic raycast challenge |
+| **7. Unified Progress** | Longitudinal competence tracking | Synchronized progress across questions, tutor turns, and 3D tasks |
 
 ---
 
-## Generative AI Core
+## Where Generative AI Actually Fits
 
-> **"MedicalPlab uses generation as a controlled educational capability, not as an authority."**
+MedicalPlab maintains an explicit, non-negotiable boundary between **Generative Intelligence** and **Deterministic Safety**:
 
-The platform decouples generative fluency from medical authority. The generative model operates inside a deterministic verification container where context is bounded by retrieved evidence, claims are verified before output, and pedagogical decisions follow an explicit state machine.
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│               GENERATIVE CAPABILITIES (Educational AI)                 │
+│  • Synthesizes multi-turn Socratic probing questions                   │
+│  • Generates accessible mechanistic explanations from retrieved chunks  │
+│  • Emits structured JSON scene actions (camera moves, highlights)      │
+│  • Recommends adaptive curriculum pacing from learner state heuristics │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+                                    ▼ Passes through
+┌────────────────────────────────────────────────────────────────────────┐
+│           DETERMINISTIC VERIFICATION BOUNDARY (Medical Truth)          │
+│  • Shared Evidence Engine verifies CC-BY open-access PMC provenance    │
+│  • NLI Claim Verifier validates atomic propositions (Entailment Gate)  │
+│  • Fail-closed SAFE_FALLBACK triggered if evidence is insufficient     │
+│  • Three.js raycaster scores 3D structure clicks deterministically     │
+│  • Transfer challenge correctness evaluated against immutable keys    │
+│  • Clinician panel review strictly gates candidate PLAB exam content   │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
 <p align="center">
-  <img src="docs/readme-assets/generative-ai-core.svg" alt="MedicalPlab Generative AI Core Dual-Pipeline Architecture" width="100%" />
+  <img src="docs/readme-assets/generative-ai-core.svg" alt="MedicalPlab Generative AI Dual-Pipeline Core Architecture" width="100%" />
 </p>
 
-### Pipeline A: Evidence-Grounded Reasoning
-1. **Learner Clinical Query:** The student poses a mechanistic question during practice.
-2. **Hybrid Evidence Retrieval:** Lexical BM25 search and dense retrieval query indexed open-access PMC literature.
-3. **Neural Reranking:** In-domain cross-encoders rerank chunks for clinical relevance and topical precision.
-4. **Context Bounding & Rights Gate:** Chunks are validated for open-access licensing (CC-BY) and assembled into a bounded prompt context.
-5. **Generative Reasoning Draft:** The generative provider drafts an explanatory response strictly constrained to the provided context.
-6. **Proposition Claim Verification:** Statements are segmented into atomic propositions and verified for entailment against retrieved evidence chunks.
-7. **Supported Output or Safe Fallback:** If verified, the response is delivered with citations. If unsupported claims exist, the system deterministically executes `SAFE_FALLBACK`.
+### What Generative AI Does
+* Powers pedagogical dialogue during bounded Socratic remediation.
+* Generates clear, concise clinical explanations bounded strictly by retrieved excerpts.
+* Formulates structured scene orchestration payloads dispatched to the Three.js viewport.
 
-### Pipeline B: Adaptive Pedagogical Actions
-In parallel, learner interactions emit progress events into the **Adaptive Policy Engine**. The engine evaluates topic-level learner state, error history, and reasoning hypotheses to emit structured actions:
-* **Socratic Prompts:** Guiding questions that probe mechanism without disclosing the answer key.
-* **Tutor Interventions:** Mechanistic deep dives when persistent misconceptions emerge.
-* **3D Scene Guidance:** Camera position and structure highlighting actions dispatched to the client Three.js canvas.
-* **Next Best Step:** Curriculum sequencing recommendations.
+### What Generative AI NEVER Controls
+* **Medical Truth:** The language model is not the authority; peer-reviewed PMC literature is.
+* **Challenge Scoring:** Transfer questions and 3D anatomy pins evaluate deterministically.
+* **Anatomical Geometry:** 3D meshes are immutable NIH HuBMAP scientific assets; AI never generates or deforms geometry.
+* **Examination Governance:** AI cannot promote candidate PLAB questions to released status.
 
 ---
 
-## AI Systems at a Glance
+## Product Capabilities
 
-MedicalPlab organizes its AI capabilities into four distinct operational disciplines, all anchored by a unified verification boundary:
+Every capability described below is fully implemented, certified by automated test suites, and runnable locally:
 
-```
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│     GROUND      │      │     REASON      │      │      ADAPT      │      │       ACT       │
-├─────────────────┤      ├─────────────────┤      ├─────────────────┤      ├─────────────────┤
-│ Evidence RAG    │      │ Bounded Context │      │ State Tracking  │      │ Socratic Steps  │
-│ BM25 + RRF      │ ───► │ Structured JSON │ ───► │ Heuristic Rules │ ───► │ Tutor Response  │
-│ Rights Gating   │      │ Draft Reasoner  │      │ Policy Routing  │      │ 3D Scene Action │
-└─────────────────┘      └─────────────────┘      └─────────────────┘      └─────────────────┘
-         ▲                                                                          │
-         │                         VERIFY (FAIL-CLOSED)                             │
-         └──────────────────────────────────────────────────────────────────────────┘
-           Proposition Entailment Audit • Raycast Geometry Scoring • Rights Check
-```
-
-* **GROUND:** Open-access PMC retrieval, Reciprocal Rank Fusion (RRF), license rights verification.
-* **REASON:** In-context generative explanations, reasoning-pattern identification, dialogue formulation.
-* **ADAPT:** Topic-level state machines, distractor hypothesis mapping, recommendation heuristics.
-* **ACT:** Structured scene actions for Three.js, multi-turn Socratic prompts, held-out transfer items.
-* **VERIFY:** Proposition-level NLI verification, deterministic raycasting, answer-key protection. Nothing substantive is served without passing verification.
-
----
-
-## MedicalPlab Intelligence Stack
-
-| Layer | Functional Role | Operational Mechanics | Authoritative Guarantees |
-| :--- | :--- | :--- | :--- |
-| **Adaptive Intelligence** | Cognitive diagnostic routing | Distractor taxonomy mapping, heuristic reasoning signals, topic-level learner state | Wrong answer &ne; confirmed defect; signals are provisional hypotheses |
-| **Generative Intelligence** | Pedagogical dialogue & explanation | In-context clinical explanations, multi-turn Socratic scaffolding, structured scene payloads | Generation is bounded by evidence; no unconstrained medical generation |
-| **Evidence Intelligence** | Evidence retrieval & verification | Hybrid BM25 + dense retrieval, neural reranking, proposition entailment verification | Fail-closed `SAFE_FALLBACK`; only rights-approved CC-BY sources served |
-| **Spatial Intelligence** | Physical anatomical grounding | Three.js renderer, HuBMAP HRA canonical CCF geometry, deterministic raycasting | AI directs camera/highlights; scientific geometry is fixed and immutable |
-| **Learning Intelligence** | Cross-Module Progress | Unified cross-module learner progress across questions, tutor sessions, and 3D challenges | Held-out transfer items provide independent evidence of transfer |
-
-> **Governance Boundary:** Cohort-level learning intelligence and aggregate reasoning-gap analytics are **educator-facing only**. They are never exposed as automated student-facing diagnostic recommendations.
-
----
-
-## Product Experience
-
-Real interfaces captured from the certified MedicalPlab demonstration:
+### 1. University Learning & Preclinical Assessment
+Foundational preclinical curriculum featuring multi-choice items paired with explicit distractor reasoning taxonomies. Includes renal hemodynamics, glomerular filtration barrier dynamics, and RAAS physiology with immediate deterministic scoring.
 
 <p align="center">
   <img src="docs/demo/final-showcase/01-home.png" alt="FIG. 01 — Learning Hub" width="100%" />
 </p>
 
-**FIG. 01 — LEARNING HUB**  
-*The central student command center unifying curriculum tracks, continuous competence tracking, and recommended adaptive interventions.*
+### 2. Adaptive Learning & Derived Learner State
+Dynamic cognitive tracking that monitors topic-level error distributions, streaks, and distractor selections. Derives adaptive recommendations for targeted remediation rather than passive question repetition.
+
+### 3. Socratic Remediation Drawer
+When a student selects a reasoning distractor, a slide-over Socratic drawer opens. The preceptor probes physiological reasoning across a strictly bounded 3-turn sequence (Probe &rarr; Guide &rarr; Consolidate), scaffolding the student toward understanding without revealing the correct option.
 
 <p align="center">
   <img src="docs/demo/final-showcase/03-remediation.png" alt="FIG. 02 — Socratic Remediation" width="100%" />
 </p>
 
-**FIG. 02 — UNIVERSITY & SOCRATIC REMEDIATION**  
-*Curricular renal physiology question with multi-turn Socratic remediation that scaffolds learner reasoning without leaking the answer key.*
+### 4. Independent Held-Out Transfer Assessment
+Following Socratic remediation, the system presents an unprompted, structurally distinct held-out transfer clinical vignette (`UNI-RENAL-001-T`). Transfer competence is only recorded when the student correctly applies the reconciled principle independently.
+
+### 5. Evidence-Grounded AI Tutor
+Interactive medical tutor backed by indexed open-access PubMed Central basic-science literature. Employs hybrid BM25 + dense retrieval, neural cross-encoder reranking, and sentence-level proposition entailment verification. Every response includes verifiable PMCID and DOI citations with open-access license provenance.
 
 <p align="center">
-  <img src="docs/readme-assets/tutor-safe-fallback.png" alt="FIG. 03 — Grounded AI Tutor Safe Fallback" width="100%" />
-</p>
-
-**FIG. 03 — GROUNDED TUTOR SAFE FALLBACK**  
-*When candidate evidence is insufficient for proposition verification, the system falls closed into content-neutral procedural Socratic guidance.*
-
-<p align="center">
-  <img src="docs/readme-assets/anatomy-challenge-result.png" alt="FIG. 04 — Spatial 3D Anatomy Challenge" width="100%" />
-</p>
-
-**FIG. 04 — SPATIAL 3D ANATOMY CHALLENGE**  
-*Three.js anatomy workspace with independent Left Renal Artery identification evaluated deterministically by the backend scoring engine.*
-
-<p align="center">
-  <img src="docs/demo/final-showcase/08-progress.png" alt="FIG. 05 — Unified Progress" width="100%" />
-</p>
-
-**FIG. 05 — UNIFIED PROGRESS**  
-*Unified learner progress recording question accuracy, remediation completions, transfer problem success, and spatial anatomy challenge scores.*
-
----
-
-## Adaptive Learning & Socratic Remediation
-
-Selected distractors may map to heuristic reasoning-pattern signals. In MedicalPlab, an incorrect answer is **not** a confirmed misconception; it represents a provisional reasoning-pattern signal and heuristic educational hypothesis that routes the learner to targeted Socratic scaffolding.
-
-<p align="center">
-  <img src="docs/readme-assets/remediation-loop.svg" alt="MedicalPlab Remediation Loop & Transfer Firewall" width="100%" />
-</p>
-
-The remediation dialogue is separated from learner state updates by an architectural firewall:
-
-1. **Probe:** The preceptor prompts the learner to explain the physiological principle behind their choice.
-2. **Guide:** Target clues highlight the specific mechanistic distinction without disclosing the answer.
-3. **Consolidate:** The learner summarizes the reconciled concept in their own terms.
-4. **Independent Transfer Firewall:** Remediation dialogue scaffolds understanding. A held-out transfer item provides independent evidence of transfer before learner state is updated.
-
-<details>
-<summary>Under the hood: Adaptive State Machine & Reasoning Signal Heuristics</summary>
-
-```
-[Student Attempt]
-       │
-       ▼
-[Distractor Analysis Engine] ──► Evaluates selected option against distractor taxonomy
-       │
-       ├─► Correct ──► Increment streak, advance difficulty tier
-       │
-       └─► Distractor Identified (e.g., Substrate vs Product Confusion)
-              │
-              ▼
-       [Remediation State Machine]
-              │
-              ├── State: PROBE (Prompt student for physiological rationale)
-              ├── State: GUIDE (Offer progressive hints level 1–3)
-              └── State: CONSOLIDATE (Validate student mechanistic summary)
-                     │
-                     ▼
-       [Held-Out Transfer Gate]
-              │
-              ├── Pass ──► Update topic-level learner state (+1 Transfer demonstrated)
-              └── Fail ──► Retain topic in priority queue for review
-```
-
-* Heuristic pattern identification operates deterministically via rule-matched distractor dictionaries (`Data/university/distractor_taxonomy.json`).
-* Student progress records are isolated per topic (`raas_mechanisms`, `glomerular_filtration_barrier`) and persisted across sessions.
-</details>
-
----
-
-## Evidence-Grounded AI Tutor
-
-The MedicalPlab Tutor is built specifically to address hallucination in medical education. It does not generate unconstrained text.
-
-<p align="center">
-  <img src="docs/readme-assets/tutor-grounded-demo.gif" alt="Evidence-Grounded Tutor Interactive Demonstration" width="100%" />
+  <img src="docs/readme-assets/tutor-grounded-demo.gif" alt="FIG. 03 — Evidence-Grounded Tutor Demo" width="100%" />
 </p>
 
 *Captured from the live MedicalPlab student practice experience during post-submission mechanistic analysis.*
 
-1. **Query:** Student asks a mechanistic or clinical question.
-2. **Retrieve:** Shared Evidence Engine queries the indexed PubMed Central open-access basic-science corpus.
-3. **Rerank & Rights Gate:** Candidates are reranked and filtered through the source rights gate to verify approved open-access / Creative Commons licenses.
-4. **Bounded Generation:** Generative provider drafts an explanation constrained to retrieved excerpts.
-5. **Post-Generation Verification:** Every proposition is checked for entailment against source chunks. If support is insufficient, the system safely falls closed to procedural Socratic guidance (`SAFE_FALLBACK`).
+### 6. Cognitive 3D Anatomy Lab
+Interactive Three.js anatomical canvas rendering canonical NIH HuBMAP CCF kidney models. Features smooth camera transitions, guided anatomical tours (`renal_vein_left`), and deterministic structure identification challenges (`renal_artery_left`) evaluated via raycast ontology matching.
 
-<details>
-<summary>Under the hood: Verification Gate & Evidence Provenance</summary>
+### 7. Unified Learner Progress
+Cross-module telemetry engine that synchronizes preclinical question accuracy, Socratic completions, transfer problem success, tutor inquiries, and 3D anatomy pin scores into a unified learner profile.
 
-```python
-# Verification Contract:
-class TutorPostVerifier:
-    def verify(self, draft_message: str, candidate_chunks: list[Chunk]) -> VerificationResult:
-        propositions = self.segmenter.extract_propositions(draft_message)
-        unsupported = []
-        for prop in propositions:
-            entailed = self.claim_verifier.verify(prop, candidate_chunks)
-            if not entailed:
-                unsupported.append(prop)
-        
-        if len(unsupported) > 0:
-            return VerificationResult(status="SAFE_FALLBACK", fallback_applied=True)
-        return VerificationResult(status="SUPPORTED", fallback_applied=False)
-```
+<p align="center">
+  <img src="docs/readme-assets/tutor-safe-fallback.png" alt="FIG. 04 — Grounded Tutor Safe Fallback" width="100%" />
+</p>
 
-* **Evidence-Grounded Verifier:** Responses are served as Evidence Supported only after the verifier confirms support for substantive medical propositions against the active retrieved evidence.
-* **Fail-Closed Fallback:** When candidate support is insufficient or out of scope, the system safely triggers content-neutral procedural Socratic guidance (`SAFE_FALLBACK`) with zero substantive medical claims.
-* **Citation Traceability:** Citations include PMCID, DOI, author metadata, exact chunk identifiers, and licensing provenance (e.g., `CC BY 4.0`, `CC BY 3.0`).
-</details>
+*When evidence is insufficient for proposition verification, the system falls closed into content-neutral procedural Socratic guidance with zero unverified claims.*
 
 ---
 
-## Shared Evidence Engine
+## Evidence-Grounded Architecture
 
-MedicalPlab employs a shared evidence architecture across both Socratic tutoring and clinical case discussions:
+MedicalPlab enforces a single, authoritative evidence retrieval and verification stack across all educational flows:
+
+```
+[Adaptive Layer / Tutor Interface]
+                 │
+                 ▼
+          [TutorService]
+                 │
+                 ▼
+     [Shared Evidence Engine]
+                 │
+  ┌──────────────┴──────────────┐
+  │ Hybrid Retrieval            │ ──► BM25 Lexical + Dense Embeddings (RRF)
+  │ Rights & License Gate       │ ──► Open-Access CC-BY PMC Literature Gating
+  │ In-Domain Reranker          │ ──► Neural Cross-Encoder Reranking
+  └──────────────┬──────────────┘
+                 │ Top-k Chunks (Bounded Context)
+                 ▼
+     [Generative Reasoning Draft]
+                 │ Unverified Draft
+                 ▼
+     [NLI Proposition Verifier]
+                 │
+        ┌────────┴────────┐
+        │                 │
+     [PASSED]          [FAILED]
+        │                 │
+        ▼                 ▼
+  Grounded Output    SAFE_FALLBACK
+  with Citations     (Content-neutral procedural
+  (PMCID / DOI)       Socratic guidance; 0 claims)
+```
 
 <p align="center">
   <img src="docs/readme-assets/evidence-engine.svg" alt="MedicalPlab Shared Evidence Engine Architecture" width="100%" />
 </p>
 
-* **Unified Retrieval:** A single authoritative retrieval engine serves both University and Clinical tracks.
-* **License Firewall:** Rights-approved open-access / Creative Commons evidence sources are admitted only after source-level license verification, with license provenance preserved per document.
-* **No Direct LLM Path:** The adaptive engine and question modules never call an unconstrained LLM directly; all generation routes through the verification and rights pipeline.
+* **No Direct LLM Bypass:** The adaptive engine and question modules never access an unconstrained LLM directly; all generation routes through the verification and rights pipeline.
+* **Unified Retrieval:** A single authoritative retrieval engine serves both preclinical tracks and clinical case discussions.
+* **Fail-Closed Fallback:** When candidate support is insufficient or out of scope, the system safely triggers content-neutral procedural Socratic guidance (`SAFE_FALLBACK`) with zero substantive medical claims.
 
 ---
 
-## Spatial 3D Anatomy
+## Cognitive Anatomy
 
-Medical understanding requires spatial grounding. The MedicalPlab 3D Anatomy Lab renders canonical CCF models from the NIH HuBMAP Human Reference Atlas.
+> **"Structure carries signal."**
+
+In MedicalPlab, spatial anatomy is an active cognitive grounding instrument rather than an isolated cosmetic viewer:
 
 <p align="center">
   <img src="docs/readme-assets/anatomy-orbit.gif" alt="3D Anatomy Orbit & Left Renal Vein Selection" width="100%" />
@@ -336,260 +238,206 @@ Medical understanding requires spatial grounding. The MedicalPlab 3D Anatomy Lab
 
 *Captured from the live MedicalPlab Three.js anatomy experience using licensed HuBMAP Human Reference Atlas assets.*
 
-* **Exploration:** Smooth orbit, pan, and zoom with canonical camera presets (`Overview`, `Anterior Hilum`, `Internal View`).
-* **Socratic Grounding:** Selecting physical structures (capsule, renal artery, renal vein, pelvis) triggers contextual basic-science lessons.
-* **Deterministic Scoring:** The learner is challenged to identify structures independently. Raycasted clicks are verified against anatomical ontology IDs (`UBERON:0002113`, `UBERON:0001120`, `UBERON:0001121`).
-
-<details>
-<summary>Under the hood: Deterministic Challenge Verification & Coordinate Framing</summary>
-
-```json
-// Canonical Challenge Verification Flow:
-POST /api/v1/anatomy/session/{session_id}/challenge
-Payload: {
-  "learner_id": "learner_42",
-  "selected_structure_id": "renal_artery_left"
-}
-
-// Server Response (Deterministic Evaluation):
-{
-  "session": {
-    "session_id": "anat_sess_01",
-    "learner_id": "learner_42",
-    "learning_objective": "RENAL_BLOOD_FLOW_AND_HILUM",
-    "lesson_state": "CHALLENGE_ACTIVE",
-    "challenge_state": "COMPLETED",
-    "challenge_result": "CORRECT"
-  },
-  "is_correct": true,
-  "target_structure_id": "renal_artery_left",
-  "selected_structure_id": "renal_artery_left",
-  "tutor_feedback": "Correct. You have accurately identified the Left Renal Artery.",
-  "scene_actions": [
-    {
-      "action": "HIGHLIGHT_STRUCTURE",
-      "structure_id": "renal_artery_left",
-      "duration_ms": 1500
-    }
-  ]
-}
-```
-
-* All anatomical structures use the HuBMAP Common Coordinate Framework (CCF v1.3 / v2.0) registered to anatomical reference standards.
-* Geometry is immutable and loaded directly from verified GLB assets.
-</details>
-
----
-
-## AI Instruction Layer vs Geometry Layer
-
-A fundamental principle of MedicalPlab is architectural separation of AI agency and medical truth:
+### Spatial Architecture & Boundaries
+* **AI Orchestration vs. Immutable Geometry:** AI decides educational intent (`FOCUS_STRUCTURE`, `HIGHLIGHT_STRUCTURE`). The application validates structured actions. Three.js executes deterministic visual behavior. The model **never** generates or alters scientific anatomy geometry.
+* **Scientific Provenance:** Meshes derive exclusively from the **NIH HuBMAP Human Reference Atlas (HRA)** registered to the Common Coordinate Framework (CCF v1.3/v2.0).
+* **Guided Tour vs. Independent Challenge:**
+  * **Guided Tour Target:** `renal_vein_left` (anterior hilar vascular relationship inspection).
+  * **Independent Challenge Target:** `renal_artery_left` (independent structure identification).
+  * The two targets are structurally separated and never conflated.
+* **Deterministic Scoring:** Raycasted clicks from the Three.js viewport are verified on the backend against anatomical ontology IDs (`UBERON:0001120`).
 
 <p align="center">
   <img src="docs/readme-assets/anatomy-ai-boundary.svg" alt="AI Instruction Layer vs Licensed Geometry Boundary" width="100%" />
 </p>
 
-> **AI DOES NOT GENERATE ANATOMY GEOMETRY.**  
-> The 3D anatomical meshes are immutable scientific assets licensed from the HuBMAP Human Reference Atlas. The AI layer is strictly restricted to structured scene orchestration (`FOCUS_STRUCTURE`, `HIGHLIGHT_STRUCTURE`, `ISOLATE_STRUCTURE`, `SHOW_RELATION`, `RESET_SCENE`).
-
 ---
 
-## Innovation Map
+## Engineering Confidence
 
-MedicalPlab connects five core engineering pillars into a cohesive, closed-loop educational system:
-
-<p align="center">
-  <img src="docs/readme-assets/innovation-map.svg" alt="MedicalPlab Five Pillars Innovation Map" width="100%" />
-</p>
-
-```
-Assessment ───────► Produces Heuristic Reasoning Signal
-      │
-Adaptive Layer ───► Determines Targeted Scaffolding Policy
-      │
-Generative Layer ─► Synthesizes Socratic Clues & Explanations
-      │
-Evidence Layer ───► Gates, Grounds, and Verifies Claims
-      │
-Spatial 3D Layer ─► Physically Grounds Organ Relationships
-      │
-Progress Layer ───► Closes the Cross-Module Progress Loop
-```
-
----
-
-## Built Today
-
-MedicalPlab maintains complete transparency regarding current implementation status vs future research horizons:
-
-| Capability Pillar | Built Today (Authoritative Implementation) | Status Marker |
-| :--- | :--- | :---: |
-| **Preclinical Curriculum** | 6 validated renal physiology questions with full distractor reasoning taxonomy | `CURRENT` |
-| **Adaptive Engine** | Distractor-matched reasoning signals with dynamic intervention routing | `CURRENT` |
-| **Socratic Remediation** | Bounded 3-turn Socratic sequence: Probe &rarr; Guide &rarr; Consolidate | `CURRENT` |
-| **Independent Transfer** | Held-out transfer item gating before transfer evidence is recorded | `CURRENT` |
-| **Evidence-Grounded Tutor**| Hybrid BM25 + dense retrieval, neural reranking, claim verification, safe fallback | `CURRENT` |
-| **Interactive 3D Anatomy**| Canonical HuBMAP HRA left kidney model with Three.js orbit and inspection presets | `CURRENT` |
-| **Guided Spatial Tours** | Pre-programmed Left Renal Vein and hilar anatomical inspections | `CURRENT` |
-| **Deterministic Spatial Challenge** | Left Renal Artery identification challenge with backend raycast verification | `CURRENT` |
-| **Unified Learner Progress** | Cross-module progress integration across questions, remediation, and 3D tasks | `CURRENT` |
-| **PLAB Exam Governance** | 36 candidate questions isolated under Preview QA; Golden released = 0 | `CURRENT` |
-| **Mobile Integration Baseline** | Frozen REST contract with OpenAPI 3.1.0, Postman collections, and client guides | `CURRENT` |
-
----
-
-## Technology & Tooling
-
-### Verified Core Stack
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,fastapi,nextjs,react,ts,tailwind,threejs,docker,git,github,gcp,vercel,vscode" alt="Verified Technology Stack" />
-  </a>
-</p>
-
-### AI Systems & Machine Learning
-<p align="center">
-  <img src="https://img.shields.io/badge/AI%20ML-PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/Retrieval-BM25%20%2B%20Dense-blue" alt="BM25" />
-  <img src="https://img.shields.io/badge/Fusion-Reciprocal%20Rank%20Fusion%20(RRF)-blueviolet" alt="RRF" />
-  <img src="https://img.shields.io/badge/Reranker-Qwen3%20Neural%20Cross--Encoder-orange" alt="Neural Reranker" />
-  <img src="https://img.shields.io/badge/Verification-Proposition%20NLI%20Entailment-brightgreen" alt="Claim Verification" />
-  <img src="https://img.shields.io/badge/Fallback-Fail--Closed%20Procedural%20Guidance-red" alt="Safe Fallback" />
-</p>
-
-### Architecture & Standards
-* **Backend:** Python 3.11 / 3.12 (pyproject.toml: ">=3.11,<3.13"), FastAPI, Pydantic v2, SQLite (module-owned pilot storage), Uvicorn.
-* **Frontend:** Next.js 16 (App Router, Node.js >=20.9), React 19, TypeScript, Tailwind CSS, Lucide Icons.
-* **3D Rendering:** Three.js 0.183+, WebGL 2.0, glTF 2.0 Loader, OrbitControls, Raycaster.
-* **Contract & QA:** OpenAPI 3.1.0, Postman Collections, Pytest, Chrome DevTools Protocol (CDP).
-
----
-
-## Engineering Verification
-
-MedicalPlab functionality is certified through continuous deterministic testing, contract drift auditing, and production builds:
+MedicalPlab functionality is certified through continuous deterministic testing, contract drift auditing, and production builds. Every figure below is verified against the current repository HEAD:
 
 ```
 ===================== CERTIFIED QUALITY GATE STATUS =====================
 - Backend Integration Tests:       23 / 23 PASS (tests/integration/)
 - Mobile API Contract Tests:       12 / 12 PASS (test_mobile_api_contract.py)
 - OpenAPI Drift Verification:      PASS (43 paths, 44 operations matching)
+- Staging Security Unit Gate:      15 / 15 PASS (tests/staging/test_staging_security.py)
 - Frontend Production Build:       PASS (Next.js 16.3.4, React 19, Turbopack)
-- Documentation Link Audit:        PASS (35 docs checked, 0 broken links)
-- Security & Secret Scan:          PASS (1,128 files audited, 0 leaks)
+- Documentation Link Audit:        PASS (39 docs checked, 0 broken links)
+- Clean Checkout Local Release:    PASS (verify_local_release.py)
+- Docker Free-Memory Smoke:        PASS (512MB RAM limit, 0 ML model weights)
+- GitHub Actions CI Workflows:     8 / 8 Jobs PASS (release branch HEAD)
 =========================================================================
 ```
 
-Enforced Verifier Guarantees:
-* **Proposition-Level Claim Verification:** Generative tutor drafts are decomposed into atomic statements and checked against retrieved active evidence chunks. If support is insufficient, the system safely triggers fail-closed procedural fallback (`SAFE_FALLBACK`).
-* **Deterministic 3D Anatomy Scoring:** Raycast clicks are evaluated deterministically on the backend against verified HuBMAP CCF anatomical structure identifiers.
-* **Answer Key Protection:** Pre-submission Socratic scaffolding never leaks correct options or distractor keys.
+### Reproduce Local Verification
+```powershell
+# 1. Run one-command local release verification:
+python Scripts/verify_local_release.py
 
-```bash
-# Run backend integration tests:
-python -m pytest tests/integration/ -q -p no:cacheprovider
+# 2. Run backend integration suite:
+python -m pytest tests/integration/ -v
 
-# Run mobile contract certification:
-python -m pytest tests/integration/test_mobile_api_contract.py -q
+# 3. Run mobile contract certification:
+python -m pytest tests/integration/test_mobile_api_contract.py -v
 
-# Run runtime OpenAPI drift check:
+# 4. Audit OpenAPI contract drift:
 python Scripts/verify_mobile_contract_drift.py
+
+# 5. Audit internal documentation links:
+python Scripts/verify_repository_handoff.py
 ```
 
 ---
 
-## Mobile Integration
+## Demo Journey
 
-MedicalPlab provides a frozen mobile API contract for rapid cross-platform client integration (Flutter, React Native, iOS, Android):
+Follow this recommended 3-minute evaluation walkthrough to experience the full closed loop:
 
-* **Pilot Identity:** Learner identity partitioning via `X-User-Id` header (classified as demo learner identity; `X-User-Id` is NOT production cryptographic authentication; `MOBILE_PRODUCTION_AUTH_READY = NO`).
-* **Authoritative Contract:** All request schemas, responses, and error handling follow [docs/mobile-handoff/API_CONTRACT.md](docs/mobile-handoff/API_CONTRACT.md).
-* **Onboarding Guide:** Complete 10-minute setup in [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md).
-* **Code Examples:** Production-ready client snippets in Flutter and React Native in [docs/mobile-handoff/CLIENT_EXAMPLES.md](docs/mobile-handoff/CLIENT_EXAMPLES.md).
-* **Checklist:** Integration pre-flight validation in [docs/mobile-handoff/INTEGRATION_CHECKLIST.md](docs/mobile-handoff/INTEGRATION_CHECKLIST.md).
-* **Specification:** Frozen OpenAPI specification at [docs/mobile-handoff/openapi.json](docs/mobile-handoff/openapi.json).
+1. **Home (`/`):** Enter the unified Student Command Center and review available tracks.
+2. **University Practice (`/university`):** Select *Renal physiology &rarr; RAAS mechanisms*. Review question `UNI-RENAL-001`.
+3. **Trigger Distractor:** Select distractor `[B] Angiotensin II`. Observe instant deterministic evaluation capturing the cognitive inversion signal.
+4. **Socratic Remediation Drawer:** Engage in the 3-turn remediation sequence:
+   * *Turn 1 (Probe):* Preceptor asks to trace hydraulic pressure across the glomerular capillary bed.
+   * *Turn 2 (Guide):* Preceptor guides focus to afferent vs efferent resistance mechanisms.
+   * *Turn 3 (Consolidate):* Learner synthesizes the principle; system unlocks transfer.
+5. **Independent Held-Out Transfer:** Click *Take Transfer Challenge*. System presents unprompted held-out clinical vignette `UNI-RENAL-001-T`. Answer `[A] Angiotensinogen` to confirm transfer.
+6. **Evidence-Grounded Tutor (`/tutor`):** Ask *"Explain the role of renin in renal hemodynamics"*. Observe proposition verification and inspect verified PMC citations with license provenance.
+7. **3D Spatial Anatomy (`/anatomy`):** Explore the HuBMAP CCF kidney model. Take the guided tour (`renal_vein_left`), then complete the independent pin challenge (`renal_artery_left`).
+8. **Unified Progress (`/progress`):** Observe synchronized telemetry reflecting question accuracy, remediation completions, transfer problem success, and 3D anatomy scores.
+9. **PLAB Preview QA (`/practice`):** Inspect candidate items under clinical governance (36 preview questions, 0 released golden items).
 
-<details>
-<summary>Under the hood: Canonical Mobile Endpoints</summary>
-
-```
-# Preclinical University Curriculum
-GET  /api/v1/university/subjects
-GET  /api/v1/university/topics
-GET  /api/v1/university/question
-POST /api/v1/university/answer
-
-# Adaptive Learning Engine
-GET  /api/v1/adaptive/recommendation
-GET  /api/v1/adaptive/state
-
-# Socratic Remediation & Transfer
-POST /api/v1/remediation/start
-POST /api/v1/remediation/turn
-GET  /api/v1/remediation/session/{session_id}/transfer
-POST /api/v1/remediation/session/{session_id}/transfer
-
-# Evidence-Grounded AI Tutor
-POST /api/v1/tutor/chat
-
-# Spatial 3D Anatomy
-POST /api/v1/anatomy/session/start
-POST /api/v1/anatomy/session/{session_id}/challenge
-
-# Unified Learner Progress
-GET  /api/v1/learner/progress
-```
-</details>
+*For detailed click targets, consult the [Final Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md).*
 
 ---
 
-## Clinical Licensing Governance
+## Run MedicalPlab Locally
 
-MedicalPlab implements explicit clinical content governance to ensure candidate safety and pedagogical accuracy:
+MedicalPlab is **strictly local-first**. You can clone, configure, and run the entire product on standard CPU hardware without any cloud account, payment card, external staging server, or paid LLM API key.
+
+### System Prerequisites
+* **Python:** `3.11` or `3.12` (`pyproject.toml: ">=3.11,<3.13"`)
+* **Node.js:** `>=20.9.0` (Recommended: `20 LTS` or `22 LTS`)
+* **Hardware:** Standard CPU workstation (zero GPU or PyTorch CUDA setup required)
+
+---
+
+### Automated One-Command Launch (Fastest)
+
+#### Windows (PowerShell)
+```powershell
+git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
+cd MedicalPlab
+.\Scripts\start_local.ps1
+```
+*(If blocked by Windows execution policy, run: `powershell -ExecutionPolicy Bypass -File .\Scripts\start_local.ps1`)*
+
+#### Linux / macOS (Bash)
+```bash
+git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
+cd MedicalPlab
+./Scripts/start_local.sh
+```
+
+---
+
+### Manual Setup (Two Terminals)
+
+#### Terminal 1: Backend Service
+```powershell
+# Create & activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1    # On Unix: source .venv/bin/activate
+
+# Install dependencies
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# Bootstrap public-safe validation data & launch backend
+python Scripts/bootstrap_local_data.py
+uvicorn production_main:app --host 127.0.0.1 --port 8000
+```
+
+#### Terminal 2: Frontend Web Application
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+### Authoritative Local Endpoints
+
+| Service | Local URL | Purpose |
+| :--- | :--- | :--- |
+| **Frontend Web UI** | [http://localhost:3000](http://localhost:3000) | Complete student learning interface |
+| **Backend API Health** | [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health) | System health probe (returns HTTP 200) |
+| **Readiness & Manifest** | [http://127.0.0.1:8000/ready](http://127.0.0.1:8000/ready) | Manifest verification & mode inspection |
+| **Interactive OpenAPI Docs** | [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) | Swagger UI for interactive exploration |
+
+*For advanced options, mobile emulator setup, and troubleshooting, consult the [Local Run Guide](docs/LOCAL_RUN_GUIDE.md) and [Mentor Runbook](docs/handoff/MENTOR_LOCAL_RUN.md).*
+
+---
+
+## Safety by Design
+
+MedicalPlab is engineered for clinical education, prioritizing safety, truth boundaries, and verifiable evidence:
+
+* **Evidence Insufficiency & Fail-Closed Fallback:** If candidate literature does not substantiate a generated proposition, the system triggers `SAFE_FALLBACK` rather than delivering unverified claims.
+* **Reasoning Signals &ne; Incompetence:** Wrong answers represent provisional diagnostic hypotheses to guide dialogue, not immutable assessments of learner capability.
+* **Deterministic Spatial Evaluation:** Raycasted clicks in the 3D canvas are evaluated deterministically against anatomical ontology IDs on the backend.
+* **Strict Exam Segregation:** Candidate PLAB questions remain isolated behind Preview QA; zero candidate items self-promote to released golden curriculum without clinician panel review.
+* **Open-Access Licensing Provenance:** Medical evidence chunks are admitted only from open-access PMC articles under verified Creative Commons licenses (`CC BY 4.0`, `CC BY 3.0`).
+* **Educational Scope:** MedicalPlab is an educational and training platform, not a medical diagnostic device or clinical decision support system.
 
 <p align="center">
   <img src="docs/readme-assets/plab-governance.svg" alt="MedicalPlab PLAB Exam Content Governance Pipeline" width="100%" />
 </p>
 
-| Metric | Authoritative Repository Status |
-| :--- | :--- |
-| **University Production Questions** | **6 items** (`UNI-RENAL-001` to `006`, Active Production) |
-| **PLAB Preview QA Candidates** | **36 items** (Staged for formal clinical review) |
-| **PLAB Golden Released Curriculum** | **0 items** (Promotion gate strictly enforced) |
-| **PLAB Public Release Ready** | **NO** (`PLAB_PUBLIC_RELEASE_READY = False`) |
-| **Golden Clinician Signoff Required** | **YES** (`PLAB_GOLDEN_PROMOTION_REQUIRED = True`) |
+---
 
-> **Governance Boundary:** The 36 clinical PLAB questions in this repository are candidate items undergoing clinician review. They are not released as public examination curriculum until approved by a clinician review panel.
+## Why This Is More Than an LLM Wrapper
+
+MedicalPlab is fundamentally a **learning intelligence system**, not a thin API wrapper around a language model. The core value and product defensibility reside in the cognitive architecture surrounding the model:
+
+1. **Persistent Cognitive State Machine:** Tracks topic-level mastery, error sequences, and distractor histories across disparate learning modalities.
+2. **Proprietary Distractor Taxonomy:** Translates clinical errors into structured reasoning signals rather than generic wrong/right flags.
+3. **Closed-Loop Socratic Remediation:** Bounded multi-turn dialogue that probes mechanism without disclosing the answer key.
+4. **Independent Transfer Firewall:** Requires unprompted clinical generalization on unseen items before advancing mastery.
+5. **Fail-Closed NLI Claim Verification:** Atomic proposition decomposition and entailment checking against retrieved evidence.
+6. **Authoritative 3D Spatial Grounding:** NIH HuBMAP HRA anatomical meshes integrated directly with cognitive remediation and deterministic raycast scoring.
+7. **Two-Tiered Clinical Content Governance:** Structural isolation between candidate preview items and clinician-approved golden content.
+
+> **Defensibility Truth:** Replacing the underlying LLM with an alternate model does **not** recreate MedicalPlab. The product defensibility lies entirely in the learning loop, cognitive state machines, verification boundaries, and spatial grounding architecture.
 
 ---
 
-## Current Status Matrix
+## Current Project Status
 
-| Component / Layer | Status | Operational Details |
-| :--- | :---: | :--- |
-| **Active Delivery Model** | `LOCAL-FIRST` | Authoritative clone-and-run delivery; external cloud not required |
-| **Local Product Execution** | `READY` | Full representative Socratic, tutor, anatomy & PLAB flow verified locally |
-| **Clean Checkout Readiness** | `READY` | Verified standalone clone-and-run execution via local runner |
-| **Mentor / Evaluator Run** | `READY` | 3-minute quick evaluation path ([docs/handoff/MENTOR_LOCAL_RUN.md](docs/handoff/MENTOR_LOCAL_RUN.md)) |
-| **Mobile Local Integration** | `READY` | 12/12 mobile contract verified; Postman & Android/iOS emulator guide ready |
-| **Docker Local Runtime** | `READY` | Optional 512MB-constrained containerized execution ([Dockerfile](Dockerfile)) |
-| **Core Product Engineering** | `CLOSED` | Frozen stable baseline; no breaking schema modifications |
-| **Cognitive Anatomy Visuals** | `READY` | Hero motion, signal path, AI boundary, governance visuals accepted |
-| **Generative AI Core** | `READY` | Grounded RAG, neural reranking, claim verification active (CPU/stub safe) |
-| **Adaptive Learning Engine** | `READY` | Distractor hypothesis heuristics, 3-turn Socratic remediation |
-| **Evidence-Grounded AI Tutor** | `READY` | Shared Evidence Engine, rights gating, fail-closed fallback |
-| **Spatial 3D Anatomy** | `READY` | HuBMAP HRA renal model, guided tours, deterministic artery pin challenge |
-| **Mobile API Contract** | `READY` | 43 paths, 44 operations; 0 OpenAPI contract drift |
-| **Mobile Developer Docs** | `READY` | Quick-start guide, Dart/TS client examples, integration checklist |
-| **Automated CI Quality Gate** | `PASS` | 8 CI jobs passing (integration, contract, drift, frontend, handoff, render-security, docker, release) |
-| **Cloud Deployment** | `OPTIONAL_NOT_CONFIGURED` | Render & GCP blueprints retained as optional future infrastructure |
-| **Public Production Auth** | `NO` | `X-User-Id` synthetic partition only; not cryptographic auth |
-| **PLAB Public Exam Release** | `NO` | Candidate items gated behind Preview QA; clinician signoff required |
-| **Offline Sync Support** | `NO` | Online REST API client architecture; local persistence not supported |
+MedicalPlab maintains complete transparency regarding verified capabilities versus production limitations:
+
+### Ready Now (Certified Today)
+* **Active Delivery Model:** `LOCAL-FIRST` (Authoritative clone-and-run delivery; external cloud not required).
+* **Local Product Flow:** Complete E2E execution verified locally (University, Socratic remediation, transfer challenge, grounded tutor, 3D anatomy, progress).
+* **Clean Checkout Readiness:** Standalone clone-and-run execution verified via `verify_local_release.py`.
+* **Mentor / Evaluator Run:** 3-minute quick evaluation path certified ([docs/handoff/MENTOR_LOCAL_RUN.md](docs/handoff/MENTOR_LOCAL_RUN.md)).
+* **Mobile Local Integration:** 12/12 mobile contract verified; Postman collections & Flutter/React Native examples ready.
+* **Docker Local Runtime:** Optional 512MB-constrained containerized execution ([Dockerfile](Dockerfile)).
+* **Automated CI Quality Gate:** 8/8 CI jobs passing on release branch HEAD.
+
+### Intentionally Not Production-Ready (Honest Boundaries)
+* **`MOBILE_PRODUCTION_AUTH_READY = NO`**: `X-User-Id` header provides synthetic learner partitioning for demo and local contract testing. It is **NOT** cryptographic user authentication.
+* **`PLAB_PUBLIC_RELEASE_READY = NO`**: PLAB questions are candidate items under clinician panel review. In standard production (`MEDICALPLAB_PLAB_PREVIEW_QA=0`), candidate items fail closed to 0 released items.
+* **`PLAB_GOLDEN_PROMOTION_REQUIRED = YES`**: Promotion of candidate items requires formal human clinician review panel sign-off.
+* **`OFFLINE_SYNC_SUPPORTED = NO`**: Online REST API client architecture; offline local persistence is not supported.
+* **`REAL_NATIVE_MOBILE_SOURCE_IN_REPO = NO`**: Mobile client specifications, OpenAPI contracts, and code snippets are provided; native mobile source repositories are separate.
+* **`CLOUD_DEPLOYMENT_REQUIRED = NO`**: Cloud deployment to Render or Google Cloud Run is optional and not configured as a delivery prerequisite.
 
 ---
 
-## Future Intelligence Roadmap
+## Future Roadmap
 
 The roadmap distinguishes what is built and verified today from future research and institutional expansion horizons:
 
@@ -597,7 +445,7 @@ The roadmap distinguishes what is built and verified today from future research 
   <img src="docs/readme-assets/future-intelligence-roadmap.svg" alt="MedicalPlab Future Intelligence Roadmap" width="100%" />
 </p>
 
-### Horizon 1: Multi-Organ Spatial Anatomy *(Future / Not Implemented)*
+### Horizon 1: Multi-Organ Spatial Anatomy *(Future)*
 Extend HuBMAP Human Reference Atlas 3D anatomical integration beyond renal structures into:
 * **Cardiovascular System:** Coronary vasculature, cardiac chambers, valvular hemodynamics.
 * **Respiratory System:** Bronchial tree, alveolar-capillary membrane, pulmonary perfusion.
@@ -612,11 +460,6 @@ Integrate educational multimodal reasoning strictly for teaching and student inq
 
 ### Horizon 3: Frontier Model Router Orchestration *(Future / Design)*
 Decouple generative intelligence behind a provider-agnostic model router while preserving the MedicalPlab safety contract:
-
-<p align="center">
-  <img src="docs/readme-assets/future-model-router.svg" alt="Future Frontier Model Router Architecture" width="100%" />
-</p>
-
 * **Model Provider Abstraction:** Plug-and-play routing across frontier reasoning models (e.g., OpenAI o-series, Claude, Gemini, open weights).
 * **Core Principle:** *"Better models should strengthen the system — not become the system."*
 * **Immutable Safety Boundary:** Frontier models may increase reasoning depth, but **never** bypass evidence retrieval, rights gating, proposition verification, or fail-closed fallback.
@@ -629,174 +472,35 @@ Decouple generative intelligence behind a provider-agnostic model router while p
 
 ---
 
-## Quick Start — Local
+## Documentation Navigation
 
-> **Prerequisites:** Python 3.11 or 3.12 (`>=3.11,<3.13`), Node.js >=20.9 (recommended: 20 LTS or 22 LTS).
+Access authoritative specifications, runbooks, and integration guides:
 
-For full setup details, mobile device integration, and troubleshooting, see the [Local Run Guide](docs/LOCAL_RUN_GUIDE.md) and [Mentor Quick Run](docs/handoff/MENTOR_LOCAL_RUN.md).
-
-### Automated One-Command Launch (Windows PowerShell)
-```powershell
-# From repository root:
-.\Scripts\start_local.ps1
-```
-*(If execution policy blocks script execution, run: `powershell -ExecutionPolicy Bypass -File .\Scripts\start_local.ps1`)*
-
-### Manual Backend Setup (Windows 10 / PowerShell / CMD)
-```powershell
-git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
-cd MedicalPlab
-
-# 1. Create and activate virtual environment
-python -m venv .venv
-
-# PowerShell activation:
-.venv\Scripts\Activate.ps1
-# (If blocked by execution policy: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process)
-# CMD activation:
-# .venv\Scripts\activate.bat
-
-# 2. Install runtime dependencies
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-
-# 3. Configure safe local defaults (zero secrets, zero cloud required)
-$env:PYTHONPATH="src;."
-$env:MEDICALPLAB_RUNTIME_MODE="pilot"
-$env:MEDICALPLAB_PLAB_PREVIEW_QA="1"
-$env:MEDICALPLAB_PHASE_2B_ENABLED="1"
-$env:MEDICALPLAB_ANATOMY_3D_ENABLED="1"
-$env:MEDICALPLAB_TUTOR_PROVIDER="stub"
-$env:MEDICALPLAB_STAGING_GATE_ENABLED="0"
-$env:ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
-
-# 4. Launch backend
-uvicorn production_main:app --host 127.0.0.1 --port 8000
-```
-
-### Manual Backend Setup (Linux / macOS)
-```bash
-git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
-cd MedicalPlab
-
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-
-export PYTHONPATH="src:."
-export MEDICALPLAB_RUNTIME_MODE="pilot"
-export MEDICALPLAB_PLAB_PREVIEW_QA="1"
-export MEDICALPLAB_PHASE_2B_ENABLED="1"
-export MEDICALPLAB_ANATOMY_3D_ENABLED="1"
-export MEDICALPLAB_TUTOR_PROVIDER="stub"
-export MEDICALPLAB_STAGING_GATE_ENABLED="0"
-export ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
-
-uvicorn production_main:app --host 127.0.0.1 --port 8000
-```
-
-### Frontend Web Application Setup
-In a second terminal:
-```bash
-cd frontend
-npm ci
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser. Target backend is `http://127.0.0.1:8000`.
-
----
-
-## Deployment
-
-### Containerization & Cloud Run
-MedicalPlab backend is packaged as a containerized FastAPI application via [Dockerfile](Dockerfile):
-
-```bash
-# Build production container:
-docker build -t medicalplab-backend:latest .
-
-# Run locally:
-docker run -p 8000:8000 \
-  -e MEDICALPLAB_RUNTIME_MODE=pilot \
-  -e MEDICALPLAB_PLAB_PREVIEW_QA=1 \
-  medicalplab-backend:latest
-```
-
-### Staging Persistence Truth
-* Current module-owned persistence utilizes local SQLite storage.
-* In containerized environments like Google Cloud Run, local container filesystem state resets with instance lifecycles.
-* For deterministic demonstration and mobile pilot testing, set `max-instances = 1`.
-* Durable shared database persistence is an enterprise roadmap item (Horizon 4).
-
----
-
-## Repository Structure
-
-```
-MedicalPlab/
-├── .github/
-│   ├── workflows/              # CI & Cloud Run deployment workflows
-│   └── PULL_REQUEST_TEMPLATE.md# Pull request template with safety checks
-├── src/medicalplab/            # Core backend logic & services
-│   ├── adaptive/               # Adaptive learning engine & state machine
-│   ├── anatomy/                # 3D anatomy session & deterministic scoring
-│   ├── evidence_engine/        # Shared RAG, rights gate, & claim verifier
-│   ├── plab/                   # Governed PLAB clinical preparation & Preview QA
-│   ├── remediation/            # Multi-turn Socratic remediation & transfer gate
-│   ├── tutor/                  # Evidence-grounded tutor & citation verification
-│   └── university/             # Preclinical curriculum & distractor taxonomy
-├── frontend/                   # Next.js 16 + React 19 web application
-│   ├── src/app/                # App router (/practice, /tutor, /anatomy, /progress)
-│   ├── src/features/anatomy/   # Three.js viewport, camera presets, raycaster
-│   ├── src/components/         # Reusable UI components & Socratic drawers
-│   └── public/models/anatomy/hra/renal/ # HRA CCF 3D GLB assets & provenance.json
-├── docs/                       # Architectural documentation & specifications
-│   ├── readme-assets/          # Cognitive Anatomy GIFs, SVGs, and diagrams
-│   ├── demo/final-showcase/    # Certified demonstration gallery & runbook
-│   ├── handoff/                # Mentor & team briefing documents
-│   └── mobile-handoff/         # Frozen mobile contract, OpenAPI, Postman, & guides
-├── Data/                       # Curricular data & verified evidence corpus
-│   ├── university/             # Preclinical questions & distractor taxonomy
-│   ├── raw/renal_v1/           # PubMed Central open-access basic-science XMLs
-│   └── metadata/               # Source license manifest & rights verification
-├── tests/                      # Automated unit, integration, and contract test suites
-├── Scripts/                    # Verification scripts (OpenAPI drift, link audits)
-├── CONTRIBUTING.md             # Contribution guidelines & clinical safety boundaries
-├── SECURITY.md                 # Security policy, pilot identity, & vulnerability triage
-├── production_main.py          # Authoritative FastAPI entrypoint
-└── README.md                   # Product showcase documentation
-```
-
----
-
-## Demo Runbook
-
-To conduct an end-to-end evaluation of MedicalPlab:
-
-1. **Step 1: Learning Hub (`/`)** — Present the unified student command center and curriculum tracks.
-2. **Step 2: Preclinical MCQ & Remediation (`/practice?track=university`)** — Select *Renal physiology &rarr; RAAS mechanisms*, choose distractor `[B] Angiotensin II`, observe heuristic pattern detection, and walk through the 3-turn Socratic remediation drawer.
-3. **Step 3: Held-Out Transfer Assessment** — Solve the independent transfer problem to demonstrate transfer on an unseen item and trigger streak advancement.
-4. **Step 4: Evidence-Grounded AI Tutor (`/tutor`)** — Ask a physiological mechanism question, show sentence-level proposition verification, and inspect verified PMC citations with document-level license provenance.
-5. **Step 5: Spatial 3D Anatomy Lab (`/anatomy`)** — Showcase canonical Three.js camera transitions, select the Left Renal Vein, and complete the independent Left Renal Artery pin challenge with deterministic backend scoring.
-6. **Step 6: Unified Progress (`/progress`)** — Verify that preclinical accuracy, transfer successes, tutor queries, and 3D anatomy interactions reflect in the unified cross-module learner progress.
-
-*For complete step-by-step click targets, consult the [Final Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md).*
+| Document | Purpose | Target Audience |
+| :--- | :--- | :--- |
+| **[Final Product Brief](docs/handoff/FINAL_PRODUCT_BRIEF.md)** | Canonical comprehensive product & technical explanation | Mentors, Judges, Evaluators |
+| **[Mentor Quick Runbook](docs/handoff/MENTOR_LOCAL_RUN.md)** | 3-minute fast-track evaluation guide | Evaluators, Technical Judges |
+| **[Mentor In-Depth Briefing](docs/handoff/MENTOR_START_HERE.md)** | Architectural deep dive & background briefing | Mentors, Due Diligence |
+| **[Local Run Guide](docs/LOCAL_RUN_GUIDE.md)** | Complete workstation setup & troubleshooting | Developers, Evaluators |
+| **[Mobile Start Here](docs/mobile-handoff/START_HERE.md)** | 10-minute mobile client onboarding guide | Mobile Engineers |
+| **[Mobile API Contract](docs/mobile-handoff/API_CONTRACT.md)** | Authoritative schema & endpoint contract | Mobile Engineers, Integrators |
+| **[Client Code Examples](docs/mobile-handoff/CLIENT_EXAMPLES.md)** | Flutter & React Native production snippets | Mobile Developers |
+| **[Final Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md)** | Step-by-step click targets & evaluation script | Presenters, Reviewers |
+| **[Clinical Safety Policy](docs/CLINICAL_SAFETY.md)** | Medical boundaries & fail-closed mechanisms | Clinicians, Safety Auditors |
+| **[PLAB Governance & Provenance](docs/PLAB_PROVENANCE_AND_DATA_GOVERNANCE.md)** | Licensing & question promotion rules | Content Reviewers, Legal |
+| **[Third-Party Anatomy Attribution](THIRD_PARTY_NOTICES_ANATOMY.md)** | HuBMAP HRA CC BY 4.0 legal attribution | Compliance, Legal |
 
 ---
 
 ## Data Licensing & Attribution
 
 * **Anatomical Models:** NIH HuBMAP Human Reference Atlas (HRA) 3D Reference Organs. Licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). See [THIRD_PARTY_NOTICES_ANATOMY.md](THIRD_PARTY_NOTICES_ANATOMY.md).
-* **Medical Evidence Corpus:** Extracted from open-access basic-science and renal physiology articles in PubMed Central (PMC). Rights-approved open-access / Creative Commons evidence sources are admitted only after source-level license verification, with license provenance preserved per document.
+* **Medical Evidence Corpus:** Extracted from open-access basic-science and renal physiology articles in PubMed Central (PMC). Admitted only after source-level license verification, with license provenance preserved per document (`CC BY 4.0`, `CC BY 3.0`).
 * **Clinical Questions:** University questions authored for foundational medical physiology education. PLAB candidate items are maintained under Preview QA governance and require formal clinician review panel Golden promotion before public release.
 
 ---
 
-## Team & Mentor Handoff
-
-* **Mentor & Evaluator Briefing:** [docs/handoff/MENTOR_START_HERE.md](docs/handoff/MENTOR_START_HERE.md)
-* **Team Cross-Discipline Handoff:** [docs/handoff/TEAM_HANDOFF.md](docs/handoff/TEAM_HANDOFF.md)
-* **Mobile Integration Guide:** [docs/mobile-handoff/START_HERE.md](docs/mobile-handoff/START_HERE.md) &bull; [API Contract](docs/mobile-handoff/API_CONTRACT.md)
-* **Demonstration Runbook:** [docs/demo/FINAL_DEMO_RUNBOOK.md](docs/demo/FINAL_DEMO_RUNBOOK.md)
-* **Tagged Release Snapshot:** [`v1.0.0-startup-demo`](https://github.com/AdhamElsayedAI/MedicalPlab/releases/tag/v1.0.0-startup-demo)
+<p align="center">
+  <b>MedicalPlab</b> — Adaptive Evidence-Grounded Medical Learning Platform<br>
+  <i>"MedicalPlab does not only answer students. It learns how students learn."</i>
+</p>
