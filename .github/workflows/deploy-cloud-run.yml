@@ -20,6 +20,9 @@ permissions:
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GCP_WIF_PROVIDER: ${{ secrets.GCP_WIF_PROVIDER }}
+  GCP_WIF_SERVICE_ACCOUNT: ${{ secrets.GCP_WIF_SERVICE_ACCOUNT }}
+  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
   REGION: europe-west1
   BACKEND_SERVICE_NAME: medicalplab-api
   BFF_SERVICE_NAME: medicalplab-bff
@@ -53,17 +56,17 @@ jobs:
           fi
 
       - name: Authenticate to Google Cloud (Workload Identity Federation)
-        if: ${{ secrets.GCP_WIF_PROVIDER != '' }}
+        if: ${{ env.GCP_WIF_PROVIDER != '' }}
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: ${{ secrets.GCP_WIF_PROVIDER }}
-          service_account: ${{ secrets.GCP_WIF_SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ env.GCP_WIF_PROVIDER }}
+          service_account: ${{ env.GCP_WIF_SERVICE_ACCOUNT }}
 
       - name: Authenticate to Google Cloud (Service Account Key Fallback)
-        if: ${{ secrets.GCP_WIF_PROVIDER == '' && secrets.GCP_SA_KEY != '' }}
+        if: ${{ env.GCP_WIF_PROVIDER == '' && env.GCP_SA_KEY != '' }}
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ env.GCP_SA_KEY }}
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
