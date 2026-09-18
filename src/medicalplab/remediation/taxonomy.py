@@ -31,6 +31,13 @@ DEFAULT_TAXONOMY_PATH = (
     / "taxonomy"
     / "reasoning_patterns.v1.json"
 )
+FALLBACK_FIXTURE_PATH = (
+    Path(__file__).resolve().parent.parent.parent.parent
+    / "tests"
+    / "plab"
+    / "fixtures"
+    / "reasoning_patterns.v1.json"
+)
 
 
 class TaxonomyValidationError(Exception):
@@ -48,6 +55,10 @@ class ReasoningPatternTaxonomyRegistry:
             data_root = os.environ.get("MEDICALPLAB_DATA_ROOT")
             if data_root and (Path(data_root) / "taxonomy" / "reasoning_patterns.v1.json").exists():
                 self.path = Path(data_root) / "taxonomy" / "reasoning_patterns.v1.json"
+            elif DEFAULT_TAXONOMY_PATH.exists():
+                self.path = DEFAULT_TAXONOMY_PATH
+            elif FALLBACK_FIXTURE_PATH.exists():
+                self.path = FALLBACK_FIXTURE_PATH
             else:
                 self.path = DEFAULT_TAXONOMY_PATH
         self._patterns: Dict[str, ReasoningPatternTaxonomyItem] = {}

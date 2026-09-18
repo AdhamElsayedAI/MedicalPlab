@@ -50,29 +50,36 @@ def build_test_data_root(dest_dir: Path | str) -> Path:
     meta_src = PROJECT_ROOT / "Data" / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
     meta_dst = dest / "metadata" / "corpus_cardiorespiratory_snapshot_v1.json"
     meta_dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(meta_src, meta_dst)
+    if meta_src.resolve() != meta_dst.resolve():
+        shutil.copy2(meta_src, meta_dst)
 
     doc_manifest_src = PROJECT_ROOT / "Data" / "metadata" / "document_manifest.json"
     if doc_manifest_src.exists():
-        shutil.copy2(doc_manifest_src, dest / "metadata" / "document_manifest.json")
+        doc_manifest_dst = dest / "metadata" / "document_manifest.json"
+        if doc_manifest_src.resolve() != doc_manifest_dst.resolve():
+            shutil.copy2(doc_manifest_src, doc_manifest_dst)
 
     batch_src = PROJECT_ROOT / "Data" / "questions" / "versions" / "cardiorespiratory_batch_1_source_audit_v2.json"
     batch_dst = dest / "questions" / "versions" / "cardiorespiratory_batch_1_source_audit_v2.json"
     batch_dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(batch_src, batch_dst)
+    if batch_src.resolve() != batch_dst.resolve():
+        shutil.copy2(batch_src, batch_dst)
 
     queue_src = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1_review_queue.json"
     queue_dst = dest / "questions" / "cardiorespiratory_batch_1_review_queue.json"
-    shutil.copy2(queue_src, queue_dst)
+    if queue_src.resolve() != queue_dst.resolve():
+        shutil.copy2(queue_src, queue_dst)
 
     q_src = PROJECT_ROOT / "Data" / "questions" / "cardiorespiratory_batch_1.json"
     q_dst = dest / "questions" / "cardiorespiratory_batch_1.json"
-    shutil.copy2(q_src, q_dst)
+    if q_src.resolve() != q_dst.resolve():
+        shutil.copy2(q_src, q_dst)
 
     if TRACKED_TAXONOMY_FILE.exists():
         tax_dst = dest / "taxonomy" / "reasoning_patterns.v1.json"
         tax_dst.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(TRACKED_TAXONOMY_FILE, tax_dst)
+        if TRACKED_TAXONOMY_FILE.resolve() != tax_dst.resolve():
+            shutil.copy2(TRACKED_TAXONOMY_FILE, tax_dst)
 
     # 2. Load tracked test chunks
     tracked_data = json.loads(TRACKED_CHUNKS_FILE.read_text(encoding="utf-8"))

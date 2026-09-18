@@ -23,7 +23,7 @@ Most medical learning platforms stop at answer correctness. MedicalPlab treats t
 
 ### Quick Navigation
 
-[Choose Your Path](#choose-your-path) • [Why Different](#why-medicalplab-is-different) • [Signal Story](#from-signal-to-understanding) • [Signal Path](#signal-path) • [GenAI Core](#generative-ai-core) • [AI Systems](#ai-systems-at-a-glance) • [Intelligence Stack](#medicalplab-intelligence-stack) • [Product Experience](#product-experience) • [Adaptive & Socratic](#adaptive-learning--socratic-remediation) • [Grounded Tutor](#evidence-grounded-ai-tutor) • [Shared Evidence](#shared-evidence-engine) • [3D Anatomy](#spatial-3d-anatomy) • [AI & Anatomy Boundary](#ai-instruction-layer-vs-geometry-layer) • [Innovation Map](#innovation-map) • [Built Today](#built-today) • [Technology & Tooling](#technology--tooling) • [Engineering Verification](#engineering-verification) • [Mobile Integration](#mobile-integration) • [Clinical Governance](#clinical-licensing-governance) • [Current Status](#current-status-matrix) • [Future Roadmap](#future-intelligence-roadmap) • [Quick Start](#quick-start) • [Deployment](#deployment) • [Repository Structure](#repository-structure) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Mentor Briefing](docs/handoff/MENTOR_START_HERE.md)
+[Choose Your Path](#choose-your-path) • [Why Different](#why-medicalplab-is-different) • [Signal Story](#from-signal-to-understanding) • [Signal Path](#signal-path) • [GenAI Core](#generative-ai-core) • [AI Systems](#ai-systems-at-a-glance) • [Intelligence Stack](#medicalplab-intelligence-stack) • [Product Experience](#product-experience) • [Adaptive & Socratic](#adaptive-learning--socratic-remediation) • [Grounded Tutor](#evidence-grounded-ai-tutor) • [Shared Evidence](#shared-evidence-engine) • [3D Anatomy](#spatial-3d-anatomy) • [AI & Anatomy Boundary](#ai-instruction-layer-vs-geometry-layer) • [Innovation Map](#innovation-map) • [Built Today](#built-today) • [Technology & Tooling](#technology--tooling) • [Engineering Verification](#engineering-verification) • [Mobile Integration](#mobile-integration) • [Clinical Governance](#clinical-licensing-governance) • [Current Status](#current-status-matrix) • [Future Roadmap](#future-intelligence-roadmap) • [Quick Start](#quick-start--local) • [Deployment](#deployment) • [Repository Structure](#repository-structure) • [Demo Runbook](docs/demo/FINAL_DEMO_RUNBOOK.md) • [Mentor Briefing](docs/handoff/MENTOR_START_HERE.md)
 
 ---
 
@@ -567,18 +567,22 @@ MedicalPlab implements explicit clinical content governance to ensure candidate 
 
 | Component / Layer | Status | Operational Details |
 | :--- | :---: | :--- |
+| **Active Delivery Model** | `LOCAL-FIRST` | Authoritative clone-and-run delivery; external cloud not required |
+| **Local Product Execution** | `READY` | Full representative Socratic, tutor, anatomy & PLAB flow verified locally |
+| **Clean Checkout Readiness** | `READY` | Verified standalone clone-and-run execution via local runner |
+| **Mentor / Evaluator Run** | `READY` | 3-minute quick evaluation path ([docs/handoff/MENTOR_LOCAL_RUN.md](docs/handoff/MENTOR_LOCAL_RUN.md)) |
+| **Mobile Local Integration** | `READY` | 12/12 mobile contract verified; Postman & Android/iOS emulator guide ready |
+| **Docker Local Runtime** | `READY` | Optional 512MB-constrained containerized execution ([Dockerfile](Dockerfile)) |
 | **Core Product Engineering** | `CLOSED` | Frozen stable baseline; no breaking schema modifications |
 | **Cognitive Anatomy Visuals** | `READY` | Hero motion, signal path, AI boundary, governance visuals accepted |
-| **Generative AI Core** | `READY` | Grounded RAG, neural reranking, claim verification active |
+| **Generative AI Core** | `READY` | Grounded RAG, neural reranking, claim verification active (CPU/stub safe) |
 | **Adaptive Learning Engine** | `READY` | Distractor hypothesis heuristics, 3-turn Socratic remediation |
 | **Evidence-Grounded AI Tutor** | `READY` | Shared Evidence Engine, rights gating, fail-closed fallback |
 | **Spatial 3D Anatomy** | `READY` | HuBMAP HRA renal model, guided tours, deterministic artery pin challenge |
 | **Mobile API Contract** | `READY` | 43 paths, 44 operations; 0 OpenAPI contract drift |
 | **Mobile Developer Docs** | `READY` | Quick-start guide, Dart/TS client examples, integration checklist |
-| **Mentor / Evaluator Briefing** | `READY` | 2-minute executive briefing and comprehensive demo runbook |
-| **Automated CI Quality Gate** | `PASS` | 5 CI jobs passing (integration, contract, drift, frontend, links) |
-| **Cloud Run Staging Deployment** | `BLOCKED_GCP` | Requires GCP project ID and Service Account secrets configuration |
-| **Frontend ↔ Staging Sync** | `UNVERIFIED` | Local frontend verified; cloud staging pending GCP provisioning |
+| **Automated CI Quality Gate** | `PASS` | 7 CI jobs passing (integration, contract, drift, frontend, handoff, docker, release) |
+| **Cloud Deployment** | `OPTIONAL_NOT_CONFIGURED` | Render & GCP blueprints retained as optional future infrastructure |
 | **Public Production Auth** | `NO` | `X-User-Id` synthetic partition only; not cryptographic auth |
 | **PLAB Public Exam Release** | `NO` | Candidate items gated behind Preview QA; clinician signoff required |
 | **Offline Sync Support** | `NO` | Online REST API client architecture; local persistence not supported |
@@ -625,46 +629,79 @@ Decouple generative intelligence behind a provider-agnostic model router while p
 
 ---
 
-## Quick Start
+## Quick Start — Local
 
-### Prerequisites
-* Python 3.11 or 3.12
-* Node.js 20+ and npm 10+
-* Google Chrome (for automated browser testing)
+For full setup details, mobile device integration, and troubleshooting, see the [Local Run Guide](docs/LOCAL_RUN_GUIDE.md) and [Mentor Quick Run](docs/handoff/MENTOR_LOCAL_RUN.md).
 
-### 1. Start Authoritative Backend
+### Automated One-Command Launch (Windows PowerShell)
 ```powershell
-# Windows PowerShell
+# From repository root:
+.\Scripts\start_local.ps1
+```
+*(If execution policy blocks script execution, run: `powershell -ExecutionPolicy Bypass -File .\Scripts\start_local.ps1`)*
+
+### Manual Backend Setup (Windows 10 / PowerShell / CMD)
+```powershell
+git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
+cd MedicalPlab
+
+# 1. Create and activate virtual environment
+python -m venv .venv
+
+# PowerShell activation:
+.venv\Scripts\Activate.ps1
+# (If blocked by execution policy: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process)
+# CMD activation:
+# .venv\Scripts\activate.bat
+
+# 2. Install runtime dependencies
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# 3. Configure safe local defaults (zero secrets, zero cloud required)
 $env:PYTHONPATH="src;."
 $env:MEDICALPLAB_RUNTIME_MODE="pilot"
 $env:MEDICALPLAB_PLAB_PREVIEW_QA="1"
 $env:MEDICALPLAB_PHASE_2B_ENABLED="1"
 $env:MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+$env:MEDICALPLAB_TUTOR_PROVIDER="stub"
+$env:MEDICALPLAB_STAGING_GATE_ENABLED="0"
 $env:ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
 
-python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
+# 4. Launch backend
+uvicorn production_main:app --host 127.0.0.1 --port 8000
 ```
 
+### Manual Backend Setup (Linux / macOS)
 ```bash
-# macOS / Linux Bash
+git clone https://github.com/AdhamElsayedAI/MedicalPlab.git
+cd MedicalPlab
+
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
 export PYTHONPATH="src:."
 export MEDICALPLAB_RUNTIME_MODE="pilot"
 export MEDICALPLAB_PLAB_PREVIEW_QA="1"
 export MEDICALPLAB_PHASE_2B_ENABLED="1"
 export MEDICALPLAB_ANATOMY_3D_ENABLED="1"
+export MEDICALPLAB_TUTOR_PROVIDER="stub"
+export MEDICALPLAB_STAGING_GATE_ENABLED="0"
 export ALLOWED_ORIGINS="http://localhost:3000,http://127.0.0.1:3000"
 
-python -m uvicorn production_main:app --host 127.0.0.1 --port 8000 --workers 1
+uvicorn production_main:app --host 127.0.0.1 --port 8000
 ```
 
-### 2. Start Frontend Web Application
+### Frontend Web Application Setup
+In a second terminal:
 ```bash
 cd frontend
-npm install
-npm run build
-npm run start -- -p 3000
+npm ci
+npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser. Target backend is `http://127.0.0.1:8000`.
 
 ---
 

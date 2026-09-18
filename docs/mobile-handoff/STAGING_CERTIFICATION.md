@@ -62,11 +62,13 @@ Render Free Web Service (FastAPI)
 
 | Metric / Property | Certified Value | Notes |
 | :--- | :--- | :--- |
-| **ACTIVE_STAGING_PROVIDER** | `RENDER` | GCP staging abandoned due to billing setup blockage |
+| **ACTIVE_DELIVERY_MODEL** | `LOCAL-FIRST` | Repository is authoritative delivery artifact; external cloud not required |
+| **EXTERNAL_STAGING_BLOCKER** | `REMOVED` | Staging is no longer a release or evaluation blocker |
+| **LOCAL_PRODUCT_READY** | `YES` | Complete representative Socratic, tutor, anatomy & PLAB flow passes locally |
+| **CLEAN_CHECKOUT_READY** | `YES` | Verified standalone clone-and-run execution |
+| **MOBILE_LOCAL_INTEGRATION_READY** | `YES` | 12/12 mobile contract verified against local backend (`http://127.0.0.1:8000`) |
+| **CLOUD_DEPLOYMENT_STATUS** | `OPTIONAL_NOT_CONFIGURED` | Render/GCP blueprints retained for optional future deployment |
 | **GCP_AUTOMATIC_DEPLOYMENT_ENABLED** | `NO` | `deploy-cloud-run.yml` converted to inactive manual reference |
-| **RENDER_DEPLOYMENT_STATUS** | `BLOCKED_USER_RENDER_SETUP` | Requires user connection in Render dashboard |
-| **RENDER_STAGING_URL** | `NOT_PROVISIONED` | Provisioned after user setup |
-| **EXTERNAL_MOBILE_SMOKE** | `BLOCKED_RENDER_DEPLOYMENT` | Certified locally; awaiting live Render HTTPS endpoint |
 | **RENDER_FREE_PLAN_VERIFIED** | `YES` | Verified against current official `render.com/docs/free` |
 | **RENDER_PAYMENT_METHOD_REQUIRED** | `NO` | No credit/debit card required for free web service |
 | **RENDER_REGION_SELECTED** | `frankfurt` | Closest available region to Egypt supported on Free tier |

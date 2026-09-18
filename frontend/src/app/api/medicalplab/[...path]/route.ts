@@ -23,6 +23,7 @@ import {
  */
 
 const STAGING_BASE_URL = (
+  process.env.MEDICALPLAB_API_BASE_URL ||
   process.env.MEDICALPLAB_STAGING_BASE_URL ||
   process.env.BFF_BASE_URL ||
   process.env.MEDICALPLAB_BFF_URL ||

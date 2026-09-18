@@ -24,6 +24,8 @@ env/
 
 # Medical data and local databases
 Data/
+!Data/taxonomy/
+!Data/taxonomy/**
 Data/sources/
 Data/private_evidence/
 Data/sources/private/
